@@ -126,7 +126,7 @@
           </p>
 
           <p class="mt-5 text-[15px] text-slate-500 leading-relaxed">
-            {{ project.description }}
+            {{ project.description|safe }}
           </p>
 
           <!-- The Challenge -->
@@ -136,7 +136,7 @@
             {{ project.challenge_title }}
           </h3>
           <p class="mt-3.5 text-[15px] text-slate-500 leading-relaxed">
-            {{ project.challenge }}
+            {{ project.challenge|safe }}
           </p>
 
           <!-- The Solution -->
@@ -146,7 +146,7 @@
             {{ project.solution_title }}
           </h3>
           <p class="mt-3.5 text-[15px] text-slate-500 leading-relaxed">
-            {{ project.solution }}
+            {{ project.solution|safe }}
           </p>
 
           <!-- Grille de fonctionnalités (2 x 4) -->
@@ -270,9 +270,9 @@
         >
           {% trans "What We" %} <span class="text-[#c9a227]">{% trans "Delivered" %}</span>
         </h2>
-        <p class="mt-4 max-w-2xl text-[15px] text-slate-500 leading-relaxed">
-              {% if project.scope_description %}{{ project.scope_description }}{% else %}{% blocktrans with title=project.title %}From the first sketch to the final coat of paint, our teams covered every trade required to bring {{ title }} to life — fully integrated, fully accountable.{% endblocktrans %}{% endif %}
-        </p>
+<p class="mt-4 max-w-2xl text-[15px] text-slate-500 leading-relaxed">
+              {% if project.scope_description %}{{ project.scope_description|safe }}{% else %}{% blocktrans with title=project.title %}From the first sketch to the final coat of paint, our teams covered every trade required to bring {{ title }} to life — fully integrated, fully accountable.{% endblocktrans %}{% endif %}
+            </p>
 
         <!-- Grille 4 colonnes avec séparateurs verticaux -->
         <div
@@ -311,7 +311,7 @@
             {{ project.result_title }}
           </h2>
           <p class="mt-4 max-w-2xl text-[15px] text-slate-500 leading-relaxed">
-            {{ project.result }}
+            {{ project.result|safe }}
           </p>
 
           <!-- Carte témoignage -->

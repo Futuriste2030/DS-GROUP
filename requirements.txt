@@ -7,3 +7,4 @@ dj-database-url==2.3.0
 gunicorn==23.0.0
 whitenoise==6.8.2
 django-imagekit==5.0.0
+django-ckeditor==6.8.1

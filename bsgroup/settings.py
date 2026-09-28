@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
     'imagekit',
+    'ckeditor',
     # Core + apps metier BS GROUP (même logique que DIGI-AGENCY)
     'core',
     'main',
@@ -220,3 +221,24 @@ WHITENOISE_MAX_AGE = 31536000 if not DEBUG else 0
 IMAGEKIT_DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
 IMAGEKIT_CACHEFILE_DIR = 'uploads/cache'
 IMAGEKIT_CACHEFILE_NAMER = 'imagekit.cachefiles.namers.source_name_as_path'
+
+# CKEditor 5 — configuration pour champs riches (blog, projets)
+CKEDITOR_5_CONFIGS = {
+    'default': {
+        'toolbar': [
+            'heading', '|', 'bold', 'italic', 'underline', 'strikethrough',
+            '|', 'link', 'bulletedList', 'numberedList', 'blockQuote',
+            '|', 'insertTable', 'mediaEmbed', '|', 'undo', 'redo'
+        ],
+        'language': 'fr',
+        'htmlSupport': {
+            'allow': [
+                {'name': '/.*/', 'attributes': True, 'classes': True, 'styles': True}
+            ]
+        },
+    },
+    'minimal': {
+        'toolbar': ['bold', 'italic', 'link', 'bulletedList', 'numberedList', 'undo', 'redo'],
+        'language': 'fr',
+    }
+}
