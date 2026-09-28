@@ -40,6 +40,10 @@ RUN python manage.py collectstatic --noinput --clear
 # ---- Runtime: minimal image ----
 FROM base AS runtime
 
+# Entrypoint handles migrate + collectstatic + gunicorn
+COPY --from=builder /app/docker-entrypoint.sh /docker-entrypoint.sh
+RUN chmod +x /docker-entrypoint.sh
+
 # Create non-root user
 RUN groupadd -r appgroup && useradd -r -g appgroup -d /app -s /sbin/nologin appuser
 
@@ -58,10 +62,6 @@ EXPOSE 8000
 # Healthcheck for container orchestration
 HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
     CMD curl -f http://localhost:8000/health/ || exit 1
-
-# Entrypoint handles migrate + collectstatic + gunicorn
-COPY --from=builder /app/docker-entrypoint.sh /docker-entrypoint.sh
-RUN chmod +x /docker-entrypoint.sh
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["gunicorn", "bsgroup.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "3", "--timeout", "60", "--access-logfile", "-", "--error-logfile", "-"]
