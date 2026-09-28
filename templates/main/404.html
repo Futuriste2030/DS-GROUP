@@ -1,0 +1,201 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}{% trans "404 — Page Not Found" %} | BS GROUP{% endblock %}
+{% block meta_description %}{% trans "Page not found — 404 error on BS GROUP website" %}{% endblock %}
+{% block body_class %}bg-white font-sans antialiased text-[#0b1f35] overflow-x-hidden{% endblock %}
+
+{% block content %}
+<section class="bg-white relative overflow-hidden">
+      <span class="section-tag section-tag--dark" aria-hidden="true">404</span>
+      <div
+        class="max-w-4xl mx-auto px-6 pt-10 pb-16 md:pt-6 text-center relative"
+      >
+        <div
+          class="crane-hook mx-auto w-fit pointer-events-none relative z-10"
+          aria-hidden="true"
+        >
+          <svg
+            viewBox="0 0 120 205"
+            class="w-[68px] sm:w-[84px] h-auto -mb-4 sm:-mb-6"
+            fill="none"
+          >
+            <g stroke="#475569" stroke-width="2.5">
+              <line x1="50" y1="0" x2="50" y2="52" />
+              <line x1="60" y1="0" x2="60" y2="52" />
+              <line x1="70" y1="0" x2="70" y2="52" />
+            </g>
+            <rect
+              x="42"
+              y="48"
+              width="36"
+              height="11"
+              rx="5.5"
+              fill="#334155"
+            />
+            <rect x="36" y="56" width="48" height="56" rx="13" fill="#c9a227" />
+            <rect x="28" y="61" width="10" height="46" rx="5" fill="#0b1f35" />
+            <rect x="82" y="61" width="10" height="46" rx="5" fill="#0b1f35" />
+            <circle cx="60" cy="84" r="12" fill="#0b1f35" />
+            <circle cx="60" cy="84" r="6" fill="#c9a227" />
+            <circle cx="60" cy="84" r="2" fill="#0b1f35" />
+            <rect
+              x="55"
+              y="112"
+              width="10"
+              height="14"
+              rx="3.5"
+              fill="#9aa8bc"
+            />
+            <path
+              d="M60 124 L60 134 C58 150 42 154 38 168 C34 184 46 196 62 195 C78 194 88 183 86 169 C84.5 158 76 153 66 154"
+              stroke="#5b6b80"
+              stroke-width="14.5"
+              stroke-linecap="round"
+            />
+            <path
+              d="M60 124 L60 134 C58 150 42 154 38 168 C34 184 46 196 62 195 C78 194 88 183 86 169 C84.5 158 76 153 66 154"
+              stroke="#9aa8bc"
+              stroke-width="10.5"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+
+        <h1
+          class="relative text-[100px] sm:text-[140px] md:text-[180px] font-black leading-[0.9] tracking-tight select-none"
+          aria-label="{% trans 'Error 404' %}"
+        >
+          <!-- Étoiles décoratives autour -->
+          <span
+            class="sparkle absolute -left-2 sm:left-4 top-6 text-[#c9a227]"
+            aria-hidden="true"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="w-8 h-8 sm:w-12 sm:h-12"
+            >
+              <path
+                d="M12 0c.9 6.9 4.2 10.2 12 12-7.8 1.8-11.1 5.1-12 12-.9-6.9-4.2-10.2-12-12C7.8 10.2 11.1 6.9 12 0Z"
+              />
+            </svg>
+          </span>
+          <span
+            class="sparkle absolute -right-1 sm:right-6 bottom-4 text-[#c9a227]"
+            style="animation-delay: 0.7s"
+            aria-hidden="true"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="w-5 h-5 sm:w-8 sm:h-8"
+            >
+              <path
+                d="M12 0c.9 6.9 4.2 10.2 12 12-7.8 1.8-11.1 5.1-12 12-.9-6.9-4.2-10.2-12-12C7.8 10.2 11.1 6.9 12 0Z"
+              />
+            </svg>
+          </span>
+
+          <span class="text-[#0b1f35]">4</span
+          ><span
+            class="text-[#c9a227] inline-block sparkle drop-shadow-[0_10px_18px_rgba(241,90,36,0.25)]"
+            >0</span
+          ><span class="text-[#0b1f35]">4</span>
+        </h1>
+
+        <span
+          class="relative z-10 inline-flex items-center gap-2 mt-4 px-5 py-2 rounded-full bg-[#c9a227]/10 text-[#c9a227] text-[11px] font-extrabold uppercase tracking-[0.15em]"
+        >
+          <i data-lucide="hard-hat" class="w-4 h-4"></i>
+          {% trans "Error 404 · Page Not Found" %}
+        </span>
+
+        <h2
+          class="relative z-10 mt-5 text-[28px] sm:text-[36px] md:text-[42px] font-black tracking-tight leading-[1.15]"
+        >
+          <span class="text-[#0b1f35]">{% trans "This Page Went " %}</span
+          ><span class="text-[#c9a227]">{% trans "Off-Site!" %}</span>
+        </h2>
+
+        <p
+          class="relative z-10 mt-4 max-w-lg mx-auto text-[15px] text-slate-500 leading-relaxed"
+        >
+          {% trans "The page you're looking for has been moved, renamed, or is still" %}
+          <strong class="text-[#0b1f35]">{% trans "under construction" %}</strong>. {% trans "Meanwhile, our crew keeps building — let's get you back on solid ground." %}
+        </p>
+
+        <div
+          class="relative z-10 mt-9 flex flex-col sm:flex-row items-center justify-center gap-3"
+        >
+          <a href="{% url 'main:index' %}" class="group flex items-center gap-1.5">
+            <span
+              class="px-7 py-3.5 rounded-full bg-[#c9a227] text-white text-sm font-bold shadow-md shadow-orange-500/25 group-hover:bg-[#d9bc6b] transition-colors"
+              >{% trans "Back to Home" %}</span
+            >
+            <span
+              class="w-12 h-12 rounded-full bg-[#0b1f35] text-white flex items-center justify-center group-hover:bg-[#c9a227] transition-colors"
+            >
+              <i data-lucide="home" class="w-5 h-5"></i>
+            </span>
+          </a>
+          <a
+            href="{% url 'contact:contact' %}"
+            class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border-2 border-[#0b1f35] text-[#0b1f35] text-sm font-bold hover:border-[#c9a227] hover:text-[#c9a227] transition-colors"
+          >
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            {% trans "Report a Broken Link" %}
+          </a>
+        </div>
+
+        <div class="relative z-10 mt-12">
+          <p
+            class="text-[11px] font-extrabold uppercase tracking-[0.2em] text-slate-400 mb-4"
+          >
+            {% trans "Popular Destinations" %}
+          </p>
+          <div class="flex flex-wrap items-center justify-center gap-2.5">
+            <a
+              href="{% url 'services:services' %}"
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#f5f6f9] text-xs font-bold text-[#0b1f35] hover:bg-[#c9a227] hover:text-white transition-colors"
+            >
+              <i data-lucide="layers" class="w-3.5 h-3.5"></i> {% trans "Our Services" %}
+            </a>
+            <a
+              href="{% url 'projects:projets' %}"
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#f5f6f9] text-xs font-bold text-[#0b1f35] hover:bg-[#c9a227] hover:text-white transition-colors"
+            >
+              <i data-lucide="building-2" class="w-3.5 h-3.5"></i> {% trans "Projects" %}
+            </a>
+            <a
+              href="{% url 'blog:blogs' %}"
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#f5f6f9] text-xs font-bold text-[#0b1f35] hover:bg-[#c9a227] hover:text-white transition-colors"
+            >
+              <i data-lucide="book-open" class="w-3.5 h-3.5"></i> {% trans "Blogs" %}
+            </a>
+            <a
+              href="{% url 'careers:careers' %}"
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#f5f6f9] text-xs font-bold text-[#0b1f35] hover:bg-[#c9a227] hover:text-white transition-colors"
+            >
+              <i data-lucide="briefcase" class="w-3.5 h-3.5"></i> {% trans "Careers" %}
+            </a>
+            <a
+              href="{% url 'contact:devis' %}"
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#f5f6f9] text-xs font-bold text-[#0b1f35] hover:bg-[#c9a227] hover:text-white transition-colors"
+            >
+              <i data-lucide="calculator" class="w-3.5 h-3.5"></i> {% trans "Get a Quote" %}
+            </a>
+            <a
+              href="{% url 'main:faqs' %}"
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#f5f6f9] text-xs font-bold text-[#0b1f35] hover:bg-[#c9a227] hover:text-white transition-colors"
+            >
+              <i data-lucide="help-circle" class="w-3.5 h-3.5"></i> {% trans "FAQ" %}
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="band-navy w-full h-10 md:h-12" aria-hidden="true"></div>
+    </section>
+
+    {% endblock %}

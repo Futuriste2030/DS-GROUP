@@ -1,0 +1,822 @@
+# French translations for BS-GROUP (source msgid = English, like DIGI-AGENCY).
+msgid ""
+msgstr ""
+"Project-Id-Version: BS-GROUP 1.0\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Home"
+msgstr "Accueil"
+
+msgid "About Us"
+msgstr "À propos"
+
+msgid "Our Team"
+msgstr "Notre équipe"
+
+msgid "Testimonials"
+msgstr "Témoignages"
+
+msgid "Services"
+msgstr "Services"
+
+msgid "Projects"
+msgstr "Projets"
+
+msgid "Blogs"
+msgstr "Blogs"
+
+msgid "Careers"
+msgstr "Carrières"
+
+msgid "Contact Us"
+msgstr "Contactez-nous"
+
+msgid "Request a Quote"
+msgstr "Demander un devis"
+
+msgid "FAQs"
+msgstr "FAQ"
+
+msgid "Terms"
+msgstr "CGU"
+
+msgid "Privacy Policy"
+msgstr "Politique de confidentialité"
+
+msgid "Cookie Policy"
+msgstr "Politique cookies"
+
+msgid "Legal Notice"
+msgstr "Mentions légales"
+
+msgid "Pages"
+msgstr "Pages"
+
+msgid "Our Newsletter"
+msgstr "Notre newsletter"
+
+msgid "Subscribe"
+msgstr "S'abonner"
+
+msgid "Navigation"
+msgstr "Navigation"
+
+msgid "Contact"
+msgstr "Contact"
+
+msgid "Get the latest information"
+msgstr "Recevez les dernières informations"
+
+msgid "Accept All"
+msgstr "Tout accepter"
+
+msgid "Reject All"
+msgstr "Tout refuser"
+
+msgid "Customize"
+msgstr "Personnaliser"
+
+msgid "Cookie Preferences"
+msgstr "Préférences cookies"
+
+msgid "BS GROUP | Exchange, Finance & Infrastructures"
+msgstr "BS GROUP | Échange, Finance & Infrastructures"
+
+msgid "BS GROUP — Integrated ecosystem: exchange, finance, infrastructures and trade."
+msgstr "BS GROUP — Écosystème intégré : échange, finance, infrastructures et commerce."
+
+msgid "Loading the website"
+msgstr "Chargement du site"
+
+msgid "Exchange · Finance · Infrastructures"
+msgstr "Échange · Finance · Infrastructures"
+
+msgid "Laying the foundation..."
+msgstr "Préparation des fondations..."
+
+msgid "Raising the structure..."
+msgstr "Montage de la structure..."
+
+msgid "Adding final touches..."
+msgstr "Finitions en cours..."
+
+msgid "Menu"
+msgstr "Menu"
+
+msgid "Join Our Newsletter for"
+msgstr "Abonnez-vous à notre newsletter pour recevoir"
+
+msgid "Exclusive"
+msgstr "en exclusivité"
+
+msgid "Deals & Construction Insights!"
+msgstr "nos offres et nos conseils construction !"
+
+msgid "Enter Email Address"
+msgstr "Entrez votre adresse e-mail"
+
+msgid "Let's Connect there"
+msgstr "Restons connectés"
+
+msgid "Testimonial"
+msgstr "Témoignage"
+
+msgid "Email address"
+msgstr "Adresse e-mail"
+
+msgid "All Rights Reserved"
+msgstr "Tous droits réservés"
+
+msgid "User Terms & Conditions"
+msgstr "Conditions générales d'utilisation"
+
+msgid "Back to top"
+msgstr "Haut de page"
+
+msgid "We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic."
+msgstr "Nous utilisons les cookies pour améliorer votre navigation, vous proposer des contenus personnalisés et analyser notre trafic."
+
+msgid "Learn more"
+msgstr "En savoir plus"
+
+msgid "Close"
+msgstr "Fermer"
+
+msgid "Strictly Necessary"
+msgstr "Strictement nécessaires"
+
+msgid "Always on"
+msgstr "Toujours actifs"
+
+msgid "Essential for the website to function properly. These cannot be disabled."
+msgstr "Essentiels au bon fonctionnement du site. Ils ne peuvent pas être désactivés."
+
+msgid "Preferences"
+msgstr "Préférences"
+
+msgid "Remember your settings such as language and region for a better experience."
+msgstr "Mémorisent vos réglages comme la langue et la région pour une meilleure expérience."
+
+msgid "Analytics"
+msgstr "Statistiques"
+
+msgid "Help us understand how visitors interact with the website to improve performance."
+msgstr "Nous aident à comprendre comment les visiteurs utilisent le site pour améliorer ses performances."
+
+msgid "Marketing"
+msgstr "Marketing"
+
+msgid "Used to deliver relevant ads and measure the effectiveness of campaigns."
+msgstr "Servent à vous proposer des publicités pertinentes et à mesurer l'efficacité des campagnes."
+
+msgid "Save Preferences"
+msgstr "Enregistrer mes préférences"
+
+msgid "Open chat with the assistant"
+msgstr "Ouvrir le chat avec l'assistant"
+
+msgid "Chat with BS GROUP Assistant"
+msgstr "Chat avec l'assistant BS GROUP"
+
+msgid "Online · replies in seconds"
+msgstr "En ligne · répond en quelques secondes"
+
+msgid "Close chat"
+msgstr "Fermer le chat"
+
+msgid "Our services"
+msgstr "Nos services"
+
+msgid "Type your message..."
+msgstr "Écrivez votre message..."
+
+msgid "Send"
+msgstr "Envoyer"
+
+msgid "Thinking..."
+msgstr "Réflexion en cours..."
+
+msgid "Hello! I am the BS GROUP virtual assistant. Ask me about our services, quotes or timelines!"
+msgstr "Bonjour ! Je suis l'assistant virtuel BS GROUP. Posez-moi vos questions sur nos services, devis ou délais !"
+
+msgid "Hello and welcome to BS GROUP! How can I help you today?"
+msgstr "Bonjour et bienvenue chez BS GROUP ! Comment puis-je vous aider aujourd'hui ?"
+
+msgid "For a free detailed quote, fill in the contact form or call us. We reply within 24 hours!"
+msgstr "Pour un devis gratuit et détaillé, remplissez le formulaire de contact ou appelez-nous. Nous répondons sous 24 h !"
+
+msgid "We cover residential and commercial construction, concrete works, renovation and pre-construction. What kind of project do you have in mind?"
+msgstr "Nous couvrons la construction résidentielle et commerciale, les travaux de béton, la rénovation et la pré-construction. Quel type de projet avez-vous en tête ?"
+
+msgid "You can reach us by phone, email or via the contact form. We reply within 24 hours!"
+msgstr "Vous pouvez nous joindre par téléphone, e-mail ou via le formulaire de contact. Nous répondons sous 24 h !"
+
+msgid "You are most welcome! Feel free to ask if you have any other questions."
+msgstr "Avec grand plaisir ! N'hésitez pas si vous avez d'autres questions."
+
+msgid "Thanks for your message! A member of the BS GROUP team will get back to you very soon."
+msgstr "Merci pour votre message ! Un membre de l'équipe BS GROUP reviendra vers vous très vite."
+
+msgid "Great question! For an accurate answer, our experts can call you back — leave your details in the contact form."
+msgstr "Excellente question ! Pour une réponse précise, nos experts peuvent vous rappeler — laissez vos coordonnées dans le formulaire de contact."
+
+msgid "Noted! Did you know BS GROUP has completed 640+ projects with 25 years of experience?"
+msgstr "C'est noté ! Saviez-vous que BS GROUP a réalisé plus de 640 projets avec 25 ans d'expérience ?"
+
+msgid "Noted! Our team is reviewing your message and will send you a full answer shortly."
+msgstr "C'est noté ! Notre équipe analyse votre message et vous enverra une réponse complète sous peu."
+
+msgid "This field is required."
+msgstr "Ce champ est obligatoire."
+
+msgid "Please enter a valid email address."
+msgstr "Veuillez saisir une adresse e-mail valide."
+
+msgid "Please enter a valid phone number."
+msgstr "Veuillez saisir un numéro de téléphone valide."
+
+msgid "Sending..."
+msgstr "Envoi en cours..."
+
+msgid "Submitting..."
+msgstr "Soumission en cours..."
+
+msgid "Message sent successfully! We will get back to you soon."
+msgstr "Message envoyé avec succès ! Nous reviendrons vers vous très vite."
+
+msgid "Subscribed successfully! Welcome to our newsletter."
+msgstr "Inscription réussie ! Bienvenue dans notre newsletter."
+
+msgid "Thanks! We will notify you at launch."
+msgstr "Merci ! Nous vous préviendrons au lancement."
+
+msgid "Please select a position."
+msgstr "Veuillez sélectionner un poste."
+
+msgid "Please attach your resume (PDF, DOC or DOCX)."
+msgstr "Veuillez joindre votre CV (PDF, DOC ou DOCX)."
+
+msgid "Please accept the Privacy Policy to continue."
+msgstr "Veuillez accepter la politique de confidentialité pour continuer."
+
+msgid "Application submitted! Our recruiter will contact you soon."
+msgstr "Candidature envoyée ! Notre recruteur vous contactera bientôt."
+
+msgid "Job saved to your favorites."
+msgstr "Offre ajoutée à vos favoris."
+
+msgid "Job removed from your favorites."
+msgstr "Offre retirée de vos favoris."
+
+msgid "File too large — maximum size is 5 MB."
+msgstr "Fichier trop volumineux — taille maximale de 5 Mo."
+
+msgid "Continue"
+msgstr "Continuer"
+
+msgid "Review My Request"
+msgstr "Relire ma demande"
+
+msgid "Submit Request"
+msgstr "Envoyer ma demande"
+
+msgid "Please select a project type to continue."
+msgstr "Veuillez sélectionner un type de projet pour continuer."
+
+msgid "Please accept the Privacy Policy to submit."
+msgstr "Veuillez accepter la politique de confidentialité pour envoyer."
+
+msgid "Quote request submitted successfully!"
+msgstr "Demande de devis envoyée avec succès !"
+
+msgid "Thank You | BS GROUP"
+msgstr "Merci | BS GROUP"
+
+msgid "Thank You {ref} | BS GROUP"
+msgstr "Merci {ref} | BS GROUP"
+
+msgid "Quote Request Received"
+msgstr "Demande de devis reçue"
+
+msgid "Message Sent Successfully"
+msgstr "Message envoyé avec succès"
+
+msgid "Application Submitted"
+msgstr "Candidature envoyée"
+
+msgid "Subscription Confirmed"
+msgstr "Inscription confirmée"
+
+msgid "Submission Confirmed"
+msgstr "Demande confirmée"
+
+msgid "Thank you! Our estimation team is reviewing your project and will send you a detailed, fixed-price proposal within 24 hours."
+msgstr "Merci ! Notre équipe de chiffrage étudie votre projet et vous enverra une proposition détaillée à prix fixe sous 24 heures."
+
+msgid "Thank you for reaching out! Your message is in our inbox — expect a reply from our team within 24 – 48 business hours."
+msgstr "Merci de nous avoir contactés ! Votre message est bien arrivé — attendez une réponse de notre équipe sous 24 à 48 h ouvrées."
+
+msgid "Thank you for applying! Our recruitment team will review your profile and contact you within 5 business days — whatever the outcome."
+msgstr "Merci pour votre candidature ! Notre équipe de recrutement étudiera votre profil et vous contactera sous 5 jours ouvrés, quelle que soit l'issue."
+
+msgid "You are on the list! Exclusive deals and construction insights are on their way to your inbox. Welcome aboard!"
+msgstr "C'est noté ! Nos offres exclusives et nos conseils construction arrivent dans votre boîte mail. Bienvenue !"
+
+msgid "Your submission has been received. Our team will review it and get back to you shortly."
+msgstr "Votre demande a bien été reçue. Notre équipe va l'étudier et reviendra vers vous sous peu."
+
+msgid "Current choice (saved {date}): Preferences {p} · Analytics {a} · Marketing {m}."
+msgstr "Choix actuel (enregistré le {date}) : Préférences {p} · Statistiques {a} · Marketing {m}."
+
+msgid "on"
+msgstr "activé"
+
+msgid "off"
+msgstr "désactivé"
+
+msgid "No choice saved yet — only strictly necessary cookies are running."
+msgstr "Aucun choix enregistré — seuls les cookies strictement nécessaires sont actifs."
+
+msgid "Cookie preferences saved."
+msgstr "Préférences cookies enregistrées."
+
+msgid "Article link copied to clipboard!"
+msgstr "Lien de l'article copié dans le presse-papiers !"
+
+msgid "GET IN TOUCH"
+msgstr "CONTACTEZ-NOUS"
+
+msgid "Get in touch"
+msgstr "Contactez-nous"
+
+msgid "Ecosystem - Exchange, Finance and Infrastructures"
+msgstr "Écosystème - Échange, Finance et Infrastructures"
+
+msgid "An integrated ecosystem,"
+msgstr "Un écosystème intégré,"
+
+msgid "Two poles of excellence"
+msgstr "Deux pôles d'excellence"
+
+msgid "BS GROUP connects two complementary poles — Exchange & Finance, Infrastructures & Trade — to secure your flows, funding and operations."
+msgstr "BS GROUP articule deux pôles complémentaires — Échange & Finance, Infrastructures & Commerce — pour sécuriser vos flux, vos financements et vos opérations."
+
+msgid "Hydrocarbons & accessories"
+msgstr "Hydrocarbures & accessoires"
+
+msgid "Financial intermediation"
+msgstr "Intermédiation financière"
+
+msgid "Financial structuring"
+msgstr "Structuration financière"
+
+msgid "Construction & infrastructures"
+msgstr "BTP & infrastructures"
+
+msgid "International trade"
+msgstr "Négoce international"
+
+msgid "Transport & logistics"
+msgstr "Transport & logistique"
+
+msgid "Previous pill"
+msgstr "Pilule précédente"
+
+msgid "Next pill"
+msgstr "Pilule suivante"
+
+msgid "Projects Completed"
+msgstr "Projets réalisés"
+
+msgid "Years of Experience"
+msgstr "Années d'expérience"
+
+msgid "Happy Customers"
+msgstr "Clients satisfaits"
+
+msgid "Supply of fuels, lubricants and accessories, verified sourcing and controlled quality."
+msgstr "Fourniture de carburants, lubrifiants et accessoires, sourcing vérifié et qualité contrôlée."
+
+msgid "Learn more"
+msgstr "En savoir plus"
+
+msgid "Learn More"
+msgstr "En savoir plus"
+
+msgid "Qualified matchmaking between project sponsors and financial partners."
+msgstr "Mise en relation qualifiée entre porteurs de projets et partenaires financiers."
+
+msgid "Deal structuring and engineering: structuring, risks, closing."
+msgstr "Montage et ingénierie de deals : structuration, risques, closing."
+
+msgid "Construction, infrastructures and renovation: timelines, quality, HSSE."
+msgstr "Construction, infrastructures et rénovation : délais, qualité, HSSE."
+
+msgid "Import-export, sourcing and customs compliance across your corridors."
+msgstr "Import-export, sourcing et conformité douanière sur vos corridors."
+
+msgid "Transport, warehousing and distribution with end-to-end tracking."
+msgstr "Transport, entreposage et distribution avec suivi de bout en bout."
+
+msgid "Hydrocarbon industrial site"
+msgstr "Site industriel hydrocarbures"
+
+msgid "Handshake between financial partners"
+msgstr "Poignée de main entre partenaires financiers"
+
+msgid "Institutional headquarters, financial structuring"
+msgstr "Siège institutionnel, structuration financière"
+
+msgid "Construction engineers on site"
+msgstr "Ingénieurs BTP sur chantier"
+
+msgid "Transport and logistics operations"
+msgstr "Opérations transport et logistique"
+
+msgid "Engineers with site helmets reviewing plans on site"
+msgstr "Ingénieurs avec casques de chantier examinant des plans sur site"
+
+msgid "Blog"
+msgstr "Blog"
+
+msgid "Crafting Excellence"
+msgstr "Façonner l'excellence"
+
+msgid "in Every Project"
+msgstr "dans chaque projet"
+
+msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+
+msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+
+msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore..."
+msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore..."
+
+msgid "Our Mission"
+msgstr "Notre Mission"
+
+msgid "Step 1"
+msgstr "Étape 1"
+
+msgid "Step 2"
+msgstr "Étape 2"
+
+msgid "Step 3"
+msgstr "Étape 3"
+
+msgid "Consultation & Planning"
+msgstr "Consultation & Planification"
+
+msgid "Design & Construction"
+msgstr "Conception & Construction"
+
+msgid "Final Inspection & Handover"
+msgstr "Inspection finale & Remise"
+
+msgid "Advanced Technology"
+msgstr "Technologie avancée"
+
+msgid "Expert Team"
+msgstr "Équipe experte"
+
+msgid "On-Time Delivery"
+msgstr "Livraison dans les délais"
+
+msgid "Award Winning"
+msgstr "Primé"
+
+msgid "Chief Executive Officer"
+msgstr "Directeur général"
+
+msgid "Civil Engineer"
+msgstr "Ingénieur civil"
+
+msgid "Structural Engineer"
+msgstr "Ingénieur structure"
+
+msgid "Senior Structural Engineer"
+msgstr "Ingénieur structure senior"
+
+msgid "Site Project Manager"
+msgstr "Chef de projet chantier"
+
+msgid "Architectural Designer"
+msgstr "Architecte designer"
+
+msgid "How We Work"
+msgstr "Notre savoir-faire"
+
+msgid "How We"
+msgstr "Comment nous"
+
+msgid "Get It Done"
+msgstr "réalisons vos projets"
+
+msgid "View All Projects"
+msgstr "Voir tous les projets"
+
+msgid "Why Choose Us"
+msgstr "Pourquoi nous choisir"
+
+msgid "Building Trust,"
+msgstr "Bâtir la confiance,"
+
+msgid "Delivering Excellence"
+msgstr "livrer l'excellence"
+
+msgid "Meet Our Team"
+msgstr "Rencontrez notre équipe"
+
+msgid "Meet the Faces"
+msgstr "Les visages"
+
+msgid "Behind the Structures"
+msgstr "derrière les ouvrages"
+
+msgid "View All"
+msgstr "Tout voir"
+
+msgid "Experience Shared by"
+msgstr "L'expérience partagée par"
+
+msgid "Our Clients"
+msgstr "nos clients"
+
+msgid "Testimonial pages"
+msgstr "Pages de témoignages"
+
+msgid "Question?"
+msgstr "Une question ?"
+
+msgid "Look here."
+msgstr "La réponse est ici."
+
+msgid "Our team will answer all your questions. We will ensure a quick response."
+msgstr "Notre équipe répondra à toutes vos questions. Nous garantissons une réponse rapide."
+
+msgid "News & Blogs"
+msgstr "Actualités & Blogs"
+
+msgid "Our Latest"
+msgstr "Nos dernières"
+
+msgid "View All Blogs"
+msgstr "Voir tous les articles"
+
+msgid "Read More"
+msgstr "Lire la suite"
+
+msgid "Join Our Team"
+msgstr "Rejoignez notre équipe"
+
+msgid "Career"
+msgstr "Carrière"
+
+msgid "Opportunities"
+msgstr "Opportunités"
+
+msgid "Grow with us — explore our latest open positions and find the role where you will thrive."
+msgstr "Évoluez avec nous — découvrez nos derniers postes ouverts et trouvez le rôle où vous vous épanouirez."
+
+msgid "View All Jobs"
+msgstr "Voir toutes les offres"
+
+msgid "Have a Project Idea?"
+msgstr "Une idée de projet ?"
+
+msgid "Let's Talk!"
+msgstr "Parlons-en !"
+
+msgid "First Name"
+msgstr "Prénom"
+
+msgid "Ex. John"
+msgstr "Ex. Jean"
+
+msgid "Last Name"
+msgstr "Nom"
+
+msgid "Ex. Doe"
+msgstr "Ex. Dupont"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Phone Number"
+msgstr "Numéro de téléphone"
+
+msgid "Enter Phone Number"
+msgstr "Saisissez le numéro de téléphone"
+
+msgid "Subject"
+msgstr "Sujet"
+
+msgid "Enter subject here..."
+msgstr "Saisissez le sujet ici..."
+
+msgid "Your Message"
+msgstr "Votre message"
+
+msgid "Enter here..."
+msgstr "Saisissez ici..."
+
+msgid "Send Message"
+msgstr "Envoyer le message"
+
+msgid "Address"
+msgstr "Adresse"
+
+msgid "Phone"
+msgstr "Téléphone"
+
+msgid "Open Time"
+msgstr "Horaires d'ouverture"
+
+msgid "Monday – Friday"
+msgstr "Lundi – Vendredi"
+
+msgid "Saturday – Sunday"
+msgstr "Samedi – Dimanche"
+
+msgid "Stay Connected"
+msgstr "Restons connectés"
+
+msgid "Blue glass office tower"
+msgstr "Tour de bureaux en verre bleu"
+
+msgid "Location"
+msgstr "Emplacement"
+
+msgid "Total Area"
+msgstr "Surface totale"
+
+msgid "Duration"
+msgstr "Durée"
+
+msgid "Residential Construction"
+msgstr "Construction résidentielle"
+
+msgid "Modern architectural villa"
+msgstr "Villa moderne architecturale"
+
+msgid "Construction Trends"
+msgstr "Tendances construction"
+
+msgid "How Technology is Revolutionizing Construction"
+msgstr "Comment la technologie révolutionne la construction"
+
+msgid "5 Essential Steps for a Successful Construction"
+msgstr "5 étapes essentielles pour une construction réussie"
+
+msgid "Site Safety Tips: Ensuring a Smooth Construction"
+msgstr "Conseils sécurité chantier : pour une construction sans accroc"
+
+msgid "Workers and crane on a modern construction site"
+msgstr "Ouvriers et grue sur un chantier moderne"
+
+msgid "Workers in safety gear on construction site"
+msgstr "Ouvriers en équipements de sécurité sur chantier"
+
+msgid "Project Management"
+msgstr "Gestion de projet"
+
+msgid "Apply Now"
+msgstr "Postuler"
+
+msgid "Full Time"
+msgstr "Temps plein"
+
+msgid "Remote"
+msgstr "À distance"
+
+msgid "Our divisions & expertise"
+msgstr "Nos pôles & expertises"
+
+msgid "Two divisions,"
+msgstr "Deux pôles,"
+
+msgid "six areas of expertise"
+msgstr "six expertises"
+
+msgid "Discover the ecosystem"
+msgstr "Découvrir l'écosystème"
+
+msgid "Team in helmets working together on plans"
+msgstr "Équipe en casques travaillant ensemble sur des plans"
+
+msgid "Construction crew in yellow helmets"
+msgstr "Équipe de chantier en casques jaunes"
+
+msgid "Your Question, Our Priority"
+msgstr "Votre question, notre priorité"
+
+msgid "24/7 Service"
+msgstr "Service 24/7"
+
+msgid "Close video"
+msgstr "Fermer la vidéo"
+
+msgid "A project? Let's talk about it —"
+msgstr "Un projet ? Parlons-en —"
+
+msgid "reply within 24 business hours."
+msgstr "réponse sous 24 h ouvrées."
+
+msgid "Who We Are"
+msgstr "Qui sommes-nous"
+
+msgid "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat — from financing to delivery, our teams secure every link in your projects."
+msgstr "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat — du financement à la livraison, nos équipes sécurisent chaque maillon de vos projets."
+
+msgid "Our Vision"
+msgstr "Notre Vision"
+
+msgid "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse."
+msgstr "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse."
+
+msgid "Years"
+msgstr "Ans"
+
+msgid "of Experience"
+msgstr "d'expérience"
+
+msgid "Previous content"
+msgstr "Contenu précédent"
+
+msgid "Next content"
+msgstr "Contenu suivant"
+
+msgid "Our Expertise"
+msgstr "Notre expertise"
+
+msgid "Handshake between two executives in a modern atrium"
+msgstr "Poignée de main entre deux dirigeants dans un atrium moderne"
+
+msgid "Sitemap"
+msgstr "Plan du site"
+
+msgid "Watch the video"
+msgstr "Regarder la vidéo"
+
+msgid "Video presentation"
+msgstr "Présentation vidéo"
+
+msgid "Video playback"
+msgstr "Lecture vidéo"
+
+msgid "Step"
+msgstr "Étape"
+
+msgid "Milestones That"
+msgstr "Des jalons qui"
+
+msgid "Define Us"
+msgstr "nous définissent"
+
+msgid "-- Watch The Video"
+msgstr "-- Regardez la vidéo"
+
+msgid "Watch How We Bring"
+msgstr "Voyez comment nous donnons vie"
+
+msgid "Plans to Life"
+msgstr "aux plans"
+
+msgid "Quote request"
+msgstr "Demande de devis"
+
+msgid "Request this service"
+msgstr "Demander ce service"
+
+msgid "Request a similar project"
+msgstr "Demander un projet similaire"
+
+msgid "Leave us your contact details: our team will call you back within 24 business hours with a proposal."
+msgstr "Laissez-nous vos coordonnées : notre équipe vous recontacte sous 24 h ouvrées avec une proposition."
+
+msgid "Name"
+msgstr "Nom"
+
+msgid "Your name"
+msgstr "Votre nom"
+
+msgid "you@example.com"
+msgstr "vous@exemple.com"
+
+msgid "Your need"
+msgstr "Votre besoin"
+
+msgid "Describe your need in a few lines…"
+msgstr "Décrivez votre besoin en quelques lignes…"
+
+msgid "Please fill in all fields (valid email and phone)."
+msgstr "Merci de remplir tous les champs (email et téléphone valides)."
+
+msgid "Subject"
+msgstr "Objet"

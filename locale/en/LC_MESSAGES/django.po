@@ -1,0 +1,822 @@
+# BS GROUP translations.
+msgid ""
+msgstr ""
+"Project-Id-Version: BS-GROUP 1.0\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Home"
+msgstr "Home"
+
+msgid "About Us"
+msgstr "About Us"
+
+msgid "Our Team"
+msgstr "Our Team"
+
+msgid "Testimonials"
+msgstr "Testimonials"
+
+msgid "Services"
+msgstr "Services"
+
+msgid "Projects"
+msgstr "Projects"
+
+msgid "Blogs"
+msgstr "Blogs"
+
+msgid "Careers"
+msgstr "Careers"
+
+msgid "Contact Us"
+msgstr "Contact Us"
+
+msgid "Request a Quote"
+msgstr "Request a Quote"
+
+msgid "FAQs"
+msgstr "FAQs"
+
+msgid "Terms"
+msgstr "Terms"
+
+msgid "Privacy Policy"
+msgstr "Privacy Policy"
+
+msgid "Cookie Policy"
+msgstr "Cookie Policy"
+
+msgid "Legal Notice"
+msgstr "Legal Notice"
+
+msgid "Pages"
+msgstr "Pages"
+
+msgid "Our Newsletter"
+msgstr "Our Newsletter"
+
+msgid "Subscribe"
+msgstr "Subscribe"
+
+msgid "Navigation"
+msgstr "Navigation"
+
+msgid "Contact"
+msgstr "Contact"
+
+msgid "Get the latest information"
+msgstr "Get the latest information"
+
+msgid "Accept All"
+msgstr "Accept All"
+
+msgid "Reject All"
+msgstr "Reject All"
+
+msgid "Customize"
+msgstr "Customize"
+
+msgid "Cookie Preferences"
+msgstr "Cookie Preferences"
+
+msgid "BS GROUP | Exchange, Finance & Infrastructures"
+msgstr "BS GROUP | Exchange, Finance & Infrastructures"
+
+msgid "BS GROUP — Integrated ecosystem: exchange, finance, infrastructures and trade."
+msgstr "BS GROUP — Integrated ecosystem: exchange, finance, infrastructures and trade."
+
+msgid "Loading the website"
+msgstr "Loading the website"
+
+msgid "Exchange · Finance · Infrastructures"
+msgstr "Exchange · Finance · Infrastructures"
+
+msgid "Laying the foundation..."
+msgstr "Laying the foundation..."
+
+msgid "Raising the structure..."
+msgstr "Raising the structure..."
+
+msgid "Adding final touches..."
+msgstr "Adding final touches..."
+
+msgid "Menu"
+msgstr "Menu"
+
+msgid "Join Our Newsletter for"
+msgstr "Join Our Newsletter for"
+
+msgid "Exclusive"
+msgstr "Exclusive"
+
+msgid "Deals & Construction Insights!"
+msgstr "Deals & Construction Insights!"
+
+msgid "Enter Email Address"
+msgstr "Enter Email Address"
+
+msgid "Let's Connect there"
+msgstr "Let's Connect there"
+
+msgid "Testimonial"
+msgstr "Testimonial"
+
+msgid "Email address"
+msgstr "Email address"
+
+msgid "All Rights Reserved"
+msgstr "All Rights Reserved"
+
+msgid "User Terms & Conditions"
+msgstr "User Terms & Conditions"
+
+msgid "Back to top"
+msgstr "Back to top"
+
+msgid "We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic."
+msgstr "We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic."
+
+msgid "Learn more"
+msgstr "Learn more"
+
+msgid "Close"
+msgstr "Close"
+
+msgid "Strictly Necessary"
+msgstr "Strictly Necessary"
+
+msgid "Always on"
+msgstr "Always on"
+
+msgid "Essential for the website to function properly. These cannot be disabled."
+msgstr "Essential for the website to function properly. These cannot be disabled."
+
+msgid "Preferences"
+msgstr "Preferences"
+
+msgid "Remember your settings such as language and region for a better experience."
+msgstr "Remember your settings such as language and region for a better experience."
+
+msgid "Analytics"
+msgstr "Analytics"
+
+msgid "Help us understand how visitors interact with the website to improve performance."
+msgstr "Help us understand how visitors interact with the website to improve performance."
+
+msgid "Marketing"
+msgstr "Marketing"
+
+msgid "Used to deliver relevant ads and measure the effectiveness of campaigns."
+msgstr "Used to deliver relevant ads and measure the effectiveness of campaigns."
+
+msgid "Save Preferences"
+msgstr "Save Preferences"
+
+msgid "Open chat with the assistant"
+msgstr "Open chat with the assistant"
+
+msgid "Chat with BS GROUP Assistant"
+msgstr "Chat with BS GROUP Assistant"
+
+msgid "Online · replies in seconds"
+msgstr "Online · replies in seconds"
+
+msgid "Close chat"
+msgstr "Close chat"
+
+msgid "Our services"
+msgstr "Our services"
+
+msgid "Type your message..."
+msgstr "Type your message..."
+
+msgid "Send"
+msgstr "Send"
+
+msgid "Thinking..."
+msgstr "Thinking..."
+
+msgid "Hello! I am the BS GROUP virtual assistant. Ask me about our services, quotes or timelines!"
+msgstr "Hello! I am the BS GROUP virtual assistant. Ask me about our services, quotes or timelines!"
+
+msgid "Hello and welcome to BS GROUP! How can I help you today?"
+msgstr "Hello and welcome to BS GROUP! How can I help you today?"
+
+msgid "For a free detailed quote, fill in the contact form or call us. We reply within 24 hours!"
+msgstr "For a free detailed quote, fill in the contact form or call us. We reply within 24 hours!"
+
+msgid "We cover residential and commercial construction, concrete works, renovation and pre-construction. What kind of project do you have in mind?"
+msgstr "We cover residential and commercial construction, concrete works, renovation and pre-construction. What kind of project do you have in mind?"
+
+msgid "You can reach us by phone, email or via the contact form. We reply within 24 hours!"
+msgstr "You can reach us by phone, email or via the contact form. We reply within 24 hours!"
+
+msgid "You are most welcome! Feel free to ask if you have any other questions."
+msgstr "You are most welcome! Feel free to ask if you have any other questions."
+
+msgid "Thanks for your message! A member of the BS GROUP team will get back to you very soon."
+msgstr "Thanks for your message! A member of the BS GROUP team will get back to you very soon."
+
+msgid "Great question! For an accurate answer, our experts can call you back — leave your details in the contact form."
+msgstr "Great question! For an accurate answer, our experts can call you back — leave your details in the contact form."
+
+msgid "Noted! Did you know BS GROUP has completed 640+ projects with 25 years of experience?"
+msgstr "Noted! Did you know BS GROUP has completed 640+ projects with 25 years of experience?"
+
+msgid "Noted! Our team is reviewing your message and will send you a full answer shortly."
+msgstr "Noted! Our team is reviewing your message and will send you a full answer shortly."
+
+msgid "This field is required."
+msgstr "This field is required."
+
+msgid "Please enter a valid email address."
+msgstr "Please enter a valid email address."
+
+msgid "Please enter a valid phone number."
+msgstr "Please enter a valid phone number."
+
+msgid "Sending..."
+msgstr "Sending..."
+
+msgid "Submitting..."
+msgstr "Submitting..."
+
+msgid "Message sent successfully! We will get back to you soon."
+msgstr "Message sent successfully! We will get back to you soon."
+
+msgid "Subscribed successfully! Welcome to our newsletter."
+msgstr "Subscribed successfully! Welcome to our newsletter."
+
+msgid "Thanks! We will notify you at launch."
+msgstr "Thanks! We will notify you at launch."
+
+msgid "Please select a position."
+msgstr "Please select a position."
+
+msgid "Please attach your resume (PDF, DOC or DOCX)."
+msgstr "Please attach your resume (PDF, DOC or DOCX)."
+
+msgid "Please accept the Privacy Policy to continue."
+msgstr "Please accept the Privacy Policy to continue."
+
+msgid "Application submitted! Our recruiter will contact you soon."
+msgstr "Application submitted! Our recruiter will contact you soon."
+
+msgid "Job saved to your favorites."
+msgstr "Job saved to your favorites."
+
+msgid "Job removed from your favorites."
+msgstr "Job removed from your favorites."
+
+msgid "File too large — maximum size is 5 MB."
+msgstr "File too large — maximum size is 5 MB."
+
+msgid "Continue"
+msgstr "Continue"
+
+msgid "Review My Request"
+msgstr "Review My Request"
+
+msgid "Submit Request"
+msgstr "Submit Request"
+
+msgid "Please select a project type to continue."
+msgstr "Please select a project type to continue."
+
+msgid "Please accept the Privacy Policy to submit."
+msgstr "Please accept the Privacy Policy to submit."
+
+msgid "Quote request submitted successfully!"
+msgstr "Quote request submitted successfully!"
+
+msgid "Thank You | BS GROUP"
+msgstr "Thank You | BS GROUP"
+
+msgid "Thank You {ref} | BS GROUP"
+msgstr "Thank You {ref} | BS GROUP"
+
+msgid "Quote Request Received"
+msgstr "Quote Request Received"
+
+msgid "Message Sent Successfully"
+msgstr "Message Sent Successfully"
+
+msgid "Application Submitted"
+msgstr "Application Submitted"
+
+msgid "Subscription Confirmed"
+msgstr "Subscription Confirmed"
+
+msgid "Submission Confirmed"
+msgstr "Submission Confirmed"
+
+msgid "Thank you! Our estimation team is reviewing your project and will send you a detailed, fixed-price proposal within 24 hours."
+msgstr "Thank you! Our estimation team is reviewing your project and will send you a detailed, fixed-price proposal within 24 hours."
+
+msgid "Thank you for reaching out! Your message is in our inbox — expect a reply from our team within 24 – 48 business hours."
+msgstr "Thank you for reaching out! Your message is in our inbox — expect a reply from our team within 24 – 48 business hours."
+
+msgid "Thank you for applying! Our recruitment team will review your profile and contact you within 5 business days — whatever the outcome."
+msgstr "Thank you for applying! Our recruitment team will review your profile and contact you within 5 business days — whatever the outcome."
+
+msgid "You are on the list! Exclusive deals and construction insights are on their way to your inbox. Welcome aboard!"
+msgstr "You are on the list! Exclusive deals and construction insights are on their way to your inbox. Welcome aboard!"
+
+msgid "Your submission has been received. Our team will review it and get back to you shortly."
+msgstr "Your submission has been received. Our team will review it and get back to you shortly."
+
+msgid "Current choice (saved {date}): Preferences {p} · Analytics {a} · Marketing {m}."
+msgstr "Current choice (saved {date}): Preferences {p} · Analytics {a} · Marketing {m}."
+
+msgid "on"
+msgstr "on"
+
+msgid "off"
+msgstr "off"
+
+msgid "No choice saved yet — only strictly necessary cookies are running."
+msgstr "No choice saved yet — only strictly necessary cookies are running."
+
+msgid "Cookie preferences saved."
+msgstr "Cookie preferences saved."
+
+msgid "Article link copied to clipboard!"
+msgstr "Article link copied to clipboard!"
+
+msgid "GET IN TOUCH"
+msgstr "GET IN TOUCH"
+
+msgid "Get in touch"
+msgstr "Get in touch"
+
+msgid "Ecosystem - Exchange, Finance and Infrastructures"
+msgstr "Ecosystem - Exchange, Finance and Infrastructures"
+
+msgid "An integrated ecosystem,"
+msgstr "An integrated ecosystem,"
+
+msgid "Two poles of excellence"
+msgstr "Two poles of excellence"
+
+msgid "BS GROUP connects two complementary poles — Exchange & Finance, Infrastructures & Trade — to secure your flows, funding and operations."
+msgstr "BS GROUP connects two complementary poles — Exchange & Finance, Infrastructures & Trade — to secure your flows, funding and operations."
+
+msgid "Hydrocarbons & accessories"
+msgstr "Hydrocarbons & accessories"
+
+msgid "Financial intermediation"
+msgstr "Financial intermediation"
+
+msgid "Financial structuring"
+msgstr "Financial structuring"
+
+msgid "Construction & infrastructures"
+msgstr "Construction & infrastructures"
+
+msgid "International trade"
+msgstr "International trade"
+
+msgid "Transport & logistics"
+msgstr "Transport & logistics"
+
+msgid "Previous pill"
+msgstr "Previous pill"
+
+msgid "Next pill"
+msgstr "Next pill"
+
+msgid "Projects Completed"
+msgstr "Projects Completed"
+
+msgid "Years of Experience"
+msgstr "Years of Experience"
+
+msgid "Happy Customers"
+msgstr "Happy Customers"
+
+msgid "Supply of fuels, lubricants and accessories, verified sourcing and controlled quality."
+msgstr "Supply of fuels, lubricants and accessories, verified sourcing and controlled quality."
+
+msgid "Learn more"
+msgstr "Learn more"
+
+msgid "Learn More"
+msgstr "Learn More"
+
+msgid "Qualified matchmaking between project sponsors and financial partners."
+msgstr "Qualified matchmaking between project sponsors and financial partners."
+
+msgid "Deal structuring and engineering: structuring, risks, closing."
+msgstr "Deal structuring and engineering: structuring, risks, closing."
+
+msgid "Construction, infrastructures and renovation: timelines, quality, HSSE."
+msgstr "Construction, infrastructures and renovation: timelines, quality, HSSE."
+
+msgid "Import-export, sourcing and customs compliance across your corridors."
+msgstr "Import-export, sourcing and customs compliance across your corridors."
+
+msgid "Transport, warehousing and distribution with end-to-end tracking."
+msgstr "Transport, warehousing and distribution with end-to-end tracking."
+
+msgid "Hydrocarbon industrial site"
+msgstr "Hydrocarbon industrial site"
+
+msgid "Handshake between financial partners"
+msgstr "Handshake between financial partners"
+
+msgid "Institutional headquarters, financial structuring"
+msgstr "Institutional headquarters, financial structuring"
+
+msgid "Construction engineers on site"
+msgstr "Construction engineers on site"
+
+msgid "Transport and logistics operations"
+msgstr "Transport and logistics operations"
+
+msgid "Engineers with site helmets reviewing plans on site"
+msgstr "Engineers with site helmets reviewing plans on site"
+
+msgid "Blog"
+msgstr "Blog"
+
+msgid "Crafting Excellence"
+msgstr "Crafting Excellence"
+
+msgid "in Every Project"
+msgstr "in Every Project"
+
+msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+
+msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+
+msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore..."
+msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore..."
+
+msgid "Our Mission"
+msgstr "Our Mission"
+
+msgid "Step 1"
+msgstr "Step 1"
+
+msgid "Step 2"
+msgstr "Step 2"
+
+msgid "Step 3"
+msgstr "Step 3"
+
+msgid "Consultation & Planning"
+msgstr "Consultation & Planning"
+
+msgid "Design & Construction"
+msgstr "Design & Construction"
+
+msgid "Final Inspection & Handover"
+msgstr "Final Inspection & Handover"
+
+msgid "Advanced Technology"
+msgstr "Advanced Technology"
+
+msgid "Expert Team"
+msgstr "Expert Team"
+
+msgid "On-Time Delivery"
+msgstr "On-Time Delivery"
+
+msgid "Award Winning"
+msgstr "Award Winning"
+
+msgid "Chief Executive Officer"
+msgstr "Chief Executive Officer"
+
+msgid "Civil Engineer"
+msgstr "Civil Engineer"
+
+msgid "Structural Engineer"
+msgstr "Structural Engineer"
+
+msgid "Senior Structural Engineer"
+msgstr "Senior Structural Engineer"
+
+msgid "Site Project Manager"
+msgstr "Site Project Manager"
+
+msgid "Architectural Designer"
+msgstr "Architectural Designer"
+
+msgid "How We Work"
+msgstr "How We Work"
+
+msgid "How We"
+msgstr "How We"
+
+msgid "Get It Done"
+msgstr "Get It Done"
+
+msgid "View All Projects"
+msgstr "View All Projects"
+
+msgid "Why Choose Us"
+msgstr "Why Choose Us"
+
+msgid "Building Trust,"
+msgstr "Building Trust,"
+
+msgid "Delivering Excellence"
+msgstr "Delivering Excellence"
+
+msgid "Meet Our Team"
+msgstr "Meet Our Team"
+
+msgid "Meet the Faces"
+msgstr "Meet the Faces"
+
+msgid "Behind the Structures"
+msgstr "Behind the Structures"
+
+msgid "View All"
+msgstr "View All"
+
+msgid "Experience Shared by"
+msgstr "Experience Shared by"
+
+msgid "Our Clients"
+msgstr "Our Clients"
+
+msgid "Testimonial pages"
+msgstr "Testimonial pages"
+
+msgid "Question?"
+msgstr "Question?"
+
+msgid "Look here."
+msgstr "Look here."
+
+msgid "Our team will answer all your questions. We will ensure a quick response."
+msgstr "Our team will answer all your questions. We will ensure a quick response."
+
+msgid "News & Blogs"
+msgstr "News & Blogs"
+
+msgid "Our Latest"
+msgstr "Our Latest"
+
+msgid "View All Blogs"
+msgstr "View All Blogs"
+
+msgid "Read More"
+msgstr "Read More"
+
+msgid "Join Our Team"
+msgstr "Join Our Team"
+
+msgid "Career"
+msgstr "Career"
+
+msgid "Opportunities"
+msgstr "Opportunities"
+
+msgid "Grow with us — explore our latest open positions and find the role where you will thrive."
+msgstr "Grow with us — explore our latest open positions and find the role where you will thrive."
+
+msgid "View All Jobs"
+msgstr "View All Jobs"
+
+msgid "Have a Project Idea?"
+msgstr "Have a Project Idea?"
+
+msgid "Let's Talk!"
+msgstr "Let's Talk!"
+
+msgid "First Name"
+msgstr "First Name"
+
+msgid "Ex. John"
+msgstr "Ex. John"
+
+msgid "Last Name"
+msgstr "Last Name"
+
+msgid "Ex. Doe"
+msgstr "Ex. Doe"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Phone Number"
+msgstr "Phone Number"
+
+msgid "Enter Phone Number"
+msgstr "Enter Phone Number"
+
+msgid "Subject"
+msgstr "Subject"
+
+msgid "Enter subject here..."
+msgstr "Enter subject here..."
+
+msgid "Your Message"
+msgstr "Your Message"
+
+msgid "Enter here..."
+msgstr "Enter here..."
+
+msgid "Send Message"
+msgstr "Send Message"
+
+msgid "Address"
+msgstr "Address"
+
+msgid "Phone"
+msgstr "Phone"
+
+msgid "Open Time"
+msgstr "Open Time"
+
+msgid "Monday – Friday"
+msgstr "Monday – Friday"
+
+msgid "Saturday – Sunday"
+msgstr "Saturday – Sunday"
+
+msgid "Stay Connected"
+msgstr "Stay Connected"
+
+msgid "Blue glass office tower"
+msgstr "Blue glass office tower"
+
+msgid "Location"
+msgstr "Location"
+
+msgid "Total Area"
+msgstr "Total Area"
+
+msgid "Duration"
+msgstr "Duration"
+
+msgid "Residential Construction"
+msgstr "Residential Construction"
+
+msgid "Modern architectural villa"
+msgstr "Modern architectural villa"
+
+msgid "Construction Trends"
+msgstr "Construction Trends"
+
+msgid "How Technology is Revolutionizing Construction"
+msgstr "How Technology is Revolutionizing Construction"
+
+msgid "5 Essential Steps for a Successful Construction"
+msgstr "5 Essential Steps for a Successful Construction"
+
+msgid "Site Safety Tips: Ensuring a Smooth Construction"
+msgstr "Site Safety Tips: Ensuring a Smooth Construction"
+
+msgid "Workers and crane on a modern construction site"
+msgstr "Workers and crane on a modern construction site"
+
+msgid "Workers in safety gear on construction site"
+msgstr "Workers in safety gear on construction site"
+
+msgid "Project Management"
+msgstr "Project Management"
+
+msgid "Apply Now"
+msgstr "Apply Now"
+
+msgid "Full Time"
+msgstr "Full Time"
+
+msgid "Remote"
+msgstr "Remote"
+
+msgid "Our divisions & expertise"
+msgstr "Our divisions & expertise"
+
+msgid "Two divisions,"
+msgstr "Two divisions,"
+
+msgid "six areas of expertise"
+msgstr "six areas of expertise"
+
+msgid "Discover the ecosystem"
+msgstr "Discover the ecosystem"
+
+msgid "Team in helmets working together on plans"
+msgstr "Team in helmets working together on plans"
+
+msgid "Construction crew in yellow helmets"
+msgstr "Construction crew in yellow helmets"
+
+msgid "Your Question, Our Priority"
+msgstr "Your Question, Our Priority"
+
+msgid "24/7 Service"
+msgstr "24/7 Service"
+
+msgid "Close video"
+msgstr "Close video"
+
+msgid "A project? Let's talk about it —"
+msgstr "A project? Let's talk about it —"
+
+msgid "reply within 24 business hours."
+msgstr "reply within 24 business hours."
+
+msgid "Who We Are"
+msgstr "Who We Are"
+
+msgid "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat — from financing to delivery, our teams secure every link in your projects."
+msgstr "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat — from financing to delivery, our teams secure every link in your projects."
+
+msgid "Our Vision"
+msgstr "Our Vision"
+
+msgid "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse."
+msgstr "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse."
+
+msgid "Years"
+msgstr "Years"
+
+msgid "of Experience"
+msgstr "of Experience"
+
+msgid "Previous content"
+msgstr "Previous content"
+
+msgid "Next content"
+msgstr "Next content"
+
+msgid "Our Expertise"
+msgstr "Our Expertise"
+
+msgid "Handshake between two executives in a modern atrium"
+msgstr "Handshake between two executives in a modern atrium"
+
+msgid "Sitemap"
+msgstr "Sitemap"
+
+msgid "Watch the video"
+msgstr "Watch the video"
+
+msgid "Video presentation"
+msgstr "Video presentation"
+
+msgid "Video playback"
+msgstr "Video playback"
+
+msgid "Step"
+msgstr "Step"
+
+msgid "Milestones That"
+msgstr "Milestones That"
+
+msgid "Define Us"
+msgstr "Define Us"
+
+msgid "-- Watch The Video"
+msgstr "-- Watch The Video"
+
+msgid "Watch How We Bring"
+msgstr "Watch How We Bring"
+
+msgid "Plans to Life"
+msgstr "Plans to Life"
+
+msgid "Quote request"
+msgstr "Quote request"
+
+msgid "Request this service"
+msgstr "Request this service"
+
+msgid "Request a similar project"
+msgstr "Request a similar project"
+
+msgid "Leave us your contact details: our team will call you back within 24 business hours with a proposal."
+msgstr "Leave us your contact details: our team will call you back within 24 business hours with a proposal."
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Your name"
+msgstr "Your name"
+
+msgid "you@example.com"
+msgstr "you@example.com"
+
+msgid "Your need"
+msgstr "Your need"
+
+msgid "Describe your need in a few lines…"
+msgstr "Describe your need in a few lines…"
+
+msgid "Please fill in all fields (valid email and phone)."
+msgstr "Please fill in all fields (valid email and phone)."
+
+msgid "Subject"
+msgstr "Subject"

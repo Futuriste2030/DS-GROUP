@@ -1,0 +1,214 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}{% trans "Thank You" %} | BS GROUP{% endblock %}
+{% block meta_description %}{% trans "Thank you! Your request has been sent to BS GROUP." %}{% endblock %}
+{% block body_class %}bg-white font-sans antialiased text-[#0b1f35] overflow-x-hidden{% endblock %}
+
+{% block content %}
+<section id="thanks-hero" class="bg-white relative overflow-hidden" data-server-ref="{{ reference|default:'' }}" data-kind="{{ submission_kind|default:'general' }}">
+      <span class="section-tag section-tag--dark" aria-hidden="true">{% trans "Thanks" %}</span>
+      <div
+        class="max-w-3xl mx-auto px-6 pt-14 pb-16 md:pt-16 text-center relative"
+      >
+        <div class="relative mx-auto w-fit" aria-hidden="true">
+          <span
+            class="thanks-ring absolute inset-0 rounded-full"
+            aria-hidden="true"
+          ></span>
+          <span
+            class="thanks-check relative w-24 h-24 md:w-28 md:h-28 rounded-full bg-[#c9a227] text-white flex items-center justify-center shadow-2xl shadow-orange-500/30"
+          >
+            <i
+              data-lucide="check"
+              class="w-12 h-12 md:w-14 md:h-14"
+              stroke-width="3"
+            ></i>
+          </span>
+          <!-- Étoiles -->
+          <span class="sparkle absolute -left-8 top-2 text-[#c9a227]">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7">
+              <path
+                d="M12 0c.9 6.9 4.2 10.2 12 12-7.8 1.8-11.1 5.1-12 12-.9-6.9-4.2-10.2-12-12C7.8 10.2 11.1 6.9 12 0Z"
+              />
+            </svg>
+          </span>
+          <span
+            class="sparkle absolute -right-7 bottom-1 text-[#c9a227]"
+            style="animation-delay: 0.7s"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+              <path
+                d="M12 0c.9 6.9 4.2 10.2 12 12-7.8 1.8-11.1 5.1-12 12-.9-6.9-4.2-10.2-12-12C7.8 10.2 11.1 6.9 12 0Z"
+              />
+            </svg>
+          </span>
+        </div>
+
+        <span
+          id="thanks-badge"
+          class="inline-flex items-center gap-2 mt-8 px-5 py-2 rounded-full bg-[#c9a227]/10 text-[#c9a227] text-[11px] font-extrabold uppercase tracking-[0.15em]"
+        >
+          <i data-lucide="badge-check" class="w-4 h-4"></i>
+          {% if submission_kind == 'application' %}{% trans "Application Submitted" %}{% elif submission_kind == 'contact' %}{% trans "Message Sent Successfully" %}{% else %}{% trans "Submission Confirmed" %}{% endif %}
+        </span>
+
+        <h1
+          class="mt-5 text-[36px] sm:text-[46px] md:text-[54px] font-black tracking-tight leading-[1.05]"
+        >
+          <span class="text-[#0b1f35]">{% trans "Thank " %}</span
+          ><span class="text-[#c9a227]">{% trans "You!" %}</span>
+        </h1>
+
+        <p
+          id="thanks-message"
+          class="mt-4 max-w-lg mx-auto text-[15px] text-slate-500 leading-relaxed"
+        >
+          {% if submission_kind == 'application' %}{% trans "Thank you for applying" %}{% if submission.job %} {% trans "for" %} <strong>{{ submission.job.title }}</strong>{% endif %}! {% trans "Our recruitment team will review your profile and contact you within 5 business days." %}{% elif submission_kind == 'contact' %}{% trans "Thank you for reaching out! Your message" %}{% if submission.service %} {% trans "about" %} <strong>{{ submission.service }}</strong>{% endif %} {% trans "is in our inbox — expect a reply within 24 – 48 business hours." %}{% else %}{% trans "Your submission has been received. Our team will review it and get back to you shortly." %}{% endif %}
+        </p>
+
+        <div
+          id="thanks-ref-card"
+          class="mt-7 inline-flex items-center gap-3 bg-[#0b1f35] text-white rounded-full px-6 py-3.5 shadow-xl shadow-[#0b1f35]/20"
+        >
+          <span
+            class="text-[11px] font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5"
+          >
+            <i data-lucide="hash" class="w-3.5 h-3.5 text-[#c9a227]"></i>
+            {% trans "Reference" %}
+          </span>
+          <span
+            id="thanks-ref"
+            class="text-lg font-black text-[#c9a227] tracking-wide"
+            >{{ reference|default:"—" }}</span
+          >
+        </div>
+
+        <p
+          class="mt-6 flex items-center justify-center gap-2 text-[12.5px] font-semibold text-slate-400"
+        >
+          <i data-lucide="mail-check" class="w-4 h-4 text-[#c9a227]"></i>
+          {% trans "A confirmation copy has been sent to your email address." %}
+        </p>
+
+        <div
+          class="mt-12 max-w-xl mx-auto text-left bg-[#f5f6f9] rounded-[24px] p-7 md:p-8"
+        >
+          <h2
+            class="flex items-center gap-2.5 text-[16px] font-extrabold text-[#0b1f35]"
+          >
+            <span
+              class="w-1 h-5 bg-[#c9a227] rounded-full"
+              aria-hidden="true"
+            ></span>
+            {% trans "What Happens Next?" %}
+          </h2>
+          <ol class="mt-6 space-y-5">
+            <li class="flex items-start gap-4">
+              <span
+                class="w-9 h-9 rounded-full bg-[#c9a227] text-white text-sm font-black flex items-center justify-center shrink-0 shadow-md shadow-orange-500/25"
+                >01</span
+              >
+              <div>
+                <h3 class="text-[14.5px] font-extrabold text-[#0b1f35]">
+                  {% trans "We review your submission" %}
+                </h3>
+                <p class="mt-0.5 text-[12.5px] text-slate-500 leading-relaxed">
+                  {% trans "The right person on our team picks it up — usually the same day." %}
+                </p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <span
+                class="w-9 h-9 rounded-full bg-[#c9a227] text-white text-sm font-black flex items-center justify-center shrink-0 shadow-md shadow-orange-500/25"
+                >02</span
+              >
+              <div>
+                <h3 class="text-[14.5px] font-extrabold text-[#0b1f35]">
+                  {% trans "We reach out to you" %}
+                </h3>
+                <p class="mt-0.5 text-[12.5px] text-slate-500 leading-relaxed">
+                  {% trans "Expect a call or an email within 24 – 48 business hours." %}
+                </p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <span
+                class="w-9 h-9 rounded-full bg-[#c9a227] text-white text-sm font-black flex items-center justify-center shrink-0 shadow-md shadow-orange-500/25"
+                >03</span
+              >
+              <div>
+                <h3 class="text-[14.5px] font-extrabold text-[#0b1f35]">
+                  {% trans "We move things forward" %}
+                </h3>
+                <p class="mt-0.5 text-[12.5px] text-slate-500 leading-relaxed">
+                  {% trans "Next steps, answers or a detailed proposal — from real humans." %}
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <div
+          class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3"
+        >
+          <a href="{% url 'main:index' %}" class="group flex items-center gap-1.5">
+            <span
+              class="px-7 py-3.5 rounded-full bg-[#c9a227] text-white text-sm font-bold shadow-md shadow-orange-500/25 group-hover:bg-[#d9bc6b] transition-colors"
+              >{% trans "Back to Home" %}</span
+            >
+            <span
+              class="w-12 h-12 rounded-full bg-[#0b1f35] text-white flex items-center justify-center group-hover:bg-[#c9a227] transition-colors"
+            >
+              <i data-lucide="home" class="w-5 h-5"></i>
+            </span>
+          </a>
+          <a
+            href="{% url 'main:faqs' %}"
+            class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border-2 border-[#0b1f35] text-[#0b1f35] text-sm font-bold hover:border-[#c9a227] hover:text-[#c9a227] transition-colors"
+          >
+            <i data-lucide="help-circle" class="w-4 h-4"></i>
+            {% trans "Read the FAQ While You Wait" %}
+          </a>
+        </div>
+
+        <div class="mt-12">
+          <p
+            class="text-[11px] font-extrabold uppercase tracking-[0.2em] text-slate-400 mb-4"
+          >
+            {% trans "Keep Exploring" %}
+          </p>
+          <div class="flex flex-wrap items-center justify-center gap-2.5">
+            <a
+              href="{% url 'projects:projets' %}"
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#f5f6f9] text-xs font-bold text-[#0b1f35] hover:bg-[#c9a227] hover:text-white transition-colors"
+            >
+              <i data-lucide="building-2" class="w-3.5 h-3.5"></i> {% trans "Projects" %}
+            </a>
+            <a
+              href="{% url 'blog:blogs' %}"
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#f5f6f9] text-xs font-bold text-[#0b1f35] hover:bg-[#c9a227] hover:text-white transition-colors"
+            >
+              <i data-lucide="book-open" class="w-3.5 h-3.5"></i> {% trans "Blogs" %}
+            </a>
+            <a
+              href="{% url 'team:team' %}"
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#f5f6f9] text-xs font-bold text-[#0b1f35] hover:bg-[#c9a227] hover:text-white transition-colors"
+            >
+              <i data-lucide="users" class="w-3.5 h-3.5"></i> {% trans "Our Team" %}
+            </a>
+            <a
+              href="{% url 'contact:devis' %}"
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#f5f6f9] text-xs font-bold text-[#0b1f35] hover:bg-[#c9a227] hover:text-white transition-colors"
+            >
+              <i data-lucide="calculator" class="w-3.5 h-3.5"></i> {% trans "Get a Quote" %}
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sol navy hachuré (cohérence 404) -->
+      <div class="band-navy w-full h-10 md:h-12" aria-hidden="true"></div>
+    </section>
+
+    {% endblock %}

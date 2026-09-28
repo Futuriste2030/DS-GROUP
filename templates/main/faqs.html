@@ -1,0 +1,687 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}FAQ's | BS GROUP{% endblock %}
+{% block meta_description %}BS GROUP — Réponses à vos questions : services, processus, paiements, garanties et support.{% endblock %}
+
+{% block content %}
+<section
+      id="page-header"
+      class="page-header bg-[#f5f6f9]"
+      data-page-title="FAQ's"
+    >
+      <div class="ruler-ticks w-full" aria-hidden="true"></div>
+
+      <div class="max-w-7xl mx-auto px-6 pt-14 pb-16 text-center">
+        <h1
+          id="page-header-title"
+          class="text-[40px] md:text-[48px] font-black text-[#0b1f35] tracking-tight leading-tight"
+        >
+          FAQ's
+        </h1>
+        <nav aria-label="Fil d'Ariane" class="mt-3.5">
+          <ol
+            class="flex items-center justify-center flex-wrap gap-2.5 text-[15px] font-semibold"
+          >
+            <li>
+              <a
+                href="{% url 'main:index' %}"
+                class="text-[#0b1f35] hover:text-[#c9a227] transition-colors"
+                >Home</a
+              >
+            </li>
+            <li
+              aria-hidden="true"
+              class="text-slate-400 font-normal select-none"
+            >
+              /
+            </li>
+            <li
+              id="page-header-current"
+              class="text-[#c9a227]"
+              aria-current="page"
+            >
+              FAQ's
+            </li>
+          </ol>
+        </nav>
+      </div>
+
+      <div class="page-header-band w-full" aria-hidden="true"></div>
+    </section>
+
+      <section id="faqs" class="bg-[#f5f6f9] py-16 md:py-20 relative overflow-hidden">
+      <span class="section-tag section-tag--dark" aria-hidden="true">FAQs</span>
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-10">
+          <div class="flex items-center justify-center gap-3 mb-4">
+            <i data-lucide="sparkles" class="w-4 h-4 text-[#c9a227] shrink-0"></i>
+            <span class="text-[15px] font-semibold text-[#0b1f35]"
+              >Question? Look here.</span
+            >
+          </div>
+          <h2
+            class="text-[32px] md:text-[42px] font-black tracking-tight leading-[1.15]"
+          >
+            <span class="text-[#0b1f35]">Frequently Asked </span
+            ><span class="text-[#c9a227]">Questions</span>
+          </h2>
+          <p class="mt-3 text-sm text-slate-500">
+            Everything you need to know before starting your project with us.
+          </p>
+        </div>
+
+        <div class="tabs-scroll flex flex-wrap items-center justify-center gap-2.5 mb-12">
+          <button
+            type="button"
+            data-fq-filter="all"
+            class="pp-filter pp-active px-6 py-2.5 rounded-full text-xs font-bold bg-white border border-gray-200 text-[#0b1f35] shadow-sm"
+          >
+            All Questions
+          </button>
+          <button
+            type="button"
+            data-fq-filter="general"
+            class="pp-filter px-6 py-2.5 rounded-full text-xs font-bold bg-white border border-gray-200 text-[#0b1f35] shadow-sm"
+          >
+            General
+          </button>
+          <button
+            type="button"
+            data-fq-filter="process"
+            class="pp-filter px-6 py-2.5 rounded-full text-xs font-bold bg-white border border-gray-200 text-[#0b1f35] shadow-sm"
+          >
+            Services &amp; Process
+          </button>
+          <button
+            type="button"
+            data-fq-filter="payments"
+            class="pp-filter px-6 py-2.5 rounded-full text-xs font-bold bg-white border border-gray-200 text-[#0b1f35] shadow-sm"
+          >
+            Payments &amp; Budget
+          </button>
+          <button
+            type="button"
+            data-fq-filter="warranty"
+            class="pp-filter px-6 py-2.5 rounded-full text-xs font-bold bg-white border border-gray-200 text-[#0b1f35] shadow-sm"
+          >
+            Warranty &amp; Support
+          </button>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div class="lg:col-span-7 space-y-4">
+            <!-- Q1 — General (ouverte par défaut) -->
+            <div
+              class="faq-item open rounded-2xl bg-white overflow-hidden"
+              data-faq
+              data-fq-item="general"
+            >
+              <button
+                type="button"
+                class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5"
+              >
+                <span class="flex items-center gap-3.5">
+                  <span
+                    class="hidden sm:flex w-9 h-9 rounded-full bg-[#c9a227]/10 text-[#c9a227] items-center justify-center shrink-0"
+                  >
+                    <i data-lucide="help-circle" class="w-4.5 h-4.5"></i>
+                  </span>
+                  <span class="text-[15px] font-bold text-[#0b1f35]"
+                    >What services does your company provide?</span
+                  >
+                </span>
+                <span
+                  class="faq-icon relative w-5 h-5 shrink-0 flex items-center justify-center text-[#0b1f35]"
+                >
+                  <i
+                    data-lucide="plus"
+                    class="faq-icon-plus w-4.5 h-4.5 absolute transition-opacity duration-300"
+                  ></i>
+                  <i
+                    data-lucide="minus"
+                    class="faq-icon-minus w-4.5 h-4.5 absolute transition-opacity duration-300"
+                  ></i>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <p
+                    class="px-6 pb-5 sm:pl-[68px] text-[13px] text-slate-400 leading-relaxed"
+                  >
+                    We offer a full range of construction services: residential
+                    and commercial construction, concrete work, design and
+                    planning, civil works, renovations and pre-construction
+                    consulting. Every project is handled end-to-end by our
+                    in-house teams.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Q2 — General -->
+            <div
+              class="faq-item rounded-2xl bg-white overflow-hidden"
+              data-faq
+              data-fq-item="general"
+            >
+              <button
+                type="button"
+                class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5"
+              >
+                <span class="flex items-center gap-3.5">
+                  <span
+                    class="hidden sm:flex w-9 h-9 rounded-full bg-[#c9a227]/10 text-[#c9a227] items-center justify-center shrink-0"
+                  >
+                    <i data-lucide="map-pin" class="w-4.5 h-4.5"></i>
+                  </span>
+                  <span class="text-[15px] font-bold text-[#0b1f35]"
+                    >Which regions do you operate in?</span
+                  >
+                </span>
+                <span
+                  class="faq-icon relative w-5 h-5 shrink-0 flex items-center justify-center text-[#0b1f35]"
+                >
+                  <i
+                    data-lucide="plus"
+                    class="faq-icon-plus w-4.5 h-4.5 absolute transition-opacity duration-300"
+                  ></i>
+                  <i
+                    data-lucide="minus"
+                    class="faq-icon-minus w-4.5 h-4.5 absolute transition-opacity duration-300"
+                  ></i>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <p
+                    class="px-6 pb-5 sm:pl-[68px] text-[13px] text-slate-400 leading-relaxed"
+                  >
+                    Our headquarters is in New Jersey, and we actively deliver
+                    projects across New York, New Jersey and Connecticut. For
+                    larger commercial or industrial projects, we mobilize teams
+                    nationwide — just ask us about your location.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Q3 — Services & Process -->
+            <div
+              class="faq-item rounded-2xl bg-white overflow-hidden"
+              data-faq
+              data-fq-item="process"
+            >
+              <button
+                type="button"
+                class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5"
+              >
+                <span class="flex items-center gap-3.5">
+                  <span
+                    class="hidden sm:flex w-9 h-9 rounded-full bg-[#c9a227]/10 text-[#c9a227] items-center justify-center shrink-0"
+                  >
+                    <i data-lucide="clipboard-list" class="w-4.5 h-4.5"></i>
+                  </span>
+                  <span class="text-[15px] font-bold text-[#0b1f35]"
+                    >How does a typical project start?</span
+                  >
+                </span>
+                <span
+                  class="faq-icon relative w-5 h-5 shrink-0 flex items-center justify-center text-[#0b1f35]"
+                >
+                  <i
+                    data-lucide="plus"
+                    class="faq-icon-plus w-4.5 h-4.5 absolute transition-opacity duration-300"
+                  ></i>
+                  <i
+                    data-lucide="minus"
+                    class="faq-icon-minus w-4.5 h-4.5 absolute transition-opacity duration-300"
+                  ></i>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <p
+                    class="px-6 pb-5 sm:pl-[68px] text-[13px] text-slate-400 leading-relaxed"
+                  >
+                    It all begins with a free consultation: we visit your site,
+                    discuss your goals and budget, then deliver a detailed
+                    proposal with fixed pricing, a timeline and 3D visuals if
+                    needed. Nothing starts until you're fully comfortable with
+                    the plan.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Q4 — Services & Process -->
+            <div
+              class="faq-item rounded-2xl bg-white overflow-hidden"
+              data-faq
+              data-fq-item="process"
+            >
+              <button
+                type="button"
+                class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5"
+              >
+                <span class="flex items-center gap-3.5">
+                  <span
+                    class="hidden sm:flex w-9 h-9 rounded-full bg-[#c9a227]/10 text-[#c9a227] items-center justify-center shrink-0"
+                  >
+                    <i data-lucide="file-clock" class="w-4.5 h-4.5"></i>
+                  </span>
+                  <span class="text-[15px] font-bold text-[#0b1f35]"
+                    >Do you handle permits and regulations?</span
+                  >
+                </span>
+                <span
+                  class="faq-icon relative w-5 h-5 shrink-0 flex items-center justify-center text-[#0b1f35]"
+                >
+                  <i
+                    data-lucide="plus"
+                    class="faq-icon-plus w-4.5 h-4.5 absolute transition-opacity duration-300"
+                  ></i>
+                  <i
+                    data-lucide="minus"
+                    class="faq-icon-minus w-4.5 h-4.5 absolute transition-opacity duration-300"
+                  ></i>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <p
+                    class="px-6 pb-5 sm:pl-[68px] text-[13px] text-slate-400 leading-relaxed"
+                  >
+                    Yes — 100%. Our design and planning team manages all
+                    building permits, zoning compliance and inspections required
+                    by local authorities, so you never have to deal with
+                    paperwork.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Q5 — Payments & Budget -->
+            <div
+              class="faq-item rounded-2xl bg-white overflow-hidden"
+              data-faq
+              data-fq-item="payments"
+            >
+              <button
+                type="button"
+                class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5"
+              >
+                <span class="flex items-center gap-3.5">
+                  <span
+                    class="hidden sm:flex w-9 h-9 rounded-full bg-[#c9a227]/10 text-[#c9a227] items-center justify-center shrink-0"
+                  >
+                    <i data-lucide="calculator" class="w-4.5 h-4.5"></i>
+                  </span>
+                  <span class="text-[15px] font-bold text-[#0b1f35]"
+                    >How is the project cost determined?</span
+                  >
+                </span>
+                <span
+                  class="faq-icon relative w-5 h-5 shrink-0 flex items-center justify-center text-[#0b1f35]"
+                >
+                  <i
+                    data-lucide="plus"
+                    class="faq-icon-plus w-4.5 h-4.5 absolute transition-opacity duration-300"
+                  ></i>
+                  <i
+                    data-lucide="minus"
+                    class="faq-icon-minus w-4.5 h-4.5 absolute transition-opacity duration-300"
+                  ></i>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <p
+                    class="px-6 pb-5 sm:pl-[68px] text-[13px] text-slate-400 leading-relaxed"
+                  >
+                    Pricing is based on a transparent breakdown: materials,
+                    labor, equipment and contingency — itemized in your
+                    fixed-price contract. We never quote vague "lump sums", and
+                    any change order is approved by you in writing before it
+                    affects the budget.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Q6 — Payments & Budget -->
+            <div
+              class="faq-item rounded-2xl bg-white overflow-hidden"
+              data-faq
+              data-fq-item="payments"
+            >
+              <button
+                type="button"
+                class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5"
+              >
+                <span class="flex items-center gap-3.5">
+                  <span
+                    class="hidden sm:flex w-9 h-9 rounded-full bg-[#c9a227]/10 text-[#c9a227] items-center justify-center shrink-0"
+                  >
+                    <i data-lucide="credit-card" class="w-4.5 h-4.5"></i>
+                  </span>
+                  <span class="text-[15px] font-bold text-[#0b1f35]"
+                    >What are the payment terms?</span
+                  >
+                </span>
+                <span
+                  class="faq-icon relative w-5 h-5 shrink-0 flex items-center justify-center text-[#0b1f35]"
+                >
+                  <i
+                    data-lucide="plus"
+                    class="faq-icon-plus w-4.5 h-4.5 absolute transition-opacity duration-300"
+                  ></i>
+                  <i
+                    data-lucide="minus"
+                    class="faq-icon-minus w-4.5 h-4.5 absolute transition-opacity duration-300"
+                  ></i>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <p
+                    class="px-6 pb-5 sm:pl-[68px] text-[13px] text-slate-400 leading-relaxed"
+                  >
+                    We work with milestone-based payments: a deposit to secure
+                    your slot, then progress payments aligned with completed
+                    phases — and a final payment only after your walkthrough
+                    approval. No large upfront sums.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Q7 — Warranty & Support -->
+            <div
+              class="faq-item rounded-2xl bg-white overflow-hidden"
+              data-faq
+              data-fq-item="warranty"
+            >
+              <button
+                type="button"
+                class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5"
+              >
+                <span class="flex items-center gap-3.5">
+                  <span
+                    class="hidden sm:flex w-9 h-9 rounded-full bg-[#c9a227]/10 text-[#c9a227] items-center justify-center shrink-0"
+                  >
+                    <i data-lucide="shield-check" class="w-4.5 h-4.5"></i>
+                  </span>
+                  <span class="text-[15px] font-bold text-[#0b1f35]"
+                    >What warranty do you offer on your work?</span
+                  >
+                </span>
+                <span
+                  class="faq-icon relative w-5 h-5 shrink-0 flex items-center justify-center text-[#0b1f35]"
+                >
+                  <i
+                    data-lucide="plus"
+                    class="faq-icon-plus w-4.5 h-4.5 absolute transition-opacity duration-300"
+                  ></i>
+                  <i
+                    data-lucide="minus"
+                    class="faq-icon-minus w-4.5 h-4.5 absolute transition-opacity duration-300"
+                  ></i>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <p
+                    class="px-6 pb-5 sm:pl-[68px] text-[13px] text-slate-400 leading-relaxed"
+                  >
+                    Every project includes a 10-year structural warranty and a
+                    2-year workmanship warranty, both documented in your
+                    contract. Manufacturer warranties on materials and
+                    appliances are passed on to you in full.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Q8 — Warranty & Support -->
+            <div
+              class="faq-item rounded-2xl bg-white overflow-hidden"
+              data-faq
+              data-fq-item="warranty"
+            >
+              <button
+                type="button"
+                class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5"
+              >
+                <span class="flex items-center gap-3.5">
+                  <span
+                    class="hidden sm:flex w-9 h-9 rounded-full bg-[#c9a227]/10 text-[#c9a227] items-center justify-center shrink-0"
+                  >
+                    <i data-lucide="headset" class="w-4.5 h-4.5"></i>
+                  </span>
+                  <span class="text-[15px] font-bold text-[#0b1f35]"
+                    >How can I track the progress of my project?</span
+                  >
+                </span>
+                <span
+                  class="faq-icon relative w-5 h-5 shrink-0 flex items-center justify-center text-[#0b1f35]"
+                >
+                  <i
+                    data-lucide="plus"
+                    class="faq-icon-plus w-4.5 h-4.5 absolute transition-opacity duration-300"
+                  ></i>
+                  <i
+                    data-lucide="minus"
+                    class="faq-icon-minus w-4.5 h-4.5 absolute transition-opacity duration-300"
+                  ></i>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <p
+                    class="px-6 pb-5 sm:pl-[68px] text-[13px] text-slate-400 leading-relaxed"
+                  >
+                    You get a dedicated project manager, weekly photo reports
+                    and access to our client portal with real-time milestones.
+                    Questions are answered within one business day — and
+                    emergencies, immediately.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Message aucun résultat (masqué par défaut) -->
+            <div id="fq-empty" class="hidden text-center py-14">
+              <span
+                class="inline-flex w-14 h-14 rounded-full bg-white text-slate-400 items-center justify-center"
+              >
+                <i data-lucide="search-x" class="w-7 h-7"></i>
+              </span>
+              <p class="mt-4 font-bold text-[#0b1f35]">
+                No questions in this category yet.
+              </p>
+              <p class="mt-1 text-sm text-slate-500">
+                Ask us directly — we usually reply within a few hours!
+              </p>
+            </div>
+          </div>
+
+          <aside class="lg:col-span-5 space-y-5 lg:sticky lg:top-32">
+            <!-- Carte navy : questions différentes -->
+            <div
+              class="relative bg-[#0b1f35] rounded-[24px] p-8 overflow-hidden text-center"
+            >
+              <span
+                class="features-hatch absolute inset-0"
+                aria-hidden="true"
+              ></span>
+
+              <div class="relative z-10 flex flex-col items-center">
+                <!-- Bulle de chat orange (réutilisée de l'accueil) -->
+                <span
+                  class="relative w-14 h-11 rounded-2xl bg-[#c9a227] flex items-center justify-center gap-1.5 shadow-lg shadow-orange-500/30 mb-5"
+                >
+                  <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+                  <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+                  <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+                  <span
+                    class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[7px] border-l-transparent border-r-[7px] border-r-transparent border-t-[8px] border-t-[#c9a227]"
+                    aria-hidden="true"
+                  ></span>
+                </span>
+
+                <h3 class="text-white text-[19px] font-extrabold leading-snug">
+                  You have different<br />questions?
+                </h3>
+                <p
+                  class="mt-2.5 text-[12.5px] text-slate-400 leading-relaxed max-w-[240px]"
+                >
+                  Our team will answer all your questions. We'll ensure a quick
+                  response.
+                </p>
+
+                <a
+                  href="{% url 'contact:contact' %}"
+                  class="mt-6 self-end inline-flex px-6 py-3 rounded-full bg-[#c9a227] text-white text-[13px] font-bold shadow-md shadow-orange-500/25 hover:bg-[#d9bc6b] transition-colors"
+                >
+                  Contact Us
+                </a>
+              </div>
+            </div>
+
+            <!-- Carte blanche : 24/7 Service (réutilisée de l'accueil) -->
+            <div
+              class="bg-white rounded-[24px] p-6 flex items-center gap-5 shadow-sm"
+            >
+              <span
+                class="w-14 h-14 rounded-full bg-[#c9a227]/10 text-[#c9a227] flex items-center justify-center shrink-0"
+              >
+                <i data-lucide="headphones" class="w-6 h-6"></i>
+              </span>
+              <div>
+                <p class="text-[12px] text-slate-500 font-medium">
+                  Your Question, Our Priority
+                </p>
+                <p
+                  class="text-[20px] font-extrabold text-[#0b1f35] leading-tight mt-0.5"
+                >
+                  24/7 Service
+                </p>
+                <a
+                  href="tel:4065550120"
+                  class="text-[12px] font-semibold text-[#c9a227] underline underline-offset-2 hover:text-[#d9bc6b] transition-colors"
+                  >(406) 555-0120</a
+                >
+              </div>
+            </div>
+
+            <!-- Mini-ressources -->
+            <div class="bg-white rounded-[24px] p-7 shadow-sm">
+              <h3
+                class="flex items-center gap-2.5 text-[16px] font-extrabold text-[#0b1f35]"
+              >
+                <span
+                  class="w-1 h-5 bg-[#c9a227] rounded-full"
+                  aria-hidden="true"
+                ></span>
+                Helpful Resources
+              </h3>
+              <ul class="mt-5 space-y-3.5 text-[13.5px] font-semibold">
+                <li>
+                  <a
+                    href="{% url 'blog:blogs' %}"
+                    class="flex items-start gap-2.5 text-slate-500 hover:text-[#c9a227] transition-colors"
+                  >
+                    <i
+                      data-lucide="book-open"
+                      class="w-4 h-4 text-[#c9a227] shrink-0 mt-0.5"
+                    ></i>
+                    Browse our construction guides
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="{% url 'projects:projets' %}"
+                    class="flex items-start gap-2.5 text-slate-500 hover:text-[#c9a227] transition-colors"
+                  >
+                    <i
+                      data-lucide="building-2"
+                      class="w-4 h-4 text-[#c9a227] shrink-0 mt-0.5"
+                    ></i>
+                    See our completed projects
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="{% url 'services:services' %}"
+                    class="flex items-start gap-2.5 text-slate-500 hover:text-[#c9a227] transition-colors"
+                  >
+                    <i
+                      data-lucide="layers"
+                      class="w-4 h-4 text-[#c9a227] shrink-0 mt-0.5"
+                    ></i>
+                    Explore all our services
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="{% url 'careers:careers' %}"
+                    class="flex items-start gap-2.5 text-slate-500 hover:text-[#c9a227] transition-colors"
+                  >
+                    <i
+                      data-lucide="briefcase"
+                      class="w-4 h-4 text-[#c9a227] shrink-0 mt-0.5"
+                    ></i>
+                    Join our growing team
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#f5f6f9] pb-16 md:pb-24">
+      <div class="max-w-7xl mx-auto px-6">
+        <div
+          class="relative bg-[#0b1f35] rounded-3xl px-8 py-10 md:p-16 text-white"
+        >
+          <span
+            class="features-hatch absolute inset-0 rounded-3xl"
+            aria-hidden="true"
+          ></span>
+
+          <img
+            src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=700&auto=format&fit=crop"
+            alt="Ingénieur en casque orange tenant des plans"
+            class="hidden md:block absolute right-10 bottom-0 z-10 w-52 lg:w-60 h-[calc(100%+3.5rem)] object-cover object-top rounded-t-[28px] shadow-2xl"
+          />
+
+          <div class="relative z-10 max-w-xl md:pr-56 lg:pr-64">
+            <div class="flex items-center gap-3 mb-4">
+              <i data-lucide="sparkles" class="w-4 h-4 text-[#c9a227] shrink-0"></i>
+              <span class="text-[15px] font-semibold text-slate-300"
+                >Contact Us</span
+              >
+            </div>
+
+            <h2
+              class="text-[28px] md:text-[40px] font-black tracking-tight leading-[1.15]"
+            >
+              Still Have Questions?
+              <span class="text-[#c9a227]">Let's Talk!</span>
+            </h2>
+
+            <a
+              href="{% url 'contact:contact' %}"
+              class="mt-6 inline-block px-8 py-3.5 rounded-full bg-[#c9a227] text-white text-sm font-bold hover:bg-[#d9bc6b] hover:scale-105 transition-all shadow-md shadow-orange-500/25"
+            >
+              Get In Touch
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% endblock %}

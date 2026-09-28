@@ -1,0 +1,414 @@
+/* ==========================================================================
+   BS-GROUP S.A REP. DU MALI — Système de design
+   Basé sur la Charte graphique officielle v1.0
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. TOKENS DE DESIGN (source de vérité — ne jamais coder de valeurs brutes)
+   -------------------------------------------------------------------------- */
+:root {
+  /* Couleurs primaires */
+  --marine-profond: #0B1F35;   /* Fond dominant, version négative */
+  --marine:         #12314F;   /* Symbole, lettrage, boutons */
+  --marine-clair:   #1E4569;   /* Survol, séparateurs */
+  --or-bs:          #C9A227;   /* Triangle, bande, filet, accent */
+  --or-clair:       #D9BC6B;   /* Reflets, survol accent */
+  --or-voile:       rgba(201, 162, 39, .12);
+
+  /* Neutres */
+  --gris-700: #39485E;         /* Corps de texte sur clair */
+  --gris-500: #6C7891;         /* Texte secondaire */
+  --gris-300: #D6DBE4;         /* Filets 1 px */
+  --gris-100: #F5F6F9;         /* Fond de page clair */
+  --blanc:    #FFFFFF;
+
+  /* Couleurs fonctionnelles (seules teintes ajoutées autorisées) */
+  --succes:  #12855A;
+  --alerte:  #946113;
+  --erreur:  #B03A2E;
+  --info:    #2E567F;
+
+  /* Typographie */
+  --font-titre:  "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-texte:  "Poppins", system-ui, sans-serif;
+  --font-mono:   "JetBrains Mono", ui-monospace, monospace;
+
+  /* Échelle typographique */
+  --taille-h1:      3.5rem;      /* 800 / 1.05 */
+  --taille-h2:      2.75rem;     /* 800 / 1.10 */
+  --taille-h3:      2.125rem;    /* 700 / 1.15 */
+  --taille-h4:      1.625rem;    /* 600 / 1.25 */
+  --taille-corps:   1.0625rem;   /* 400 / 1.65 */
+  --taille-legende: 0.8125rem;   /* 400 / 1.45 */
+  --taille-bouton:  0.9375rem;   /* 600 / 1.00 */
+
+  /* Espacements (unité de base : 4 px) */
+  --esp-1: 4px;    /* Écart icône/libellé serré, filets internes */
+  --esp-3: 12px;   /* Écart entre boutons d'un même groupe */
+  --esp-5: 24px;   /* Gouttière de grille, padding de carte standard */
+  --esp-7: 48px;   /* Marges latérales bureau */
+  --esp-9: 96px;   /* Marge verticale de section (bureau) */
+
+  /* Rayons — angles nets hérités de l'hexagone */
+  --rayon-sm:     2px;    /* Badges */
+  --rayon-md:     4px;    /* Boutons, champs */
+  --rayon-lg:     8px;    /* Cartes */
+  --rayon-xl:     14px;   /* Modales */
+  --rayon-pilule: 999px;  /* Tags uniquement */
+
+  /* Ombres & focus */
+  --ombre-1: 0 1px 2px rgba(11, 31, 53, .28);    /* Cartes au repos, boutons */
+  --ombre-3: 0 12px 32px rgba(11, 31, 53, .26);  /* Carte survolée */
+  --anneau-focus: 0 0 0 3px rgba(201, 162, 39, .45);
+
+  /* Grille */
+  --largeur-max-contenu: 1240px;
+  --hauteur-cible-min: 44px;
+}
+
+/* --------------------------------------------------------------------------
+   2. RESET & BASE
+   -------------------------------------------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-texte);
+  font-size: var(--taille-corps);
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--gris-700);
+  background-color: var(--blanc);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Accessibilité : anneau de focus or obligatoire */
+:focus-visible {
+  outline: none;
+  box-shadow: var(--anneau-focus);
+  border-radius: var(--rayon-md);
+}
+
+img, svg, video { max-width: 100%; height: auto; display: block; }
+
+/* --------------------------------------------------------------------------
+   3. TYPOGRAPHIE — titres Space Grotesk, texte Poppins
+   Règles : un seul H1/page, ne jamais sauter de niveau,
+   capitales réservées aux titres courts/boutons/mentions,
+   interlettrage positif 0.05–0.16em sur toute ligne en capitales.
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4 { font-family: var(--font-titre); color: var(--marine-profond); }
+
+h1 { font-size: var(--taille-h1);      font-weight: 800; line-height: 1.05; }
+h2 { font-size: var(--taille-h2);      font-weight: 800; line-height: 1.10; }
+h3 { font-size: var(--taille-h3);      font-weight: 700; line-height: 1.15; }
+h4 { font-size: var(--taille-h4);      font-weight: 600; line-height: 1.25; }
+
+p  { color: var(--gris-700); }
+
+.legende {
+  font-size: var(--taille-legende);
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--gris-500);
+}
+
+.texte-secondaire { color: var(--gris-500); }
+
+/* Texte en capitales — toujours avec interlettrage positif */
+.capitales {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.capitales-serrees  { text-transform: uppercase; letter-spacing: 0.05em; }
+.capitales-larges   { text-transform: uppercase; letter-spacing: 0.16em; }
+
+/* Filet or signature sous les titres de section */
+.titre-filet-or::after {
+  content: "";
+  display: block;
+  width: 140px;
+  height: 3px;
+  margin-top: var(--esp-3);
+  background-color: var(--or-bs);
+}
+
+/* Surtitre (kicker) or, style « CHARTE GRAPHIQUE OFFICIELLE » */
+.surtitre {
+  font-family: var(--font-titre);
+  font-size: var(--taille-legende);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--or-bs);
+}
+
+/* --------------------------------------------------------------------------
+   4. GRILLE & MISE EN PAGE
+   12 colonnes, gouttière 24 px, contenu max 1240 px.
+   Marges latérales : 20 px <768 px · 32 px 768–1024 px · 48 px >1024 px.
+   -------------------------------------------------------------------------- */
+.conteneur {
+  width: 100%;
+  max-width: var(--largeur-max-contenu);
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+
+@media (min-width: 768px)  { .conteneur { padding-inline: 32px; } }
+@media (min-width: 1025px) { .conteneur { padding-inline: 48px; } }
+
+.grille {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--esp-5); /* gouttière 24 px */
+}
+
+/* Marge verticale de section */
+.section { padding-block: var(--esp-9); }
+@media (max-width: 767px) { .section { padding-block: calc(var(--esp-9) / 2); } }
+
+/* --------------------------------------------------------------------------
+   5. MOTIF DE MARQUE — trame hexagonale or, toujours en fond uniquement
+   -------------------------------------------------------------------------- */
+.motif-hexagones {
+  position: relative;
+}
+.motif-hexagones::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='97' viewBox='0 0 56 97'%3E%3Cg fill='none' stroke='%23C9A227' stroke-opacity='0.10' stroke-width='1.5'%3E%3Cpath d='M28 0l24 14v28L28 56 4 42V14z'/%3E%3Cpath d='M28 48l24 14v28L28 104 4 90V62z' transform='translate(0,-7)'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 56px 97px;
+}
+
+/* --------------------------------------------------------------------------
+   6. BOUTONS — rayon 4 px, hauteur cible min 44 px, Poppins 600 capitales
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--esp-1);
+  min-height: var(--hauteur-cible-min);
+  padding: 0 var(--esp-5);
+  font-family: var(--font-titre);
+  font-size: var(--taille-bouton);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid transparent;
+  border-radius: var(--rayon-md);
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-primaire {
+  background-color: var(--marine);
+  color: var(--blanc);
+  box-shadow: var(--ombre-1);
+}
+.btn-primaire:hover  { background-color: var(--marine-clair); }
+.btn-primaire:active { background-color: var(--marine-profond); }
+
+.btn-secondaire {
+  background-color: var(--blanc);
+  color: var(--marine);
+  border-color: var(--marine);
+}
+.btn-secondaire:hover { background-color: var(--gris-100); }
+
+.btn-accent {
+  background-color: var(--or-bs);
+  color: var(--blanc);
+  box-shadow: var(--ombre-1);
+}
+.btn-accent:hover { background-color: var(--or-clair); }
+
+.btn-desactive,
+.btn:disabled {
+  background-color: var(--gris-100);
+  color: var(--gris-500);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Groupes de boutons : écart 12 px */
+.groupe-boutons { display: flex; flex-wrap: wrap; gap: var(--esp-3); }
+
+/* --------------------------------------------------------------------------
+   7. BADGES & TAGS — rayon 2 px (badge) / pilule (tags)
+   -------------------------------------------------------------------------- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--esp-1) var(--esp-3);
+  font-family: var(--font-titre);
+  font-size: var(--taille-legende);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: var(--rayon-sm);
+}
+.badge-nouveau { background-color: var(--marine); color: var(--blanc); }
+.badge-info    { background-color: var(--gris-100); color: var(--marine); }
+
+.tag {
+  border-radius: var(--rayon-pilule); /* pilule réservée aux tags */
+  padding: var(--esp-1) var(--esp-3);
+  font-size: var(--taille-legende);
+  font-weight: 500;
+  background-color: var(--gris-100);
+  color: var(--gris-700);
+}
+
+/* --------------------------------------------------------------------------
+   8. ALERTES — filet gauche 3 px + fond teinté à faible opacité
+   -------------------------------------------------------------------------- */
+.alerte {
+  padding: var(--esp-3) var(--esp-5);
+  border-left: 3px solid;
+  border-radius: var(--rayon-md);
+  font-size: var(--taille-corps);
+}
+.alerte strong { color: var(--marine-profond); }
+
+.alerte-information   { background-color: rgba(46, 86, 127, .12);  border-left-color: var(--info); }
+.alerte-confirmation { background-color: rgba(18, 133, 90, .12);  border-left-color: var(--succes); }
+.alerte-avertissement{ background-color: rgba(148, 97, 19, .12);  border-left-color: var(--alerte); }
+.alerte-erreur       { background-color: rgba(176, 58, 46, .12);  border-left-color: var(--erreur); }
+
+/* --------------------------------------------------------------------------
+   9. CARTES — rayon 8 px, filet 1 px gris 300, ombre légère au repos
+   -------------------------------------------------------------------------- */
+.carte {
+  background-color: var(--blanc);
+  border: 1px solid var(--gris-300);
+  border-radius: var(--rayon-lg);
+  box-shadow: var(--ombre-1);
+  padding: var(--esp-5);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.carte:hover { box-shadow: var(--ombre-3); }
+
+/* Carte mise en avant : filet supérieur or 3 px — UNE SEULE par rangée */
+.carte-avant {
+  border-top: 3px solid var(--or-bs);
+}
+
+/* --------------------------------------------------------------------------
+   10. CHAMPS DE FORMULAIRE
+   -------------------------------------------------------------------------- */
+.champ {
+  width: 100%;
+  min-height: var(--hauteur-cible-min);
+  padding: var(--esp-1) var(--esp-3);
+  font-family: var(--font-texte);
+  font-size: var(--taille-corps);
+  color: var(--gris-700);
+  background-color: var(--blanc);
+  border: 1px solid var(--gris-300);
+  border-radius: var(--rayon-md);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.champ:hover  { border-color: var(--gris-500); }
+.champ:focus  { border-color: var(--or-bs); box-shadow: var(--anneau-focus); outline: none; }
+
+.label {
+  display: block;
+  margin-bottom: var(--esp-1);
+  font-weight: 500;
+  color: var(--marine-profond);
+}
+
+/* --------------------------------------------------------------------------
+   11. ICÔNES — Lucide au trait, contour uniquement
+   2 px sur grille 24 px · tailles 16/20/24/32 px
+   couleur héritée du texte, or si l'icône porte l'action
+   -------------------------------------------------------------------------- */
+.icone {
+  width: 24px;
+  height: 24px;
+  stroke-width: 2;
+  stroke-linecap: square;   /* terminaisons carrées */
+  stroke-linejoin: miter;   /* jonctions en angle vif */
+  fill: none;               /* JAMAIS de remplissage */
+  color: inherit;
+}
+.icone-16 { width: 16px; height: 16px; }
+.icone-20 { width: 20px; height: 20px; }
+.icone-32 { width: 32px; height: 32px; }
+.icone-action { color: var(--or-bs); }   /* icône qui porte l'action */
+.icone-decorative { color: var(--gris-500); }
+
+/* --------------------------------------------------------------------------
+   12. PHOTOS — traitement institutionnel
+   voile marine ≤ 20 % en multiplication sous texte, désaturation partielle
+   -------------------------------------------------------------------------- */
+.photo-institutionnelle {
+  filter: saturate(0.85);
+}
+.photo-voile-marine { position: relative; }
+.photo-voile-marine::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--marine-profond);
+  mix-blend-mode: multiply;
+  opacity: 0.20;
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------
+   13. LOGO — zone de protection X = 0.25 × hauteur du symbole
+   Lockup min 32 px de haut à l'écran ; symbole seul en dessous.
+   -------------------------------------------------------------------------- */
+.logo { display: inline-block; }
+.logo img,
+.logo svg {
+  height: 48px;            /* défaut ≥ 32 px (minimum absolu lockup) */
+  width: auto;
+  object-fit: contain;
+}
+.logo-sm img,
+.logo-sm svg { height: 32px; }  /* taille minimale lockup */
+
+.logo-fond-marine {  /* version négative sur fonds marine/sombres */
+  background-color: var(--marine-profond);
+  padding: calc(0.25 * 48px); /* zone de protection intégrée */
+}
+.logo-fond-marine img,
+.logo-fond-marine svg { filter: brightness(0) invert(1); } /* lockup blanc */
+
+/* --------------------------------------------------------------------------
+   14. MODALES — rayon 14 px
+   -------------------------------------------------------------------------- */
+.modale {
+  background-color: var(--blanc);
+  border-radius: var(--rayon-xl);
+  box-shadow: var(--ombre-3);
+  padding: var(--esp-5);
+}
+
+/* --------------------------------------------------------------------------
+   15. BANDEAUX MARINE (couverture, footer)
+   60 % blanc/marine · 30 % neutres clairs · 10 % or
+   -------------------------------------------------------------------------- */
+.bandeau-marine {
+  background-color: var(--marine-profond);
+  color: var(--blanc);
+}
+.bandeau-marine h1, .bandeau-marine h2,
+.bandeau-marine h3, .bandeau-marine h4 { color: var(--blanc); }
+.bandeau-marine .legende { color: rgba(255, 255, 255, 0.7); }
+
+/* Filet or fin de séparation (bande diagonale du lockup) */
+.filet-or {
+  border: 0;
+  height: 2px;
+  background-color: var(--or-bs);
+  width: 100%;
+}

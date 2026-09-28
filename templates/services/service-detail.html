@@ -1,0 +1,986 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}{{ service.title }} | BS GROUP{% endblock %}
+{% block meta_description %}BS GROUP — {{ service.title }} : {{ service.excerpt }}{% endblock %}
+{% block body_class %}bg-white font-sans antialiased text-[#0b1f35] overflow-x-hidden{% endblock %}
+
+{% block content %}
+<section
+      id="page-header"
+      class="page-header bg-[#f5f6f9]"
+      data-page-title="{{ service.title }}"
+    >
+      <div class="ruler-ticks w-full" aria-hidden="true"></div>
+
+      <div class="max-w-7xl mx-auto px-6 pt-14 pb-16 text-center">
+        <h1
+          id="page-header-title"
+          class="text-[38px] md:text-[46px] font-black text-[#0b1f35] tracking-tight leading-tight"
+        >
+          {{ service.title }}
+        </h1>
+        <nav aria-label="{% trans 'Breadcrumb' %}" class="mt-3.5">
+          <ol
+            class="flex items-center justify-center flex-wrap gap-2.5 text-[15px] font-semibold"
+          >
+            <li>
+              <a
+                href="{% url 'main:index' %}"
+                class="text-[#0b1f35] hover:text-[#c9a227] transition-colors"
+                >{% trans "Home" %}</a
+              >
+            </li>
+            <li
+              aria-hidden="true"
+              class="text-slate-400 font-normal select-none"
+            >
+              /
+            </li>
+            <li>
+              <a
+                href="{% url 'services:services' %}"
+                class="text-[#0b1f35] hover:text-[#c9a227] transition-colors"
+                >{% trans "Services" %}</a
+              >
+            </li>
+            <li
+              aria-hidden="true"
+              class="text-slate-400 font-normal select-none"
+            >
+              /
+            </li>
+            <li
+              id="page-header-current"
+              class="text-[#c9a227]"
+              aria-current="page"
+            >
+              {{ service.title }}
+            </li>
+          </ol>
+        </nav>
+      </div>
+
+      <div class="page-header-band w-full" aria-hidden="true"></div>
+    </section>
+
+    {% if service.video_url or service.video_cover %}
+    <!-- Bannière vidéo (champs admin Video, même logique que DIGI-AGENCY) -->
+    <section class="bg-white pt-12 md:pt-16 relative overflow-hidden">
+      <div class="max-w-6xl mx-auto px-6">
+        <div
+          id="detail-video-banner"
+          data-video-banner
+          data-video-url="{{ service.video_url|default:'' }}"
+          class="relative group cursor-pointer rounded-[28px] overflow-hidden shadow-xl shadow-slate-900/10 h-[240px] sm:h-[320px] md:h-[420px]"
+        >
+          {% if service.video_cover %}
+          <img
+            src="{{ service.video_cover.url }}"
+            alt="{{ service.video_cover_alt|default:service.title }}"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+          />
+          {% else %}
+          <img
+            src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1600&auto=format&fit=crop"
+            alt="{{ service.video_cover_alt|default:service.title }}"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+          />
+          {% endif %}
+          <span
+            class="absolute inset-0 bg-gradient-to-t from-[#0b1f35]/60 via-[#0b1f35]/10 to-transparent"
+            aria-hidden="true"
+          ></span>
+          <button
+            type="button"
+            data-video-open
+            aria-label="{% trans 'Watch the video' %}"
+            class="absolute inset-0 m-auto z-10 w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/30 backdrop-blur-md border border-white/50 text-white shadow-xl flex items-center justify-center hover:scale-110 transition-transform"
+          >
+            <span class="w-11 h-11 sm:w-14 sm:h-14 rounded-full bg-white text-[#c9a227] flex items-center justify-center pl-0.5"><i data-lucide="play" class="w-5 h-5 sm:w-7 sm:h-7 fill-current"></i></span>
+          </button>
+        </div>
+      </div>
+    </section>
+    {% endif %}
+
+      <section id="service-overview" class="bg-white py-16 md:py-20 relative overflow-hidden">
+      <span class="section-tag section-tag--dark" aria-hidden="true">Service</span>
+      <div
+        class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start"
+      >
+        <article class="lg:col-span-8">
+          <h2
+            class="text-[32px] md:text-[40px] font-black text-[#0b1f35] tracking-tight leading-tight"
+          >
+            {{ service.title }}
+          </h2>
+
+          <!-- Intro avec badge lettrine orange -->
+          <p class="mt-6 text-[15px] text-slate-600 leading-relaxed">
+            <span
+              class="float-left w-10 h-10 rounded-xl bg-[#c9a227] text-white font-black flex items-center justify-center text-lg mr-3.5 mb-1 shadow-md shadow-orange-500/25"
+              aria-hidden="true"
+              >{{ service.title|slice:":1" }}</span
+            >
+            {{ service.intro }}
+          </p>
+
+          <p class="mt-5 text-[15px] text-slate-500 leading-relaxed">
+            From foundation to finishing touches, every residential project is
+            handled by a dedicated team that treats your home as if it were
+            their own. We work with trusted local suppliers, certified trades
+            and transparent budgeting — so there are never surprises, only
+            milestones celebrated.
+          </p>
+
+          <!-- The Approach -->
+          <h3
+            class="mt-10 text-[22px] md:text-[26px] font-extrabold text-[#0b1f35] tracking-tight"
+          >
+            {{ service.approach_title|default:'Our Approach' }}
+          </h3>
+          <p class="mt-3.5 text-[15px] text-slate-500 leading-relaxed">
+            {{ service.approach }}
+          </p>
+
+          <!-- What's Included -->
+          <h3
+            class="mt-10 text-[22px] md:text-[26px] font-extrabold text-[#0b1f35] tracking-tight"
+          >
+            What&rsquo;s Included
+          </h3>
+          <p class="mt-3.5 text-[15px] text-slate-500 leading-relaxed">
+            Every residential package is fully comprehensive — covering
+            structure, systems and finishes under one accountable contract.
+          </p>
+
+          <!-- Grille de fonctionnalités (2 x 4) -->
+          <ul class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3.5">
+            {% for f in service.features.all %}
+            <li
+              class="flex items-center gap-3 text-sm font-semibold text-[#0b1f35]"
+            >
+              <i
+                data-lucide="check-circle-2"
+                class="w-5 h-5 text-[#c9a227] shrink-0"
+              ></i
+              >{{ f.title }}
+            </li>
+            {% empty %}
+            <li
+              class="flex items-center gap-3 text-sm font-semibold text-[#0b1f35]"
+            >
+              <i
+                data-lucide="check-circle-2"
+                class="w-5 h-5 text-[#c9a227] shrink-0"
+              ></i
+              >Custom home builds
+            </li>
+            <li
+              class="flex items-center gap-3 text-sm font-semibold text-[#0b1f35]"
+            >
+              <i
+                data-lucide="check-circle-2"
+                class="w-5 h-5 text-[#c9a227] shrink-0"
+              ></i
+              >Housing developments
+            </li>
+            <li
+              class="flex items-center gap-3 text-sm font-semibold text-[#0b1f35]"
+            >
+              <i
+                data-lucide="check-circle-2"
+                class="w-5 h-5 text-[#c9a227] shrink-0"
+              ></i
+              >Home extensions
+            </li>
+            <li
+              class="flex items-center gap-3 text-sm font-semibold text-[#0b1f35]"
+            >
+              <i
+                data-lucide="check-circle-2"
+                class="w-5 h-5 text-[#c9a227] shrink-0"
+              ></i
+              >Foundations &amp; framing
+            </li>
+            <li
+              class="flex items-center gap-3 text-sm font-semibold text-[#0b1f35]"
+            >
+              <i
+                data-lucide="check-circle-2"
+                class="w-5 h-5 text-[#c9a227] shrink-0"
+              ></i
+              >Roofing &amp; waterproofing
+            </li>
+            <li
+              class="flex items-center gap-3 text-sm font-semibold text-[#0b1f35]"
+            >
+              <i
+                data-lucide="check-circle-2"
+                class="w-5 h-5 text-[#c9a227] shrink-0"
+              ></i
+              >Plumbing &amp; electrical
+            </li>
+            <li
+              class="flex items-center gap-3 text-sm font-semibold text-[#0b1f35]"
+            >
+              <i
+                data-lucide="check-circle-2"
+                class="w-5 h-5 text-[#c9a227] shrink-0"
+              ></i
+              >Interior finishing
+            </li>
+            <li
+              class="flex items-center gap-3 text-sm font-semibold text-[#0b1f35]"
+            >
+              <i
+                data-lucide="check-circle-2"
+                class="w-5 h-5 text-[#c9a227] shrink-0"
+              ></i
+              >Landscaping integration
+            </li>
+            {% endfor %}
+          </ul>
+
+          <!-- Galerie d'images -->
+          <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div
+              class="h-[220px] md:h-[250px] rounded-[22px] rounded-tr-[44px] overflow-hidden shadow-lg shadow-slate-900/10"
+            >
+              <img
+                {% if service.image_1 %}src="{{ service.image_1.url }}"{% else %}src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000&auto=format&fit=crop"{% endif %}
+                alt="{% if service.image_1_alt %}{{ service.image_1_alt }}{% else %}{% trans 'Modern villa with large bay windows' %}{% endif %}"
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div
+              class="h-[220px] md:h-[250px] rounded-[22px] rounded-bl-[44px] overflow-hidden shadow-lg shadow-slate-900/10"
+            >
+              <img
+                {% if service.image_2 %}src="{{ service.image_2.url }}"{% else %}src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=1000&auto=format&fit=crop"{% endif %}
+                alt="{% if service.image_2_alt %}{{ service.image_2_alt }}{% else %}{% trans 'Bright living room of a contemporary house' %}{% endif %}"
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          </div>
+        </article>
+
+        <aside class="lg:col-span-4 lg:sticky lg:top-32">
+          <div
+            class="relative bg-[#0b1f35] text-white p-8 rounded-[24px] overflow-hidden shadow-xl shadow-[#0b1f35]/20"
+          >
+            <span
+              class="features-hatch absolute inset-0"
+              aria-hidden="true"
+            ></span>
+
+            <div class="relative z-10">
+              <h3 class="text-lg font-extrabold pb-5 border-b border-white/10">
+                Service Information
+              </h3>
+
+              <dl class="divide-y divide-white/10">
+                <div class="flex items-start justify-between gap-4 py-5">
+                  <dt class="flex items-center gap-2.5 text-sm font-bold">
+                    <i data-lucide="home" class="w-4 h-4 text-[#c9a227]"></i
+                    >Category:
+                  </dt>
+                  <dd class="text-sm text-slate-300 text-right">{{ service.category }}</dd>
+                </div>
+                <div class="flex items-start justify-between gap-4 py-5">
+                  <dt class="flex items-center gap-2.5 text-sm font-bold">
+                    <i data-lucide="clock" class="w-4 h-4 text-[#c9a227]"></i
+                    >Typical Timeline:
+                  </dt>
+                  <dd class="text-sm text-slate-300 text-right">
+                    {{ service.timeline }}
+                  </dd>
+                </div>
+                <div class="flex items-start justify-between gap-4 py-5">
+                  <dt class="flex items-center gap-2.5 text-sm font-bold">
+                    <i data-lucide="users" class="w-4 h-4 text-[#c9a227]"></i
+                    >Team Size:
+                  </dt>
+                  <dd class="text-sm text-slate-300 text-right">
+                    {{ service.team_size }}
+                  </dd>
+                </div>
+                <div class="flex items-start justify-between gap-4 py-5">
+                  <dt class="flex items-center gap-2.5 text-sm font-bold">
+                    <i
+                      data-lucide="shield-check"
+                      class="w-4 h-4 text-[#c9a227]"
+                    ></i
+                    >Warranty:
+                  </dt>
+                  <dd class="text-sm text-slate-300 text-right">
+                    {{ service.warranty }}
+                  </dd>
+                </div>
+              </dl>
+
+              <button
+                type="button"
+                data-request-open
+                data-request-subject="{{ service.title }}"
+                class="mt-4 inline-flex w-full items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#c9a227] text-white text-sm font-bold hover:bg-[#d9bc6b] transition-colors shadow-md shadow-orange-500/25 cursor-pointer"
+              >
+                Demander ce service
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+      <section id="service-benefits" class="bg-white py-16 md:py-20 relative overflow-hidden">
+      <span class="section-tag section-tag--dark" aria-hidden="true">Benefits</span>
+      <div
+        class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14"
+      >
+        <div class="lg:col-span-4 lg:sticky lg:top-32 self-start">
+          <div class="flex items-center gap-3 mb-4">
+            <i data-lucide="sparkles" class="w-4 h-4 text-[#c9a227] shrink-0"></i>
+            <span class="text-[15px] font-semibold text-[#0b1f35]"
+              >{% trans "Service Benefits" %}</span
+            >
+          </div>
+
+          <h2
+            class="text-[30px] md:text-[38px] font-black tracking-tight leading-[1.15]"
+          >
+            <span class="text-[#0b1f35]">{% trans "Benefits That" %}</span>
+            <span class="block text-[#c9a227]">{% trans "Set Us Apart" %}</span>
+          </h2>
+
+          <p class="mt-4 text-[15px] text-slate-500 leading-relaxed">
+            {% trans "Choosing BS GROUP means more than hiring a builder — it means partnering with a team invested in your peace of mind at every stage of the project." %}
+          </p>
+
+          <button
+            type="button"
+            data-request-open
+            data-request-subject="{{ service.title }}"
+            class="group mt-7 inline-flex items-center gap-1.5 cursor-pointer"
+          >
+            <span
+              class="px-7 py-3.5 rounded-full bg-[#c9a227] text-white text-sm font-bold shadow-md shadow-orange-500/25 group-hover:bg-[#d9bc6b] transition-colors"
+              >{% trans "Request a Quote" %}</span
+            >
+            <span
+              class="w-12 h-12 rounded-full bg-[#0b1f35] text-white flex items-center justify-center group-hover:bg-[#c9a227] transition-colors"
+            >
+              <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </span>
+          </button>
+        </div>
+
+        <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {% for b in service.benefits_list.all %}
+          <div
+            class="group bg-[#f5f6f9] rounded-[20px] p-7 hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+          >
+            <span
+              class="w-[52px] h-[52px] rounded-xl bg-[#0b1f35] text-[#c9a227] flex items-center justify-center group-hover:bg-[#c9a227] group-hover:text-white transition-colors"
+            >
+              <i data-lucide="{{ b.icon|default:'shield-check' }}" class="w-6 h-6"></i>
+            </span>
+            <h3 class="mt-5 text-[17px] font-extrabold text-[#0b1f35]">
+              {{ b.title }}
+            </h3>
+            <p class="mt-2 text-sm text-slate-500 leading-relaxed">
+              {{ b.description }}
+            </p>
+          </div>
+          {% empty %}
+          <!-- Bénéfice 1 -->
+          <div
+            class="group bg-[#f5f6f9] rounded-[20px] p-7 hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+          >
+            <span
+              class="w-[52px] h-[52px] rounded-xl bg-[#0b1f35] text-[#c9a227] flex items-center justify-center group-hover:bg-[#c9a227] group-hover:text-white transition-colors"
+            >
+              <i data-lucide="shield-check" class="w-6 h-6"></i>
+            </span>
+            <h3 class="mt-5 text-[17px] font-extrabold text-[#0b1f35]">
+              10-Year Structural Warranty
+            </h3>
+            <p class="mt-2 text-sm text-slate-500 leading-relaxed">
+              Every home is backed by a decade-long structural guarantee,
+              documented and insured.
+            </p>
+          </div>
+
+          <!-- Bénéfice 2 -->
+          <div
+            class="group bg-[#f5f6f9] rounded-[20px] p-7 hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+          >
+            <span
+              class="w-[52px] h-[52px] rounded-xl bg-[#0b1f35] text-[#c9a227] flex items-center justify-center group-hover:bg-[#c9a227] group-hover:text-white transition-colors"
+            >
+              <i data-lucide="timer" class="w-6 h-6"></i>
+            </span>
+            <h3 class="mt-5 text-[17px] font-extrabold text-[#0b1f35]">
+              On-Time Delivery
+            </h3>
+            <p class="mt-2 text-sm text-slate-500 leading-relaxed">
+              Milestone-based scheduling with weekly reports — 98% of our homes
+              delivered on schedule.
+            </p>
+          </div>
+
+          <!-- Bénéfice 3 -->
+          <div
+            class="group bg-[#f5f6f9] rounded-[20px] p-7 hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+          >
+            <span
+              class="w-[52px] h-[52px] rounded-xl bg-[#0b1f35] text-[#c9a227] flex items-center justify-center group-hover:bg-[#c9a227] group-hover:text-white transition-colors"
+            >
+              <i data-lucide="wallet" class="w-6 h-6"></i>
+            </span>
+            <h3 class="mt-5 text-[17px] font-extrabold text-[#0b1f35]">
+              Fixed, Transparent Pricing
+            </h3>
+            <p class="mt-2 text-sm text-slate-500 leading-relaxed">
+              A detailed fixed-price contract before we start — no hidden costs,
+              no mid-build surprises.
+            </p>
+          </div>
+
+          <!-- Bénéfice 4 -->
+          <div
+            class="group bg-[#f5f6f9] rounded-[20px] p-7 hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+          >
+            <span
+              class="w-[52px] h-[52px] rounded-xl bg-[#0b1f35] text-[#c9a227] flex items-center justify-center group-hover:bg-[#c9a227] group-hover:text-white transition-colors"
+            >
+              <i data-lucide="badge-check" class="w-6 h-6"></i>
+            </span>
+            <h3 class="mt-5 text-[17px] font-extrabold text-[#0b1f35]">
+              Certified Master Craftsmen
+            </h3>
+            <p class="mt-2 text-sm text-slate-500 leading-relaxed">
+              Licensed trades only — every electrician, plumber and finisher is
+              certified and insured.
+            </p>
+          </div>
+
+          <!-- Bénéfice 5 -->
+          <div
+            class="group bg-[#f5f6f9] rounded-[20px] p-7 hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+          >
+            <span
+              class="w-[52px] h-[52px] rounded-xl bg-[#0b1f35] text-[#c9a227] flex items-center justify-center group-hover:bg-[#c9a227] group-hover:text-white transition-colors"
+            >
+              <i data-lucide="headset" class="w-6 h-6"></i>
+            </span>
+            <h3 class="mt-5 text-[17px] font-extrabold text-[#0b1f35]">
+              One Dedicated Contact
+            </h3>
+            <p class="mt-2 text-sm text-slate-500 leading-relaxed">
+              A single project manager from day one to handover — reachable 7
+              days a week.
+            </p>
+          </div>
+
+          <!-- Bénéfice 6 -->
+          <div
+            class="group bg-[#f5f6f9] rounded-[20px] p-7 hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+          >
+            <span
+              class="w-[52px] h-[52px] rounded-xl bg-[#0b1f35] text-[#c9a227] flex items-center justify-center group-hover:bg-[#c9a227] group-hover:text-white transition-colors"
+            >
+              <i data-lucide="leaf" class="w-6 h-6"></i>
+            </span>
+            <h3 class="mt-5 text-[17px] font-extrabold text-[#0b1f35]">
+              Eco-Friendly Materials
+            </h3>
+            <p class="mt-2 text-sm text-slate-500 leading-relaxed">
+              Sustainable sourcing and low-impact materials as standard — better
+              for you and the planet.
+            </p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+      <section id="service-process" class="bg-[#f5f6f9] py-16 md:py-20 relative overflow-hidden">
+      <span class="section-tag section-tag--dark" aria-hidden="true">Process</span>
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex items-center gap-3 mb-4">
+          <i data-lucide="sparkles" class="w-4 h-4 text-[#c9a227] shrink-0"></i>
+            <span class="text-[15px] font-semibold text-[#0b1f35]"
+              >{% trans "Working Process" %}</span
+            >
+        </div>
+        <h2
+          class="text-[30px] md:text-[38px] font-black text-[#0b1f35] tracking-tight leading-tight"
+        >
+          {% trans "How We" %} <span class="text-[#c9a227]">{% trans "Build Your Home" %}</span>
+        </h2>
+        <p class="mt-4 max-w-2xl text-[15px] text-slate-500 leading-relaxed">
+          {% trans "A proven four-phase framework refined over 25 years — designed to keep your build on schedule, on budget and stress-free from start to finish." %}
+        </p>
+
+        <!-- Grille 4 étapes avec séparateurs verticaux -->
+        <div
+          class="mt-12 grid grid-cols-1 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-gray-200 bg-white rounded-[22px] md:bg-transparent md:rounded-none shadow-sm md:shadow-none"
+        >
+          {% for st in service.steps.all %}
+          <div class="{% if forloop.first %}py-7 md:py-8 md:pr-7 px-7 md:px-0{% elif forloop.last %}py-7 md:py-8 md:pl-7 px-7 md:px-0{% else %}py-7 md:py-8 md:px-7{% endif %}">
+            <span
+              class="w-9 h-9 rounded-full bg-[#c9a227] text-white text-sm font-black flex items-center justify-center shadow-md shadow-orange-500/25"
+              >{{ st.number }}</span
+            >
+            <h3
+              class="mt-5 text-[16px] font-extrabold text-[#0b1f35] leading-snug"
+            >
+              {{ st.title }}
+            </h3>
+            <p class="mt-2.5 text-[13px] text-slate-500 leading-relaxed">
+              {{ st.description }}
+            </p>
+          </div>
+          {% empty %}
+          <!-- 01 -->
+          <div class="py-7 md:py-8 md:pr-7 px-7 md:px-0">
+            <span
+              class="w-9 h-9 rounded-full bg-[#c9a227] text-white text-sm font-black flex items-center justify-center shadow-md shadow-orange-500/25"
+              >01</span
+            >
+            <h3
+              class="mt-5 text-[16px] font-extrabold text-[#0b1f35] leading-snug"
+            >
+              {% trans "Consultation & Design" %}
+            </h3>
+            <p class="mt-2.5 text-[13px] text-slate-500 leading-relaxed">
+              {% trans "Site analysis, architectural plans, 3D renders and a fixed-price proposal." %}
+            </p>
+          </div>
+
+          <!-- 02 -->
+          <div class="py-7 md:py-8 md:px-7">
+            <span
+              class="w-9 h-9 rounded-full bg-[#c9a227] text-white text-sm font-black flex items-center justify-center shadow-md shadow-orange-500/25"
+              >02</span
+            >
+            <h3
+              class="mt-5 text-[16px] font-extrabold text-[#0b1f35] leading-snug"
+            >
+              {% trans "Permits & Groundwork" %}
+            </h3>
+            <p class="mt-2.5 text-[13px] text-slate-500 leading-relaxed">
+              {% trans "Building permits, site preparation, excavation and solid foundations." %}
+            </p>
+          </div>
+
+          <!-- 03 -->
+          <div class="py-7 md:py-8 md:px-7">
+            <span
+              class="w-9 h-9 rounded-full bg-[#c9a227] text-white text-sm font-black flex items-center justify-center shadow-md shadow-orange-500/25"
+              >03</span
+            >
+            <h3
+              class="mt-5 text-[16px] font-extrabold text-[#0b1f35] leading-snug"
+            >
+              {% trans "Construction & Systems" %}
+            </h3>
+            <p class="mt-2.5 text-[13px] text-slate-500 leading-relaxed">
+              {% trans "Framing, roofing, plumbing, electrical and smart-home pre-wiring." %}
+            </p>
+          </div>
+
+          <!-- 04 -->
+          <div class="py-7 md:py-8 md:pl-7 px-7 md:px-0">
+            <span
+              class="w-9 h-9 rounded-full bg-[#c9a227] text-white text-sm font-black flex items-center justify-center shadow-md shadow-orange-500/25"
+              >04</span
+            >
+            <h3
+              class="mt-5 text-[16px] font-extrabold text-[#0b1f35] leading-snug"
+            >
+              {% trans "Finishing & Handover" %}
+            </h3>
+            <p class="mt-2.5 text-[13px] text-slate-500 leading-relaxed">
+              {% trans "Premium finishes, final inspection walkthrough and key handover." %}
+            </p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#f5f6f9] pb-16 md:pb-24">
+      <div class="max-w-7xl mx-auto px-6">
+        <div
+          class="relative bg-[#0b1f35] rounded-3xl px-8 py-10 md:p-16 text-white"
+        >
+          <!-- Hachures (inset du conteneur, coins arrondis) -->
+          <span
+            class="features-hatch absolute inset-0 rounded-3xl"
+            aria-hidden="true"
+          ></span>
+
+          <!-- Ingénieur : dépasse du haut de la bannière -->
+          <img
+            src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=700&auto=format&fit=crop"
+            alt="{% trans 'Engineer in orange helmet holding plans' %}"
+            class="hidden md:block absolute right-10 bottom-0 z-10 w-52 lg:w-60 h-[calc(100%+3.5rem)] object-cover object-top rounded-t-[28px] shadow-2xl"
+          />
+
+          <div class="relative z-10 max-w-xl md:pr-56 lg:pr-64">
+            <div class="flex items-center gap-3 mb-4">
+              <i data-lucide="sparkles" class="w-4 h-4 text-[#c9a227] shrink-0"></i>
+              <span class="text-[15px] font-semibold text-slate-300"
+                >{% trans "Contact Us" %}</span
+              >
+            </div>
+
+            <h2
+              class="text-[28px] md:text-[40px] font-black tracking-tight leading-[1.15]"
+            >
+              {% trans "Dream Home?" %}
+              <span class="text-[#c9a227]">{% trans "Let's Make It Real!" %}</span>
+            </h2>
+
+            <a
+              href="{% url 'contact:contact' %}"
+              class="mt-6 inline-block px-8 py-3.5 rounded-full bg-[#c9a227] text-white text-sm font-bold hover:bg-[#d9bc6b] hover:scale-105 transition-all shadow-md shadow-orange-500/25"
+            >
+              {% trans "Contact Us" %}
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <section id="other-services" class="bg-white py-16 md:py-20 relative overflow-hidden">
+      <span class="section-tag section-tag--dark" aria-hidden="true">Services</span>
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- En-tête centré -->
+        <div class="text-center mb-12">
+          <div class="flex items-center justify-center gap-3 mb-4">
+            <i data-lucide="sparkles" class="w-4 h-4 text-[#c9a227] shrink-0"></i>
+            <span class="text-[15px] font-semibold text-[#0b1f35]"
+              >{% trans "-- View Services" %}</span
+            >
+          </div>
+          <h2
+            class="text-[32px] md:text-[42px] font-black tracking-tight leading-[1.15]"
+          >
+            <span class="text-[#0b1f35]">{% trans "View" %} </span
+            ><span class="text-[#c9a227]">{% trans "Other Services" %}</span>
+          </h2>
+        </div>
+
+        <!-- Grille 3 cartes -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-7">
+          {% for s in other_services %}
+          <a
+            href="{% url 'services:service-detail' s.slug %}"
+            class="group block bg-white border border-gray-100 rounded-[24px] p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300"
+          >
+            <span
+              class="w-14 h-14 rounded-2xl bg-[#0b1f35] text-[#c9a227] flex items-center justify-center group-hover:bg-[#c9a227] group-hover:text-white transition-colors"
+            >
+              <i data-lucide="{{ s.icon|default:'building' }}" class="w-7 h-7"></i>
+            </span>
+            <h3 class="mt-6 text-xl font-extrabold text-[#0b1f35]">
+              {{ s.title }}
+            </h3>
+            <p class="mt-3 text-sm text-slate-500 leading-relaxed">
+              {{ s.excerpt }}
+            </p>
+            <span
+              class="mt-6 inline-flex items-center gap-2 text-sm font-bold text-[#0b1f35] group-hover:text-[#c9a227] transition-colors"
+            >
+              Learn more
+              <span
+                class="w-9 h-9 rounded-full bg-[#0b1f35] text-white flex items-center justify-center group-hover:bg-[#c9a227] group-hover:scale-105 transition-all"
+              >
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </span>
+            </span>
+          </a>
+          {% empty %}
+          <!-- Carte : Commercial Construction -->
+          <a
+            href="{% url 'services:services' %}"
+            class="group block bg-white border border-gray-100 rounded-[24px] p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300"
+          >
+            <span
+              class="w-14 h-14 rounded-2xl bg-[#0b1f35] text-[#c9a227] flex items-center justify-center group-hover:bg-[#c9a227] group-hover:text-white transition-colors"
+            >
+              <i data-lucide="building" class="w-7 h-7"></i>
+            </span>
+            <h3 class="mt-6 text-xl font-extrabold text-[#0b1f35]">
+              Commercial Construction
+            </h3>
+            <p class="mt-3 text-sm text-slate-500 leading-relaxed">
+              Offices, retail spaces and industrial facilities delivered on time
+              and on budget.
+            </p>
+            <span
+              class="mt-6 inline-flex items-center gap-2 text-sm font-bold text-[#0b1f35] group-hover:text-[#c9a227] transition-colors"
+            >
+              Learn more
+              <span
+                class="w-9 h-9 rounded-full bg-[#0b1f35] text-white flex items-center justify-center group-hover:bg-[#c9a227] group-hover:scale-105 transition-all"
+              >
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </span>
+            </span>
+          </a>
+
+          <!-- Carte : Concrete Work -->
+          <a
+            href="{% url 'services:services' %}"
+            class="group block bg-white border border-gray-100 rounded-[24px] p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300"
+          >
+            <span
+              class="w-14 h-14 rounded-2xl bg-[#0b1f35] text-[#c9a227] flex items-center justify-center group-hover:bg-[#c9a227] group-hover:text-white transition-colors"
+            >
+              <i data-lucide="layers" class="w-7 h-7"></i>
+            </span>
+            <h3 class="mt-6 text-xl font-extrabold text-[#0b1f35]">
+              Concrete Work
+            </h3>
+            <p class="mt-3 text-sm text-slate-500 leading-relaxed">
+              Structural and decorative concrete solutions engineered for
+              strength and longevity.
+            </p>
+            <span
+              class="mt-6 inline-flex items-center gap-2 text-sm font-bold text-[#0b1f35] group-hover:text-[#c9a227] transition-colors"
+            >
+              Learn more
+              <span
+                class="w-9 h-9 rounded-full bg-[#0b1f35] text-white flex items-center justify-center group-hover:bg-[#c9a227] group-hover:scale-105 transition-all"
+              >
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </span>
+            </span>
+          </a>
+
+          <!-- Carte : Renovations -->
+          <a
+            href="{% url 'services:services' %}"
+            class="group block bg-white border border-gray-100 rounded-[24px] p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300"
+          >
+            <span
+              class="w-14 h-14 rounded-2xl bg-[#0b1f35] text-[#c9a227] flex items-center justify-center group-hover:bg-[#c9a227] group-hover:text-white transition-colors"
+            >
+              <i data-lucide="wrench" class="w-7 h-7"></i>
+            </span>
+            <h3 class="mt-6 text-xl font-extrabold text-[#0b1f35]">
+              Renovations &amp; Remodeling
+            </h3>
+            <p class="mt-3 text-sm text-slate-500 leading-relaxed">
+              Transforming existing spaces with modern upgrades, from kitchens
+              to complete overhauls.
+            </p>
+            <span
+              class="mt-6 inline-flex items-center gap-2 text-sm font-bold text-[#0b1f35] group-hover:text-[#c9a227] transition-colors"
+            >
+              Learn more
+              <span
+                class="w-9 h-9 rounded-full bg-[#0b1f35] text-white flex items-center justify-center group-hover:bg-[#c9a227] group-hover:scale-105 transition-all"
+              >
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </span>
+            </span>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal demande -->
+    <div
+      id="request-modal"
+      class="request-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="request-modal-title"
+      aria-hidden="true"
+    >
+      <div class="request-modal-overlay" data-request-close></div>
+      <div class="request-modal-dialog" role="document">
+        <button
+          type="button"
+          class="request-modal-close"
+          data-request-close
+          aria-label="{% trans 'Close' %}"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            class="w-5 h-5"
+            aria-hidden="true"
+          >
+            <path d="M18 6 6 18M6 6l12 12" stroke-linecap="round" />
+          </svg>
+        </button>
+        <p
+          class="text-[13px] font-bold uppercase tracking-[2px] text-[#c9a227]"
+        >
+          {% trans "Quote request" %}
+        </p>
+        <h3
+          id="request-modal-title"
+          class="mt-2 text-[26px] font-black tracking-tight text-[#0b1f35]"
+        >
+          {% trans "Request this service" %}
+        </h3>
+        <p class="mt-2 text-sm text-slate-500 leading-relaxed">
+          {% trans "Leave us your contact details: our team will call you back within 24 business hours with a proposal." %}
+        </p>
+        <form id="request-form" class="mt-6 space-y-4" novalidate>
+          <div>
+            <label
+              for="request-subject"
+              class="mb-1.5 block text-xs font-bold uppercase tracking-wider text-slate-500"
+              >{% trans "Subject" %}</label
+            >
+            <input
+              id="request-subject"
+              name="subject"
+              type="text"
+              readonly
+              value="{{ service.title }}"
+              class="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm font-semibold text-[#0b1f35] outline-none"
+            />
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label
+                for="request-name"
+                class="mb-1.5 block text-xs font-bold uppercase tracking-wider text-slate-500"
+              >{% trans "Name" %} *</label
+            >
+              <input
+                id="request-name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                placeholder="{% trans 'Your name' %}"
+                class="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm text-[#0b1f35] outline-none focus:border-[#c9a227] transition-colors"
+              />
+            </div>
+            <div>
+              <label
+                for="request-phone"
+                class="mb-1.5 block text-xs font-bold uppercase tracking-wider text-slate-500"
+              >{% trans "Phone" %} *</label
+            >
+              <input
+                id="request-phone"
+                name="phone"
+                type="tel"
+                autocomplete="tel"
+                placeholder="+00 0 00 00 00 00"
+                class="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm text-[#0b1f35] outline-none focus:border-[#c9a227] transition-colors"
+              />
+            </div>
+          </div>
+          <div>
+            <label
+              for="request-email"
+              class="mb-1.5 block text-xs font-bold uppercase tracking-wider text-slate-500"
+              >{% trans "Email" %} *</label
+            >
+            <input
+              id="request-email"
+              name="email"
+              type="email"
+              autocomplete="email"
+                placeholder="{% trans 'you@example.com' %}"
+              class="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm text-[#0b1f35] outline-none focus:border-[#c9a227] transition-colors"
+            />
+          </div>
+          <div>
+            <label
+              for="request-message"
+              class="mb-1.5 block text-xs font-bold uppercase tracking-wider text-slate-500"
+              >{% trans "Your need" %} *</label
+            >
+            <textarea
+              id="request-message"
+              name="message"
+              rows="3"
+                placeholder="{% trans 'Describe your need in a few lines…' %}"
+              class="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm text-[#0b1f35] outline-none focus:border-[#c9a227] transition-colors resize-none"
+            ></textarea>
+          </div>
+          <p
+            id="request-error"
+            class="hidden text-sm font-semibold text-red-600"
+          >
+            {% trans "Please fill in all fields (valid email and phone)." %}
+          </p>
+          <button
+            type="submit"
+            class="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#c9a227] text-white text-sm font-bold hover:bg-[#d9bc6b] transition-colors shadow-md shadow-orange-500/25"
+          >
+            {% trans "Submit Request" %}
+          </button>
+        </form>
+      </div>
+    </div>
+
+    {% if service.video_url %}
+    <!-- Modale vidéo (même logique que l'accueil) -->
+    <div
+      id="video-modal"
+      data-video-url="{{ service.video_url }}"
+      class="fixed inset-0 z-[160] hidden items-center justify-center p-4 sm:p-6"
+      role="dialog"
+      aria-modal="true"
+      aria-label="{% trans 'Video playback' %}"
+    >
+      <div
+        id="video-modal-backdrop"
+        class="absolute inset-0 bg-[#0b1f35]/85 backdrop-blur-md"
+      ></div>
+      <div
+        class="video-modal-panel modal-panel relative w-full max-w-4xl rounded-[28px] border border-white/10 bg-[#0b1f35] p-2 shadow-2xl sm:p-3"
+      >
+        <div
+          class="relative z-10 flex items-center justify-end gap-4 px-4 pb-2 pt-3 sm:px-5"
+        >
+          <button
+            id="video-modal-close"
+            type="button"
+            aria-label="{% trans 'Close video' %}"
+            class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition-all duration-300 hover:rotate-90 hover:bg-[#c9a227]"
+          >
+            <i data-lucide="x" class="h-5 w-5"></i>
+          </button>
+        </div>
+        <div
+          class="relative z-10 aspect-video overflow-hidden rounded-[20px] bg-black"
+        >
+          <video
+            id="video-player"
+            class="h-full w-full"
+            controls
+            playsinline
+            preload="none"
+          ></video>
+          <iframe
+            id="video-iframe"
+            class="hidden h-full w-full"
+            title="{{ service.title }}"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {% endblock %}

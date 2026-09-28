@@ -1,0 +1,808 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}{{ post.title }} | BS GROUP{% endblock %}
+{% block meta_description %}{{ post.excerpt|default:post.title|truncatewords:25 }}{% endblock %}
+{% block body_class %}bg-white font-sans antialiased text-[#0b1f35] overflow-x-hidden{% endblock %}
+
+{% block content %}
+<section
+      id="page-header"
+      class="page-header bg-[#f5f6f9]"
+      data-page-title="{% trans 'Blog Details' %}"
+    >
+      <div class="ruler-ticks w-full" aria-hidden="true"></div>
+
+      <div class="max-w-7xl mx-auto px-6 pt-14 pb-16 text-center">
+        <h1
+          id="page-header-title"
+          class="text-[38px] md:text-[46px] font-black text-[#0b1f35] tracking-tight leading-tight"
+        >
+          {% trans "Blog Details" %}
+        </h1>
+        <nav aria-label="{% trans 'Breadcrumb' %}" class="mt-3.5">
+          <ol
+            class="flex items-center justify-center gap-2.5 text-[15px] font-semibold"
+          >
+            <li>
+              <a
+                href="{% url 'main:index' %}"
+                class="text-[#0b1f35] hover:text-[#c9a227] transition-colors"
+                >{% trans "Home" %}</a
+              >
+            </li>
+            <li
+              aria-hidden="true"
+              class="text-slate-400 font-normal select-none"
+            >
+              /
+            </li>
+            <li>
+              <a
+                href="{% url 'blog:blogs' %}"
+                class="text-[#0b1f35] hover:text-[#c9a227] transition-colors"
+                >{% trans "Blogs" %}</a
+              >
+            </li>
+            <li
+              aria-hidden="true"
+              class="text-slate-400 font-normal select-none"
+            >
+              /
+            </li>
+            <li
+              id="page-header-current"
+              class="text-[#c9a227]"
+              aria-current="page"
+            >
+              {% trans "Blog Details" %}
+            </li>
+          </ol>
+        </nav>
+      </div>
+
+      <div class="page-header-band w-full" aria-hidden="true"></div>
+    </section>
+
+    <section class="bg-white pt-12 md:pt-16">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <!-- Image principale (coins asymétriques) -->
+        <div
+          class="rounded-[28px] rounded-tl-[60px] rounded-br-[60px] overflow-hidden h-[280px] md:h-[420px] shadow-xl shadow-slate-900/10"
+        >
+          {% if post.image %}
+          <img
+            src="{{ post.image.url }}"
+            alt="{{ post.title }}"
+            class="w-full h-full object-cover"
+          />
+          {% else %}
+          <img
+            src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1400&auto=format&fit=crop"
+            alt="{{ post.title }}"
+            class="w-full h-full object-cover"
+          />
+          {% endif %}
+        </div>
+
+        <!-- Badge catégorie -->
+        <span
+          class="inline-block mt-7 px-5 py-2 rounded-full bg-[#c9a227] text-white text-xs font-bold shadow-md shadow-orange-500/25"
+        >
+          {{ post.category|default:"Blog" }}
+        </span>
+
+        <!-- Titre de l'article -->
+        <h2
+          class="mt-5 text-[26px] md:text-[36px] font-black text-[#0b1f35] tracking-tight leading-tight max-w-3xl mx-auto"
+        >
+          {{ post.title }}
+        </h2>
+
+        <!-- Métadonnées auteur -->
+        <div
+          class="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6"
+        >
+          <div class="flex items-center gap-3">
+            {% if post.author_avatar %}
+            <img
+              src="{{ post.author_avatar.url }}"
+              alt="{{ post.author_name }}"
+              class="w-11 h-11 rounded-full object-cover ring-2 ring-orange-100"
+            />
+            {% else %}
+            <img
+              src="https://randomuser.me/api/portraits/women/44.jpg"
+              alt="{{ post.author_name }}"
+              class="w-11 h-11 rounded-full object-cover ring-2 ring-orange-100"
+            />
+            {% endif %}
+            <p class="text-sm font-semibold text-slate-500">
+              {% trans "Written by" %}
+              <span class="text-[#c9a227] font-bold">{{ post.author_name }}</span>
+            </p>
+          </div>
+          <span
+            class="hidden sm:block w-px h-5 bg-gray-200"
+            aria-hidden="true"
+          ></span>
+          <p
+            class="flex items-center gap-1.5 text-[13px] font-medium text-slate-500"
+          >
+            <i data-lucide="calendar" class="w-4 h-4 text-[#c9a227]"></i>
+            {{ post.published|date:"F d, Y" }}
+            <span class="mx-1 text-slate-300">|</span>
+            <i data-lucide="clock" class="w-4 h-4 text-[#c9a227]"></i>
+            {{ post.reading_time }}
+          </p>
+        </div>
+      </div>
+    </section>
+
+      <section class="bg-white py-12 md:py-16 relative overflow-hidden">
+      <span class="section-tag section-tag--dark" aria-hidden="true">Article</span>
+      <div
+        class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-12 items-start"
+      >
+        <article class="lg:col-span-2 flex gap-8">
+          <!-- Barre de partage (sticky desktop) -->
+          <aside
+            class="hidden md:flex flex-col items-center gap-3 shrink-0 sticky top-32 self-start"
+          >
+            <span
+              class="text-[10px] font-bold tracking-[0.2em] text-slate-400 uppercase"
+              style="writing-mode: vertical-rl"
+              >{% trans "Share" %}</span
+            >
+            <span class="w-px h-8 bg-gray-200" aria-hidden="true"></span>
+            <button
+              type="button"
+              data-share="facebook"
+              aria-label="Partager sur Facebook"
+              class="w-10 h-10 rounded-full bg-[#c9a227]/10 text-[#c9a227] flex items-center justify-center hover:bg-[#c9a227] hover:text-white transition-colors"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-4 h-4"
+                aria-hidden="true"
+              >
+                <path
+                  d="M24 12.073C24 5.446 18.627.073 12 .073S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                />
+              </svg>
+            </button>
+            <button
+              type="button"
+              data-share="twitter"
+                aria-label="{% trans 'Share on Twitter / X' %}"
+              class="w-10 h-10 rounded-full bg-[#c9a227]/10 text-[#c9a227] flex items-center justify-center hover:bg-[#c9a227] hover:text-white transition-colors"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-4 h-4"
+                aria-hidden="true"
+              >
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644z"
+                />
+              </svg>
+            </button>
+            <button
+              type="button"
+              data-share="linkedin"
+              aria-label="Partager sur LinkedIn"
+              class="w-10 h-10 rounded-full bg-[#c9a227]/10 text-[#c9a227] flex items-center justify-center hover:bg-[#c9a227] hover:text-white transition-colors"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-4 h-4"
+                aria-hidden="true"
+              >
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                />
+              </svg>
+            </button>
+            <button
+              type="button"
+              data-share="copy"
+              aria-label="Copier le lien de l'article"
+              class="w-10 h-10 rounded-full bg-[#0b1f35]/10 text-[#0b1f35] flex items-center justify-center hover:bg-[#0b1f35] hover:text-white transition-colors"
+            >
+              <i data-lucide="link" class="w-4 h-4"></i>
+            </button>
+          </aside>
+
+          <!-- Contenu -->
+          <div class="flex-1 min-w-0">
+            <!-- Intro avec lettrine -->
+            <p class="text-[15px] text-slate-600 leading-relaxed">
+              <span
+                class="float-left w-11 h-11 rounded-xl bg-[#c9a227] text-white font-black flex items-center justify-center text-xl mr-3.5 mb-1 shadow-md shadow-orange-500/25"
+                aria-hidden="true"
+                >{{ post.excerpt|slice:":1"|default:"B" }}</span
+              >
+              {{ post.excerpt|slice:"1:" }}
+            </p>
+
+            {% if post.content %}
+            <div class="mt-4 text-[15px] text-slate-500 leading-relaxed post-content">
+              {{ post.content|safe }}
+            </div>
+            {% endif %}
+
+            <!-- H2 : Role of Technology -->
+            <h2
+              id="role-technology"
+              class="scroll-mt-28 mt-10 text-[22px] md:text-[26px] font-extrabold text-[#0b1f35] tracking-tight"
+            >
+              The Role of Technology in Modern Construction
+            </h2>
+            <p class="mt-4 text-[15px] text-slate-500 leading-relaxed">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+              eos qui ratione voluptatem sequi nesciunt.
+            </p>
+
+            <!-- H2 : Automation -->
+            <h2
+              id="automation"
+              class="scroll-mt-28 mt-10 text-[22px] md:text-[26px] font-extrabold text-[#0b1f35] tracking-tight"
+            >
+              Automation in construction processes
+            </h2>
+            <p class="mt-4 text-[15px] text-slate-500 leading-relaxed">
+              Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+              consectetur, adipisci velit, sed quia non numquam eius modi
+              tempora incidunt ut labore et dolore magnam aliquam quaerat
+              voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem
+              ullam corporis suscipit laboriosam.
+            </p>
+
+            <!-- Galerie 2 images -->
+            <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div
+                class="h-[180px] md:h-[200px] rounded-[18px] rounded-tl-[40px] overflow-hidden shadow-md shadow-slate-900/10"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800&auto=format&fit=crop"
+                  alt="Ouvriers coordonnant des travaux sur le chantier"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div
+                class="h-[180px] md:h-[200px] rounded-[18px] rounded-br-[40px] overflow-hidden shadow-md shadow-slate-900/10"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1541976590-713941681591?q=80&w=800&auto=format&fit=crop"
+                  alt="Équipe de chantier utilisant des outils numériques"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            </div>
+
+            <!-- H2 : Visualization -->
+            <h2
+              id="visualization"
+              class="scroll-mt-28 mt-10 text-[22px] md:text-[26px] font-extrabold text-[#0b1f35] tracking-tight"
+            >
+              Interactive project visualization
+            </h2>
+            <p class="mt-4 text-[15px] text-slate-500 leading-relaxed">
+              Quis autem vel eum iure reprehenderit qui in ea voluptate velit
+              esse quam nihil molestiae consequatur, vel illum qui dolorem eum
+              fugiat quo voluptas nulla pariatur. At vero eos et accusamus et
+              iusto odio dignissimos ducimus qui blanditiis praesentium
+              voluptatum deleniti atque corrupti quos dolores.
+            </p>
+
+            <!-- Encadré Also Read -->
+            <div
+              class="mt-9 relative bg-[#0b1f35] text-white p-6 rounded-2xl overflow-hidden"
+            >
+              <span
+                class="features-hatch absolute inset-0"
+                aria-hidden="true"
+              ></span>
+              <div class="relative z-10 flex items-start gap-4">
+                <span
+                  class="w-1 self-stretch bg-[#c9a227] rounded-full shrink-0"
+                  aria-hidden="true"
+                ></span>
+                <div>
+                  <p class="text-[#c9a227] font-extrabold text-sm">
+                    Also Read :
+                  </p>
+                  <a
+                    href="#"
+                    class="mt-1.5 block text-white font-bold text-[16px] leading-snug hover:text-[#c9a227] transition-colors"
+                  >
+                    5 Must-Know Tips for a Successful Home Renovation
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- H2 : Digital Tools -->
+            <h2
+              id="digital-tools"
+              class="scroll-mt-28 mt-10 text-[22px] md:text-[26px] font-extrabold text-[#0b1f35] tracking-tight"
+            >
+              Enhanced Customer Experience Through Digital Tools
+            </h2>
+            <p class="mt-4 text-[15px] text-slate-500 leading-relaxed">
+              Et harum quidem rerum facilis est et expedita distinctio. Nam
+              libero tempore, cum soluta nobis est eligendi optio cumque nihil
+              impedit quo minus id quod maxime placeat facere possimus, omnis
+              voluptas assumenda est, omnis dolor repellendus.
+            </p>
+
+            <!-- Grille de points numérotés -->
+            <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
+              <div>
+                <span
+                  class="w-9 h-9 rounded-full bg-[#c9a227] text-white text-sm font-black flex items-center justify-center shadow-md shadow-orange-500/25"
+                  >01</span
+                >
+                <h3
+                  class="mt-4 text-[15px] font-extrabold text-[#0b1f35] leading-snug"
+                >
+                  Real-Time Updates
+                </h3>
+                <p class="mt-2 text-[13px] text-slate-500 leading-relaxed">
+                  Live dashboards keep clients informed at every build stage.
+                </p>
+              </div>
+              <div>
+                <span
+                  class="w-9 h-9 rounded-full bg-[#c9a227] text-white text-sm font-black flex items-center justify-center shadow-md shadow-orange-500/25"
+                  >02</span
+                >
+                <h3
+                  class="mt-4 text-[15px] font-extrabold text-[#0b1f35] leading-snug"
+                >
+                  3D Visualizations
+                </h3>
+                <p class="mt-2 text-[13px] text-slate-500 leading-relaxed">
+                  Walk through your future home before ground is even broken.
+                </p>
+              </div>
+              <div>
+                <span
+                  class="w-9 h-9 rounded-full bg-[#c9a227] text-white text-sm font-black flex items-center justify-center shadow-md shadow-orange-500/25"
+                  >03</span
+                >
+                <h3
+                  class="mt-4 text-[15px] font-extrabold text-[#0b1f35] leading-snug"
+                >
+                  AI Assistance
+                </h3>
+                <p class="mt-2 text-[13px] text-slate-500 leading-relaxed">
+                  Predictive analytics flag risks before they become delays.
+                </p>
+              </div>
+            </div>
+
+            <!-- H2 : Future -->
+            <h2
+              id="future"
+              class="scroll-mt-28 mt-10 text-[22px] md:text-[26px] font-extrabold text-[#0b1f35] tracking-tight"
+            >
+              How technology will shape future experiences
+            </h2>
+            <p class="mt-4 text-[15px] text-slate-500 leading-relaxed">
+              Temporibus autem quibusdam et aut officiis debitis aut rerum
+              necessitatibus saepe eveniet ut et voluptates repudiandae sint et
+              molestiae non recusandae. Itaque earum rerum hic tenetur a
+              sapiente delectus.
+            </p>
+
+            <!-- Liste de puces bicolores -->
+            <ul class="mt-6 space-y-3.5">
+              <li class="flex items-start gap-3.5 text-[15px] text-slate-500">
+                <span
+                  class="w-4 h-4 rounded-full border-[5px] border-[#c9a227] bg-[#0b1f35] shrink-0 mt-1"
+                  aria-hidden="true"
+                ></span>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do
+                eiusmod.
+              </li>
+              <li class="flex items-start gap-3.5 text-[15px] text-slate-500">
+                <span
+                  class="w-4 h-4 rounded-full border-[5px] border-[#c9a227] bg-[#0b1f35] shrink-0 mt-1"
+                  aria-hidden="true"
+                ></span>
+                Tempor incididunt ut labore et dolore magna aliqua ut enim ad
+                minim.
+              </li>
+              <li class="flex items-start gap-3.5 text-[15px] text-slate-500">
+                <span
+                  class="w-4 h-4 rounded-full border-[5px] border-[#c9a227] bg-[#0b1f35] shrink-0 mt-1"
+                  aria-hidden="true"
+                ></span>
+                Veniam quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea.
+              </li>
+              <li class="flex items-start gap-3.5 text-[15px] text-slate-500">
+                <span
+                  class="w-4 h-4 rounded-full border-[5px] border-[#c9a227] bg-[#0b1f35] shrink-0 mt-1"
+                  aria-hidden="true"
+                ></span>
+                Commodo consequat duis aute irure dolor in reprehenderit in
+                voluptate.
+              </li>
+            </ul>
+
+            <!-- Mobile : barre de partage horizontale -->
+            <div class="md:hidden mt-9 flex items-center gap-3">
+              <span
+                class="text-[10px] font-bold tracking-[0.2em] text-slate-400 uppercase"
+                >{% trans "Share" %}</span
+              >
+              <button
+                type="button"
+                data-share="facebook"
+                aria-label="{% trans 'Share on Facebook' %}"
+                class="w-10 h-10 rounded-full bg-[#c9a227]/10 text-[#c9a227] flex items-center justify-center hover:bg-[#c9a227] hover:text-white transition-colors"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="w-4 h-4"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M24 12.073C24 5.446 18.627.073 12 .073S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                  />
+                </svg>
+              </button>
+              <button
+                type="button"
+                data-share="twitter"
+                aria-label="{% trans 'Share on Twitter / X' %}"
+                class="w-10 h-10 rounded-full bg-[#c9a227]/10 text-[#c9a227] flex items-center justify-center hover:bg-[#c9a227] hover:text-white transition-colors"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="w-4 h-4"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644z"
+                  />
+                </svg>
+              </button>
+              <button
+                type="button"
+                data-share="linkedin"
+                aria-label="{% trans 'Share on LinkedIn' %}"
+                class="w-10 h-10 rounded-full bg-[#c9a227]/10 text-[#c9a227] flex items-center justify-center hover:bg-[#c9a227] hover:text-white transition-colors"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="w-4 h-4"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+              </button>
+              <button
+                type="button"
+                data-share="copy"
+                aria-label="{% trans 'Copy article link' %}"
+                class="w-10 h-10 rounded-full bg-[#0b1f35]/10 text-[#0b1f35] flex items-center justify-center hover:bg-[#0b1f35] hover:text-white transition-colors"
+              >
+                <i data-lucide="link" class="w-4 h-4"></i>
+              </button>
+            </div>
+
+            <!-- Carte profil auteur -->
+            <div
+              class="mt-10 relative bg-[#0b1f35] rounded-2xl p-6 md:p-8 text-white overflow-hidden"
+            >
+              <span
+                class="features-hatch absolute inset-0"
+                aria-hidden="true"
+              ></span>
+              <div
+                class="relative z-10 flex flex-col sm:flex-row items-center sm:items-start gap-5 sm:gap-6 text-center sm:text-left"
+              >
+                {% if post.author_avatar %}
+                <img
+                  src="{{ post.author_avatar.url }}"
+                  alt="{{ post.author_name }}"
+                  class="w-20 h-20 rounded-full object-cover ring-4 ring-white/10 shrink-0"
+                />
+                {% else %}
+                <img
+                  src="https://randomuser.me/api/portraits/women/44.jpg"
+                  alt="{{ post.author_name }}"
+                  class="w-20 h-20 rounded-full object-cover ring-4 ring-white/10 shrink-0"
+                />
+                {% endif %}
+                <div>
+                  <p
+                    class="text-[11px] font-bold tracking-[0.2em] text-slate-400 uppercase"
+                  >
+                    {% trans "Written by" %}
+                  </p>
+                  <p class="mt-1 text-lg font-extrabold text-[#c9a227]">
+                    {{ post.author_name }}
+                  </p>
+                  <p class="mt-2 text-[13px] text-slate-400 leading-relaxed">
+                    {{ post.author_bio }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <aside class="blog-sidebar lg:col-span-1 space-y-7">
+          <!-- Widget 1 : Catégories -->
+          <div class="bg-[#f5f6f9] rounded-2xl p-6">
+            <h3
+              class="flex items-center gap-2.5 text-[16px] font-extrabold text-[#0b1f35]"
+            >
+              <span
+                class="w-1 h-5 bg-[#c9a227] rounded-full"
+                aria-hidden="true"
+              ></span>
+              {% trans "Filter by Categories" %}
+            </h3>
+            <div class="mt-5 flex flex-wrap gap-2">
+              {% for c in categories %}
+              {% if c %}
+              <a
+                href="{% url 'blog:blogs' %}?category={{ c|urlencode }}"
+                class="px-3.5 py-1.5 rounded-full bg-white border border-gray-200 text-xs font-semibold text-gray-600 hover:bg-[#c9a227] hover:border-[#c9a227] hover:text-white transition-colors"
+                >{{ c }}</a
+              >
+              {% endif %}
+              {% empty %}
+              <span class="text-xs text-slate-400">{% trans "No categories." %}</span>
+              {% endfor %}
+            </div>
+          </div>
+
+          <!-- Widget tags : même style que catégories (classes/ids inchangés) -->
+          <div class="bg-[#f5f6f9] rounded-2xl p-6">
+            <h3
+              class="flex items-center gap-2.5 text-[16px] font-extrabold text-[#0b1f35]"
+            >
+              <span
+                class="w-1 h-5 bg-[#c9a227] rounded-full"
+                aria-hidden="true"
+              ></span>
+              {% trans "Tags" %}
+            </h3>
+            <div class="mt-5 flex flex-wrap gap-2">
+              {% for t in all_tags %}
+              <a
+                href="{% url 'blog:blogs' %}?q={{ t|urlencode }}"
+                class="px-3.5 py-1.5 rounded-full bg-white border border-gray-200 text-xs font-semibold text-gray-600 hover:bg-[#c9a227] hover:border-[#c9a227] hover:text-white transition-colors"
+                >{{ t }}</a
+              >
+              {% empty %}
+              <span class="text-xs text-slate-400">{% trans "No tags." %}</span>
+              {% endfor %}
+            </div>
+          </div>
+
+          <!-- Widget 2 : Table of Content -->
+          <div class="bg-[#f5f6f9] rounded-2xl p-6">
+            <h3
+              class="flex items-center gap-2.5 text-[16px] font-extrabold text-[#0b1f35]"
+            >
+              <span
+                class="w-1 h-5 bg-[#c9a227] rounded-full"
+                aria-hidden="true"
+              ></span>
+              {% trans "Table of Content" %}
+            </h3>
+            <ul class="mt-5 space-y-3 text-[13.5px] font-semibold">
+              <li>
+                <a
+                  href="#role-technology"
+                  class="flex items-start gap-2.5 text-slate-500 hover:text-[#c9a227] transition-colors"
+                >
+                  <i
+                    data-lucide="arrow-right"
+                    class="w-3.5 h-3.5 text-[#c9a227] shrink-0 mt-1"
+                  ></i>
+                  {% trans "The Role of Technology in Modern Construction" %}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#automation"
+                  class="flex items-start gap-2.5 text-slate-500 hover:text-[#c9a227] transition-colors"
+                >
+                  <i
+                    data-lucide="arrow-right"
+                    class="w-3.5 h-3.5 text-[#c9a227] shrink-0 mt-1"
+                  ></i>
+                  {% trans "Automation in construction processes" %}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#visualization"
+                  class="flex items-start gap-2.5 text-slate-500 hover:text-[#c9a227] transition-colors"
+                >
+                  <i
+                    data-lucide="arrow-right"
+                    class="w-3.5 h-3.5 text-[#c9a227] shrink-0 mt-1"
+                  ></i>
+                  {% trans "Interactive project visualization" %}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#digital-tools"
+                  class="flex items-start gap-2.5 text-slate-500 hover:text-[#c9a227] transition-colors"
+                >
+                  <i
+                    data-lucide="arrow-right"
+                    class="w-3.5 h-3.5 text-[#c9a227] shrink-0 mt-1"
+                  ></i>
+                  {% trans "Enhanced Customer Experience Through Digital Tools" %}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#future"
+                  class="flex items-start gap-2.5 text-slate-500 hover:text-[#c9a227] transition-colors"
+                >
+                  <i
+                    data-lucide="arrow-right"
+                    class="w-3.5 h-3.5 text-[#c9a227] shrink-0 mt-1"
+                  ></i>
+                  {% trans "How technology will shape future experiences" %}
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Widget 3 : Banner CTA -->
+          <div
+            class="relative rounded-2xl overflow-hidden min-h-[340px] flex items-end"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=800&auto=format&fit=crop"
+              alt="{% trans 'Engineer in orange helmet with plans' %}"
+              class="absolute inset-0 w-full h-full object-cover"
+            />
+            <span
+              class="absolute inset-0 bg-[#0b1f35]/85"
+              aria-hidden="true"
+            ></span>
+            <span
+              class="features-hatch absolute inset-0"
+              aria-hidden="true"
+            ></span>
+
+            <div class="relative z-10 p-7">
+              <div class="flex items-center gap-3 mb-3">
+                <i data-lucide="sparkles" class="w-4 h-4 text-[#c9a227] shrink-0"></i>
+                <span class="text-xs font-semibold text-slate-300"
+                  >{% trans "Contact Us" %}</span
+                >
+              </div>
+              <h3
+                class="text-white text-[22px] font-black leading-tight tracking-tight"
+              >
+                {% trans "Building the Future," %} <span class="text-[#c9a227]">{% trans "Today." %}</span>
+              </h3>
+              <a
+                href="{% url 'contact:contact' %}"
+                class="mt-5 inline-block px-7 py-3 rounded-full bg-[#c9a227] text-white text-[13px] font-bold hover:bg-[#d9bc6b] hover:scale-105 transition-all shadow-md shadow-orange-500/25"
+              >
+                {% trans "Contact Us" %}
+              </a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+        <section id="related-blogs" class="bg-[#f5f6f9] py-16 md:py-20 relative overflow-hidden">
+      <span class="section-tag section-tag--dark" aria-hidden="true">Blogs</span>
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- En-tête centré -->
+        <div class="text-center mb-12">
+          <div class="flex items-center justify-center gap-3 mb-4">
+            <i data-lucide="sparkles" class="w-4 h-4 text-[#c9a227] shrink-0"></i>
+            <span class="text-[15px] font-semibold text-[#0b1f35]"
+              >{% trans "Related News & Blogs" %}</span
+            >
+          </div>
+          <h2
+            class="text-[30px] md:text-[40px] font-black tracking-tight leading-[1.15]"
+          >
+            <span class="text-[#0b1f35]">{% trans "Latest Related" %} </span
+            ><span class="text-[#c9a227]">{% trans "News & Blogs" %}</span>
+          </h2>
+        </div>
+
+        <!-- Grille 3 cartes (réutilise le style blog de l'accueil) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7">
+          {% for r in related_posts %}
+          <article
+            class="group bg-white rounded-[18px] p-3.5 pb-6 shadow-sm hover:shadow-xl"
+          >
+            <div class="relative">
+              <div
+                class="blog-img h-[180px] w-full rounded-[12px] overflow-hidden"
+              >
+                {% if r.image %}
+                <img
+                  src="{{ r.image.url }}"
+                  alt="{{ r.title }}"
+                  class="w-full h-full object-cover"
+                />
+                {% else %}
+                <img
+                  src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?q=80&w=800&auto=format&fit=crop"
+                  alt="{{ r.title }}"
+                  class="w-full h-full object-cover"
+                />
+                {% endif %}
+              </div>
+              <span
+                class="absolute -bottom-3 left-3 z-10 px-4 py-1.5 rounded-full bg-[#0b1f35] text-white text-[10.5px] font-semibold shadow-md"
+                >{{ r.category|default:_("Blog") }}</span
+              >
+            </div>
+            <div class="pt-7 px-1.5 pb-1">
+              <div
+                class="flex items-center gap-1.5 text-[11px] font-medium text-slate-500"
+              >
+                <i
+                  data-lucide="calendar"
+                  class="w-3.5 h-3.5 text-[#c9a227]"
+                ></i>
+                {{ r.published|date:"F d, Y" }}
+              </div>
+              <h3
+                class="mt-2 text-[16.5px] font-extrabold text-[#0b1f35] leading-snug line-clamp-2"
+              >
+                <a href="{% url 'blog:blog-detail' r.slug %}" class="hover:text-[#c9a227] transition-colors">{{ r.title }}</a>
+              </h3>
+              <p
+                class="mt-2 text-[12.5px] text-slate-500 leading-relaxed line-clamp-2"
+              >
+                {{ r.excerpt }}
+              </p>
+              <a
+                href="{% url 'blog:blog-detail' r.slug %}"
+                class="mt-4 inline-flex items-center gap-1.5 text-[13px] font-bold text-[#c9a227]"
+              >
+                {% trans "Read More" %}
+                <i
+                  data-lucide="arrow-right"
+                  class="w-3.5 h-3.5 transition-transform group-hover:translate-x-1"
+                ></i>>
+              </a>
+            </div>
+          </article>
+          {% empty %}
+          <div class="col-span-full text-center py-10 text-sm text-slate-500">
+            {% trans "No similar articles yet." %}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    {% endblock %}

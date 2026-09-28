@@ -1,0 +1,609 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Cookie Policy | BS GROUP{% endblock %}
+{% block meta_description %}Politique de Confidentialité du site BS GROUP — données collectées, finalités, cookies et vos droits.{% endblock %}
+{% block body_class %}bg-white font-sans antialiased text-[#0b1f35] overflow-x-hidden{% endblock %}
+
+{% block content %}
+<section
+      id="page-header"
+      class="page-header bg-[#f5f6f9]"
+      data-page-title="Cookie Policy"
+    >
+      <div class="ruler-ticks w-full" aria-hidden="true"></div>
+
+      <div class="max-w-7xl mx-auto px-6 pt-14 pb-16 text-center">
+        <h1
+          id="page-header-title"
+          class="text-[38px] md:text-[46px] font-black text-[#0b1f35] tracking-tight leading-tight"
+        >
+          Cookie Policy
+        </h1>
+        <nav aria-label="Fil d'Ariane" class="mt-3.5">
+          <ol
+            class="flex items-center justify-center gap-2.5 text-[15px] font-semibold"
+          >
+            <li>
+              <a
+                href="{% url 'main:index' %}"
+                class="text-[#0b1f35] hover:text-[#c9a227] transition-colors"
+                >Home</a
+              >
+            </li>
+            <li
+              aria-hidden="true"
+              class="text-slate-400 font-normal select-none"
+            >
+              /
+            </li>
+            <li
+              id="page-header-current"
+              class="text-[#c9a227]"
+              aria-current="page"
+            >
+              Cookie Policy
+            </li>
+          </ol>
+        </nav>
+      </div>
+
+      <div class="page-header-band w-full" aria-hidden="true"></div>
+    </section>
+
+      <section class="bg-white py-14 md:py-16 relative overflow-hidden">
+      <span class="section-tag section-tag--dark" aria-hidden="true">Cookies</span>
+      <div
+        class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start"
+      >
+        <aside class="hidden lg:block lg:col-span-3 lg:sticky lg:top-32">
+          <div class="bg-[#f5f6f9] rounded-[20px] p-6">
+            <h2
+              class="flex items-center gap-2.5 text-[15px] font-extrabold text-[#0b1f35]"
+            >
+              <span
+                class="w-1 h-5 bg-[#c9a227] rounded-full"
+                aria-hidden="true"
+              ></span>
+              On This Page
+            </h2>
+            <nav class="mt-5" aria-label="Sommaire de la politique">
+              <ul class="space-y-1 text-[13px] font-semibold" id="pvc-toc">
+                <li>
+                  <a
+                    href="#p1"
+                    data-pvc-link
+                    class="pvc-link block px-3 py-2 rounded-lg text-slate-500 hover:text-[#c9a227] transition-colors"
+                    >1. What Are Cookies</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#p2"
+                    data-pvc-link
+                    class="pvc-link block px-3 py-2 rounded-lg text-slate-500 hover:text-[#c9a227] transition-colors"
+                    >2. Strictly Necessary</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#p3"
+                    data-pvc-link
+                    class="pvc-link block px-3 py-2 rounded-lg text-slate-500 hover:text-[#c9a227] transition-colors"
+                    >3. Preferences</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#p4"
+                    data-pvc-link
+                    class="pvc-link block px-3 py-2 rounded-lg text-slate-500 hover:text-[#c9a227] transition-colors"
+                    >4. Analytics</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#p5"
+                    data-pvc-link
+                    class="pvc-link block px-3 py-2 rounded-lg text-slate-500 hover:text-[#c9a227] transition-colors"
+                    >5. Marketing</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#p6"
+                    data-pvc-link
+                    class="pvc-link block px-3 py-2 rounded-lg text-slate-500 hover:text-[#c9a227] transition-colors"
+                    >6. Managing Consent</a
+                  >
+                </li>
+              </ul>
+            </nav>
+
+            <div class="mt-6 pt-5 border-t border-gray-200">
+              <p
+                class="flex items-center gap-2 text-[11.5px] font-semibold text-slate-500"
+              >
+                <i
+                  data-lucide="calendar"
+                  class="w-3.5 h-3.5 text-[#c9a227]"
+                ></i>
+                Last updated: March 2025
+              </p>
+            </div>
+          </div>
+        </aside>
+
+        <article class="lg:col-span-9 max-w-3xl">
+          <!-- Bandeau intro -->
+          <div
+            class="relative bg-[#0b1f35] text-white rounded-[24px] p-7 md:p-8 overflow-hidden"
+          >
+            <span
+              class="features-hatch absolute inset-0"
+              aria-hidden="true"
+            ></span>
+            <div class="relative z-10 flex items-start gap-5">
+              <span
+                class="w-12 h-12 rounded-2xl bg-[#c9a227] text-white flex items-center justify-center shrink-0 shadow-lg shadow-orange-500/30"
+              >
+                <i data-lucide="cookie" class="w-6 h-6"></i>
+              </span>
+              <div>
+                <h2 class="text-[18px] font-extrabold">
+                  Cookies, clearly explained
+                </h2>
+                <p class="mt-2 text-[13.5px] text-slate-300 leading-relaxed">
+                  This policy lists every cookie category used on our website,
+                  what each one does, and how you stay in control. Short
+                  version: only strictly necessary cookies run by default —
+                  everything else waits for your consent.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <section id="p1" class="scroll-mt-32 pt-12">
+            <div class="flex items-center gap-4 mb-5">
+              <span
+                class="w-11 h-11 rounded-xl bg-[#c9a227]/10 text-[#c9a227] font-black text-lg flex items-center justify-center shrink-0"
+                >1</span
+              >
+              <h2
+                class="text-[22px] md:text-[26px] font-extrabold text-[#0b1f35] tracking-tight"
+              >
+                What Are Cookies
+              </h2>
+            </div>
+            <p class="text-[14.5px] text-slate-500 leading-relaxed">
+              Cookies are small text files stored on your device when you visit
+              our website. They help the Site remember your choices and
+              understand how it is used — always within the limits you set in
+              our consent banner.
+            </p>
+            <p class="mt-4 text-[14.5px] text-slate-500 leading-relaxed">
+              This page details every category we use. For personal data in
+              general, see our
+              <a
+                href="{% url 'main:privacy' %}"
+                class="text-[#c9a227] font-semibold hover:underline underline-offset-2"
+                >Privacy Policy</a
+              >.
+            </p>
+            <div
+              class="mt-6 rounded-2xl border border-gray-200 overflow-hidden overflow-x-auto"
+            >
+              <table class="w-full text-sm text-left min-w-[520px]">
+                <thead class="bg-[#0b1f35] text-white">
+                  <tr>
+                    <th class="px-5 py-3.5 font-extrabold">Category</th>
+                    <th class="px-5 py-3.5 font-extrabold">Examples</th>
+                    <th class="px-5 py-3.5 font-extrabold">Default</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100 text-slate-600">
+                  <tr>
+                    <td class="px-5 py-3.5 font-bold text-[#0b1f35]">
+                      Strictly necessary
+                    </td>
+                    <td class="px-5 py-3.5">
+                      Consent choice, session, security
+                    </td>
+                    <td class="px-5 py-3.5">Always on</td>
+                  </tr>
+                  <tr>
+                    <td class="px-5 py-3.5 font-bold text-[#0b1f35]">
+                      Preferences
+                    </td>
+                    <td class="px-5 py-3.5">Language, display options</td>
+                    <td class="px-5 py-3.5">Off until accepted</td>
+                  </tr>
+                  <tr>
+                    <td class="px-5 py-3.5 font-bold text-[#0b1f35]">
+                      Analytics
+                    </td>
+                    <td class="px-5 py-3.5">Aggregated visit statistics</td>
+                    <td class="px-5 py-3.5">Off until accepted</td>
+                  </tr>
+                  <tr>
+                    <td class="px-5 py-3.5 font-bold text-[#0b1f35]">
+                      Marketing
+                    </td>
+                    <td class="px-5 py-3.5">Personalized content and offers</td>
+                    <td class="px-5 py-3.5">Off until accepted</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section id="p2" class="scroll-mt-32 pt-12">
+            <div class="flex items-center gap-4 mb-5">
+              <span
+                class="w-11 h-11 rounded-xl bg-[#c9a227]/10 text-[#c9a227] font-black text-lg flex items-center justify-center shrink-0"
+                >2</span
+              >
+              <h2
+                class="text-[22px] md:text-[26px] font-extrabold text-[#0b1f35] tracking-tight"
+              >
+                Strictly Necessary
+              </h2>
+            </div>
+            <p class="text-[14.5px] text-slate-500 leading-relaxed">
+              These cookies are essential for the Site to work and cannot be
+              switched off. They are set in response to your actions, such as
+              saving your consent choice or keeping a form secure.
+            </p>
+            <ul
+              class="mt-4 space-y-2.5 text-[14.5px] text-slate-500 leading-relaxed list-none"
+            >
+              <li class="flex items-start gap-2.5">
+                <i
+                  data-lucide="check"
+                  class="w-4 h-4 text-[#c9a227] shrink-0 mt-1"
+                ></i>
+                <span
+                  ><strong class="text-[#0b1f35]">Consent choice</strong> —
+                  remembers Accept, Reject or customized settings.</span
+                >
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i
+                  data-lucide="check"
+                  class="w-4 h-4 text-[#c9a227] shrink-0 mt-1"
+                ></i>
+                <span
+                  ><strong class="text-[#0b1f35]">Security</strong> — protects
+                  forms against spam and abuse.</span
+                >
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i
+                  data-lucide="check"
+                  class="w-4 h-4 text-[#c9a227] shrink-0 mt-1"
+                ></i>
+                <span
+                  ><strong class="text-[#0b1f35]">Load balancing</strong> —
+                  keeps browsing fast and stable.</span
+                >
+              </li>
+            </ul>
+          </section>
+
+          <section id="p3" class="scroll-mt-32 pt-12">
+            <div class="flex items-center gap-4 mb-5">
+              <span
+                class="w-11 h-11 rounded-xl bg-[#c9a227]/10 text-[#c9a227] font-black text-lg flex items-center justify-center shrink-0"
+                >3</span
+              >
+              <h2
+                class="text-[22px] md:text-[26px] font-extrabold text-[#0b1f35] tracking-tight"
+              >
+                Preferences
+              </h2>
+            </div>
+            <p class="text-[14.5px] text-slate-500 leading-relaxed">
+              Preference cookies remember non-essential settings such as your
+              language (FR / EN / AR) or display options, so you do not have to
+              set them again on your next visit. They are off by default and
+              start only if you enable
+              <strong class="text-[#0b1f35]">Preferences</strong> via Customize
+              in the banner.
+            </p>
+          </section>
+
+          <section id="p4" class="scroll-mt-32 pt-12">
+            <div class="flex items-center gap-4 mb-5">
+              <span
+                class="w-11 h-11 rounded-xl bg-[#c9a227]/10 text-[#c9a227] font-black text-lg flex items-center justify-center shrink-0"
+                >4</span
+              >
+              <h2
+                class="text-[22px] md:text-[26px] font-extrabold text-[#0b1f35] tracking-tight"
+              >
+                Analytics
+              </h2>
+            </div>
+            <p class="text-[14.5px] text-slate-500 leading-relaxed">
+              Analytics cookies produce aggregated statistics about visits and
+              popular pages. They never identify you personally and are off by
+              default. Enable
+              <strong class="text-[#0b1f35]">Analytics</strong> via Customize if
+              you accept them.
+            </p>
+          </section>
+
+          <section id="p5" class="scroll-mt-32 pt-12">
+            <div class="flex items-center gap-4 mb-5">
+              <span
+                class="w-11 h-11 rounded-xl bg-[#c9a227]/10 text-[#c9a227] font-black text-lg flex items-center justify-center shrink-0"
+                >5</span
+              >
+              <h2
+                class="text-[22px] md:text-[26px] font-extrabold text-[#0b1f35] tracking-tight"
+              >
+                Marketing
+              </h2>
+            </div>
+            <p class="text-[14.5px] text-slate-500 leading-relaxed">
+              Marketing cookies allow personalized content and offers. They are
+              off by default and start only if you enable
+              <strong class="text-[#0b1f35]">Marketing</strong> via Customize in
+              the banner. You can withdraw consent at any time with immediate
+              effect.
+            </p>
+          </section>
+
+          <section id="p6" class="scroll-mt-32 pt-12">
+            <div class="flex items-center gap-4 mb-5">
+              <span
+                class="w-11 h-11 rounded-xl bg-[#c9a227]/10 text-[#c9a227] font-black text-lg flex items-center justify-center shrink-0"
+                >6</span
+              >
+              <h2
+                class="text-[22px] md:text-[26px] font-extrabold text-[#0b1f35] tracking-tight"
+              >
+                Managing Consent
+              </h2>
+            </div>
+            <p class="text-[14.5px] text-slate-500 leading-relaxed">
+              You stay in control: use
+              <strong class="text-[#0b1f35]">Accept All</strong>,
+              <strong class="text-[#0b1f35]">Reject All</strong> or
+              <strong class="text-[#0b1f35]">Customize</strong> in the cookie
+              banner, change your choice later through your browser settings
+              (delete or block cookies), or write to us.
+            </p>
+            <p class="mt-4 text-[14.5px] text-slate-500 leading-relaxed">
+              Questions about cookies? Contact
+              <a
+                href="mailto:privacy@bsgroup.ml"
+                class="text-[#c9a227] font-semibold hover:underline underline-offset-2"
+                >privacy@bsgroup.ml</a
+              >
+              — we reply within 30 days.
+            </p>
+            <!-- Formulaire de consentement -->
+            <div
+              class="consent-card mt-8 rounded-[20px] border border-gray-200 bg-[#f5f6f9] p-6 md:p-7"
+            >
+              <h3 class="text-[17px] font-extrabold text-[#0b1f35]">
+                Modify your consent
+              </h3>
+              <p
+                id="consent-status"
+                class="mt-1.5 text-[13px] text-slate-500"
+                role="status"
+              >
+                Loading your current choice…
+              </p>
+              <div
+                id="consent-form"
+                class="mt-4 divide-y divide-gray-200 border-t border-b border-gray-200"
+              >
+                <div class="flex items-center gap-4 py-4">
+                  <span
+                    class="w-10 h-10 rounded-xl bg-white border border-gray-200 text-[#0b1f35] flex items-center justify-center shrink-0"
+                  >
+                    <i data-lucide="shield-check" class="w-5 h-5"></i>
+                  </span>
+                  <div class="flex-1">
+                    <div class="flex items-center gap-2">
+                      <h4 class="text-[#0b1f35] font-bold text-[14.5px]">
+                        Strictly Necessary
+                      </h4>
+                      <span
+                        class="px-2 py-0.5 rounded-full bg-[#c9a227]/15 text-[#c9a227] text-[9.5px] font-bold uppercase tracking-wide"
+                        >Always on</span
+                      >
+                    </div>
+                    <p
+                      class="mt-1 text-[12.5px] text-slate-500 leading-relaxed"
+                    >
+                      Essential for the website to function. Cannot be disabled.
+                    </p>
+                  </div>
+                  <label class="cookie-toggle">
+                    <input
+                      type="checkbox"
+                      class="consent-toggle-input cookie-toggle-input"
+                      data-category="necessary"
+                      checked
+                      disabled
+                    />
+                    <span class="cookie-toggle-track"
+                      ><span class="cookie-toggle-thumb"></span
+                    ></span>
+                  </label>
+                </div>
+                <div class="flex items-center gap-4 py-4">
+                  <span
+                    class="w-10 h-10 rounded-xl bg-white border border-gray-200 text-[#0b1f35] flex items-center justify-center shrink-0"
+                  >
+                    <i data-lucide="settings-2" class="w-5 h-5"></i>
+                  </span>
+                  <div class="flex-1">
+                    <div class="flex items-center gap-2">
+                      <h4 class="text-[#0b1f35] font-bold text-[14.5px]">
+                        Preferences
+                      </h4>
+                    </div>
+                    <p
+                      class="mt-1 text-[12.5px] text-slate-500 leading-relaxed"
+                    >
+                      Remembers language and display options.
+                    </p>
+                  </div>
+                  <label class="cookie-toggle">
+                    <input
+                      type="checkbox"
+                      class="consent-toggle-input cookie-toggle-input"
+                      data-category="preferences"
+                    />
+                    <span class="cookie-toggle-track"
+                      ><span class="cookie-toggle-thumb"></span
+                    ></span>
+                  </label>
+                </div>
+                <div class="flex items-center gap-4 py-4">
+                  <span
+                    class="w-10 h-10 rounded-xl bg-white border border-gray-200 text-[#0b1f35] flex items-center justify-center shrink-0"
+                  >
+                    <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
+                  </span>
+                  <div class="flex-1">
+                    <div class="flex items-center gap-2">
+                      <h4 class="text-[#0b1f35] font-bold text-[14.5px]">
+                        Analytics
+                      </h4>
+                    </div>
+                    <p
+                      class="mt-1 text-[12.5px] text-slate-500 leading-relaxed"
+                    >
+                      Aggregated visit statistics, never personal.
+                    </p>
+                  </div>
+                  <label class="cookie-toggle">
+                    <input
+                      type="checkbox"
+                      class="consent-toggle-input cookie-toggle-input"
+                      data-category="analytics"
+                    />
+                    <span class="cookie-toggle-track"
+                      ><span class="cookie-toggle-thumb"></span
+                    ></span>
+                  </label>
+                </div>
+                <div class="flex items-center gap-4 py-4">
+                  <span
+                    class="w-10 h-10 rounded-xl bg-white border border-gray-200 text-[#0b1f35] flex items-center justify-center shrink-0"
+                  >
+                    <i data-lucide="megaphone" class="w-5 h-5"></i>
+                  </span>
+                  <div class="flex-1">
+                    <div class="flex items-center gap-2">
+                      <h4 class="text-[#0b1f35] font-bold text-[14.5px]">
+                        Marketing
+                      </h4>
+                    </div>
+                    <p
+                      class="mt-1 text-[12.5px] text-slate-500 leading-relaxed"
+                    >
+                      Personalized content and offers.
+                    </p>
+                  </div>
+                  <label class="cookie-toggle">
+                    <input
+                      type="checkbox"
+                      class="consent-toggle-input cookie-toggle-input"
+                      data-category="marketing"
+                    />
+                    <span class="cookie-toggle-track"
+                      ><span class="cookie-toggle-thumb"></span
+                    ></span>
+                  </label>
+                </div>
+              </div>
+              <div class="mt-6 flex flex-wrap gap-2.5">
+                <button
+                  id="consent-save"
+                  type="button"
+                  class="px-6 py-3 rounded-full bg-[#c9a227] text-white text-[13px] font-bold hover:bg-[#d9bc6b] transition-colors shadow-md shadow-orange-500/25"
+                >
+                  Save my choices
+                </button>
+                <button
+                  id="consent-accept-all"
+                  type="button"
+                  class="px-6 py-3 rounded-full bg-[#0b1f35] text-white text-[13px] font-bold hover:bg-[#16294d] transition-colors"
+                >
+                  Accept all
+                </button>
+                <button
+                  id="consent-reject-all"
+                  type="button"
+                  class="px-6 py-3 rounded-full border border-gray-300 text-[#0b1f35] text-[13px] font-bold hover:border-[#c9a227] hover:text-[#c9a227] transition-colors"
+                >
+                  Reject all
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <!-- Bandeau contact -->
+          <div
+            class="mt-12 relative bg-[#f5f6f9] rounded-[24px] p-7 md:p-8 overflow-hidden"
+          >
+            <span
+              class="ruler-mini absolute right-0 top-0"
+              aria-hidden="true"
+            ></span>
+            <div
+              class="relative z-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5"
+            >
+              <div>
+                <h3 class="text-[17px] font-extrabold text-[#0b1f35]">
+                  Cookie questions?
+                </h3>
+                <p class="mt-1.5 text-[13px] text-slate-500">
+                  Our data protection contact replies within 30 days — usually
+                  much faster.
+                </p>
+              </div>
+              <a
+                href="mailto:privacy@bsgroup.ml"
+                class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#c9a227] text-white text-[13px] font-bold hover:bg-[#d9bc6b] transition-colors shadow-md shadow-orange-500/25 shrink-0"
+              >
+                privacy@bsgroup.ml
+                <i data-lucide="mail" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Pied de doc -->
+          <div
+            class="mt-6 rounded-2xl bg-[#f5f6f9] p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
+          >
+            <p
+              class="flex items-center gap-2.5 text-[12.5px] text-slate-500 font-medium"
+            >
+              <span
+                class="w-7 h-7 rounded-lg bg-[#0b1f35] text-white flex items-center justify-center shrink-0"
+              >
+                <i data-lucide="stamp" class="w-3.5 h-3.5"></i>
+              </span>
+              Version 1.0 · Last updated March 2026
+            </p>
+            <a
+              href="{% url 'main:privacy' %}"
+              class="inline-flex items-center gap-2 text-[13px] font-bold text-[#c9a227] hover:underline underline-offset-2"
+            >
+              Read also: Privacy Policy
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    {% endblock %}

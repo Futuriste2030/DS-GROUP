@@ -1,0 +1,463 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}{% trans "Contact Us" %} | BS GROUP{% endblock %}
+{% block meta_description %}{% trans "BS GROUP — Contact us: form, phone, email and address. Guaranteed response within 24h." %}{% endblock %}
+
+{% block content %}
+<section
+      id="page-header"
+      class="page-header bg-[#f5f6f9]"
+      data-page-title="{% trans 'Contact Us' %}"
+    >
+      <div class="ruler-ticks w-full" aria-hidden="true"></div>
+
+      <div class="max-w-7xl mx-auto px-6 pt-14 pb-16 text-center">
+        <h1
+          id="page-header-title"
+          class="text-[40px] md:text-[48px] font-black text-[#0b1f35] tracking-tight leading-tight"
+        >
+          {% trans "Contact Us" %}
+        </h1>
+        <nav aria-label="{% trans 'Breadcrumb' %}" class="mt-3.5">
+          <ol
+            class="flex items-center justify-center gap-2.5 text-[15px] font-semibold"
+          >
+            <li>
+              <a
+                href="{% url 'main:index' %}"
+                class="text-[#0b1f35] hover:text-[#c9a227] transition-colors"
+                >{% trans "Home" %}</a
+              >
+            </li>
+            <li
+              aria-hidden="true"
+              class="text-slate-400 font-normal select-none"
+            >
+              /
+            </li>
+            <li
+              id="page-header-current"
+              class="text-[#c9a227]"
+              aria-current="page"
+            >
+              {% trans "Contact Us" %}
+            </li>
+          </ol>
+        </nav>
+      </div>
+
+      <div class="page-header-band w-full" aria-hidden="true"></div>
+    </section>
+
+      <section id="contact" class="bg-[#f5f6f9] py-16 md:py-20 relative overflow-hidden">
+      <span class="section-tag section-tag--dark" aria-hidden="true">{% trans "Contact" %}</span>
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- En-tête centrÃ© -->
+        <div class="text-center mb-12">
+          <div class="flex items-center justify-center gap-3 mb-4">
+            <i data-lucide="sparkles" class="w-4 h-4 text-[#c9a227] shrink-0"></i>
+            <span class="text-[15px] font-semibold text-[#0b1f35]"
+              >{% trans "Contact Us" %}</span
+            >
+          </div>
+          <h2
+            class="text-[32px] sm:text-[38px] md:text-[42px] font-black tracking-tight leading-[1.15]"
+          >
+            <span class="text-[#0b1f35]">{% trans "Have a Project Idea?" %}</span>
+            <span class="block text-[#c9a227]">{% trans "Let's Talk!" %}</span>
+          </h2>
+        </div>
+
+        <!-- Grille : formulaire + carte infos -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <form
+            id="contact-form"
+            action="{% url 'contact:contact' %}"
+            method="post"
+            class="lg:col-span-7 bg-white rounded-[24px] p-7 md:p-10 shadow-sm space-y-5"
+            novalidate
+          >
+            {% csrf_token %}
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="cf-first-name" class="form-label"
+                  >{% trans "First Name" %} <span class="text-[#c9a227]">*</span></label
+                >
+                <input
+                  id="cf-first-name"
+                  name="name"
+                  type="text"
+                  placeholder="{% trans 'Ex. John' %}"
+                  class="form-input w-full"
+                />
+                <p class="error-msg hidden"></p>
+              </div>
+              <div>
+                <label for="cf-last-name" class="form-label"
+                  >{% trans "Last Name" %} <span class="text-[#c9a227]">*</span></label
+                >
+                <input
+                  id="cf-last-name"
+                  name="lastName"
+                  type="text"
+                  placeholder="{% trans 'Ex. Doe' %}"
+                  class="form-input w-full"
+                />
+                <p class="error-msg hidden"></p>
+              </div>
+              <div>
+                <label for="cf-email" class="form-label"
+                  >{% trans "Email" %} <span class="text-[#c9a227]">*</span></label
+                >
+                <input
+                  id="cf-email"
+                  name="email"
+                  type="email"
+                  placeholder="example@gmail.com"
+                  class="form-input w-full"
+                />
+                <p class="error-msg hidden"></p>
+              </div>
+              <div>
+                <label for="cf-phone" class="form-label"
+                  >{% trans "Phone Number" %} <span class="text-[#c9a227]">*</span></label
+                >
+                <input
+                  id="cf-phone"
+                  name="phone"
+                  type="tel"
+                  data-type="phone"
+                  placeholder="{% trans 'Enter Phone Number' %}"
+                  class="form-input w-full"
+                />
+                <p class="error-msg hidden"></p>
+              </div>
+            </div>
+
+            <div>
+              <label for="cf-subject" class="form-label"
+                >{% trans "Subject" %} <span class="text-[#c9a227]">*</span></label
+              >
+              <input
+                id="cf-subject"
+                name="subject"
+                type="text"
+                placeholder="{% trans 'Enter subject here...' %}"
+                class="form-input w-full"
+              />
+              <p class="error-msg hidden"></p>
+            </div>
+
+            <div>
+              <label for="cf-message" class="form-label"
+                >{% trans "Your Message" %} <span class="text-[#c9a227]">*</span></label
+              >
+              <textarea
+                id="cf-message"
+                name="message"
+                rows="6"
+                placeholder="{% trans 'Enter here...' %}"
+                class="form-input w-full resize-none"
+              ></textarea>
+              <p class="error-msg hidden"></p>
+            </div>
+
+            <button
+              type="submit"
+              class="px-7 py-3.5 rounded-full bg-[#c9a227] text-white text-sm font-bold shadow-md shadow-orange-500/25 hover:bg-[#d9bc6b] transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+            >
+              {% trans "Send Message" %}
+            </button>
+          </form>
+
+          <aside
+            class="lg:col-span-5 relative bg-[#0b1f35] rounded-[28px] p-8 md:p-10 text-white overflow-hidden"
+          >
+            <span
+              class="features-hatch absolute inset-0 opacity-60"
+              aria-hidden="true"
+            ></span>
+
+            <div class="relative z-10 space-y-7">
+              <div>
+                <h3 class="text-[19px] font-extrabold">{% trans "Address" %}</h3>
+                <p class="mt-2.5 text-[13.5px] text-slate-300 leading-relaxed">
+                  {{ site_settings.address|safe }}
+                </p>
+              </div>
+
+              <div>
+                <h3 class="text-[19px] font-extrabold">{% trans "Contact" %}</h3>
+                <p class="mt-2.5 text-[13.5px] text-slate-300 leading-relaxed">
+                  {% trans "Phone" %}&nbsp;&nbsp;:
+                  <a
+                    href="tel:{{ site_settings.phone|urlencode }}"
+                    class="hover:text-[#c9a227] transition-colors"
+                    >{{ site_settings.phone }}</a
+                  ><br />
+                  {% trans "Email" %}&nbsp;&nbsp;:
+                  <a
+                    href="mailto:{{ site_settings.email }}"
+                    class="hover:text-[#c9a227] transition-colors"
+                    >{{ site_settings.email }}</a
+                  >
+                </p>
+              </div>
+
+              <div>
+                <h3 class="text-[19px] font-extrabold">{% trans "Open Time" %}</h3>
+                <p class="mt-2.5 text-[13.5px] text-slate-300 leading-relaxed">
+                  {% trans "Monday – Friday" %}&nbsp;&nbsp;: 15:00 – 20:00<br />
+                  {% trans "Saturday – Sunday" %}&nbsp;: 11:00 – 18:00
+                </p>
+              </div>
+
+<div>
+                <h3 class="text-[19px] font-extrabold">{% trans "Stay Connected" %}</h3>
+                <div class="flex flex-wrap gap-2.5 mt-3.5">
+                  {% if site_settings.facebook_url %}
+                  <a
+                    href="{{ site_settings.facebook_url }}"
+                    aria-label="Facebook"
+                    target="_blank"
+                    rel="noopener"
+                    class="w-9 h-9 rounded-full bg-[#c9a227] text-white flex items-center justify-center hover:bg-white hover:text-[#0b1f35] transition-colors"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      class="w-4 h-4"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M24 12.073C24 5.446 18.627.073 12 .073S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                      />
+                    </svg>
+                  </a>
+                  {% endif %}
+                  {% if site_settings.twitter_url %}
+                  <a
+                    href="{{ site_settings.twitter_url }}"
+                    aria-label="Twitter / X"
+                    target="_blank"
+                    rel="noopener"
+                    class="w-9 h-9 rounded-full bg-[#c9a227] text-white flex items-center justify-center hover:bg-white hover:text-[#0b1f35] transition-colors"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      class="w-4 h-4"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644z"
+                      />
+                    </svg>
+                  </a>
+                  {% endif %}
+                  {% if site_settings.instagram_url %}
+                  <a
+                    href="{{ site_settings.instagram_url }}"
+                    aria-label="Instagram"
+                    target="_blank"
+                    rel="noopener"
+                    class="w-9 h-9 rounded-full bg-[#c9a227] text-white flex items-center justify-center hover:bg-white hover:text-[#0b1f35] transition-colors"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      class="w-4 h-4"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.162c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                      />
+                    </svg>
+                  </a>
+                  {% endif %}
+                  {% if site_settings.youtube_url %}
+                  <a
+                    href="{{ site_settings.youtube_url }}"
+                    aria-label="YouTube"
+                    target="_blank"
+                    rel="noopener"
+                    class="w-9 h-9 rounded-full bg-[#c9a227] text-white flex items-center justify-center hover:bg-white hover:text-[#0b1f35] transition-colors"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      class="w-4 h-4"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                      />
+                    </svg>
+                  </a>
+                  {% endif %}
+                  {% if site_settings.pinterest_url %}
+                  <a
+                    href="{{ site_settings.pinterest_url }}"
+                    aria-label="Pinterest"
+                    target="_blank"
+                    rel="noopener"
+                    class="w-9 h-9 rounded-full bg-[#c9a227] text-white flex items-center justify-center hover:bg-white hover:text-[#0b1f35] transition-colors"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      class="w-4 h-4"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.406.042-3.442.218-.936 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.024 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.208 0 1.031.397 2.137.893 2.739a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.608 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"
+                      />
+                    </svg>
+                  </a>
+                  {% endif %}
+                </div>
+              </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+      <section id="map" class="bg-[#f5f6f9] pb-16 md:pb-24 relative overflow-hidden">
+      <span class="section-tag section-tag--dark" aria-hidden="true">{% trans "Map" %}</span>
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- En-tête -->
+        <div class="text-center mb-10">
+          <div class="flex items-center justify-center gap-3 mb-4">
+            <i data-lucide="sparkles" class="w-4 h-4 text-[#c9a227] shrink-0"></i>
+            <span class="text-[15px] font-semibold text-[#0b1f35]"
+              >{% trans "Find Us" %}</span
+            >
+          </div>
+          <h2
+            class="text-[32px] md:text-[42px] font-black tracking-tight leading-[1.15]"
+          >
+            <span class="text-[#0b1f35]">{% trans "Visit Our " %}</span
+            ><span class="text-[#c9a227]">{% trans "Headquarters" %}</span>
+          </h2>
+        </div>
+
+        <!-- Conteneur carte + overlay -->
+        <div
+          class="relative rounded-[28px] overflow-hidden shadow-xl shadow-slate-900/10"
+        >
+          {% if site_settings.map_query %}
+          <iframe
+            src="https://www.google.com/maps?q={{ site_settings.map_query|urlencode }}&output=embed"
+            title="{% trans 'BS GROUP Headquarters' %}"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            class="w-full h-[420px] md:h-[500px] border-0 [filter:grayscale(1)_contrast(1.05)] hover:[filter:grayscale(0)] transition-[filter] duration-500"
+          ></iframe>
+          {% else %}
+          <iframe
+            src="https://www.google.com/maps?q=BS+GROUP&output=embed"
+            title="{% trans 'BS GROUP Headquarters' %}"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            class="w-full h-[420px] md:h-[500px] border-0 [filter:grayscale(1)_contrast(1.05)] hover:[filter:grayscale(0)] transition-[filter] duration-500"
+          ></iframe>
+          {% endif %}
+
+          <!-- Carte info superposée (desktop) -->
+          <div
+            class="hidden lg:block absolute left-8 top-1/2 -translate-y-1/2 z-10 w-[340px]"
+          >
+            <div
+              class="relative bg-[#0b1f35] text-white rounded-[24px] p-8 overflow-hidden shadow-2xl shadow-[#0b1f35]/40"
+            >
+              <span
+                class="features-hatch absolute inset-0"
+                aria-hidden="true"
+              ></span>
+
+              <div class="relative z-10">
+                <span
+                  class="w-12 h-12 rounded-2xl bg-[#c9a227] text-white flex items-center justify-center shadow-lg shadow-orange-500/30"
+                >
+                  <i data-lucide="map-pin" class="w-6 h-6"></i>
+                </span>
+                <h3 class="mt-5 text-[20px] font-extrabold">
+                  {% trans "Our Headquarters" %}
+                </h3>
+                <p class="mt-2.5 text-[13.5px] text-slate-300 leading-relaxed">
+                  {{ site_settings.address|safe }}
+                </p>
+
+                <div class="mt-5 space-y-2.5 text-[13px]">
+                  <p class="flex items-center gap-2.5 text-slate-300">
+                    <i
+                      data-lucide="phone"
+                      class="w-4 h-4 text-[#c9a227] shrink-0"
+                    ></i>
+                    {{ site_settings.phone }}
+                  </p>
+                  <p class="flex items-center gap-2.5 text-slate-300">
+                    <i
+                      data-lucide="clock"
+                      class="w-4 h-4 text-[#c9a227] shrink-0"
+                    ></i>
+                    {% trans "Mon – Fri" %} : 15:00 – 20:00
+                  </p>
+                </div>
+
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query={{ site_settings.map_query|urlencode|default:'BS+GROUP' }}"
+                  target="_blank"
+                  rel="noopener"
+                  class="mt-6 inline-flex items-center justify-center gap-2 w-full px-6 py-3 rounded-full bg-[#c9a227] text-white text-[13px] font-bold hover:bg-[#d9bc6b] transition-colors shadow-md shadow-orange-500/25"
+                >
+                  {% trans "Get Directions" %}
+                  <i data-lucide="navigation" class="w-4 h-4"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carte info (mobile : sous la map) -->
+        <div
+          class="lg:hidden mt-6 relative bg-[#0b1f35] text-white rounded-[24px] p-7 overflow-hidden"
+        >
+          <span
+            class="features-hatch absolute inset-0"
+            aria-hidden="true"
+          ></span>
+          <div
+            class="relative z-10 flex flex-col sm:flex-row sm:items-center gap-5"
+          >
+            <span
+              class="w-12 h-12 rounded-2xl bg-[#c9a227] text-white flex items-center justify-center shrink-0 shadow-lg shadow-orange-500/30"
+            >
+              <i data-lucide="map-pin" class="w-6 h-6"></i>
+            </span>
+            <div class="flex-1">
+              <h3 class="text-[18px] font-extrabold">{% trans "Our Headquarters" %}</h3>
+              <p class="mt-1.5 text-[13px] text-slate-300">
+                {{ site_settings.address|safe }}
+              </p>
+            </div>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query={{ site_settings.map_query|urlencode|default:'BS+GROUP' }}"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#c9a227] text-white text-[13px] font-bold hover:bg-[#d9bc6b] transition-colors shrink-0 self-start sm:self-center"
+            >
+              {% trans "Directions" %}
+              <i data-lucide="navigation" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% endblock %}

@@ -1,0 +1,404 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}{% trans "Our Team" %} | BS GROUP{% endblock %}
+{% block meta_description %}{% trans "BS GROUP — Meet the team: leaders, engineers, architects and field experts building excellence." %}{% endblock %}
+
+{% block content %}
+<section
+      id="page-header"
+      class="page-header bg-[#f5f6f9]"
+      data-page-title="{% trans 'Our Team' %}"
+    >
+      <div class="ruler-ticks w-full" aria-hidden="true"></div>
+
+      <div class="max-w-7xl mx-auto px-6 pt-14 pb-16 text-center">
+        <h1
+          id="page-header-title"
+          class="text-[40px] md:text-[48px] font-black text-[#0b1f35] tracking-tight leading-tight"
+        >
+          {% trans "Our Team" %}
+        </h1>
+        <nav aria-label="{% trans 'Breadcrumb' %}" class="mt-3.5">
+          <ol
+            class="flex items-center justify-center flex-wrap gap-2.5 text-[15px] font-semibold"
+          >
+            <li>
+              <a
+                href="{% url 'main:index' %}"
+                class="text-[#0b1f35] hover:text-[#c9a227] transition-colors"
+                >{% trans "Home" %}</a
+              >
+            </li>
+            <li
+              aria-hidden="true"
+              class="text-slate-400 font-normal select-none"
+            >
+              /
+            </li>
+            <li>
+              <a
+                href="{% url 'main:about' %}"
+                class="text-[#0b1f35] hover:text-[#c9a227] transition-colors"
+                >{% trans "About Us" %}</a
+              >
+            </li>
+            <li
+              aria-hidden="true"
+              class="text-slate-400 font-normal select-none"
+            >
+              /
+            </li>
+            <li
+              id="page-header-current"
+              class="text-[#c9a227]"
+              aria-current="page"
+            >
+              {% trans "Our Team" %}
+            </li>
+          </ol>
+        </nav>
+      </div>
+
+      <div class="page-header-band w-full" aria-hidden="true"></div>
+    </section>
+
+    <section class="bg-white py-16 md:py-20 relative overflow-hidden">
+      <span class="section-tag section-tag--dark" aria-hidden="true">Team</span>
+      <div
+        class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center"
+      >
+        <!-- Texte -->
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <i data-lucide="sparkles" class="w-4 h-4 text-[#c9a227] shrink-0"></i>
+            <span class="text-[15px] font-semibold text-[#0b1f35]"
+              >{% trans "Meet Our Team" %}</span
+            >
+          </div>
+
+          <h2
+            class="text-[34px] sm:text-[42px] md:text-[46px] font-black tracking-tight leading-[1.12]"
+          >
+            <span class="text-[#0b1f35]">{% trans "Meet the Faces" %}</span>
+            <span class="block text-[#c9a227]">{% trans "Behind the Structures" %}</span>
+          </h2>
+
+          <p class="mt-5 max-w-lg text-[15px] text-slate-500 leading-relaxed">
+            {% trans "Behind every landmark we deliver stands a team of passionate engineers, architects, project managers and field experts. Get to know the people who turn bold visions into concrete reality — one project at a time." %}
+          </p>
+
+          <div class="mt-8 flex flex-wrap items-center gap-4">
+            <a href="#the-team" class="group flex items-center gap-1.5">
+              <span
+                class="px-7 py-3.5 rounded-full bg-[#c9a227] text-white text-sm font-bold shadow-md shadow-orange-500/25 group-hover:bg-[#d9bc6b] transition-colors"
+                >{% trans "Meet Everyone" %}</span
+              >
+              <span
+                class="w-12 h-12 rounded-full bg-[#0b1f35] text-white flex items-center justify-center group-hover:bg-[#c9a227] transition-colors"
+              >
+                <i data-lucide="arrow-down" class="w-5 h-5"></i>
+              </span>
+            </a>
+            <a
+              href="{% url 'careers:careers' %}"
+              class="text-sm font-bold text-[#0b1f35] hover:text-[#c9a227] transition-colors underline underline-offset-4 decoration-2 decoration-[#c9a227]/30"
+            >
+              {% trans "Want to join us?" %}
+            </a>
+          </div>
+        </div>
+
+        <!-- Image (coins asymétriques) -->
+        <div class="relative">
+          <div
+            class="h-[280px] md:h-[360px] rounded-[28px] rounded-tr-[60px] rounded-bl-[60px] overflow-hidden shadow-xl shadow-slate-900/10"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1200&auto=format&fit=crop"
+              alt="{% trans 'The BS GROUP team in a work meeting' %}"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <!-- Badge flottant -->
+          <div
+            class="absolute -bottom-6 right-8 flex items-center gap-3 bg-[#c9a227] text-white rounded-2xl px-6 py-4 shadow-lg shadow-orange-500/30"
+          >
+            <span class="text-[34px] font-black leading-none tracking-tight"
+              >120+</span
+            >
+            <span class="leading-tight text-[13px] font-semibold"
+              >Experts<br />on Board</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats animées (compteurs réutilisés du bloc 5) -->
+      <div class="max-w-7xl mx-auto px-6 mt-20">
+        <div
+          class="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-4 text-center bg-[#f5f6f9] rounded-[24px] py-10"
+        >
+          <div>
+            <div
+              class="text-4xl md:text-[42px] font-black text-[#0b1f35] tracking-tight"
+              data-count="120"
+              data-suffix="+"
+            >
+              120+
+            </div>
+            <div class="mt-1.5 text-sm text-slate-500">{% trans "Team Members" %}</div>
+          </div>
+          <div>
+            <div
+              class="text-4xl md:text-[42px] font-black text-[#0b1f35] tracking-tight"
+              data-count="15"
+              data-suffix=""
+            >
+              15
+            </div>
+            <div class="mt-1.5 text-sm text-slate-500">{% trans "Nationalities" %}</div>
+          </div>
+          <div>
+            <div
+              class="text-4xl md:text-[42px] font-black text-[#0b1f35] tracking-tight"
+              data-count="94"
+              data-suffix="%"
+            >
+              94%
+            </div>
+            <div class="mt-1.5 text-sm text-slate-500">{% trans "Employee Retention" %}</div>
+          </div>
+          <div>
+            <div
+              class="text-4xl md:text-[42px] font-black text-[#0b1f35] tracking-tight"
+              data-count="40"
+              data-suffix="h"
+            >
+              40h
+            </div>
+            <div class="mt-1.5 text-sm text-slate-500">{% trans "Training Per Year" %}</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <section id="the-team" class="bg-[#f5f6f9] py-16 md:py-20 scroll-mt-24 relative overflow-hidden">
+      <span class="section-tag section-tag--dark" aria-hidden="true">Team</span>
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-10">
+          <div class="flex items-center justify-center gap-3 mb-4">
+            <i data-lucide="sparkles" class="w-4 h-4 text-[#c9a227] shrink-0"></i>
+            <span class="text-[15px] font-semibold text-[#0b1f35]"
+              >{% trans "Leadership & Experts" %}</span
+            >
+          </div>
+          <h2
+            class="text-[32px] md:text-[42px] font-black tracking-tight leading-[1.15]"
+          >
+            <span class="text-[#0b1f35]">{% trans "The People Who" %} </span
+            ><span class="text-[#c9a227]">{% trans "Make It Happen" %}</span>
+          </h2>
+          <p class="mt-3 text-sm text-slate-500">
+            {% trans "Showing" %}
+            <span id="tm-count" class="font-bold text-[#c9a227]">{{ members|length }}</span> {% trans "team members" %}
+          </p>
+        </div>
+
+        <!-- Filtres par département (réutilise .pp-filter) -->
+        <div class="tabs-scroll flex flex-wrap items-center justify-center gap-2.5 mb-12">
+          <button
+            type="button"
+            data-tm-filter="all"
+            class="pp-filter pp-active px-6 py-2.5 rounded-full text-xs font-bold bg-white border border-gray-200 text-[#0b1f35] shadow-sm"
+          >
+            {% trans "Everyone" %}
+          </button>
+          <button
+            type="button"
+            data-tm-filter="leadership"
+            class="pp-filter px-6 py-2.5 rounded-full text-xs font-bold bg-white border border-gray-200 text-[#0b1f35] shadow-sm"
+          >
+            {% trans "Leadership" %}
+          </button>
+          <button
+            type="button"
+            data-tm-filter="engineering"
+            class="pp-filter px-6 py-2.5 rounded-full text-xs font-bold bg-white border border-gray-200 text-[#0b1f35] shadow-sm"
+          >
+            {% trans "Engineering" %}
+          </button>
+          <button
+            type="button"
+            data-tm-filter="design"
+            class="pp-filter px-6 py-2.5 rounded-full text-xs font-bold bg-white border border-gray-200 text-[#0b1f35] shadow-sm"
+          >
+            {% trans "Design" %}
+          </button>
+          <button
+            type="button"
+            data-tm-filter="operations"
+            class="pp-filter px-6 py-2.5 rounded-full text-xs font-bold bg-white border border-gray-200 text-[#0b1f35] shadow-sm"
+          >
+            {% trans "Field Operations" %}
+          </button>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
+          {% for m in members %}
+          <article
+            data-tm-item="{{ m.department|lower|default:'leadership' }}"
+            data-team-card
+            class="timeline-item team-card {% if forloop.first %}active{% endif %} relative bg-white rounded-[20px] p-4 pb-5 shadow-sm hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+          >
+            <div
+              class="relative h-[330px] rounded-[14px] bg-[#f5f6f9] overflow-hidden"
+            >
+              <span
+                class="absolute top-0 right-4 w-12 h-[62%] bg-[#0b1f35] rounded-b-[10px]"
+                aria-hidden="true"
+              ></span>
+              <span
+                class="team-stripes absolute bottom-0 left-0 w-24 h-16"
+                aria-hidden="true"
+              ></span>
+              <div
+                class="team-photo absolute left-3 bottom-0 w-[calc(100%-24px)] h-[88%]"
+              >
+                {% if m.image %}
+                <img
+                  src="{{ m.image.url }}"
+                  alt="{{ m.name }}"
+                  class="w-full h-full object-cover object-top"
+                />
+                {% else %}
+                <img
+                  src="https://randomuser.me/api/portraits/men/32.jpg"
+                  alt="{{ m.name }}"
+                  class="w-full h-full object-cover object-top"
+                />
+                {% endif %}
+              </div>
+            </div>
+            <div class="mt-5 px-1">
+              <h3 class="text-[18px] font-extrabold text-[#0b1f35]"><a href="{% url 'team:team-detail' m.slug %}" class="hover:text-[#c9a227] transition-colors">
+                {{ m.name }}
+              </a></h3>
+              <p class="mt-0.5 text-[11.5px] text-slate-500">
+                {{ m.role }}
+              </p>
+              <div class="mt-3.5 flex items-center gap-2">
+                <a
+                  href="{{ m.facebook|default:'#' }}"
+                  aria-label="Facebook"
+                  class="w-7 h-7 rounded-full bg-slate-100 text-[#0b1f35] flex items-center justify-center hover:bg-[#0b1f35] hover:text-white transition-colors"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="w-3 h-3"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M24 12.073C24 5.446 18.627.073 12 .073S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                    /></svg
+                ></a>
+                <a
+                  href="{{ m.twitter|default:'#' }}"
+                  aria-label="Twitter / X"
+                  class="w-7 h-7 rounded-full bg-slate-100 text-[#0b1f35] flex items-center justify-center hover:bg-[#0b1f35] hover:text-white transition-colors"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="w-3 h-3"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644z"
+                    /></svg
+                ></a>
+                <a
+                  href="{{ m.linkedin|default:'#' }}"
+                  aria-label="LinkedIn"
+                  class="w-7 h-7 rounded-full bg-slate-100 text-[#0b1f35] flex items-center justify-center hover:bg-[#0b1f35] hover:text-white transition-colors"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="w-3 h-3"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                    /></svg
+                ></a>
+                <a
+                  href="{{ m.instagram|default:'#' }}"
+                  aria-label="Instagram"
+                  class="w-7 h-7 rounded-full bg-slate-100 text-[#0b1f35] flex items-center justify-center hover:bg-[#0b1f35] hover:text-white transition-colors"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="w-3 h-3"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                    /></svg
+                ></a>
+              </div>
+            </div>
+            <span
+              class="team-bar absolute bottom-0 left-5 right-5 h-[4px] bg-[#0b1f35] rounded-t-full transition-all duration-300"
+              aria-hidden="true"
+            ></span>
+          </article>
+          {% empty %}
+          <p class="col-span-full text-center text-sm text-slate-500 py-10">{% trans "No team members yet." %}</p>
+          {% endfor %}
+
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#f5f6f9] pb-16 md:pb-24">
+      <div class="max-w-7xl mx-auto px-6">
+        <div
+          class="relative bg-[#0b1f35] rounded-3xl px-8 py-10 md:p-16 text-white"
+        >
+          <span
+            class="features-hatch absolute inset-0 rounded-3xl"
+            aria-hidden="true"
+          ></span>
+
+          <img
+            src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=700&auto=format&fit=crop"
+            alt="{% trans 'Engineer in orange helmet holding plans' %}"
+            class="hidden md:block absolute right-10 bottom-0 z-10 w-52 lg:w-60 h-[calc(100%+3.5rem)] object-cover object-top rounded-t-[28px] shadow-2xl"
+          />
+
+          <div class="relative z-10 max-w-xl md:pr-56 lg:pr-64">
+            <div class="flex items-center gap-3 mb-4">
+              <i data-lucide="sparkles" class="w-4 h-4 text-[#c9a227] shrink-0"></i>
+              <span class="text-[15px] font-semibold text-slate-300"
+                >{% trans "Join The Team" %}</span
+              >
+            </div>
+
+            <h2
+              class="text-[28px] md:text-[40px] font-black tracking-tight leading-[1.15]"
+            >
+              {% trans "Like Who You See?" %}
+              <span class="text-[#c9a227]">{% trans "Work With Us!" %}</span>
+            </h2>
+
+            <a
+              href="{% url 'careers:careers' %}"
+              class="mt-6 inline-block px-8 py-3.5 rounded-full bg-[#c9a227] text-white text-sm font-bold hover:bg-[#d9bc6b] hover:scale-105 transition-all shadow-md shadow-orange-500/25"
+            >
+              {% trans "Explore Open Roles" %}
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% endblock %}

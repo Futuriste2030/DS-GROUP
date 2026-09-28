@@ -1,0 +1,346 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}{% trans "News & Blogs" %} | BS GROUP{% endblock %}
+{% block meta_description %}{% trans "BS GROUP — News, advice and trends from the construction industry." %}{% endblock %}
+
+{% block content %}
+<section
+      id="page-header"
+      class="page-header bg-[#f5f6f9]"
+      data-page-title="{% trans 'News & Blogs' %}"
+    >
+      <div class="ruler-ticks w-full" aria-hidden="true"></div>
+
+      <div class="max-w-7xl mx-auto px-6 pt-14 pb-16 text-center">
+        <h1
+          id="page-header-title"
+          class="text-[40px] md:text-[48px] font-black text-[#0b1f35] tracking-tight leading-tight"
+        >
+          {% trans "News & Blogs" %}
+        </h1>
+        <nav aria-label="{% trans 'Breadcrumb' %}" class="mt-3.5">
+          <ol
+            class="flex items-center justify-center gap-2.5 text-[15px] font-semibold"
+          >
+            <li>
+              <a
+                href="{% url 'main:index' %}"
+                class="text-[#0b1f35] hover:text-[#c9a227] transition-colors"
+                >{% trans "Home" %}</a
+              >
+            </li>
+            <li
+              aria-hidden="true"
+              class="text-slate-400 font-normal select-none"
+            >
+              /
+            </li>
+            <li
+              id="page-header-current"
+              class="text-[#c9a227]"
+              aria-current="page"
+            >
+              {% trans "News & Blogs" %}
+            </li>
+          </ol>
+        </nav>
+      </div>
+
+      <div class="page-header-band w-full" aria-hidden="true"></div>
+    </section>
+
+      <section id="blog-featured" class="bg-[#f5f6f9] pt-16 md:pt-20 relative overflow-hidden">
+      <span class="section-tag section-tag--dark" aria-hidden="true">Blog</span>
+      <div class="max-w-7xl mx-auto px-6">
+        <div
+          class="bp-featured grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center bg-white rounded-[26px] p-4 md:p-5 shadow-sm"
+        >
+          <!-- Visuel -->
+          <div class="about-img h-[240px] md:h-[320px]">
+              <img
+                src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1200&auto=format&fit=crop"
+                alt="{% trans 'Modern construction site with cranes at sunset' %}"
+                class="w-full h-full object-cover"
+              />
+          </div>
+
+          <!-- Contenu -->
+          <div class="px-2 md:px-4 pb-4 md:py-6">
+            <div class="flex flex-wrap items-center gap-3">
+              <span
+                class="px-4 py-1.5 rounded-full bg-[#0b1f35] text-white text-[10.5px] font-semibold"
+                >{% trans "Featured" %}</span
+              >
+              <span
+                class="flex items-center gap-1.5 text-[11.5px] font-medium text-slate-500"
+              >
+                <i
+                  data-lucide="calendar"
+                  class="w-3.5 h-3.5 text-[#c9a227]"
+                ></i>
+                March 18, 2025
+              </span>
+              <span
+                class="flex items-center gap-1.5 text-[11.5px] font-medium text-slate-500"
+              >
+                <i data-lucide="clock" class="w-3.5 h-3.5 text-[#c9a227]"></i> {% trans "6 min read" %}
+              </span>
+            </div>
+
+            <h2
+              class="mt-4 text-[24px] md:text-[30px] font-black text-[#0b1f35] tracking-tight leading-tight"
+            >
+              {% trans "The Future of Smart Construction Sites" %}
+            </h2>
+            <p class="mt-3.5 text-sm text-slate-500 leading-relaxed max-w-lg">
+              {% trans "From IoT sensors tracking equipment in real time to AI-powered safety monitoring, discover how digital transformation is reshaping job sites — and how BS GROUP stays ahead of the curve on every project." %}
+            </p>
+
+            <div class="mt-6 flex flex-wrap items-center justify-between gap-5">
+              <div class="flex items-center gap-3">
+                <img
+                  src="https://randomuser.me/api/portraits/women/65.jpg"
+                  alt="Jenny Alexander"
+                  class="w-11 h-11 rounded-full object-cover ring-2 ring-orange-100"
+                />
+                <div>
+                  <p class="text-[13px] font-bold text-[#0b1f35]">
+                    Jenny Alexander
+                  </p>
+                  <p class="text-[11px] text-slate-400">
+                    {% trans "Chief Executive Officer" %}
+                  </p>
+                </div>
+              </div>
+
+              <a href="#" class="group flex items-center gap-1.5">
+                <span
+                  class="px-6 py-3 rounded-full bg-[#c9a227] text-white text-[13px] font-bold shadow-md shadow-orange-500/25 group-hover:bg-[#d9bc6b] transition-colors"
+                  >{% trans "Read Article" %}</span
+                >
+                <span
+                  class="w-11 h-11 rounded-full bg-[#0b1f35] text-white flex items-center justify-center group-hover:bg-[#c9a227] transition-colors"
+                >
+                  <i data-lucide="arrow-right" class="w-4.5 h-4.5"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <section id="blogs-grid" class="bg-[#f5f6f9] py-16 md:py-20 relative overflow-hidden">
+      <span class="section-tag section-tag--dark" aria-hidden="true">Blogs</span>
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- En-tête -->
+        <div class="text-center mb-10">
+          <div class="flex items-center justify-center gap-3 mb-4">
+            <i data-lucide="sparkles" class="w-4 h-4 text-[#c9a227] shrink-0"></i>
+            <span class="text-[15px] font-semibold text-[#0b1f35]"
+              >{% trans "Latest Articles" %}</span
+            >
+          </div>
+          <h2
+            class="text-[34px] sm:text-[42px] md:text-[46px] font-black tracking-tight leading-[1.12]"
+          >
+            <span class="text-[#0b1f35]">{% trans "Insights From" %} </span
+            ><span class="text-[#c9a227]">{% trans "The Field" %}</span>
+          </h2>
+        </div>
+
+        <!-- Filtres (réutilise les styles .pp-filter) -->
+        <div
+          id="bp-filters"
+          class="tabs-scroll flex flex-wrap items-center justify-center gap-2.5 mb-12"
+        >
+          <button
+            type="button"
+            data-bp-filter="all"
+            class="pp-filter pp-active px-6 py-2.5 rounded-full text-xs font-bold bg-white border border-gray-200 text-[#0b1f35] shadow-sm"
+          >
+            {% trans "All Posts" %}
+          </button>
+          <button
+            type="button"
+            data-bp-filter="construction"
+            class="pp-filter px-6 py-2.5 rounded-full text-xs font-bold bg-white border border-gray-200 text-[#0b1f35] shadow-sm"
+          >
+            {% trans "Construction Trends" %}
+          </button>
+          <button
+            type="button"
+            data-bp-filter="management"
+            class="pp-filter px-6 py-2.5 rounded-full text-xs font-bold bg-white border border-gray-200 text-[#0b1f35] shadow-sm"
+          >
+            {% trans "Project Management" %}
+          </button>
+          <button
+            type="button"
+            data-bp-filter="safety"
+            class="pp-filter px-6 py-2.5 rounded-full text-xs font-bold bg-white border border-gray-200 text-[#0b1f35] shadow-sm"
+          >
+            {% trans "Safety" %}
+          </button>
+          <button
+            type="button"
+            data-bp-filter="innovation"
+            class="pp-filter px-6 py-2.5 rounded-full text-xs font-bold bg-white border border-gray-200 text-[#0b1f35] shadow-sm"
+          >
+            {% trans "Innovation" %}
+          </button>
+        </div>
+
+        <!-- Grille dynamique (Page object `posts`, 6 par page côté serveur) -->
+        <div
+          id="bp-grid"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 scroll-mt-28"
+        >
+          {% for p in posts %}
+          <article
+            data-bp-item="{{ p.category|slugify|default:'all' }}"
+            class="bp-card group bg-white rounded-[18px] p-3.5 pb-6 shadow-sm"
+          >
+            <div class="relative">
+              <div
+                class="blog-img h-[180px] w-full rounded-[12px] overflow-hidden"
+              >
+                {% if p.image %}
+                <img
+                  src="{{ p.image.url }}"
+                  alt="{{ p.title }}"
+                  class="w-full h-full object-cover"
+                />
+                {% else %}
+                <img
+                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop"
+                  alt="{{ p.title }}"
+                  class="w-full h-full object-cover"
+                />
+                {% endif %}
+              </div>
+              <span
+                class="absolute -bottom-3 left-3 z-10 px-4 py-1.5 rounded-full bg-[#0b1f35] text-white text-[10.5px] font-semibold shadow-md"
+                >{{ p.category|default:_("Blog") }}</span
+              >
+            </div>
+            <div class="pt-7 px-1.5 pb-1">
+              <div
+                class="flex items-center gap-1.5 text-[11px] font-medium text-slate-500"
+              >
+                <i
+                  data-lucide="calendar"
+                  class="w-3.5 h-3.5 text-[#c9a227]"
+                ></i>
+                {{ p.published|date:"F d, Y" }}
+              </div>
+              <h3
+                class="mt-2 text-[16.5px] font-extrabold text-[#0b1f35] leading-snug line-clamp-2"
+              ><a href="{% url 'blog:blog-detail' p.slug %}" class="hover:text-[#c9a227] transition-colors">
+                {{ p.title }}
+              </a></h3>
+              <p
+                class="mt-2 text-[12.5px] text-slate-500 leading-relaxed line-clamp-2"
+              >
+                {{ p.excerpt }}
+              </p>
+              <a
+                href="{% url 'blog:blog-detail' p.slug %}"
+                class="mt-4 inline-flex items-center gap-1.5 text-[13px] font-bold text-[#c9a227]"
+                >{% trans "Read More" %}
+                <i
+                  data-lucide="arrow-right"
+                  class="w-3.5 h-3.5 transition-transform group-hover:translate-x-1"
+                ></i
+              ></a>
+            </div>
+          </article>
+          {% empty %}
+          <div class="col-span-full text-center py-10 text-sm text-slate-500">
+            {% trans "No articles yet." %}
+          </div>
+          {% endfor %}
+        </div>
+
+        <!-- Pagination serveur (même conteneur/id/classes, simple div centrée) -->
+        <nav
+          id="bp-pagination"
+          class="flex items-center justify-center gap-2 mt-12"
+          aria-label="{% trans 'Blog post pagination' %}"
+        >
+          {% if posts.has_previous %}
+          <a
+            data-server-page="prev"
+            href="?{% if active_category %}category={{ active_category|urlencode }}&{% endif %}{% if request.GET.q %}q={{ request.GET.q|urlencode }}&{% endif %}page={{ posts.previous_page_number }}"
+            aria-label="{% trans 'Previous page' %}"
+            class="px-5 py-2.5 rounded-full text-xs font-bold bg-white border border-gray-200 text-[#0b1f35] shadow-sm hover:bg-[#0b1f35] hover:text-white transition-colors"
+          >
+            {% trans "← Prev" %}
+          </a>
+          {% endif %}
+          <span
+            class="px-5 py-2.5 rounded-full text-xs font-bold bg-[#0b1f35] text-white shadow-sm"
+            aria-current="page"
+          >
+            {% trans "Page" %} {{ posts.number }} / {{ posts.paginator.num_pages }}
+          </span>
+          {% if posts.has_next %}
+          <a
+            data-server-page="next"
+            href="?{% if active_category %}category={{ active_category|urlencode }}&{% endif %}{% if request.GET.q %}q={{ request.GET.q|urlencode }}&{% endif %}page={{ posts.next_page_number }}"
+            aria-label="{% trans 'Next page' %}"
+            class="px-5 py-2.5 rounded-full text-xs font-bold bg-white border border-gray-200 text-[#0b1f35] shadow-sm hover:bg-[#0b1f35] hover:text-white transition-colors"
+          >
+            {% trans "Next →" %}
+          </a>
+          {% endif %}
+        </nav>
+      </div>
+    </section>
+
+    <section class="bg-[#f5f6f9] pb-16 md:pb-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div
+          class="relative bg-[#0b1f35] rounded-[28px] px-8 py-10 md:px-14 md:py-12 overflow-hidden"
+        >
+          <span
+            class="features-hatch absolute inset-0"
+            aria-hidden="true"
+          ></span>
+
+          <div
+            class="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8"
+          >
+            <div class="max-w-xl">
+              <h2
+                class="text-[26px] md:text-[32px] font-black text-white tracking-tight leading-tight"
+              >
+                {% trans "Have a Project in Mind?" %}
+                <span class="text-[#c9a227]">{% trans "Let's Build It Together" %}</span>
+              </h2>
+              <p class="mt-3 text-sm text-slate-400 leading-relaxed">
+                {% trans "Reading is great — building is better. Tell us about your idea and get a free, detailed quote within 24 hours." %}
+              </p>
+            </div>
+
+            <a
+              href="{% url 'contact:contact' %}"
+              class="group flex items-center gap-1.5 shrink-0"
+            >
+              <span
+                class="px-7 py-3.5 rounded-full bg-[#c9a227] text-white text-sm font-bold shadow-md shadow-orange-500/25 group-hover:bg-[#d9bc6b] transition-colors"
+                >{% trans "Get A Quote" %}</span
+              >
+              <span
+                class="w-12 h-12 rounded-full bg-white text-[#0b1f35] flex items-center justify-center group-hover:bg-[#c9a227] group-hover:text-white transition-colors"
+              >
+                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% endblock %}

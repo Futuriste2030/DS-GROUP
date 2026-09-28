@@ -1,0 +1,885 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}{% trans "Get A Quote" %} | BS GROUP{% endblock %}
+{% block meta_description %}{% trans "BS GROUP — Get your free, no-obligation quote in 2 minutes. Guaranteed response within 24h, fixed price." %}{% endblock %}
+
+{% block content %}
+<section
+      id="page-header"
+      class="page-header bg-[#f5f6f9]"
+      data-page-title="{% trans 'Get A Quote' %}"
+    >
+      <div class="ruler-ticks w-full" aria-hidden="true"></div>
+
+      <div class="max-w-7xl mx-auto px-6 pt-14 pb-16 text-center">
+        <h1
+          id="page-header-title"
+          class="text-[40px] md:text-[48px] font-black text-[#0b1f35] tracking-tight leading-tight"
+        >
+          {% trans "Get A Quote" %}
+        </h1>
+        <nav aria-label="{% trans 'Breadcrumb' %}" class="mt-3.5">
+          <ol
+            class="flex items-center justify-center gap-2.5 text-[15px] font-semibold"
+          >
+            <li>
+              <a
+                href="{% url 'main:index' %}"
+                class="text-[#0b1f35] hover:text-[#c9a227] transition-colors"
+                >{% trans "Home" %}</a
+              >
+            </li>
+            <li
+              aria-hidden="true"
+              class="text-slate-400 font-normal select-none"
+            >
+              /
+            </li>
+            <li
+              id="page-header-current"
+              class="text-[#c9a227]"
+              aria-current="page"
+            >
+              {% trans "Get A Quote" %}
+            </li>
+          </ol>
+        </nav>
+      </div>
+
+      <div class="page-header-band w-full" aria-hidden="true"></div>
+    </section>
+
+    <section class="bg-white pt-14 md:pt-16 pb-10 relative overflow-hidden">
+      <span class="section-tag section-tag--dark" aria-hidden="true">{% trans "Quote" %}</span>
+      <div class="max-w-3xl mx-auto px-6 text-center">
+        <div class="flex items-center justify-center gap-3 mb-4">
+          <i data-lucide="sparkles" class="w-4 h-4 text-[#c9a227] shrink-0"></i>
+          <span class="text-[15px] font-semibold text-[#0b1f35]"
+            >{% trans "Free Quote Request" %}</span
+          >
+        </div>
+        <h2
+          class="text-[32px] md:text-[42px] font-black tracking-tight leading-[1.15]"
+        >
+          <span class="text-[#0b1f35]">{% trans "Your Project, " %}</span
+          ><span class="text-[#c9a227]">{% trans "Precisely Priced" %}</span>
+        </h2>
+        <p class="mt-4 text-[15px] text-slate-500 leading-relaxed">
+          {% trans "Answer 4 quick steps and receive a detailed, fixed-price proposal — no site visit needed to start." %}
+        </p>
+
+        <!-- Garanties -->
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+          <span
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#f5f6f9] text-xs font-bold text-[#0b1f35]"
+          >
+            <i data-lucide="badge-check" class="w-4 h-4 text-[#c9a227]"></i>
+            {% trans "100% Free & No Obligation" %}
+          </span>
+          <span
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#f5f6f9] text-xs font-bold text-[#0b1f35]"
+          >
+            <i data-lucide="clock" class="w-4 h-4 text-[#c9a227]"></i> {% trans "Response Within 24 Hours" %}
+          </span>
+          <span
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#f5f6f9] text-xs font-bold text-[#0b1f35]"
+          >
+            <i data-lucide="shield-check" class="w-4 h-4 text-[#c9a227]"></i>
+            {% trans "Fixed-Price Guarantee" %}
+          </span>
+        </div>
+      </div>
+    </section>
+
+      <section id="quote" class="bg-white pb-16 md:pb-24 relative overflow-hidden">
+      <span class="section-tag section-tag--dark" aria-hidden="true">{% trans "Quote" %}</span>
+      <div
+        class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start"
+      >
+        <div class="lg:col-span-7">
+          <div
+            id="quote-success"
+            class="hidden bg-white rounded-[26px] p-10 md:p-14 shadow-sm text-center scroll-mt-28"
+          >
+            <span
+              class="mx-auto w-20 h-20 rounded-full bg-[#c9a227]/10 text-[#c9a227] flex items-center justify-center"
+            >
+              <i data-lucide="check-circle-2" class="w-10 h-10"></i>
+            </span>
+            <h2
+              class="mt-6 text-[28px] md:text-[34px] font-black text-[#0b1f35] tracking-tight"
+            >
+              {% trans "Request Received!" %}
+            </h2>
+            <p
+              class="mt-3 text-[15px] text-slate-500 leading-relaxed max-w-md mx-auto"
+            >
+              {% trans "Thank you! Our estimation team is reviewing your project and will contact you within 24 hours with your fixed-price proposal." %}
+            </p>
+            <div
+              class="mt-6 inline-flex items-center gap-3 bg-[#0b1f35] text-white rounded-full px-6 py-3"
+            >
+              <span
+                class="text-[11px] font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5"
+              >
+                <i data-lucide="hash" class="w-3.5 h-3.5 text-[#c9a227]"></i>
+                {% trans "Reference" %}
+              </span>
+              <span
+                id="q-ref"
+                class="text-lg font-black text-[#c9a227] tracking-wide"
+                >QT-2025-0000</span
+              >
+            </div>
+            <div
+              class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3"
+            >
+              <button
+                id="q-restart"
+                type="button"
+                class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#c9a227] text-white text-sm font-bold shadow-md shadow-orange-500/25 hover:bg-[#d9bc6b] transition-colors"
+              >
+                {% trans "Submit Another Request" %}
+                <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+              </button>
+              <a
+                href="{% url 'main:index' %}"
+                class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border-2 border-[#0b1f35] text-[#0b1f35] text-sm font-bold hover:border-[#c9a227] hover:text-[#c9a227] transition-colors"
+              >
+                {% trans "Back to Home" %}
+              </a>
+            </div>
+          </div>
+
+          <div
+            id="quote-card"
+            class="bg-white rounded-[26px] p-7 md:p-10 shadow-sm scroll-mt-28"
+          >
+            <!-- Barre de progression -->
+            <div
+              class="h-1.5 w-full rounded-full bg-gray-100 overflow-hidden mb-8"
+            >
+              <div
+                id="quote-progress-bar"
+                class="h-full w-1/4 rounded-full bg-[#c9a227] transition-all duration-500"
+              ></div>
+            </div>
+
+            <!-- Stepper -->
+            <ol class="flex items-center mb-10">
+              <li data-q-indicator="1" class="flex items-center gap-2.5">
+                <span
+                  data-q-dot
+                  class="w-9 h-9 rounded-full bg-[#c9a227] text-white text-sm font-black flex items-center justify-center shrink-0"
+                  >1</span
+                >
+                <span
+                  data-q-label
+                  class="hidden sm:block text-xs font-bold text-[#0b1f35]"
+                  >{% trans "Project" %}</span
+                >
+              </li>
+              <li
+                class="flex-1 h-px bg-gray-200 mx-2 sm:mx-3"
+                aria-hidden="true"
+              ></li>
+              <li data-q-indicator="2" class="flex items-center gap-2.5">
+                <span
+                  data-q-dot
+                  class="w-9 h-9 rounded-full bg-white border-2 border-gray-300 text-slate-400 text-sm font-black flex items-center justify-center shrink-0"
+                  >2</span
+                >
+                <span
+                  data-q-label
+                  class="hidden sm:block text-xs font-bold text-slate-400"
+                  >{% trans "Details" %}</span
+                >
+              </li>
+              <li
+                class="flex-1 h-px bg-gray-200 mx-2 sm:mx-3"
+                aria-hidden="true"
+              ></li>
+              <li data-q-indicator="3" class="flex items-center gap-2.5">
+                <span
+                  data-q-dot
+                  class="w-9 h-9 rounded-full bg-white border-2 border-gray-300 text-slate-400 text-sm font-black flex items-center justify-center shrink-0"
+                  >3</span
+                >
+                <span
+                  data-q-label
+                  class="hidden sm:block text-xs font-bold text-slate-400"
+                  >{% trans "Your Info" %}</span
+                >
+              </li>
+              <li
+                class="flex-1 h-px bg-gray-200 mx-2 sm:mx-3"
+                aria-hidden="true"
+              ></li>
+              <li data-q-indicator="4" class="flex items-center gap-2.5">
+                <span
+                  data-q-dot
+                  class="w-9 h-9 rounded-full bg-white border-2 border-gray-300 text-slate-400 text-sm font-black flex items-center justify-center shrink-0"
+                  >4</span
+                >
+                <span
+                  data-q-label
+                  class="hidden sm:block text-xs font-bold text-slate-400"
+                  >{% trans "Review" %}</span
+                >
+              </li>
+            </ol>
+
+            <form id="quote-form" action="{% url 'contact:devis' %}" method="post" novalidate>
+              {% csrf_token %}
+              <fieldset data-qstep="1">
+                <legend
+                  class="text-[20px] md:text-[24px] font-extrabold text-[#0b1f35] tracking-tight"
+                >
+                  {% trans "What type of project do you have?" %}
+                </legend>
+                <p class="mt-2 text-sm text-slate-500">
+                  {% trans "Pick the closest match — we'll tailor the rest to it." %}
+                </p>
+
+                <div class="mt-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <!-- Residential -->
+                  <label class="relative block cursor-pointer">
+                    <input
+                      type="radio"
+                      name="projectType"
+                      value="Residential Construction"
+                      class="peer sr-only"
+                    />
+                    <span
+                      class="absolute top-3.5 right-3.5 z-10 w-6 h-6 rounded-full bg-[#c9a227] text-white items-center justify-center hidden peer-checked:flex"
+                    >
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="w-3.5 h-3.5"
+                      >
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                    </span>
+                    <div
+                      class="h-full rounded-2xl border-2 border-gray-200 bg-white p-6 transition-all peer-checked:border-[#c9a227] peer-checked:bg-orange-50/50 hover:border-[#c9a227]/50"
+                    >
+                      <span
+                        class="w-12 h-12 rounded-xl bg-[#0b1f35] text-[#c9a227] flex items-center justify-center"
+                      >
+                        <i data-lucide="home" class="w-6 h-6"></i>
+                      </span>
+                      <h3
+                        class="mt-4 text-[16px] font-extrabold text-[#0b1f35]"
+                      >
+                        {% trans "Residential Construction" %}
+                      </h3>
+                      <p class="mt-1.5 text-xs text-slate-500 leading-relaxed">
+                        {% trans "Custom homes, developments and extensions." %}
+                      </p>
+                    </div>
+                  </label>
+
+                  <!-- Commercial -->
+                  <label class="relative block cursor-pointer">
+                    <input
+                      type="radio"
+                      name="projectType"
+                      value="Commercial Construction"
+                      class="peer sr-only"
+                    />
+                    <span
+                      class="absolute top-3.5 right-3.5 z-10 w-6 h-6 rounded-full bg-[#c9a227] text-white items-center justify-center hidden peer-checked:flex"
+                    >
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="w-3.5 h-3.5"
+                      >
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                    </span>
+                    <div
+                      class="h-full rounded-2xl border-2 border-gray-200 bg-white p-6 transition-all peer-checked:border-[#c9a227] peer-checked:bg-orange-50/50 hover:border-[#c9a227]/50"
+                    >
+                      <span
+                        class="w-12 h-12 rounded-xl bg-[#0b1f35] text-[#c9a227] flex items-center justify-center"
+                      >
+                        <i data-lucide="building-2" class="w-6 h-6"></i>
+                      </span>
+                      <h3
+                        class="mt-4 text-[16px] font-extrabold text-[#0b1f35]"
+                      >
+                        {% trans "Commercial Construction" %}
+                      </h3>
+                      <p class="mt-1.5 text-xs text-slate-500 leading-relaxed">
+                        {% trans "Offices, retail spaces and industrial facilities." %}
+                      </p>
+                    </div>
+                  </label>
+
+                  <!-- Renovation -->
+                  <label class="relative block cursor-pointer">
+                    <input
+                      type="radio"
+                      name="projectType"
+                      value="Renovation & Remodeling"
+                      class="peer sr-only"
+                    />
+                    <span
+                      class="absolute top-3.5 right-3.5 z-10 w-6 h-6 rounded-full bg-[#c9a227] text-white items-center justify-center hidden peer-checked:flex"
+                    >
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="w-3.5 h-3.5"
+                      >
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                    </span>
+                    <div
+                      class="h-full rounded-2xl border-2 border-gray-200 bg-white p-6 transition-all peer-checked:border-[#c9a227] peer-checked:bg-orange-50/50 hover:border-[#c9a227]/50"
+                    >
+                      <span
+                        class="w-12 h-12 rounded-xl bg-[#0b1f35] text-[#c9a227] flex items-center justify-center"
+                      >
+                        <i data-lucide="wrench" class="w-6 h-6"></i>
+                      </span>
+                      <h3
+                        class="mt-4 text-[16px] font-extrabold text-[#0b1f35]"
+                      >
+                        {% trans "Renovation & Remodeling" %}
+                      </h3>
+                      <p class="mt-1.5 text-xs text-slate-500 leading-relaxed">
+                        {% trans "Upgrades, overhauls and space transformations." %}
+                      </p>
+                    </div>
+                  </label>
+
+                  <!-- Other -->
+                  <label class="relative block cursor-pointer">
+                    <input
+                      type="radio"
+                      name="projectType"
+                      value="Other / Not Sure Yet"
+                      class="peer sr-only"
+                    />
+                    <span
+                      class="absolute top-3.5 right-3.5 z-10 w-6 h-6 rounded-full bg-[#c9a227] text-white items-center justify-center hidden peer-checked:flex"
+                    >
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="w-3.5 h-3.5"
+                      >
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                    </span>
+                    <div
+                      class="h-full rounded-2xl border-2 border-gray-200 bg-white p-6 transition-all peer-checked:border-[#c9a227] peer-checked:bg-orange-50/50 hover:border-[#c9a227]/50"
+                    >
+                      <span
+                        class="w-12 h-12 rounded-xl bg-[#0b1f35] text-[#c9a227] flex items-center justify-center"
+                      >
+                        <i data-lucide="shapes" class="w-6 h-6"></i>
+                      </span>
+                      <h3
+                        class="mt-4 text-[16px] font-extrabold text-[#0b1f35]"
+                      >
+                        {% trans "Other / Not Sure Yet" %}
+                      </h3>
+                      <p class="mt-1.5 text-xs text-slate-500 leading-relaxed">
+                        {% trans "Something different? Tell us and we'll adapt." %}
+                      </p>
+                    </div>
+                  </label>
+                </div>
+
+                <p id="q-step1-error" class="error-msg hidden"></p>
+              </fieldset>
+
+              <fieldset data-qstep="2" class="hidden">
+                <legend
+                  class="text-[20px] md:text-[24px] font-extrabold text-[#0b1f35] tracking-tight"
+                >
+                  {% trans "Tell us about your project" %}
+                </legend>
+                <p class="mt-2 text-sm text-slate-500">
+                  {% trans "A few details help us prepare an accurate estimate." %}
+                </p>
+
+                <div class="mt-7 grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div>
+                    <label for="qf-location" class="form-label"
+                      >{% trans "Project Location" %}
+                      <span class="text-[#c9a227]">*</span></label
+                    >
+                    <input
+                      id="qf-location"
+                      name="location"
+                      type="text"
+                      required
+                      placeholder="{% trans 'City, State' %}"
+                      class="form-input w-full"
+                    />
+                    <p class="error-msg hidden"></p>
+                  </div>
+                  <div>
+                    <label for="qf-size" class="form-label"
+                      >{% trans "Approximate Size" %}
+                      <span class="text-slate-400 font-medium"
+                        >{% trans "(optional)" %}</span
+                      ></label
+                    >
+                    <input
+                      id="qf-size"
+                      name="size"
+                      type="text"
+                      placeholder="{% trans 'e.g. 240 sq meters' %}"
+                      class="form-input w-full"
+                    />
+                    <p class="error-msg hidden"></p>
+                  </div>
+                  <div>
+                    <label for="qf-budget" class="form-label"
+                      >{% trans "Budget Range" %} <span class="text-[#c9a227]">*</span></label
+                    >
+                    <select
+                      id="qf-budget"
+                      name="budget"
+                      required
+                      class="form-input w-full bg-white"
+                    >
+                      <option value="" selected disabled>
+                        {% trans "Select a range..." %}
+                      </option>
+                      <option>{% trans "Under $50,000" %}</option>
+                      <option>{% trans "$50,000 – $150,000" %}</option>
+                      <option>{% trans "$150,000 – $500,000" %}</option>
+                      <option>{% trans "$500,000 – $1,000,000" %}</option>
+                      <option>{% trans "$1,000,000+" %}</option>
+                    </select>
+                    <p class="error-msg hidden"></p>
+                  </div>
+                  <div>
+                    <label for="qf-timeline" class="form-label"
+                      >{% trans "Desired Start" %} <span class="text-[#c9a227]">*</span></label
+                    >
+                    <select
+                      id="qf-timeline"
+                      name="timeline"
+                      required
+                      class="form-input w-full bg-white"
+                    >
+                      <option value="" selected disabled>
+                        {% trans "Select a timeframe..." %}
+                      </option>
+                      <option>{% trans "As soon as possible" %}</option>
+                      <option>{% trans "Within 1 – 3 months" %}</option>
+                      <option>{% trans "Within 3 – 6 months" %}</option>
+                      <option>{% trans "I'm flexible" %}</option>
+                    </select>
+                    <p class="error-msg hidden"></p>
+                  </div>
+                </div>
+
+                <div class="mt-5">
+                  <label for="qf-description" class="form-label"
+                    >{% trans "Brief Description" %}
+                    <span class="text-slate-400 font-medium"
+                      >{% trans "(optional)" %}</span
+                    ></label
+                  >
+                  <textarea
+                    id="qf-description"
+                    name="message"
+                    rows="4"
+                    placeholder="{% trans 'Describe your project in a few words...' %}"
+                    class="form-input w-full resize-none"
+                  ></textarea>
+                  <p class="error-msg hidden"></p>
+                </div>
+              </fieldset>
+
+              <fieldset data-qstep="3" class="hidden">
+                <legend
+                  class="text-[20px] md:text-[24px] font-extrabold text-[#0b1f35] tracking-tight"
+                >
+                  {% trans "How can we reach you?" %}
+                </legend>
+                <p class="mt-2 text-sm text-slate-500">
+                  {% trans "We only use these details to send your proposal — never for spam." %}
+                </p>
+
+                <div class="mt-7 grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div>
+                    <label for="qf-name" class="form-label"
+                      >{% trans "Full Name" %} <span class="text-[#c9a227]">*</span></label
+                    >
+                    <input
+                      id="qf-name"
+                      name="name"
+                      type="text"
+                      required
+                      placeholder="{% trans 'Ex. John Carter' %}"
+                      class="form-input w-full"
+                    />
+                    <p class="error-msg hidden"></p>
+                  </div>
+                  <div>
+                    <label for="qf-email" class="form-label"
+                      >{% trans "Email" %} <span class="text-[#c9a227]">*</span></label
+                    >
+                    <input
+                      id="qf-email"
+                      name="email"
+                      type="email"
+                      required
+                      placeholder="example@gmail.com"
+                      class="form-input w-full"
+                    />
+                    <p class="error-msg hidden"></p>
+                  </div>
+                  <div class="sm:col-span-2">
+                    <label for="qf-phone" class="form-label"
+                      >{% trans "Phone Number" %} <span class="text-[#c9a227]">*</span></label
+                    >
+                    <input
+                      id="qf-phone"
+                      name="phone"
+                      type="tel"
+                      data-type="phone"
+                      required
+                      placeholder="{% trans 'Enter Phone Number' %}"
+                      class="form-input w-full"
+                    />
+                    <p class="error-msg hidden"></p>
+                  </div>
+                </div>
+
+                <div class="mt-5">
+                  <span class="form-label"
+                    >{% trans "Attach Plans or Photos" %}
+                    <span class="text-slate-400 font-medium"
+                      >{% trans "(optional — PDF, JPG, PNG · max 10 MB)" %}</span
+                    ></span
+                  >
+                  <input
+                    type="file"
+                    id="q-file"
+                    class="hidden"
+                    accept=".pdf,.jpg,.jpeg,.png"
+                  />
+                  <label
+                    for="q-file"
+                    class="flex flex-col items-center justify-center gap-2.5 rounded-2xl border-2 border-dashed border-gray-300 bg-[#f5f6f9] px-6 py-8 text-center cursor-pointer hover:border-[#c9a227] hover:bg-orange-50/40 transition-colors select-none"
+                  >
+                    <span
+                      class="w-12 h-12 rounded-full bg-[#0b1f35] text-[#c9a227] flex items-center justify-center"
+                    >
+                      <i data-lucide="paperclip" class="w-5 h-5"></i>
+                    </span>
+                    <span class="text-sm font-bold text-[#0b1f35]"
+                      >{% trans "Click to browse files" %}
+                      <span class="text-slate-400 font-medium"
+                        >{% trans "— blueprints, mood boards, inspiration..." %}</span
+                      ></span
+                    >
+                  </label>
+                  <div
+                    id="q-file-badge"
+                    class="hidden mt-3 items-center gap-3 bg-[#f5f6f9] border border-gray-200 rounded-xl px-4 py-3"
+                  >
+                    <span
+                      class="w-9 h-9 rounded-lg bg-[#c9a227]/10 text-[#c9a227] flex items-center justify-center shrink-0"
+                    >
+                      <i data-lucide="file-text" class="w-4.5 h-4.5"></i>
+                    </span>
+                    <span
+                      id="q-file-name"
+                      class="flex-1 min-w-0 text-sm font-semibold text-[#0b1f35] truncate"
+                    ></span>
+                    <button
+                      type="button"
+                      id="q-file-remove"
+                      aria-label="{% trans 'Remove file' %}"
+                      class="w-7 h-7 rounded-full bg-gray-100 text-slate-500 flex items-center justify-center hover:bg-red-100 hover:text-red-500 transition-colors shrink-0"
+                    >
+                      <i data-lucide="x" class="w-3.5 h-3.5"></i>
+                    </button>
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset data-qstep="4" class="hidden">
+                <legend
+                  class="text-[20px] md:text-[24px] font-extrabold text-[#0b1f35] tracking-tight"
+                >
+                  {% trans "Review your request" %}
+                </legend>
+                <p class="mt-2 text-sm text-slate-500">
+                  {% trans "One last look before we put our estimators on it." %}
+                </p>
+
+                <div
+                  class="mt-7 rounded-2xl border border-gray-200 overflow-hidden"
+                >
+                  <dl class="divide-y divide-gray-100 text-sm">
+                    <div
+                      class="flex items-start justify-between gap-6 px-5 py-3.5 bg-[#f5f6f9]/60"
+                    >
+                      <dt class="font-bold text-[#0b1f35] shrink-0">
+                        {% trans "Project Type" %}
+                      </dt>
+                      <dd id="q-sum-type" class="text-slate-500 text-right">
+                        —
+                      </dd>
+                    </div>
+                    <div
+                      class="flex items-start justify-between gap-6 px-5 py-3.5"
+                    >
+                      <dt class="font-bold text-[#0b1f35] shrink-0">
+                        {% trans "Location" %}
+                      </dt>
+                      <dd id="q-sum-location" class="text-slate-500 text-right">
+                        —
+                      </dd>
+                    </div>
+                    <div
+                      class="flex items-start justify-between gap-6 px-5 py-3.5 bg-[#f5f6f9]/60"
+                    >
+                      <dt class="font-bold text-[#0b1f35] shrink-0">
+                        {% trans "Approx. Size" %}
+                      </dt>
+                      <dd id="q-sum-size" class="text-slate-500 text-right">
+                        —
+                      </dd>
+                    </div>
+                    <div
+                      class="flex items-start justify-between gap-6 px-5 py-3.5"
+                    >
+                      <dt class="font-bold text-[#0b1f35] shrink-0">
+                        {% trans "Budget Range" %}
+                      </dt>
+                      <dd id="q-sum-budget" class="text-slate-500 text-right">
+                        —
+                      </dd>
+                    </div>
+                    <div
+                      class="flex items-start justify-between gap-6 px-5 py-3.5 bg-[#f5f6f9]/60"
+                    >
+                      <dt class="font-bold text-[#0b1f35] shrink-0">
+                        {% trans "Desired Start" %}
+                      </dt>
+                      <dd id="q-sum-timeline" class="text-slate-500 text-right">
+                        —
+                      </dd>
+                    </div>
+                    <div
+                      class="flex items-start justify-between gap-6 px-5 py-3.5"
+                    >
+                      <dt class="font-bold text-[#0b1f35] shrink-0">{% trans "Contact" %}</dt>
+                      <dd class="text-slate-500 text-right">
+                        <span id="q-sum-name">—</span><br />
+                        <span id="q-sum-email">—</span> ·
+                        <span id="q-sum-phone">—</span>
+                      </dd>
+                    </div>
+                    <div
+                      class="flex items-start justify-between gap-6 px-5 py-3.5 bg-[#f5f6f9]/60"
+                    >
+                      <dt class="font-bold text-[#0b1f35] shrink-0">
+                        {% trans "Description" %}
+                      </dt>
+                      <dd
+                        id="q-sum-message"
+                        class="text-slate-500 text-right max-w-[60%]"
+                      >
+                        —
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
+
+                <p class="mt-3 text-[11.5px] text-slate-400">
+                  {% trans "Need to change something? Use the Back button below." %}
+                </p>
+
+                <div class="mt-6">
+                  <label class="flex items-start gap-3 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      id="q-consent"
+                      class="mt-0.5 w-4.5 h-4.5 rounded accent-[#c9a227] shrink-0"
+                    />
+                    <span class="text-[13px] text-slate-500 leading-relaxed">
+                      {% trans "I consent to BS GROUP processing my data to prepare this quote, in accordance with the" %}
+                      <a
+                        href="#"
+                        class="text-[#c9a227] font-semibold hover:underline"
+                        >{% trans "Privacy Policy" %}</a
+                      >.
+                      <span class="text-[#c9a227]">*</span>
+                    </span>
+                  </label>
+                  <p id="q-consent-error" class="error-msg hidden"></p>
+                </div>
+              </fieldset>
+
+              <div class="mt-9 flex items-center justify-between gap-4">
+                <button
+                  id="quote-back"
+                  type="button"
+                  class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full border-2 border-gray-200 text-[#0b1f35] text-sm font-bold hover:border-[#c9a227] hover:text-[#c9a227] transition-colors invisible"
+                >
+                  <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                  {% trans "Back" %}
+                </button>
+                <button
+                  id="quote-next"
+                  type="submit"
+                  class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#c9a227] text-white text-sm font-bold shadow-md shadow-orange-500/25 hover:bg-[#d9bc6b] transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+                >
+                  {% trans "Continue" %}
+                  <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <aside class="lg:col-span-5 space-y-6 lg:sticky lg:top-32">
+          <!-- What happens next -->
+          <div class="bg-white rounded-[24px] p-8 shadow-sm">
+            <h3
+              class="flex items-center gap-2.5 text-[17px] font-extrabold text-[#0b1f35]"
+            >
+              <span
+                class="w-1 h-5 bg-[#c9a227] rounded-full"
+                aria-hidden="true"
+              ></span>
+              {% trans "What Happens Next?" %}
+            </h3>
+            <ol class="mt-6 space-y-6">
+              <li class="flex items-start gap-4">
+                <span
+                  class="w-9 h-9 rounded-full bg-[#c9a227] text-white text-sm font-black flex items-center justify-center shrink-0 shadow-md shadow-orange-500/25"
+                  >01</span
+                >
+                <div>
+                  <h4 class="text-[14.5px] font-extrabold text-[#0b1f35]">
+                    {% trans "We review your request" %}
+                  </h4>
+                  <p class="mt-1 text-[12.5px] text-slate-500 leading-relaxed">
+                    {% trans "An estimator analyzes your project details within hours." %}
+                  </p>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <span
+                  class="w-9 h-9 rounded-full bg-[#c9a227] text-white text-sm font-black flex items-center justify-center shrink-0 shadow-md shadow-orange-500/25"
+                  >02</span
+                >
+                <div>
+                  <h4 class="text-[14.5px] font-extrabold text-[#0b1f35]">
+                    {% trans "We call you within 24h" %}
+                  </h4>
+                  <p class="mt-1 text-[12.5px] text-slate-500 leading-relaxed">
+                    {% trans "A quick call to clarify details — never a sales pitch." %}
+                  </p>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <span
+                  class="w-9 h-9 rounded-full bg-[#c9a227] text-white text-sm font-black flex items-center justify-center shrink-0 shadow-md shadow-orange-500/25"
+                  >03</span
+                >
+                <div>
+                  <h4 class="text-[14.5px] font-extrabold text-[#0b1f35]">
+                    {% trans "You get a fixed-price proposal" %}
+                  </h4>
+                  <p class="mt-1 text-[12.5px] text-slate-500 leading-relaxed">
+                    {% trans "Itemized, transparent and valid for 30 days." %}
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Contact card navy -->
+          <div
+            class="relative bg-[#0b1f35] text-white rounded-[24px] p-8 overflow-hidden"
+          >
+            <span
+              class="features-hatch absolute inset-0"
+              aria-hidden="true"
+            ></span>
+            <div class="relative z-10">
+              <h3 class="text-[17px] font-extrabold">{% trans "Prefer to talk now?" %}</h3>
+              <p class="mt-2 text-[13px] text-slate-300 leading-relaxed">
+                {% trans "Our estimation team answers the phone Monday to Saturday." %}
+              </p>
+              <a
+                href="tel:{{ site_settings.phone|urlencode }}"
+                class="mt-5 inline-flex items-center gap-2.5 text-lg font-black text-[#c9a227] hover:text-white transition-colors"
+              >
+                <i data-lucide="phone" class="w-5 h-5"></i>{{ site_settings.phone }}
+              </a>
+              <p class="mt-3 text-[12px] text-slate-400">
+                {% trans "or email" %}
+                <a
+                  href="mailto:{{ site_settings.email }}"
+                  class="underline underline-offset-2 hover:text-[#c9a227] transition-colors"
+                  >{{ site_settings.email }}</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <!-- 24/7 card -->
+          <div
+            class="bg-white rounded-[24px] p-6 flex items-center gap-5 shadow-sm"
+          >
+            <span
+              class="w-14 h-14 rounded-full bg-[#c9a227]/10 text-[#c9a227] flex items-center justify-center shrink-0"
+            >
+              <i data-lucide="headphones" class="w-6 h-6"></i>
+            </span>
+            <div>
+              <p class="text-[12px] text-slate-500 font-medium">
+                {% trans "Your Question, Our Priority" %}
+              </p>
+              <p
+                class="text-[20px] font-extrabold text-[#0b1f35] leading-tight mt-0.5"
+              >
+                {% trans "24/7 Service" %}
+              </p>
+              <a
+                href="{% url 'main:faqs' %}"
+                class="text-[12px] font-semibold text-[#c9a227] underline underline-offset-2 hover:text-[#d9bc6b] transition-colors"
+                >{% trans "Check the FAQ first" %}</a
+              >
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    {% endblock %}

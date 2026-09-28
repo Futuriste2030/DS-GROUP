@@ -1,0 +1,835 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Privacy Policy | BS GROUP{% endblock %}
+{% block meta_description %}Politique de Confidentialité du site BS GROUP — données collectées, finalités, cookies et vos droits.{% endblock %}
+{% block body_class %}bg-white font-sans antialiased text-[#0b1f35] overflow-x-hidden{% endblock %}
+
+{% block content %}
+<section
+      id="page-header"
+      class="page-header bg-[#f5f6f9]"
+      data-page-title="Privacy Policy"
+    >
+      <div class="ruler-ticks w-full" aria-hidden="true"></div>
+
+      <div class="max-w-7xl mx-auto px-6 pt-14 pb-16 text-center">
+        <h1
+          id="page-header-title"
+          class="text-[38px] md:text-[46px] font-black text-[#0b1f35] tracking-tight leading-tight"
+        >
+          Privacy Policy
+        </h1>
+        <nav aria-label="Fil d'Ariane" class="mt-3.5">
+          <ol
+            class="flex items-center justify-center gap-2.5 text-[15px] font-semibold"
+          >
+            <li>
+              <a
+                href="{% url 'main:index' %}"
+                class="text-[#0b1f35] hover:text-[#c9a227] transition-colors"
+                >Home</a
+              >
+            </li>
+            <li
+              aria-hidden="true"
+              class="text-slate-400 font-normal select-none"
+            >
+              /
+            </li>
+            <li
+              id="page-header-current"
+              class="text-[#c9a227]"
+              aria-current="page"
+            >
+              Privacy Policy
+            </li>
+          </ol>
+        </nav>
+      </div>
+
+      <div class="page-header-band w-full" aria-hidden="true"></div>
+    </section>
+
+      <section class="bg-white py-14 md:py-16 relative overflow-hidden">
+      <span class="section-tag section-tag--dark" aria-hidden="true">Privacy</span>
+      <div
+        class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start"
+      >
+        <aside class="hidden lg:block lg:col-span-3 lg:sticky lg:top-32">
+          <div class="bg-[#f5f6f9] rounded-[20px] p-6">
+            <h2
+              class="flex items-center gap-2.5 text-[15px] font-extrabold text-[#0b1f35]"
+            >
+              <span
+                class="w-1 h-5 bg-[#c9a227] rounded-full"
+                aria-hidden="true"
+              ></span>
+              On This Page
+            </h2>
+            <nav class="mt-5" aria-label="Sommaire de la politique">
+              <ul class="space-y-1 text-[13px] font-semibold" id="pvc-toc">
+                <li>
+                  <a
+                    href="#p1"
+                    data-pvc-link
+                    class="pvc-link block px-3 py-2 rounded-lg text-slate-500 hover:text-[#c9a227] transition-colors"
+                    >1. Data Controller</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#p2"
+                    data-pvc-link
+                    class="pvc-link block px-3 py-2 rounded-lg text-slate-500 hover:text-[#c9a227] transition-colors"
+                    >2. Data We Collect</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#p3"
+                    data-pvc-link
+                    class="pvc-link block px-3 py-2 rounded-lg text-slate-500 hover:text-[#c9a227] transition-colors"
+                    >3. How We Use It</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#p4"
+                    data-pvc-link
+                    class="pvc-link block px-3 py-2 rounded-lg text-slate-500 hover:text-[#c9a227] transition-colors"
+                    >4. Cookies &amp; Tracking</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#p5"
+                    data-pvc-link
+                    class="pvc-link block px-3 py-2 rounded-lg text-slate-500 hover:text-[#c9a227] transition-colors"
+                    >5. Data Sharing</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#p6"
+                    data-pvc-link
+                    class="pvc-link block px-3 py-2 rounded-lg text-slate-500 hover:text-[#c9a227] transition-colors"
+                    >6. Data Retention</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#p7"
+                    data-pvc-link
+                    class="pvc-link block px-3 py-2 rounded-lg text-slate-500 hover:text-[#c9a227] transition-colors"
+                    >7. Your Rights</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#p8"
+                    data-pvc-link
+                    class="pvc-link block px-3 py-2 rounded-lg text-slate-500 hover:text-[#c9a227] transition-colors"
+                    >8. Data Security</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#p9"
+                    data-pvc-link
+                    class="pvc-link block px-3 py-2 rounded-lg text-slate-500 hover:text-[#c9a227] transition-colors"
+                    >9. Children's Privacy</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#p10"
+                    data-pvc-link
+                    class="pvc-link block px-3 py-2 rounded-lg text-slate-500 hover:text-[#c9a227] transition-colors"
+                    >10. Changes &amp; Contact</a
+                  >
+                </li>
+              </ul>
+            </nav>
+
+            <div class="mt-6 pt-5 border-t border-gray-200">
+              <p
+                class="flex items-center gap-2 text-[11.5px] font-semibold text-slate-500"
+              >
+                <i
+                  data-lucide="calendar"
+                  class="w-3.5 h-3.5 text-[#c9a227]"
+                ></i>
+                Last updated: March 2025
+              </p>
+            </div>
+          </div>
+        </aside>
+
+        <article class="lg:col-span-9 max-w-3xl">
+          <!-- Bandeau intro -->
+          <div
+            class="relative bg-[#0b1f35] text-white rounded-[24px] p-7 md:p-8 overflow-hidden"
+          >
+            <span
+              class="features-hatch absolute inset-0"
+              aria-hidden="true"
+            ></span>
+            <div class="relative z-10 flex items-start gap-5">
+              <span
+                class="w-12 h-12 rounded-2xl bg-[#c9a227] text-white flex items-center justify-center shrink-0 shadow-lg shadow-orange-500/30"
+              >
+                <i data-lucide="lock" class="w-6 h-6"></i>
+              </span>
+              <div>
+                <h2 class="text-[18px] font-extrabold">
+                  Your privacy, our priority
+                </h2>
+                <p class="mt-2 text-[13.5px] text-slate-300 leading-relaxed">
+                  This policy explains what data we collect when you use our
+                  website, why we collect it, and the rights you have over it.
+                  Short version: we collect the minimum, we never sell it, and
+                  you stay in control.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <section id="p1" class="scroll-mt-32 pt-12">
+            <div class="flex items-center gap-4 mb-5">
+              <span
+                class="w-11 h-11 rounded-xl bg-[#c9a227]/10 text-[#c9a227] font-black text-lg flex items-center justify-center shrink-0"
+                >1</span
+              >
+              <h2
+                class="text-[22px] md:text-[26px] font-extrabold text-[#0b1f35] tracking-tight"
+              >
+                Data Controller
+              </h2>
+            </div>
+            <p class="text-[14.5px] text-slate-500 leading-relaxed">
+              The data controller for personal data processed through this
+              website is
+              <strong class="text-[#0b1f35]">BS GROUP Construction LLC</strong>,
+              2464 Royal Ln. Mesa, New Jersey 45463, USA. As data controller, BS
+              GROUP determines the purposes and means of processing your
+              personal data described in this policy.
+            </p>
+            <p class="mt-4 text-[14.5px] text-slate-500 leading-relaxed">
+              For any privacy-related question, you can reach our dedicated
+              contact at
+              <a
+                href="mailto:privacy@bsgroup.ml"
+                class="text-[#c9a227] font-semibold hover:underline underline-offset-2"
+                >privacy@bsgroup.ml</a
+              >. We commit to answering every privacy request within 30 days.
+            </p>
+          </section>
+
+          <section id="p2" class="scroll-mt-32 pt-12">
+            <div class="flex items-center gap-4 mb-5">
+              <span
+                class="w-11 h-11 rounded-xl bg-[#c9a227]/10 text-[#c9a227] font-black text-lg flex items-center justify-center shrink-0"
+                >2</span
+              >
+              <h2
+                class="text-[22px] md:text-[26px] font-extrabold text-[#0b1f35] tracking-tight"
+              >
+                Data We Collect
+              </h2>
+            </div>
+            <p class="text-[14.5px] text-slate-500 leading-relaxed">
+              We only collect data you actively provide, plus minimal technical
+              data required for the Site to function. Here is the complete
+              picture:
+            </p>
+
+            <!-- Tableau des données -->
+            <div
+              class="mt-6 rounded-2xl border border-gray-200 overflow-hidden overflow-x-auto"
+            >
+              <table class="w-full text-sm text-left min-w-[520px]">
+                <thead class="bg-[#0b1f35] text-white">
+                  <tr>
+                    <th class="px-5 py-3.5 font-extrabold">Data</th>
+                    <th class="px-5 py-3.5 font-extrabold">Source</th>
+                    <th class="px-5 py-3.5 font-extrabold">Purpose</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100 text-slate-500">
+                  <tr>
+                    <td class="px-5 py-3.5 font-semibold text-[#0b1f35]">
+                      Name, email, phone
+                    </td>
+                    <td class="px-5 py-3.5">Contact &amp; quote forms</td>
+                    <td class="px-5 py-3.5">
+                      Replying to you, preparing quotes
+                    </td>
+                  </tr>
+                  <tr class="bg-[#f5f6f9]/50">
+                    <td class="px-5 py-3.5 font-semibold text-[#0b1f35]">
+                      Project details
+                    </td>
+                    <td class="px-5 py-3.5">Quote form</td>
+                    <td class="px-5 py-3.5">Accurate estimation</td>
+                  </tr>
+                  <tr>
+                    <td class="px-5 py-3.5 font-semibold text-[#0b1f35]">
+                      Resume &amp; cover letter
+                    </td>
+                    <td class="px-5 py-3.5">Job application form</td>
+                    <td class="px-5 py-3.5">Recruitment process</td>
+                  </tr>
+                  <tr class="bg-[#f5f6f9]/50">
+                    <td class="px-5 py-3.5 font-semibold text-[#0b1f35]">
+                      Email address
+                    </td>
+                    <td class="px-5 py-3.5">Newsletter forms</td>
+                    <td class="px-5 py-3.5">Sending our newsletter</td>
+                  </tr>
+                  <tr>
+                    <td class="px-5 py-3.5 font-semibold text-[#0b1f35]">
+                      Cookie consent preferences
+                    </td>
+                    <td class="px-5 py-3.5">Cookie banner (local storage)</td>
+                    <td class="px-5 py-3.5">Remembering your choices</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p class="mt-5 text-[13px] text-slate-400 italic">
+              We do
+              <strong class="not-italic text-slate-500">not</strong> collect
+              sensitive data (health, religion, political opinions...) and we do
+              not use fingerprinting or cross-site tracking technologies.
+            </p>
+          </section>
+
+          <section id="p3" class="scroll-mt-32 pt-12">
+            <div class="flex items-center gap-4 mb-5">
+              <span
+                class="w-11 h-11 rounded-xl bg-[#c9a227]/10 text-[#c9a227] font-black text-lg flex items-center justify-center shrink-0"
+                >3</span
+              >
+              <h2
+                class="text-[22px] md:text-[26px] font-extrabold text-[#0b1f35] tracking-tight"
+              >
+                How We Use Your Data
+              </h2>
+            </div>
+            <p class="text-[14.5px] text-slate-500 leading-relaxed">
+              Each use of your data relies on a specific legal basis. We process
+              your personal data only for the following purposes:
+            </p>
+            <ul class="mt-5 space-y-3">
+              <li class="flex items-start gap-3.5 text-[14.5px] text-slate-500">
+                <span
+                  class="w-4 h-4 rounded-full border-[5px] border-[#c9a227] bg-[#0b1f35] shrink-0 mt-1"
+                  aria-hidden="true"
+                ></span>
+                <span
+                  ><strong class="text-[#0b1f35]"
+                    >Responding to your messages and preparing quotes</strong
+                  >
+                  — legal basis: steps prior to a contract, at your
+                  request.</span
+                >
+              </li>
+              <li class="flex items-start gap-3.5 text-[14.5px] text-slate-500">
+                <span
+                  class="w-4 h-4 rounded-full border-[5px] border-[#c9a227] bg-[#0b1f35] shrink-0 mt-1"
+                  aria-hidden="true"
+                ></span>
+                <span
+                  ><strong class="text-[#0b1f35]"
+                    >Processing job applications</strong
+                  >
+                  — legal basis: steps prior to a potential employment
+                  contract.</span
+                >
+              </li>
+              <li class="flex items-start gap-3.5 text-[14.5px] text-slate-500">
+                <span
+                  class="w-4 h-4 rounded-full border-[5px] border-[#c9a227] bg-[#0b1f35] shrink-0 mt-1"
+                  aria-hidden="true"
+                ></span>
+                <span
+                  ><strong class="text-[#0b1f35]"
+                    >Sending our newsletter</strong
+                  >
+                  — legal basis: your explicit consent, withdrawable at any
+                  time.</span
+                >
+              </li>
+              <li class="flex items-start gap-3.5 text-[14.5px] text-slate-500">
+                <span
+                  class="w-4 h-4 rounded-full border-[5px] border-[#c9a227] bg-[#0b1f35] shrink-0 mt-1"
+                  aria-hidden="true"
+                ></span>
+                <span
+                  ><strong class="text-[#0b1f35]"
+                    >Remembering your cookie choices</strong
+                  >
+                  — legal basis: our legitimate interest in honoring your
+                  preferences.</span
+                >
+              </li>
+              <li class="flex items-start gap-3.5 text-[14.5px] text-slate-500">
+                <span
+                  class="w-4 h-4 rounded-full border-[5px] border-[#c9a227] bg-[#0b1f35] shrink-0 mt-1"
+                  aria-hidden="true"
+                ></span>
+                <span
+                  ><strong class="text-[#0b1f35]"
+                    >Meeting legal obligations</strong
+                  >
+                  (accounting, construction warranties) — legal basis: legal
+                  requirement.</span
+                >
+              </li>
+            </ul>
+            <p class="mt-5 text-[14.5px] text-slate-500 leading-relaxed">
+              We do not use your data for automated decision-making or
+              profiling, and we do not send marketing communications to anyone
+              who hasn't consented.
+            </p>
+          </section>
+
+          <section id="p4" class="scroll-mt-32 pt-12">
+            <div class="flex items-center gap-4 mb-5">
+              <span
+                class="w-11 h-11 rounded-xl bg-[#c9a227]/10 text-[#c9a227] font-black text-lg flex items-center justify-center shrink-0"
+                >4</span
+              >
+              <h2
+                class="text-[22px] md:text-[26px] font-extrabold text-[#0b1f35] tracking-tight"
+              >
+                Cookies &amp; Tracking
+              </h2>
+            </div>
+            <p class="text-[14.5px] text-slate-500 leading-relaxed">
+              On your first visit, our cookie banner lets you accept, reject or
+              customize cookies by category. Your choice is stored locally in
+              your browser and can be changed anytime via the cookie button at
+              the bottom left of every page.
+            </p>
+
+            <!-- Tableau des cookies -->
+            <div
+              class="mt-6 rounded-2xl border border-gray-200 overflow-hidden overflow-x-auto"
+            >
+              <table class="w-full text-sm text-left min-w-[520px]">
+                <thead class="bg-[#0b1f35] text-white">
+                  <tr>
+                    <th class="px-5 py-3.5 font-extrabold">Category</th>
+                    <th class="px-5 py-3.5 font-extrabold">Examples</th>
+                    <th class="px-5 py-3.5 font-extrabold">Consent</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100 text-slate-500">
+                  <tr>
+                    <td class="px-5 py-3.5 font-semibold text-[#0b1f35]">
+                      Strictly Necessary
+                    </td>
+                    <td class="px-5 py-3.5">Cookie consent storage</td>
+                    <td class="px-5 py-3.5 font-bold text-[#c9a227]">
+                      Always on
+                    </td>
+                  </tr>
+                  <tr class="bg-[#f5f6f9]/50">
+                    <td class="px-5 py-3.5 font-semibold text-[#0b1f35]">
+                      Preferences
+                    </td>
+                    <td class="px-5 py-3.5">
+                      Language selection (FR / EN / AR)
+                    </td>
+                    <td class="px-5 py-3.5">Optional</td>
+                  </tr>
+                  <tr>
+                    <td class="px-5 py-3.5 font-semibold text-[#0b1f35]">
+                      Analytics
+                    </td>
+                    <td class="px-5 py-3.5">Anonymous visit statistics</td>
+                    <td class="px-5 py-3.5">Optional</td>
+                  </tr>
+                  <tr class="bg-[#f5f6f9]/50">
+                    <td class="px-5 py-3.5 font-semibold text-[#0b1f35]">
+                      Marketing
+                    </td>
+                    <td class="px-5 py-3.5">
+                      Embedded map (Google Maps), video
+                    </td>
+                    <td class="px-5 py-3.5">Optional</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section id="p5" class="scroll-mt-32 pt-12">
+            <div class="flex items-center gap-4 mb-5">
+              <span
+                class="w-11 h-11 rounded-xl bg-[#c9a227]/10 text-[#c9a227] font-black text-lg flex items-center justify-center shrink-0"
+                >5</span
+              >
+              <h2
+                class="text-[22px] md:text-[26px] font-extrabold text-[#0b1f35] tracking-tight"
+              >
+                Data Sharing &amp; Disclosure
+              </h2>
+            </div>
+            <p class="text-[14.5px] text-slate-500 leading-relaxed">
+              We do
+              <strong class="text-[#0b1f35]">not sell, rent or trade</strong>
+              your personal data. We only share it in these limited
+              circumstances:
+            </p>
+            <ul class="mt-5 space-y-3">
+              <li class="flex items-start gap-3.5 text-[14.5px] text-slate-500">
+                <i
+                  data-lucide="check-circle-2"
+                  class="w-5 h-5 text-[#c9a227] shrink-0 mt-0.5"
+                ></i>
+                <span
+                  ><strong class="text-[#0b1f35]">Service providers</strong>
+                  bound by confidentiality (email delivery, hosting) —
+                  processing only on our instructions.</span
+                >
+              </li>
+              <li class="flex items-start gap-3.5 text-[14.5px] text-slate-500">
+                <i
+                  data-lucide="check-circle-2"
+                  class="w-5 h-5 text-[#c9a227] shrink-0 mt-0.5"
+                ></i>
+                <span
+                  ><strong class="text-[#0b1f35]">Legal authorities</strong>
+                  when required by law, court order or to protect vital
+                  interests.</span
+                >
+              </li>
+              <li class="flex items-start gap-3.5 text-[14.5px] text-slate-500">
+                <i
+                  data-lucide="check-circle-2"
+                  class="w-5 h-5 text-[#c9a227] shrink-0 mt-0.5"
+                ></i>
+                <span
+                  ><strong class="text-[#0b1f35]">Business transfer</strong> —
+                  in the event of a merger or acquisition, with prior notice and
+                  unchanged protections.</span
+                >
+              </li>
+            </ul>
+          </section>
+
+          <section id="p6" class="scroll-mt-32 pt-12">
+            <div class="flex items-center gap-4 mb-5">
+              <span
+                class="w-11 h-11 rounded-xl bg-[#c9a227]/10 text-[#c9a227] font-black text-lg flex items-center justify-center shrink-0"
+                >6</span
+              >
+              <h2
+                class="text-[22px] md:text-[26px] font-extrabold text-[#0b1f35] tracking-tight"
+              >
+                Data Retention
+              </h2>
+            </div>
+            <p class="text-[14.5px] text-slate-500 leading-relaxed">
+              We keep your personal data only as long as necessary for the
+              purpose it was collected, then delete or anonymize it:
+            </p>
+
+            <div
+              class="mt-6 rounded-2xl border border-gray-200 overflow-hidden overflow-x-auto"
+            >
+              <table class="w-full text-sm text-left min-w-[480px]">
+                <thead class="bg-[#0b1f35] text-white">
+                  <tr>
+                    <th class="px-5 py-3.5 font-extrabold">Data type</th>
+                    <th class="px-5 py-3.5 font-extrabold">Retention</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100 text-slate-500">
+                  <tr>
+                    <td class="px-5 py-3.5 font-semibold text-[#0b1f35]">
+                      Quote requests (no contract signed)
+                    </td>
+                    <td class="px-5 py-3.5">24 months</td>
+                  </tr>
+                  <tr class="bg-[#f5f6f9]/50">
+                    <td class="px-5 py-3.5 font-semibold text-[#0b1f35]">
+                      Client project data
+                    </td>
+                    <td class="px-5 py-3.5">
+                      Duration of contract + warranty period
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="px-5 py-3.5 font-semibold text-[#0b1f35]">
+                      Job applications (not hired)
+                    </td>
+                    <td class="px-5 py-3.5">12 months</td>
+                  </tr>
+                  <tr class="bg-[#f5f6f9]/50">
+                    <td class="px-5 py-3.5 font-semibold text-[#0b1f35]">
+                      Newsletter subscriptions
+                    </td>
+                    <td class="px-5 py-3.5">Until you unsubscribe</td>
+                  </tr>
+                  <tr>
+                    <td class="px-5 py-3.5 font-semibold text-[#0b1f35]">
+                      Cookie preferences
+                    </td>
+                    <td class="px-5 py-3.5">6 months, then re-asked</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section id="p7" class="scroll-mt-32 pt-12">
+            <div class="flex items-center gap-4 mb-5">
+              <span
+                class="w-11 h-11 rounded-xl bg-[#c9a227]/10 text-[#c9a227] font-black text-lg flex items-center justify-center shrink-0"
+                >7</span
+              >
+              <h2
+                class="text-[22px] md:text-[26px] font-extrabold text-[#0b1f35] tracking-tight"
+              >
+                Your Rights
+              </h2>
+            </div>
+            <p class="text-[14.5px] text-slate-500 leading-relaxed">
+              Depending on your jurisdiction (including GDPR for EU residents),
+              you have the following rights over your personal data. To exercise
+              any of them, email
+              <a
+                href="mailto:privacy@bsgroup.ml"
+                class="text-[#c9a227] font-semibold hover:underline underline-offset-2"
+                >privacy@bsgroup.ml</a
+              >
+              — no fee, answer within 30 days.
+            </p>
+
+            <!-- Grille des droits -->
+            <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="bg-[#f5f6f9] rounded-2xl p-5 flex items-start gap-4">
+                <span
+                  class="w-10 h-10 rounded-xl bg-[#0b1f35] text-[#c9a227] flex items-center justify-center shrink-0"
+                  ><i data-lucide="eye" class="w-5 h-5"></i
+                ></span>
+                <div>
+                  <h3 class="text-[14px] font-extrabold text-[#0b1f35]">
+                    Access
+                  </h3>
+                  <p class="mt-1 text-[12.5px] text-slate-500 leading-relaxed">
+                    Get a copy of the data we hold about you.
+                  </p>
+                </div>
+              </div>
+              <div class="bg-[#f5f6f9] rounded-2xl p-5 flex items-start gap-4">
+                <span
+                  class="w-10 h-10 rounded-xl bg-[#0b1f35] text-[#c9a227] flex items-center justify-center shrink-0"
+                  ><i data-lucide="pencil" class="w-5 h-5"></i
+                ></span>
+                <div>
+                  <h3 class="text-[14px] font-extrabold text-[#0b1f35]">
+                    Rectification
+                  </h3>
+                  <p class="mt-1 text-[12.5px] text-slate-500 leading-relaxed">
+                    Correct inaccurate or incomplete data.
+                  </p>
+                </div>
+              </div>
+              <div class="bg-[#f5f6f9] rounded-2xl p-5 flex items-start gap-4">
+                <span
+                  class="w-10 h-10 rounded-xl bg-[#0b1f35] text-[#c9a227] flex items-center justify-center shrink-0"
+                  ><i data-lucide="trash-2" class="w-5 h-5"></i
+                ></span>
+                <div>
+                  <h3 class="text-[14px] font-extrabold text-[#0b1f35]">
+                    Erasure
+                  </h3>
+                  <p class="mt-1 text-[12.5px] text-slate-500 leading-relaxed">
+                    Request deletion of your data ("right to be forgotten").
+                  </p>
+                </div>
+              </div>
+              <div class="bg-[#f5f6f9] rounded-2xl p-5 flex items-start gap-4">
+                <span
+                  class="w-10 h-10 rounded-xl bg-[#0b1f35] text-[#c9a227] flex items-center justify-center shrink-0"
+                  ><i data-lucide="download" class="w-5 h-5"></i
+                ></span>
+                <div>
+                  <h3 class="text-[14px] font-extrabold text-[#0b1f35]">
+                    Portability
+                  </h3>
+                  <p class="mt-1 text-[12.5px] text-slate-500 leading-relaxed">
+                    Receive your data in a machine-readable format.
+                  </p>
+                </div>
+              </div>
+              <div class="bg-[#f5f6f9] rounded-2xl p-5 flex items-start gap-4">
+                <span
+                  class="w-10 h-10 rounded-xl bg-[#0b1f35] text-[#c9a227] flex items-center justify-center shrink-0"
+                  ><i data-lucide="circle-slash" class="w-5 h-5"></i
+                ></span>
+                <div>
+                  <h3 class="text-[14px] font-extrabold text-[#0b1f35]">
+                    Objection
+                  </h3>
+                  <p class="mt-1 text-[12.5px] text-slate-500 leading-relaxed">
+                    Object to certain processing, including marketing.
+                  </p>
+                </div>
+              </div>
+              <div class="bg-[#f5f6f9] rounded-2xl p-5 flex items-start gap-4">
+                <span
+                  class="w-10 h-10 rounded-xl bg-[#0b1f35] text-[#c9a227] flex items-center justify-center shrink-0"
+                  ><i data-lucide="user-x" class="w-5 h-5"></i
+                ></span>
+                <div>
+                  <h3 class="text-[14px] font-extrabold text-[#0b1f35]">
+                    Withdraw consent
+                  </h3>
+                  <p class="mt-1 text-[12.5px] text-slate-500 leading-relaxed">
+                    Unsubscribe or change cookie choices anytime.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <p class="mt-5 text-[13px] text-slate-400 italic">
+              You also have the right to lodge a complaint with your local data
+              protection authority if you believe your rights have not been
+              respected.
+            </p>
+          </section>
+
+          <section id="p8" class="scroll-mt-32 pt-12">
+            <div class="flex items-center gap-4 mb-5">
+              <span
+                class="w-11 h-11 rounded-xl bg-[#c9a227]/10 text-[#c9a227] font-black text-lg flex items-center justify-center shrink-0"
+                >8</span
+              >
+              <h2
+                class="text-[22px] md:text-[26px] font-extrabold text-[#0b1f35] tracking-tight"
+              >
+                Data Security
+              </h2>
+            </div>
+            <p class="text-[14.5px] text-slate-500 leading-relaxed">
+              We apply industry-standard technical and organizational measures
+              to protect your data: encrypted connections (HTTPS/TLS) on every
+              page, strict access controls limited to authorized personnel,
+              regular software updates, and secure storage for form submissions
+              and application documents.
+            </p>
+            <p class="mt-4 text-[14.5px] text-slate-500 leading-relaxed">
+              No method of transmission over the Internet is 100% secure. While
+              we strive to protect your data, we cannot guarantee absolute
+              security. In the unlikely event of a data breach affecting you, we
+              will notify you and the relevant authorities without undue delay,
+              as required by law.
+            </p>
+          </section>
+
+          <section id="p9" class="scroll-mt-32 pt-12">
+            <div class="flex items-center gap-4 mb-5">
+              <span
+                class="w-11 h-11 rounded-xl bg-[#c9a227]/10 text-[#c9a227] font-black text-lg flex items-center justify-center shrink-0"
+                >9</span
+              >
+              <h2
+                class="text-[22px] md:text-[26px] font-extrabold text-[#0b1f35] tracking-tight"
+              >
+                Children's Privacy
+              </h2>
+            </div>
+            <p class="text-[14.5px] text-slate-500 leading-relaxed">
+              The Site is not directed at children under 16, and we do not
+              knowingly collect personal data from them. If you believe a child
+              has provided us with personal data, contact us at
+              <a
+                href="mailto:privacy@bsgroup.ml"
+                class="text-[#c9a227] font-semibold hover:underline underline-offset-2"
+                >privacy@bsgroup.ml</a
+              >
+              and we will delete it promptly.
+            </p>
+          </section>
+
+          <section id="p10" class="scroll-mt-32 pt-12 pb-2">
+            <div class="flex items-center gap-4 mb-5">
+              <span
+                class="w-11 h-11 rounded-xl bg-[#c9a227]/10 text-[#c9a227] font-black text-lg flex items-center justify-center shrink-0"
+                >10</span
+              >
+              <h2
+                class="text-[22px] md:text-[26px] font-extrabold text-[#0b1f35] tracking-tight"
+              >
+                Changes &amp; Contact
+              </h2>
+            </div>
+            <p class="text-[14.5px] text-slate-500 leading-relaxed">
+              We may update this policy to reflect legal or operational changes.
+              The version published on this page is the one in effect;
+              significant changes will be highlighted on the Site. The "Last
+              updated" date at the top of this page always reflects the latest
+              revision.
+            </p>
+
+            <!-- Bloc contact -->
+            <div
+              class="mt-8 relative bg-[#0b1f35] text-white rounded-[24px] p-8 overflow-hidden"
+            >
+              <span
+                class="features-hatch absolute inset-0"
+                aria-hidden="true"
+              ></span>
+              <div
+                class="relative z-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5"
+              >
+                <div>
+                  <h3 class="text-[17px] font-extrabold">Privacy questions?</h3>
+                  <p class="mt-1.5 text-[13px] text-slate-300">
+                    Our data protection contact replies within 30 days — usually
+                    much faster.
+                  </p>
+                </div>
+                <a
+                  href="mailto:privacy@bsgroup.ml"
+                  class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#c9a227] text-white text-[13px] font-bold hover:bg-[#d9bc6b] transition-colors shadow-md shadow-orange-500/25 shrink-0"
+                >
+                  privacy@bsgroup.ml
+                  <i data-lucide="mail" class="w-4 h-4"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Pied de doc -->
+            <div
+              class="mt-6 rounded-2xl bg-[#f5f6f9] p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
+            >
+              <p class="text-[12.5px] text-slate-500 font-medium">
+                <span
+                  class="w-7 h-7 rounded-lg bg-[#0b1f35] text-white flex items-center justify-center shrink-0"
+                >
+                  <i data-lucide="stamp" class="w-3.5 h-3.5"></i>
+                </span>
+                Version 1.3 · Last updated March 2025
+              </p>
+              <a
+                href="{% url 'main:cgu' %}"
+                class="inline-flex items-center gap-2 text-[13px] font-bold text-[#c9a227] hover:underline underline-offset-2"
+              >
+                Read also: Terms &amp; Conditions
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </section>
+        </article>
+      </div>
+    </section>
+
+    {% endblock %}

@@ -1,0 +1,2314 @@
+/* Conztru — main stylesheet */
+/* 1. BASE */
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: #c9a227;
+  color: #ffffff;
+}
+
+/* 27. PRELOADER */
+/* Bloque le scroll pendant le chargement (classe posée/retirée en JS) */
+body.is-loading {
+  overflow: hidden;
+}
+
+/* Hachures diagonales discrètes sur fond clair */
+.preloader-hatch {
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(11, 28, 61, 0.06) 0 1px,
+    transparent 1px 11px
+  );
+}
+/* Preloader : fond blanc uni (sans texture) */
+#preloader .preloader-hatch {
+  display: none;
+}
+
+/* Mini règle graduée au-dessus de la barre (ticks marine sur fond clair) */
+.preloader-ruler {
+  height: 10px;
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      rgba(11, 28, 61, 0.18) 0 1px,
+      transparent 1px 12px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(11, 28, 61, 0.38) 0 1px,
+      transparent 1px 60px
+    );
+  background-size:
+    100% 6px,
+    100% 10px;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+
+/* Barre rayée animée */
+#preloader-bar {
+  background-image: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.35) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0.35) 75%,
+    transparent 75%
+  );
+  background-size: 1rem 1rem;
+  animation: preloader-stripes 0.8s linear infinite;
+}
+@keyframes preloader-stripes {
+  to {
+    background-position: 1rem 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  #preloader-bar {
+    animation: none;
+  }
+}
+
+/* Sortie : rideau qui se lève vers le haut */
+#preloader {
+  transition:
+    transform 0.75s cubic-bezier(0.76, 0, 0.24, 1),
+    visibility 0.75s ease;
+  will-change: transform;
+}
+
+#preloader.done {
+  transform: translateY(-100%);
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* 28. BACK TO TOP */
+#back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 90; /* sous le toast (110) : les messages restent lisibles */
+  width: 52px;
+  height: 52px;
+  border-radius: 9999px;
+  background: #0b1f35;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 28px rgba(5, 19, 41, 0.35);
+  cursor: pointer;
+  border: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px);
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease,
+    visibility 0.35s ease,
+    background-color 0.3s ease;
+}
+
+#back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#back-to-top:hover {
+  background: #c9a227;
+}
+
+#back-to-top:active {
+  transform: translateY(2px);
+}
+
+/* Anneau SVG (tourne pour démarrer la progression en haut) */
+.btt-ring {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+  pointer-events: none;
+}
+
+.btt-track,
+.btt-bar {
+  fill: none;
+  stroke-width: 3;
+}
+
+.btt-track {
+  stroke: rgba(255, 255, 255, 0.18);
+}
+
+.btt-bar {
+  stroke: #c9a227;
+  stroke-linecap: round;
+  stroke-dasharray: 138.23; /* circonférence : 2 × π × r(22) */
+  stroke-dashoffset: 138.23; /* vide au départ */
+}
+
+/* Accessibilité : transitions réduites si demandé */
+@media (prefers-reduced-motion: reduce) {
+  #back-to-top {
+    transition:
+      opacity 0.2s ease,
+      visibility 0.2s ease;
+  }
+}
+
+/* 29. CARTE FLOTTANTE */
+#cookie-banner {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 150; /* au-dessus du back-to-top (90), sous la modal (160) */
+  width: min(420px, calc(100vw - 40px));
+  background-color: #ffffff;
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(11, 28, 61, 0.05) 0 1px,
+    transparent 1px 11px
+  );
+  border: 1px solid #d6dbe4;
+  border-radius: 22px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 20px 50px rgba(11, 28, 61, 0.18);
+  transform: translateY(140%);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.45s ease,
+    visibility 0.45s ease;
+}
+
+#cookie-banner.visible {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 30. TOGGLES (switches) */
+.cookie-toggle {
+  display: inline-flex;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.cookie-toggle-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.cookie-toggle-track {
+  display: inline-flex;
+  align-items: center;
+  width: 46px;
+  height: 26px;
+  padding: 3px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.cookie-toggle-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); /* petit rebond */
+}
+
+.cookie-toggle-input:checked + .cookie-toggle-track {
+  background: #c9a227;
+  border-color: #c9a227;
+}
+.cookie-toggle-input:checked + .cookie-toggle-track .cookie-toggle-thumb {
+  transform: translateX(20px);
+}
+
+.cookie-toggle-input:disabled + .cookie-toggle-track {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* Focus clavier visible */
+.cookie-toggle-input:focus-visible + .cookie-toggle-track {
+  box-shadow: 0 0 0 3px rgba(241, 90, 36, 0.35);
+}
+
+/* 40. TOPBAR : icônes de contact animées au survol */
+.group:hover .topbar-ico-ring {
+  animation: topbar-ring 0.6s ease;
+}
+@keyframes topbar-ring {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-12deg);
+  }
+  60% {
+    transform: rotate(8deg);
+  }
+  80% {
+    transform: rotate(-6deg);
+  }
+}
+.group:hover .topbar-ico-mail {
+  animation: topbar-mail 0.5s ease;
+}
+@keyframes topbar-mail {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(2px, -2px) rotate(-8deg);
+  }
+}
+.group:hover .topbar-ico-pin {
+  animation: topbar-pin 0.5s ease;
+}
+@keyframes topbar-pin {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .group:hover .topbar-ico-ring,
+  .group:hover .topbar-ico-mail,
+  .group:hover .topbar-ico-pin {
+    animation: none;
+  }
+}
+
+/* Modal cookie sur fond clair */
+#cookie-modal .features-hatch {
+  display: none;
+}
+#cookie-modal .cookie-toggle-track {
+  background: #d6dbe4;
+  border-color: #cbd5e1;
+}
+#cookie-modal .cookie-toggle-thumb {
+  box-shadow: 0 1px 3px rgba(11, 28, 61, 0.35);
+}
+
+/* Switch sur fond clair (formulaire page cookies) */
+.consent-card .cookie-toggle-track {
+  background: #d6dbe4;
+  border-color: #cbd5e1;
+}
+.consent-card .cookie-toggle-thumb {
+  box-shadow: 0 1px 3px rgba(11, 28, 61, 0.35);
+}
+
+/* 31. MODAL COOKIE */
+#cookie-modal .modal-panel {
+  animation: modal-in 0.3s ease-out both; /* réutilise le keyframes existant */
+}
+
+/* 2. RÈGLE GRADUÉE (haut du hero) */
+/* Petits ticks gris toutes les 24px, ticks majeurs toutes les 120px */
+.ruler-ticks {
+  height: 16px;
+  background-image:
+    repeating-linear-gradient(90deg, #cbd5e1 0 1px, transparent 1px 24px),
+    repeating-linear-gradient(90deg, #94a3b8 0 1px, transparent 1px 120px);
+  background-size:
+    100% 9px,
+    100% 16px;
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+/* 3. STAMP "GET IN TOUCH" */
+/* Cercle marine avec stries diagonales */
+.stripes-navy {
+  background-color: #0b1f35;
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.09) 0 1.5px,
+    transparent 1.5px 7px
+  );
+}
+
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.stamp-rotate {
+  animation: spin-slow 14s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+/* Texte incurvé — ajuster font-size / letter-spacing si chevauchement */
+.stamp-text {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  fill: #0b1f35;
+  font-family: "Poppins", sans-serif;
+}
+
+/* 4. BANDE MARINE HACHURÉE */
+.band-navy {
+  background-color: #0b1f35;
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.06) 0 1px,
+    transparent 1px 11px
+  );
+}
+
+/* 5. BISEAU DU COIN BAS-GAUCHE DE L'IMAGE */
+.chamfer {
+  clip-path: polygon(0 0, 0 100%, 100% 100%);
+}
+
+/* 6. ÉTOILES DÉCORATIVES */
+@keyframes sparkle-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-6px) rotate(8deg);
+    opacity: 0.8;
+  }
+}
+
+.sparkle {
+  animation: sparkle-float 3.2s ease-in-out infinite;
+}
+
+/* 7. SÉLECTEUR DE LANGUE */
+.lang-option--active {
+  color: #c9a227 !important;
+  background: #faf6e9;
+  font-weight: 700;
+}
+
+/* 8. MODAL VIDÉO */
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Entrée : panneau + fondu du backdrop */
+#video-modal.flex .video-modal-panel {
+  animation: modal-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+#video-modal.flex #video-modal-backdrop {
+  animation: video-backdrop-in 0.3s ease both;
+}
+@keyframes video-backdrop-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 9. RÈGLE GRADUÉE BASSE (ticks vers le haut) */
+.ruler-ticks--bottom {
+  background-position:
+    left bottom,
+    left bottom;
+}
+
+/* 10. IMAGE À COINS BISEAUTÉS (haut-gauche + bas-droit) */
+.about-img {
+  clip-path: polygon(
+    52px 0,
+    100% 0,
+    100% calc(100% - 52px),
+    calc(100% - 52px) 100%,
+    0 100%,
+    0 52px
+  );
+}
+
+/* 11. GRUE & CARTE MARINE */
+@keyframes hook-sway {
+  0%,
+  100% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
+}
+
+.crane-hook {
+  transform-origin: top center;
+  animation: hook-sway 6s ease-in-out infinite;
+}
+
+/* Ticks discrets au bas de la carte marine */
+.card-ticks {
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1) 0 1px,
+    transparent 1px 14px
+  );
+}
+
+/* 12. SLIDER MISSION / VISION / VALEURS */
+#about-slide-content {
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+#about-slide-content.about-fade-out {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+/* Label Mission / Vision / Valeurs : toujours sur une seule ligne */
+#about-slide-label {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* 13. IMAGE ALIGNÉE AUX COINS ARRONDIS DE LA CARD (plus de biseau = plus de coin blanc qui dépasse) */
+.service-img {
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
+  overflow: hidden;
+}
+
+/* Zoom image fluide au survol */
+.service-img img {
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+.service-card:hover .service-img img {
+  transform: scale(1.07);
+}
+
+/* Soulèvement doux de la carte (double classe : priorité sur Tailwind) */
+.service-card.service-card {
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.45s ease,
+    filter 0.45s ease;
+}
+
+/* 13b. BISEAU COMME LES PROJETS — carte entière découpée (image + fond
+   suivent la même découpe : aucun blanc derrière le coin de l'image).
+   L'ombre portée devient un drop-shadow qui épouse la forme découpée
+   (box-shadow serait rognée par le clip-path). */
+.service-card {
+  clip-path: polygon(44px 0, 100% 0, 100% 100%, 0 100%, 0 44px);
+  filter: drop-shadow(0 1px 2px rgba(11, 31, 53, 0.08));
+}
+.service-card:hover {
+  filter: drop-shadow(0 18px 22px rgba(11, 31, 53, 0.14));
+}
+@media (max-width: 480px) {
+  .service-card {
+    clip-path: polygon(32px 0, 100% 0, 100% 100%, 0 100%, 0 32px);
+  }
+}
+.service-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Pastille icône : reste marine (pas d'inversion orange au survol) */
+.service-card .service-icon {
+  background-color: #0b1f35;
+}
+
+/* Lien : accent + espacement fluide */
+.service-card .service-link {
+  transition:
+    color 0.3s ease,
+    gap 0.3s ease;
+}
+.service-card:hover .service-link {
+  gap: 0.65rem;
+}
+
+/* Flèche du lien : glisse vers la droite au survol */
+.service-arrow {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.service-card:hover .service-arrow {
+  transform: translateX(5px);
+}
+
+/* 38. MODAL DEMANDE (service / projet) */
+.request-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 150;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  visibility: hidden;
+  opacity: 0;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+.request-modal.open {
+  visibility: visible;
+  opacity: 1;
+}
+.request-modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 20, 38, 0.72);
+  backdrop-filter: blur(4px);
+}
+.request-modal-dialog {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 24px 64px rgba(5, 19, 41, 0.35);
+  transform: translateY(18px) scale(0.98);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.request-modal.open .request-modal-dialog {
+  transform: none;
+}
+.request-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b1f35;
+  background: #f5f6f9;
+  border: none;
+  cursor: pointer;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+.request-modal-close:hover {
+  background: #c9a227;
+  color: #ffffff;
+}
+@media (min-width: 640px) {
+  .request-modal-dialog {
+    padding: 2.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-card.service-card,
+  .service-img img,
+  .service-card .service-icon,
+  .service-card .service-link,
+  .service-arrow {
+    transition: none;
+  }
+  .service-card:hover {
+    transform: none;
+  }
+  .service-card:hover .service-img img {
+    transform: none;
+  }
+}
+
+/* 14. ÉTAT ACTIF DES CARTES */
+.service-card .service-bar {
+  opacity: 0;
+  transform: scaleX(0.55);
+}
+.service-card.active .service-bar {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.service-card .service-link {
+  color: #0b1f35;
+}
+
+/* 15. BADGES STEP */
+.step-badge {
+  position: relative;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 24px;
+  border-radius: 9999px;
+  background: #ffffff;
+  border: 1px solid #d6dbe4;
+  color: #0b1f35;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.process-step.active .step-badge {
+  background: #0b1f35;
+  border-color: #0b1f35;
+  color: #ffffff;
+  transform: scale(1.04);
+}
+
+/* 16. BANDES HACHURÉES (haut / bas de section) */
+.hatch-edge {
+  height: 14px;
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.14) 0 1.5px,
+    transparent 1.5px 9px
+  );
+}
+
+/* 17. IMAGES À COIN BISEAUTÉ */
+/* Projet 1 : coin haut-gauche coupé */
+.project-img--tl {
+  clip-path: polygon(44px 0, 100% 0, 100% 100%, 0 100%, 0 44px);
+}
+
+/* Projet 2 : coin bas-droit coupé (effet miroir) */
+.project-img--br {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 44px),
+    calc(100% - 44px) 100%,
+    0 100%
+  );
+}
+
+.project-img img {
+  transition: transform 0.5s ease;
+}
+.project-card:hover .project-img img {
+  transform: scale(1.05);
+}
+
+/* 18. CARTES & LIENS */
+.project-card {
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+.project-card:hover {
+  background-color: rgba(255, 255, 255, 0.09);
+}
+
+.project-arrow {
+  transition: transform 0.3s ease;
+}
+.project-link:hover .project-arrow {
+  transform: translateX(4px);
+}
+
+/* Apparition au scroll */
+.project-card {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease,
+    background-color 0.3s ease;
+}
+.project-card.project-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 19. HACHURES CARTES MARINES & MINI-RÈGLE */
+.features-hatch {
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.07) 0 1px,
+    transparent 1px 9px
+  );
+  pointer-events: none;
+}
+
+/* Petits ticks horizontaux sur le bord gauche (transition entre sections) */
+.ruler-mini {
+  width: 16px;
+  height: 150px;
+  background-image:
+    repeating-linear-gradient(180deg, #cbd5e1 0 1px, transparent 1px 12px),
+    repeating-linear-gradient(180deg, #94a3b8 0 1px, transparent 1px 60px);
+  background-size:
+    9px 100%,
+    16px 100%;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+/* 20. FORMULAIRE DE CONTACT */
+.form-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #0b1f35;
+  margin-bottom: 8px;
+}
+
+.form-input {
+  background: #ffffff;
+  border: 1.5px solid #d6dbe4;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #0b1f35;
+  outline: none;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.form-input::placeholder {
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.form-input:focus {
+  border-color: #c9a227;
+  box-shadow: 0 0 0 3px rgba(241, 90, 36, 0.12);
+}
+
+.input-error {
+  border-color: #b03a2e !important;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
+}
+
+.error-msg {
+  color: #b03a2e;
+  font-size: 11.5px;
+  margin-top: 5px;
+  padding-left: 4px;
+}
+
+/* 21. TOAST DE SUCCÈS */
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.toast-success {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 110;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #0b1f35;
+  color: #ffffff;
+  padding: 14px 20px;
+  border-radius: 14px;
+  border-left: 4px solid #c9a227;
+  box-shadow: 0 12px 32px rgba(5, 19, 41, 0.35);
+  font-size: 13.5px;
+  font-weight: 600;
+  animation: toast-in 0.35s ease-out both;
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+
+.toast-success.hide {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+/* 39. ENGIN DECORATIF (pelleteuse) : roule sur le chantier */
+.digger {
+  animation: digger-drive 7s ease-in-out infinite;
+  will-change: transform;
+}
+@keyframes digger-drive {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(18px, -3px) rotate(-0.3deg);
+  }
+  50% {
+    transform: translate(-14px, 0) rotate(0.2deg);
+  }
+  75% {
+    transform: translate(10px, -4px) rotate(-0.3deg);
+  }
+}
+.digger-arm {
+  transform-box: view-box;
+  transform-origin: 64px 92px;
+  animation: digger-dig 3.6s ease-in-out infinite;
+}
+@keyframes digger-dig {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(4deg);
+  }
+}
+.digger-wheel {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: wheel-spin 1.4s linear infinite;
+}
+@keyframes wheel-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .digger,
+  .digger-arm,
+  .digger-wheel {
+    animation: none;
+  }
+}
+
+/* 22. CARTES ÉQUIPE */
+/* Photo à coin haut-gauche biseauté */
+.team-photo {
+  clip-path: polygon(36px 0, 100% 0, 100% 100%, 0 100%, 0 36px);
+}
+
+/* Portraits : priorité au visage (jamais de tête coupée) */
+.team-photo img {
+  object-position: top center;
+}
+
+/* Fines stries grises décoratives (coin bas-gauche du fond) */
+.team-stripes {
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(11, 28, 61, 0.1) 0 1px,
+    transparent 1px 8px
+  );
+}
+
+/* Barre orange d'état actif */
+.team-card .team-bar {
+  opacity: 0;
+  transform: scaleX(0.55);
+}
+.team-card.active .team-bar {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+/* 23. CARROUSEL TÉMOIGNAGES */
+#testi-track {
+  will-change: transform;
+}
+
+/* Dots de pagination */
+#testi-dots button {
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.25);
+  transition:
+    background-color 0.3s ease,
+    width 0.3s ease;
+}
+#testi-dots button:hover {
+  background: rgba(255, 255, 255, 0.45);
+}
+#testi-dots button.active {
+  background: #c9a227;
+  width: 26px;
+}
+
+/* 24. CARTES BLOG */
+/* Survol éditorial : voile + soulignement du titre (aucune ombre) */
+.blog-img {
+  position: relative;
+}
+.blog-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(11, 28, 61, 0.35), transparent 55%);
+  opacity: 0;
+  transition: opacity 0.45s ease;
+  pointer-events: none;
+}
+.blog-card:hover .blog-img::after,
+.bp-card:hover .blog-img::after {
+  opacity: 1;
+}
+.blog-card h3,
+.bp-card h3 {
+  text-decoration: underline 2px transparent;
+  text-underline-offset: 5px;
+  transition: text-decoration-color 0.35s ease;
+}
+.blog-card:hover h3,
+.bp-card:hover h3 {
+  text-decoration-color: #0b1f35;
+}
+
+/* Image à coin haut-gauche biseauté */
+.blog-img img {
+  clip-path: polygon(34px 0, 100% 0, 100% 100%, 0 100%, 0 34px);
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+.blog-card:hover .blog-img img {
+  transform: scale(1.07);
+}
+
+.blog-card .blog-arrow {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.blog-card:hover .blog-arrow {
+  transform: translateX(5px);
+}
+
+/* 25. ACCORDÉON FAQ */
+.faq-item {
+  transition:
+    background-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+.faq-item:hover {
+  box-shadow: 0 6px 18px rgba(11, 28, 61, 0.07);
+}
+
+/* Item ouvert : fond navy, textes clairs */
+.faq-item.open {
+  background-color: #0b1f35 !important;
+}
+.faq-item.open .faq-question > span:first-child {
+  color: #ffffff;
+}
+/* Le titre porte la classe Tailwind text-[#0b1f35] qui surcharge
+   la couleur héritée -> on la force en blanc quand l'item est ouvert */
+.faq-item.open .faq-question > span:first-child > span:last-child,
+.faq-item.open .faq-question .text-\[\#0b1f35\] {
+  color: #ffffff !important;
+}
+.faq-item.open .faq-icon {
+  color: #c9a227;
+}
+/* Réponse lisible sur fond navy */
+.faq-item.open .faq-answer-inner p {
+  color: rgba(255, 255, 255, 0.82) !important;
+}
+
+/* Footer : textes du bas en blanc + gras pour la lisibilité sur fond marine */
+footer p.text-slate-400,
+footer ul.text-slate-400,
+footer ul.text-slate-400 li,
+footer ul.text-slate-400 a {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+footer ul.text-slate-400 a {
+  color: rgba(255, 255, 255, 0.88) !important;
+  font-weight: 600 !important;
+}
+footer ul.text-slate-400 a:hover {
+  color: #c9a227 !important;
+}
+footer input::placeholder {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+/* Barre copyright : texte bien blanc, gras et lisible */
+footer .bg-\[\#c9a227\] p,
+footer .bg-\[\#c9a227\] a {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+/* Bascule des icônes + / − */
+.faq-icon-minus {
+  opacity: 0;
+}
+.faq-item.open .faq-icon-plus {
+  opacity: 0;
+}
+.faq-item.open .faq-icon-minus {
+  opacity: 1;
+}
+
+/* Réponse animée (technique grid-template-rows, fluide sans JS de hauteur) */
+.faq-answer-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s ease;
+}
+.faq-item.open .faq-answer-wrapper {
+  grid-template-rows: 1fr;
+}
+.faq-answer-inner {
+  overflow: hidden;
+}
+
+/* 26. FORMULAIRES NEWSLETTER */
+/* Contour rouge + secousse en cas d'email invalide */
+.newsletter-error {
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.55) !important;
+  animation: shake 0.35s ease;
+}
+
+#footer-newsletter-form.newsletter-error input {
+  border-color: #b03a2e !important;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+/* 32. BOUTON FLOTTANT & BADGE */
+#chat-launcher {
+  position: fixed;
+  bottom: 88px; /* au-dessus du back-to-top (24 + 52 + 12) */
+  right: 24px;
+  z-index: 96;
+  width: 56px;
+  height: 56px;
+  border-radius: 9999px;
+  background: #0b1f35;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 28px rgba(5, 19, 41, 0.35);
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+#chat-launcher:hover {
+  background: #c9a227;
+  transform: scale(1.07);
+}
+
+#chat-launcher.hide {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.6);
+  pointer-events: none;
+}
+
+/* Badge de notification avec halo pulsant */
+.chat-badge {
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  min-width: 21px;
+  height: 21px;
+  padding: 0 5px;
+  border-radius: 9999px;
+  background: #c9a227;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ffffff;
+}
+
+.chat-badge::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: #c9a227;
+  z-index: -1;
+  animation: chat-pulse 2s ease-out infinite;
+}
+
+@keyframes chat-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  70%,
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.chat-badge.gone,
+.chat-quick.gone {
+  display: none;
+}
+
+/* 33. PANNEAU DE CHAT */
+#chat-panel {
+  position: fixed;
+  bottom: 88px;
+  right: 24px;
+  z-index: 155; /* au-dessus du cookie banner (150), sous le preloader (200) */
+  width: min(380px, calc(100vw - 40px));
+  height: min(560px, calc(100vh - 130px));
+  background-color: #ffffff;
+  border: 1px solid #d6dbe4;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(11, 28, 61, 0.18);
+  transform-origin: bottom right;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(24px) scale(0.95);
+  transition:
+    opacity 0.35s ease,
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0.35s ease;
+}
+
+#chat-panel.open {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: #f5f6f9;
+  border-bottom: 1px solid #d6dbe4;
+}
+
+/* Hachures sombres masquées sur fond clair */
+#chat-panel > .features-hatch {
+  display: none;
+}
+
+/* Pastille "en ligne" verte pulsante */
+.online-dot {
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  background: #12855a;
+  border: 2.5px solid #ffffff;
+}
+
+.online-dot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: #12855a;
+  z-index: -1;
+  animation: online-ping 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes online-ping {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  80%,
+  100% {
+    transform: scale(2.3);
+    opacity: 0;
+  }
+}
+
+/* 34. MESSAGES, TYPING & SAISIE */
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.chat-messages::-webkit-scrollbar {
+  width: 5px;
+}
+.chat-messages::-webkit-scrollbar-thumb {
+  background: rgba(11, 28, 61, 0.15);
+  border-radius: 99px;
+}
+
+/* Bulles */
+.chat-msg {
+  display: flex;
+  flex-direction: column;
+  max-width: 82%;
+  animation: chat-msg-in 0.3s ease-out both;
+}
+
+@keyframes chat-msg-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.chat-msg.bot {
+  align-self: flex-start;
+  align-items: flex-start;
+}
+.chat-msg.user {
+  align-self: flex-end;
+  align-items: flex-end;
+}
+
+.chat-bubble {
+  padding: 10px 14px;
+  border-radius: 16px;
+  font-size: 13px;
+  line-height: 1.55;
+  word-break: break-word;
+}
+
+.chat-msg.bot .chat-bubble {
+  background: #f5f6f9;
+  color: #0b1f35;
+  border-bottom-left-radius: 4px;
+}
+
+.chat-msg.user .chat-bubble {
+  background: #c9a227;
+  color: #ffffff;
+  border-bottom-right-radius: 4px;
+}
+
+.chat-time {
+  font-size: 10px;
+  color: rgba(11, 28, 61, 0.45);
+  margin-top: 4px;
+  padding: 0 4px;
+}
+
+/* Indicateur "Réflexion en cours..." */
+.chat-bubble--typing {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 16px;
+}
+
+.typing-dots {
+  display: inline-flex;
+  gap: 4px;
+}
+
+.typing-dots span {
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: #c9a227;
+  animation: typing-bounce 1.2s ease-in-out infinite;
+}
+
+.typing-dots span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.typing-dots span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes typing-bounce {
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.45;
+  }
+  30% {
+    transform: translateY(-5px);
+    opacity: 1;
+  }
+}
+
+.typing-label {
+  font-size: 11px;
+  font-style: italic;
+  color: #94a3b8;
+}
+
+/* Suggestions rapides */
+.chat-quick {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0 16px 10px;
+}
+
+.chat-quick button {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #c9a227;
+  background: rgba(241, 90, 36, 0.12);
+  border: 1px solid rgba(241, 90, 36, 0.4);
+  padding: 6px 13px;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.chat-quick button:hover {
+  background: #c9a227;
+  color: #ffffff;
+}
+
+/* Barre de saisie */
+.chat-inputbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-top: 1px solid #d6dbe4;
+  background: #f5f6f9;
+}
+
+#chat-input {
+  flex: 1;
+  min-width: 0;
+  background: #f5f6f9;
+  border: 1.5px solid #d6dbe4;
+  border-radius: 9999px;
+  padding: 11px 18px;
+  font-size: 13px;
+  color: #0b1f35;
+  outline: none;
+  transition:
+    border-color 0.25s ease,
+    background-color 0.25s ease;
+}
+
+#chat-input::placeholder {
+  color: #94a3b8;
+}
+
+#chat-input:focus {
+  border-color: #c9a227;
+  background: #ffffff;
+}
+
+#chat-send {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border-radius: 9999px;
+  background: #c9a227;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(241, 90, 36, 0.35);
+  transition:
+    background-color 0.25s ease,
+    transform 0.2s ease;
+}
+
+#chat-send:hover {
+  background: #d9bc6b;
+}
+#chat-send:active {
+  transform: scale(0.9);
+}
+
+/* AJUSTEMENT : le toast au-dessus du chat */
+.toast-success {
+  z-index: 170;
+}
+
+/* Mobile : panneau quasi plein écran */
+@media (max-width: 480px) {
+  #chat-panel {
+    right: 12px;
+    bottom: 12px;
+    width: calc(100vw - 24px);
+    height: calc(100vh - 24px);
+    border-radius: 20px;
+  }
+}
+
+/* 33. PAGE HEADER */
+/* Bande navy plus haute que .hatch-edge, hachures marquées */
+.page-header-band {
+  height: 48px;
+  background-color: #0b1f35;
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.16) 0 1.5px,
+    transparent 1.5px 9px
+  );
+}
+
+/* 34. VIDEO SHOWCASE */
+.video-frame img {
+  transition: transform 0.6s ease;
+}
+
+#video-showcase .video-frame:hover img {
+  transform: scale(1.03);
+}
+
+/* 37. IMAGES : ZOOM AU SURVOL */
+.timeline-img img {
+  transition: transform 0.6s ease;
+}
+
+.timeline-item:hover .timeline-img img {
+  transform: scale(1.05);
+}
+
+/* 38. APPARITION AU SCROLL (fade-in-up) */
+.timeline-item {
+  opacity: 0;
+  transform: translateY(36px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.timeline-item.timeline-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Respect des préférences de mouvement réduit */
+@media (prefers-reduced-motion: reduce) {
+  .timeline-item {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* 39. PAGE PROJECTS */
+/* Pilule de filtre active (surpasse les classes Tailwind par spécificité) */
+.pp-filter.pp-active {
+  background: #c9a227;
+  border-color: #c9a227;
+  color: #ffffff;
+}
+.pp-filter:hover {
+  border-color: #c9a227;
+  color: #c9a227;
+}
+.pp-filter.pp-active:hover {
+  color: #ffffff;
+}
+
+/* Apparition des cartes + masquage par filtre */
+.pp-card {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+.pp-card.pp-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.pp-card.pp-hidden {
+  display: none;
+}
+
+/* Zoom image au survol */
+.pp-img {
+  transition: transform 0.5s ease;
+}
+.pp-card:hover .pp-img {
+  transform: scale(1.05);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pp-card {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* 40. PAGE BLOGS */
+/* Apparition des cartes (transition gérée ici, pas de classe Tailwind conflictuelle) */
+.bp-card {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease,
+    box-shadow 0.3s ease;
+}
+.bp-card.bp-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.bp-card.bp-hidden {
+  display: none;
+}
+
+/* Zoom image au survol (réutilise le clip-path .blog-img existant) */
+.bp-card:hover .blog-img img {
+  transform: scale(1.05);
+}
+
+/* Zoom de l'article à la une */
+.bp-featured .about-img img {
+  transition: transform 0.6s ease;
+}
+.bp-featured:hover .about-img img {
+  transform: scale(1.04);
+}
+
+/* Boutons de pagination */
+.bp-page-btn {
+  min-width: 2.5rem;
+  height: 2.5rem;
+  padding: 0 0.6rem;
+  border-radius: 9999px;
+  border: 1px solid #d6dbe4;
+  background: #ffffff;
+  color: #0b1f35;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    border-color 0.25s ease,
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+.bp-page-btn svg {
+  width: 16px;
+  height: 16px;
+}
+.bp-page-btn:hover {
+  border-color: #c9a227;
+  color: #c9a227;
+}
+.bp-page-btn.bp-current {
+  background: #c9a227;
+  border-color: #c9a227;
+  color: #ffffff;
+}
+.bp-page-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.bp-page-btn:disabled:hover {
+  border-color: #d6dbe4;
+  color: #0b1f35;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bp-card {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* 41. THANKS */
+/* Pop de la coche (rebond élastique, comme les toggles) */
+@keyframes check-pop {
+  0% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.thanks-check {
+  animation: check-pop 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+/* Anneau pulsant autour de la coche (réutilise le pattern du badge chat) */
+@keyframes thanks-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.45;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+.thanks-ring {
+  background: #c9a227;
+  animation: thanks-ring 1.7s ease-out infinite;
+}
+
+/* Délai d'apparition douce du reste du contenu */
+.thanks-check + * {
+  /* pas nécessaire, placeholder */
+}
+
+/* 42. TIMER DIGITAL */
+@keyframes colon-blink {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  55%,
+  100% {
+    opacity: 0.15;
+  }
+}
+
+.dt-colon {
+  color: #c9a227;
+  animation: colon-blink 1s steps(1) infinite;
+  padding: 0 0.08em;
+}
+
+/* 42. FOOTER : scene illustrative derive lente */
+.footer-scene {
+  animation: footer-drift 22s ease-in-out infinite alternate;
+  will-change: transform;
+}
+@keyframes footer-drift {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-36px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .footer-scene {
+    animation: none;
+  }
+}
+
+/* Adaptation charte graphique §13 — lockups (48 px défaut / 32 px min).
+   Classe dédiée (pas .logo) pour éviter tout conflit display avec Tailwind. */
+.site-logo img { height: 48px; width: auto; object-fit: contain; }
+.site-logo-sm img { height: 32px; }
+.site-logo-negatif img { filter: brightness(0) invert(1); } /* version négative, cf. .logo-fond-marine */
+
+/* 43. NAVIGATION — parents déroulants (boutons, sans href) */
+/* Reset bouton desktop : même rendu que l'ancien lien parent */
+li.relative.group > button[data-dropdown-toggle] {
+  background: none;
+  border: none;
+  font: inherit;
+  padding: 0;
+}
+/* Ouverture au clic (desktop) : même état que group-hover */
+li.relative.group.dropdown-open > div {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+}
+li.relative.group.dropdown-open > button[data-dropdown-toggle] {
+  color: #c9a227;
+}
+/* Rotation du chevron quand ouvert (desktop + mobile) */
+li.dropdown-open > button .mobile-toggle-icon,
+li.relative.group.dropdown-open > button[data-dropdown-toggle] svg,
+li.relative.group.dropdown-open > button[data-dropdown-toggle] i {
+  transform: rotate(180deg);
+}
+/* 45. RESPONSIVE — logo par paliers de 768px à 325px */
+@media (max-width: 768px) {
+  .site-logo img { height: 42px; }
+  .site-logo-sm img { height: 30px; }
+}
+@media (max-width: 480px) {
+  .site-logo img { height: 36px; }
+  .site-logo-sm img { height: 28px; }
+  #preloader .site-logo img { height: 34px; }
+}
+@media (max-width: 360px) {
+  .site-logo img { height: 32px; }
+  .site-logo-sm img { height: 26px; }
+  #preloader .site-logo img { height: 30px; }
+}
+@media (max-width: 335px) {
+  .site-logo img { height: 28px; }
+  .site-logo-sm img { height: 24px; }
+  #preloader .site-logo img { height: 26px; }
+}
+
+/* 46. HERO — titre fluide : chaque segment tient sur une ligne */
+.hero-title { font-size: 19px; }
+@media (min-width: 400px) { .hero-title { font-size: 24px; } }
+@media (min-width: 480px) { .hero-title { font-size: 28px; } }
+@media (min-width: 640px) { .hero-title { font-size: 36px; } }
+@media (min-width: 768px) { .hero-title { font-size: 44px; } }
+@media (min-width: 1024px) { .hero-title { font-size: 56px; } }
+
+/* 47. TABS — scroll horizontal sur mobile (une ligne, sans wrap) */
+@media (max-width: 640px) {
+  .tabs-scroll {
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .tabs-scroll::-webkit-scrollbar { display: none; }
+  .tabs-scroll .pp-filter { flex-shrink: 0; }
+}
+
+/* 49b. TITRES — Space Grotesk pour les titres de sections et de parties */
+h1,
+h2,
+h3 {
+  font-family:
+    "Space Grotesk",
+    ui-sans-serif,
+    system-ui,
+    sans-serif;
+}
+
+/* 49c. GRAISSE DES TITRES — 900 trop lourd : 800 pour h1/h2, 700 pour h3.
+   Sélecteurs renforcés (élément + classe) pour primer sur .font-black Tailwind. */
+h1,
+h1.font-black,
+h2,
+h2.font-black {
+  font-weight: 800;
+}
+h3,
+h3.font-black,
+h3.font-extrabold {
+  font-weight: 700;
+}
+
+/* 49. FILIGRANE — nom de section en fond à droite, opacité réduite */
+.section-tag {
+  position: absolute;
+  top: 2rem;
+  right: -0.4rem;
+  z-index: 0;
+  font-family:
+    "Space Grotesk",
+    ui-sans-serif,
+    system-ui,
+    sans-serif;
+  font-weight: 700;
+  font-size: clamp(3rem, 9vw, 7.5rem);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+.section-tag--dark {
+  color: rgba(11, 31, 53, 0.055);
+}
+.section-tag--light {
+  color: rgba(255, 255, 255, 0.07);
+}
+@media (max-width: 640px) {
+  .section-tag {
+    top: 1rem;
+    font-size: clamp(2.25rem, 15vw, 3.25rem);
+  }
+}
+
+/* 49d. COMING SOON — scène chantier animée en fond */
+.cs-scene {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.cs-scene svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: min(46vh, 420px);
+}
+/* Crochet de grue : oscillation */
+.cs-hook {
+  transform-box: fill-box;
+  transform-origin: top center;
+  animation: cs-swing 5s ease-in-out infinite;
+}
+@keyframes cs-swing {
+  0%,
+  100% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(4deg);
+  }
+}
+/* Gyrophare : clignotement */
+.cs-beacon {
+  animation: cs-blink 1.6s ease-in-out infinite;
+}
+@keyframes cs-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+/* Dérive lente du décor */
+.cs-drift {
+  animation: cs-drift 26s ease-in-out infinite alternate;
+}
+@keyframes cs-drift {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-30px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cs-hook,
+  .cs-beacon,
+  .cs-drift {
+    animation: none;
+  }
+}
+
+/* 48b. HERO PILLS — carrousel une à une (desktop + responsive) */
+.hero-pills {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 0;
+}
+.hero-pills-viewport {
+  flex: 1;
+  min-width: 0;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -webkit-mask-image: linear-gradient(90deg, #000 93%, transparent 100%);
+  mask-image: linear-gradient(90deg, #000 93%, transparent 100%);
+}
+.hero-pills-viewport::-webkit-scrollbar {
+  display: none;
+}
+.hero-pills-track {
+  position: relative;
+  display: flex;
+  gap: 0.75rem;
+  width: max-content;
+  padding: 0.25rem 0.25rem 0.5rem;
+}
+.hero-pill {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  white-space: nowrap;
+  padding: 0.625rem 1.25rem;
+  border-radius: 9999px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  font-size: 15px;
+  font-weight: 500;
+  color: #0b1f35;
+  box-shadow: 0 1px 2px rgba(11, 31, 53, 0.06);
+}
+@media (max-width: 480px) {
+  .hero-pill {
+    font-size: 13px;
+    padding: 0.5rem 1rem;
+  }
+}
+.hero-pills-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+.hero-pills-prev,
+.hero-pills-next {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  border: 1.5px solid rgba(201, 162, 39, 0.5);
+  background: #fff;
+  color: #c9a227;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+.hero-pills-prev:hover,
+.hero-pills-next:hover {
+  background: #c9a227;
+  border-color: #c9a227;
+  color: #fff;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-pills-viewport {
+    scroll-snap-type: none;
+  }
+}
+
+/* 48. PRELOADER + petits écrans — sécurité 325px */
+@media (max-width: 480px) {
+  #preloader .crane-hook svg { width: 64px; }
+}
+@media (max-width: 360px) {
+  #preloader .crane-hook svg { width: 56px; }
+}
+
+/* 44. MENU MOBILE — sous-menus repliés, ouverture au clic */
+.mobile-submenu {
+  overflow: hidden;
+}
+li[data-mobile-dropdown].dropdown-open > .mobile-submenu {
+  display: block;
+}
+li[data-mobile-dropdown].dropdown-open > button[data-mobile-toggle] {
+  color: #c9a227;
+}
+li[data-mobile-dropdown].dropdown-open .mobile-toggle-icon {
+  transform: rotate(180deg);
+}
+
+/* 50. FIX 324px — topbar : le switch langue garde toujours ses icônes */
+#lang-switcher {
+  flex-shrink: 0;
+}
+#lang-btn {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+#lang-btn svg,
+#lang-btn i {
+  flex-shrink: 0;
+}
+
+/* 51. FIX 324px — hero : textes sliders lisibles, jamais coupés */
+.hero-kicker-text {
+  overflow-wrap: break-word;
+}
+.hero-title {
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: auto;
+}
+.hero-pill {
+  overflow-wrap: break-word;
+}
+
+/* Palier ≤ 400px : on allège la topbar (2 réseaux masqués) */
+@media (max-width: 400px) {
+  header .max-w-7xl > .flex-1 > div:first-child {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+    gap: 0.5rem !important;
+  }
+  header a[aria-label="Pinterest"],
+  header a[aria-label="YouTube"] {
+    display: none !important;
+  }
+  header .site-logo-sm {
+    margin-right: 0 !important;
+  }
+  #lang-btn {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    gap: 0.3rem !important;
+  }
+}
+
+/* Palier ≤ 360px (≈324px) : topbar compacte + hero fluide */
+@media (max-width: 360px) {
+  header .max-w-7xl > .flex-1 > div:first-child {
+    padding-left: 0.625rem !important;
+    padding-right: 0.625rem !important;
+  }
+  /* 3 icônes sociales max : on masque aussi Instagram pour garder
+     logo + switch langue (avec globe + chevron) sur une ligne */
+  header a[aria-label="Instagram"] {
+    display: none !important;
+  }
+  #lang-switcher {
+    margin-left: auto;
+  }
+
+  /* Hero accroche : retour à la ligne autorisé, taille lisible */
+  .hero-kicker-text {
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    font-size: 11px !important;
+    line-height: 1.45 !important;
+  }
+
+  /* Hero titre : légèrement réduit pour tenir sans coupe à 324px */
+  .hero-title {
+    font-size: 20px !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Hero pills (slider de textes) : font réduite + padding compact
+     pour que chaque pilule reste lisible sans être tronquée */
+  .hero-pill {
+    font-size: 12px !important;
+    padding: 0.45rem 0.9rem !important;
+  }
+  .hero-pills {
+    gap: 0.5rem !important;
+  }
+  .hero-pills-prev,
+  .hero-pills-next {
+    width: 2.25rem !important;
+    height: 2.25rem !important;
+  }
+
+  /* Slider Mission/Vision : labels en une seule ligne */
+  #about-slide-text {
+    font-size: 14px !important;
+    line-height: 1.65 !important;
+  }
+  #about-slide-label {
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    font-size: 15px !important;
+    line-height: 1.3 !important;
+  }
+  #about-prev,
+  #about-next {
+    width: 2.25rem !important;
+    height: 2.25rem !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* 52a. Tous les <p> du site à 324px : taille réduite + jamais de débordement */
+  section p,
+  main p,
+  footer p {
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+    hyphens: auto !important;
+  }
+  /* Paragraphes corps 15-17px (services, hero descriptif, about, etc.) */
+  section p[class*="text-[15px]"],
+  section p[class*="text-[16px]"],
+  section p[class*="text-[17px]"],
+  main p[class*="text-[15px]"],
+  main p[class*="text-[16px]"],
+  main p[class*="text-[17px]"] {
+    font-size: 13.5px !important;
+    line-height: 1.65 !important;
+  }
+  /* Cartes (services / projets / blog / team) : paragraphes compacts */
+  .service-card p,
+  .project-card p,
+  .blog-card p,
+  .bp-card p,
+  .team-card p,
+  .pp-card p {
+    font-size: 13px !important;
+    line-height: 1.65 !important;
+  }
+
+  /* 52b. Preloader à 324px : tagline centrée, plus de décalage gauche */
+  #preloader {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    text-align: center !important;
+  }
+  #preloader p {
+    font-size: 9px !important;
+    letter-spacing: 2px !important;
+    /* compense le tracking pour un vrai centrage optique */
+    padding-left: 2px !important;
+    margin-inline: auto !important;
+    text-align: center !important;
+    max-width: 260px !important;
+    white-space: normal !important;
+    text-wrap: balance !important;
+  }
+  #preloader .site-logo {
+    justify-content: center !important;
+    margin-inline: auto !important;
+  }
+  /* Bloc règle + barre : pleine largeur centrée, pas collée à gauche */
+  #preloader .relative.z-10.mt-9 {
+    width: 100% !important;
+    max-width: 260px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  #preloader-label {
+    min-width: 0 !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    font-size: 10px !important;
+  }
+  #preloader-percent {
+    flex-shrink: 0 !important;
+    margin-left: 0.5rem !important;
+    font-size: 10px !important;
+  }
+}
+
+/* Palier ≤ 335px : sécurité extrême petits écrans */
+@media (max-width: 335px) {
+  .hero-title {
+    font-size: 18px !important;
+  }
+  .hero-kicker-text {
+    font-size: 10.5px !important;
+  }
+  .hero-pill {
+    font-size: 11.5px !important;
+    padding: 0.4rem 0.8rem !important;
+  }
+}
+
+/* 53. SHOWCASE VIDÉO (page about) — le bandeau stats ne masque plus le Play
+   et n'est plus masqué par le cadre image : en mobile il passe sous l'image,
+   sans chevauchement, donc 100 % lisible et cliquable. */
+@media (max-width: 767px) {
+  #video-showcase .relative.max-w-6xl > div.absolute {
+    position: static !important;
+    margin: 1rem 1rem 0 !important;
+  }
+  #video-showcase .relative.max-w-6xl {
+    padding-bottom: 1rem;
+  }
+  #video-showcase [data-count] {
+    font-size: 1.5rem !important;
+    line-height: 1.2 !important;
+  }
+}
+
+/* 54. SHOWCASE à 768px : chiffres et labels réduits (48px trop gros) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  #video-showcase [data-count] {
+    font-size: 2rem !important;
+    line-height: 1.15 !important;
+  }
+  #video-showcase .grid > div > div:last-child {
+    font-size: 12.5px !important;
+  }
+  #video-showcase h2 {
+    font-size: 2rem !important;
+  }
+}
+
+/* 55. BLOG DETAIL — colonnes latérales fixes au scroll de l'article.
+   Gauche (partage) déjà sticky ; droite (widgets) sticky avec défilement
+   interne car plus haute que le viewport. */
+@media (min-width: 1024px) {
+  /* Colonne entière visible (tags + sommaire + bannière), sans découpe :
+     sticky naturel — fixe pendant l'article, se relâche en fin de grille. */
+  .blog-sidebar {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 8rem !important;
+    align-self: start !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+}

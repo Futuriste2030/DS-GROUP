@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== BASE ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: #c9a227;
+  color: #ffffff;
+}
+
+/* ===== PRELOADER ===== */
+body.is-loading {
+  overflow: hidden;
+}
+
+.preloader-hatch {
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(11, 28, 61, 0.06) 0 1px,
+    transparent 1px 11px
+  );
+}
+
+#preloader .preloader-hatch {
+  display: none;
+}
+
+.preloader-ruler {
+  height: 10px;
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      rgba(11, 28, 61, 0.18) 0 1px,
+      transparent 1px 12px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(11, 28, 61, 0.38) 0 1px,
+      transparent 1px 60px
+    );
+  background-size:
+    100% 6px,
+    100% 10px;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+
+/* ===== FORM STYLES ===== */
+.form-label {
+  @apply block text-[13px] font-semibold text-[#0b1f35] mb-1.5;
+}
+
+.form-input {
+  @apply w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-[14.5px] text-[#0b1f35] placeholder:text-slate-400
+         focus:outline-none focus:ring-2 focus:ring-[#c9a227]/30 focus:border-[#c9a227] transition-all;
+}
+
+.error-msg {
+  @apply mt-1.5 text-[11.5px] text-red-500 font-medium;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f5f6f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #c9a227;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b8921f;
+}
+
+/* ===== FOCUS VISIBLE ===== */
+:focus-visible {
+  outline: 2px solid #c9a227;
+  outline-offset: 2px;
+}
+
+/* ===== PRINT ===== */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}

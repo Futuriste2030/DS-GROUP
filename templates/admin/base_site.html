@@ -1,0 +1,78 @@
+{% extends "admin/base.html" %}
+{% load static i18n %}
+
+{% block title %}{{ title }} | BS GROUP — Admin{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">
+    <a href="{% url 'admin:index' %}">
+        {% if site_settings.logo %}
+        <img src="{{ site_settings.logo.url }}" alt="BS GROUP" height="28" style="vertical-align:middle; margin-right:8px;">
+        {% endif %}
+        BS GROUP
+    </a>
+</h1>
+{% endblock %}
+
+{% block extrastyle %}
+{{ block.super }}
+<style>
+    :root {
+        --marine: #0b1f35;
+        --gold: #c9a227;
+        --gold-light: #d9bc6b;
+        --fond: #f5f6f9;
+    }
+    /* Header */
+    #header {
+        background: var(--marine);
+        color: #fff;
+    }
+    #header a:link, #header a:visited {
+        color: #fff;
+    }
+    #site-name a {
+        font-weight: 800;
+        letter-spacing: 0.3px;
+    }
+    /* Breadcrumbs */
+    div.breadcrumbs {
+        background: var(--gold);
+        color: #fff;
+    }
+    div.breadcrumbs a {
+        color: #fff;
+    }
+    /* Boutons */
+    .button, input[type="submit"], input[type="button"], .submit-row input, a.button {
+        background: var(--gold);
+    }
+    .button:hover, input[type="submit"]:hover, input[type="button"]:hover,
+    .submit-row input:hover, a.button:hover {
+        background: var(--marine);
+    }
+    .button.default, input[type="submit"].default, .submit-row input.default {
+        background: var(--marine);
+    }
+    .button.default:hover, input[type="submit"].default:hover,
+    .submit-row input.default:hover {
+        background: var(--gold);
+    }
+    /* Titres de modules */
+    .module h2, .module caption, .inline-group h2 {
+        background: var(--marine);
+        color: #fff;
+    }
+    /* Liens */
+    a:link, a:visited {
+        color: var(--gold);
+    }
+    a:hover {
+        color: var(--marine);
+    }
+    /* Onglets modeltranslation */
+    .mtab {
+        border-radius: 6px 6px 0 0;
+    }
+</style>
+{% endblock %}

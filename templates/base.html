@@ -1,0 +1,85 @@
+{% load static i18n seo_tags %}
+<!doctype html>
+<html lang="{{ LANGUAGE_CODE|default:'fr' }}" dir="{% if LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% trans "BS GROUP | Exchange, Finance & Infrastructures" as default_site_title %}
+    {% trans "BS GROUP — Integrated ecosystem: exchange, finance, infrastructures and trade." as default_site_description %}
+    <title>{% block title %}{{ page_og_title|default:default_site_title }}{% endblock %}</title>
+    <meta name="description" content="{% block meta_description %}{{ page_meta_description|default:default_site_description }}{% endblock %}" />
+    {% if site_settings.meta_keywords %}
+    <meta name="keywords" content="{{ site_settings.meta_keywords }}" />
+    {% endif %}
+    {% if site_settings.meta_author %}
+    <meta name="author" content="{{ site_settings.meta_author }}" />
+    {% endif %}
+    <link rel="canonical" href="{{ canonical_url|default:request.build_absolute_uri }}" />
+    <meta name="robots" content="{{ page_robots|default:'index, follow' }}" />
+
+    {% block hreflang_tags %}{% hreflang_links %}{% endblock %}
+
+    <!-- Open Graph / Facebook -->
+    {% block og_tags %}
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ canonical_url|default:request.build_absolute_uri }}" />
+    <meta property="og:title" content="{% block og_title %}{% if page_og_title %}{{ page_og_title }} — BS GROUP{% else %}{{ default_site_title }}{% endif %}{% endblock %}" />
+    <meta property="og:description" content="{% block og_description %}{% if page_og_description %}{{ page_og_description|striptags }}{% elif page_meta_description %}{{ page_meta_description|striptags }}{% elif site_settings.meta_description %}{{ site_settings.meta_description|striptags }}{% else %}{{ default_site_description }}{% endif %}{% endblock %}" />
+    <meta property="og:image" content="{% block og_image %}{% if page_og_image %}{{ page_og_image }}{% elif site_settings.logo %}{{ request.scheme }}://{{ request.get_host }}{{ site_settings.logo.url }}{% endif %}{% endblock %}" />
+    <meta property="og:locale" content="{{ LANGUAGE_CODE|default:'fr' }}" />
+    <meta property="og:site_name" content="BS GROUP" />
+    {% endblock %}
+
+    <!-- Twitter -->
+    {% block twitter_tags %}
+    <meta name="twitter:card" content="{{ page_twitter_card|default:'summary_large_image' }}" />
+    <meta name="twitter:url" content="{{ canonical_url|default:request.build_absolute_uri }}" />
+    <meta name="twitter:title" content="{% block twitter_title %}{% if page_og_title %}{{ page_og_title }} — BS GROUP{% else %}{{ default_site_title }}{% endif %}{% endblock %}" />
+    <meta name="twitter:description" content="{% block twitter_description %}{% if page_og_description %}{{ page_og_description|striptags }}{% elif page_meta_description %}{{ page_meta_description|striptags }}{% elif site_settings.meta_description %}{{ site_settings.meta_description|striptags }}{% else %}{{ default_site_description }}{% endif %}{% endblock %}" />
+    <meta name="twitter:image" content="{% block twitter_image %}{% if page_og_image %}{{ page_og_image }}{% elif site_settings.logo %}{{ request.scheme }}://{{ request.get_host }}{{ site_settings.logo.url }}{% endif %}{% endblock %}" />
+    {% endblock %}
+
+    <!-- Tailwind CSS (local build) -->
+    <link rel="stylesheet" href="{% static 'css/tailwind.css' %}" />
+
+    <!-- Lucide Icons (local) -->
+    <script>
+      // Lucide icon loader - utilise les SVG locaux
+      window.LUCIDE_ICONS_PATH = '{% static "icons/lucide" %}';
+    </script>
+    <script src="{% static 'js/lucide-loader.js' %}" defer></script>
+
+    <!-- Google Fonts (CDN with preconnect - optimal pour production) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" media="print" onload="this.media='all'" />
+
+    <!-- Polices locales (fallback si Google Fonts indisponible) -->
+    <link rel="stylesheet" href="{% static 'css/fonts.css' %}" />
+
+    <!-- Feuille de style du projet -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/charte-graphique.css' %}" />
+
+    <!-- Favicon BS GROUP -->
+    <link rel="icon" type="image/x-icon" href="{% static 'img/favicon/favicon.ico' %}" />
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'img/favicon/favicon-96x96.png' %}" />
+    <link rel="icon" type="image/svg+xml" href="{% static 'img/favicon/favicon.svg' %}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/favicon/apple-touch-icon.png' %}" />
+    <link rel="manifest" href="{% static 'img/favicon/site.webmanifest' %}" />
+
+    {% block head_extra %}{% endblock %}
+  </head>
+
+  <body class="{% block body_class %}bg-[#f5f6f9] font-sans antialiased text-[#0b1f35] overflow-x-hidden{% endblock %}">
+    {% include 'partials/_preloader.html' %}
+    {% include 'partials/_header.html' %}
+
+    {% block content %}{% endblock %}
+
+    {% include 'partials/_footer.html' %}
+
+    {% block extra_js %}{% endblock %}
+  </body>
+</html>

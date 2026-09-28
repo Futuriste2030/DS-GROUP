@@ -1,0 +1,822 @@
+# BS GROUP translations.
+msgid ""
+msgstr ""
+"Project-Id-Version: BS-GROUP 1.0\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+
+msgid "Home"
+msgstr "الرئيسية"
+
+msgid "About Us"
+msgstr "من نحن"
+
+msgid "Our Team"
+msgstr "فريقنا"
+
+msgid "Testimonials"
+msgstr "آراء العملاء"
+
+msgid "Services"
+msgstr "خدماتنا"
+
+msgid "Projects"
+msgstr "مشاريعنا"
+
+msgid "Blogs"
+msgstr "المدونة"
+
+msgid "Careers"
+msgstr "الوظائف"
+
+msgid "Contact Us"
+msgstr "اتصل بنا"
+
+msgid "Request a Quote"
+msgstr "اطلب عرض سعر"
+
+msgid "FAQs"
+msgstr "الأسئلة الشائعة"
+
+msgid "Terms"
+msgstr "الشروط العامة"
+
+msgid "Privacy Policy"
+msgstr "سياسة الخصوصية"
+
+msgid "Cookie Policy"
+msgstr "سياسة ملفات الارتباط"
+
+msgid "Legal Notice"
+msgstr "إشعار قانوني"
+
+msgid "Pages"
+msgstr "الصفحات"
+
+msgid "Our Newsletter"
+msgstr "نشرتنا البريدية"
+
+msgid "Subscribe"
+msgstr "اشترك"
+
+msgid "Navigation"
+msgstr "التنقل"
+
+msgid "Contact"
+msgstr "اتصل"
+
+msgid "Get the latest information"
+msgstr "احصل على آخر المعلومات"
+
+msgid "Accept All"
+msgstr "قبول الكل"
+
+msgid "Reject All"
+msgstr "رفض الكل"
+
+msgid "Customize"
+msgstr "تخصيص"
+
+msgid "Cookie Preferences"
+msgstr "تفضيلات ملفات الارتباط"
+
+msgid "BS GROUP | Exchange, Finance & Infrastructures"
+msgstr "BS GROUP | التبادل والمالية والبنى التحتية"
+
+msgid "BS GROUP — Integrated ecosystem: exchange, finance, infrastructures and trade."
+msgstr "BS GROUP — منظومة متكاملة: التبادل والمالية والبنى التحتية والتجارة."
+
+msgid "Loading the website"
+msgstr "جارٍ تحميل الموقع"
+
+msgid "Exchange · Finance · Infrastructures"
+msgstr "التبادل · المالية · البنى التحتية"
+
+msgid "Laying the foundation..."
+msgstr "جارٍ تجهيز الأساسات..."
+
+msgid "Raising the structure..."
+msgstr "جارٍ رفع الهيكل..."
+
+msgid "Adding final touches..."
+msgstr "جارٍ وضع اللمسات الأخيرة..."
+
+msgid "Menu"
+msgstr "القائمة"
+
+msgid "Join Our Newsletter for"
+msgstr "اشترك في نشرتنا البريدية لتصلك"
+
+msgid "Exclusive"
+msgstr "حصريًا"
+
+msgid "Deals & Construction Insights!"
+msgstr "عروضنا ونصائحنا في البناء!"
+
+msgid "Enter Email Address"
+msgstr "أدخل بريدك الإلكتروني"
+
+msgid "Let's Connect there"
+msgstr "لنتواصل معًا"
+
+msgid "Testimonial"
+msgstr "رأي عميل"
+
+msgid "Email address"
+msgstr "البريد الإلكتروني"
+
+msgid "All Rights Reserved"
+msgstr "جميع الحقوق محفوظة"
+
+msgid "User Terms & Conditions"
+msgstr "الشروط والأحكام"
+
+msgid "Back to top"
+msgstr "العودة إلى الأعلى"
+
+msgid "We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic."
+msgstr "نستخدم ملفات الارتباط لتحسين تجربة التصفح وتقديم محتوى مخصص وتحليل حركة المرور."
+
+msgid "Learn more"
+msgstr "اعرف المزيد"
+
+msgid "Close"
+msgstr "إغلاق"
+
+msgid "Strictly Necessary"
+msgstr "ملفات ضرورية"
+
+msgid "Always on"
+msgstr "مفعّلة دائمًا"
+
+msgid "Essential for the website to function properly. These cannot be disabled."
+msgstr "أساسية لعمل الموقع بشكل صحيح ولا يمكن تعطيلها."
+
+msgid "Preferences"
+msgstr "التفضيلات"
+
+msgid "Remember your settings such as language and region for a better experience."
+msgstr "تتذكر إعداداتك مثل اللغة والمنطقة لتجربة أفضل."
+
+msgid "Analytics"
+msgstr "التحليلات"
+
+msgid "Help us understand how visitors interact with the website to improve performance."
+msgstr "تساعدنا على فهم كيفية تفاعل الزوار مع الموقع لتحسين الأداء."
+
+msgid "Marketing"
+msgstr "التسويق"
+
+msgid "Used to deliver relevant ads and measure the effectiveness of campaigns."
+msgstr "تُستخدم لعرض إعلانات مناسبة وقياس فعالية الحملات."
+
+msgid "Save Preferences"
+msgstr "حفظ التفضيلات"
+
+msgid "Open chat with the assistant"
+msgstr "فتح المحادثة مع المساعد"
+
+msgid "Chat with BS GROUP Assistant"
+msgstr "محادثة مع مساعد BS GROUP"
+
+msgid "Online · replies in seconds"
+msgstr "متصل · يرد خلال ثوانٍ"
+
+msgid "Close chat"
+msgstr "إغلاق المحادثة"
+
+msgid "Our services"
+msgstr "خدماتنا"
+
+msgid "Type your message..."
+msgstr "اكتب رسالتك..."
+
+msgid "Send"
+msgstr "إرسال"
+
+msgid "Thinking..."
+msgstr "جارٍ التفكير..."
+
+msgid "Hello! I am the BS GROUP virtual assistant. Ask me about our services, quotes or timelines!"
+msgstr "مرحبًا! أنا المساعد الافتراضي لـ BS GROUP. اسألني عن خدماتنا أو عروض الأسعار أو الآجال!"
+
+msgid "Hello and welcome to BS GROUP! How can I help you today?"
+msgstr "مرحبًا بك في BS GROUP! كيف يمكنني مساعدتك اليوم؟"
+
+msgid "For a free detailed quote, fill in the contact form or call us. We reply within 24 hours!"
+msgstr "للحصول على عرض سعر مجاني ومفصّل، املأ نموذج الاتصال أو اتصل بنا. نرد خلال ٢٤ ساعة!"
+
+msgid "We cover residential and commercial construction, concrete works, renovation and pre-construction. What kind of project do you have in mind?"
+msgstr "نغطي البناء السكني والتجاري وأعمال الخرسانة والترميم وما قبل الإنشاء. ما نوع مشروعك؟"
+
+msgid "You can reach us by phone, email or via the contact form. We reply within 24 hours!"
+msgstr "يمكنك التواصل معنا عبر الهاتف أو البريد الإلكتروني أو نموذج الاتصال. نرد خلال ٢٤ ساعة!"
+
+msgid "You are most welcome! Feel free to ask if you have any other questions."
+msgstr "على الرحب والسعة! لا تتردد في طرح أي أسئلة أخرى."
+
+msgid "Thanks for your message! A member of the BS GROUP team will get back to you very soon."
+msgstr "شكرًا لرسالتك! سيتواصل معك أحد أعضاء فريق BS GROUP قريبًا جدًا."
+
+msgid "Great question! For an accurate answer, our experts can call you back — leave your details in the contact form."
+msgstr "سؤال ممتاز! للحصول على إجابة دقيقة، يمكن لخبرائنا الاتصال بك — اترك بياناتك في نموذج الاتصال."
+
+msgid "Noted! Did you know BS GROUP has completed 640+ projects with 25 years of experience?"
+msgstr "تم! هل تعلم أن BS GROUP أنجزت أكثر من ٦٤٠ مشروعًا بخبرة ٢٥ عامًا؟"
+
+msgid "Noted! Our team is reviewing your message and will send you a full answer shortly."
+msgstr "تم! يدرس فريقنا رسالتك وسيرسل لك إجابة كاملة قريبًا."
+
+msgid "This field is required."
+msgstr "هذا الحقل مطلوب."
+
+msgid "Please enter a valid email address."
+msgstr "يرجى إدخال بريد إلكتروني صحيح."
+
+msgid "Please enter a valid phone number."
+msgstr "يرجى إدخال رقم هاتف صحيح."
+
+msgid "Sending..."
+msgstr "جارٍ الإرسال..."
+
+msgid "Submitting..."
+msgstr "جارٍ التقديم..."
+
+msgid "Message sent successfully! We will get back to you soon."
+msgstr "تم إرسال الرسالة بنجاح! سنعود إليك قريبًا."
+
+msgid "Subscribed successfully! Welcome to our newsletter."
+msgstr "تم الاشتراك بنجاح! مرحبًا بك في نشرتنا البريدية."
+
+msgid "Thanks! We will notify you at launch."
+msgstr "شكرًا! سنُعلمك عند الإطلاق."
+
+msgid "Please select a position."
+msgstr "يرجى اختيار وظيفة."
+
+msgid "Please attach your resume (PDF, DOC or DOCX)."
+msgstr "يرجى إرفاق سيرتك الذاتية (PDF أو DOC أو DOCX)."
+
+msgid "Please accept the Privacy Policy to continue."
+msgstr "يرجى قبول سياسة الخصوصية للمتابعة."
+
+msgid "Application submitted! Our recruiter will contact you soon."
+msgstr "تم إرسال طلب التوظيف! سيتواصل معك مسؤول التوظيف قريبًا."
+
+msgid "Job saved to your favorites."
+msgstr "تمت إضافة الوظيفة إلى المفضلة."
+
+msgid "Job removed from your favorites."
+msgstr "تمت إزالة الوظيفة من المفضلة."
+
+msgid "File too large — maximum size is 5 MB."
+msgstr "الملف كبير جدًا — الحد الأقصى ٥ م.ب."
+
+msgid "Continue"
+msgstr "متابعة"
+
+msgid "Review My Request"
+msgstr "مراجعة طلبي"
+
+msgid "Submit Request"
+msgstr "إرسال الطلب"
+
+msgid "Please select a project type to continue."
+msgstr "يرجى اختيار نوع المشروع للمتابعة."
+
+msgid "Please accept the Privacy Policy to submit."
+msgstr "يرجى قبول سياسة الخصوصية للإرسال."
+
+msgid "Quote request submitted successfully!"
+msgstr "تم إرسال طلب عرض السعر بنجاح!"
+
+msgid "Thank You | BS GROUP"
+msgstr "شكرًا | BS GROUP"
+
+msgid "Thank You {ref} | BS GROUP"
+msgstr "شكرًا {ref} | BS GROUP"
+
+msgid "Quote Request Received"
+msgstr "تم استلام طلب عرض السعر"
+
+msgid "Message Sent Successfully"
+msgstr "تم إرسال الرسالة بنجاح"
+
+msgid "Application Submitted"
+msgstr "تم إرسال طلب التوظيف"
+
+msgid "Subscription Confirmed"
+msgstr "تم تأكيد الاشتراك"
+
+msgid "Submission Confirmed"
+msgstr "تم تأكيد الاستلام"
+
+msgid "Thank you! Our estimation team is reviewing your project and will send you a detailed, fixed-price proposal within 24 hours."
+msgstr "شكرًا! يدرس فريق التسعير لدينا مشروعك وسيرسل لك عرضًا مفصلًا بسعر ثابت خلال ٢٤ ساعة."
+
+msgid "Thank you for reaching out! Your message is in our inbox — expect a reply from our team within 24 – 48 business hours."
+msgstr "شكرًا لتواصلك! رسالتك وصلتنا — توقع ردًا من فريقنا خلال ٢٤ إلى ٤٨ ساعة عمل."
+
+msgid "Thank you for applying! Our recruitment team will review your profile and contact you within 5 business days — whatever the outcome."
+msgstr "شكرًا لتقديمك! سيدرس فريق التوظيف ملفك وسيتواصل معك خلال ٥ أيام عمل مهما كانت النتيجة."
+
+msgid "You are on the list! Exclusive deals and construction insights are on their way to your inbox. Welcome aboard!"
+msgstr "أنت على القائمة! العروض الحصرية ونصائح البناء في طريقها إلى بريدك. مرحبًا بك!"
+
+msgid "Your submission has been received. Our team will review it and get back to you shortly."
+msgstr "تم استلام طلبك. سيدرسه فريقنا وسيعود إليك قريبًا."
+
+msgid "Current choice (saved {date}): Preferences {p} · Analytics {a} · Marketing {m}."
+msgstr "الاختيار الحالي (محفوظ بتاريخ {date}): التفضيلات {p} · التحليلات {a} · التسويق {m}."
+
+msgid "on"
+msgstr "مفعّل"
+
+msgid "off"
+msgstr "معطّل"
+
+msgid "No choice saved yet — only strictly necessary cookies are running."
+msgstr "لم يُحفظ أي اختيار بعد — تعمل فقط ملفات الارتباط الضرورية."
+
+msgid "Cookie preferences saved."
+msgstr "تم حفظ تفضيلات ملفات الارتباط."
+
+msgid "Article link copied to clipboard!"
+msgstr "تم نسخ رابط المقال إلى الحافظة!"
+
+msgid "GET IN TOUCH"
+msgstr "تواصل معنا"
+
+msgid "Get in touch"
+msgstr "تواصل معنا"
+
+msgid "Ecosystem - Exchange, Finance and Infrastructures"
+msgstr "منظومة - التبادل والمالية والبنى التحتية"
+
+msgid "An integrated ecosystem,"
+msgstr "منظومة متكاملة،"
+
+msgid "Two poles of excellence"
+msgstr "قطبان للتميز"
+
+msgid "BS GROUP connects two complementary poles — Exchange & Finance, Infrastructures & Trade — to secure your flows, funding and operations."
+msgstr "تربط BS GROUP بين قطبين متكاملين — التبادل والمالية، والبنى التحتية والتجارة — لتأمين تدفقاتك وتمويلاتك وعملياتك."
+
+msgid "Hydrocarbons & accessories"
+msgstr "المحروقات وملحقاتها"
+
+msgid "Financial intermediation"
+msgstr "الوساطة المالية"
+
+msgid "Financial structuring"
+msgstr "الهيكلة المالية"
+
+msgid "Construction & infrastructures"
+msgstr "البناء والبنى التحتية"
+
+msgid "International trade"
+msgstr "التجارة الدولية"
+
+msgid "Transport & logistics"
+msgstr "النقل والخدمات اللوجستية"
+
+msgid "Previous pill"
+msgstr "الشريحة السابقة"
+
+msgid "Next pill"
+msgstr "الشريحة التالية"
+
+msgid "Projects Completed"
+msgstr "مشروعًا منجزًا"
+
+msgid "Years of Experience"
+msgstr "عامًا من الخبرة"
+
+msgid "Happy Customers"
+msgstr "عميلًا سعيدًا"
+
+msgid "Supply of fuels, lubricants and accessories, verified sourcing and controlled quality."
+msgstr "توريد الوقود ومواد التشحيم والملحقات، مصادر موثوقة وجودة مضمونة."
+
+msgid "Learn more"
+msgstr "اعرف المزيد"
+
+msgid "Learn More"
+msgstr "اعرف المزيد"
+
+msgid "Qualified matchmaking between project sponsors and financial partners."
+msgstr "توفيق مؤهل بين أصحاب المشاريع والشركاء الماليين."
+
+msgid "Deal structuring and engineering: structuring, risks, closing."
+msgstr "هيكلة الصفقات وهندستها: الهيكلة والمخاطر والإغلاق."
+
+msgid "Construction, infrastructures and renovation: timelines, quality, HSSE."
+msgstr "البناء والبنى التحتية والترميم: الآجال والجودة والسلامة."
+
+msgid "Import-export, sourcing and customs compliance across your corridors."
+msgstr "الاستيراد والتصدير والتوريد والامتثال الجمركي عبر ممراتك."
+
+msgid "Transport, warehousing and distribution with end-to-end tracking."
+msgstr "النقل والتخزين والتوزيع مع تتبع شامل."
+
+msgid "Hydrocarbon industrial site"
+msgstr "موقع صناعي للمحروقات"
+
+msgid "Handshake between financial partners"
+msgstr "مصافحة بين شركاء ماليين"
+
+msgid "Institutional headquarters, financial structuring"
+msgstr "مقر مؤسسي، هيكلة مالية"
+
+msgid "Construction engineers on site"
+msgstr "مهندسو بناء في الموقع"
+
+msgid "Transport and logistics operations"
+msgstr "عمليات النقل والخدمات اللوجستية"
+
+msgid "Engineers with site helmets reviewing plans on site"
+msgstr "مهندسون بخوذات الموقع يراجعون المخططات في الموقع"
+
+msgid "Blog"
+msgstr "مدونة"
+
+msgid "Crafting Excellence"
+msgstr "صناعة التميز"
+
+msgid "in Every Project"
+msgstr "في كل مشروع"
+
+msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+
+msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+
+msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore..."
+msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore..."
+
+msgid "Our Mission"
+msgstr "مهمتنا"
+
+msgid "Step 1"
+msgstr "الخطوة 1"
+
+msgid "Step 2"
+msgstr "الخطوة 2"
+
+msgid "Step 3"
+msgstr "الخطوة 3"
+
+msgid "Consultation & Planning"
+msgstr "الاستشارة والتخطيط"
+
+msgid "Design & Construction"
+msgstr "التصميم والبناء"
+
+msgid "Final Inspection & Handover"
+msgstr "الفحص النهائي والتسليم"
+
+msgid "Advanced Technology"
+msgstr "تقنية متقدمة"
+
+msgid "Expert Team"
+msgstr "فريق خبير"
+
+msgid "On-Time Delivery"
+msgstr "تسليم في الموعد"
+
+msgid "Award Winning"
+msgstr "حائز على جوائز"
+
+msgid "Chief Executive Officer"
+msgstr "المدير العام"
+
+msgid "Civil Engineer"
+msgstr "مهندس مدني"
+
+msgid "Structural Engineer"
+msgstr "مهندس إنشائي"
+
+msgid "Senior Structural Engineer"
+msgstr "مهندس إنشائي أول"
+
+msgid "Site Project Manager"
+msgstr "مدير مشروع موقع"
+
+msgid "Architectural Designer"
+msgstr "مصمم معماري"
+
+msgid "How We Work"
+msgstr "منهجيتنا"
+
+msgid "How We"
+msgstr "كيف"
+
+msgid "Get It Done"
+msgstr "ننجز مشاريعكم"
+
+msgid "View All Projects"
+msgstr "عرض كل المشاريع"
+
+msgid "Why Choose Us"
+msgstr "لماذا تختارنا"
+
+msgid "Building Trust,"
+msgstr "نبني الثقة،"
+
+msgid "Delivering Excellence"
+msgstr "ونسلّم التميز"
+
+msgid "Meet Our Team"
+msgstr "تعرف على فريقنا"
+
+msgid "Meet the Faces"
+msgstr "الوجوه"
+
+msgid "Behind the Structures"
+msgstr "وراء المنشآت"
+
+msgid "View All"
+msgstr "عرض الكل"
+
+msgid "Experience Shared by"
+msgstr "تجربة يشاركها"
+
+msgid "Our Clients"
+msgstr "عملاؤنا"
+
+msgid "Testimonial pages"
+msgstr "صفحات آراء العملاء"
+
+msgid "Question?"
+msgstr "سؤال؟"
+
+msgid "Look here."
+msgstr "الجواب هنا."
+
+msgid "Our team will answer all your questions. We will ensure a quick response."
+msgstr "سيجيب فريقنا على جميع أسئلتك. نضمن ردًا سريعًا."
+
+msgid "News & Blogs"
+msgstr "الأخبار والمدونة"
+
+msgid "Our Latest"
+msgstr "أحدث"
+
+msgid "View All Blogs"
+msgstr "عرض كل المقالات"
+
+msgid "Read More"
+msgstr "اقرأ المزيد"
+
+msgid "Join Our Team"
+msgstr "انضم إلى فريقنا"
+
+msgid "Career"
+msgstr "المسار المهني"
+
+msgid "Opportunities"
+msgstr "الفرص"
+
+msgid "Grow with us — explore our latest open positions and find the role where you will thrive."
+msgstr "تطور معنا — اكتشف أحدث وظائفنا الشاغرة وجد الدور الذي ستتألق فيه."
+
+msgid "View All Jobs"
+msgstr "عرض كل الوظائف"
+
+msgid "Have a Project Idea?"
+msgstr "لديك فكرة مشروع؟"
+
+msgid "Let's Talk!"
+msgstr "لنتحدث!"
+
+msgid "First Name"
+msgstr "الاسم الأول"
+
+msgid "Ex. John"
+msgstr "مثال: أحمد"
+
+msgid "Last Name"
+msgstr "اسم العائلة"
+
+msgid "Ex. Doe"
+msgstr "مثال: محمد"
+
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+msgid "Phone Number"
+msgstr "رقم الهاتف"
+
+msgid "Enter Phone Number"
+msgstr "أدخل رقم الهاتف"
+
+msgid "Subject"
+msgstr "الموضوع"
+
+msgid "Enter subject here..."
+msgstr "أدخل الموضوع هنا..."
+
+msgid "Your Message"
+msgstr "رسالتك"
+
+msgid "Enter here..."
+msgstr "أدخل هنا..."
+
+msgid "Send Message"
+msgstr "إرسال الرسالة"
+
+msgid "Address"
+msgstr "العنوان"
+
+msgid "Phone"
+msgstr "الهاتف"
+
+msgid "Open Time"
+msgstr "أوقات العمل"
+
+msgid "Monday – Friday"
+msgstr "الاثنين – الجمعة"
+
+msgid "Saturday – Sunday"
+msgstr "السبت – الأحد"
+
+msgid "Stay Connected"
+msgstr "ابق على تواصل"
+
+msgid "Blue glass office tower"
+msgstr "برج مكاتب زجاجي أزرق"
+
+msgid "Location"
+msgstr "الموقع"
+
+msgid "Total Area"
+msgstr "المساحة الإجمالية"
+
+msgid "Duration"
+msgstr "المدة"
+
+msgid "Residential Construction"
+msgstr "البناء السكني"
+
+msgid "Modern architectural villa"
+msgstr "فيلا معمارية حديثة"
+
+msgid "Construction Trends"
+msgstr "اتجاهات البناء"
+
+msgid "How Technology is Revolutionizing Construction"
+msgstr "كيف تُحدث التقنية ثورة في البناء"
+
+msgid "5 Essential Steps for a Successful Construction"
+msgstr "٥ خطوات أساسية لبناء ناجح"
+
+msgid "Site Safety Tips: Ensuring a Smooth Construction"
+msgstr "نصائح السلامة في الموقع: لضمان بناء سلس"
+
+msgid "Workers and crane on a modern construction site"
+msgstr "عمال ورافعة في موقع بناء حديث"
+
+msgid "Workers in safety gear on construction site"
+msgstr "عمال بمعدات السلامة في موقع البناء"
+
+msgid "Project Management"
+msgstr "إدارة المشاريع"
+
+msgid "Apply Now"
+msgstr "قدّم الآن"
+
+msgid "Full Time"
+msgstr "دوام كامل"
+
+msgid "Remote"
+msgstr "عن بُعد"
+
+msgid "Our divisions & expertise"
+msgstr "أقطابنا وخبراتنا"
+
+msgid "Two divisions,"
+msgstr "قطبان،"
+
+msgid "six areas of expertise"
+msgstr "ست خبرات"
+
+msgid "Discover the ecosystem"
+msgstr "اكتشف المنظومة"
+
+msgid "Team in helmets working together on plans"
+msgstr "فريق بالخوذات يعمل معًا على المخططات"
+
+msgid "Construction crew in yellow helmets"
+msgstr "طاقم بناء بخوذات صفراء"
+
+msgid "Your Question, Our Priority"
+msgstr "سؤالك أولويتنا"
+
+msgid "24/7 Service"
+msgstr "خدمة ٢٤/٧"
+
+msgid "Close video"
+msgstr "إغلاق الفيديو"
+
+msgid "A project? Let's talk about it —"
+msgstr "لديك مشروع؟ لنتحدث عنه —"
+
+msgid "reply within 24 business hours."
+msgstr "الرد خلال ٢٤ ساعة عمل."
+
+msgid "Who We Are"
+msgstr "من نحن"
+
+msgid "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat — from financing to delivery, our teams secure every link in your projects."
+msgstr "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat — من التمويل إلى التسليم، تؤمّن فرقنا كل حلقة في مشاريعكم."
+
+msgid "Our Vision"
+msgstr "رؤيتنا"
+
+msgid "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse."
+msgstr "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse."
+
+msgid "Years"
+msgstr "عامًا"
+
+msgid "of Experience"
+msgstr "من الخبرة"
+
+msgid "Previous content"
+msgstr "المحتوى السابق"
+
+msgid "Next content"
+msgstr "المحتوى التالي"
+
+msgid "Our Expertise"
+msgstr "خبراتنا"
+
+msgid "Handshake between two executives in a modern atrium"
+msgstr "مصافحة بين مديرين في بهو حديث"
+
+msgid "Sitemap"
+msgstr "خريطة الموقع"
+
+msgid "Watch the video"
+msgstr "شاهد الفيديو"
+
+msgid "Video presentation"
+msgstr "عرض تقديمي بالفيديو"
+
+msgid "Video playback"
+msgstr "تشغيل الفيديو"
+
+msgid "Step"
+msgstr "الخطوة"
+
+msgid "Milestones That"
+msgstr "محطات"
+
+msgid "Define Us"
+msgstr "تُعرّف بنا"
+
+msgid "-- Watch The Video"
+msgstr "-- شاهد الفيديو"
+
+msgid "Watch How We Bring"
+msgstr "شاهد كيف نُحيي"
+
+msgid "Plans to Life"
+msgstr "المخططات"
+
+msgid "Quote request"
+msgstr "طلب عرض سعر"
+
+msgid "Request this service"
+msgstr "اطلب هذه الخدمة"
+
+msgid "Request a similar project"
+msgstr "اطلب مشروعًا مشابهًا"
+
+msgid "Leave us your contact details: our team will call you back within 24 business hours with a proposal."
+msgstr "اترك لنا بيانات الاتصال بك: سيعاود فريقنا الاتصال بك خلال ٢٤ ساعة عمل مع عرض."
+
+msgid "Name"
+msgstr "الاسم"
+
+msgid "Your name"
+msgstr "اسمك"
+
+msgid "you@example.com"
+msgstr "you@example.com"
+
+msgid "Your need"
+msgstr "حاجتك"
+
+msgid "Describe your need in a few lines…"
+msgstr "صف حاجتك في بضعة أسطر…"
+
+msgid "Please fill in all fields (valid email and phone)."
+msgstr "يرجى ملء جميع الحقول (بريد إلكتروني وهاتف صحيحين)."
+
+msgid "Subject"
+msgstr "الموضوع"

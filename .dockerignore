@@ -1,0 +1,84 @@
+# BS GROUP — .dockerignore
+# Exclure tout ce qui n'est pas nécessaire pour l'image de production
+
+# Git & CI
+.git
+.gitignore
+.github
+.gitlab-ci.yml
+
+# Environnement local
+.env
+.env.*
+!.env.example
+!.env.prod.example
+
+# Base de données locale
+db.sqlite3
+*.sqlite3
+
+# Cache Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache
+.mypy_cache
+.ruff_cache
+
+# Virtual environments
+venv
+env
+.env.local
+.venv
+
+# IDE & OS
+.vscode
+.idea
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Media & static locaux (générés en build/runtime)
+media/
+staticfiles/
+static/
+
+# Coverage & tests
+.coverage
+htmlcov/
+.tox/
+.coverage.*
+
+# Documentation locale
+README.md
+SESSION.md
+*.md
+docs/
+
+# Docker
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+nginx/
+
+# Node / front (pas de build Node dans l'image Python)
+node_modules/
+package*.json
+*.lock
+
+# Backup & temp
+*.bak
+*.tmp
+*.temp
+backups/
+
+# Traductions : inclure .po pour compilemessages en build
+# locale/*/LC_MESSAGES/*.po
+# !locale/*/LC_MESSAGES/django.mo

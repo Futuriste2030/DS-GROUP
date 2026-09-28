@@ -1,0 +1,21 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /media/careers/resumes/
+Disallow: /thanks/
+Disallow: /thank-devis/
+Disallow: /coming/
+
+# Allow JS/CSS/images so Google can render pages fully
+Allow: /static/
+Allow: /media/site/
+Allow: /media/hero/
+Allow: /media/about/
+Allow: /media/services/
+Allow: /media/projects/
+Allow: /media/blog/
+Allow: /media/team/
+Allow: /media/images/
+
+# URL canonique unique : le sitemap liste toujours https://bsgroup.ml/...
+# (voir core/sitemaps.py). Mettre à jour CANONICAL_DOMAIN en prod si besoin.
+Sitemap: https://bsgroup.ml/sitemap.xml

@@ -1,0 +1,69 @@
+# BS GROUP — docker-compose production (SQLite)
+# Usage: docker compose -f docker-compose.yml --env-file .env.prod up -d
+
+services:
+  # Application Django (Gunicorn)
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runtime
+    container_name: bsgroup-web
+    restart: unless-stopped
+    env_file: .env.prod
+    environment:
+      DATABASE_URL: sqlite:///data/db.sqlite3
+      DJANGO_SETTINGS_MODULE: bsgroup.settings
+    volumes:
+      - staticfiles:/app/staticfiles
+      - media:/app/media
+      - sqlite_data:/data
+    expose:
+      - "8000"
+
+  # Reverse proxy Nginx + SSL (Let's Encrypt via certbot)
+  nginx:
+    image: nginx:alpine
+    container_name: bsgroup-nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./nginx/certbot/conf:/etc/letsencrypt:ro
+      - ./nginx/certbot/www:/var/www/certbot:ro
+      - staticfiles:/app/staticfiles:ro
+      - media:/app/media:ro
+    depends_on:
+      - web
+    command: >
+      /bin/sh -c "
+        nginx -g 'daemon off;'
+      "
+
+  # Certbot pour renouvellement auto Let's Encrypt
+  certbot:
+    image: certbot/certbot:latest
+    container_name: bsgroup-certbot
+    restart: unless-stopped
+    volumes:
+      - ./nginx/certbot/conf:/etc/letsencrypt
+      - ./nginx/certbot/www:/var/www/certbot
+    entrypoint: >
+      /bin/sh -c "
+        trap exit TERM;
+        while :; do
+          certbot renew --webroot -w /var/www/certbot --quiet || true;
+          sleep 12h & wait $$!;
+        done
+      "
+
+volumes:
+  staticfiles:
+  media:
+  sqlite_data:
+
+networks:
+  default:
+    name: bsgroup-network

@@ -1,0 +1,344 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Coming Soon | BS GROUP{% endblock %}
+{% block meta_description %}BS GROUP — Notre nouveau site est en construction. Laissez votre email pour être prévenu du lancement.{% endblock %}
+{% block body_class %}bg-white font-sans antialiased text-[#0b1f35] overflow-x-hidden{% endblock %}
+
+{% block content %}
+<div
+        class="relative z-10 flex-1 flex items-center justify-center px-6 py-12 sm:py-14"
+      >
+        <div class="w-full max-w-3xl text-center">
+          <!-- Badge -->
+          <span
+            class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#c9a227]/10 border border-[#c9a227]/25 text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#c9a227]"
+          >
+            <i data-lucide="hard-hat" class="w-4 h-4"></i>
+            Site Under Construction
+          </span>
+
+          <!-- Titre -->
+          <h1
+            class="relative mt-5 text-[34px] sm:text-[46px] md:text-[54px] font-black tracking-tight leading-[1.08]"
+          >
+            <span
+              class="sparkle absolute -left-4 sm:-left-10 top-0 text-[#c9a227]"
+              aria-hidden="true"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-6 h-6 sm:w-9 sm:h-9"
+              >
+                <path
+                  d="M12 0c.9 6.9 4.2 10.2 12 12-7.8 1.8-11.1 5.1-12 12-.9-6.9-4.2-10.2-12-12C7.8 10.2 11.1 6.9 12 0Z"
+                />
+              </svg>
+            </span>
+            <span
+              class="sparkle absolute -right-3 sm:-right-8 bottom-8 text-[#c9a227]"
+              style="animation-delay: 0.8s"
+              aria-hidden="true"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-4 h-4 sm:w-6 sm:h-6"
+              >
+                <path
+                  d="M12 0c.9 6.9 4.2 10.2 12 12-7.8 1.8-11.1 5.1-12 12-.9-6.9-4.2-10.2-12-12C7.8 10.2 11.1 6.9 12 0Z"
+                />
+              </svg>
+            </span>
+            <span class="text-[#0b1f35]">We're Building</span>
+            <span class="block text-[#c9a227]">Something Great</span>
+          </h1>
+
+          <p
+            class="mt-4 max-w-lg mx-auto text-[15px] text-slate-500 leading-relaxed"
+          >
+            Our new website is on the drawing board. Leave your email and be the
+            first to know when the doors open — plus an exclusive launch offer.
+          </p>
+
+          <div
+            id="countdown"
+            class="mt-9 grid grid-cols-4 gap-2.5 sm:gap-4 max-w-xl mx-auto"
+          >
+            <div
+              class="bg-white border border-gray-200 rounded-2xl py-4 sm:py-6 px-1 shadow-sm"
+            >
+              <div
+                id="cd-days"
+                class="text-[26px] sm:text-[42px] font-black text-[#0b1f35] leading-none tabular-nums"
+              >
+                00
+              </div>
+              <div
+                class="mt-1.5 sm:mt-2 text-[9px] sm:text-[11px] font-bold uppercase tracking-wider text-slate-400"
+              >
+                Days
+              </div>
+            </div>
+            <div
+              class="bg-white border border-gray-200 rounded-2xl py-4 sm:py-6 px-1 shadow-sm"
+            >
+              <div
+                id="cd-hours"
+                class="text-[26px] sm:text-[42px] font-black text-[#0b1f35] leading-none tabular-nums"
+              >
+                00
+              </div>
+              <div
+                class="mt-1.5 sm:mt-2 text-[9px] sm:text-[11px] font-bold uppercase tracking-wider text-slate-400"
+              >
+                Hours
+              </div>
+            </div>
+            <div
+              class="bg-white border border-gray-200 rounded-2xl py-4 sm:py-6 px-1 shadow-sm"
+            >
+              <div
+                id="cd-minutes"
+                class="text-[26px] sm:text-[42px] font-black text-[#0b1f35] leading-none tabular-nums"
+              >
+                00
+              </div>
+              <div
+                class="mt-1.5 sm:mt-2 text-[9px] sm:text-[11px] font-bold uppercase tracking-wider text-slate-400"
+              >
+                Minutes
+              </div>
+            </div>
+            <div
+              class="bg-[#c9a227] rounded-2xl py-4 sm:py-6 px-1 shadow-md shadow-orange-500/25"
+            >
+              <div
+                id="cd-seconds"
+                class="text-[26px] sm:text-[42px] font-black text-white leading-none tabular-nums"
+              >
+                00
+              </div>
+              <div
+                class="mt-1.5 sm:mt-2 text-[9px] sm:text-[11px] font-bold uppercase tracking-wider text-orange-100"
+              >
+                Seconds
+              </div>
+            </div>
+          </div>
+
+          <!-- Fallback lancement atteint (masqué) -->
+          <div id="cd-live" class="hidden mt-9">
+            <a href="{% url 'main:index' %}" class="group inline-flex items-center gap-1.5">
+              <span
+                class="px-8 py-4 rounded-full bg-[#c9a227] text-white text-base font-bold shadow-lg shadow-orange-500/30 group-hover:bg-[#d9bc6b] transition-colors"
+                >We're Live! Enter the Site</span
+              >
+              <span
+                class="w-[52px] h-[52px] rounded-full bg-[#0b1f35] text-white flex items-center justify-center group-hover:bg-[#c9a227] transition-colors"
+              >
+                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+              </span>
+            </a>
+          </div>
+
+          <div class="mt-9 max-w-xl mx-auto text-left">
+            <div
+              class="flex items-center justify-between text-[11px] font-bold uppercase tracking-wider mb-2"
+            >
+              <span class="text-slate-400 flex items-center gap-1.5">
+                <i
+                  data-lucide="hard-hat"
+                  class="w-3.5 h-3.5 text-[#c9a227]"
+                ></i>
+                Construction Progress
+              </span>
+              <span id="cs-percent" class="text-[#c9a227] tabular-nums"
+                >0%</span
+              >
+            </div>
+            <span
+              class="preloader-ruler block w-full"
+              aria-hidden="true"
+            ></span>
+            <div
+              class="mt-2 h-2 w-full rounded-full bg-gray-200 overflow-hidden"
+            >
+              <div
+                id="cs-bar"
+                class="h-full w-0 rounded-full bg-[#c9a227] transition-all duration-300"
+              ></div>
+            </div>
+          </div>
+
+          <form
+            id="notify-form"
+            class="mt-9 max-w-md mx-auto flex items-center gap-2 bg-gray-100 border border-gray-200 rounded-full p-1.5 pl-2"
+            novalidate
+          >
+            <span
+              class="w-9 h-9 rounded-full bg-[#0b1f35] text-white flex items-center justify-center shrink-0"
+            >
+              <i data-lucide="mail" class="w-4 h-4"></i>
+            </span>
+            <input
+              id="notify-email"
+              type="email"
+              placeholder="Enter Email Address"
+              class="flex-1 min-w-0 bg-transparent text-sm text-[#0b1f35] placeholder:text-slate-400 outline-none"
+            />
+            <button
+              type="submit"
+              class="px-6 py-2.5 rounded-full bg-[#c9a227] text-white text-sm font-bold shadow-md shadow-orange-500/25 hover:bg-[#d9bc6b] transition-colors shrink-0"
+            >
+              Notify Me
+            </button>
+          </form>
+
+          <!-- Réseaux sociaux -->
+          <div class="mt-8 flex items-center justify-center gap-2.5">
+            <a
+              href="#"
+              aria-label="Facebook"
+              class="w-9 h-9 rounded-full border border-gray-300 text-[#0b1f35] flex items-center justify-center hover:bg-[#c9a227] hover:border-[#c9a227] hover:text-white transition-colors"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-4 h-4"
+                aria-hidden="true"
+              >
+                <path
+                  d="M24 12.073C24 5.446 18.627.073 12 .073S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                /></svg
+            ></a>
+            <a
+              href="#"
+              aria-label="Twitter / X"
+              class="w-9 h-9 rounded-full border border-gray-300 text-[#0b1f35] flex items-center justify-center hover:bg-[#c9a227] hover:border-[#c9a227] hover:text-white transition-colors"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-4 h-4"
+                aria-hidden="true"
+              >
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644z"
+                /></svg
+            ></a>
+            <a
+              href="#"
+              aria-label="Pinterest"
+              class="w-9 h-9 rounded-full border border-gray-300 text-[#0b1f35] flex items-center justify-center hover:bg-[#c9a227] hover:border-[#c9a227] hover:text-white transition-colors"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+                <path
+                  d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.406.042-3.442.218-.936 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.024 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.208 0 1.031.397 2.137.893 2.739a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.608 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"
+                />
+              </svg>
+            </a>
+            <a
+              href="#"
+              aria-label="Instagram"
+              class="w-9 h-9 rounded-full border border-gray-300 text-[#0b1f35] flex items-center justify-center hover:bg-[#c9a227] hover:border-[#c9a227] hover:text-white transition-colors"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-4 h-4"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                /></svg
+            ></a>
+            <a
+              href="#"
+              aria-label="YouTube"
+              class="w-9 h-9 rounded-full border border-gray-300 text-[#0b1f35] flex items-center justify-center hover:bg-[#c9a227] hover:border-[#c9a227] hover:text-white transition-colors"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-4 h-4"
+                aria-hidden="true"
+              >
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                /></svg
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="hidden md:block absolute bottom-16 right-4 lg:right-14 z-0 pointer-events-none"
+        aria-hidden="true"
+      >
+        <svg
+          viewBox="0 0 230 190"
+          class="w-[150px] lg:w-[175px] h-auto"
+          fill="none"
+        >
+          <path
+            d="M26 126 L2 132 C-6 150 4 168 22 170 L34 170 L30 128 Z"
+            fill="#475569"
+          />
+          <path
+            d="M28 50 L13 128"
+            stroke="#c9a227"
+            stroke-width="13"
+            stroke-linecap="round"
+          />
+          <path
+            d="M60 94 L28 50"
+            stroke="#c9a227"
+            stroke-width="15"
+            stroke-linecap="round"
+          />
+          <path
+            d="M70 90 L42 56"
+            stroke="#0b1f35"
+            stroke-width="4"
+            stroke-linecap="round"
+          />
+          <path
+            d="M32 64 L18 100"
+            stroke="#0b1f35"
+            stroke-width="4"
+            stroke-linecap="round"
+          />
+          <rect x="130" y="58" width="11" height="24" rx="5" fill="#0b1f35" />
+          <rect x="52" y="76" width="96" height="62" rx="12" fill="#c9a227" />
+          <path
+            d="M124 76 h12 a12 12 0 0 1 12 12 v38 a12 12 0 0 1 -12 12 h-12 Z"
+            fill="#d9bc6b"
+          />
+          <rect
+            x="62"
+            y="86"
+            width="46"
+            height="36"
+            rx="8"
+            fill="#ffffff"
+            opacity=".92"
+          />
+          <rect
+            x="82"
+            y="86"
+            width="4"
+            height="36"
+            fill="#c9a227"
+            opacity=".55"
+          />
+          <rect x="60" y="134" width="72" height="18" rx="4" fill="#0b1f35" />
+          <rect x="28" y="148" width="120" height="38" rx="19" fill="#0b1f35" />
+          <circle cx="52" cy="167" r="10" fill="#1e4569" />
+          <circle cx="52" cy="167" r="3.5" fill="#475569" />
+          <circle cx="80" cy="167" r="10" fill="#1e4569" />
+          <circle cx="80" cy="167" r="3.5" fill="#475569" />
+          <circle cx="108" cy="167" r="10" fill="#1e4569" />
+          <circle cx="108" cy="167" r="3.5" fill="#475569" />
+          <circle cx="130" cy="167" r="10" fill="#1e4569" />
+          <circle cx="130" cy="167" r="3.5" fill="#475569" />
+        </svg>
+      </div>
+{% endblock %}

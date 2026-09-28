@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head><meta charset="UTF-8"><title>Nouvelle candidature — {{ poste }} ({{ reference }})</title></head>
+<body style="margin:0;padding:0;background-color:#eef2f7;font-family:Arial,Helvetica,sans-serif;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#eef2f7;padding:32px 12px;"><tr><td align="center">
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="max-width:600px;width:100%;background-color:#ffffff;border-radius:8px;overflow:hidden;">
+<tr><td style="padding:20px 40px;background-color:#0b1f35;"><p style="margin:0;font-size:16px;font-weight:bold;color:#ffffff;">Nouvelle candidature — <span style="color:#c9a227;">{{ poste }}</span> · {{ reference }}</p></td></tr>
+<tr><td style="padding:28px 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr><td style="padding:8px 0;font-size:13px;color:#64748b;width:140px;">Candidat</td><td style="padding:8px 0;font-size:15px;font-weight:bold;color:#0b1f35;">{{ nom }}</td></tr>
+<tr><td style="padding:8px 0;font-size:13px;color:#64748b;">Email</td><td style="padding:8px 0;font-size:14px;"><a href="mailto:{{ email }}" style="color:#c9a227;text-decoration:none;">{{ email }}</a></td></tr>
+<tr><td style="padding:8px 0;font-size:13px;color:#64748b;">Téléphone</td><td style="padding:8px 0;font-size:14px;color:#0b1f35;">{{ telephone }}</td></tr>
+<tr><td style="padding:8px 0;font-size:13px;color:#64748b;">Référence</td><td style="padding:8px 0;font-size:14px;font-weight:bold;color:#0b1f35;">{{ reference }}</td></tr>
+<tr><td style="padding:8px 0;font-size:13px;color:#64748b;">Date</td><td style="padding:8px 0;font-size:14px;color:#0b1f35;">{{ date }}</td></tr>
+</table>
+<div style="border-top:1px solid #e2e8f0;margin:20px 0;"></div>
+<p style="margin:0 0 8px;font-size:13px;font-weight:bold;color:#0b1f35;text-transform:uppercase;letter-spacing:0.5px;">Message du candidat</p>
+<p style="margin:0 0 24px;font-size:14px;line-height:22px;color:#374151;background-color:#f8fafc;padding:16px 20px;border-left:3px solid #c9a227;border-radius:4px;">{{ message }}</p>
+<table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="#c9a227" style="border-radius:6px;"><a href="{{ site_settings.base_url }}{{ cv_url }}" style="display:inline-block;padding:12px 28px;font-size:14px;font-weight:bold;color:#ffffff;text-decoration:none;">Consulter le CV</a></td></tr></table>
+</td></tr>
+<tr><td style="padding:16px 40px;background-color:#f8fafc;border-top:1px solid #e2e8f0;"><p style="margin:0;font-size:11px;color:#94a3b8;">Notification automatique — {{ site_settings.base_url }} · Réf {{ reference }}</p></td></tr>
+</table></td></tr></table></body></html>

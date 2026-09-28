@@ -1,0 +1,218 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}{% trans "Our Projects" %} | BS GROUP{% endblock %}
+{% block meta_description %}{% trans "BS GROUP — Discover our completed projects: residential, commercial and renovation builds." %}{% endblock %}
+
+{% block content %}
+<section
+      id="page-header"
+      class="page-header bg-[#f5f6f9]"
+      data-page-title="{% trans 'Our Projects' %}"
+    >
+      <div class="ruler-ticks w-full" aria-hidden="true"></div>
+
+      <div class="max-w-7xl mx-auto px-6 pt-14 pb-16 text-center">
+        <h1
+          id="page-header-title"
+          class="text-[40px] md:text-[48px] font-black text-[#0b1f35] tracking-tight leading-tight"
+        >
+          {% trans "Our Projects" %}
+        </h1>
+        <nav aria-label="{% trans 'Breadcrumb' %}" class="mt-3.5">
+          <ol
+            class="flex items-center justify-center gap-2.5 text-[15px] font-semibold"
+          >
+            <li>
+              <a
+                href="{% url 'main:index' %}"
+                class="text-[#0b1f35] hover:text-[#c9a227] transition-colors"
+                >{% trans "Home" %}</a
+              >
+            </li>
+            <li
+              aria-hidden="true"
+              class="text-slate-400 font-normal select-none"
+            >
+              /
+            </li>
+            <li
+              id="page-header-current"
+              class="text-[#c9a227]"
+              aria-current="page"
+            >
+              {% trans "Our Projects" %}
+            </li>
+          </ol>
+        </nav>
+      </div>
+
+      <div class="page-header-band w-full" aria-hidden="true"></div>
+    </section>
+
+      <section id="projects-grid" class="bg-[#f5f6f9] py-16 md:py-20 relative overflow-hidden">
+      <span class="section-tag section-tag--dark" aria-hidden="true">Projects</span>
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- En-tête -->
+        <div class="text-center mb-10">
+          <div class="flex items-center justify-center gap-3 mb-4">
+            <i data-lucide="sparkles" class="w-4 h-4 text-[#c9a227] shrink-0"></i>
+            <span class="text-[15px] font-semibold text-[#0b1f35]"
+              >{% trans "Recent Projects" %}</span
+            >
+          </div>
+          <h2
+            class="text-[34px] sm:text-[42px] md:text-[46px] font-black tracking-tight leading-[1.12]"
+          >
+            <span class="text-[#0b1f35]">{% trans "Explore Our" %} </span
+            ><span class="text-[#c9a227]">{% trans "Completed Projects" %}</span>
+          </h2>
+        </div>
+
+        <!-- Filtres -->
+        <div
+          id="pp-filters"
+          class="tabs-scroll flex flex-wrap items-center justify-center gap-2.5 mb-12"
+        >
+          <button
+            type="button"
+            data-pp-filter="all"
+            class="pp-filter pp-active px-6 py-2.5 rounded-full text-xs font-bold bg-white border border-gray-200 text-[#0b1f35] shadow-sm transition-all"
+          >
+            {% trans "All Projects" %}
+          </button>
+          <button
+            type="button"
+            data-pp-filter="commercial"
+            class="pp-filter px-6 py-2.5 rounded-full text-xs font-bold bg-white border border-gray-200 text-[#0b1f35] shadow-sm transition-all"
+          >
+            {% trans "Commercial" %}
+          </button>
+          <button
+            type="button"
+            data-pp-filter="residential"
+            class="pp-filter px-6 py-2.5 rounded-full text-xs font-bold bg-white border border-gray-200 text-[#0b1f35] shadow-sm transition-all"
+          >
+            {% trans "Residential" %}
+          </button>
+          <button
+            type="button"
+            data-pp-filter="renovation"
+            class="pp-filter px-6 py-2.5 rounded-full text-xs font-bold bg-white border border-gray-200 text-[#0b1f35] shadow-sm transition-all"
+          >
+            {% trans "Renovation" %}
+          </button>
+        </div>
+
+        <!-- Grille des projets -->
+        <div
+          id="pp-grid"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7"
+        >
+          {% for p in projects %}
+          <article
+            data-pp-item
+            data-category="{{ p.category|slugify }}"
+            class="pp-card group bg-white rounded-[22px] p-3.5 pb-6 shadow-sm hover:shadow-xl transition-all duration-300"
+          >
+            <div class="relative">
+              <div class="h-[220px] rounded-[14px] overflow-hidden">
+                <img
+                  src="{% if p.image %}{{ p.image.url }}{% else %}https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000&auto=format&fit=crop{% endif %}"
+                  alt="{{ p.title }}"
+                  class="{% if forloop.counter|divisibleby:2 %}project-img--br{% else %}project-img--tl{% endif %} w-full h-full object-cover pp-img"
+                />
+              </div>
+              <div class="absolute bottom-3 left-3 flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 rounded-full border border-white/50 bg-[#0b1f35]/60 backdrop-blur-sm text-[10.5px] font-semibold text-white"
+                  >{{ p.period }}</span
+                >
+                <span
+                  class="px-3 py-1 rounded-full border border-white/50 bg-[#0b1f35]/60 backdrop-blur-sm text-[10.5px] font-semibold text-white"
+                  >{{ p.category }}</span
+                >
+              </div>
+            </div>
+            <div class="pt-5 px-2">
+              <h3 class="text-lg font-extrabold text-[#0b1f35]"><a href="{% url 'projects:projet-detail' p.slug %}" class="hover:text-[#c9a227] transition-colors">{{ p.title }}</a></h3>
+              <ul class="mt-3.5 space-y-2 text-[12px] text-slate-500">
+                <li class="flex items-center gap-2.5">
+                  <span
+                    class="w-5 h-5 rounded-full bg-[#c9a227] text-white flex items-center justify-center shrink-0"
+                    ><i data-lucide="map-pin" class="w-2.5 h-2.5"></i
+                  ></span>
+                  {{ p.location }}
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <span
+                    class="w-5 h-5 rounded-full bg-[#c9a227] text-white flex items-center justify-center shrink-0"
+                    ><i data-lucide="clock" class="w-2.5 h-2.5"></i
+                  ></span>
+                  {% trans "Duration" %} : {{ p.duration }}
+                </li>
+              </ul>
+              <a
+                href="{% url 'projects:projet-detail' p.slug %}"
+                class="mt-4.5 inline-flex items-center gap-2 text-[13px] font-bold text-[#c9a227]"
+              >
+                {% trans "Learn more" %}
+                <i
+                  data-lucide="arrow-right"
+                  class="w-3.5 h-3.5 transition-transform group-hover:translate-x-1"
+                ></i>
+              </a>
+            </div>
+          </article>
+          {% empty %}
+          <p class="col-span-full text-center text-slate-500 text-sm">{% trans "No projects yet." %}</p>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#f5f6f9] pb-16 md:pb-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div
+          class="relative bg-[#0b1f35] rounded-[28px] px-8 py-10 md:px-14 md:py-12 overflow-hidden"
+        >
+          <span
+            class="features-hatch absolute inset-0"
+            aria-hidden="true"
+          ></span>
+
+          <div
+            class="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8"
+          >
+            <div class="max-w-xl">
+              <h2
+                class="text-[26px] md:text-[32px] font-black text-white tracking-tight leading-tight"
+              >
+                {% trans "Ready to Start Your" %}
+                <span class="text-[#c9a227]">{% trans "Dream Project?" %}</span>
+              </h2>
+              <p class="mt-3 text-sm text-slate-400 leading-relaxed">
+                {% trans "Join 450+ happy customers. Let's turn your vision into a landmark — on time, on budget, beyond expectations." %}
+              </p>
+            </div>
+
+            <a
+              href="{% url 'contact:contact' %}"
+              class="group flex items-center gap-1.5 shrink-0"
+            >
+              <span
+                class="px-7 py-3.5 rounded-full bg-[#c9a227] text-white text-sm font-bold shadow-md shadow-orange-500/25 group-hover:bg-[#d9bc6b] transition-colors"
+                >{% trans "Contact Us" %}</span
+              >
+              <span
+                class="w-12 h-12 rounded-full bg-white text-[#0b1f35] flex items-center justify-center group-hover:bg-[#c9a227] group-hover:text-white transition-colors"
+              >
+                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% endblock %}

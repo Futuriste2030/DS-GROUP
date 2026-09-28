@@ -1,0 +1,351 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}{% trans "Testimonials" %} | BS GROUP{% endblock %}
+{% block meta_description %}{% trans "BS GROUP — What our clients say about us: 450+ satisfied clients, 4.9/5 average rating." %}{% endblock %}
+
+{% block content %}
+<section
+      id="page-header"
+      class="page-header bg-[#f5f6f9]"
+      data-page-title="{% trans 'Testimonials' %}"
+    >
+      <div class="ruler-ticks w-full" aria-hidden="true"></div>
+
+      <div class="max-w-7xl mx-auto px-6 pt-14 pb-16 text-center">
+        <h1
+          id="page-header-title"
+          class="text-[40px] md:text-[48px] font-black text-[#0b1f35] tracking-tight leading-tight"
+        >
+          {% trans "Testimonials" %}
+        </h1>
+        <nav aria-label="{% trans 'Breadcrumb' %}" class="mt-3.5">
+          <ol
+            class="flex items-center justify-center flex-wrap gap-2.5 text-[15px] font-semibold"
+          >
+            <li>
+              <a
+                href="{% url 'main:index' %}"
+                class="text-[#0b1f35] hover:text-[#c9a227] transition-colors"
+                >{% trans "Home" %}</a
+              >
+            </li>
+            <li
+              aria-hidden="true"
+              class="text-slate-400 font-normal select-none"
+            >
+              /
+            </li>
+            <li
+              id="page-header-current"
+              class="text-[#c9a227]"
+              aria-current="page"
+            >
+              {% trans "Testimonials" %}
+            </li>
+          </ol>
+        </nav>
+      </div>
+
+      <div class="page-header-band w-full" aria-hidden="true"></div>
+    </section>
+
+    <section class="bg-white py-16 md:py-20 relative overflow-hidden">
+      <span class="section-tag section-tag--dark" aria-hidden="true">Trust</span>
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <div class="flex items-center justify-center gap-3 mb-4">
+          <i data-lucide="sparkles" class="w-4 h-4 text-[#c9a227] shrink-0"></i>
+            <span class="text-[15px] font-semibold text-[#0b1f35]"
+              >{% trans "Client Satisfaction" %}</span
+            >
+        </div>
+
+        <h2
+          class="text-[32px] md:text-[42px] font-black tracking-tight leading-[1.15]"
+        >
+          <span class="text-[#0b1f35]">{% trans "Trusted by" %} </span
+          ><span class="text-[#c9a227]">{% trans "Hundreds of Clients" %}</span>
+        </h2>
+
+        <!-- Note globale géante -->
+        <div
+          class="mt-8 inline-flex flex-col items-center bg-[#f5f6f9] rounded-[28px] px-10 py-8 md:px-16 md:py-10"
+        >
+          <div class="flex items-center gap-1.5 text-[#c9a227]">
+            <i data-lucide="star" class="w-8 h-8 fill-current"></i>
+            <i data-lucide="star" class="w-8 h-8 fill-current"></i>
+            <i data-lucide="star" class="w-8 h-8 fill-current"></i>
+            <i data-lucide="star" class="w-8 h-8 fill-current"></i>
+            <i data-lucide="star" class="w-8 h-8 fill-current"></i>
+          </div>
+          <p
+            class="mt-3 text-[52px] md:text-[64px] font-black text-[#0b1f35] leading-none tracking-tight"
+          >
+            4.9<span class="text-2xl md:text-3xl text-slate-400 font-bold"
+              >/5</span
+            >
+          </p>
+          <p class="mt-2 text-sm text-slate-500 font-medium">
+            {% trans "Average rating across 312 verified reviews" %}
+          </p>
+        </div>
+
+        <!-- Stats (compteurs gratuits via bloc 5) -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-3 gap-5 mt-10 max-w-3xl mx-auto"
+        >
+          <div class="bg-[#f5f6f9] rounded-[20px] py-7 px-4">
+            <div
+              class="text-[34px] font-black text-[#0b1f35] tracking-tight"
+              data-count="450"
+              data-suffix="+"
+            >
+              450+
+            </div>
+            <div class="mt-1 text-sm text-slate-500">{% trans "Happy Customers" %}</div>
+          </div>
+          <div class="bg-[#f5f6f9] rounded-[20px] py-7 px-4">
+            <div
+              class="text-[34px] font-black text-[#0b1f35] tracking-tight"
+              data-count="98"
+              data-suffix="%"
+            >
+              98%
+            </div>
+            <div class="mt-1 text-sm text-slate-500">{% trans "Would Recommend Us" %}</div>
+          </div>
+          <div class="bg-[#f5f6f9] rounded-[20px] py-7 px-4">
+            <div
+              class="text-[34px] font-black text-[#0b1f35] tracking-tight"
+              data-count="312"
+              data-suffix=""
+            >
+              312
+            </div>
+            <div class="mt-1 text-sm text-slate-500">{% trans "Verified Reviews" %}</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <section id="testimonials" class="bg-[#0b1f35] relative overflow-hidden">
+      <span class="section-tag section-tag--light" aria-hidden="true">Clients</span>
+      <div class="hatch-edge w-full" aria-hidden="true"></div>
+
+      <div class="max-w-6xl mx-auto px-6 py-14 md:py-16">
+        <!-- En-tête -->
+        <div class="flex items-center justify-center gap-3 mb-4">
+          <i data-lucide="sparkles" class="w-4 h-4 text-[#c9a227] shrink-0"></i>
+          <span class="text-[15px] font-semibold text-white"
+            >{% trans "Featured Reviews" %}</span
+          >
+        </div>
+
+        <h2
+          class="text-center text-[30px] sm:text-[36px] md:text-[40px] font-black tracking-tight leading-[1.15]"
+        >
+          <span class="text-white">{% trans "Experience Shared by" %}</span>
+          <span class="block text-[#c9a227]">{% trans "Our Clients" %}</span>
+        </h2>
+
+        <!-- Carrousel (cartes générées par le bloc JS 13) -->
+        <div class="mt-10 overflow-hidden">
+          <div
+            id="testi-track"
+            class="flex transition-transform duration-500 ease-out"
+          ></div>
+        </div>
+
+        <!-- Dots (générés par le bloc JS 13) -->
+        <div
+          id="testi-dots"
+          class="mt-9 flex items-center justify-center gap-2"
+          role="tablist"
+          aria-label="{% trans 'Testimonial pages' %}"
+        ></div>
+      </div>
+
+      <div class="hatch-edge w-full" aria-hidden="true"></div>
+    </section>
+
+      <section id="all-reviews" class="bg-[#f5f6f9] py-16 md:py-20 scroll-mt-24 relative overflow-hidden">
+      <span class="section-tag section-tag--dark" aria-hidden="true">Reviews</span>
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-10">
+          <div class="flex items-center justify-center gap-3 mb-4">
+            <i data-lucide="sparkles" class="w-4 h-4 text-[#c9a227] shrink-0"></i>
+            <span class="text-[15px] font-semibold text-[#0b1f35]"
+              >{% trans "All Reviews" %}</span
+            >
+          </div>
+          <h2
+            class="text-[32px] md:text-[42px] font-black tracking-tight leading-[1.15]"
+          >
+            <span class="text-[#0b1f35]">{% trans "Every Voice" %} </span
+            ><span class="text-[#c9a227]">{% trans "Matters" %}</span>
+          </h2>
+          <p class="mt-3 text-sm text-slate-500">
+            {% trans "Showing" %}
+            <span id="ts-count" class="font-bold text-[#c9a227]">{{ testimonials|length }}</span>
+            {% trans "reviews" %}
+          </p>
+        </div>
+
+        <!-- Filtres (réutilise .pp-filter) -->
+        <div class="flex flex-wrap items-center justify-center gap-2.5 mb-12">
+          <button
+            type="button"
+            data-ts-filter="all"
+            class="pp-filter pp-active px-6 py-2.5 rounded-full text-xs font-bold bg-white border border-gray-200 text-[#0b1f35] shadow-sm"
+          >
+            {% trans "All Projects" %}
+          </button>
+          <button
+            type="button"
+            data-ts-filter="residential"
+            class="pp-filter px-6 py-2.5 rounded-full text-xs font-bold bg-white border border-gray-200 text-[#0b1f35] shadow-sm"
+          >
+            {% trans "Residential" %}
+          </button>
+          <button
+            type="button"
+            data-ts-filter="commercial"
+            class="pp-filter px-6 py-2.5 rounded-full text-xs font-bold bg-white border border-gray-200 text-[#0b1f35] shadow-sm"
+          >
+            {% trans "Commercial" %}
+          </button>
+          <button
+            type="button"
+            data-ts-filter="renovation"
+            class="pp-filter px-6 py-2.5 rounded-full text-xs font-bold bg-white border border-gray-200 text-[#0b1f35] shadow-sm"
+          >
+            {% trans "Renovation" %}
+          </button>
+        </div>
+
+        <!-- Grille des témoignages -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+          {% for t in testimonials %}
+          <article
+            data-ts-item="{{ t.category|default:'all' }}"
+            class="timeline-item relative bg-white rounded-[20px] p-7 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
+          >
+            <span
+              class="absolute -top-4 right-5 text-[110px] leading-none font-black text-[#c9a227]/5 select-none pointer-events-none"
+              aria-hidden="true"
+              >&rdquo;</span
+            >
+            <div class="relative z-10">
+              <div class="flex items-center gap-2.5">
+                <span class="flex items-center gap-0.5 text-[#c9a227]">
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i
+                  ><i data-lucide="star" class="w-4 h-4 fill-current"></i
+                  ><i data-lucide="star" class="w-4 h-4 fill-current"></i
+                  ><i data-lucide="star" class="w-4 h-4 fill-current"></i
+                  ><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </span>
+                <span class="text-sm font-bold text-[#0b1f35]">{{ t.rating }}</span>
+              </div>
+              <h3 class="mt-3.5 text-[17px] font-extrabold text-[#0b1f35]">
+                {{ t.title }}
+              </h3>
+              <p class="mt-2.5 text-[13px] text-slate-500 leading-relaxed">
+                {{ t.text }}
+              </p>
+              <div class="mt-6 flex items-center justify-between gap-4">
+                <div class="flex items-center gap-3.5">
+                  {% if t.client_avatar %}
+                  <img
+                    src="{{ t.client_avatar.url }}"
+                    alt="{{ t.client_name }}"
+                    class="w-11 h-11 rounded-full object-cover ring-2 ring-orange-100"
+                    loading="lazy"
+                  />
+                  {% else %}
+                  <img
+                    src="https://ui-avatars.com/api/?name={{ t.client_name|urlencode }}&background=0b1f35&color=fff"
+                    alt="{{ t.client_name }}"
+                    class="w-11 h-11 rounded-full object-cover ring-2 ring-orange-100"
+                    loading="lazy"
+                  />
+                  {% endif %}
+                  <div>
+                    <p class="text-sm font-bold text-[#0b1f35]">
+                      {{ t.client_name }}
+                    </p>
+                    <p class="text-[11px] text-slate-400">{{ t.client_role }}</p>
+                  </div>
+                </div>
+                <span
+                  class="px-3 py-1 rounded-full bg-[#c9a227]/10 text-[#c9a227] text-[10px] font-bold"
+                  >{{ t.category|default:_("Review")|capfirst }}</span
+                >
+              </div>
+            </div>
+          </article>
+          {% empty %}
+          <p class="col-span-full text-center text-sm text-slate-500 py-10">{% trans "No reviews yet." %}</p>
+          {% endfor %}
+
+        </div>
+
+        <!-- Message aucun résultat (masqué par défaut) -->
+        <div id="ts-empty" class="hidden text-center py-14">
+          <span
+            class="inline-flex w-14 h-14 rounded-full bg-white text-slate-400 items-center justify-center"
+          >
+            <i data-lucide="search-x" class="w-7 h-7"></i>
+          </span>
+          <p class="mt-4 font-bold text-[#0b1f35]">
+            {% trans "No reviews in this category yet." %}
+          </p>
+          <p class="mt-1 text-sm text-slate-500">
+            {% trans "Be the first — share your experience with us!" %}
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#f5f6f9] pb-16 md:pb-24">
+      <div class="max-w-7xl mx-auto px-6">
+        <div
+          class="relative bg-[#0b1f35] rounded-3xl px-8 py-10 md:p-16 text-white"
+        >
+          <span
+            class="features-hatch absolute inset-0 rounded-3xl"
+            aria-hidden="true"
+          ></span>
+
+          <img
+            src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=700&auto=format&fit=crop"
+            alt="{% trans 'Engineer in orange helmet holding plans' %}"
+            class="hidden md:block absolute right-10 bottom-0 z-10 w-52 lg:w-60 h-[calc(100%+3.5rem)] object-cover object-top rounded-t-[28px] shadow-2xl"
+          />
+
+          <div class="relative z-10 max-w-xl md:pr-56 lg:pr-64">
+            <div class="flex items-center gap-3 mb-4">
+              <i data-lucide="sparkles" class="w-4 h-4 text-[#c9a227] shrink-0"></i>
+              <span class="text-[15px] font-semibold text-slate-300"
+                >{% trans "Share Your Experience" %}</span
+              >
+            </div>
+
+            <h2
+              class="text-[28px] md:text-[40px] font-black tracking-tight leading-[1.15]"
+            >
+              {% trans "Worked With Us?" %}
+              <span class="text-[#c9a227]">{% trans "Tell Your Story!" %}</span>
+            </h2>
+
+            <a
+              href="{% url 'contact:contact' %}"
+              class="mt-6 inline-block px-8 py-3.5 rounded-full bg-[#c9a227] text-white text-sm font-bold hover:bg-[#d9bc6b] hover:scale-105 transition-all shadow-md shadow-orange-500/25"
+            >
+              {% trans "Submit Your Review" %}
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% endblock %}

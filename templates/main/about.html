@@ -1,0 +1,1932 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}BS GROUP About-us | Ã‰change, Finance & Infrastructures{% endblock %}
+{% block meta_description %}BS GROUP â€” Ã‰cosystÃ¨me intÃ©grÃ© : Ã©change, finance, infrastructures et commerce.{% endblock %}
+
+{% block content %}
+<section
+      id="page-header"
+      class="page-header bg-[#f5f6f9]"
+      data-page-title="{% trans 'About Us' %}"
+    >
+      <!-- RÃ¨gle graduÃ©e haute -->
+      <div class="ruler-ticks w-full" aria-hidden="true"></div>
+
+      <div class="max-w-7xl mx-auto px-6 pt-14 pb-16 text-center">
+        <!-- Titre de la page -->
+        <h1
+          id="page-header-title"
+          class="text-[32px] sm:text-[40px] md:text-[48px] font-black text-[#0b1f35] tracking-tight leading-tight"
+        >
+          {{ site_settings.about_title|default:_("About Us") }}
+        </h1>
+        {% if site_settings.about_description %}
+        <p class="mt-4 max-w-2xl mx-auto text-[15px] text-slate-500 leading-relaxed">
+          {{ site_settings.about_description }}
+        </p>
+        {% endif %}
+
+        <!-- Fil d'Ariane -->
+        <nav aria-label="{% trans 'Breadcrumb' %}" class="mt-3.5">
+          <ol
+            class="flex items-center justify-center gap-2.5 text-[15px] font-semibold"
+          >
+            <li>
+              <a
+                href="{% url 'main:index' %}"
+                class="text-[#0b1f35] hover:text-[#c9a227] transition-colors"
+                >{% trans "Home" %}</a
+              >
+            </li>
+            <li
+              aria-hidden="true"
+              class="text-slate-400 font-normal select-none"
+            >
+              /
+            </li>
+            <li
+              id="page-header-current"
+              class="text-[#c9a227]"
+              aria-current="page"
+            >
+              {{ site_settings.about_title|default:_("About Us") }}
+            </li>
+          </ol>
+        </nav>
+      </div>
+
+      <!-- Bande marine hachurÃ©e basse -->
+      <div class="page-header-band w-full" aria-hidden="true"></div>
+    </section>
+
+      <section id="about" class="bg-white relative overflow-hidden">
+      <span class="section-tag section-tag--dark" aria-hidden="true">About</span>
+      <!-- RÃ¨gle graduÃ©e haute -->
+      <div class="ruler-ticks w-full" aria-hidden="true"></div>
+
+      <!-- Grue dÃ©corative : crochet suspendu (balancement animÃ©) -->
+      <div
+        class="crane-hook hidden lg:block absolute top-0 right-[26%] z-10"
+        aria-hidden="true"
+      >
+        <svg viewBox="0 0 120 205" class="w-[84px] h-auto" fill="none">
+          <!-- CÃ¢bles -->
+          <g stroke="#475569" stroke-width="2.5">
+            <line x1="50" y1="0" x2="50" y2="52" />
+            <line x1="60" y1="0" x2="60" y2="52" />
+            <line x1="70" y1="0" x2="70" y2="52" />
+          </g>
+          <!-- Traverse -->
+          <rect x="42" y="48" width="36" height="11" rx="5.5" fill="#334155" />
+          <!-- Corps du moufle -->
+          <rect x="36" y="56" width="48" height="56" rx="13" fill="#c9a227" />
+          <!-- Plaques latÃ©rales -->
+          <rect x="28" y="61" width="10" height="46" rx="5" fill="#0b1f35" />
+          <rect x="82" y="61" width="10" height="46" rx="5" fill="#0b1f35" />
+          <!-- Poulie -->
+          <circle cx="60" cy="84" r="12" fill="#0b1f35" />
+          <circle cx="60" cy="84" r="6" fill="#c9a227" />
+          <circle cx="60" cy="84" r="2" fill="#0b1f35" />
+          <!-- Tige du crochet -->
+          <rect x="55" y="112" width="10" height="14" rx="3.5" fill="#9aa8bc" />
+          <!-- Crochet (double trait = effet mÃ©tal) -->
+          <path
+            d="M60 124 L60 134 C58 150 42 154 38 168 C34 184 46 196 62 195 C78 194 88 183 86 169 C84.5 158 76 153 66 154"
+            stroke="#5b6b80"
+            stroke-width="14.5"
+            stroke-linecap="round"
+          />
+          <path
+            d="M60 124 L60 134 C58 150 42 154 38 168 C34 184 46 196 62 195 C78 194 88 183 86 169 C84.5 158 76 153 66 154"
+            stroke="#9aa8bc"
+            stroke-width="10.5"
+            stroke-linecap="round"
+          />
+        </svg>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 pt-12 pb-16 lg:pt-14 lg:pb-20">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6">
+          <div class="lg:col-span-8">
+            <!-- Label -->
+            <div class="flex items-center gap-3 mb-4">
+              <i data-lucide="sparkles" class="w-4 h-4 text-[#c9a227] shrink-0"></i>
+              <span class="text-[15px] font-semibold text-[#0b1f35]"
+                >{{ site_settings.about_section_subtitle|default:_("Who We Are") }}</span
+              >
+            </div>
+
+            <!-- Titre bicolore -->
+            <h2
+              class="text-[30px] sm:text-[38px] md:text-[46px] font-black tracking-tight leading-[1.12]"
+            >
+              {% if site_settings.about_section_title %}{{ site_settings.about_section_title }}{% else %}<span class="text-[#c9a227]">{% trans "Crafting Excellence" %}</span>
+              <span class="block text-[#0b1f35]">{% trans "in Every Project" %}</span>{% endif %}
+            </h2>
+
+            <!-- Paragraphes -->
+            <p
+              class="mt-6 max-w-[520px] text-[15px] text-slate-500 leading-relaxed"
+            >
+              {{ site_settings.about_description|default:_("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.") }}
+            </p>
+            <p
+              class="mt-4 max-w-[520px] text-[15px] text-slate-500 leading-relaxed"
+            >
+              {{ site_settings.about_description_2|default:_("Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat — from financing to delivery, our teams secure every link in your projects.") }}
+            </p>
+          </div>
+
+          <!-- Bouton Learn More + pastille flÃ¨che -->
+          <div class="lg:col-span-4 flex lg:items-end lg:justify-end">
+            <a href="{% url 'services:services' %}" class="group flex items-center gap-1.5">
+              <span
+                class="px-7 py-3.5 rounded-full bg-[#c9a227] text-white text-sm font-bold shadow-md shadow-orange-500/25 group-hover:bg-[#d9bc6b] transition-colors"
+                >{% trans "Learn More" %}</span
+              >
+              <span
+                class="w-12 h-12 rounded-full bg-[#0b1f35] text-white flex items-center justify-center group-hover:bg-[#c9a227] transition-colors"
+              >
+                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch"
+        >
+          <!-- Image biseautÃ©e + badge 25+ Years -->
+          <div class="lg:col-span-5 relative">
+            <div class="about-img h-[260px] sm:h-[340px] md:h-[380px] w-full">
+              <img
+                {% if site_settings.about_image_1 %}src="{{ site_settings.about_image_1.url }}"{% else %}src="https://images.unsplash.com/photo-1573497491208-6b1acb260507?q=80&w=1200&auto=format&fit=crop"{% endif %}
+                alt="{% trans 'Handshake between two executives in a modern atrium' %}"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- Badge superposÃ© -->
+            <div
+              class="absolute bottom-3 right-3 sm:bottom-4 sm:right-6 z-10 flex items-center gap-2.5 bg-[#c9a227] text-white rounded-2xl px-4 py-3 sm:px-6 sm:py-4 shadow-lg shadow-orange-500/30"
+            >
+              <span class="text-[30px] sm:text-[38px] font-black leading-none tracking-tight"
+                >25+</span
+              >
+              <span class="leading-tight">
+                <span class="block text-[15px] font-bold">{% trans "Years" %}</span>
+                <span class="block text-[11px] font-medium text-orange-100"
+                  >{% trans "of Experience" %}</span
+                >
+              </span>
+            </div>
+          </div>
+
+          <!-- Carte marine : slider Mission / Vision / Valeurs -->
+          <div
+            class="lg:col-span-7 relative bg-[#0b1f35] rounded-[24px] p-6 sm:p-8 md:p-10 overflow-hidden flex flex-col min-h-[300px] sm:min-h-[340px] md:min-h-[380px]"
+          >
+            <!-- Ticks discrets en bas de carte -->
+            <span
+              class="card-ticks absolute bottom-0 inset-x-0 h-7"
+              aria-hidden="true"
+            ></span>
+
+            <div
+              id="about-slide-content"
+              class="relative z-10 flex flex-col flex-1"
+              data-mission-title="{{ site_settings.mission_title|default:_('Our Mission') }}"
+              data-mission-text="{{ site_settings.mission_description|default:_('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.') }}"
+              data-vision-title="{{ site_settings.vision_title|default:_('Our Vision') }}"
+              data-vision-text="{{ site_settings.vision_description|default:_('Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.') }}"
+            >
+              <p
+                id="about-slide-text"
+                class="text-white/95 text-[15px] sm:text-[17px] md:text-lg leading-relaxed max-w-[560px]"
+              >
+                {{ site_settings.mission_description|default:_("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.") }}
+              </p>
+
+              <div class="mt-auto pt-8 flex items-end justify-between gap-4">
+                <span
+                  id="about-slide-label"
+                  class="text-[#c9a227] text-base sm:text-lg md:text-xl font-bold whitespace-nowrap"
+                  >{{ site_settings.mission_title|default:_("Our Mission") }}</span
+                >
+
+                <div class="flex items-center gap-3">
+                  <button
+                    id="about-prev"
+                    type="button"
+                    aria-label="{% trans 'Previous content' %}"
+                    class="w-10 h-10 rounded-full border border-white/40 text-white flex items-center justify-center hover:bg-white hover:text-[#0b1f35] transition-colors"
+                  >
+                    <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                  </button>
+                  <button
+                    id="about-next"
+                    type="button"
+                    aria-label="{% trans 'Next content' %}"
+                    class="w-10 h-10 rounded-full bg-[#c9a227] text-white flex items-center justify-center hover:bg-[#d9bc6b] transition-colors"
+                  >
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RÃ¨gle graduÃ©e basse -->
+      <div
+        class="ruler-ticks ruler-ticks--bottom w-full"
+        aria-hidden="true"
+      ></div>
+    </section>
+
+      {% if skills %}
+      <section id="skills" class="bg-white relative overflow-hidden">
+        <span class="section-tag section-tag--dark" aria-hidden="true">Skills</span>
+        <div class="max-w-7xl mx-auto px-6 pt-12 pb-16 lg:pt-14 lg:pb-20">
+          <div class="flex items-center gap-3 mb-4">
+            <i data-lucide="sparkles" class="w-4 h-4 text-[#c9a227] shrink-0"></i>
+            <span class="text-[15px] font-semibold text-[#0b1f35]">{% trans "Our Expertise" %}</span>
+          </div>
+          <h2 class="text-[30px] sm:text-[38px] md:text-[46px] font-black tracking-tight leading-[1.12]">
+            <span class="text-[#0b1f35]">Expertise &amp; </span><span class="text-[#c9a227]">Skills</span>
+          </h2>
+          <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6 max-w-4xl">
+            {% for sk in skills %}
+            <div>
+              <div class="flex items-center justify-between text-sm font-bold text-[#0b1f35] mb-2">
+                <span>{{ sk.label }}</span><span class="text-[#c9a227]">{{ sk.percentage }}%</span>
+              </div>
+              <div class="h-2 rounded-full bg-gray-100 overflow-hidden">
+                <div class="h-full rounded-full bg-[#c9a227]" style="width: {{ sk.percentage }}%"></div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div
+          class="ruler-ticks ruler-ticks--bottom w-full"
+          aria-hidden="true"
+        ></div>
+      </section>
+      {% endif %}
+
+      <section
+      id="video-showcase"
+      class="bg-[#f5f6f9] py-16 md:py-20 overflow-hidden relative"
+    >
+      <span class="section-tag section-tag--dark" aria-hidden="true">Video</span>
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center">
+          <p
+            class="text-sm font-semibold uppercase tracking-wider text-gray-500 mb-3"
+          >
+            {% trans "-- Watch The Video" %}
+          </p>
+          <h2
+            class="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0b1f35] tracking-tight leading-tight"
+          >
+            {% trans "Watch How We Bring" %} <span class="text-[#c9a227]">{% trans "Plans to Life" %}</span>
+          </h2>
+        </div>
+
+        <div class="relative max-w-6xl mx-auto mt-12 md:mt-14">
+          <!-- Cadre image (coins asymÃ©triques) -->
+          <div
+            class="video-frame relative h-[240px] sm:h-[320px] md:h-[460px] rounded-tl-[48px] rounded-tr-[20px] rounded-br-[48px] rounded-bl-[20px] sm:rounded-tl-[80px] sm:rounded-tr-[28px] sm:rounded-br-[80px] sm:rounded-bl-[28px] overflow-hidden shadow-xl shadow-slate-900/10"
+          >
+            <img
+              {% if site_settings.about_video_cover %}src="{{ site_settings.about_video_cover.url }}"{% elif site_settings.about_image_1 %}src="{{ site_settings.about_image_1.url }}"{% else %}src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1600&auto=format&fit=crop"{% endif %}
+              alt="{% trans 'Video presentation' %}"
+              class="w-full h-full object-cover"
+            />
+
+              <span
+                class="absolute inset-0 bg-gradient-to-t from-[#0b1f35]/60 via-[#0b1f35]/10 to-transparent"
+                aria-hidden="true"
+              ></span>
+
+            <!-- Bouton Play : cercle blanc + icÃ´ne orange -->
+            <button
+              id="plans-play-btn"
+              type="button"
+              aria-label="{% trans 'Watch the video' %}"
+              class="absolute inset-0 m-auto z-10 w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/30 backdrop-blur-md border border-white/50 text-white shadow-xl flex items-center justify-center hover:scale-110 transition-transform"
+            >
+              <span class="w-11 h-11 sm:w-14 sm:h-14 rounded-full bg-white text-[#c9a227] flex items-center justify-center pl-0.5"><i data-lucide="play" class="w-5 h-5 sm:w-7 sm:h-7 fill-current"></i></span>
+            </button>
+          </div>
+
+          <!-- Bandeau de statistiques (dÃ©borde en bas, largeur 104%) -->
+          <div
+            class="absolute left-4 right-4 sm:left-8 sm:right-8 -bottom-10 md:-bottom-12 z-20 bg-[#0b1f35] rounded-[24px] sm:rounded-tl-[36px] sm:rounded-tr-[16px] sm:rounded-br-[36px] sm:rounded-bl-[16px] shadow-2xl shadow-[#0b1f35]/40 px-4 sm:px-6 py-6 sm:py-8 md:py-10"
+          >
+            <div
+              class="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-4 text-center"
+            >
+              {% for st in stats %}
+              <div>
+                <div
+                  class="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight"
+                  data-count="{{ st.value }}"
+                  data-suffix="{{ st.suffix|default:'+' }}"
+                >
+                  {{ st.value }}{{ st.suffix|default:'+' }}
+                </div>
+                <div class="mt-1.5 text-xs sm:text-sm text-white/80">
+                  {{ st.label }}
+                </div>
+              </div>
+              {% empty %}
+              <div>
+                <div
+                  class="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight"
+                  data-count="640"
+                  data-suffix="+"
+                >
+                  640+
+                </div>
+                <div class="mt-1.5 text-xs sm:text-sm text-white/80">
+                  {% trans "Projects Completed" %}
+                </div>
+              </div>
+
+              <div>
+                <div
+                  class="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight"
+                  data-count="25"
+                  data-suffix="+"
+                >
+                  25+
+                </div>
+                <div class="mt-1.5 text-xs sm:text-sm text-white/80">
+                  {% trans "Years of Experience" %}
+                </div>
+              </div>
+
+              <div>
+                <div
+                  class="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight"
+                  data-count="450"
+                  data-suffix="+"
+                >
+                  450+
+                </div>
+                <div class="mt-1.5 text-xs sm:text-sm text-white/80">{% trans "Happy Customers" %}</div>
+              </div>
+
+              <div>
+                <div
+                  class="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight"
+                  data-count="120"
+                  data-suffix="+"
+                >
+                  120+
+                </div>
+                <div class="mt-1.5 text-xs sm:text-sm text-white/80">
+                  Skilled Professionals
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <section id="process" class="bg-[#f5f6f9] relative overflow-hidden">
+      <span class="section-tag section-tag--dark" aria-hidden="true">Process</span>
+      <!-- RÃ¨gle graduÃ©e haute -->
+      <div class="ruler-ticks w-full" aria-hidden="true"></div>
+
+      <div class="max-w-7xl mx-auto px-6 pt-14 lg:pt-16">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6">
+          <div class="lg:col-span-8">
+            <!-- Label -->
+            <div class="flex items-center gap-3 mb-4">
+              <i data-lucide="sparkles" class="w-4 h-4 text-[#c9a227] shrink-0"></i>
+              <span class="text-[15px] font-semibold text-[#0b1f35]"
+                >{% trans "How We Work" %}</span
+              >
+            </div>
+
+            <!-- Titre bicolore -->
+            <h2
+              class="text-[30px] sm:text-[38px] md:text-[46px] font-black tracking-tight leading-[1.12]"
+            >
+              <span class="text-[#0b1f35]">{% trans "How We" %} </span
+              ><span class="text-[#c9a227]">{% trans "Get It Done" %}</span>
+            </h2>
+          </div>
+
+          <!-- Bouton Learn More + pastille flÃ¨che -->
+          <div class="lg:col-span-4 flex lg:items-end lg:justify-end">
+            <a href="{% url 'contact:devis' %}" class="group flex items-center gap-1.5">
+              <span
+                class="px-7 py-3.5 rounded-full bg-[#c9a227] text-white text-sm font-bold shadow-md shadow-orange-500/25 group-hover:bg-[#d9bc6b] transition-colors"
+                >{% trans "Learn More" %}</span
+              >
+              <span
+                class="w-12 h-12 rounded-full bg-[#0b1f35] text-white flex items-center justify-center group-hover:bg-[#c9a227] transition-colors"
+              >
+                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="mt-14 relative grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-10 md:pb-32"
+        >
+          {% for pr in processes %}
+          <div
+            data-process-step
+            class="process-step {% if forloop.first %}active {% endif %}relative flex flex-col cursor-pointer"
+          >
+            {% if not forloop.first %}
+            <span
+              class="hidden md:block absolute top-0 bottom-0 -left-5 w-px bg-gray-200"
+              aria-hidden="true"
+            ></span>
+            {% endif %}
+            <div class="relative flex items-center">
+              <span class="step-badge">{% trans "Step" %} {{ pr.number }}</span>
+              <span class="hidden md:block flex-1 h-px bg-gray-200"></span>
+              {% if not forloop.last %}
+              <span
+                class="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 bg-[#f5f6f9] px-1 text-[#c9a227]"
+                aria-hidden="true"
+              >
+                <i data-lucide="chevrons-right" class="w-5 h-5"></i>
+              </span>
+              {% endif %}
+            </div>
+            <h3
+              class="mt-7 text-[16px] sm:text-[19px] sm:text-[22px] font-extrabold text-[#0b1f35] leading-snug max-w-[240px]"
+            >
+              {{ pr.title }}
+            </h3>
+            <p
+              class="mt-4 text-[15px] text-slate-500 leading-relaxed line-clamp-3 max-w-[300px]"
+            >
+              {{ pr.description }}
+            </p>
+          </div>
+          {% empty %}
+
+          <!-- STEP 1 â€” Consultation & Planning (active par dÃ©faut) -->
+          <div
+            data-process-step
+            class="process-step active relative flex flex-col cursor-pointer"
+          >
+            <div class="relative flex items-center">
+              <span class="step-badge">{% trans "Step 1" %}</span>
+              <span class="hidden md:block flex-1 h-px bg-gray-200"></span>
+              <!-- Chevron connecteur (Ã  cheval sur la jonction) -->
+              <span
+                class="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 bg-[#f5f6f9] px-1 text-[#c9a227]"
+                aria-hidden="true"
+              >
+                <i data-lucide="chevrons-right" class="w-5 h-5"></i>
+              </span>
+            </div>
+            <h3
+              class="mt-7 text-[16px] sm:text-[19px] sm:text-[22px] font-extrabold text-[#0b1f35] leading-snug max-w-[240px]"
+            >
+              {% trans "Consultation & Planning" %}
+            </h3>
+            <p
+              class="mt-4 text-[15px] text-slate-500 leading-relaxed line-clamp-3 max-w-[300px]"
+            >
+              {% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." %}
+            </p>
+          </div>
+
+          <!-- STEP 2 â€” Design & Construction -->
+          <div
+            data-process-step
+            class="process-step relative flex flex-col cursor-pointer"
+          >
+            <!-- SÃ©parateur vertical -->
+            <span
+              class="hidden md:block absolute top-0 bottom-0 -left-5 w-px bg-gray-200"
+              aria-hidden="true"
+            ></span>
+
+            <div class="relative flex items-center">
+              <span class="step-badge">{% trans "Step 2" %}</span>
+              <span class="hidden md:block flex-1 h-px bg-gray-200"></span>
+              <span
+                class="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 bg-[#f5f6f9] px-1 text-[#c9a227]"
+                aria-hidden="true"
+              >
+                <i data-lucide="chevrons-right" class="w-5 h-5"></i>
+              </span>
+            </div>
+            <h3
+              class="mt-7 text-[16px] sm:text-[19px] sm:text-[22px] font-extrabold text-[#0b1f35] leading-snug max-w-[240px]"
+            >
+              {% trans "Design & Construction" %}
+            </h3>
+            <p
+              class="mt-4 text-[15px] text-slate-500 leading-relaxed line-clamp-3 max-w-[300px]"
+            >
+              {% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." %}
+            </p>
+          </div>
+
+          <!-- STEP 3 â€” Final Inspection & Handover -->
+          <div
+            data-process-step
+            class="process-step relative flex flex-col cursor-pointer"
+          >
+            <!-- SÃ©parateur vertical -->
+            <span
+              class="hidden md:block absolute top-0 bottom-0 -left-5 w-px bg-gray-200"
+              aria-hidden="true"
+            ></span>
+
+            <div class="relative flex items-center">
+              <span class="step-badge">{% trans "Step 3" %}</span>
+              <span class="hidden md:block flex-1 h-px bg-gray-200"></span>
+            </div>
+            <h3
+              class="mt-7 text-[16px] sm:text-[19px] sm:text-[22px] font-extrabold text-[#0b1f35] leading-snug max-w-[260px]"
+            >
+              {% trans "Final Inspection & Handover" %}
+            </h3>
+            <p
+              class="mt-4 text-[15px] text-slate-500 leading-relaxed line-clamp-3 max-w-[300px]"
+            >
+              {% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." %}
+            </p>
+          </div>
+
+          {% endfor %}
+
+          <div
+            class="hidden md:block absolute bottom-1 left-0 lg:-left-2 z-0 pointer-events-none"
+            aria-hidden="true"
+          >
+            <svg
+              viewBox="0 0 230 190"
+              class="w-[180px] lg:w-[215px] h-auto"
+              fill="none"
+            >
+              <!-- Godet -->
+              <path
+                d="M26 126 L2 132 C-6 150 4 168 22 170 L34 170 L30 128 Z"
+                fill="#475569"
+              />
+              <path
+                d="M26 126 L2 132 C-6 150 4 168 22 170 L34 170 L30 128 Z"
+                fill="url(#bucketShade)"
+                opacity=".25"
+              />
+              <!-- Avant-bras (coude -> godet) -->
+              <path
+                d="M28 50 L13 128"
+                stroke="#c9a227"
+                stroke-width="13"
+                stroke-linecap="round"
+              />
+              <!-- Bras principal (corps -> coude) -->
+              <path
+                d="M60 94 L28 50"
+                stroke="#c9a227"
+                stroke-width="15"
+                stroke-linecap="round"
+              />
+              <!-- VÃ©rins hydrauliques -->
+              <path
+                d="M70 90 L42 56"
+                stroke="#0b1f35"
+                stroke-width="4"
+                stroke-linecap="round"
+              />
+              <path
+                d="M32 64 L18 100"
+                stroke="#0b1f35"
+                stroke-width="4"
+                stroke-linecap="round"
+              />
+              <!-- Ã‰chappement -->
+              <rect
+                x="130"
+                y="58"
+                width="11"
+                height="24"
+                rx="5"
+                fill="#0b1f35"
+              />
+              <!-- Corps + contrepoids -->
+              <rect
+                x="52"
+                y="76"
+                width="96"
+                height="62"
+                rx="12"
+                fill="#c9a227"
+              />
+              <path
+                d="M124 76 h12 a12 12 0 0 1 12 12 v38 a12 12 0 0 1 -12 12 h-12 Z"
+                fill="#d9bc6b"
+              />
+              <!-- FenÃªtre cabine -->
+              <rect
+                x="62"
+                y="86"
+                width="46"
+                height="36"
+                rx="8"
+                fill="#ffffff"
+                opacity=".92"
+              />
+              <rect
+                x="82"
+                y="86"
+                width="4"
+                height="36"
+                fill="#c9a227"
+                opacity=".55"
+              />
+              <!-- ChÃ¢ssis -->
+              <rect
+                x="60"
+                y="134"
+                width="72"
+                height="18"
+                rx="4"
+                fill="#0b1f35"
+              />
+              <!-- Chenilles -->
+              <rect
+                x="28"
+                y="148"
+                width="120"
+                height="38"
+                rx="19"
+                fill="#0b1f35"
+              />
+              <circle cx="52" cy="167" r="10" fill="#1e4569" />
+              <circle cx="52" cy="167" r="3.5" fill="#475569" />
+              <circle cx="80" cy="167" r="10" fill="#1e4569" />
+              <circle cx="80" cy="167" r="3.5" fill="#475569" />
+              <circle cx="108" cy="167" r="10" fill="#1e4569" />
+              <circle cx="108" cy="167" r="3.5" fill="#475569" />
+              <circle cx="130" cy="167" r="10" fill="#1e4569" />
+              <circle cx="130" cy="167" r="3.5" fill="#475569" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- RÃ¨gle graduÃ©e basse -->
+      <div
+        class="ruler-ticks ruler-ticks--bottom w-full"
+        aria-hidden="true"
+      ></div>
+    </section>
+
+      <section id="why-us" class="bg-white relative overflow-hidden">
+      <span class="section-tag section-tag--dark" aria-hidden="true">Why Us</span>
+      <!-- Crochet de grue suspendu (dÃ©coratif, animÃ©) -->
+      <div
+        class="crane-hook hidden md:block absolute top-0 left-[66%] z-10 pointer-events-none"
+        aria-hidden="true"
+      >
+        <svg viewBox="0 0 120 205" class="w-[68px] h-auto" fill="none">
+          <g stroke="#475569" stroke-width="2.5">
+            <line x1="50" y1="0" x2="50" y2="52" />
+            <line x1="60" y1="0" x2="60" y2="52" />
+            <line x1="70" y1="0" x2="70" y2="52" />
+          </g>
+          <rect x="42" y="48" width="36" height="11" rx="5.5" fill="#334155" />
+          <rect x="36" y="56" width="48" height="56" rx="13" fill="#c9a227" />
+          <rect x="28" y="61" width="10" height="46" rx="5" fill="#0b1f35" />
+          <rect x="82" y="61" width="10" height="46" rx="5" fill="#0b1f35" />
+          <circle cx="60" cy="84" r="12" fill="#0b1f35" />
+          <circle cx="60" cy="84" r="6" fill="#c9a227" />
+          <circle cx="60" cy="84" r="2" fill="#0b1f35" />
+          <rect x="55" y="112" width="10" height="14" rx="3.5" fill="#9aa8bc" />
+          <path
+            d="M60 124 L60 134 C58 150 42 154 38 168 C34 184 46 196 62 195 C78 194 88 183 86 169 C84.5 158 76 153 66 154"
+            stroke="#5b6b80"
+            stroke-width="14.5"
+            stroke-linecap="round"
+          />
+          <path
+            d="M60 124 L60 134 C58 150 42 154 38 168 C34 184 46 196 62 195 C78 194 88 183 86 169 C84.5 158 76 153 66 154"
+            stroke="#9aa8bc"
+            stroke-width="10.5"
+            stroke-linecap="round"
+          />
+        </svg>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 pt-16 pb-14">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+          <div class="lg:col-span-7">
+            <div class="flex items-center gap-3 mb-4">
+              <i data-lucide="sparkles" class="w-4 h-4 text-[#c9a227] shrink-0"></i>
+              <span class="text-[15px] font-semibold text-[#0b1f35]"
+                >{% trans "Why Choose Us" %}</span
+              >
+            </div>
+            <h2
+              class="text-[28px] sm:text-[34px] md:text-[42px] font-black tracking-tight leading-[1.15]"
+            >
+              <span class="text-[#0b1f35]">{% trans "Building Trust," %}</span>
+              <span class="block text-[#c9a227]">{% trans "Delivering Excellence" %}</span>
+            </h2>
+          </div>
+
+          <div class="lg:col-span-5 flex lg:justify-end lg:items-end pb-1">
+            <a href="{% url 'contact:contact' %}" class="group flex items-center gap-1.5">
+              <span
+                class="px-7 py-3.5 rounded-full bg-[#c9a227] text-white text-sm font-bold shadow-md shadow-orange-500/25 group-hover:bg-[#d9bc6b] transition-colors"
+                >{% trans "Learn More" %}</span
+              >
+              <span
+                class="w-11 h-11 rounded-full bg-[#0b1f35] text-white flex items-center justify-center group-hover:bg-[#c9a227] transition-colors"
+              >
+                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          <!-- Image avec bouton play (rÃ©utilise la modal vidÃ©o) -->
+          <div
+            class="lg:col-span-6 relative rounded-[28px] overflow-hidden h-[380px] md:h-[450px] shadow-lg group"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1200&auto=format&fit=crop"
+                alt="{% trans 'Team in helmets working together on plans' %}"
+              class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
+            />
+
+            <button
+              id="why-play-btn"
+              type="button"
+              aria-label="{% trans 'Watch the video' %}"
+              class="absolute inset-0 m-auto w-16 h-16 rounded-full bg-white/30 backdrop-blur-md border border-white/50 text-white flex items-center justify-center hover:scale-110 transition-transform shadow-xl z-10"
+            >
+              <span
+                class="w-11 h-11 rounded-full bg-white text-[#c9a227] flex items-center justify-center pl-0.5"
+              >
+                <i data-lucide="play" class="w-5 h-5 fill-current"></i>
+              </span>
+            </button>
+          </div>
+
+          <!-- Carte features marine -->
+          <div
+            class="lg:col-span-6 relative bg-[#0b1f35] rounded-[28px] px-7 md:px-9 py-7 overflow-hidden"
+          >
+            <!-- Hachures coin haut-droit -->
+            <span
+              class="features-hatch absolute top-0 right-0 w-44 h-28"
+              aria-hidden="true"
+            ></span>
+
+            <div class="relative z-10 divide-y divide-white/10">
+              {% for f in features %}
+              <div class="flex items-start gap-5 py-4 first:pt-0 last:pb-0">
+                <span
+                  class="w-12 h-12 rounded-xl border border-white/25 text-white flex items-center justify-center shrink-0"
+                >
+                  <i data-lucide="{{ f.icon|default:'cog' }}" class="w-6 h-6"></i>
+                </span>
+                <div>
+                  <h3 class="text-white font-bold text-[17px]">
+                    {{ f.title }}
+                  </h3>
+                  <p class="mt-1.5 text-[13px] text-slate-400 leading-relaxed">
+                    {{ f.description }}
+                  </p>
+                </div>
+              </div>
+              {% empty %}
+              <!-- Feature 1 -->
+              <div class="flex items-start gap-5 py-4 first:pt-0">
+                <span
+                  class="w-12 h-12 rounded-xl border border-white/25 text-white flex items-center justify-center shrink-0"
+                >
+                  <i data-lucide="cog" class="w-6 h-6"></i>
+                </span>
+                <div>
+                  <h3 class="text-white font-bold text-[17px]">
+                    {% trans "Advanced Technology" %}
+                  </h3>
+                  <p class="mt-1.5 text-[13px] text-slate-400 leading-relaxed">
+                    {% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt." %}
+                  </p>
+                </div>
+              </div>
+              <!-- Feature 2 -->
+              <div class="flex items-start gap-5 py-4">
+                <span
+                  class="w-12 h-12 rounded-xl border border-white/25 text-white flex items-center justify-center shrink-0"
+                >
+                  <i data-lucide="hard-hat" class="w-6 h-6"></i>
+                </span>
+                <div>
+                  <h3 class="text-white font-bold text-[17px]">{% trans "Expert Team" %}</h3>
+                  <p class="mt-1.5 text-[13px] text-slate-400 leading-relaxed">
+                    {% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt." %}
+                  </p>
+                </div>
+              </div>
+              <!-- Feature 3 -->
+              <div class="flex items-start gap-5 py-4">
+                <span
+                  class="w-12 h-12 rounded-xl border border-white/25 text-white flex items-center justify-center shrink-0"
+                >
+                  <i data-lucide="alarm-clock" class="w-6 h-6"></i>
+                </span>
+                <div>
+                  <h3 class="text-white font-bold text-[17px]">
+                    {% trans "On-Time Delivery" %}
+                  </h3>
+                  <p class="mt-1.5 text-[13px] text-slate-400 leading-relaxed">
+                    {% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt." %}
+                  </p>
+                </div>
+              </div>
+              <!-- Feature 4 -->
+              <div class="flex items-start gap-5 py-4 last:pb-0">
+                <span
+                  class="w-12 h-12 rounded-xl border border-white/25 text-white flex items-center justify-center shrink-0"
+                >
+                  <i data-lucide="trophy" class="w-6 h-6"></i>
+                </span>
+                <div>
+                  <h3 class="text-white font-bold text-[17px]">
+                    {% trans "Award Winning" %}
+                  </h3>
+                  <p class="mt-1.5 text-[13px] text-slate-400 leading-relaxed">
+                    {% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt." %}
+                  </p>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <section id="timeline" class="bg-[#f5f6f9] py-16 md:py-20 overflow-hidden relative">
+      <span class="section-tag section-tag--dark" aria-hidden="true">Timeline</span>
+      <div class="max-w-5xl mx-auto px-6">
+        <h2
+          class="text-center text-4xl md:text-5xl font-extrabold tracking-tight leading-[1.15] mb-14 md:mb-20"
+        >
+          <span class="block text-[#0b1f35]">{% trans "Milestones That" %}</span>
+          <span class="block text-[#c9a227]">{% trans "Define Us" %}</span>
+        </h2>
+
+        <div class="relative">
+          <!-- Ligne verticale : centrÃ©e sur desktop, Ã  gauche sur mobile -->
+          <span
+            class="absolute left-4 md:left-1/2 md:-translate-x-1/2 top-0 bottom-0 w-px bg-gray-300"
+            aria-hidden="true"
+          ></span>
+
+          <div
+            class="timeline-item relative grid md:grid-cols-2 md:gap-20 items-center pb-14 md:pb-20 pl-12 md:pl-0"
+          >
+            <!-- Node sur la ligne -->
+            <span
+              class="absolute left-4 md:left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[#c9a227] ring-4 ring-[#c9a227]/20"
+              aria-hidden="true"
+            ></span>
+
+            <!-- Image (coins asymÃ©triques, bord gauche) -->
+            <div class="order-1 md:order-1 md:pr-2">
+              <div
+                class="timeline-img timeline-img--left h-[220px] md:h-[260px] rounded-tl-[36px] rounded-br-[36px] rounded-tr-xl rounded-bl-xl overflow-hidden shadow-lg shadow-slate-900/10"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1000&auto=format&fit=crop"
+                  alt="Deux ingÃ©nieurs en casque blanc discutant devant des plans"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            <!-- Texte -->
+            <div class="order-2 md:order-2 mt-6 md:mt-0 md:pl-2">
+              <span
+                class="inline-block bg-[#0b1f35] text-white text-xs font-bold px-3.5 py-1.5 rounded-full mb-4"
+                >2000</span
+              >
+              <h3 class="text-xl md:text-2xl font-bold text-[#0b1f35] mb-2.5">
+                The Beginning
+              </h3>
+              <p class="text-sm text-gray-500 leading-relaxed max-w-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="timeline-item relative grid md:grid-cols-2 md:gap-20 items-center pb-14 md:pb-20 pl-12 md:pl-0"
+          >
+            <span
+              class="absolute left-4 md:left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-[#0b1f35]"
+              aria-hidden="true"
+            ></span>
+
+            <!-- Texte (alignÃ© Ã  droite vers la ligne) -->
+            <div
+              class="order-2 md:order-1 mt-6 md:mt-0 md:pr-2 md:text-right flex flex-col md:items-end"
+            >
+              <span
+                class="inline-block bg-slate-200 text-slate-800 text-xs font-bold px-3.5 py-1.5 rounded-full mb-4"
+                >2005</span
+              >
+              <h3 class="text-xl md:text-2xl font-bold text-[#0b1f35] mb-2.5">
+                First Major Success
+              </h3>
+              <p class="text-sm text-gray-500 leading-relaxed max-w-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore.
+              </p>
+            </div>
+
+            <!-- Image (coins asymÃ©triques miroir, bord droit) -->
+            <div class="order-1 md:order-2 md:pl-2">
+              <div
+                class="timeline-img timeline-img--right h-[220px] md:h-[260px] rounded-tr-[36px] rounded-bl-[36px] rounded-tl-xl rounded-br-xl overflow-hidden shadow-lg shadow-slate-900/10"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1000&auto=format&fit=crop"
+                  alt="Ouvrier du bÃ¢timent avec casque orange et tablette devant un immeuble"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="timeline-item relative grid md:grid-cols-2 md:gap-20 items-center pb-14 md:pb-20 pl-12 md:pl-0"
+          >
+            <span
+              class="absolute left-4 md:left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-[#0b1f35]"
+              aria-hidden="true"
+            ></span>
+
+            <!-- Image -->
+            <div class="order-1 md:order-1 md:pr-2">
+              <div
+                class="timeline-img timeline-img--left h-[220px] md:h-[260px] rounded-tl-[36px] rounded-br-[36px] rounded-tr-xl rounded-bl-xl overflow-hidden shadow-lg shadow-slate-900/10"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1000&auto=format&fit=crop"
+                  alt="Gratte-ciels en construction avec grues de chantier"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            <!-- Texte -->
+            <div class="order-2 md:order-2 mt-6 md:mt-0 md:pl-2">
+              <span
+                class="inline-block bg-slate-200 text-slate-800 text-xs font-bold px-3.5 py-1.5 rounded-full mb-4"
+                >2015</span
+              >
+              <h3 class="text-xl md:text-2xl font-bold text-[#0b1f35] mb-2.5">
+                Expanding Horizons
+              </h3>
+              <p class="text-sm text-gray-500 leading-relaxed max-w-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="timeline-item relative grid md:grid-cols-2 md:gap-20 items-center pl-12 md:pl-0"
+          >
+            <span
+              class="absolute left-4 md:left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-[#0b1f35]"
+              aria-hidden="true"
+            ></span>
+
+            <!-- Texte -->
+            <div
+              class="order-2 md:order-1 mt-6 md:mt-0 md:pr-2 md:text-right flex flex-col md:items-end"
+            >
+              <span
+                class="inline-block bg-slate-200 text-slate-800 text-xs font-bold px-3.5 py-1.5 rounded-full mb-4"
+                >2020</span
+              >
+              <h3 class="text-xl md:text-2xl font-bold text-[#0b1f35] mb-2.5">
+                Industry Recognition
+              </h3>
+              <p class="text-sm text-gray-500 leading-relaxed max-w-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore.
+              </p>
+            </div>
+
+            <!-- Image -->
+            <div class="order-1 md:order-2 md:pl-2">
+              <div
+                class="timeline-img timeline-img--right h-[220px] md:h-[260px] rounded-tr-[36px] rounded-bl-[36px] rounded-tl-xl rounded-br-xl overflow-hidden shadow-lg shadow-slate-900/10"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1000&auto=format&fit=crop"
+                  alt="Ã‰quipe de professionnels souriants devant un bÃ¢timent moderne"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <section id="team" class="bg-white relative overflow-hidden">
+      <span class="section-tag section-tag--dark" aria-hidden="true">Team</span>
+      <!-- Crochet de grue suspendu (rÃ©utilise l'animation .crane-hook) -->
+      <div
+        class="crane-hook hidden md:block absolute top-0 left-[64%] z-10 pointer-events-none"
+        aria-hidden="true"
+      >
+        <svg viewBox="0 0 120 205" class="w-[72px] h-auto" fill="none">
+          <g stroke="#475569" stroke-width="2.5">
+            <line x1="50" y1="0" x2="50" y2="52" />
+            <line x1="60" y1="0" x2="60" y2="52" />
+            <line x1="70" y1="0" x2="70" y2="52" />
+          </g>
+          <rect x="42" y="48" width="36" height="11" rx="5.5" fill="#334155" />
+          <rect x="36" y="56" width="48" height="56" rx="13" fill="#c9a227" />
+          <rect x="28" y="61" width="10" height="46" rx="5" fill="#0b1f35" />
+          <rect x="82" y="61" width="10" height="46" rx="5" fill="#0b1f35" />
+          <circle cx="60" cy="84" r="12" fill="#0b1f35" />
+          <circle cx="60" cy="84" r="6" fill="#c9a227" />
+          <circle cx="60" cy="84" r="2" fill="#0b1f35" />
+          <rect x="55" y="112" width="10" height="14" rx="3.5" fill="#9aa8bc" />
+          <path
+            d="M60 124 L60 134 C58 150 42 154 38 168 C34 184 46 196 62 195 C78 194 88 183 86 169 C84.5 158 76 153 66 154"
+            stroke="#5b6b80"
+            stroke-width="14.5"
+            stroke-linecap="round"
+          />
+          <path
+            d="M60 124 L60 134 C58 150 42 154 38 168 C34 184 46 196 62 195 C78 194 88 183 86 169 C84.5 158 76 153 66 154"
+            stroke="#9aa8bc"
+            stroke-width="10.5"
+            stroke-linecap="round"
+          />
+        </svg>
+      </div>
+
+      <div class="max-w-6xl mx-auto px-6 pt-16 pb-16">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+          <div class="lg:col-span-8">
+            <div class="flex items-center gap-3 mb-4">
+              <i data-lucide="sparkles" class="w-4 h-4 text-[#c9a227] shrink-0"></i>
+              <span class="text-[15px] font-semibold text-[#0b1f35]"
+                >{% trans "Meet Our Team" %}</span
+              >
+            </div>
+            <h2
+              class="text-[28px] sm:text-[34px] md:text-[42px] font-black tracking-tight leading-[1.15]"
+            >
+              <span class="text-[#0b1f35]">{% trans "Meet the Faces" %}</span>
+              <span class="block text-[#c9a227]">{% trans "Behind the Structures" %}</span>
+            </h2>
+          </div>
+
+          <div class="lg:col-span-4 flex lg:justify-end lg:items-end pb-1">
+            <a href="{% url 'contact:contact' %}" class="group flex items-center gap-1.5">
+              <span
+                class="px-7 py-3 rounded-full bg-[#c9a227] text-white text-sm font-bold shadow-md shadow-orange-500/25 group-hover:bg-[#d9bc6b] transition-colors"
+                >{% trans "View All" %}</span
+              >
+              <span
+                class="w-11 h-11 rounded-full bg-[#0b1f35] text-white flex items-center justify-center group-hover:bg-[#c9a227] transition-colors"
+              >
+                <i data-lucide="plus" class="w-5 h-5"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7">
+          {% for m in team %}
+          <article
+            data-team-card
+            class="team-card {% if forloop.first %}active {% endif %}relative bg-white rounded-[20px] p-4 pb-5 shadow-sm hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+          >
+            <div
+              class="relative h-[330px] rounded-[14px] bg-[#f5f6f9] overflow-hidden"
+            >
+              <span
+                class="absolute top-0 right-4 w-12 h-[62%] bg-[#0b1f35] rounded-b-[10px]"
+                aria-hidden="true"
+              ></span>
+              <span
+                class="team-stripes absolute bottom-0 left-0 w-24 h-16"
+                aria-hidden="true"
+              ></span>
+              <div
+                class="team-photo absolute left-3 bottom-0 w-[calc(100%-24px)] h-[88%]"
+              >
+                {% if m.image %}
+                <img
+                  src="{{ m.image.url }}"
+                  alt="{{ m.name }}"
+                  class="w-full h-full object-cover object-top"
+                />
+                {% else %}
+                <img
+                  src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=600&auto=format&fit=crop"
+                  alt="{{ m.name }}"
+                  class="w-full h-full object-cover object-top"
+                />
+                {% endif %}
+              </div>
+            </div>
+            <div class="mt-5 px-1">
+              <h3 class="text-[16px] sm:text-[18px] font-extrabold text-[#0b1f35]"><a href="{% url 'team:team-detail' m.slug %}" class="hover:text-[#c9a227] transition-colors">
+                {{ m.name }}
+              </a></h3>
+              <p class="mt-0.5 text-[11.5px] text-slate-500">
+                {{ m.role }}
+              </p>
+              <div class="mt-3.5 flex items-center gap-2">
+                <a
+                  href="{{ m.facebook|default:'#' }}"
+                  aria-label="Facebook"
+                  class="w-7 h-7 rounded-full bg-slate-100 text-[#0b1f35] flex items-center justify-center hover:bg-[#0b1f35] hover:text-white transition-colors"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="w-3 h-3"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M24 12.073C24 5.446 18.627.073 12 .073S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                    /></svg
+                ></a>
+                <a
+                  href="{{ m.twitter|default:'#' }}"
+                  aria-label="Twitter / X"
+                  class="w-7 h-7 rounded-full bg-slate-100 text-[#0b1f35] flex items-center justify-center hover:bg-[#0b1f35] hover:text-white transition-colors"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="w-3 h-3"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644z"
+                    /></svg
+                ></a>
+                <a
+                  href="{{ m.instagram|default:'#' }}"
+                  aria-label="Instagram"
+                  class="w-7 h-7 rounded-full bg-slate-100 text-[#0b1f35] flex items-center justify-center hover:bg-[#0b1f35] hover:text-white transition-colors"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="w-3 h-3"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                    /></svg
+                ></a>
+              </div>
+            </div>
+            <span
+              class="team-bar absolute bottom-0 left-5 right-5 h-[4px] bg-[#0b1f35] rounded-t-full transition-all duration-300"
+              aria-hidden="true"
+            ></span>
+          </article>
+          {% empty %}
+          <!-- Membre 1 (active par dÃ©faut) -->
+          <article
+            data-team-card
+            class="team-card active relative bg-white rounded-[20px] p-4 pb-5 shadow-sm hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+          >
+            <div
+              class="relative h-[330px] rounded-[14px] bg-[#f5f6f9] overflow-hidden"
+            >
+              <span
+                class="absolute top-0 right-4 w-12 h-[62%] bg-[#0b1f35] rounded-b-[10px]"
+                aria-hidden="true"
+              ></span>
+              <span
+                class="team-stripes absolute bottom-0 left-0 w-24 h-16"
+                aria-hidden="true"
+              ></span>
+              <div
+                class="team-photo absolute left-3 bottom-0 w-[calc(100%-24px)] h-[88%]"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=600&auto=format&fit=crop"
+                  alt="Jenny Alexander — {% trans 'Chief Executive Officer' %}"
+                  class="w-full h-full object-cover object-top"
+                />
+              </div>
+            </div>
+            <div class="mt-5 px-1">
+              <h3 class="text-[16px] sm:text-[18px] font-extrabold text-[#0b1f35]">
+                Jenny Alexander
+              </h3>
+              <p class="mt-0.5 text-[11.5px] text-slate-500">
+                {% trans "Chief Executive Officer" %}
+              </p>
+              <div class="mt-3.5 flex items-center gap-2">
+                <a
+                  href="#"
+                  aria-label="Facebook"
+                  class="w-7 h-7 rounded-full bg-slate-100 text-[#0b1f35] flex items-center justify-center hover:bg-[#0b1f35] hover:text-white transition-colors"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="w-3 h-3"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M24 12.073C24 5.446 18.627.073 12 .073S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                    /></svg
+                ></a>
+                <a
+                  href="#"
+                  aria-label="Twitter / X"
+                  class="w-7 h-7 rounded-full bg-slate-100 text-[#0b1f35] flex items-center justify-center hover:bg-[#0b1f35] hover:text-white transition-colors"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="w-3 h-3"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644z"
+                    /></svg
+                ></a>
+                <a
+                  href="#"
+                  aria-label="Instagram"
+                  class="w-7 h-7 rounded-full bg-slate-100 text-[#0b1f35] flex items-center justify-center hover:bg-[#0b1f35] hover:text-white transition-colors"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="w-3 h-3"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                    /></svg
+                ></a>
+              </div>
+            </div>
+            <span
+              class="team-bar absolute bottom-0 left-5 right-5 h-[4px] bg-[#0b1f35] rounded-t-full transition-all duration-300"
+              aria-hidden="true"
+            ></span>
+          </article>
+
+          <!-- Membre 2 -->
+          <article
+            data-team-card
+            class="team-card relative bg-white rounded-[20px] p-4 pb-5 shadow-sm hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+          >
+            <div
+              class="relative h-[330px] rounded-[14px] bg-[#f5f6f9] overflow-hidden"
+            >
+              <span
+                class="absolute top-0 right-4 w-12 h-[62%] bg-[#0b1f35] rounded-b-[10px]"
+                aria-hidden="true"
+              ></span>
+              <span
+                class="team-stripes absolute bottom-0 left-0 w-24 h-16"
+                aria-hidden="true"
+              ></span>
+              <div
+                class="team-photo absolute left-3 bottom-0 w-[calc(100%-24px)] h-[88%]"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop"
+                  alt="Esther Howard — {% trans 'Civil Engineer' %}"
+                  class="w-full h-full object-cover object-top"
+                />
+              </div>
+            </div>
+            <div class="mt-5 px-1">
+              <h3 class="text-[16px] sm:text-[18px] font-extrabold text-[#0b1f35]">
+                Esther Howard
+              </h3>
+              <p class="mt-0.5 text-[11.5px] text-slate-500">{% trans "Civil Engineer" %}</p>
+              <div class="mt-3.5 flex items-center gap-2">
+                <a
+                  href="#"
+                  aria-label="Facebook"
+                  class="w-7 h-7 rounded-full bg-slate-100 text-[#0b1f35] flex items-center justify-center hover:bg-[#0b1f35] hover:text-white transition-colors"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="w-3 h-3"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M24 12.073C24 5.446 18.627.073 12 .073S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                    /></svg
+                ></a>
+                <a
+                  href="#"
+                  aria-label="Twitter / X"
+                  class="w-7 h-7 rounded-full bg-slate-100 text-[#0b1f35] flex items-center justify-center hover:bg-[#0b1f35] hover:text-white transition-colors"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="w-3 h-3"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644z"
+                    /></svg
+                ></a>
+                <a
+                  href="#"
+                  aria-label="Instagram"
+                  class="w-7 h-7 rounded-full bg-slate-100 text-[#0b1f35] flex items-center justify-center hover:bg-[#0b1f35] hover:text-white transition-colors"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="w-3 h-3"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                    /></svg
+                ></a>
+              </div>
+            </div>
+            <span
+              class="team-bar absolute bottom-0 left-5 right-5 h-[4px] bg-[#0b1f35] rounded-t-full transition-all duration-300"
+              aria-hidden="true"
+            ></span>
+          </article>
+
+          <!-- Membre 3 -->
+          <article
+            data-team-card
+            class="team-card relative bg-white rounded-[20px] p-4 pb-5 shadow-sm hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+          >
+            <div
+              class="relative h-[330px] rounded-[14px] bg-[#f5f6f9] overflow-hidden"
+            >
+              <span
+                class="absolute top-0 right-4 w-12 h-[62%] bg-[#0b1f35] rounded-b-[10px]"
+                aria-hidden="true"
+              ></span>
+              <span
+                class="team-stripes absolute bottom-0 left-0 w-24 h-16"
+                aria-hidden="true"
+              ></span>
+              <div
+                class="team-photo absolute left-3 bottom-0 w-[calc(100%-24px)] h-[88%]"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop"
+                  alt="Ronald Richards — {% trans 'Structural Engineer' %}"
+                  class="w-full h-full object-cover object-top"
+                />
+              </div>
+            </div>
+            <div class="mt-5 px-1">
+              <h3 class="text-[16px] sm:text-[18px] font-extrabold text-[#0b1f35]">
+                Ronald Richards
+              </h3>
+              <p class="mt-0.5 text-[11.5px] text-slate-500">
+                {% trans "Structural Engineer" %}
+              </p>
+              <div class="mt-3.5 flex items-center gap-2">
+                <a
+                  href="#"
+                  aria-label="Facebook"
+                  class="w-7 h-7 rounded-full bg-slate-100 text-[#0b1f35] flex items-center justify-center hover:bg-[#0b1f35] hover:text-white transition-colors"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="w-3 h-3"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M24 12.073C24 5.446 18.627.073 12 .073S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                    /></svg
+                ></a>
+                <a
+                  href="#"
+                  aria-label="Twitter / X"
+                  class="w-7 h-7 rounded-full bg-slate-100 text-[#0b1f35] flex items-center justify-center hover:bg-[#0b1f35] hover:text-white transition-colors"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="w-3 h-3"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644z"
+                    /></svg
+                ></a>
+                <a
+                  href="#"
+                  aria-label="Instagram"
+                  class="w-7 h-7 rounded-full bg-slate-100 text-[#0b1f35] flex items-center justify-center hover:bg-[#0b1f35] hover:text-white transition-colors"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="w-3 h-3"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                    /></svg
+                ></a>
+              </div>
+            </div>
+            <span
+              class="team-bar absolute bottom-0 left-5 right-5 h-[4px] bg-[#0b1f35] rounded-t-full transition-all duration-300"
+              aria-hidden="true"
+            ></span>
+          </article>
+                  {% endfor %}
+        </div>
+      </div>
+    </section>
+
+      <section id="testimonials" class="bg-[#0b1f35] relative overflow-hidden">
+      <span class="section-tag section-tag--light" aria-hidden="true">Clients</span>
+      <!-- Bandes hachurÃ©es haut / bas -->
+      <div class="hatch-edge w-full" aria-hidden="true"></div>
+
+      <div class="max-w-6xl mx-auto px-6 py-14 md:py-16">
+        <div class="flex items-center justify-center gap-3 mb-4">
+          <i data-lucide="sparkles" class="w-4 h-4 text-[#c9a227] shrink-0"></i>
+          <span class="text-[15px] font-semibold text-white">{% trans "Testimonials" %}</span>
+        </div>
+
+        <h2
+          class="text-center text-[30px] sm:text-[36px] md:text-[40px] font-black tracking-tight leading-[1.15]"
+        >
+          <span class="text-white">{% trans "Experience Shared by" %}</span>
+          <span class="block text-[#c9a227]">{% trans "Our Clients" %}</span>
+        </h2>
+
+        <div class="mt-10 overflow-hidden">
+          <div
+            id="testi-track"
+            class="flex transition-transform duration-500 ease-out"
+          ></div>
+        </div>
+
+        <div
+          id="testi-dots"
+          class="mt-9 flex items-center justify-center gap-2"
+          role="tablist"
+          aria-label="{% trans 'Testimonial pages' %}"
+        ></div>
+      </div>
+
+      <div class="hatch-edge w-full" aria-hidden="true"></div>
+    </section>
+
+      <section id="faq" class="bg-[#f5f6f9] py-16 relative overflow-hidden">
+      <span class="section-tag section-tag--dark" aria-hidden="true">FAQ</span>
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="flex items-center justify-center gap-3 mb-4">
+          <i data-lucide="sparkles" class="w-4 h-4 text-[#c9a227] shrink-0"></i>
+          <span class="text-[15px] font-semibold text-[#0b1f35]">{% trans "FAQs" %}</span>
+        </div>
+
+        <h2
+          class="text-center text-[30px] sm:text-[36px] md:text-[40px] font-black tracking-tight leading-[1.15]"
+        >
+          <span class="text-[#0b1f35]">{% trans "Question?" %} </span
+          ><span class="text-[#c9a227]">{% trans "Look here." %}</span>
+        </h2>
+
+        <div class="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <!-- AccordÃ©on -->
+          <div class="lg:col-span-7 space-y-4">
+            {% for f in faqs %}
+            <div class="faq-item {% if forloop.counter == 2 %}open {% endif %}rounded-2xl bg-white overflow-hidden" data-faq>
+              <button
+                type="button"
+                class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5"
+              >
+                <span class="text-[15px] font-bold text-[#0b1f35]"
+                  >{{ f.question }}</span
+                >
+                <span
+                  class="faq-icon relative w-5 h-5 shrink-0 flex items-center justify-center text-[#0b1f35]"
+                >
+                  <i
+                    data-lucide="plus"
+                    class="faq-icon-plus w-4.5 h-4.5 absolute transition-opacity duration-300"
+                  ></i>
+                  <i
+                    data-lucide="minus"
+                    class="faq-icon-minus w-4.5 h-4.5 absolute transition-opacity duration-300"
+                  ></i>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <p
+                    class="px-6 pb-5 text-[13px] text-slate-400 leading-relaxed"
+                  >
+                    {{ f.answer }}
+                  </p>
+                </div>
+              </div>
+            </div>
+            {% empty %}
+            <div class="faq-item rounded-2xl bg-white overflow-hidden" data-faq>
+              <button
+                type="button"
+                class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5"
+              >
+                <span class="text-[15px] font-bold text-[#0b1f35]"
+                  >What services does your company provide?</span
+                >
+                <span
+                  class="faq-icon relative w-5 h-5 shrink-0 flex items-center justify-center text-[#0b1f35]"
+                >
+                  <i
+                    data-lucide="plus"
+                    class="faq-icon-plus w-4.5 h-4.5 absolute transition-opacity duration-300"
+                  ></i>
+                  <i
+                    data-lucide="minus"
+                    class="faq-icon-minus w-4.5 h-4.5 absolute transition-opacity duration-300"
+                  ></i>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <p
+                    class="px-6 pb-5 text-[13px] text-slate-400 leading-relaxed"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="faq-item open rounded-2xl bg-white overflow-hidden"
+              data-faq
+            >
+              <button
+                type="button"
+                class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5"
+              >
+                <span class="text-[15px] font-bold text-[#0b1f35]"
+                  >Are there any hidden costs?</span
+                >
+                <span
+                  class="faq-icon relative w-5 h-5 shrink-0 flex items-center justify-center text-[#0b1f35]"
+                >
+                  <i
+                    data-lucide="plus"
+                    class="faq-icon-plus w-4.5 h-4.5 absolute transition-opacity duration-300"
+                  ></i>
+                  <i
+                    data-lucide="minus"
+                    class="faq-icon-minus w-4.5 h-4.5 absolute transition-opacity duration-300"
+                  ></i>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <p
+                    class="px-6 pb-5 text-[13px] text-slate-400 leading-relaxed"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua eiusmod tempor incididunt.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item rounded-2xl bg-white overflow-hidden" data-faq>
+              <button
+                type="button"
+                class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5"
+              >
+                <span class="text-[15px] font-bold text-[#0b1f35]"
+                  >How is the project cost determined?</span
+                >
+                <span
+                  class="faq-icon relative w-5 h-5 shrink-0 flex items-center justify-center text-[#0b1f35]"
+                >
+                  <i
+                    data-lucide="plus"
+                    class="faq-icon-plus w-4.5 h-4.5 absolute transition-opacity duration-300"
+                  ></i>
+                  <i
+                    data-lucide="minus"
+                    class="faq-icon-minus w-4.5 h-4.5 absolute transition-opacity duration-300"
+                  ></i>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <p
+                    class="px-6 pb-5 text-[13px] text-slate-400 leading-relaxed"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item rounded-2xl bg-white overflow-hidden" data-faq>
+              <button
+                type="button"
+                class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5"
+              >
+                <span class="text-[15px] font-bold text-[#0b1f35]"
+                  >How can I track the progress of my project?</span
+                >
+                <span
+                  class="faq-icon relative w-5 h-5 shrink-0 flex items-center justify-center text-[#0b1f35]"
+                >
+                  <i
+                    data-lucide="plus"
+                    class="faq-icon-plus w-4.5 h-4.5 absolute transition-opacity duration-300"
+                  ></i>
+                  <i
+                    data-lucide="minus"
+                    class="faq-icon-minus w-4.5 h-4.5 absolute transition-opacity duration-300"
+                  ></i>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <p
+                    class="px-6 pb-5 text-[13px] text-slate-400 leading-relaxed"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item rounded-2xl bg-white overflow-hidden" data-faq>
+              <button
+                type="button"
+                class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5"
+              >
+                <span class="text-[15px] font-bold text-[#0b1f35]"
+                  >Do you provide free consultations or quotes?</span
+                >
+                <span
+                  class="faq-icon relative w-5 h-5 shrink-0 flex items-center justify-center text-[#0b1f35]"
+                >
+                  <i
+                    data-lucide="plus"
+                    class="faq-icon-plus w-4.5 h-4.5 absolute transition-opacity duration-300"
+                  ></i>
+                  <i
+                    data-lucide="minus"
+                    class="faq-icon-minus w-4.5 h-4.5 absolute transition-opacity duration-300"
+                  ></i>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <p
+                    class="px-6 pb-5 text-[13px] text-slate-400 leading-relaxed"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item rounded-2xl bg-white overflow-hidden" data-faq>
+              <button
+                type="button"
+                class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5"
+              >
+                <span class="text-[15px] font-bold text-[#0b1f35]"
+                  >What types of projects do you specialize in?</span
+                >
+                <span
+                  class="faq-icon relative w-5 h-5 shrink-0 flex items-center justify-center text-[#0b1f35]"
+                >
+                  <i
+                    data-lucide="plus"
+                    class="faq-icon-plus w-4.5 h-4.5 absolute transition-opacity duration-300"
+                  ></i>
+                  <i
+                    data-lucide="minus"
+                    class="faq-icon-minus w-4.5 h-4.5 absolute transition-opacity duration-300"
+                  ></i>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <p
+                    class="px-6 pb-5 text-[13px] text-slate-400 leading-relaxed"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </p>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+
+          <!-- Panneau latÃ©ral -->
+          <aside class="lg:col-span-5 space-y-5">
+            <!-- Carte navy : questions diffÃ©rentes -->
+            <div
+              class="relative bg-[#0b1f35] rounded-[24px] p-8 overflow-hidden text-center"
+            >
+              <span
+                class="features-hatch absolute inset-0"
+                aria-hidden="true"
+              ></span>
+
+              <div class="relative z-10 flex flex-col items-center">
+                <!-- Bulle de chat orange -->
+                <span
+                  class="relative w-14 h-11 rounded-2xl bg-[#c9a227] flex items-center justify-center gap-1.5 shadow-lg shadow-orange-500/30 mb-5"
+                >
+                  <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+                  <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+                  <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+                  <span
+                    class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[7px] border-l-transparent border-r-[7px] border-r-transparent border-t-[8px] border-t-[#c9a227]"
+                    aria-hidden="true"
+                  ></span>
+                </span>
+
+                <h3 class="text-white text-[16px] sm:text-[19px] font-extrabold leading-snug">
+                  You have different<br />questions?
+                </h3>
+                <p
+                  class="mt-2.5 text-[12.5px] text-slate-400 leading-relaxed max-w-[240px]"
+                >
+                  Our team will answer all your questions. We'll ensure a quick
+                  response.
+                </p>
+
+                <a
+                  href="{% url 'contact:contact' %}"
+                  class="mt-6 self-end inline-flex px-6 py-3 rounded-full bg-[#c9a227] text-white text-[13px] font-bold shadow-md shadow-orange-500/25 hover:bg-[#d9bc6b] transition-colors"
+                >
+                  Contact Us
+                </a>
+              </div>
+            </div>
+
+            <!-- Carte blanche : 24/7 Service -->
+            <div
+              class="bg-white rounded-[24px] p-6 flex items-center gap-5 shadow-sm"
+            >
+              <span
+                class="w-14 h-14 rounded-full bg-[#c9a227]/10 text-[#c9a227] flex items-center justify-center shrink-0"
+              >
+                <i data-lucide="headphones" class="w-6 h-6"></i>
+              </span>
+              <div>
+                <p class="text-[12px] text-slate-500 font-medium">
+                  {% trans "Your Question, Our Priority" %}
+                </p>
+                <p
+                  class="text-[17px] sm:text-[20px] font-extrabold text-[#0b1f35] leading-tight mt-0.5"
+                >
+                  {% trans "24/7 Service" %}
+                </p>
+                <a
+                  href="tel:4065550120"
+                  class="text-[12px] font-semibold text-[#c9a227] underline underline-offset-2 hover:text-[#d9bc6b] transition-colors"
+                  >(406) 555-0120</a
+                >
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <div
+      id="video-modal"
+      data-video-url="{{ site_settings.about_video_url|default:'' }}"
+      class="fixed inset-0 z-[160] hidden items-center justify-center p-4 sm:p-6"
+      role="dialog"
+      aria-modal="true"
+      aria-label="{% trans 'Video playback' %}"
+    >
+      <div
+        id="video-modal-backdrop"
+        class="absolute inset-0 bg-[#0b1f35]/85 backdrop-blur-md"
+      ></div>
+      <div
+        class="pointer-events-none absolute left-1/2 top-1/2 h-[55vh] w-[min(88vw,860px)] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#c9a227]/20 blur-[100px]"
+        aria-hidden="true"
+      ></div>
+
+      <div
+        class="video-modal-panel modal-panel relative w-full max-w-4xl rounded-[28px] border border-white/10 bg-[#0b1f35] p-2 shadow-2xl sm:p-3"
+      >
+        <span
+          class="features-hatch absolute inset-0 rounded-[28px] opacity-40"
+          aria-hidden="true"
+        ></span>
+
+        <div
+          class="relative z-10 flex items-center justify-between gap-4 px-4 pb-2 pt-3 sm:px-5"
+        >
+          <p
+            class="flex items-center gap-2.5 text-sm font-extrabold text-white"
+          >
+            <span
+              class="h-2.5 w-2.5 rounded-full bg-[#c9a227]"
+              aria-hidden="true"
+            ></span>
+            BS GROUP &mdash; Showreel
+          </p>
+          <button
+            id="video-modal-close"
+            type="button"
+            aria-label="{% trans 'Close video' %}"
+            class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition-all duration-300 hover:rotate-90 hover:bg-[#c9a227]"
+          >
+            <i data-lucide="x" class="h-5 w-5"></i>
+          </button>
+        </div>
+
+        <div
+          class="relative z-10 aspect-video overflow-hidden rounded-[20px] bg-black"
+        >
+          <video
+            id="video-player"
+            class="h-full w-full"
+            controls
+            playsinline
+            preload="none"
+          ></video>
+          <iframe
+            id="video-iframe"
+            class="hidden h-full w-full"
+            title="{% trans 'Video presentation' %}"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <div
+          class="relative z-10 flex flex-col items-start justify-between gap-3 px-4 pb-3 pt-4 sm:flex-row sm:items-center sm:px-5"
+        >
+          <p class="text-[13px] text-slate-300">
+            {% trans "A project? Let's talk about it —" %}
+            <span class="font-semibold text-white"
+              >{% trans "reply within 24 business hours." %}</span
+            >
+          </p>
+          <a
+            href="{% url 'contact:devis' %}"
+            class="inline-flex shrink-0 items-center gap-2 rounded-full bg-[#c9a227] px-6 py-2.5 text-[13px] font-bold text-white shadow-md shadow-orange-500/25 transition-colors hover:bg-[#d9bc6b]"
+          >
+            {% trans "Request a Quote" %}
+            <i data-lucide="arrow-right" class="h-4 w-4"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    {% endblock %}
