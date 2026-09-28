@@ -1,4 +1,6 @@
 from django.contrib import admin
+from django.db import models
+from ckeditor.widgets import CKEditorWidget
 from modeltranslation.admin import TabbedTranslationAdmin, TranslationTabularInline
 from .models import SiteSettings, FAQ, Partner, SiteStat, SkillBar, ProcessStep, Feature, LegalPage, LegalArticle, CookieConsent, CookieConsentLog
 
@@ -7,6 +9,9 @@ from .models import SiteSettings, FAQ, Partner, SiteStat, SkillBar, ProcessStep,
 class FAQAdmin(TabbedTranslationAdmin):
     list_display = ['question', 'order']
     list_editable = ['order']
+    formfield_overrides = {
+        models.TextField: {'widget': CKEditorWidget},
+    }
 
 
 @admin.register(Partner)
@@ -28,6 +33,9 @@ class SiteSettingsAdmin(TabbedTranslationAdmin):
         ('Hero', {'fields': ('hero_badge', 'hero_title', 'hero_description', 'hero_image_1', 'hero_image_2', 'hero_image_3', 'hero_video_url', 'hero_video_cover')}),
         ('Sections', {'fields': ('services_section_title', 'contact_image', 'coming_soon_enabled', 'launch_date')}),
     )
+    formfield_overrides = {
+        models.TextField: {'widget': CKEditorWidget},
+    }
 
     def has_add_permission(self, request):
         return not SiteSettings.objects.exists()
@@ -63,12 +71,18 @@ class FeatureAdmin(TabbedTranslationAdmin):
 class LegalArticleInline(TranslationTabularInline):
     model = LegalArticle
     extra = 1
+    formfield_overrides = {
+        models.TextField: {'widget': CKEditorWidget},
+    }
 
 
 @admin.register(LegalPage)
 class LegalPageAdmin(TabbedTranslationAdmin):
     list_display = ['get_page_type_display', 'title', 'version_number']
     inlines = [LegalArticleInline]
+    formfield_overrides = {
+        models.TextField: {'widget': CKEditorWidget},
+    }
 
 
 @admin.register(CookieConsent)
@@ -86,7 +100,7 @@ class CookieConsentAdmin(admin.ModelAdmin):
 class CookieConsentLogInline(admin.TabularInline):
     model = CookieConsentLog
     extra = 0
-    readonly_fields = ['action', 'statistics', 'marketing', 'policy_version', 'ip_hash', 'user_agent', 'created_at']
+    readonly_fields = ['action', 'statistics', 'marketing', 'policy_version', 'created_at']
     can_delete = False
     fields = ['action', 'statistics', 'marketing', 'policy_version', 'created_at']
 

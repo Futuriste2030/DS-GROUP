@@ -1,4 +1,6 @@
 from django.contrib import admin
+from django.db import models
+from ckeditor.widgets import CKEditorWidget
 from .models import ChatbotKnowledge, Conversation, Message
 
 
@@ -8,6 +10,9 @@ class ChatbotKnowledgeAdmin(admin.ModelAdmin):
     list_filter = ['is_active']
     search_fields = ['name', 'content']
     readonly_fields = ['updated_at']
+    formfield_overrides = {
+        models.TextField: {'widget': CKEditorWidget},
+    }
 
 
 class MessageInline(admin.TabularInline):
