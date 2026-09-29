@@ -114,8 +114,10 @@
   }
 
   // Exposer pour les ajouts dynamiques
+  // API compatible avec le build UMD officiel (script.js appelle createIcons)
   window.lucide = {
     createIcon: loadIcon,
+    createIcons: replaceLucideIcons,
     replace: replaceLucideIcons,
   };
 })();
