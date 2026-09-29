@@ -63,7 +63,14 @@ jobs:
           script: |
             set -e
             cd /var/www/ds-group
-            git pull origin main
+            # Le repo a pu etre clone en root : repare la propriete
+            # (fonctionne si sudo NOPASSWD, sinon ignore — voir message plus bas)
+            sudo -n chown -R "$(id -u):$(id -g)" . || true
+            (git config --global --get-all safe.directory | grep -qxF /var/www/ds-group) || git config --global --add safe.directory /var/www/ds-group
+            # Deploiement deterministe : aligne le VPS sur origin/main
+            # (reset --hard ne touche pas aux fichiers non suivis comme .env.prod)
+            git fetch origin main
+            git reset --hard origin/main
             # Recreate .env.prod from secret if provided (keeps VPS file in sync)
             if [ -n "${{ secrets.ENV_PROD_FILE }}" ]; then
               printf '%s\n' "${{ secrets.ENV_PROD_FILE }}" > .env.prod
