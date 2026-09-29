@@ -53,7 +53,9 @@ COPY --from=builder /usr/local/lib/python3.12/site-packages /usr/local/lib/pytho
 COPY --from=builder /usr/local/bin /usr/local/bin
 
 # Static & media volumes (populated at runtime via collectstatic in entrypoint if needed)
-RUN mkdir -p /app/staticfiles /app/media && chown -R appuser:appgroup /app
+# /data holds the SQLite DB (compose: sqlite_data:/data + DATABASE_URL=sqlite:///data/db.sqlite3)
+# Pre-create with correct ownership so fresh named volumes inherit appuser ownership
+RUN mkdir -p /data /app/staticfiles /app/media && chown -R appuser:appgroup /data /app
 
 USER appuser
 

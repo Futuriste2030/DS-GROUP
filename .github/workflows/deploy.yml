@@ -2,10 +2,13 @@
 # Required GitHub Secrets:
 #   SSH_HOST  VPS IP/hostname (e.g. 57.128.198.117)
 #   SSH_USER  SSH user on the VPS
-#   SSH_KEY   private key authorized on the VPS
+#   SSH_PRIVATE_KEY  private key authorized on the VPS
+#   ENV_PROD_FILE (optional but recommended)  full contents of .env.prod
 # VPS prerequisites (once): docker + compose plugin, repo cloned at
-# /var/www/ds-group, real .env beside docker-compose.yml,
-# GHCR login (docker login ghcr.io -u USER), nginx + certbot.
+# /var/www/ds-group, .env.prod beside docker-compose.yml
+# (or ENV_PROD_FILE secret to auto-create it),
+# GHCR login (docker login ghcr.io -u USER), aaPanel nginx reverse-proxy
+# 127.0.0.1:8001 -> public domain + SSL.
 name: Build & Deploy
 
 on:
@@ -61,6 +64,16 @@ jobs:
             set -e
             cd /var/www/ds-group
             git pull origin main
+            # Recreate .env.prod from secret if provided (keeps VPS file in sync)
+            if [ -n "${{ secrets.ENV_PROD_FILE }}" ]; then
+              printf '%s\n' "${{ secrets.ENV_PROD_FILE }}" > .env.prod
+              chmod 600 .env.prod
+            fi
+            # Fail fast with a clear message instead of cryptic compose error
+            if [ ! -f .env.prod ]; then
+              echo "::error::Missing /var/www/ds-group/.env.prod on VPS. Create it from .env.prod.example or set ENV_PROD_FILE secret."
+              exit 1
+            fi
             echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
             docker compose pull
             docker compose up -d

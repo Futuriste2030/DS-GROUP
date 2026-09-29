@@ -8,6 +8,7 @@ media/
 
 # Environnement
 .env
+.env.prod
 .venv/
 venv/
 env/

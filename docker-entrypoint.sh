@@ -10,6 +10,12 @@ echo "DEBUG: ${DEBUG:-False}"
 
 # SQLite : pas d'attente nécessaire, le fichier est local
 # (le volume sqlite_data assure la persistance)
+mkdir -p /data /app/staticfiles /app/media
+if [ ! -w /data ]; then
+    echo "ERROR: /data is not writable by $(whoami). Fix on host with:"
+    echo "  docker compose run --rm -u root --entrypoint sh web -c \"chown -R appuser:appgroup /data\""
+    exit 1
+fi
 
 # Migrations
 echo "Running migrations..."

@@ -5,6 +5,7 @@
 services:
   # Application Django (Gunicorn)
   web:
+    image: ghcr.io/futuriste2030/ds-group:latest
     build:
       context: .
       dockerfile: Dockerfile
