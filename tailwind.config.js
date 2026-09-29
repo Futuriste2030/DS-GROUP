@@ -6,7 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily: {
+      spacing: {
+        4.5: '1.125rem',
+      },      fontFamily: {
         sans: ['Poppins', 'ui-sans-serif', 'system-ui', 'sans-serif'],
         grotesk: ['Space Grotesk', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
