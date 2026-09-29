@@ -1,0 +1,220 @@
+================================================================================
+BS GROUP — GUIDE D'ADMINISTRATION (Django Admin : /admin/)
+Version : septembre 2026 — à l'usage du gestionnaire du site (pas de code requis)
+================================================================================
+
+0. PRINCIPES GÉNÉRAUX
+--------------------------------------------------------------------------------
+- Connexion : https://bsgroup.ml/admin/ (compte superuser créé via
+  `docker compose exec web python manage.py createsuperuser`).
+- 3 LANGUES (FR / EN / AR) : presque tous les contenus ont des onglets
+  Français / English / العربية en haut du formulaire. Remplissez au minimum
+  le FRANÇAIS (langue par défaut, sans préfixe d'URL). L'anglais s'affiche
+  par repli si une traduction manque ; l'arabe aussi. Remplissez EN puis AR
+  pour un site 100 % traduit.
+- Champ "Order" (ordre) : présent partout. Plus le nombre est PETIT, plus
+  l'élément apparaît EN PREMIER (0 = premier). Page d'accueil : seuls les
+  3-6 premiers sont repris (services : 6, projets : 4, articles : 3,
+  équipe : 3, offres : 4 actives, FAQ : 5, stats : 4).
+- Champ "Slug" : LAISSEZ-LE VIDE, il se génère seul depuis le titre.
+  Ne le modifiez jamais après publication (casserait les liens Google).
+- Images : envoyez JPG/PNG normaux, la conversion WebP est AUTOMATIQUE.
+  Formats conseillés : hero/projets 1600px de large, portraits 800px,
+  avatars 400px. Poids < 1 Mo si possible.
+- Champs "Icon" (icône) : tapez le NOM d'une icône Lucide en minuscules
+  avec tirets (ex : building, wrench, phone, globe, star, shield-check...).
+  Liste complète des noms disponibles : dossier static/icons/lucide/
+  (un fichier .svg = un nom). En cas de doute : building, cog, star.
+- SINGLETONS (une seule ligne, ne JAMAIS en créer une 2e ni la supprimer) :
+  Site Settings et Career Page. Modifiez simplement la ligne existante.
+- SEO (sur services, projets, articles, membres, offres) : les champs
+  Meta title (60 car. max), Meta description (160 car. max), OG image...
+  sont FACULTATIFS. Vides = le site utilise titre + résumé auto. Remplissez
+  seulement pour soigner Google sur les pages clés.
+
+1. MAIN (contenus généraux du site)
+--------------------------------------------------------------------------------
+1.1 Site Settings (LE PLUS IMPORTANT — une seule ligne)
+  Company : company_name (nom affiché), company_short_name, site_url
+    (https://bsgroup.ml), logo, footer_description (texte pied de page).
+  SEO : meta_description, meta_keywords (mots-clés séparés par virgules),
+    meta_author.
+  Contact : phone (+223 ... affiché partout), email (contact@...),
+    careers_email (candidatures), address (adresse, HTML simple autorisé),
+    map_query (texte recherché dans Google Maps), opening_hours_weekdays
+    (ex : "Lun – Ven : 08:00 – 18:00"), opening_hours_weekend,
+    latitude/longitude (optionnel, carte).
+  Legal : nif, rccm, director_name, hosting_provider, hosting_address,
+    hosting_city_country (mentions légales).
+  Social : facebook_url, twitter_url, instagram_url, youtube_url,
+    pinterest_url. Vide = icône MASQUÉE (ne laissez pas de faux liens).
+  About : about_title, about_description, about_description_2,
+    about_section_title/subtitle, about_image_1/2, vision_title,
+    vision_description, mission_title, mission_description (slider animé
+    Mission/Vision de l'accueil + page About), process_title/description.
+  Why (Pourquoi nous) : why_subtitle, why_title, why_image_1/2.
+  Hero (bandeau d'accueil) : hero_badge (pastille), hero_title,
+    hero_description, hero_image_1/2/3, hero_video_url (lien YouTube
+    .../embed/... ou MP4 ; vide = pas de bouton play),
+    hero_video_cover (image derrière le bouton).
+  Sections : services_section_title (titre section services),
+    contact_image, quote_budget_options (UNE fourchette de budget par
+    ligne — alimente la liste déroulante "Budget" du devis),
+    quote_timeline_options (UNE option de délai par ligne — liste
+    "Démarrage souhaité"), coming_soon_enabled (NE PAS cocher sauf
+    maintenance voulue), launch_date.
+
+1.2 FAQ — questions/réponses (accueil + page FAQ).
+  question / answer (texte de la réponse) / category : general (Général),
+  process (Services & Processus), payments (Paiements & Budget), warranty
+  (Garantie & Support) — la catégorie pilote les FILTRES de la page FAQ.
+  order = ordre d'affichage.
+
+1.3 Partners — logos partenaires (si section activée) : name, logo, website.
+
+1.4 Site Stats — chiffres clés (ex : 25+ Années, 640 Projets) :
+  value (nombre, ex : 640), suffix (ex : +), label (ex : Projets réalisés).
+
+1.5 Skill Bars — barres de compétences (page About) : label, percentage (0-100).
+
+1.6 Process Steps — étapes "How We Build" : number (1, 2, 3...),
+  title, description, icon, order.
+
+1.7 Features — blocs "Why Choose Us" : title, description, icon, order.
+
+1.8 Timeline Events — frise historique (page About, ex : 2000 La création) :
+  year (ex : 2020), title, description (vide = masquée), image
+  (facultatif ; sans image le texte occupe toute la largeur), order.
+  Sans aucun événement : toute la section est MASQUÉE automatiquement.
+
+1.9 Legal Pages + Legal Articles — CGU, Confidentialité, Cookies,
+  Mentions légales. page_type (ne pas changer), title, subtitle,
+  description, intro, last_updated, version_number. Articles = blocs
+  rattachés (title + content HTML). Le contenu statique autour (coordonnées)
+  reprend automatiquement Site Settings.
+
+1.10 Cookie Consents / Logs — PREUVES RGPD (lecture seule, NE PAS MODIFIER
+  ni supprimer) : chaque visiteur = 1 ligne (choix analytics/marketing,
+  version de politique). Logs = historique de chaque clic.
+
+2. SERVICES
+--------------------------------------------------------------------------------
+2.1 Service — UNE fiche par métier (ex : Construction résidentielle).
+  ATTENTION : ces fiches alimentent aussi l'ÉTAPE 1 du devis (titre +
+  excerpt + icon). Sans services en base, le devis n'affiche que "Autre".
+  Champs : title / excerpt (2 lignes affichées sur cartes + devis) /
+  image (carte) / category (ex : Residential) / timeline (ex : 8 – 24 mois)
+  / team_size / warranty / icon (nom Lucide) / intro / approach_title +
+  approach / includes_title + includes_description / image_1 (+ légende
+  image_1_alt) / image_2 (+ image_2_alt) / benefits_title +
+  benefits_description / video_cover + video_cover_alt + video_url /
+  process_title + process_description / order.
+  Sous-blocs (inline, en bas de la fiche) :
+   - Service Features : puces "inclus" (title + order).
+   - Service Benefits : cartes avantages (title + description + icon).
+   - Service Steps : étapes numérotées (number 01, 02... + title + description).
+
+3. TEAM (Équipe + Témoignages)
+--------------------------------------------------------------------------------
+3.1 Team Member — UNE fiche par personne : name / role (poste) /
+  department (ex : Leadership) / bio + bio_2 / quote (citation) /
+  skills (UNE compétence par ligne, format "Nom | pourcentage", ex :
+  "Gestion de chantier | 95" — sans | = 80 % par défaut) /
+  experience_years, projects_count, people_led, awards_count (chiffres) /
+  image (photo ; SANS photo = initiales affichées, jamais de faux visage) /
+  email, phone, office (vides = lignes masquées) / facebook, twitter,
+  instagram, linkedin (vides = icônes masquées) / order.
+  Sous-blocs : Team Experiences (period ex : 2018 – 2022 + title +
+  description + current coché = poste actuel) ; Team Certifications (title).
+3.2 Testimonial — avis clients (carrousel accueil + page Témoignages) :
+  client_name / client_role / client_avatar (vide = initiales) /
+  rating (note ex : 4.5) / title (titre d'avis) / text (témoignage) / order.
+  Sans aucun témoignage : la section est MASQUÉE automatiquement.
+
+4. PROJECTS (Réalisations)
+--------------------------------------------------------------------------------
+4.1 Project — UNE fiche par réalisation : title / category / location /
+  area (surface) / duration / period (ex : 2022-2025) / image (principale) /
+  excerpt (carte) / intro / description / challenge_title + challenge /
+  solution_title + solution / image_1 (+ image_1_alt) / image_2 (+ image_2_alt)
+  / scope_title + scope_description / result_title + result /
+  testimonial_title + testimonial_text + testimonial_name +
+  testimonial_role + testimonial_avatar (témoignage client lié ; SANS texte
+  = carte masquée) / video_cover + video_cover_alt + video_url / order.
+  Sous-blocs : Project Points (puces, champ text) ; Project Steps
+  (number + title + description).
+
+5. BLOG
+--------------------------------------------------------------------------------
+5.1 Post — UN article : title / category (ex : Construction ; crée les
+  filtres automatiquement) / author_name (défaut BS GROUP) /
+  author_avatar (vide = initiales) / author_bio / image (vide = image
+  générique) / excerpt (résumé cartes + SEO) / content (CORPS de l'article,
+  éditeur riche/HTML — SANS contenu : les sections démo sont masquées) /
+  reading_time (ex : 5 min Read) / tags (séparés par des VIRGULES :
+  "chantier, sécurité") / order / published (auto).
+  Le 1er article (order + récent) devient la "Une" de la page blog.
+
+6. CAREERS (Recrutement)
+--------------------------------------------------------------------------------
+6.1 Career Page (singleton) : hero_title/subtitle, openings_title/subtitle,
+  video_url + video_banner_image (bannière vidéo optionnelle).
+6.2 Perk — avantages (icône + title + description + order).
+6.3 Job Opening — UNE offre : title / department / location (ex : Bamako, ML
+  — changez les défauts US !) / job_type (Full Time, Part Time, Contract,
+  Internship) / experience / salary (ex : "Selon profil" — changez le
+  défaut $) / deadline (texte libre) / description / responsibilities,
+  requirements, nice_to_have (UN item par ligne) / is_active DÉCOCHÉ =
+  offre invisible du site (sans la supprimer) / order.
+6.4 Application — candidatures reçues (LECTURE SEULE, ne pas modifier :
+  les références servent au suivi). Le CV se télécharge depuis la fiche.
+
+7. CONTACT (demandes reçues — lecture seule)
+--------------------------------------------------------------------------------
+7.1 Contact Message — messages du formulaire contact (référence MS-... auto).
+7.2 Quote Request — demandes de devis du wizard (référence QT-... auto ;
+  subject = type de projet, message = détails + budget + délai).
+7.3 Newsletter Subscriber / Notify Subscriber — e-mails inscrits
+  (newsletters + page "bientôt disponible"). Ne pas ajouter à la main sauf
+  import : risque de doublon (e-mail unique).
+  RAPPEL : les e-mails partent vers CONTACT_EMAIL / CAREERS_EMAIL / HR_EMAIL
+  définis dans le .env.prod du serveur. Si un envoi échoue, vérifiez ces
+  adresses (ex : hr@bsgroup.ml doit EXISTER comme boîte mail).
+
+8. CHATBOT (assistant virtuel)
+--------------------------------------------------------------------------------
+8.1 Knowledge entries — base de connaissances : name (titre) + content
+  (TEXTE BRUT, pas de HTML — injecté tel quel au robot) + is_active
+  (décoché = ignoré par le robot). C'est ici qu'on apprend au robot vos
+  tarifs, zones, délais... Relisez après chaque changement de contenu.
+  Le robot cherche AUSSI seul dans services/projets/articles/équipe/FAQ.
+8.2 Conversations / Messages — historique des discussions (lecture seule,
+  utile pour voir ce que demandent les visiteurs et enrichir la base).
+  Clé API : GEMINI_API_KEY dans le .env.prod (sans elle, réponses locales
+  de secours).
+
+9. ORDRE DE REMPLISSAGE CONSEILLÉ (mise en route)
+--------------------------------------------------------------------------------
+ 1. Site Settings (surtout Contact + Social + Hero + About + Sections).
+ 2. Services (4-6) avec excerpts + icônes → le DEVIS devient utilisable.
+ 3. Team Members (3+) + Testimonials (4+).
+ 4. Projects (4+) avec images.
+ 5. Posts blog (3+).
+ 6. Job Openings + Perks + Career Page.
+ 7. FAQ (5+, catégories variées) + Timeline Events + Features/Stats/Steps.
+ 8. Traductions EN puis AR (onglets de chaque fiche).
+ 9. Vérifiez le site en navigation privée après chaque lot.
+
+10. RÈGLES D'OR
+--------------------------------------------------------------------------------
+- Une section SANS contenu est masquée d'elle-même : pas de panique si une
+  zone disparaît, c'est qu'il manque ses données (jamais de faux contenu).
+- Ne supprimez jamais : Site Settings, Career Page, Cookie Consents/Logs,
+  ni les messages/candidatures (traçabilité).
+- Après gros changements : rechargez la page en navigation privée (cache).
+- Images lourdes = site lent : compressez avant envoi (< 1 Mo).
+- En cas de page blanche/erreur après une modif admin : dites QUELLE fiche
+  a été touchée + copiez le message d'erreur exact.
+================================================================================
+FIN DU GUIDE
+================================================================================
