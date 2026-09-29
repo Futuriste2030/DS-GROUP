@@ -45,7 +45,7 @@
     <!-- Lucide Icons (local) -->
     <script>
       // Lucide icon loader - utilise les SVG locaux
-      window.LUCIDE_ICONS_PATH = '{% static "icons/lucide" %}';
+      window.LUCIDE_ICONS_PATH = '{% get_static_prefix %}icons/lucide';
     </script>
     <script src="{% static 'js/lucide-loader.js' %}" defer></script>
 
