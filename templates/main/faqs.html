@@ -164,10 +164,10 @@
                 <i data-lucide="search-x" class="w-7 h-7"></i>
               </span>
               <p class="mt-4 font-bold text-[#0b1f35]">
-                No questions in this category yet.
+                {% trans "No questions in this category yet." %}
               </p>
               <p class="mt-1 text-sm text-slate-500">
-                Ask us directly — we usually reply within a few hours!
+                {% trans "Ask us directly — we usually reply within a few hours!" %}
               </p>
             </div>
           </div>
@@ -197,20 +197,20 @@
                 </span>
 
                 <h3 class="text-white text-[19px] font-extrabold leading-snug">
-                  You have different<br />questions?
+                  {% trans "You have different" %}<br />{% trans "questions?" %}
                 </h3>
                 <p
                   class="mt-2.5 text-[12.5px] text-slate-400 leading-relaxed max-w-[240px]"
                 >
-                  Our team will answer all your questions. We'll ensure a quick
-                  response.
+                  {% trans "Our team will answer all your questions. We'll ensure a quick response." %}
                 </p>
 
                 <a
                   href="{% url 'contact:contact' %}"
-                  class="mt-6 self-end inline-flex px-6 py-3 rounded-full bg-[#c9a227] text-white text-[13px] font-bold shadow-md shadow-orange-500/25 hover:bg-[#d9bc6b] transition-colors"
+                  class="mt-6 self-end inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#c9a227] text-white text-[13px] font-bold shadow-md shadow-orange-500/25 hover:bg-[#d9bc6b] transition-colors"
                 >
-                  Contact Us
+                  {% trans "Contact Us" %}
+                  <i data-lucide="arrow-right" class="w-4 h-4"></i>
                 </a>
               </div>
             </div>
@@ -247,10 +247,11 @@
                 class="flex items-center gap-2.5 text-[16px] font-extrabold text-[#0b1f35]"
               >
                 <span
-                  class="w-1 h-5 bg-[#c9a227] rounded-full"
-                  aria-hidden="true"
-                ></span>
-                Helpful Resources
+                  class="w-9 h-9 rounded-xl bg-[#c9a227]/10 text-[#c9a227] flex items-center justify-center shrink-0"
+                >
+                  <i data-lucide="life-buoy" class="w-4.5 h-4.5"></i>
+                </span>
+                {% trans "Helpful Resources" %}
               </h3>
               <ul class="mt-5 space-y-3.5 text-[13.5px] font-semibold">
                 <li>
@@ -262,7 +263,7 @@
                       data-lucide="book-open"
                       class="w-4 h-4 text-[#c9a227] shrink-0 mt-0.5"
                     ></i>
-                    Browse our construction guides
+                    {% trans "Browse our construction guides" %}
                   </a>
                 </li>
                 <li>
@@ -274,7 +275,7 @@
                       data-lucide="building-2"
                       class="w-4 h-4 text-[#c9a227] shrink-0 mt-0.5"
                     ></i>
-                    See our completed projects
+                    {% trans "See our completed projects" %}
                   </a>
                 </li>
                 <li>
@@ -286,7 +287,7 @@
                       data-lucide="layers"
                       class="w-4 h-4 text-[#c9a227] shrink-0 mt-0.5"
                     ></i>
-                    Explore all our services
+                    {% trans "Explore all our services" %}
                   </a>
                 </li>
                 <li>
@@ -298,7 +299,7 @@
                       data-lucide="briefcase"
                       class="w-4 h-4 text-[#c9a227] shrink-0 mt-0.5"
                     ></i>
-                    Join our growing team
+                    {% trans "Join our growing team" %}
                   </a>
                 </li>
               </ul>
@@ -328,22 +329,22 @@
             <div class="flex items-center gap-3 mb-4">
               <i data-lucide="sparkles" class="w-4 h-4 text-[#c9a227] shrink-0"></i>
               <span class="text-[15px] font-semibold text-slate-300"
-                >Contact Us</span
+                >{% trans "Contact Us" %}</span
               >
             </div>
 
             <h2
               class="text-[28px] md:text-[40px] font-black tracking-tight leading-[1.15]"
             >
-              Still Have Questions?
-              <span class="text-[#c9a227]">Let's Talk!</span>
+              {% trans "Still Have Questions?" %}
+              <span class="text-[#c9a227]">{% trans "Let's Talk!" %}</span>
             </h2>
 
             <a
               href="{% url 'contact:contact' %}"
               class="mt-6 inline-block px-8 py-3.5 rounded-full bg-[#c9a227] text-white text-sm font-bold hover:bg-[#d9bc6b] hover:scale-105 transition-all shadow-md shadow-orange-500/25"
             >
-              Get In Touch
+              {% trans "Get In Touch" %}
             </a>
           </div>
         </div>

@@ -689,7 +689,7 @@ msgid "Career"
 msgstr "Carrière"
 
 msgid "Opportunities"
-msgstr "Opportunités"
+msgstr "d’opportunités"
 
 msgid ""
 "Grow with us — explore our latest open positions and find the role where you"
@@ -1239,7 +1239,7 @@ msgid "Consultation & Design"
 msgstr "Consultation & conception"
 
 msgid "Copy article link"
-msgstr "Copier le lien de l'article"
+msgstr "Copier le lien de l’article"
 
 msgid "Copy job link"
 msgstr "Copier le lien de l'offre"
@@ -2206,3 +2206,201 @@ msgstr "Paiements & budget"
 
 msgid "Warranty & Support"
 msgstr "Garantie & support"
+
+msgid "No questions in this category yet."
+msgstr "Aucune question dans cette catégorie pour le moment."
+
+msgid "Ask us directly — we usually reply within a few hours!"
+msgstr "Posez-nous votre question directement — nous répondons généralement en quelques heures !"
+
+msgid "You have different"
+msgstr "Vous avez d’autres"
+
+msgid "questions?"
+msgstr "questions ?"
+
+msgid "Our team will answer all your questions. We’ll ensure a quick response."
+msgstr "Notre équipe répondra à toutes vos questions. Nous garantissons une réponse rapide."
+
+msgid "Our team will answer all your questions. We will ensure a quick response."
+msgstr "Notre équipe répondra à toutes vos questions. Nous garantissons une réponse rapide."
+
+msgid "Helpful Resources"
+msgstr "Ressources utiles"
+
+msgid "Browse our construction guides"
+msgstr "Consultez nos guides de construction"
+
+msgid "See our completed projects"
+msgstr "Découvrez nos projets réalisés"
+
+msgid "Explore all our services"
+msgstr "Explorez tous nos services"
+
+msgid "Join our growing team"
+msgstr "Rejoignez notre équipe en pleine croissance"
+
+msgid "Still Have Questions?"
+msgstr "Encore des questions ?"
+
+msgid "Let’s Talk!"
+msgstr "Parlons-en !"
+
+msgid "Get In Touch"
+msgstr "Contactez-nous"
+
+msgid "Project Information"
+msgstr "Informations sur le projet"
+
+msgid "Scope of Work"
+msgstr "Périmètre des travaux"
+
+msgid "Similar project:"
+msgstr "Projet similaire :"
+
+msgid "From foundation to finishing touches, every project is handled by a dedicated team that treats your site as if it were their own. We work with trusted local suppliers, certified trades and transparent budgeting — so there are never surprises, only milestones celebrated."
+msgstr "Des fondations aux finitions, chaque projet est pris en charge par une équipe dédiée qui traite votre chantier comme le sien. Nous travaillons avec des fournisseurs locaux de confiance, des artisans certifiés et un budget transparent — sans surprises, que des étapes célébrées."
+
+msgid "Our Approach"
+msgstr "Notre approche"
+
+msgid "What’s Included"
+msgstr "Ce qui est inclus"
+
+msgid "Every package is fully comprehensive — covering structure, systems and finishes under one accountable contract."
+msgstr "Chaque formule est entièrement complète — structure, systèmes et finitions sous un seul contrat responsable."
+
+msgid "Custom builds"
+msgstr "Constructions sur mesure"
+
+msgid "Housing developments"
+msgstr "Programmes immobiliers"
+
+msgid "Extensions"
+msgstr "Extensions"
+
+msgid "Foundations & framing"
+msgstr "Fondations et ossature"
+
+msgid "Roofing & waterproofing"
+msgstr "Toiture et étanchéité"
+
+msgid "Plumbing & electrical"
+msgstr "Plomberie et électricité"
+
+msgid "Interior finishing"
+msgstr "Finitions intérieures"
+
+msgid "Landscaping integration"
+msgstr "Aménagement paysager"
+
+msgid "Service Information"
+msgstr "Informations sur le service"
+
+msgid "Category"
+msgstr "Catégorie"
+
+msgid "Typical Timeline"
+msgstr "Délai typique"
+
+msgid "Team Size"
+msgstr "Taille de l’équipe"
+
+msgid "Warranty"
+msgstr "Garantie"
+
+msgid "10-Year Structural Warranty"
+msgstr "Garantie structurelle de 10 ans"
+
+msgid "Every project is backed by a decade-long structural guarantee, documented and insured."
+msgstr "Chaque projet est couvert par une garantie structurelle de dix ans, documentée et assurée."
+
+msgid "Milestone-based scheduling with weekly reports — 98% of our projects delivered on schedule."
+msgstr "Planning par étapes avec rapports hebdomadaires — 98 % de nos projets livrés dans les délais."
+
+msgid "Fixed, Transparent Pricing"
+msgstr "Prix fixe et transparent"
+
+msgid "A detailed fixed-price contract before we start — no hidden costs, no mid-build surprises."
+msgstr "Un contrat détaillé à prix fixe avant de commencer — aucun coût caché, aucune surprise en cours de chantier."
+
+msgid "Certified Master Craftsmen"
+msgstr "Artisans maîtres certifiés"
+
+msgid "Licensed trades only — every electrician, plumber and finisher is certified and insured."
+msgstr "Artisans agréés uniquement — chaque électricien, plombier et finisseur est certifié et assuré."
+
+msgid "One Dedicated Contact"
+msgstr "Un interlocuteur unique dédié"
+
+msgid "A single project manager from day one to handover — reachable 7 days a week."
+msgstr "Un seul chef de projet du premier jour à la livraison — joignable 7 j/7."
+
+msgid "Eco-Friendly Materials"
+msgstr "Matériaux écologiques"
+
+msgid "Sustainable sourcing and low-impact materials as standard — better for you and the planet."
+msgstr "Approvisionnement durable et matériaux à faible impact en standard — mieux pour vous et pour la planète."
+
+msgid "Commercial Construction"
+msgstr "Construction commerciale"
+
+msgid "Offices, retail spaces and industrial facilities delivered on time and on budget."
+msgstr "Bureaux, commerces et installations industrielles livrés dans les délais et dans le budget."
+
+msgid "Concrete Work"
+msgstr "Travaux de béton"
+
+msgid "Structural and decorative concrete solutions engineered for strength and longevity."
+msgstr "Solutions de béton structurel et décoratif conçues pour la solidité et la durabilité."
+
+msgid "Renovations & Remodeling"
+msgstr "Rénovations et réaménagement"
+
+msgid "Transforming existing spaces with modern upgrades, from kitchens to complete overhauls."
+msgstr "Transformation des espaces existants avec des améliorations modernes, des cuisines aux rénovations complètes."
+
+msgid "Other Open Positions"
+msgstr "Autres postes ouverts"
+
+msgid "More"
+msgstr "Plus"
+
+msgid "View All Positions"
+msgstr "Voir tous les postes"
+
+msgid "BS GROUP team member."
+msgstr "Membre de l’équipe BS GROUP."
+
+msgid "About Me"
+msgstr "À propos de moi"
+
+msgid "Expertise & Skills"
+msgstr "Expertise et compétences"
+
+msgid "Skills coming soon."
+msgstr "Compétences à venir."
+
+msgid "Career Journey"
+msgstr "Parcours professionnel"
+
+msgid "Experience coming soon."
+msgstr "Expérience à venir."
+
+msgid "Certifications & Awards"
+msgstr "Certifications et distinctions"
+
+msgid "Share This Profile"
+msgstr "Partager ce profil"
+
+msgid "Great buildings start with great culture."
+msgstr "Les grands bâtiments commencent par une grande culture."
+
+msgid "Article"
+msgstr "Article"
+
+msgid "From the first sketch to the final coat of paint, our teams covered every trade required to bring %(title)s to life — fully integrated, fully accountable."
+msgstr "Du premier croquis à la dernière couche de peinture, nos équipes ont couvert tous les corps de métier nécessaires pour donner vie à %(title)s — intégré et responsable de bout en bout."
+
+msgid "— %(name)s’s leadership motto"
+msgstr "— devise de leadership de %(name)s"

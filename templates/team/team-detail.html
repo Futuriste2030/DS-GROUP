@@ -101,7 +101,7 @@
           </p>
 
           <p class="mt-5 max-w-lg text-[15px] text-slate-500 leading-relaxed">
-            {{ member.bio|truncatewords:35|default:"Membre de l\u2019\u00e9quipe BS GROUP." }}
+            {{ member.bio|truncatewords:35|default:_("BS GROUP team member.") }}
           </p>
 
           <!-- Réseaux sociaux -->
@@ -217,7 +217,7 @@
           <h2
             class="text-[24px] md:text-[28px] font-extrabold text-[#0b1f35] tracking-tight"
           >
-            About Me
+            {% trans "About Me" %}
           </h2>
           <p class="mt-4 text-[15px] text-slate-500 leading-relaxed">
             <span
@@ -237,7 +237,7 @@
           <h2
             class="mt-10 text-[24px] md:text-[28px] font-extrabold text-[#0b1f35] tracking-tight"
           >
-            Expertise &amp; Skills
+            {% trans "Expertise & Skills" %}
           </h2>
           <div class="mt-6 space-y-5">
             {% for name,pct in member.parse_skills %}
@@ -253,7 +253,7 @@
               </div>
             </div>
             {% empty %}
-            <p class="text-sm text-slate-500">Skills coming soon.</p>
+            <p class="text-sm text-slate-500">{% trans "Skills coming soon." %}</p>
             {% endfor %}
 
           </div>
@@ -262,7 +262,7 @@
           <h2
             class="mt-10 text-[24px] md:text-[28px] font-extrabold text-[#0b1f35] tracking-tight"
           >
-            Career Journey
+            {% trans "Career Journey" %}
           </h2>
           <div
             class="mt-6 relative space-y-7 before:absolute before:left-[7px] before:top-2 before:bottom-2 before:w-px before:bg-gray-200"
@@ -298,7 +298,7 @@
               {% endif %}
             </div>
             {% empty %}
-            <p class="relative pl-9 text-sm text-slate-500">Experience coming soon.</p>
+            <p class="relative pl-9 text-sm text-slate-500">{% trans "Experience coming soon." %}</p>
             {% endfor %}
 
           </div>
@@ -307,7 +307,7 @@
           <h2
             class="mt-10 text-[24px] md:text-[28px] font-extrabold text-[#0b1f35] tracking-tight"
           >
-            Certifications &amp; Awards
+            {% trans "Certifications & Awards" %}
           </h2>
           <ul class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3.5">
             {% for c in member.certifications.all %}
@@ -336,8 +336,11 @@
             ></span>
 
             <div class="relative z-10">
-              <h3 class="text-lg font-extrabold pb-5 border-b border-white/10">
-                Get In Touch
+              <h3 class="flex items-center gap-2.5 text-lg font-extrabold pb-5 border-b border-white/10">
+                <span class="w-9 h-9 rounded-xl bg-white/10 text-[#c9a227] flex items-center justify-center shrink-0">
+                  <i data-lucide="mail" class="w-4 h-4"></i>
+                </span>
+                {% trans "Get In Touch" %}
               </h3>
 
               <ul class="divide-y divide-white/10">
@@ -416,10 +419,11 @@
               class="flex items-center gap-2.5 text-[16px] font-extrabold text-[#0b1f35]"
             >
               <span
-                class="w-1 h-5 bg-[#c9a227] rounded-full"
-                aria-hidden="true"
-              ></span>
-              Share This Profile
+                class="w-9 h-9 rounded-xl bg-[#c9a227]/10 text-[#c9a227] flex items-center justify-center shrink-0"
+              >
+                <i data-lucide="share-2" class="w-4.5 h-4.5"></i>
+              </span>
+              {% trans "Share This Profile" %}
             </h3>
             <div class="mt-5 flex items-center gap-2.5">
               <button
@@ -495,10 +499,10 @@
               <p
                 class="text-[15px] font-semibold text-[#0b1f35] leading-relaxed"
               >
-                "{{ member.quote|default:"Great buildings start with great culture." }}"
+                "{{ member.quote|default:_("Great buildings start with great culture.") }}"
               </p>
               <p class="mt-3 text-xs font-bold text-[#c9a227]">
-                — {{ member.name }}'s leadership motto
+                {% blocktrans with name=member.name %}— {{ name }}'s leadership motto{% endblocktrans %}
               </p>
             </div>
           </div>

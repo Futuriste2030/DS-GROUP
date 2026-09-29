@@ -127,18 +127,14 @@
           </p>
 
           <p class="mt-5 text-[15px] text-slate-500 leading-relaxed">
-            From foundation to finishing touches, every residential project is
-            handled by a dedicated team that treats your home as if it were
-            their own. We work with trusted local suppliers, certified trades
-            and transparent budgeting — so there are never surprises, only
-            milestones celebrated.
+            {% trans "From foundation to finishing touches, every project is handled by a dedicated team that treats your site as if it were their own. We work with trusted local suppliers, certified trades and transparent budgeting — so there are never surprises, only milestones celebrated." %}
           </p>
 
           <!-- The Approach -->
           <h3
             class="mt-10 text-[22px] md:text-[26px] font-extrabold text-[#0b1f35] tracking-tight"
           >
-            {{ service.approach_title|default:'Our Approach' }}
+            {{ service.approach_title|default:_("Our Approach") }}
           </h3>
           <p class="mt-3.5 text-[15px] text-slate-500 leading-relaxed">
             {{ service.approach }}
@@ -148,11 +144,10 @@
           <h3
             class="mt-10 text-[22px] md:text-[26px] font-extrabold text-[#0b1f35] tracking-tight"
           >
-            What&rsquo;s Included
+            {% trans "What’s Included" %}
           </h3>
           <p class="mt-3.5 text-[15px] text-slate-500 leading-relaxed">
-            Every residential package is fully comprehensive — covering
-            structure, systems and finishes under one accountable contract.
+            {% trans "Every package is fully comprehensive — covering structure, systems and finishes under one accountable contract." %}
           </p>
 
           <!-- Grille de fonctionnalités (2 x 4) -->
@@ -175,7 +170,7 @@
                 data-lucide="check-circle-2"
                 class="w-5 h-5 text-[#c9a227] shrink-0"
               ></i
-              >Custom home builds
+              >{% trans "Custom builds" %}
             </li>
             <li
               class="flex items-center gap-3 text-sm font-semibold text-[#0b1f35]"
@@ -184,7 +179,7 @@
                 data-lucide="check-circle-2"
                 class="w-5 h-5 text-[#c9a227] shrink-0"
               ></i
-              >Housing developments
+              >{% trans "Housing developments" %}
             </li>
             <li
               class="flex items-center gap-3 text-sm font-semibold text-[#0b1f35]"
@@ -193,7 +188,7 @@
                 data-lucide="check-circle-2"
                 class="w-5 h-5 text-[#c9a227] shrink-0"
               ></i
-              >Home extensions
+              >{% trans "Extensions" %}
             </li>
             <li
               class="flex items-center gap-3 text-sm font-semibold text-[#0b1f35]"
@@ -202,7 +197,7 @@
                 data-lucide="check-circle-2"
                 class="w-5 h-5 text-[#c9a227] shrink-0"
               ></i
-              >Foundations &amp; framing
+              >{% trans "Foundations & framing" %}
             </li>
             <li
               class="flex items-center gap-3 text-sm font-semibold text-[#0b1f35]"
@@ -211,7 +206,7 @@
                 data-lucide="check-circle-2"
                 class="w-5 h-5 text-[#c9a227] shrink-0"
               ></i
-              >Roofing &amp; waterproofing
+              >{% trans "Roofing & waterproofing" %}
             </li>
             <li
               class="flex items-center gap-3 text-sm font-semibold text-[#0b1f35]"
@@ -220,7 +215,7 @@
                 data-lucide="check-circle-2"
                 class="w-5 h-5 text-[#c9a227] shrink-0"
               ></i
-              >Plumbing &amp; electrical
+              >{% trans "Plumbing & electrical" %}
             </li>
             <li
               class="flex items-center gap-3 text-sm font-semibold text-[#0b1f35]"
@@ -229,7 +224,7 @@
                 data-lucide="check-circle-2"
                 class="w-5 h-5 text-[#c9a227] shrink-0"
               ></i
-              >Interior finishing
+              >{% trans "Interior finishing" %}
             </li>
             <li
               class="flex items-center gap-3 text-sm font-semibold text-[#0b1f35]"
@@ -238,7 +233,7 @@
                 data-lucide="check-circle-2"
                 class="w-5 h-5 text-[#c9a227] shrink-0"
               ></i
-              >Landscaping integration
+              >{% trans "Landscaping integration" %}
             </li>
             {% endfor %}
           </ul>
@@ -276,22 +271,25 @@
             ></span>
 
             <div class="relative z-10">
-              <h3 class="text-lg font-extrabold pb-5 border-b border-white/10">
-                Service Information
+              <h3 class="flex items-center gap-2.5 text-lg font-extrabold pb-5 border-b border-white/10">
+                <span class="w-9 h-9 rounded-xl bg-white/10 text-[#c9a227] flex items-center justify-center shrink-0">
+                  <i data-lucide="info" class="w-4 h-4"></i>
+                </span>
+                {% trans "Service Information" %}
               </h3>
 
               <dl class="divide-y divide-white/10">
                 <div class="flex items-start justify-between gap-4 py-5">
                   <dt class="flex items-center gap-2.5 text-sm font-bold">
                     <i data-lucide="home" class="w-4 h-4 text-[#c9a227]"></i
-                    >Category:
+                    >{% trans "Category" %}:
                   </dt>
                   <dd class="text-sm text-slate-300 text-right">{{ service.category }}</dd>
                 </div>
                 <div class="flex items-start justify-between gap-4 py-5">
                   <dt class="flex items-center gap-2.5 text-sm font-bold">
                     <i data-lucide="clock" class="w-4 h-4 text-[#c9a227]"></i
-                    >Typical Timeline:
+                    >{% trans "Typical Timeline" %}:
                   </dt>
                   <dd class="text-sm text-slate-300 text-right">
                     {{ service.timeline }}
@@ -300,7 +298,7 @@
                 <div class="flex items-start justify-between gap-4 py-5">
                   <dt class="flex items-center gap-2.5 text-sm font-bold">
                     <i data-lucide="users" class="w-4 h-4 text-[#c9a227]"></i
-                    >Team Size:
+                    >{% trans "Team Size" %}:
                   </dt>
                   <dd class="text-sm text-slate-300 text-right">
                     {{ service.team_size }}
@@ -312,7 +310,7 @@
                       data-lucide="shield-check"
                       class="w-4 h-4 text-[#c9a227]"
                     ></i
-                    >Warranty:
+                    >{% trans "Warranty" %}:
                   </dt>
                   <dd class="text-sm text-slate-300 text-right">
                     {{ service.warranty }}
@@ -326,7 +324,7 @@
                 data-request-subject="{{ service.title }}"
                 class="mt-4 inline-flex w-full items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#c9a227] text-white text-sm font-bold hover:bg-[#d9bc6b] transition-colors shadow-md shadow-orange-500/25 cursor-pointer"
               >
-                Demander ce service
+                {% trans "Request this service" %}
                 <i data-lucide="arrow-right" class="w-4 h-4"></i>
               </button>
             </div>
@@ -405,11 +403,10 @@
               <i data-lucide="shield-check" class="w-6 h-6"></i>
             </span>
             <h3 class="mt-5 text-[17px] font-extrabold text-[#0b1f35]">
-              10-Year Structural Warranty
+              {% trans "10-Year Structural Warranty" %}
             </h3>
             <p class="mt-2 text-sm text-slate-500 leading-relaxed">
-              Every home is backed by a decade-long structural guarantee,
-              documented and insured.
+              {% trans "Every project is backed by a decade-long structural guarantee, documented and insured." %}
             </p>
           </div>
 
@@ -423,11 +420,10 @@
               <i data-lucide="timer" class="w-6 h-6"></i>
             </span>
             <h3 class="mt-5 text-[17px] font-extrabold text-[#0b1f35]">
-              On-Time Delivery
+              {% trans "On-Time Delivery" %}
             </h3>
             <p class="mt-2 text-sm text-slate-500 leading-relaxed">
-              Milestone-based scheduling with weekly reports — 98% of our homes
-              delivered on schedule.
+              {% trans "Milestone-based scheduling with weekly reports — 98% of our projects delivered on schedule." %}
             </p>
           </div>
 
@@ -441,11 +437,10 @@
               <i data-lucide="wallet" class="w-6 h-6"></i>
             </span>
             <h3 class="mt-5 text-[17px] font-extrabold text-[#0b1f35]">
-              Fixed, Transparent Pricing
+              {% trans "Fixed, Transparent Pricing" %}
             </h3>
             <p class="mt-2 text-sm text-slate-500 leading-relaxed">
-              A detailed fixed-price contract before we start — no hidden costs,
-              no mid-build surprises.
+              {% trans "A detailed fixed-price contract before we start — no hidden costs, no mid-build surprises." %}
             </p>
           </div>
 
@@ -459,11 +454,10 @@
               <i data-lucide="badge-check" class="w-6 h-6"></i>
             </span>
             <h3 class="mt-5 text-[17px] font-extrabold text-[#0b1f35]">
-              Certified Master Craftsmen
+              {% trans "Certified Master Craftsmen" %}
             </h3>
             <p class="mt-2 text-sm text-slate-500 leading-relaxed">
-              Licensed trades only — every electrician, plumber and finisher is
-              certified and insured.
+              {% trans "Licensed trades only — every electrician, plumber and finisher is certified and insured." %}
             </p>
           </div>
 
@@ -477,11 +471,10 @@
               <i data-lucide="headset" class="w-6 h-6"></i>
             </span>
             <h3 class="mt-5 text-[17px] font-extrabold text-[#0b1f35]">
-              One Dedicated Contact
+              {% trans "One Dedicated Contact" %}
             </h3>
             <p class="mt-2 text-sm text-slate-500 leading-relaxed">
-              A single project manager from day one to handover — reachable 7
-              days a week.
+              {% trans "A single project manager from day one to handover — reachable 7 days a week." %}
             </p>
           </div>
 
@@ -495,11 +488,10 @@
               <i data-lucide="leaf" class="w-6 h-6"></i>
             </span>
             <h3 class="mt-5 text-[17px] font-extrabold text-[#0b1f35]">
-              Eco-Friendly Materials
+              {% trans "Eco-Friendly Materials" %}
             </h3>
             <p class="mt-2 text-sm text-slate-500 leading-relaxed">
-              Sustainable sourcing and low-impact materials as standard — better
-              for you and the planet.
+              {% trans "Sustainable sourcing and low-impact materials as standard — better for you and the planet." %}
             </p>
           </div>
           {% endfor %}
@@ -697,7 +689,7 @@
             <span
               class="mt-6 inline-flex items-center gap-2 text-sm font-bold text-[#0b1f35] group-hover:text-[#c9a227] transition-colors"
             >
-              Learn more
+              {% trans "Learn more" %}
               <span
                 class="w-9 h-9 rounded-full bg-[#0b1f35] text-white flex items-center justify-center group-hover:bg-[#c9a227] group-hover:scale-105 transition-all"
               >
@@ -717,16 +709,15 @@
               <i data-lucide="building" class="w-7 h-7"></i>
             </span>
             <h3 class="mt-6 text-xl font-extrabold text-[#0b1f35]">
-              Commercial Construction
+              {% trans "Commercial Construction" %}
             </h3>
             <p class="mt-3 text-sm text-slate-500 leading-relaxed">
-              Offices, retail spaces and industrial facilities delivered on time
-              and on budget.
+              {% trans "Offices, retail spaces and industrial facilities delivered on time and on budget." %}
             </p>
             <span
               class="mt-6 inline-flex items-center gap-2 text-sm font-bold text-[#0b1f35] group-hover:text-[#c9a227] transition-colors"
             >
-              Learn more
+              {% trans "Learn more" %}
               <span
                 class="w-9 h-9 rounded-full bg-[#0b1f35] text-white flex items-center justify-center group-hover:bg-[#c9a227] group-hover:scale-105 transition-all"
               >
@@ -746,16 +737,15 @@
               <i data-lucide="layers" class="w-7 h-7"></i>
             </span>
             <h3 class="mt-6 text-xl font-extrabold text-[#0b1f35]">
-              Concrete Work
+              {% trans "Concrete Work" %}
             </h3>
             <p class="mt-3 text-sm text-slate-500 leading-relaxed">
-              Structural and decorative concrete solutions engineered for
-              strength and longevity.
+              {% trans "Structural and decorative concrete solutions engineered for strength and longevity." %}
             </p>
             <span
               class="mt-6 inline-flex items-center gap-2 text-sm font-bold text-[#0b1f35] group-hover:text-[#c9a227] transition-colors"
             >
-              Learn more
+              {% trans "Learn more" %}
               <span
                 class="w-9 h-9 rounded-full bg-[#0b1f35] text-white flex items-center justify-center group-hover:bg-[#c9a227] group-hover:scale-105 transition-all"
               >
@@ -775,16 +765,15 @@
               <i data-lucide="wrench" class="w-7 h-7"></i>
             </span>
             <h3 class="mt-6 text-xl font-extrabold text-[#0b1f35]">
-              Renovations &amp; Remodeling
+              {% trans "Renovations & Remodeling" %}
             </h3>
             <p class="mt-3 text-sm text-slate-500 leading-relaxed">
-              Transforming existing spaces with modern upgrades, from kitchens
-              to complete overhauls.
+              {% trans "Transforming existing spaces with modern upgrades, from kitchens to complete overhauls." %}
             </p>
             <span
               class="mt-6 inline-flex items-center gap-2 text-sm font-bold text-[#0b1f35] group-hover:text-[#c9a227] transition-colors"
             >
-              Learn more
+              {% trans "Learn more" %}
               <span
                 class="w-9 h-9 rounded-full bg-[#0b1f35] text-white flex items-center justify-center group-hover:bg-[#c9a227] group-hover:scale-105 transition-all"
               >

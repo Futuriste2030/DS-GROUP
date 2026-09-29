@@ -2176,3 +2176,201 @@ msgstr "Payments & Budget"
 
 msgid "Warranty & Support"
 msgstr "Warranty & Support"
+
+msgid "No questions in this category yet."
+msgstr "No questions in this category yet."
+
+msgid "Ask us directly — we usually reply within a few hours!"
+msgstr "Ask us directly — we usually reply within a few hours!"
+
+msgid "You have different"
+msgstr "You have different"
+
+msgid "questions?"
+msgstr "questions?"
+
+msgid "Our team will answer all your questions. We’ll ensure a quick response."
+msgstr "Our team will answer all your questions. We’ll ensure a quick response."
+
+msgid "Our team will answer all your questions. We will ensure a quick response."
+msgstr "Our team will answer all your questions. We will ensure a quick response."
+
+msgid "Helpful Resources"
+msgstr "Helpful Resources"
+
+msgid "Browse our construction guides"
+msgstr "Browse our construction guides"
+
+msgid "See our completed projects"
+msgstr "See our completed projects"
+
+msgid "Explore all our services"
+msgstr "Explore all our services"
+
+msgid "Join our growing team"
+msgstr "Join our growing team"
+
+msgid "Still Have Questions?"
+msgstr "Still Have Questions?"
+
+msgid "Let’s Talk!"
+msgstr "Let’s Talk!"
+
+msgid "Get In Touch"
+msgstr "Get In Touch"
+
+msgid "Project Information"
+msgstr "Project Information"
+
+msgid "Scope of Work"
+msgstr "Scope of Work"
+
+msgid "Similar project:"
+msgstr "Similar project:"
+
+msgid "From foundation to finishing touches, every project is handled by a dedicated team that treats your site as if it were their own. We work with trusted local suppliers, certified trades and transparent budgeting — so there are never surprises, only milestones celebrated."
+msgstr "From foundation to finishing touches, every project is handled by a dedicated team that treats your site as if it were their own. We work with trusted local suppliers, certified trades and transparent budgeting — so there are never surprises, only milestones celebrated."
+
+msgid "Our Approach"
+msgstr "Our Approach"
+
+msgid "What’s Included"
+msgstr "What’s Included"
+
+msgid "Every package is fully comprehensive — covering structure, systems and finishes under one accountable contract."
+msgstr "Every package is fully comprehensive — covering structure, systems and finishes under one accountable contract."
+
+msgid "Custom builds"
+msgstr "Custom builds"
+
+msgid "Housing developments"
+msgstr "Housing developments"
+
+msgid "Extensions"
+msgstr "Extensions"
+
+msgid "Foundations & framing"
+msgstr "Foundations & framing"
+
+msgid "Roofing & waterproofing"
+msgstr "Roofing & waterproofing"
+
+msgid "Plumbing & electrical"
+msgstr "Plumbing & electrical"
+
+msgid "Interior finishing"
+msgstr "Interior finishing"
+
+msgid "Landscaping integration"
+msgstr "Landscaping integration"
+
+msgid "Service Information"
+msgstr "Service Information"
+
+msgid "Category"
+msgstr "Category"
+
+msgid "Typical Timeline"
+msgstr "Typical Timeline"
+
+msgid "Team Size"
+msgstr "Team Size"
+
+msgid "Warranty"
+msgstr "Warranty"
+
+msgid "10-Year Structural Warranty"
+msgstr "10-Year Structural Warranty"
+
+msgid "Every project is backed by a decade-long structural guarantee, documented and insured."
+msgstr "Every project is backed by a decade-long structural guarantee, documented and insured."
+
+msgid "Milestone-based scheduling with weekly reports — 98% of our projects delivered on schedule."
+msgstr "Milestone-based scheduling with weekly reports — 98% of our projects delivered on schedule."
+
+msgid "Fixed, Transparent Pricing"
+msgstr "Fixed, Transparent Pricing"
+
+msgid "A detailed fixed-price contract before we start — no hidden costs, no mid-build surprises."
+msgstr "A detailed fixed-price contract before we start — no hidden costs, no mid-build surprises."
+
+msgid "Certified Master Craftsmen"
+msgstr "Certified Master Craftsmen"
+
+msgid "Licensed trades only — every electrician, plumber and finisher is certified and insured."
+msgstr "Licensed trades only — every electrician, plumber and finisher is certified and insured."
+
+msgid "One Dedicated Contact"
+msgstr "One Dedicated Contact"
+
+msgid "A single project manager from day one to handover — reachable 7 days a week."
+msgstr "A single project manager from day one to handover — reachable 7 days a week."
+
+msgid "Eco-Friendly Materials"
+msgstr "Eco-Friendly Materials"
+
+msgid "Sustainable sourcing and low-impact materials as standard — better for you and the planet."
+msgstr "Sustainable sourcing and low-impact materials as standard — better for you and the planet."
+
+msgid "Commercial Construction"
+msgstr "Commercial Construction"
+
+msgid "Offices, retail spaces and industrial facilities delivered on time and on budget."
+msgstr "Offices, retail spaces and industrial facilities delivered on time and on budget."
+
+msgid "Concrete Work"
+msgstr "Concrete Work"
+
+msgid "Structural and decorative concrete solutions engineered for strength and longevity."
+msgstr "Structural and decorative concrete solutions engineered for strength and longevity."
+
+msgid "Renovations & Remodeling"
+msgstr "Renovations & Remodeling"
+
+msgid "Transforming existing spaces with modern upgrades, from kitchens to complete overhauls."
+msgstr "Transforming existing spaces with modern upgrades, from kitchens to complete overhauls."
+
+msgid "Other Open Positions"
+msgstr "Other Open Positions"
+
+msgid "More"
+msgstr "More"
+
+msgid "View All Positions"
+msgstr "View All Positions"
+
+msgid "BS GROUP team member."
+msgstr "BS GROUP team member."
+
+msgid "About Me"
+msgstr "About Me"
+
+msgid "Expertise & Skills"
+msgstr "Expertise & Skills"
+
+msgid "Skills coming soon."
+msgstr "Skills coming soon."
+
+msgid "Career Journey"
+msgstr "Career Journey"
+
+msgid "Experience coming soon."
+msgstr "Experience coming soon."
+
+msgid "Certifications & Awards"
+msgstr "Certifications & Awards"
+
+msgid "Share This Profile"
+msgstr "Share This Profile"
+
+msgid "Great buildings start with great culture."
+msgstr "Great buildings start with great culture."
+
+msgid "Article"
+msgstr "Article"
+
+msgid "From the first sketch to the final coat of paint, our teams covered every trade required to bring %(title)s to life — fully integrated, fully accountable."
+msgstr "From the first sketch to the final coat of paint, our teams covered every trade required to bring %(title)s to life — fully integrated, fully accountable."
+
+msgid "— %(name)s’s leadership motto"
+msgstr "— %(name)s’s leadership motto"

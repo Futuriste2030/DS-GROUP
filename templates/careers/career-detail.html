@@ -273,7 +273,10 @@
             ></span>
 
             <div class="relative z-10">
-              <h3 class="text-lg font-extrabold pb-5 border-b border-white/10">
+              <h3 class="flex items-center gap-2.5 text-lg font-extrabold pb-5 border-b border-white/10">
+                <span class="w-9 h-9 rounded-xl bg-white/10 text-[#c9a227] flex items-center justify-center shrink-0">
+                  <i data-lucide="briefcase" class="w-4 h-4"></i>
+                </span>
                 {% trans "Job Overview" %}
               </h3>
 
@@ -626,14 +629,14 @@
           <div class="flex items-center justify-center gap-3 mb-4">
             <i data-lucide="sparkles" class="w-4 h-4 text-[#c9a227] shrink-0"></i>
             <span class="text-[15px] font-semibold text-[#0b1f35]"
-              >Other Open Positions</span
+              >{% trans "Other Open Positions" %}</span
             >
           </div>
           <h2
             class="text-[30px] md:text-[40px] font-black tracking-tight leading-[1.15]"
           >
-            <span class="text-[#0b1f35]">More </span
-            ><span class="text-[#c9a227]">Opportunities</span>
+            <span class="text-[#0b1f35]">{% trans "More" %} </span
+            ><span class="text-[#c9a227]">{% trans "Opportunities" %}</span>
           </h2>
         </div>
 
@@ -681,7 +684,7 @@
           <a href="{% url 'careers:careers' %}" class="group inline-flex items-center gap-1.5">
             <span
               class="px-7 py-3.5 rounded-full bg-[#c9a227] text-white text-sm font-bold shadow-md shadow-orange-500/25 group-hover:bg-[#d9bc6b] transition-colors"
-              >View All Positions</span
+              >{% trans "View All Positions" %}</span
             >
             <span
               class="w-12 h-12 rounded-full bg-[#0b1f35] text-white flex items-center justify-center group-hover:bg-[#c9a227] transition-colors"

@@ -564,7 +564,7 @@ msgid "Expert Team"
 msgstr "فريق خبير"
 
 msgid "On-Time Delivery"
-msgstr "تسليم في الموعد"
+msgstr "التسليم في الموعد"
 
 msgid "Award Winning"
 msgstr "حائز على جوائز"
@@ -658,7 +658,7 @@ msgid "Career"
 msgstr "المسار المهني"
 
 msgid "Opportunities"
-msgstr "الفرص"
+msgstr "من الفرص"
 
 msgid ""
 "Grow with us — explore our latest open positions and find the role where you"
@@ -1199,7 +1199,7 @@ msgid "Consultation & Design"
 msgstr "Consultation & Design"
 
 msgid "Copy article link"
-msgstr "Copy article link"
+msgstr "نسخ رابط المقال"
 
 msgid "Copy job link"
 msgstr "Copy job link"
@@ -2151,3 +2151,201 @@ msgstr "المدفوعات والميزانية"
 
 msgid "Warranty & Support"
 msgstr "الضمان والدعم"
+
+msgid "No questions in this category yet."
+msgstr "لا توجد أسئلة في هذه الفئة بعد."
+
+msgid "Ask us directly — we usually reply within a few hours!"
+msgstr "اسألنا مباشرة — نرد عادة خلال ساعات قليلة!"
+
+msgid "You have different"
+msgstr "لديك أسئلة"
+
+msgid "questions?"
+msgstr "مختلفة؟"
+
+msgid "Our team will answer all your questions. We’ll ensure a quick response."
+msgstr "سيجيب فريقنا على جميع أسئلتك. نضمن لك ردًا سريعًا."
+
+msgid "Our team will answer all your questions. We will ensure a quick response."
+msgstr "سيجيب فريقنا على جميع أسئلتك. نضمن لك ردًا سريعًا."
+
+msgid "Helpful Resources"
+msgstr "موارد مفيدة"
+
+msgid "Browse our construction guides"
+msgstr "تصفح أدلة البناء الخاصة بنا"
+
+msgid "See our completed projects"
+msgstr "شاهد مشاريعنا المنجزة"
+
+msgid "Explore all our services"
+msgstr "اكتشف جميع خدماتنا"
+
+msgid "Join our growing team"
+msgstr "انضم إلى فريقنا المتنامي"
+
+msgid "Still Have Questions?"
+msgstr "هل لديك أسئلة أخرى؟"
+
+msgid "Let’s Talk!"
+msgstr "لنتحدث!"
+
+msgid "Get In Touch"
+msgstr "تواصل معنا"
+
+msgid "Project Information"
+msgstr "معلومات المشروع"
+
+msgid "Scope of Work"
+msgstr "نطاق العمل"
+
+msgid "Similar project:"
+msgstr "مشروع مشابه:"
+
+msgid "From foundation to finishing touches, every project is handled by a dedicated team that treats your site as if it were their own. We work with trusted local suppliers, certified trades and transparent budgeting — so there are never surprises, only milestones celebrated."
+msgstr "من الأساسات إلى التشطيبات، يتم التعامل مع كل مشروع من قبل فريق متخصص يتعامل مع موقعك كما لو كان خاصًا به. نعمل مع موردين محليين موثوقين وحرفيين معتمدين وميزانية شفافة — دون مفاجآت، فقط مراحل نحتفل بها."
+
+msgid "Our Approach"
+msgstr "منهجنا"
+
+msgid "What’s Included"
+msgstr "ما يشمله العرض"
+
+msgid "Every package is fully comprehensive — covering structure, systems and finishes under one accountable contract."
+msgstr "كل عرض شامل بالكامل — يغطي الهيكل والأنظمة والتشطيبات ضمن عقد واحد مسؤول."
+
+msgid "Custom builds"
+msgstr "بناء مخصص"
+
+msgid "Housing developments"
+msgstr "مجمعات سكنية"
+
+msgid "Extensions"
+msgstr "توسعات"
+
+msgid "Foundations & framing"
+msgstr "الأساسات والهياكل"
+
+msgid "Roofing & waterproofing"
+msgstr "الأسقف والعزل المائي"
+
+msgid "Plumbing & electrical"
+msgstr "السباكة والكهرباء"
+
+msgid "Interior finishing"
+msgstr "التشطيبات الداخلية"
+
+msgid "Landscaping integration"
+msgstr "تنسيق الحدائق"
+
+msgid "Service Information"
+msgstr "معلومات الخدمة"
+
+msgid "Category"
+msgstr "الفئة"
+
+msgid "Typical Timeline"
+msgstr "المدة المعتادة"
+
+msgid "Team Size"
+msgstr "حجم الفريق"
+
+msgid "Warranty"
+msgstr "الضمان"
+
+msgid "10-Year Structural Warranty"
+msgstr "ضمان هيكلي لمدة 10 سنوات"
+
+msgid "Every project is backed by a decade-long structural guarantee, documented and insured."
+msgstr "كل مشروع مدعوم بضمان هيكلي لمدة عشر سنوات، موثق ومؤمن."
+
+msgid "Milestone-based scheduling with weekly reports — 98% of our projects delivered on schedule."
+msgstr "جدولة حسب المراحل مع تقارير أسبوعية — 98٪ من مشاريعنا تُسلَّم في الموعد."
+
+msgid "Fixed, Transparent Pricing"
+msgstr "سعر ثابت وشفاف"
+
+msgid "A detailed fixed-price contract before we start — no hidden costs, no mid-build surprises."
+msgstr "عقد مفصل بسعر ثابت قبل أن نبدأ — دون تكاليف خفية ودون مفاجآت أثناء البناء."
+
+msgid "Certified Master Craftsmen"
+msgstr "حرفيون معتمدون"
+
+msgid "Licensed trades only — every electrician, plumber and finisher is certified and insured."
+msgstr "حرفيون مرخصون فقط — كل كهربائي وسباك وفني تشطيب معتمد ومؤمن."
+
+msgid "One Dedicated Contact"
+msgstr "جهة اتصال واحدة مخصصة"
+
+msgid "A single project manager from day one to handover — reachable 7 days a week."
+msgstr "مدير مشروع واحد من اليوم الأول حتى التسليم — متاح 7 أيام في الأسبوع."
+
+msgid "Eco-Friendly Materials"
+msgstr "مواد صديقة للبيئة"
+
+msgid "Sustainable sourcing and low-impact materials as standard — better for you and the planet."
+msgstr "توريد مستدام ومواد منخفضة التأثير كمعيار — أفضل لك ولكوكبنا."
+
+msgid "Commercial Construction"
+msgstr "البناء التجاري"
+
+msgid "Offices, retail spaces and industrial facilities delivered on time and on budget."
+msgstr "مكاتب ومساحات تجارية ومنشآت صناعية تُسلَّم في الموعد وضمن الميزانية."
+
+msgid "Concrete Work"
+msgstr "أعمال الخرسانة"
+
+msgid "Structural and decorative concrete solutions engineered for strength and longevity."
+msgstr "حلول خرسانية إنشائية وزخرفية مصممة للقوة وطول العمر."
+
+msgid "Renovations & Remodeling"
+msgstr "التجديد وإعادة التصميم"
+
+msgid "Transforming existing spaces with modern upgrades, from kitchens to complete overhauls."
+msgstr "تحويل المساحات الحالية بترقيات حديثة، من المطابخ إلى التجديدات الشاملة."
+
+msgid "Other Open Positions"
+msgstr "وظائف شاغرة أخرى"
+
+msgid "More"
+msgstr "المزيد"
+
+msgid "View All Positions"
+msgstr "عرض جميع الوظائف"
+
+msgid "BS GROUP team member."
+msgstr "عضو في فريق BS GROUP."
+
+msgid "About Me"
+msgstr "نبذة عني"
+
+msgid "Expertise & Skills"
+msgstr "الخبرات والمهارات"
+
+msgid "Skills coming soon."
+msgstr "المهارات قريبًا."
+
+msgid "Career Journey"
+msgstr "المسيرة المهنية"
+
+msgid "Experience coming soon."
+msgstr "الخبرات قريبًا."
+
+msgid "Certifications & Awards"
+msgstr "الشهادات والجوائز"
+
+msgid "Share This Profile"
+msgstr "مشاركة هذا الملف"
+
+msgid "Great buildings start with great culture."
+msgstr "المباني العظيمة تبدأ بثقافة عظيمة."
+
+msgid "Article"
+msgstr "مقال"
+
+msgid "From the first sketch to the final coat of paint, our teams covered every trade required to bring %(title)s to life — fully integrated, fully accountable."
+msgstr "من أول رسم تخطيطي إلى آخر طبقة دهان، غطت فرقنا جميع المهن اللازمة لإحياء %(title)s — تكامل كامل ومسؤولية كاملة."
+
+msgid "— %(name)s’s leadership motto"
+msgstr "— الشعار القيادي لـ%(name)s"
