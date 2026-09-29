@@ -48,7 +48,7 @@ logs/
 # Media & static locaux (générés en build/runtime)
 media/
 staticfiles/
-static/
+# NOTE: static/ DOIT être inclus (tailwind.css prébuildé via npm run build)
 
 # Coverage & tests
 .coverage
