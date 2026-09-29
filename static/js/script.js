@@ -1,18 +1,39 @@
 /* BS GROUP — main script (vanilla JS) */
+
+/* Helpers globaux — DOIVENT rester au top-level (hors DOMContentLoaded) :
+   des blocs autonomes (wizard devis, partage, upload...) appellent S() et
+   showToast() depuis leurs propres scopes. */
+// i18n — même logique que DIGI-AGENCY : la langue vient de <html lang>
+// (FR sans préfixe / EN /en/ / AR /ar/) et les chaînes traduites sont
+// injectées par Django dans window.BSG_STRINGS (partials/_js_i18n.html).
+const BSG_LANG = (document.documentElement.lang || "fr")
+  .slice(0, 2)
+  .toLowerCase();
+const BSG_LOCALE =
+  { fr: "fr-FR", en: "en-US", ar: "ar-MA" }[BSG_LANG] || "fr-FR";
+const BSG_STRINGS = window.BSG_STRINGS || {};
+const S = (key, fb) => {
+  const v = BSG_STRINGS[key];
+  return v === undefined || v === null || v === "" ? fb : v;
+};
+
+const showToast = (message) => {
+  const toast = document.createElement("div");
+  toast.className = "toast-success";
+  toast.setAttribute("role", "status");
+  toast.innerHTML =
+    '<svg viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>' +
+    "<span></span>";
+  toast.querySelector("span").textContent = message;
+  document.body.appendChild(toast);
+
+  setTimeout(() => {
+    toast.classList.add("hide");
+    setTimeout(() => toast.remove(), 450);
+  }, 3600);
+};
+
 document.addEventListener("DOMContentLoaded", () => {
-  // i18n — même logique que DIGI-AGENCY : la langue vient de <html lang>
-  // (FR sans préfixe / EN /en/ / AR /ar/) et les chaînes traduites sont
-  // injectées par Django dans window.BSG_STRINGS (partials/_js_i18n.html).
-  const BSG_LANG = (document.documentElement.lang || "fr")
-    .slice(0, 2)
-    .toLowerCase();
-  const BSG_LOCALE =
-    { fr: "fr-FR", en: "en-US", ar: "ar-MA" }[BSG_LANG] || "fr-FR";
-  const BSG_STRINGS = window.BSG_STRINGS || {};
-  const S = (key, fb) => {
-    const v = BSG_STRINGS[key];
-    return v === undefined || v === null || v === "" ? fb : v;
-  };
   /* Constante vidéo partagée (Hero + Why Choose Us + Video Showcase) */
   // ⚠️ Remplacer par l'URL de votre vidéo (MP4) —
   // pour YouTube : remplacer le <video> du HTML par une <iframe> embed.
@@ -456,22 +477,6 @@ document.addEventListener("DOMContentLoaded", () => {
       input.classList.remove("input-error");
       if (errorEl) errorEl.classList.add("hidden");
     }
-  };
-
-  const showToast = (message) => {
-    const toast = document.createElement("div");
-    toast.className = "toast-success";
-    toast.setAttribute("role", "status");
-    toast.innerHTML =
-      '<svg viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>' +
-      "<span></span>";
-    toast.querySelector("span").textContent = message;
-    document.body.appendChild(toast);
-
-    setTimeout(() => {
-      toast.classList.add("hide");
-      setTimeout(() => toast.remove(), 450);
-    }, 3600);
   };
 
   const contactForm = document.getElementById("contact-form");
