@@ -233,42 +233,6 @@
               </div>
             </div>
             {% empty %}
-            <div>
-              <div
-                class="text-[32px] sm:text-[40px] md:text-[42px] font-black leading-none tracking-tight"
-                data-count="640"
-                data-suffix="+"
-              >
-                640+
-              </div>
-              <div class="mt-2 text-[15px] font-normal text-orange-100">
-                {% trans "Projects Completed" %}
-              </div>
-            </div>
-            <div>
-              <div
-                class="text-[32px] sm:text-[40px] md:text-[42px] font-black leading-none tracking-tight"
-                data-count="25"
-                data-suffix="+"
-              >
-                25+
-              </div>
-              <div class="mt-2 text-[15px] font-normal text-orange-100">
-                {% trans "Years of Experience" %}
-              </div>
-            </div>
-            <div>
-              <div
-                class="text-[32px] sm:text-[40px] md:text-[42px] font-black leading-none tracking-tight"
-                data-count="450"
-                data-suffix="+"
-              >
-                450+
-              </div>
-              <div class="mt-2 text-[15px] font-normal text-orange-100">
-                {% trans "Happy Customers" %}
-              </div>
-            </div>
             {% endfor %}
           </div>
         </div>
@@ -341,11 +305,13 @@
             </h2>
 
             <!-- Paragraphe -->
+            {% if site_settings.about_description %}
             <p
               class="mt-6 max-w-[520px] text-[15px] text-slate-500 leading-relaxed"
             >
-              {{ site_settings.about_description|default:_("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.") }}
+              {{ site_settings.about_description }}
             </p>
+            {% endif %}
             {% if site_settings.about_description_2 %}
             <p
               class="mt-4 max-w-[520px] text-[15px] text-slate-500 leading-relaxed"
@@ -400,8 +366,9 @@
             </div>
           </div>
 
-          <!-- Carte marine : slider Mission / Vision / Valeurs -->
+          <!-- Carte marine : slider Mission / Vision (données SiteSettings) -->
           <div
+            id="about-slider-card"
             class="lg:col-span-7 relative bg-[#0b1f35] rounded-[24px] p-5 sm:p-8 md:p-10 overflow-hidden flex flex-col min-h-[340px] md:min-h-[380px]"
           >
             <!-- Ticks discrets en bas de carte -->
@@ -413,16 +380,16 @@
             <div
               id="about-slide-content"
               class="relative z-10 flex flex-col flex-1"
-              data-mission-title="{{ site_settings.mission_title|default:'Our Mission' }}"
-              data-mission-text="{{ site_settings.mission_description|default:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.' }}"
-              data-vision-title="{{ site_settings.vision_title|default:'Our Vision' }}"
-              data-vision-text="{{ site_settings.vision_description|default:'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.' }}"
+              data-mission-title="{{ site_settings.mission_title|default:_('Our Mission') }}"
+              data-mission-text="{{ site_settings.mission_description|default:'' }}"
+              data-vision-title="{{ site_settings.vision_title|default:_('Our Vision') }}"
+              data-vision-text="{{ site_settings.vision_description|default:'' }}"
             >
               <p
                 id="about-slide-text"
                 class="text-white/95 text-[17px] md:text-lg leading-relaxed max-w-[560px]"
               >
-                {{ site_settings.mission_description|default:_("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.") }}
+                {{ site_settings.mission_description|default:'' }}
               </p>
 
               <div class="mt-auto pt-8 flex items-end justify-between gap-4">
@@ -523,246 +490,6 @@
             ></span>
           </article>
           {% empty %}
-          <article
-            data-service-card
-            class="service-card active relative bg-white rounded-[22px] shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden"
-          >
-            <div class="service-img h-[170px] w-full">
-              <img
-                src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1000&auto=format&fit=crop"
-                alt="{% trans 'Hydrocarbon industrial site' %}"
-                class="w-full h-full object-cover"
-                loading="lazy"
-              />
-            </div>
-            <div
-              class="absolute left-1/2 -translate-x-1/2 top-[132px] w-[76px] h-[76px] rounded-full bg-[#0b1f35] ring-4 service-icon ring-white flex items-center justify-center text-white shadow-md"
-            >
-              <i data-lucide="fuel" class="w-7 h-7"></i>
-            </div>
-            <div class="px-7 pt-[52px] pb-7">
-              <h3
-                class="text-[22px] font-extrabold text-[#0b1f35] leading-snug max-w-[230px]"
-              ><a href="{% url 'services:services' %}" class="hover:text-[#c9a227] transition-colors">
-                {% trans "Hydrocarbons & accessories" %}
-              </a></h3>
-              <p
-                class="mt-3 text-[15px] text-slate-500 leading-relaxed line-clamp-3"
-              >
-                {% trans "Supply of fuels, lubricants and accessories, verified sourcing and controlled quality." %}
-              </p>
-              <a
-                href="{% url 'services:services' %}"
-                class="service-link mt-6 inline-flex items-center gap-2 text-sm font-bold transition-colors"
-                >{% trans "Learn more" %}
-                <i data-lucide="arrow-right" class="service-arrow w-4 h-4"></i
-              ></a>
-            </div>
-            <span
-              class="service-bar absolute bottom-0 inset-x-7 h-[5px] bg-[#0b1f35] rounded-t-full transition-all duration-300"
-              aria-hidden="true"
-            ></span>
-          </article>
-          <article
-            data-service-card
-            class="service-card relative bg-white rounded-[22px] shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden"
-          >
-            <div class="service-img h-[170px] w-full">
-              <img
-                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000&auto=format&fit=crop"
-                alt="{% trans 'Handshake between financial partners' %}"
-                class="w-full h-full object-cover"
-                loading="lazy"
-              />
-            </div>
-            <div
-              class="absolute left-1/2 -translate-x-1/2 top-[132px] w-[76px] h-[76px] rounded-full bg-[#0b1f35] ring-4 service-icon ring-white flex items-center justify-center text-white shadow-md"
-            >
-              <i data-lucide="handshake" class="w-7 h-7"></i>
-            </div>
-            <div class="px-7 pt-[52px] pb-7">
-              <h3
-                class="text-[22px] font-extrabold text-[#0b1f35] leading-snug max-w-[230px]"
-              ><a href="{% url 'services:services' %}" class="hover:text-[#c9a227] transition-colors">
-                {% trans "Financial intermediation" %}
-              </a></h3>
-              <p
-                class="mt-3 text-[15px] text-slate-500 leading-relaxed line-clamp-3"
-              >
-                {% trans "Qualified matchmaking between project sponsors and financial partners." %}
-              </p>
-              <a
-                href="{% url 'services:services' %}"
-                class="service-link mt-6 inline-flex items-center gap-2 text-sm font-bold transition-colors"
-                >{% trans "Learn more" %}
-                <i data-lucide="arrow-right" class="service-arrow w-4 h-4"></i
-              ></a>
-            </div>
-            <span
-              class="service-bar absolute bottom-0 inset-x-7 h-[5px] bg-[#0b1f35] rounded-t-full transition-all duration-300"
-              aria-hidden="true"
-            ></span>
-          </article>
-          <article
-            data-service-card
-            class="service-card relative bg-white rounded-[22px] shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden"
-          >
-            <div class="service-img h-[170px] w-full">
-              <img
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1000&auto=format&fit=crop"
-                alt="{% trans 'Institutional headquarters, financial structuring' %}"
-                class="w-full h-full object-cover"
-                loading="lazy"
-              />
-            </div>
-            <div
-              class="absolute left-1/2 -translate-x-1/2 top-[132px] w-[76px] h-[76px] rounded-full bg-[#0b1f35] ring-4 service-icon ring-white flex items-center justify-center text-white shadow-md"
-            >
-              <i data-lucide="landmark" class="w-7 h-7"></i>
-            </div>
-            <div class="px-7 pt-[52px] pb-7">
-              <h3
-                class="text-[22px] font-extrabold text-[#0b1f35] leading-snug max-w-[230px]"
-              ><a href="{% url 'services:services' %}" class="hover:text-[#c9a227] transition-colors">
-                {% trans "Financial structuring" %}
-              </a></h3>
-              <p
-                class="mt-3 text-[15px] text-slate-500 leading-relaxed line-clamp-3"
-              >
-                {% trans "Deal structuring and engineering: structuring, risks, closing." %}
-              </p>
-              <a
-                href="{% url 'services:services' %}"
-                class="service-link mt-6 inline-flex items-center gap-2 text-sm font-bold transition-colors"
-                >{% trans "Learn more" %}
-                <i data-lucide="arrow-right" class="service-arrow w-4 h-4"></i
-              ></a>
-            </div>
-            <span
-              class="service-bar absolute bottom-0 inset-x-7 h-[5px] bg-[#0b1f35] rounded-t-full transition-all duration-300"
-              aria-hidden="true"
-            ></span>
-          </article>
-          <article
-            data-service-card
-            class="service-card relative bg-white rounded-[22px] shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden"
-          >
-            <div class="service-img h-[170px] w-full">
-              <img
-                src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1000&auto=format&fit=crop"
-                alt="{% trans 'Construction engineers on site' %}"
-                class="w-full h-full object-cover"
-                loading="lazy"
-              />
-            </div>
-            <div
-              class="absolute left-1/2 -translate-x-1/2 top-[132px] w-[76px] h-[76px] rounded-full bg-[#0b1f35] ring-4 service-icon ring-white flex items-center justify-center text-white shadow-md"
-            >
-              <i data-lucide="building-2" class="w-7 h-7"></i>
-            </div>
-            <div class="px-7 pt-[52px] pb-7">
-              <h3
-                class="text-[22px] font-extrabold text-[#0b1f35] leading-snug max-w-[230px]"
-              ><a href="{% url 'services:services' %}" class="hover:text-[#c9a227] transition-colors">
-                {% trans "Construction & infrastructures" %}
-              </a></h3>
-              <p
-                class="mt-3 text-[15px] text-slate-500 leading-relaxed line-clamp-3"
-              >
-                {% trans "Construction, infrastructures and renovation: timelines, quality, HSSE." %}
-              </p>
-              <a
-                href="{% url 'services:services' %}"
-                class="service-link mt-6 inline-flex items-center gap-2 text-sm font-bold transition-colors"
-                >{% trans "Learn more" %}
-                <i data-lucide="arrow-right" class="service-arrow w-4 h-4"></i
-              ></a>
-            </div>
-            <span
-              class="service-bar absolute bottom-0 inset-x-7 h-[5px] bg-[#0b1f35] rounded-t-full transition-all duration-300"
-              aria-hidden="true"
-            ></span>
-          </article>
-          <article
-            data-service-card
-            class="service-card relative bg-white rounded-[22px] shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden"
-          >
-            <div class="service-img h-[170px] w-full">
-              <img
-                src="https://images.unsplash.com/photo-1573497491208-6b1acb260507?q=80&w=1000&auto=format&fit=crop"
-                alt="{% trans 'International trade' %}"
-                class="w-full h-full object-cover"
-                loading="lazy"
-              />
-            </div>
-            <div
-              class="absolute left-1/2 -translate-x-1/2 top-[132px] w-[76px] h-[76px] rounded-full bg-[#0b1f35] ring-4 service-icon ring-white flex items-center justify-center text-white shadow-md"
-            >
-              <i data-lucide="globe" class="w-7 h-7"></i>
-            </div>
-            <div class="px-7 pt-[52px] pb-7">
-              <h3
-                class="text-[22px] font-extrabold text-[#0b1f35] leading-snug max-w-[230px]"
-              ><a href="{% url 'services:services' %}" class="hover:text-[#c9a227] transition-colors">
-                {% trans "International trade" %}
-              </a></h3>
-              <p
-                class="mt-3 text-[15px] text-slate-500 leading-relaxed line-clamp-3"
-              >
-                {% trans "Import-export, sourcing and customs compliance across your corridors." %}
-              </p>
-              <a
-                href="{% url 'services:services' %}"
-                class="service-link mt-6 inline-flex items-center gap-2 text-sm font-bold transition-colors"
-                >{% trans "Learn more" %}
-                <i data-lucide="arrow-right" class="service-arrow w-4 h-4"></i
-              ></a>
-            </div>
-            <span
-              class="service-bar absolute bottom-0 inset-x-7 h-[5px] bg-[#0b1f35] rounded-t-full transition-all duration-300"
-              aria-hidden="true"
-            ></span>
-          </article>
-          <article
-            data-service-card
-            class="service-card relative bg-white rounded-[22px] shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden"
-          >
-            <div class="service-img h-[170px] w-full">
-              <img
-                src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=1000&auto=format&fit=crop"
-                alt="{% trans 'Transport and logistics operations' %}"
-                class="w-full h-full object-cover"
-                loading="lazy"
-              />
-            </div>
-            <div
-              class="absolute left-1/2 -translate-x-1/2 top-[132px] w-[76px] h-[76px] rounded-full bg-[#0b1f35] ring-4 service-icon ring-white flex items-center justify-center text-white shadow-md"
-            >
-              <i data-lucide="truck" class="w-7 h-7"></i>
-            </div>
-            <div class="px-7 pt-[52px] pb-7">
-              <h3
-                class="text-[22px] font-extrabold text-[#0b1f35] leading-snug max-w-[230px]"
-              ><a href="{% url 'services:services' %}" class="hover:text-[#c9a227] transition-colors">
-                {% trans "Transport & logistics" %}
-              </a></h3>
-              <p
-                class="mt-3 text-[15px] text-slate-500 leading-relaxed line-clamp-3"
-              >
-                {% trans "Transport, warehousing and distribution with end-to-end tracking." %}
-              </p>
-              <a
-                href="{% url 'services:services' %}"
-                class="service-link mt-6 inline-flex items-center gap-2 text-sm font-bold transition-colors"
-                >{% trans "Learn more" %}
-                <i data-lucide="arrow-right" class="service-arrow w-4 h-4"></i
-              ></a>
-            </div>
-            <span
-              class="service-bar absolute bottom-0 inset-x-7 h-[5px] bg-[#0b1f35] rounded-t-full transition-all duration-300"
-              aria-hidden="true"
-            ></span>
-          </article>
           {% endfor %}
         </div>
 
@@ -861,93 +588,6 @@
             </p>
           </div>
           {% empty %}
-          <!-- STEP 1 — Consultation & Planning (active par défaut) -->
-          <div
-            data-process-step
-            class="process-step active relative flex flex-col cursor-pointer"
-          >
-            <div class="relative flex items-center">
-              <span class="step-badge">{% trans "Step 1" %}</span>
-              <span class="hidden md:block flex-1 h-px bg-gray-200"></span>
-              <!-- Chevron connecteur (à cheval sur la jonction) -->
-              <span
-                class="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 bg-[#f5f6f9] px-1 text-[#c9a227]"
-                aria-hidden="true"
-              >
-                <i data-lucide="chevrons-right" class="w-5 h-5"></i>
-              </span>
-            </div>
-            <h3
-              class="mt-7 text-[22px] font-extrabold text-[#0b1f35] leading-snug max-w-[240px]"
-            >
-              {% trans "Consultation & Planning" %}
-            </h3>
-            <p
-              class="mt-4 text-[15px] text-slate-500 leading-relaxed line-clamp-3 max-w-[300px]"
-            >
-              {% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." %}
-            </p>
-          </div>
-
-          <!-- STEP 2 — Design & Construction -->
-          <div
-            data-process-step
-            class="process-step relative flex flex-col cursor-pointer"
-          >
-            <!-- Séparateur vertical -->
-            <span
-              class="hidden md:block absolute top-0 bottom-0 -left-5 w-px bg-gray-200"
-              aria-hidden="true"
-            ></span>
-
-            <div class="relative flex items-center">
-              <span class="step-badge">{% trans "Step 2" %}</span>
-              <span class="hidden md:block flex-1 h-px bg-gray-200"></span>
-              <span
-                class="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 bg-[#f5f6f9] px-1 text-[#c9a227]"
-                aria-hidden="true"
-              >
-                <i data-lucide="chevrons-right" class="w-5 h-5"></i>
-              </span>
-            </div>
-            <h3
-              class="mt-7 text-[22px] font-extrabold text-[#0b1f35] leading-snug max-w-[240px]"
-            >
-              {% trans "Design & Construction" %}
-            </h3>
-            <p
-              class="mt-4 text-[15px] text-slate-500 leading-relaxed line-clamp-3 max-w-[300px]"
-            >
-              {% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." %}
-            </p>
-          </div>
-
-          <!-- STEP 3 — Final Inspection & Handover -->
-          <div
-            data-process-step
-            class="process-step relative flex flex-col cursor-pointer"
-          >
-            <!-- Séparateur vertical -->
-            <span
-              class="hidden md:block absolute top-0 bottom-0 -left-5 w-px bg-gray-200"
-              aria-hidden="true"
-            ></span>
-
-            <div class="relative flex items-center">
-              <span class="step-badge">{% trans "Step 3" %}</span>
-              <span class="hidden md:block flex-1 h-px bg-gray-200"></span>
-            </div>
-            <h3
-              class="mt-7 text-[22px] font-extrabold text-[#0b1f35] leading-snug max-w-[260px]"
-            >
-              {% trans "Final Inspection & Handover" %}
-            </h3>
-            <p
-              class="mt-4 text-[15px] text-slate-500 leading-relaxed line-clamp-3 max-w-[300px]"
-            >
-              {% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." %}
-            </p>
-          </div>
           {% endfor %}
 
           <div
@@ -1213,181 +853,6 @@
             </div>
           </article>
           {% empty %}
-          <!-- Projet 1 — image à gauche -->
-          <article
-            class="project-card bg-white/[0.06] rounded-[26px] p-4 sm:p-5 grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 items-stretch"
-          >
-            <!-- Visuel + badges -->
-            <div class="relative order-1">
-              <div
-                class="project-img project-img--tl h-[230px] md:h-full md:min-h-[250px] rounded-[20px] overflow-hidden"
-              >
-                <img
-                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop"
-                  alt="{% trans 'Blue glass office tower' %} — The Business Hub"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-              <div class="absolute bottom-4 left-4 flex flex-wrap gap-2 z-10">
-                <span
-                  class="px-3.5 py-1.5 rounded-full border border-white/50 bg-[#0b1f35]/60 backdrop-blur-sm text-[11px] font-semibold text-white"
-                  >2020-2025</span
-                >
-                <span
-                  class="px-3.5 py-1.5 rounded-full border border-white/50 bg-[#0b1f35]/60 backdrop-blur-sm text-[11px] font-semibold text-white"
-                  >Commercial Construction</span
-                >
-              </div>
-            </div>
-
-            <!-- Contenu -->
-            <div
-              class="order-2 py-2 md:py-4 md:pr-6 flex flex-col justify-center"
-            >
-              <h3
-                class="text-[24px] md:text-[26px] font-extrabold text-white tracking-tight"
-              ><a href="{% url 'projects:projets' %}" class="hover:text-[#c9a227] transition-colors">
-                The Business Hub
-              </a></h3>
-              <p
-                class="mt-3 text-[13px] text-slate-400 leading-relaxed line-clamp-2 max-w-[420px]"
-              >
-                {% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore..." %}
-              </p>
-
-              <ul class="mt-6 space-y-3.5">
-                <li class="flex items-center gap-3 text-[13px] text-slate-300">
-                  <span
-                    class="w-6 h-6 rounded-full bg-[#c9a227] text-white flex items-center justify-center shrink-0"
-                  >
-                    <i data-lucide="map-pin" class="w-3 h-3"></i>
-                  </span>
-                  <span
-                    ><span class="font-bold text-white">{% trans "Location" %} :</span> New
-                    York, USA</span
-                  >
-                </li>
-                <li class="flex items-center gap-3 text-[13px] text-slate-300">
-                  <span
-                    class="w-6 h-6 rounded-full bg-[#c9a227] text-white flex items-center justify-center shrink-0"
-                  >
-                    <i data-lucide="plus" class="w-3 h-3"></i>
-                  </span>
-                  <span
-                    ><span class="font-bold text-white">{% trans "Total Area" %} :</span>
-                    18.000 square meters</span
-                  >
-                </li>
-                <li class="flex items-center gap-3 text-[13px] text-slate-300">
-                  <span
-                    class="w-6 h-6 rounded-full bg-[#c9a227] text-white flex items-center justify-center shrink-0"
-                  >
-                    <i data-lucide="clock" class="w-3 h-3"></i>
-                  </span>
-                  <span
-                    ><span class="font-bold text-white">{% trans "Duration" %} :</span> 5Y,
-                    3M</span
-                  >
-                </li>
-              </ul>
-
-              <a
-                href="#contact"
-                class="project-link mt-7 inline-flex items-center gap-2 text-sm font-bold text-[#c9a227] w-fit"
-              >
-                {% trans "Learn more" %}
-                <i data-lucide="arrow-right" class="project-arrow w-4 h-4"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- Projet 2 — image à droite (miroir) -->
-          <article
-            class="project-card bg-white/[0.06] rounded-[26px] p-4 sm:p-5 grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 items-stretch"
-          >
-            <!-- Visuel + badges (affiché en 1er sur desktop) -->
-            <div class="relative order-1 md:order-2">
-              <div
-                class="project-img project-img--br h-[230px] md:h-full md:min-h-[250px] rounded-[20px] overflow-hidden"
-              >
-                <img
-                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop"
-                  alt="{% trans 'Modern architectural villa' %} — Sky Haven"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-              <div class="absolute bottom-4 left-4 flex flex-wrap gap-2 z-10">
-                <span
-                  class="px-3.5 py-1.5 rounded-full border border-white/50 bg-[#0b1f35]/60 backdrop-blur-sm text-[11px] font-semibold text-white"
-                  >2024-2025</span
-                >
-                <span
-                  class="px-3.5 py-1.5 rounded-full border border-white/50 bg-[#0b1f35]/60 backdrop-blur-sm text-[11px] font-semibold text-white"
-                  >{% trans "Residential Construction" %}</span
-                >
-              </div>
-            </div>
-
-            <!-- Contenu -->
-            <div
-              class="order-2 md:order-1 py-2 md:py-4 md:pl-6 flex flex-col justify-center"
-            >
-              <h3
-                class="text-[24px] md:text-[26px] font-extrabold text-white tracking-tight"
-              ><a href="{% url 'projects:projets' %}" class="hover:text-[#c9a227] transition-colors">
-                Sky Haven
-              </a></h3>
-              <p
-                class="mt-3 text-[13px] text-slate-400 leading-relaxed line-clamp-2 max-w-[420px]"
-              >
-                {% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore..." %}
-              </p>
-
-              <ul class="mt-6 space-y-3.5">
-                <li class="flex items-center gap-3 text-[13px] text-slate-300">
-                  <span
-                    class="w-6 h-6 rounded-full bg-[#c9a227] text-white flex items-center justify-center shrink-0"
-                  >
-                    <i data-lucide="map-pin" class="w-3 h-3"></i>
-                  </span>
-                  <span
-                    ><span class="font-bold text-white">{% trans "Location" %} :</span> New
-                    York, USA</span
-                  >
-                </li>
-                <li class="flex items-center gap-3 text-[13px] text-slate-300">
-                  <span
-                    class="w-6 h-6 rounded-full bg-[#c9a227] text-white flex items-center justify-center shrink-0"
-                  >
-                    <i data-lucide="plus" class="w-3 h-3"></i>
-                  </span>
-                  <span
-                    ><span class="font-bold text-white">{% trans "Total Area" %} :</span> 500
-                    square meters</span
-                  >
-                </li>
-                <li class="flex items-center gap-3 text-[13px] text-slate-300">
-                  <span
-                    class="w-6 h-6 rounded-full bg-[#c9a227] text-white flex items-center justify-center shrink-0"
-                  >
-                    <i data-lucide="clock" class="w-3 h-3"></i>
-                  </span>
-                  <span
-                    ><span class="font-bold text-white">{% trans "Duration" %} :</span> 1Y,
-                    2M</span
-                  >
-                </li>
-              </ul>
-
-              <a
-                href="#contact"
-                class="project-link mt-7 inline-flex items-center gap-2 text-sm font-bold text-[#c9a227] w-fit"
-              >
-                {% trans "Learn more" %}
-                <i data-lucide="arrow-right" class="project-arrow w-4 h-4"></i>
-              </a>
-            </div>
-          </article>
           {% endfor %}
         </div>
 
@@ -1526,68 +991,6 @@
                 </div>
               </div>
               {% empty %}
-              <!-- Feature 1 -->
-              <div class="flex items-start gap-5 py-4 first:pt-0">
-                <span
-                  class="w-12 h-12 rounded-xl border border-white/25 text-white flex items-center justify-center shrink-0"
-                >
-                  <i data-lucide="cog" class="w-6 h-6"></i>
-                </span>
-                <div>
-                  <h3 class="text-white font-bold text-[17px]">
-                    {% trans "Advanced Technology" %}
-                  </h3>
-                  <p class="mt-1.5 text-[13px] text-slate-400 leading-relaxed">
-                    {% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt." %}
-                  </p>
-                </div>
-              </div>
-              <!-- Feature 2 -->
-              <div class="flex items-start gap-5 py-4">
-                <span
-                  class="w-12 h-12 rounded-xl border border-white/25 text-white flex items-center justify-center shrink-0"
-                >
-                  <i data-lucide="hard-hat" class="w-6 h-6"></i>
-                </span>
-                <div>
-                  <h3 class="text-white font-bold text-[17px]">{% trans "Expert Team" %}</h3>
-                  <p class="mt-1.5 text-[13px] text-slate-400 leading-relaxed">
-                    {% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt." %}
-                  </p>
-                </div>
-              </div>
-              <!-- Feature 3 -->
-              <div class="flex items-start gap-5 py-4">
-                <span
-                  class="w-12 h-12 rounded-xl border border-white/25 text-white flex items-center justify-center shrink-0"
-                >
-                  <i data-lucide="alarm-clock" class="w-6 h-6"></i>
-                </span>
-                <div>
-                  <h3 class="text-white font-bold text-[17px]">
-                    {% trans "On-Time Delivery" %}
-                  </h3>
-                  <p class="mt-1.5 text-[13px] text-slate-400 leading-relaxed">
-                    {% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt." %}
-                  </p>
-                </div>
-              </div>
-              <!-- Feature 4 -->
-              <div class="flex items-start gap-5 py-4 last:pb-0">
-                <span
-                  class="w-12 h-12 rounded-xl border border-white/25 text-white flex items-center justify-center shrink-0"
-                >
-                  <i data-lucide="trophy" class="w-6 h-6"></i>
-                </span>
-                <div>
-                  <h3 class="text-white font-bold text-[17px]">
-                    {% trans "Award Winning" %}
-                  </h3>
-                  <p class="mt-1.5 text-[13px] text-slate-400 leading-relaxed">
-                    {% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt." %}
-                  </p>
-                </div>
-              </div>
               {% endfor %}
             </div>
           </div>
@@ -1756,261 +1159,14 @@
             ></span>
           </article>
           {% empty %}
-          <!-- Membre 1 (active par défaut) -->
-          <article
-            data-team-card
-            class="team-card active relative bg-white rounded-[20px] p-4 pb-5 shadow-sm hover:shadow-xl transition-shadow duration-300 cursor-pointer"
-          >
-            <div
-              class="relative h-[330px] rounded-[14px] bg-[#f5f6f9] overflow-hidden"
-            >
-              <span
-                class="absolute top-0 right-4 w-12 h-[62%] bg-[#0b1f35] rounded-b-[10px]"
-                aria-hidden="true"
-              ></span>
-              <span
-                class="team-stripes absolute bottom-0 left-0 w-24 h-16"
-                aria-hidden="true"
-              ></span>
-              <div
-                class="team-photo absolute left-3 bottom-0 w-[calc(100%-24px)] h-[88%]"
-              >
-                <img
-                  src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=600&auto=format&fit=crop"
-                  alt="Jenny Alexander — {% trans 'Chief Executive Officer' %}"
-                  class="w-full h-full object-cover object-top"
-                />
-              </div>
-            </div>
-            <div class="mt-5 px-1">
-              <h3 class="text-[18px] font-extrabold text-[#0b1f35]"><a href="{% url 'team:team' %}" class="hover:text-[#c9a227] transition-colors">
-                Jenny Alexander
-              </a></h3>
-              <p class="mt-0.5 text-[11.5px] text-slate-500">
-                {% trans "Chief Executive Officer" %}
-              </p>
-              <div class="mt-3.5 flex items-center gap-2">
-                <a
-                  href="#"
-                  aria-label="Facebook"
-                  class="w-7 h-7 rounded-full bg-slate-100 text-[#0b1f35] flex items-center justify-center hover:bg-[#0b1f35] hover:text-white transition-colors"
-                  ><svg
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    class="w-3 h-3"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M24 12.073C24 5.446 18.627.073 12 .073S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
-                    /></svg
-                ></a>
-                <a
-                  href="#"
-                  aria-label="Twitter / X"
-                  class="w-7 h-7 rounded-full bg-slate-100 text-[#0b1f35] flex items-center justify-center hover:bg-[#0b1f35] hover:text-white transition-colors"
-                  ><svg
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    class="w-3 h-3"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644z"
-                    /></svg
-                ></a>
-                <a
-                  href="#"
-                  aria-label="Instagram"
-                  class="w-7 h-7 rounded-full bg-slate-100 text-[#0b1f35] flex items-center justify-center hover:bg-[#0b1f35] hover:text-white transition-colors"
-                  ><svg
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    class="w-3 h-3"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
-                    /></svg
-                ></a>
-              </div>
-            </div>
-            <span
-              class="team-bar absolute bottom-0 left-5 right-5 h-[4px] bg-[#0b1f35] rounded-t-full transition-all duration-300"
-              aria-hidden="true"
-            ></span>
-          </article>
-
-          <!-- Membre 2 -->
-          <article
-            data-team-card
-            class="team-card relative bg-white rounded-[20px] p-4 pb-5 shadow-sm hover:shadow-xl transition-shadow duration-300 cursor-pointer"
-          >
-            <div
-              class="relative h-[330px] rounded-[14px] bg-[#f5f6f9] overflow-hidden"
-            >
-              <span
-                class="absolute top-0 right-4 w-12 h-[62%] bg-[#0b1f35] rounded-b-[10px]"
-                aria-hidden="true"
-              ></span>
-              <span
-                class="team-stripes absolute bottom-0 left-0 w-24 h-16"
-                aria-hidden="true"
-              ></span>
-              <div
-                class="team-photo absolute left-3 bottom-0 w-[calc(100%-24px)] h-[88%]"
-              >
-                <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop"
-                  alt="Esther Howard — {% trans 'Civil Engineer' %}"
-                  class="w-full h-full object-cover object-top"
-                />
-              </div>
-            </div>
-            <div class="mt-5 px-1">
-              <h3 class="text-[18px] font-extrabold text-[#0b1f35]"><a href="{% url 'team:team' %}" class="hover:text-[#c9a227] transition-colors">
-                Esther Howard
-              </a></h3>
-              <p class="mt-0.5 text-[11.5px] text-slate-500">{% trans "Civil Engineer" %}</p>
-              <div class="mt-3.5 flex items-center gap-2">
-                <a
-                  href="#"
-                  aria-label="Facebook"
-                  class="w-7 h-7 rounded-full bg-slate-100 text-[#0b1f35] flex items-center justify-center hover:bg-[#0b1f35] hover:text-white transition-colors"
-                  ><svg
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    class="w-3 h-3"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M24 12.073C24 5.446 18.627.073 12 .073S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
-                    /></svg
-                ></a>
-                <a
-                  href="#"
-                  aria-label="Twitter / X"
-                  class="w-7 h-7 rounded-full bg-slate-100 text-[#0b1f35] flex items-center justify-center hover:bg-[#0b1f35] hover:text-white transition-colors"
-                  ><svg
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    class="w-3 h-3"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644z"
-                    /></svg
-                ></a>
-                <a
-                  href="#"
-                  aria-label="Instagram"
-                  class="w-7 h-7 rounded-full bg-slate-100 text-[#0b1f35] flex items-center justify-center hover:bg-[#0b1f35] hover:text-white transition-colors"
-                  ><svg
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    class="w-3 h-3"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
-                    /></svg
-                ></a>
-              </div>
-            </div>
-            <span
-              class="team-bar absolute bottom-0 left-5 right-5 h-[4px] bg-[#0b1f35] rounded-t-full transition-all duration-300"
-              aria-hidden="true"
-            ></span>
-          </article>
-
-          <!-- Membre 3 -->
-          <article
-            data-team-card
-            class="team-card relative bg-white rounded-[20px] p-4 pb-5 shadow-sm hover:shadow-xl transition-shadow duration-300 cursor-pointer"
-          >
-            <div
-              class="relative h-[330px] rounded-[14px] bg-[#f5f6f9] overflow-hidden"
-            >
-              <span
-                class="absolute top-0 right-4 w-12 h-[62%] bg-[#0b1f35] rounded-b-[10px]"
-                aria-hidden="true"
-              ></span>
-              <span
-                class="team-stripes absolute bottom-0 left-0 w-24 h-16"
-                aria-hidden="true"
-              ></span>
-              <div
-                class="team-photo absolute left-3 bottom-0 w-[calc(100%-24px)] h-[88%]"
-              >
-                <img
-                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop"
-                  alt="Ronald Richards — {% trans 'Structural Engineer' %}"
-                  class="w-full h-full object-cover object-top"
-                />
-              </div>
-            </div>
-            <div class="mt-5 px-1">
-              <h3 class="text-[18px] font-extrabold text-[#0b1f35]"><a href="{% url 'team:team' %}" class="hover:text-[#c9a227] transition-colors">
-                Ronald Richards
-              </a></h3>
-              <p class="mt-0.5 text-[11.5px] text-slate-500">
-                {% trans "Structural Engineer" %}
-              </p>
-              <div class="mt-3.5 flex items-center gap-2">
-                <a
-                  href="#"
-                  aria-label="Facebook"
-                  class="w-7 h-7 rounded-full bg-slate-100 text-[#0b1f35] flex items-center justify-center hover:bg-[#0b1f35] hover:text-white transition-colors"
-                  ><svg
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    class="w-3 h-3"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M24 12.073C24 5.446 18.627.073 12 .073S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
-                    /></svg
-                ></a>
-                <a
-                  href="#"
-                  aria-label="Twitter / X"
-                  class="w-7 h-7 rounded-full bg-slate-100 text-[#0b1f35] flex items-center justify-center hover:bg-[#0b1f35] hover:text-white transition-colors"
-                  ><svg
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    class="w-3 h-3"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644z"
-                    /></svg
-                ></a>
-                <a
-                  href="#"
-                  aria-label="Instagram"
-                  class="w-7 h-7 rounded-full bg-slate-100 text-[#0b1f35] flex items-center justify-center hover:bg-[#0b1f35] hover:text-white transition-colors"
-                  ><svg
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    class="w-3 h-3"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
-                    /></svg
-                ></a>
-              </div>
-            </div>
-            <span
-              class="team-bar absolute bottom-0 left-5 right-5 h-[4px] bg-[#0b1f35] rounded-t-full transition-all duration-300"
-              aria-hidden="true"
-            ></span>
-          </article>
           {% endfor %}
         </div>
       </div>
     </section>
 
+    {% if testimonials %}
     <section id="testimonials" class="bg-[#0b1f35] relative overflow-hidden">
+      {{ testimonials_json|json_script:"testimonials-data" }}
       <span class="section-tag section-tag--light" aria-hidden="true">Testimonials</span>
       <!-- Bandes hachurées haut / bas -->
       <div class="hatch-edge w-full" aria-hidden="true"></div>
@@ -2045,6 +1201,7 @@
 
       <div class="hatch-edge w-full" aria-hidden="true"></div>
     </section>
+    {% endif %}
 
     <section id="faq" class="relative overflow-hidden bg-[#f5f6f9] py-16">
       <span class="section-tag section-tag--dark" aria-hidden="true">FAQ</span>
@@ -2097,212 +1254,6 @@
               </div>
             </div>
             {% empty %}
-            <div class="faq-item rounded-2xl bg-white overflow-hidden" data-faq>
-              <button
-                type="button"
-                class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5"
-              >
-                <span class="text-[15px] font-bold text-[#0b1f35]"
-                  >What services does your company provide?</span
-                >
-                <span
-                  class="faq-icon relative w-5 h-5 shrink-0 flex items-center justify-center text-[#0b1f35]"
-                >
-                  <i
-                    data-lucide="plus"
-                    class="faq-icon-plus w-4.5 h-4.5 absolute transition-opacity duration-300"
-                  ></i>
-                  <i
-                    data-lucide="minus"
-                    class="faq-icon-minus w-4.5 h-4.5 absolute transition-opacity duration-300"
-                  ></i>
-                </span>
-              </button>
-              <div class="faq-answer-wrapper">
-                <div class="faq-answer-inner">
-                  <p
-                    class="px-6 pb-5 text-[13px] text-slate-400 leading-relaxed"
-                  >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="faq-item open rounded-2xl bg-white overflow-hidden"
-              data-faq
-            >
-              <button
-                type="button"
-                class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5"
-              >
-                <span class="text-[15px] font-bold text-[#0b1f35]"
-                  >Are there any hidden costs?</span
-                >
-                <span
-                  class="faq-icon relative w-5 h-5 shrink-0 flex items-center justify-center text-[#0b1f35]"
-                >
-                  <i
-                    data-lucide="plus"
-                    class="faq-icon-plus w-4.5 h-4.5 absolute transition-opacity duration-300"
-                  ></i>
-                  <i
-                    data-lucide="minus"
-                    class="faq-icon-minus w-4.5 h-4.5 absolute transition-opacity duration-300"
-                  ></i>
-                </span>
-              </button>
-              <div class="faq-answer-wrapper">
-                <div class="faq-answer-inner">
-                  <p
-                    class="px-6 pb-5 text-[13px] text-slate-400 leading-relaxed"
-                  >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua eiusmod tempor incididunt.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="faq-item rounded-2xl bg-white overflow-hidden" data-faq>
-              <button
-                type="button"
-                class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5"
-              >
-                <span class="text-[15px] font-bold text-[#0b1f35]"
-                  >How is the project cost determined?</span
-                >
-                <span
-                  class="faq-icon relative w-5 h-5 shrink-0 flex items-center justify-center text-[#0b1f35]"
-                >
-                  <i
-                    data-lucide="plus"
-                    class="faq-icon-plus w-4.5 h-4.5 absolute transition-opacity duration-300"
-                  ></i>
-                  <i
-                    data-lucide="minus"
-                    class="faq-icon-minus w-4.5 h-4.5 absolute transition-opacity duration-300"
-                  ></i>
-                </span>
-              </button>
-              <div class="faq-answer-wrapper">
-                <div class="faq-answer-inner">
-                  <p
-                    class="px-6 pb-5 text-[13px] text-slate-400 leading-relaxed"
-                  >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="faq-item rounded-2xl bg-white overflow-hidden" data-faq>
-              <button
-                type="button"
-                class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5"
-              >
-                <span class="text-[15px] font-bold text-[#0b1f35]"
-                  >How can I track the progress of my project?</span
-                >
-                <span
-                  class="faq-icon relative w-5 h-5 shrink-0 flex items-center justify-center text-[#0b1f35]"
-                >
-                  <i
-                    data-lucide="plus"
-                    class="faq-icon-plus w-4.5 h-4.5 absolute transition-opacity duration-300"
-                  ></i>
-                  <i
-                    data-lucide="minus"
-                    class="faq-icon-minus w-4.5 h-4.5 absolute transition-opacity duration-300"
-                  ></i>
-                </span>
-              </button>
-              <div class="faq-answer-wrapper">
-                <div class="faq-answer-inner">
-                  <p
-                    class="px-6 pb-5 text-[13px] text-slate-400 leading-relaxed"
-                  >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="faq-item rounded-2xl bg-white overflow-hidden" data-faq>
-              <button
-                type="button"
-                class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5"
-              >
-                <span class="text-[15px] font-bold text-[#0b1f35]"
-                  >Do you provide free consultations or quotes?</span
-                >
-                <span
-                  class="faq-icon relative w-5 h-5 shrink-0 flex items-center justify-center text-[#0b1f35]"
-                >
-                  <i
-                    data-lucide="plus"
-                    class="faq-icon-plus w-4.5 h-4.5 absolute transition-opacity duration-300"
-                  ></i>
-                  <i
-                    data-lucide="minus"
-                    class="faq-icon-minus w-4.5 h-4.5 absolute transition-opacity duration-300"
-                  ></i>
-                </span>
-              </button>
-              <div class="faq-answer-wrapper">
-                <div class="faq-answer-inner">
-                  <p
-                    class="px-6 pb-5 text-[13px] text-slate-400 leading-relaxed"
-                  >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="faq-item rounded-2xl bg-white overflow-hidden" data-faq>
-              <button
-                type="button"
-                class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5"
-              >
-                <span class="text-[15px] font-bold text-[#0b1f35]"
-                  >What types of projects do you specialize in?</span
-                >
-                <span
-                  class="faq-icon relative w-5 h-5 shrink-0 flex items-center justify-center text-[#0b1f35]"
-                >
-                  <i
-                    data-lucide="plus"
-                    class="faq-icon-plus w-4.5 h-4.5 absolute transition-opacity duration-300"
-                  ></i>
-                  <i
-                    data-lucide="minus"
-                    class="faq-icon-minus w-4.5 h-4.5 absolute transition-opacity duration-300"
-                  ></i>
-                </span>
-              </button>
-              <div class="faq-answer-wrapper">
-                <div class="faq-answer-inner">
-                  <p
-                    class="px-6 pb-5 text-[13px] text-slate-400 leading-relaxed"
-                  >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                </div>
-              </div>
-            </div>
             {% endfor %}
           </div>
 
@@ -2368,9 +1319,9 @@
                   {% trans "24/7 Service" %}
                 </p>
                 <a
-                  href="tel:4065550120"
+                  href="tel:{{ site_settings.phone|urlencode|default:'' }}"
                   class="text-[12px] font-semibold text-[#c9a227] underline underline-offset-2 hover:text-[#d9bc6b] transition-colors"
-                  >(406) 555-0120</a
+                  >{{ site_settings.phone|default:_("24/7 Service") }}</a
                 >
               </div>
             </div>
@@ -2506,155 +1457,6 @@
             </div>
           </article>
           {% empty %}
-          <!-- Article 1 (actif par défaut) -->
-          <article
-            data-blog-card
-            class="blog-card active relative bg-white rounded-[18px] p-3.5 shadow-sm transition-all duration-300 cursor-pointer"
-          >
-            <div class="relative">
-              <div
-                class="blog-img h-[150px] w-full rounded-[12px] overflow-hidden"
-              >
-                <img
-                  src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800&auto=format&fit=crop"
-                  alt="{% trans 'Workers and crane on a modern construction site' %}"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-              <span
-                class="absolute -bottom-3 left-3 z-10 px-4 py-1.5 rounded-full bg-[#0b1f35] text-white text-[10.5px] font-semibold shadow-md"
-                >{% trans "Construction Trends" %}</span
-              >
-            </div>
-            <div class="pt-7 px-1.5 pb-1">
-              <div
-                class="flex items-center gap-1.5 text-[11px] font-medium text-slate-500"
-              >
-                <i
-                  data-lucide="calendar"
-                  class="w-3.5 h-3.5 text-[#c9a227]"
-                ></i>
-                March 11, 2025
-              </div>
-              <h3
-                class="mt-2 text-[16.5px] font-extrabold text-[#0b1f35] leading-snug line-clamp-2"
-              ><a href="{% url 'blog:blogs' %}" class="hover:text-[#c9a227] transition-colors">
-                {% trans "How Technology is Revolutionizing Construction" %}
-              </a></h3>
-              <p
-                class="mt-2 text-[12.5px] text-slate-500 leading-relaxed line-clamp-2"
-              >
-                {% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt." %}
-              </p>
-              <a
-                href="#blogs"
-                class="mt-4 inline-flex items-center gap-1.5 text-[13px] font-bold text-[#c9a227]"
-              >
-                {% trans "Read More" %}
-                <i data-lucide="arrow-right" class="blog-arrow w-3.5 h-3.5"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- Article 2 -->
-          <article
-            data-blog-card
-            class="blog-card relative bg-white rounded-[18px] p-3.5 shadow-sm transition-all duration-300 cursor-pointer"
-          >
-            <div class="relative">
-              <div
-                class="blog-img h-[150px] w-full rounded-[12px] overflow-hidden"
-              >
-                <img
-                  src="https://images.unsplash.com/photo-1541976590-713941681591?q=80&w=800&auto=format&fit=crop"
-                  alt="{% trans 'Construction crew in yellow helmets' %}"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-              <span
-                class="absolute -bottom-3 left-3 z-10 px-4 py-1.5 rounded-full bg-[#0b1f35] text-white text-[10.5px] font-semibold shadow-md"
-                >{% trans "Project Management" %}</span
-              >
-            </div>
-            <div class="pt-7 px-1.5 pb-1">
-              <div
-                class="flex items-center gap-1.5 text-[11px] font-medium text-slate-500"
-              >
-                <i
-                  data-lucide="calendar"
-                  class="w-3.5 h-3.5 text-[#c9a227]"
-                ></i>
-                March 11, 2025
-              </div>
-              <h3
-                class="mt-2 text-[16.5px] font-extrabold text-[#0b1f35] leading-snug line-clamp-2"
-              ><a href="{% url 'blog:blogs' %}" class="hover:text-[#c9a227] transition-colors">
-                {% trans "5 Essential Steps for a Successful Construction" %}
-              </a></h3>
-              <p
-                class="mt-2 text-[12.5px] text-slate-500 leading-relaxed line-clamp-2"
-              >
-                {% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt." %}
-              </p>
-              <a
-                href="#blogs"
-                class="mt-4 inline-flex items-center gap-1.5 text-[13px] font-bold text-[#0b1f35]"
-              >
-                {% trans "Read More" %}
-                <i data-lucide="arrow-right" class="blog-arrow w-3.5 h-3.5"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- Article 3 -->
-          <article
-            data-blog-card
-            class="blog-card relative bg-white rounded-[18px] p-3.5 shadow-sm transition-all duration-300 cursor-pointer"
-          >
-            <div class="relative">
-              <div
-                class="blog-img h-[150px] w-full rounded-[12px] overflow-hidden"
-              >
-                <img
-                  src="https://images.unsplash.com/photo-1429497419816-9ca5cfb4571a?q=80&w=800&auto=format&fit=crop"
-                  alt="{% trans 'Workers in safety gear on construction site' %}"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-              <span
-                class="absolute -bottom-3 left-3 z-10 px-4 py-1.5 rounded-full bg-[#0b1f35] text-white text-[10.5px] font-semibold shadow-md"
-                >{% trans "Project Management" %}</span
-              >
-            </div>
-            <div class="pt-7 px-1.5 pb-1">
-              <div
-                class="flex items-center gap-1.5 text-[11px] font-medium text-slate-500"
-              >
-                <i
-                  data-lucide="calendar"
-                  class="w-3.5 h-3.5 text-[#c9a227]"
-                ></i>
-                March 11, 2025
-              </div>
-              <h3
-                class="mt-2 text-[16.5px] font-extrabold text-[#0b1f35] leading-snug line-clamp-2"
-              ><a href="{% url 'blog:blogs' %}" class="hover:text-[#c9a227] transition-colors">
-                {% trans "Site Safety Tips: Ensuring a Smooth Construction" %}
-              </a></h3>
-              <p
-                class="mt-2 text-[12.5px] text-slate-500 leading-relaxed line-clamp-2"
-              >
-                {% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt." %}
-              </p>
-              <a
-                href="#blogs"
-                class="mt-4 inline-flex items-center gap-1.5 text-[13px] font-bold text-[#0b1f35]"
-              >
-                {% trans "Read More" %}
-                <i data-lucide="arrow-right" class="blog-arrow w-3.5 h-3.5"></i>
-              </a>
-            </div>
-          </article>
           {% endfor %}
         </div>
       </div>
@@ -2756,170 +1558,6 @@
             </a>
           </article>
           {% empty %}
-          <article
-            class="group bg-white/[0.06] border border-white/10 rounded-[20px] p-5 sm:p-6 md:p-7 hover:bg-white/[0.09] transition-all duration-300 flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-8"
-          >
-            <span
-              class="w-14 h-14 rounded-2xl bg-[#c9a227] text-white flex items-center justify-center shrink-0"
-            >
-              <i data-lucide="hard-hat" class="w-7 h-7"></i>
-            </span>
-            <div class="flex-1 min-w-0">
-              <h3 class="text-base sm:text-lg font-extrabold text-white">
-                <a
-                  href="{% url 'careers:careers' %}"
-                  class="hover:text-[#c9a227] transition-colors"
-                  >{% trans "Senior Structural Engineer" %}</a
-                >
-              </h3>
-              <div
-                class="mt-2 flex flex-wrap items-center gap-x-5 gap-y-1.5 text-[12.5px] font-medium text-slate-300"
-              >
-                <span class="flex items-center gap-1.5"
-                  ><i
-                    data-lucide="map-pin"
-                    class="w-3.5 h-3.5 text-[#c9a227]"
-                  ></i
-                  >New York, NY</span
-                >
-                <span class="flex items-center gap-1.5"
-                  ><i data-lucide="clock" class="w-3.5 h-3.5 text-[#c9a227]"></i
-                  >{% trans "Full Time" %}</span
-                >
-                <span class="flex items-center gap-1.5"
-                  ><i
-                    data-lucide="banknote"
-                    class="w-3.5 h-3.5 text-[#c9a227]"
-                  ></i
-                  >$95k – $120k / yr</span
-                >
-              </div>
-            </div>
-            <a
-              href="{% url 'careers:careers' %}"
-              class="group/btn inline-flex items-center gap-1.5 self-start lg:self-center shrink-0"
-            >
-              <span
-                class="px-6 py-2.5 rounded-full bg-[#c9a227] text-white text-xs font-bold group-hover/btn:bg-[#d9bc6b] transition-colors"
-                >{% trans "Apply Now" %}</span
-              >
-              <span
-                class="w-10 h-10 rounded-full border-2 border-[#c9a227] text-[#c9a227] flex items-center justify-center group-hover/btn:bg-[#c9a227] group-hover/btn:text-white transition-all"
-              >
-                <i data-lucide="arrow-right" class="w-4 h-4"></i>
-              </span>
-            </a>
-          </article>
-
-          <article
-            class="group bg-white/[0.06] border border-white/10 rounded-[20px] p-5 sm:p-6 md:p-7 hover:bg-white/[0.09] transition-all duration-300 flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-8"
-          >
-            <span
-              class="w-14 h-14 rounded-2xl bg-[#c9a227] text-white flex items-center justify-center shrink-0"
-            >
-              <i data-lucide="briefcase" class="w-7 h-7"></i>
-            </span>
-            <div class="flex-1 min-w-0">
-              <h3 class="text-base sm:text-lg font-extrabold text-white">
-                <a
-                  href="{% url 'careers:careers' %}"
-                  class="hover:text-[#c9a227] transition-colors"
-                  >{% trans "Site Project Manager" %}</a
-                >
-              </h3>
-              <div
-                class="mt-2 flex flex-wrap items-center gap-x-5 gap-y-1.5 text-[12.5px] font-medium text-slate-300"
-              >
-                <span class="flex items-center gap-1.5"
-                  ><i
-                    data-lucide="map-pin"
-                    class="w-3.5 h-3.5 text-[#c9a227]"
-                  ></i
-                  >New York, NY</span
-                >
-                <span class="flex items-center gap-1.5"
-                  ><i data-lucide="clock" class="w-3.5 h-3.5 text-[#c9a227]"></i
-                  >{% trans "Full Time" %}</span
-                >
-                <span class="flex items-center gap-1.5"
-                  ><i
-                    data-lucide="banknote"
-                    class="w-3.5 h-3.5 text-[#c9a227]"
-                  ></i
-                  >$110k – $140k / yr</span
-                >
-              </div>
-            </div>
-            <a
-              href="{% url 'careers:careers' %}"
-              class="group/btn inline-flex items-center gap-1.5 self-start lg:self-center shrink-0"
-            >
-              <span
-                class="px-6 py-2.5 rounded-full bg-[#c9a227] text-white text-xs font-bold group-hover/btn:bg-[#d9bc6b] transition-colors"
-                >{% trans "Apply Now" %}</span
-              >
-              <span
-                class="w-10 h-10 rounded-full border-2 border-[#c9a227] text-[#c9a227] flex items-center justify-center group-hover/btn:bg-[#c9a227] group-hover/btn:text-white transition-all"
-              >
-                <i data-lucide="arrow-right" class="w-4 h-4"></i>
-              </span>
-            </a>
-          </article>
-
-          <article
-            class="group bg-white/[0.06] border border-white/10 rounded-[20px] p-5 sm:p-6 md:p-7 hover:bg-white/[0.09] transition-all duration-300 flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-8"
-          >
-            <span
-              class="w-14 h-14 rounded-2xl bg-[#c9a227] text-white flex items-center justify-center shrink-0"
-            >
-              <i data-lucide="pencil-ruler" class="w-7 h-7"></i>
-            </span>
-            <div class="flex-1 min-w-0">
-              <h3 class="text-base sm:text-lg font-extrabold text-white">
-                <a
-                  href="{% url 'careers:careers' %}"
-                  class="hover:text-[#c9a227] transition-colors"
-                  >{% trans "Architectural Designer" %}</a
-                >
-              </h3>
-              <div
-                class="mt-2 flex flex-wrap items-center gap-x-5 gap-y-1.5 text-[12.5px] font-medium text-slate-300"
-              >
-                <span class="flex items-center gap-1.5"
-                  ><i
-                    data-lucide="map-pin"
-                    class="w-3.5 h-3.5 text-[#c9a227]"
-                  ></i
-                  >{% trans "Remote" %}</span
-                >
-                <span class="flex items-center gap-1.5"
-                  ><i data-lucide="clock" class="w-3.5 h-3.5 text-[#c9a227]"></i
-                  >{% trans "Full Time" %}</span
-                >
-                <span class="flex items-center gap-1.5"
-                  ><i
-                    data-lucide="banknote"
-                    class="w-3.5 h-3.5 text-[#c9a227]"
-                  ></i
-                  >$75k – $95k / yr</span
-                >
-              </div>
-            </div>
-            <a
-              href="{% url 'careers:careers' %}"
-              class="group/btn inline-flex items-center gap-1.5 self-start lg:self-center shrink-0"
-            >
-              <span
-                class="px-6 py-2.5 rounded-full bg-[#c9a227] text-white text-xs font-bold group-hover/btn:bg-[#d9bc6b] transition-colors"
-                >{% trans "Apply Now" %}</span
-              >
-              <span
-                class="w-10 h-10 rounded-full border-2 border-[#c9a227] text-[#c9a227] flex items-center justify-center group-hover/btn:bg-[#c9a227] group-hover/btn:text-white transition-all"
-              >
-                <i data-lucide="arrow-right" class="w-4 h-4"></i>
-              </span>
-            </a>
-          </article>
           {% endfor %}
         </div>
       </div>
@@ -3053,26 +1691,38 @@
             ></span>
 
             <div class="relative z-10 space-y-7">
+              {% if site_settings.address %}
               <div>
                 <h3 class="text-[19px] font-extrabold">{% trans "Address" %}</h3>
                 <p class="mt-2.5 text-[13.5px] text-slate-300 leading-relaxed">
-                  2464 Royal Ln. Mesa,<br />New Jersey 45463
+                  {{ site_settings.address|safe }}
                 </p>
               </div>
+              {% endif %}
 
               <div>
                 <h3 class="text-[19px] font-extrabold">{% trans "Contact" %}</h3>
                 <p class="mt-2.5 text-[13.5px] text-slate-300 leading-relaxed">
-                  {% trans "Phone" %}&nbsp;&nbsp;: (406) 555-0120<br />
-                  {% trans "Email" %}&nbsp;&nbsp;: example@gmail.com
+                  {% if site_settings.phone %}{% trans "Phone" %}&nbsp;&nbsp;:
+                  <a
+                    href="tel:{{ site_settings.phone|urlencode }}"
+                    class="hover:text-[#c9a227] transition-colors"
+                    >{{ site_settings.phone }}</a
+                  ><br />{% endif %}
+                  {% if site_settings.email %}{% trans "Email" %}&nbsp;&nbsp;:
+                  <a
+                    href="mailto:{{ site_settings.email }}"
+                    class="hover:text-[#c9a227] transition-colors"
+                    >{{ site_settings.email }}</a
+                  >{% endif %}
                 </p>
               </div>
 
               <div>
                 <h3 class="text-[19px] font-extrabold">{% trans "Open Time" %}</h3>
                 <p class="mt-2.5 text-[13.5px] text-slate-300 leading-relaxed">
-                  {% trans "Monday – Friday" %}&nbsp;&nbsp;: 15:00 – 20:00<br />
-                  {% trans "Saturday – Sunday" %}&nbsp;: 11:00 – 18:00
+                  {{ site_settings.opening_hours_weekdays|default:_("Mon – Fri : 15:00 – 20:00") }}<br />
+                  {{ site_settings.opening_hours_weekend|default:_("Sat – Sun : 11:00 – 18:00") }}
                 </p>
               </div>
 

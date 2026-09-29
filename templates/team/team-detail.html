@@ -79,11 +79,7 @@
               class="w-full h-full object-cover object-top shadow-xl shadow-slate-900/10"
             />
             {% else %}
-            <img
-              src="https://randomuser.me/api/portraits/women/65.jpg"
-              alt="{{ member.name }} — {{ member.role }}"
-              class="w-full h-full object-cover object-top shadow-xl shadow-slate-900/10"
-            />
+            <div class="w-full h-full flex items-center justify-center bg-[#0b1f35] text-[#c9a227] text-7xl font-black shadow-xl shadow-slate-900/10" aria-hidden="true">{{ member.name|default:"B"|slice:":1"|upper }}</div>
             {% endif %}
           </div>
         </div>
@@ -355,7 +351,7 @@
                     <p
                       class="text-[11px] font-bold uppercase tracking-wider text-slate-400"
                     >
-                      Email
+                      {% trans "Email" %}
                     </p>
                     <a
                       href="mailto:{{ member.email|default:'contact@bsgroup.ml' }}"
@@ -374,13 +370,15 @@
                     <p
                       class="text-[11px] font-bold uppercase tracking-wider text-slate-400"
                     >
-                      Phone
+                      {% trans "Phone" %}
                     </p>
+                    {% if member.phone %}
                     <a
-                      href="tel:{{ member.phone|default:'4065550120' }}"
+                      href="tel:{{ member.phone|urlencode }}"
                       class="text-[13px] text-white font-semibold hover:text-[#c9a227] transition-colors"
-                      >{{ member.phone|default:'(406) 555-0120' }}</a
+                      >{{ member.phone }}</a
                     >
+                    {% endif %}
                   </div>
                 </li>
                 <li class="flex items-center gap-3.5 py-4">
@@ -393,9 +391,11 @@
                     <p
                       class="text-[11px] font-bold uppercase tracking-wider text-slate-400"
                     >
-                      Office
+                      {% trans "Office" %}
                     </p>
-                    <p class="text-[13px] text-slate-300">{{ member.office|default:'HQ \u00b7 New York, NY' }}</p>
+                    {% if member.office %}
+                    <p class="text-[13px] text-slate-300">{{ member.office }}</p>
+                    {% endif %}
                   </div>
                 </li>
               </ul>
@@ -404,7 +404,7 @@
                 href="{% url 'contact:contact' %}"
                 class="mt-3 inline-flex w-full items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#c9a227] text-white text-sm font-bold hover:bg-[#d9bc6b] transition-colors shadow-md shadow-orange-500/25"
               >
-                Send a Message
+                {% trans "Send a Message" %}
                 <i data-lucide="arrow-right" class="w-4 h-4"></i>
               </a>
             </div>
@@ -551,11 +551,7 @@
                   class="w-full h-full object-cover object-top"
                 />
                 {% else %}
-                <img
-                  src="https://randomuser.me/api/portraits/men/32.jpg"
-                  alt="{{ m.name }}"
-                  class="w-full h-full object-cover object-top"
-                />
+                <div class="w-full h-full flex items-center justify-center bg-[#0b1f35] text-[#c9a227] text-6xl font-black" aria-hidden="true">{{ m.name|default:"B"|slice:":1"|upper }}</div>
                 {% endif %}
               </div>
             </div>

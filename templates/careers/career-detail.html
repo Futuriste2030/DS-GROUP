@@ -405,21 +405,19 @@
 
           <!-- Carte recruteur -->
           <div class="bg-[#f5f6f9] rounded-[24px] p-7 flex items-center gap-4">
-            <img
-              src="https://randomuser.me/api/portraits/men/32.jpg"
-              alt="Robert Fox"
-              class="w-14 h-14 rounded-full object-cover ring-2 ring-orange-100 shrink-0"
-            />
+            <span class="w-14 h-14 rounded-full bg-[#0b1f35] text-[#c9a227] font-black flex items-center justify-center ring-2 ring-orange-100 shrink-0" aria-hidden="true">HR</span>
             <div>
-              <p class="text-sm font-bold text-[#0b1f35]">Robert Fox</p>
-              <p class="text-[11.5px] text-slate-400">{% trans "Engineering Recruiter" %}</p>
+              <p class="text-sm font-bold text-[#0b1f35]">{% trans "HR Team" %}</p>
+              <p class="text-[11.5px] text-slate-400">{% trans "Recruitment" %}</p>
+              {% if site_settings.careers_email %}
               <a
-                href="mailto:careers@bsgroup.ml"
+                href="mailto:{{ site_settings.careers_email }}"
                 class="mt-1 inline-flex items-center gap-1.5 text-[12px] font-bold text-[#c9a227] hover:underline underline-offset-2"
               >
                 <i data-lucide="mail" class="w-3.5 h-3.5"></i>
-                careers@bsgroup.ml
+                {{ site_settings.careers_email }}
               </a>
+              {% endif %}
             </div>
           </div>
         </aside>
@@ -602,7 +600,7 @@
               />
               <span class="text-[13px] text-slate-500 leading-relaxed">
                 {% trans "I consent to BS GROUP storing my personal data for the purpose of this application, in accordance with the" %}
-                <a href="#" class="text-[#c9a227] font-semibold hover:underline"
+                <a href="{% url 'main:privacy' %}" class="text-[#c9a227] font-semibold hover:underline"
                   >{% trans "Privacy Policy" %}</a
                 >. <span class="text-[#c9a227]">*</span>
               </span>

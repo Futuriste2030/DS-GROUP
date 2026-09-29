@@ -208,8 +208,8 @@
               <div>
                 <h3 class="text-[19px] font-extrabold">{% trans "Open Time" %}</h3>
                 <p class="mt-2.5 text-[13.5px] text-slate-300 leading-relaxed">
-                  {% trans "Monday – Friday" %}&nbsp;&nbsp;: 15:00 – 20:00<br />
-                  {% trans "Saturday – Sunday" %}&nbsp;: 11:00 – 18:00
+                  {{ site_settings.opening_hours_weekdays|default:_("Mon – Fri : 15:00 – 20:00") }}<br />
+                  {{ site_settings.opening_hours_weekend|default:_("Sat – Sun : 11:00 – 18:00") }}
                 </p>
               </div>
 
@@ -406,7 +406,7 @@
                       data-lucide="clock"
                       class="w-4 h-4 text-[#c9a227] shrink-0"
                     ></i>
-                    {% trans "Mon – Fri" %} : 15:00 – 20:00
+                    {{ site_settings.opening_hours_weekdays|default:_("Mon – Fri : 15:00 – 20:00") }}
                   </p>
                 </div>
 

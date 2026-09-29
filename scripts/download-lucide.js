@@ -3,7 +3,9 @@ const path = require('path');
 const https = require('https');
 
 const ICONS_DIR = path.join(__dirname, '../static/icons/lucide');
-const BASE_URL = 'https://raw.githubusercontent.com/lucide-icons/lucide/main/icons';
+// jsdelivr (paquet lucide-static) : sert les anciens ET nouveaux noms,
+// contrairement à raw.githubusercontent qui ne garde que les canoniques.
+const BASE_URL = 'https://cdn.jsdelivr.net/npm/lucide-static/icons';
 
 // Icônes réellement utilisées dans les templates
 const ICONS = [
@@ -51,34 +53,80 @@ const ICONS = [
   'droplets', 'droplet', 'wave', 'waves', 'umbrella'
 ];
 
+// Anciens noms (utilisés dans les templates / la DB) -> nom canonique actuel.
+// Le fichier est enregistré SOUS L'ANCIEN NOM pour ne rien changer ailleurs.
+const ALIASES = {
+  'alert-triangle': 'triangle-alert',
+  'check-circle-2': 'circle-check-big',
+  'help-circle': 'circle-help',
+  'bar-chart-3': 'chart-column',
+  'upload-cloud': 'cloud-upload',
+};
+
+// Icônes utilisées dans les templates mais absentes de ICONS ci-dessus
+// (vérifié par croisement data-lucide <-> static/icons/lucide).
+const EXTRA_ICONS = [
+  'alert-triangle', 'banknote', 'bar-chart-3', 'bot', 'building',
+  'check-circle-2', 'chevrons-right', 'circle-slash', 'clipboard-list',
+  'cookie', 'credit-card', 'file-badge', 'file-clock', 'headset',
+  'help-circle', 'landmark', 'leaf', 'megaphone', 'pencil', 'scale',
+  'settings-2', 'stamp', 'trash-2', 'upload-cloud', 'wallet',
+];
+
+const ALL_ICONS = [...new Set([...ICONS, ...EXTRA_ICONS])];
+
 function downloadIcon(iconName) {
-  const url = `${BASE_URL}/${iconName}.svg`;
+  // Le fichier final garde toujours l'ancien nom (compat templates/DB).
   const filePath = path.join(ICONS_DIR, `${iconName}.svg`);
 
-  return new Promise((resolve, reject) => {
-    const file = fs.createWriteStream(filePath);
+  const tryFetch = (url) => new Promise((resolve, reject) => {
+    // Écrit d'abord en temporaire : un échec ne détruit jamais l'existant.
+    const tmpPath = `${filePath}.tmp`;
+    const file = fs.createWriteStream(tmpPath);
     const req = https.get(url, (response) => {
       if (response.statusCode === 200) {
         response.pipe(file);
         file.on('finish', () => {
           file.close();
-          resolve(iconName);
+          fs.rename(tmpPath, filePath, (err) => {
+            if (err) reject(err);
+            else resolve(iconName);
+          });
         });
       } else {
-        fs.unlink(filePath, () => {});
+        response.resume();
+        file.close(() => fs.unlink(tmpPath, () => {}));
         reject(new Error(`${iconName}: ${response.statusCode}`));
       }
     });
     req.on('error', (err) => {
-      fs.unlink(filePath, () => {});
+      file.close(() => fs.unlink(tmpPath, () => {}));
       reject(err);
     });
-    req.setTimeout(10000, () => {
+    req.setTimeout(15000, () => {
       req.destroy();
-      fs.unlink(filePath, () => {});
+      file.close(() => fs.unlink(tmpPath, () => {}));
       reject(new Error(`${iconName}: timeout`));
     });
   });
+
+  // Essaie l'ancien nom puis le nom canonique (renommages lucide).
+  async function downloadWithFallback() {
+    const urls = [`${BASE_URL}/${iconName}.svg`];
+    if (ALIASES[iconName]) urls.push(`${BASE_URL}/${ALIASES[iconName]}.svg`);
+    let lastErr = new Error(`${iconName}: no candidate`);
+    for (const url of urls) {
+      try {
+        await tryFetch(url);
+        return iconName;
+      } catch (err) {
+        lastErr = err;
+      }
+    }
+    throw lastErr;
+  }
+
+  return downloadWithFallback();
 }
 
 async function main() {
@@ -86,29 +134,33 @@ async function main() {
     fs.mkdirSync(ICONS_DIR, { recursive: true });
   }
 
-  console.log(`Téléchargement de ${ICONS.length} icônes Lucide...`);
+  console.log(`Téléchargement de ${ALL_ICONS.length} icônes Lucide...`);
 
   let success = 0;
   let failed = 0;
+  const failedNames = [];
 
-  // Télécharger par lots de 10 pour ne pas surcharger
-  for (let i = 0; i < ICONS.length; i += 10) {
-    const batch = ICONS.slice(i, i + 10);
+  // Télécharger par petits lots pour ne pas surcharger (anti rate-limit)
+  for (let i = 0; i < ALL_ICONS.length; i += 5) {
+    const batch = ALL_ICONS.slice(i, i + 5);
     const promises = batch.map(icon => downloadIcon(icon).catch(err => ({ error: err.message, icon })));
     const results = await Promise.all(promises);
 
     for (const result of results) {
       if (result.error) {
         failed++;
+        failedNames.push(result.icon);
         process.stdout.write('F');
       } else {
         success++;
         process.stdout.write('.');
       }
     }
+    await new Promise((r) => setTimeout(r, 800));
   }
 
   console.log(`\nTerminé: ${success} succès, ${failed} échecs`);
+  if (failedNames.length) console.log('Échecs:', failedNames.join(', '));
   console.log(`Icônes dans: ${ICONS_DIR}`);
 }
 

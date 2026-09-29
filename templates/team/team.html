@@ -272,11 +272,7 @@
                   class="w-full h-full object-cover object-top"
                 />
                 {% else %}
-                <img
-                  src="https://randomuser.me/api/portraits/men/32.jpg"
-                  alt="{{ m.name }}"
-                  class="w-full h-full object-cover object-top"
-                />
+                <div class="w-full h-full flex items-center justify-center bg-[#0b1f35] text-[#c9a227] text-6xl font-black" aria-hidden="true">{{ m.name|default:"B"|slice:":1"|upper }}</div>
                 {% endif %}
               </div>
             </div>
@@ -352,7 +348,6 @@
             ></span>
           </article>
           {% empty %}
-          <p class="col-span-full text-center text-sm text-slate-500 py-10">{% trans "No team members yet." %}</p>
           {% endfor %}
 
         </div>

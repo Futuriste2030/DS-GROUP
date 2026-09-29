@@ -23,6 +23,7 @@ def blogs(request):
     return render(request, 'blog/blogs.html', {
         **seo_for(request, title=_('News & Blogs')),
         'posts': posts_page,
+        'featured_post': Post.objects.first(),
         'all_tags': sorted(all_tags),
         'categories': categories,
         'recent_posts': Post.objects.all()[:3],

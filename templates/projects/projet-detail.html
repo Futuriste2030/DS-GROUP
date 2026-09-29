@@ -315,6 +315,7 @@
           </p>
 
           <!-- Carte témoignage -->
+          {% if project.testimonial_text %}
           <figure
             class="mt-10 relative bg-white p-8 md:p-10 rounded-2xl border border-gray-100 shadow-sm overflow-hidden"
           >
@@ -350,11 +351,15 @@
               </blockquote>
 
               <figcaption class="mt-7 flex items-center gap-4">
+                {% if project.testimonial_avatar %}
                 <img
-                  src="{% if project.testimonial_avatar %}{{ project.testimonial_avatar.url }}{% else %}https://randomuser.me/api/portraits/women/44.jpg{% endif %}"
+                  src="{{ project.testimonial_avatar.url }}"
                   alt="{{ project.testimonial_name }}"
                   class="w-12 h-12 rounded-full object-cover ring-2 ring-orange-100"
                 />
+                {% else %}
+                <span class="w-12 h-12 rounded-full bg-[#c9a227] text-white font-black flex items-center justify-center ring-2 ring-orange-100 text-sm shrink-0" aria-hidden="true">{{ project.testimonial_name|default:"B"|slice:":1"|upper }}</span>
+                {% endif %}
                 <div>
                   <p class="text-sm font-bold text-[#0b1f35]">{{ project.testimonial_name }}</p>
                   <p class="text-xs text-slate-400">{{ project.testimonial_role }}</p>
@@ -362,6 +367,7 @@
               </figcaption>
             </div>
           </figure>
+          {% endif %}
         </div>
       </div>
     </section>

@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static i18n %}
 
-{% block title %}Terms &amp; Conditions | BS GROUP{% endblock %}
-{% block meta_description %}Conditions Générales d'Utilisation du site BS GROUP — droits, obligations et cadres légaux.{% endblock %}
+{% block title %}{% trans "Terms & Conditions" %} | BS GROUP{% endblock %}
+{% block meta_description %}{% trans "Conditions Générales d'Utilisation du site BS GROUP — droits, obligations et cadres légaux." %}{% endblock %}
 {% block body_class %}bg-white font-sans antialiased text-[#0b1f35] overflow-x-hidden{% endblock %}
 
 {% block content %}
 <section
       id="page-header"
       class="page-header bg-[#f5f6f9]"
-      data-page-title="Terms & Conditions"
+      data-page-title="{% trans 'Terms & Conditions' %}"
     >
       <div class="ruler-ticks w-full" aria-hidden="true"></div>
 
@@ -18,9 +18,9 @@
           id="page-header-title"
           class="text-[38px] md:text-[46px] font-black text-[#0b1f35] tracking-tight leading-tight"
         >
-          Terms &amp; Conditions
+          {% trans "Terms & Conditions" %}
         </h1>
-        <nav aria-label="Fil d'Ariane" class="mt-3.5">
+        <nav aria-label="{% trans 'Breadcrumb' %}" class="mt-3.5">
           <ol
             class="flex items-center justify-center gap-2.5 text-[15px] font-semibold"
           >
@@ -28,7 +28,7 @@
               <a
                 href="{% url 'main:index' %}"
                 class="text-[#0b1f35] hover:text-[#c9a227] transition-colors"
-                >Home</a
+                >{% trans "Home" %}</a
               >
             </li>
             <li
@@ -42,7 +42,7 @@
               class="text-[#c9a227]"
               aria-current="page"
             >
-              Terms &amp; Conditions
+              {% trans "Terms & Conditions" %}
             </li>
           </ol>
         </nav>
@@ -556,13 +556,13 @@
                   class="w-4.5 h-4.5 text-[#c9a227] shrink-0 mt-1"
                 ></i>
                 <span
-                  >By phone:
+                  >{% trans "By phone:" %}
                   <a
-                    href="tel:4065550120"
+                    href="tel:{{ site_settings.phone|urlencode|default:'' }}"
                     class="text-[#c9a227] font-semibold hover:underline underline-offset-2"
-                    >(406) 555-0120</a
+                    >{{ site_settings.phone }}</a
                   >
-                  (Mon – Sat)</span
+                  ({{ site_settings.opening_hours_weekdays|default:_("Mon – Fri") }})</span
                 >
               </li>
               <li class="flex items-start gap-3.5 text-[14.5px] text-slate-500">
@@ -571,8 +571,7 @@
                   class="w-4.5 h-4.5 text-[#c9a227] shrink-0 mt-1"
                 ></i>
                 <span
-                  >By mail: BS GROUP Construction LLC, 2464 Royal Ln. Mesa, New
-                  Jersey 45463, USA</span
+                  >{% trans "By mail:" %} {{ site_settings.company_name|default:"BS GROUP" }}, {{ site_settings.address|striptags|default:"" }}</span
                 >
               </li>
             </ul>

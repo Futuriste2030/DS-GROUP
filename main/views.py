@@ -10,13 +10,25 @@ def index(request):
     from team.models import TeamMember, Testimonial
     from careers.models import JobOpening
     from main.models import FAQ, SiteStat, ProcessStep, Feature
+    testimonials_qs = Testimonial.objects.all()
     return render(request, 'main/index.html', {
         **seo_for(request, title=_('Home'), description=_('BS GROUP — Écosystème intégré : échange, finance, infrastructures et commerce.')),
         'services': Service.objects.all()[:6],
         'projects': Project.objects.all()[:4],
         'posts': Post.objects.all()[:3],
         'team': TeamMember.objects.all()[:3],
-        'testimonials': Testimonial.objects.all(),
+        'testimonials': testimonials_qs,
+        'testimonials_json': [
+            {
+                'name': t.client_name,
+                'role': t.client_role,
+                'avatar': t.client_avatar.url if t.client_avatar else '',
+                'rating': float(t.rating),
+                'title': t.title,
+                'text': t.text,
+            }
+            for t in testimonials_qs
+        ],
         'jobs': JobOpening.objects.filter(is_active=True)[:4],
         'faqs': FAQ.objects.all()[:5],
         'stats': SiteStat.objects.all()[:4],
@@ -27,8 +39,9 @@ def index(request):
 
 def about(request):
     from services.models import Service
-    from team.models import TeamMember
-    from main.models import SiteStat, SkillBar, ProcessStep, Feature, FAQ
+    from team.models import TeamMember, Testimonial
+    from main.models import SiteStat, SkillBar, ProcessStep, Feature, FAQ, TimelineEvent
+    testimonials_qs = Testimonial.objects.all()
     return render(request, 'main/about.html', {
         **seo_for(request, title=_('About Us')),
         'services': Service.objects.all(),
@@ -36,7 +49,20 @@ def about(request):
         'skills': SkillBar.objects.all(),
         'processes': ProcessStep.objects.all(),
         'features': Feature.objects.all(),
+        'timeline': TimelineEvent.objects.all(),
         'team': TeamMember.objects.all()[:3],
+        'testimonials': testimonials_qs,
+        'testimonials_json': [
+            {
+                'name': t.client_name,
+                'role': t.client_role,
+                'avatar': t.client_avatar.url if t.client_avatar else '',
+                'rating': float(t.rating),
+                'title': t.title,
+                'text': t.text,
+            }
+            for t in testimonials_qs
+        ],
         'faqs': FAQ.objects.all()[:5],
     })
 

@@ -22,6 +22,8 @@ class SiteSettings(SEOMixin, WebPConversionMixin, models.Model):
     careers_email = models.EmailField(blank=True)
     address = models.TextField(blank=True)
     map_query = models.CharField(max_length=500, blank=True)
+    opening_hours_weekdays = models.CharField(max_length=100, blank=True, default='Mon – Fri : 15:00 – 20:00')
+    opening_hours_weekend = models.CharField(max_length=100, blank=True, default='Sat – Sun : 11:00 – 18:00')
     latitude = models.DecimalField(max_digits=9, decimal_places=6, blank=True, null=True)
     longitude = models.DecimalField(max_digits=9, decimal_places=6, blank=True, null=True)
 
@@ -101,8 +103,15 @@ class SiteSettings(SEOMixin, WebPConversionMixin, models.Model):
 
 
 class FAQ(models.Model):
+    CATEGORIES = [
+        ('general', 'General'),
+        ('process', 'Services & Process'),
+        ('payments', 'Payments & Budget'),
+        ('warranty', 'Warranty & Support'),
+    ]
     question = models.CharField(max_length=500)
     answer = models.TextField()
+    category = models.CharField(max_length=20, choices=CATEGORIES, default='general')
     order = models.PositiveIntegerField(default=0)
 
     class Meta:
@@ -235,6 +244,20 @@ class Feature(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class TimelineEvent(models.Model):
+    year = models.CharField(max_length=20)
+    title = models.CharField(max_length=200)
+    description = models.TextField(blank=True)
+    image = models.ImageField(upload_to='timeline/', blank=True)
+    order = models.PositiveIntegerField(default=0)
+
+    class Meta:
+        ordering = ['order']
+
+    def __str__(self):
+        return f'{self.year} — {self.title}'
 
 
 class LegalPage(models.Model):

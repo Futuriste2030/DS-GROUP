@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static i18n %}
 
-{% block title %}FAQ's | BS GROUP{% endblock %}
-{% block meta_description %}BS GROUP — Réponses à vos questions : services, processus, paiements, garanties et support.{% endblock %}
+{% block title %}{% trans "FAQ's" %} | BS GROUP{% endblock %}
+{% block meta_description %}{% trans "BS GROUP — Réponses à vos questions : services, processus, paiements, garanties et support." %}{% endblock %}
 
 {% block content %}
 <section
       id="page-header"
       class="page-header bg-[#f5f6f9]"
-      data-page-title="FAQ's"
+      data-page-title="{% trans 'FAQs' %}"
     >
       <div class="ruler-ticks w-full" aria-hidden="true"></div>
 
@@ -17,9 +17,9 @@
           id="page-header-title"
           class="text-[40px] md:text-[48px] font-black text-[#0b1f35] tracking-tight leading-tight"
         >
-          FAQ's
+          {% trans "FAQ's" %}
         </h1>
-        <nav aria-label="Fil d'Ariane" class="mt-3.5">
+        <nav aria-label="{% trans 'Breadcrumb' %}" class="mt-3.5">
           <ol
             class="flex items-center justify-center flex-wrap gap-2.5 text-[15px] font-semibold"
           >
@@ -27,7 +27,7 @@
               <a
                 href="{% url 'main:index' %}"
                 class="text-[#0b1f35] hover:text-[#c9a227] transition-colors"
-                >Home</a
+                >{% trans "Home" %}</a
               >
             </li>
             <li
@@ -41,7 +41,7 @@
               class="text-[#c9a227]"
               aria-current="page"
             >
-              FAQ's
+              {% trans "FAQ's" %}
             </li>
           </ol>
         </nav>
@@ -111,11 +111,11 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           <div class="lg:col-span-7 space-y-4">
-            <!-- Q1 — General (ouverte par défaut) -->
+            {% for f in faqs %}
             <div
-              class="faq-item open rounded-2xl bg-white overflow-hidden"
+              class="faq-item {% if forloop.first %}open {% endif %}rounded-2xl bg-white overflow-hidden"
               data-faq
-              data-fq-item="general"
+              data-fq-item="{{ f.category }}"
             >
               <button
                 type="button"
@@ -128,7 +128,7 @@
                     <i data-lucide="help-circle" class="w-4.5 h-4.5"></i>
                   </span>
                   <span class="text-[15px] font-bold text-[#0b1f35]"
-                    >What services does your company provide?</span
+                    >{{ f.question }}</span
                   >
                 </span>
                 <span
@@ -149,346 +149,12 @@
                   <p
                     class="px-6 pb-5 sm:pl-[68px] text-[13px] text-slate-400 leading-relaxed"
                   >
-                    We offer a full range of construction services: residential
-                    and commercial construction, concrete work, design and
-                    planning, civil works, renovations and pre-construction
-                    consulting. Every project is handled end-to-end by our
-                    in-house teams.
+                    {{ f.answer }}
                   </p>
                 </div>
               </div>
             </div>
-
-            <!-- Q2 — General -->
-            <div
-              class="faq-item rounded-2xl bg-white overflow-hidden"
-              data-faq
-              data-fq-item="general"
-            >
-              <button
-                type="button"
-                class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5"
-              >
-                <span class="flex items-center gap-3.5">
-                  <span
-                    class="hidden sm:flex w-9 h-9 rounded-full bg-[#c9a227]/10 text-[#c9a227] items-center justify-center shrink-0"
-                  >
-                    <i data-lucide="map-pin" class="w-4.5 h-4.5"></i>
-                  </span>
-                  <span class="text-[15px] font-bold text-[#0b1f35]"
-                    >Which regions do you operate in?</span
-                  >
-                </span>
-                <span
-                  class="faq-icon relative w-5 h-5 shrink-0 flex items-center justify-center text-[#0b1f35]"
-                >
-                  <i
-                    data-lucide="plus"
-                    class="faq-icon-plus w-4.5 h-4.5 absolute transition-opacity duration-300"
-                  ></i>
-                  <i
-                    data-lucide="minus"
-                    class="faq-icon-minus w-4.5 h-4.5 absolute transition-opacity duration-300"
-                  ></i>
-                </span>
-              </button>
-              <div class="faq-answer-wrapper">
-                <div class="faq-answer-inner">
-                  <p
-                    class="px-6 pb-5 sm:pl-[68px] text-[13px] text-slate-400 leading-relaxed"
-                  >
-                    Our headquarters is in New Jersey, and we actively deliver
-                    projects across New York, New Jersey and Connecticut. For
-                    larger commercial or industrial projects, we mobilize teams
-                    nationwide — just ask us about your location.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Q3 — Services & Process -->
-            <div
-              class="faq-item rounded-2xl bg-white overflow-hidden"
-              data-faq
-              data-fq-item="process"
-            >
-              <button
-                type="button"
-                class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5"
-              >
-                <span class="flex items-center gap-3.5">
-                  <span
-                    class="hidden sm:flex w-9 h-9 rounded-full bg-[#c9a227]/10 text-[#c9a227] items-center justify-center shrink-0"
-                  >
-                    <i data-lucide="clipboard-list" class="w-4.5 h-4.5"></i>
-                  </span>
-                  <span class="text-[15px] font-bold text-[#0b1f35]"
-                    >How does a typical project start?</span
-                  >
-                </span>
-                <span
-                  class="faq-icon relative w-5 h-5 shrink-0 flex items-center justify-center text-[#0b1f35]"
-                >
-                  <i
-                    data-lucide="plus"
-                    class="faq-icon-plus w-4.5 h-4.5 absolute transition-opacity duration-300"
-                  ></i>
-                  <i
-                    data-lucide="minus"
-                    class="faq-icon-minus w-4.5 h-4.5 absolute transition-opacity duration-300"
-                  ></i>
-                </span>
-              </button>
-              <div class="faq-answer-wrapper">
-                <div class="faq-answer-inner">
-                  <p
-                    class="px-6 pb-5 sm:pl-[68px] text-[13px] text-slate-400 leading-relaxed"
-                  >
-                    It all begins with a free consultation: we visit your site,
-                    discuss your goals and budget, then deliver a detailed
-                    proposal with fixed pricing, a timeline and 3D visuals if
-                    needed. Nothing starts until you're fully comfortable with
-                    the plan.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Q4 — Services & Process -->
-            <div
-              class="faq-item rounded-2xl bg-white overflow-hidden"
-              data-faq
-              data-fq-item="process"
-            >
-              <button
-                type="button"
-                class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5"
-              >
-                <span class="flex items-center gap-3.5">
-                  <span
-                    class="hidden sm:flex w-9 h-9 rounded-full bg-[#c9a227]/10 text-[#c9a227] items-center justify-center shrink-0"
-                  >
-                    <i data-lucide="file-clock" class="w-4.5 h-4.5"></i>
-                  </span>
-                  <span class="text-[15px] font-bold text-[#0b1f35]"
-                    >Do you handle permits and regulations?</span
-                  >
-                </span>
-                <span
-                  class="faq-icon relative w-5 h-5 shrink-0 flex items-center justify-center text-[#0b1f35]"
-                >
-                  <i
-                    data-lucide="plus"
-                    class="faq-icon-plus w-4.5 h-4.5 absolute transition-opacity duration-300"
-                  ></i>
-                  <i
-                    data-lucide="minus"
-                    class="faq-icon-minus w-4.5 h-4.5 absolute transition-opacity duration-300"
-                  ></i>
-                </span>
-              </button>
-              <div class="faq-answer-wrapper">
-                <div class="faq-answer-inner">
-                  <p
-                    class="px-6 pb-5 sm:pl-[68px] text-[13px] text-slate-400 leading-relaxed"
-                  >
-                    Yes — 100%. Our design and planning team manages all
-                    building permits, zoning compliance and inspections required
-                    by local authorities, so you never have to deal with
-                    paperwork.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Q5 — Payments & Budget -->
-            <div
-              class="faq-item rounded-2xl bg-white overflow-hidden"
-              data-faq
-              data-fq-item="payments"
-            >
-              <button
-                type="button"
-                class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5"
-              >
-                <span class="flex items-center gap-3.5">
-                  <span
-                    class="hidden sm:flex w-9 h-9 rounded-full bg-[#c9a227]/10 text-[#c9a227] items-center justify-center shrink-0"
-                  >
-                    <i data-lucide="calculator" class="w-4.5 h-4.5"></i>
-                  </span>
-                  <span class="text-[15px] font-bold text-[#0b1f35]"
-                    >How is the project cost determined?</span
-                  >
-                </span>
-                <span
-                  class="faq-icon relative w-5 h-5 shrink-0 flex items-center justify-center text-[#0b1f35]"
-                >
-                  <i
-                    data-lucide="plus"
-                    class="faq-icon-plus w-4.5 h-4.5 absolute transition-opacity duration-300"
-                  ></i>
-                  <i
-                    data-lucide="minus"
-                    class="faq-icon-minus w-4.5 h-4.5 absolute transition-opacity duration-300"
-                  ></i>
-                </span>
-              </button>
-              <div class="faq-answer-wrapper">
-                <div class="faq-answer-inner">
-                  <p
-                    class="px-6 pb-5 sm:pl-[68px] text-[13px] text-slate-400 leading-relaxed"
-                  >
-                    Pricing is based on a transparent breakdown: materials,
-                    labor, equipment and contingency — itemized in your
-                    fixed-price contract. We never quote vague "lump sums", and
-                    any change order is approved by you in writing before it
-                    affects the budget.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Q6 — Payments & Budget -->
-            <div
-              class="faq-item rounded-2xl bg-white overflow-hidden"
-              data-faq
-              data-fq-item="payments"
-            >
-              <button
-                type="button"
-                class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5"
-              >
-                <span class="flex items-center gap-3.5">
-                  <span
-                    class="hidden sm:flex w-9 h-9 rounded-full bg-[#c9a227]/10 text-[#c9a227] items-center justify-center shrink-0"
-                  >
-                    <i data-lucide="credit-card" class="w-4.5 h-4.5"></i>
-                  </span>
-                  <span class="text-[15px] font-bold text-[#0b1f35]"
-                    >What are the payment terms?</span
-                  >
-                </span>
-                <span
-                  class="faq-icon relative w-5 h-5 shrink-0 flex items-center justify-center text-[#0b1f35]"
-                >
-                  <i
-                    data-lucide="plus"
-                    class="faq-icon-plus w-4.5 h-4.5 absolute transition-opacity duration-300"
-                  ></i>
-                  <i
-                    data-lucide="minus"
-                    class="faq-icon-minus w-4.5 h-4.5 absolute transition-opacity duration-300"
-                  ></i>
-                </span>
-              </button>
-              <div class="faq-answer-wrapper">
-                <div class="faq-answer-inner">
-                  <p
-                    class="px-6 pb-5 sm:pl-[68px] text-[13px] text-slate-400 leading-relaxed"
-                  >
-                    We work with milestone-based payments: a deposit to secure
-                    your slot, then progress payments aligned with completed
-                    phases — and a final payment only after your walkthrough
-                    approval. No large upfront sums.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Q7 — Warranty & Support -->
-            <div
-              class="faq-item rounded-2xl bg-white overflow-hidden"
-              data-faq
-              data-fq-item="warranty"
-            >
-              <button
-                type="button"
-                class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5"
-              >
-                <span class="flex items-center gap-3.5">
-                  <span
-                    class="hidden sm:flex w-9 h-9 rounded-full bg-[#c9a227]/10 text-[#c9a227] items-center justify-center shrink-0"
-                  >
-                    <i data-lucide="shield-check" class="w-4.5 h-4.5"></i>
-                  </span>
-                  <span class="text-[15px] font-bold text-[#0b1f35]"
-                    >What warranty do you offer on your work?</span
-                  >
-                </span>
-                <span
-                  class="faq-icon relative w-5 h-5 shrink-0 flex items-center justify-center text-[#0b1f35]"
-                >
-                  <i
-                    data-lucide="plus"
-                    class="faq-icon-plus w-4.5 h-4.5 absolute transition-opacity duration-300"
-                  ></i>
-                  <i
-                    data-lucide="minus"
-                    class="faq-icon-minus w-4.5 h-4.5 absolute transition-opacity duration-300"
-                  ></i>
-                </span>
-              </button>
-              <div class="faq-answer-wrapper">
-                <div class="faq-answer-inner">
-                  <p
-                    class="px-6 pb-5 sm:pl-[68px] text-[13px] text-slate-400 leading-relaxed"
-                  >
-                    Every project includes a 10-year structural warranty and a
-                    2-year workmanship warranty, both documented in your
-                    contract. Manufacturer warranties on materials and
-                    appliances are passed on to you in full.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Q8 — Warranty & Support -->
-            <div
-              class="faq-item rounded-2xl bg-white overflow-hidden"
-              data-faq
-              data-fq-item="warranty"
-            >
-              <button
-                type="button"
-                class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5"
-              >
-                <span class="flex items-center gap-3.5">
-                  <span
-                    class="hidden sm:flex w-9 h-9 rounded-full bg-[#c9a227]/10 text-[#c9a227] items-center justify-center shrink-0"
-                  >
-                    <i data-lucide="headset" class="w-4.5 h-4.5"></i>
-                  </span>
-                  <span class="text-[15px] font-bold text-[#0b1f35]"
-                    >How can I track the progress of my project?</span
-                  >
-                </span>
-                <span
-                  class="faq-icon relative w-5 h-5 shrink-0 flex items-center justify-center text-[#0b1f35]"
-                >
-                  <i
-                    data-lucide="plus"
-                    class="faq-icon-plus w-4.5 h-4.5 absolute transition-opacity duration-300"
-                  ></i>
-                  <i
-                    data-lucide="minus"
-                    class="faq-icon-minus w-4.5 h-4.5 absolute transition-opacity duration-300"
-                  ></i>
-                </span>
-              </button>
-              <div class="faq-answer-wrapper">
-                <div class="faq-answer-inner">
-                  <p
-                    class="px-6 pb-5 sm:pl-[68px] text-[13px] text-slate-400 leading-relaxed"
-                  >
-                    You get a dedicated project manager, weekly photo reports
-                    and access to our client portal with real-time milestones.
-                    Questions are answered within one business day — and
-                    emergencies, immediately.
-                  </p>
-                </div>
-              </div>
-            </div>
+            {% endfor %}
 
             <!-- Message aucun résultat (masqué par défaut) -->
             <div id="fq-empty" class="hidden text-center py-14">
@@ -560,17 +226,17 @@
               </span>
               <div>
                 <p class="text-[12px] text-slate-500 font-medium">
-                  Your Question, Our Priority
+                  {% trans "Your Question, Our Priority" %}
                 </p>
                 <p
                   class="text-[20px] font-extrabold text-[#0b1f35] leading-tight mt-0.5"
                 >
-                  24/7 Service
+                  {% trans "24/7 Service" %}
                 </p>
                 <a
-                  href="tel:4065550120"
+                  href="tel:{{ site_settings.phone|urlencode|default:'' }}"
                   class="text-[12px] font-semibold text-[#c9a227] underline underline-offset-2 hover:text-[#d9bc6b] transition-colors"
-                  >(406) 555-0120</a
+                  >{{ site_settings.phone|default:_("24/7 Service") }}</a
                 >
               </div>
             </div>

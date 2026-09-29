@@ -111,11 +111,7 @@
               class="w-11 h-11 rounded-full object-cover ring-2 ring-orange-100"
             />
             {% else %}
-            <img
-              src="https://randomuser.me/api/portraits/women/44.jpg"
-              alt="{{ post.author_name }}"
-              class="w-11 h-11 rounded-full object-cover ring-2 ring-orange-100"
-            />
+            <span class="w-11 h-11 rounded-full bg-[#c9a227] text-white font-black flex items-center justify-center ring-2 ring-orange-100 text-sm shrink-0" aria-hidden="true">{{ post.author_name|default:"B"|slice:":1"|upper }}</span>
             {% endif %}
             <p class="text-sm font-semibold text-slate-500">
               {% trans "Written by" %}
@@ -234,210 +230,7 @@
             </div>
             {% endif %}
 
-            <!-- H2 : Role of Technology -->
-            <h2
-              id="role-technology"
-              class="scroll-mt-28 mt-10 text-[22px] md:text-[26px] font-extrabold text-[#0b1f35] tracking-tight"
-            >
-              The Role of Technology in Modern Construction
-            </h2>
-            <p class="mt-4 text-[15px] text-slate-500 leading-relaxed">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt.
-            </p>
-
-            <!-- H2 : Automation -->
-            <h2
-              id="automation"
-              class="scroll-mt-28 mt-10 text-[22px] md:text-[26px] font-extrabold text-[#0b1f35] tracking-tight"
-            >
-              Automation in construction processes
-            </h2>
-            <p class="mt-4 text-[15px] text-slate-500 leading-relaxed">
-              Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-              consectetur, adipisci velit, sed quia non numquam eius modi
-              tempora incidunt ut labore et dolore magnam aliquam quaerat
-              voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem
-              ullam corporis suscipit laboriosam.
-            </p>
-
-            <!-- Galerie 2 images -->
-            <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <div
-                class="h-[180px] md:h-[200px] rounded-[18px] rounded-tl-[40px] overflow-hidden shadow-md shadow-slate-900/10"
-              >
-                <img
-                  src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800&auto=format&fit=crop"
-                  alt="Ouvriers coordonnant des travaux sur le chantier"
-                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div
-                class="h-[180px] md:h-[200px] rounded-[18px] rounded-br-[40px] overflow-hidden shadow-md shadow-slate-900/10"
-              >
-                <img
-                  src="https://images.unsplash.com/photo-1541976590-713941681591?q=80&w=800&auto=format&fit=crop"
-                  alt="Équipe de chantier utilisant des outils numériques"
-                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-            </div>
-
-            <!-- H2 : Visualization -->
-            <h2
-              id="visualization"
-              class="scroll-mt-28 mt-10 text-[22px] md:text-[26px] font-extrabold text-[#0b1f35] tracking-tight"
-            >
-              Interactive project visualization
-            </h2>
-            <p class="mt-4 text-[15px] text-slate-500 leading-relaxed">
-              Quis autem vel eum iure reprehenderit qui in ea voluptate velit
-              esse quam nihil molestiae consequatur, vel illum qui dolorem eum
-              fugiat quo voluptas nulla pariatur. At vero eos et accusamus et
-              iusto odio dignissimos ducimus qui blanditiis praesentium
-              voluptatum deleniti atque corrupti quos dolores.
-            </p>
-
-            <!-- Encadré Also Read -->
-            <div
-              class="mt-9 relative bg-[#0b1f35] text-white p-6 rounded-2xl overflow-hidden"
-            >
-              <span
-                class="features-hatch absolute inset-0"
-                aria-hidden="true"
-              ></span>
-              <div class="relative z-10 flex items-start gap-4">
-                <span
-                  class="w-1 self-stretch bg-[#c9a227] rounded-full shrink-0"
-                  aria-hidden="true"
-                ></span>
-                <div>
-                  <p class="text-[#c9a227] font-extrabold text-sm">
-                    Also Read :
-                  </p>
-                  <a
-                    href="#"
-                    class="mt-1.5 block text-white font-bold text-[16px] leading-snug hover:text-[#c9a227] transition-colors"
-                  >
-                    5 Must-Know Tips for a Successful Home Renovation
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- H2 : Digital Tools -->
-            <h2
-              id="digital-tools"
-              class="scroll-mt-28 mt-10 text-[22px] md:text-[26px] font-extrabold text-[#0b1f35] tracking-tight"
-            >
-              Enhanced Customer Experience Through Digital Tools
-            </h2>
-            <p class="mt-4 text-[15px] text-slate-500 leading-relaxed">
-              Et harum quidem rerum facilis est et expedita distinctio. Nam
-              libero tempore, cum soluta nobis est eligendi optio cumque nihil
-              impedit quo minus id quod maxime placeat facere possimus, omnis
-              voluptas assumenda est, omnis dolor repellendus.
-            </p>
-
-            <!-- Grille de points numérotés -->
-            <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
-              <div>
-                <span
-                  class="w-9 h-9 rounded-full bg-[#c9a227] text-white text-sm font-black flex items-center justify-center shadow-md shadow-orange-500/25"
-                  >01</span
-                >
-                <h3
-                  class="mt-4 text-[15px] font-extrabold text-[#0b1f35] leading-snug"
-                >
-                  Real-Time Updates
-                </h3>
-                <p class="mt-2 text-[13px] text-slate-500 leading-relaxed">
-                  Live dashboards keep clients informed at every build stage.
-                </p>
-              </div>
-              <div>
-                <span
-                  class="w-9 h-9 rounded-full bg-[#c9a227] text-white text-sm font-black flex items-center justify-center shadow-md shadow-orange-500/25"
-                  >02</span
-                >
-                <h3
-                  class="mt-4 text-[15px] font-extrabold text-[#0b1f35] leading-snug"
-                >
-                  3D Visualizations
-                </h3>
-                <p class="mt-2 text-[13px] text-slate-500 leading-relaxed">
-                  Walk through your future home before ground is even broken.
-                </p>
-              </div>
-              <div>
-                <span
-                  class="w-9 h-9 rounded-full bg-[#c9a227] text-white text-sm font-black flex items-center justify-center shadow-md shadow-orange-500/25"
-                  >03</span
-                >
-                <h3
-                  class="mt-4 text-[15px] font-extrabold text-[#0b1f35] leading-snug"
-                >
-                  AI Assistance
-                </h3>
-                <p class="mt-2 text-[13px] text-slate-500 leading-relaxed">
-                  Predictive analytics flag risks before they become delays.
-                </p>
-              </div>
-            </div>
-
-            <!-- H2 : Future -->
-            <h2
-              id="future"
-              class="scroll-mt-28 mt-10 text-[22px] md:text-[26px] font-extrabold text-[#0b1f35] tracking-tight"
-            >
-              How technology will shape future experiences
-            </h2>
-            <p class="mt-4 text-[15px] text-slate-500 leading-relaxed">
-              Temporibus autem quibusdam et aut officiis debitis aut rerum
-              necessitatibus saepe eveniet ut et voluptates repudiandae sint et
-              molestiae non recusandae. Itaque earum rerum hic tenetur a
-              sapiente delectus.
-            </p>
-
-            <!-- Liste de puces bicolores -->
-            <ul class="mt-6 space-y-3.5">
-              <li class="flex items-start gap-3.5 text-[15px] text-slate-500">
-                <span
-                  class="w-4 h-4 rounded-full border-[5px] border-[#c9a227] bg-[#0b1f35] shrink-0 mt-1"
-                  aria-hidden="true"
-                ></span>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do
-                eiusmod.
-              </li>
-              <li class="flex items-start gap-3.5 text-[15px] text-slate-500">
-                <span
-                  class="w-4 h-4 rounded-full border-[5px] border-[#c9a227] bg-[#0b1f35] shrink-0 mt-1"
-                  aria-hidden="true"
-                ></span>
-                Tempor incididunt ut labore et dolore magna aliqua ut enim ad
-                minim.
-              </li>
-              <li class="flex items-start gap-3.5 text-[15px] text-slate-500">
-                <span
-                  class="w-4 h-4 rounded-full border-[5px] border-[#c9a227] bg-[#0b1f35] shrink-0 mt-1"
-                  aria-hidden="true"
-                ></span>
-                Veniam quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea.
-              </li>
-              <li class="flex items-start gap-3.5 text-[15px] text-slate-500">
-                <span
-                  class="w-4 h-4 rounded-full border-[5px] border-[#c9a227] bg-[#0b1f35] shrink-0 mt-1"
-                  aria-hidden="true"
-                ></span>
-                Commodo consequat duis aute irure dolor in reprehenderit in
-                voluptate.
-              </li>
-            </ul>
+            <!-- Demo body removed: renders post.content only -->
 
             <!-- Mobile : barre de partage horizontale -->
             <div class="md:hidden mt-9 flex items-center gap-3">
@@ -524,11 +317,7 @@
                   class="w-20 h-20 rounded-full object-cover ring-4 ring-white/10 shrink-0"
                 />
                 {% else %}
-                <img
-                  src="https://randomuser.me/api/portraits/women/44.jpg"
-                  alt="{{ post.author_name }}"
-                  class="w-20 h-20 rounded-full object-cover ring-4 ring-white/10 shrink-0"
-                />
+                <span class="w-20 h-20 rounded-full bg-[#c9a227] text-white text-2xl font-black flex items-center justify-center ring-4 ring-white/10 shrink-0" aria-hidden="true">{{ post.author_name|default:"B"|slice:":1"|upper }}</span>
                 {% endif %}
                 <div>
                   <p
@@ -599,80 +388,7 @@
             </div>
           </div>
 
-          <!-- Widget 2 : Table of Content -->
-          <div class="bg-[#f5f6f9] rounded-2xl p-6">
-            <h3
-              class="flex items-center gap-2.5 text-[16px] font-extrabold text-[#0b1f35]"
-            >
-              <span
-                class="w-1 h-5 bg-[#c9a227] rounded-full"
-                aria-hidden="true"
-              ></span>
-              {% trans "Table of Content" %}
-            </h3>
-            <ul class="mt-5 space-y-3 text-[13.5px] font-semibold">
-              <li>
-                <a
-                  href="#role-technology"
-                  class="flex items-start gap-2.5 text-slate-500 hover:text-[#c9a227] transition-colors"
-                >
-                  <i
-                    data-lucide="arrow-right"
-                    class="w-3.5 h-3.5 text-[#c9a227] shrink-0 mt-1"
-                  ></i>
-                  {% trans "The Role of Technology in Modern Construction" %}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#automation"
-                  class="flex items-start gap-2.5 text-slate-500 hover:text-[#c9a227] transition-colors"
-                >
-                  <i
-                    data-lucide="arrow-right"
-                    class="w-3.5 h-3.5 text-[#c9a227] shrink-0 mt-1"
-                  ></i>
-                  {% trans "Automation in construction processes" %}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#visualization"
-                  class="flex items-start gap-2.5 text-slate-500 hover:text-[#c9a227] transition-colors"
-                >
-                  <i
-                    data-lucide="arrow-right"
-                    class="w-3.5 h-3.5 text-[#c9a227] shrink-0 mt-1"
-                  ></i>
-                  {% trans "Interactive project visualization" %}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#digital-tools"
-                  class="flex items-start gap-2.5 text-slate-500 hover:text-[#c9a227] transition-colors"
-                >
-                  <i
-                    data-lucide="arrow-right"
-                    class="w-3.5 h-3.5 text-[#c9a227] shrink-0 mt-1"
-                  ></i>
-                  {% trans "Enhanced Customer Experience Through Digital Tools" %}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#future"
-                  class="flex items-start gap-2.5 text-slate-500 hover:text-[#c9a227] transition-colors"
-                >
-                  <i
-                    data-lucide="arrow-right"
-                    class="w-3.5 h-3.5 text-[#c9a227] shrink-0 mt-1"
-                  ></i>
-                  {% trans "How technology will shape future experiences" %}
-                </a>
-              </li>
-            </ul>
-          </div>
+          <!-- Demo TOC removed -->
 
           <!-- Widget 3 : Banner CTA -->
           <div

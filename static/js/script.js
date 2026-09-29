@@ -332,28 +332,34 @@ document.addEventListener("DOMContentLoaded", () => {
     counters.forEach((counter) => io.observe(counter));
   }
 
-  // 6. Section About — slider Mission / Vision / Valeurs
+  // 6. Section About — slider Mission / Vision (depuis les data-attributes
+  // renseignés par Django/SiteSettings ; jamais de contenu démo en prod)
+  const aboutContentEl = document.getElementById("about-slide-content");
   const aboutSlides = [
     {
-      label: "Our Mission",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+      label: (aboutContentEl?.dataset.missionTitle || "").trim(),
+      text: (aboutContentEl?.dataset.missionText || "").trim(),
     },
     {
-      label: "Our Vision",
-      text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+      label: (aboutContentEl?.dataset.visionTitle || "").trim(),
+      text: (aboutContentEl?.dataset.visionText || "").trim(),
     },
-    {
-      label: "Our Values",
-      text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
-    },
-  ];
+  ].filter((s) => s.text !== "");
 
   let aboutIndex = 0;
-  const aboutContentEl = document.getElementById("about-slide-content");
   const aboutTextEl = document.getElementById("about-slide-text");
   const aboutLabelEl = document.getElementById("about-slide-label");
   const aboutPrevBtn = document.getElementById("about-prev");
   const aboutNextBtn = document.getElementById("about-next");
+  const aboutSliderCard = document.getElementById("about-slider-card");
+
+  // Sans contenu réel (SiteSettings vide) : on masque le slider, pas de démo.
+  if (aboutSlides.length === 0) {
+    aboutSliderCard?.classList.add("hidden");
+  } else if (aboutSlides.length === 1) {
+    aboutPrevBtn?.classList.add("hidden");
+    aboutNextBtn?.classList.add("hidden");
+  }
 
   const showAboutSlide = (index) => {
     aboutIndex = (index + aboutSlides.length) % aboutSlides.length;
@@ -366,7 +372,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 250);
   };
 
-  if (aboutContentEl && aboutPrevBtn && aboutNextBtn) {
+  if (aboutContentEl && aboutPrevBtn && aboutNextBtn && aboutSlides.length) {
     aboutPrevBtn.addEventListener("click", () =>
       showAboutSlide(aboutIndex - 1),
     );
@@ -536,112 +542,66 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // 13. Section Testimonials — carrousel avec dots
-  const testimonialsData = [
-    {
-      title: "Beyond Expectations!",
-      text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-      name: "Leslie Alexander",
-      role: "Happy Client",
-      rating: 5,
-      avatar: "https://randomuser.me/api/portraits/women/65.jpg",
-    },
-    {
-      title: "Top-Notch Service!",
-      text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-      name: "Jenny Wilson",
-      role: "Happy Client",
-      rating: 5,
-      avatar: "https://randomuser.me/api/portraits/women/44.jpg",
-    },
-    {
-      title: "True Professionals!",
-      text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt neque porro quisquam est.",
-      name: "Robert Fox",
-      role: "Happy Client",
-      rating: 5,
-      avatar: "https://randomuser.me/api/portraits/men/32.jpg",
-    },
-    {
-      title: "Delivered On Time!",
-      text: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat.",
-      name: "Kristin Watson",
-      role: "Happy Client",
-      rating: 5,
-      avatar: "https://randomuser.me/api/portraits/women/68.jpg",
-    },
-    {
-      title: "Outstanding Quality!",
-      text: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur quis autem vel eum iure reprehenderit.",
-      name: "Cody Fisher",
-      role: "Happy Client",
-      rating: 5,
-      avatar: "https://randomuser.me/api/portraits/men/75.jpg",
-    },
-    {
-      title: "A Reliable Partner!",
-      text: "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.",
-      name: "Savannah Nguyen",
-      role: "Happy Client",
-      rating: 5,
-      avatar: "https://randomuser.me/api/portraits/women/17.jpg",
-    },
-    {
-      title: "Impeccable Craftsmanship!",
-      text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint.",
-      name: "Guy Hawkins",
-      role: "Happy Client",
-      rating: 5,
-      avatar: "https://randomuser.me/api/portraits/men/45.jpg",
-    },
-    {
-      title: "Exceeded Our Vision!",
-      text: "Et harum quidem rerum facilis est et expedita distinctio nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat.",
-      name: "Arlene McCoy",
-      role: "Happy Client",
-      rating: 5,
-      avatar: "https://randomuser.me/api/portraits/women/90.jpg",
-    },
-    {
-      title: "Flawless Execution!",
-      text: "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae itaque earum rerum hic.",
-      name: "Darlene Robertson",
-      role: "Happy Client",
-      rating: 5,
-      avatar: "https://randomuser.me/api/portraits/women/33.jpg",
-    },
-    {
-      title: "Highly Recommended!",
-      text: "Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
-      name: "Cameron Williamson",
-      role: "Happy Client",
-      rating: 5,
-      avatar: "https://randomuser.me/api/portraits/men/60.jpg",
-    },
-  ];
+  // Données réelles via json_script (vue index) ; section masquée si vide.
+  // Aucun contenu démo en production.
+  const testimonialsData = (() => {
+    try {
+      const el = document.getElementById("testimonials-data");
+      const parsed = el ? JSON.parse(el.textContent) : [];
+      return Array.isArray(parsed) ? parsed.filter((t) => t && t.text) : [];
+    } catch (e) {
+      return [];
+    }
+  })();
 
   const testiTrack = document.getElementById("testi-track");
   const testiDots = document.getElementById("testi-dots");
   const testiSection = document.getElementById("testimonials");
 
-  if (testiTrack && testiDots) {
+  if (testiTrack && testiDots && testimonialsData.length) {
     const starIcon = '<i data-lucide="star" class="w-4 h-4 fill-current"></i>';
 
-    const cardHTML = (t) => `
+    const esc = (v) =>
+      String(v ?? "").replace(/[&<>"']/g, (c) => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;",
+      })[c]);
+
+    const avatarHTML = (t) => {
+      if (t.avatar) {
+        return `<img src="${esc(t.avatar)}" alt="${esc(t.name)}" class="w-11 h-11 rounded-full object-cover ring-2 ring-white/15" loading="lazy" />`;
+      }
+      const initials = String(t.name || "?")
+        .split(/\s+/)
+        .map((w) => w[0])
+        .join("")
+        .slice(0, 2)
+        .toUpperCase();
+      return `<span class="w-11 h-11 rounded-full bg-[#c9a227] text-white font-black flex items-center justify-center ring-2 ring-white/15" aria-hidden="true">${esc(initials)}</span>`;
+    };
+
+    const cardHTML = (t) => {
+      const rating = Number(t.rating) || 0;
+      return `
       <article class="bg-white/[0.06] rounded-[20px] p-6 md:p-7 hover:bg-white/[0.09] transition-colors h-full">
         <div class="flex items-center gap-2.5">
-          <span class="flex items-center gap-0.5 text-[#c9a227]">${starIcon.repeat(t.rating)}</span>
-          <span class="text-white font-bold text-sm">${t.rating.toFixed(1)}</span>
+          <span class="flex items-center gap-0.5 text-[#c9a227]">${starIcon.repeat(Math.max(0, Math.min(5, Math.round(rating))))}</span>
+          <span class="text-white font-bold text-sm">${rating.toFixed(1)}</span>
         </div>
-        <h3 class="mt-3.5 text-white font-extrabold text-[17px]">${t.title}</h3>
-        <p class="mt-2.5 text-[13px] text-slate-400 leading-relaxed">${t.text}</p>
+        <h3 class="mt-3.5 text-white font-extrabold text-[17px]">${esc(t.title)}</h3>
+        <p class="mt-2.5 text-[13px] text-slate-400 leading-relaxed">${esc(t.text)}</p>
         <div class="mt-6 flex items-center gap-3.5">
-          <img src="${t.avatar}" alt="${t.name}" class="w-11 h-11 rounded-full object-cover ring-2 ring-white/15" loading="lazy" />
+          ${avatarHTML(t)}
           <div>
-            <p class="text-white font-bold text-sm">${t.name}</p>
-            <p class="text-[11px] text-slate-400">${t.role}</p>
+            <p class="text-white font-bold text-sm">${esc(t.name)}</p>
+            <p class="text-[11px] text-slate-400">${esc(t.role)}</p>
           </div>
         </div>
       </article>`;
+    };
 
     const pageCount = Math.ceil(testimonialsData.length / 2);
     for (let p = 0; p < pageCount; p++) {
@@ -1221,17 +1181,88 @@ document.addEventListener("DOMContentLoaded", () => {
       throw new Error((data && data.error) || "chat-api-error");
     };
 
+    // Streaming SSE (POST /api/chat/stream/) : affiche les tokens au fil de
+    // l'eau au lieu d'attendre la réponse complète. Repli sur askApi si le
+    // flux est indisponible (proxy qui bufférise, erreur réseau...).
+    const streamAskApi = async (userText, onToken) => {
+      const res = await fetch("/api/chat/stream/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "text/event-stream",
+          "X-CSRFToken": getCsrfToken(),
+        },
+        body: JSON.stringify({
+          message: userText,
+          lang: BSG_LANG,
+          session_id: getChatSessionId(),
+        }),
+      });
+      if (!res.ok || !res.body) throw new Error("chat-stream-unavailable");
+      const reader = res.body.getReader();
+      const decoder = new TextDecoder();
+      let buf = "";
+      let done = false;
+      while (!done) {
+        const { value, done: readerDone } = await reader.read();
+        if (readerDone) break;
+        buf += decoder.decode(value, { stream: true });
+        const events = buf.split("\n\n");
+        buf = events.pop();
+        for (const evt of events) {
+          for (const line of evt.split("\n")) {
+            const t = line.trim();
+            if (!t.startsWith("data:")) continue;
+            let payload = null;
+            try {
+              payload = JSON.parse(t.slice(5).trim());
+            } catch (e) {
+              continue;
+            }
+            if (payload && typeof payload.text === "string" && payload.text) {
+              onToken(payload.text);
+            }
+            if (payload && payload.done) done = true;
+            if (payload && payload.error) throw new Error("chat-api-error");
+          }
+        }
+      }
+    };
+
     const respondTo = (userText) => {
       showTyping();
-      askApi(userText)
-        .then((answer) => {
+      // Bulle bot créée tout de suite, remplie token par token.
+      const msg = document.createElement("div");
+      msg.className = "chat-msg bot";
+      const bubble = document.createElement("div");
+      bubble.className = "chat-bubble";
+      const time = document.createElement("span");
+      time.className = "chat-time";
+      time.textContent = nowTime();
+      msg.append(bubble, time);
+      chatMessages.appendChild(msg);
+      scrollChat();
+
+      let gotToken = false;
+      const finishStream = () => {
+        stopTyping();
+        if (!gotToken) msg.remove();
+      };
+      streamAskApi(userText, (tok) => {
+        if (!gotToken) {
+          gotToken = true;
           stopTyping();
-          addMessage(answer, "bot");
-        })
+        }
+        bubble.textContent += tok;
+        scrollChat();
+      })
+        .then(finishStream)
         .catch(() => {
-          // Hors-ligne / quota / clé manquante : repli sur réponses locales
-          stopTyping();
-          addMessage(getBotReply(userText), "bot");
+          // Repli synchrone classique
+          finishStream();
+          askApi(userText)
+            .then((answer) => addMessage(answer, "bot"))
+            .catch(() => addMessage(getBotReply(userText), "bot"));
         });
     };
 

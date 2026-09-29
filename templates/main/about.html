@@ -126,16 +126,20 @@
             </h2>
 
             <!-- Paragraphes -->
+            {% if site_settings.about_description %}
             <p
               class="mt-6 max-w-[520px] text-[15px] text-slate-500 leading-relaxed"
             >
-              {{ site_settings.about_description|default:_("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.") }}
+              {{ site_settings.about_description }}
             </p>
+            {% endif %}
+            {% if site_settings.about_description_2 %}
             <p
               class="mt-4 max-w-[520px] text-[15px] text-slate-500 leading-relaxed"
             >
-              {{ site_settings.about_description_2|default:_("Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat — from financing to delivery, our teams secure every link in your projects.") }}
+              {{ site_settings.about_description_2 }}
             </p>
+            {% endif %}
           </div>
 
           <!-- Bouton Learn More + pastille flÃ¨che -->
@@ -183,8 +187,9 @@
             </div>
           </div>
 
-          <!-- Carte marine : slider Mission / Vision / Valeurs -->
+          <!-- Carte marine : slider Mission / Vision (données SiteSettings) -->
           <div
+            id="about-slider-card"
             class="lg:col-span-7 relative bg-[#0b1f35] rounded-[24px] p-6 sm:p-8 md:p-10 overflow-hidden flex flex-col min-h-[300px] sm:min-h-[340px] md:min-h-[380px]"
           >
             <!-- Ticks discrets en bas de carte -->
@@ -197,15 +202,15 @@
               id="about-slide-content"
               class="relative z-10 flex flex-col flex-1"
               data-mission-title="{{ site_settings.mission_title|default:_('Our Mission') }}"
-              data-mission-text="{{ site_settings.mission_description|default:_('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.') }}"
+              data-mission-text="{{ site_settings.mission_description|default:'' }}"
               data-vision-title="{{ site_settings.vision_title|default:_('Our Vision') }}"
-              data-vision-text="{{ site_settings.vision_description|default:_('Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.') }}"
+              data-vision-text="{{ site_settings.vision_description|default:'' }}"
             >
               <p
                 id="about-slide-text"
                 class="text-white/95 text-[15px] sm:text-[17px] md:text-lg leading-relaxed max-w-[560px]"
               >
-                {{ site_settings.mission_description|default:_("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.") }}
+                {{ site_settings.mission_description|default:'' }}
               </p>
 
               <div class="mt-auto pt-8 flex items-end justify-between gap-4">
@@ -344,55 +349,6 @@
                 </div>
               </div>
               {% empty %}
-              <div>
-                <div
-                  class="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight"
-                  data-count="640"
-                  data-suffix="+"
-                >
-                  640+
-                </div>
-                <div class="mt-1.5 text-xs sm:text-sm text-white/80">
-                  {% trans "Projects Completed" %}
-                </div>
-              </div>
-
-              <div>
-                <div
-                  class="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight"
-                  data-count="25"
-                  data-suffix="+"
-                >
-                  25+
-                </div>
-                <div class="mt-1.5 text-xs sm:text-sm text-white/80">
-                  {% trans "Years of Experience" %}
-                </div>
-              </div>
-
-              <div>
-                <div
-                  class="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight"
-                  data-count="450"
-                  data-suffix="+"
-                >
-                  450+
-                </div>
-                <div class="mt-1.5 text-xs sm:text-sm text-white/80">{% trans "Happy Customers" %}</div>
-              </div>
-
-              <div>
-                <div
-                  class="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight"
-                  data-count="120"
-                  data-suffix="+"
-                >
-                  120+
-                </div>
-                <div class="mt-1.5 text-xs sm:text-sm text-white/80">
-                  Skilled Professionals
-                </div>
-              </div>
               {% endfor %}
             </div>
           </div>
@@ -479,95 +435,6 @@
             </p>
           </div>
           {% empty %}
-
-          <!-- STEP 1 â€” Consultation & Planning (active par dÃ©faut) -->
-          <div
-            data-process-step
-            class="process-step active relative flex flex-col cursor-pointer"
-          >
-            <div class="relative flex items-center">
-              <span class="step-badge">{% trans "Step 1" %}</span>
-              <span class="hidden md:block flex-1 h-px bg-gray-200"></span>
-              <!-- Chevron connecteur (Ã  cheval sur la jonction) -->
-              <span
-                class="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 bg-[#f5f6f9] px-1 text-[#c9a227]"
-                aria-hidden="true"
-              >
-                <i data-lucide="chevrons-right" class="w-5 h-5"></i>
-              </span>
-            </div>
-            <h3
-              class="mt-7 text-[16px] sm:text-[19px] sm:text-[22px] font-extrabold text-[#0b1f35] leading-snug max-w-[240px]"
-            >
-              {% trans "Consultation & Planning" %}
-            </h3>
-            <p
-              class="mt-4 text-[15px] text-slate-500 leading-relaxed line-clamp-3 max-w-[300px]"
-            >
-              {% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." %}
-            </p>
-          </div>
-
-          <!-- STEP 2 â€” Design & Construction -->
-          <div
-            data-process-step
-            class="process-step relative flex flex-col cursor-pointer"
-          >
-            <!-- SÃ©parateur vertical -->
-            <span
-              class="hidden md:block absolute top-0 bottom-0 -left-5 w-px bg-gray-200"
-              aria-hidden="true"
-            ></span>
-
-            <div class="relative flex items-center">
-              <span class="step-badge">{% trans "Step 2" %}</span>
-              <span class="hidden md:block flex-1 h-px bg-gray-200"></span>
-              <span
-                class="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 bg-[#f5f6f9] px-1 text-[#c9a227]"
-                aria-hidden="true"
-              >
-                <i data-lucide="chevrons-right" class="w-5 h-5"></i>
-              </span>
-            </div>
-            <h3
-              class="mt-7 text-[16px] sm:text-[19px] sm:text-[22px] font-extrabold text-[#0b1f35] leading-snug max-w-[240px]"
-            >
-              {% trans "Design & Construction" %}
-            </h3>
-            <p
-              class="mt-4 text-[15px] text-slate-500 leading-relaxed line-clamp-3 max-w-[300px]"
-            >
-              {% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." %}
-            </p>
-          </div>
-
-          <!-- STEP 3 â€” Final Inspection & Handover -->
-          <div
-            data-process-step
-            class="process-step relative flex flex-col cursor-pointer"
-          >
-            <!-- SÃ©parateur vertical -->
-            <span
-              class="hidden md:block absolute top-0 bottom-0 -left-5 w-px bg-gray-200"
-              aria-hidden="true"
-            ></span>
-
-            <div class="relative flex items-center">
-              <span class="step-badge">{% trans "Step 3" %}</span>
-              <span class="hidden md:block flex-1 h-px bg-gray-200"></span>
-            </div>
-            <h3
-              class="mt-7 text-[16px] sm:text-[19px] sm:text-[22px] font-extrabold text-[#0b1f35] leading-snug max-w-[260px]"
-            >
-              {% trans "Final Inspection & Handover" %}
-            </h3>
-            <p
-              class="mt-4 text-[15px] text-slate-500 leading-relaxed line-clamp-3 max-w-[300px]"
-            >
-              {% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." %}
-            </p>
-          </div>
-
           {% endfor %}
 
           <div
@@ -815,68 +682,6 @@
                 </div>
               </div>
               {% empty %}
-              <!-- Feature 1 -->
-              <div class="flex items-start gap-5 py-4 first:pt-0">
-                <span
-                  class="w-12 h-12 rounded-xl border border-white/25 text-white flex items-center justify-center shrink-0"
-                >
-                  <i data-lucide="cog" class="w-6 h-6"></i>
-                </span>
-                <div>
-                  <h3 class="text-white font-bold text-[17px]">
-                    {% trans "Advanced Technology" %}
-                  </h3>
-                  <p class="mt-1.5 text-[13px] text-slate-400 leading-relaxed">
-                    {% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt." %}
-                  </p>
-                </div>
-              </div>
-              <!-- Feature 2 -->
-              <div class="flex items-start gap-5 py-4">
-                <span
-                  class="w-12 h-12 rounded-xl border border-white/25 text-white flex items-center justify-center shrink-0"
-                >
-                  <i data-lucide="hard-hat" class="w-6 h-6"></i>
-                </span>
-                <div>
-                  <h3 class="text-white font-bold text-[17px]">{% trans "Expert Team" %}</h3>
-                  <p class="mt-1.5 text-[13px] text-slate-400 leading-relaxed">
-                    {% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt." %}
-                  </p>
-                </div>
-              </div>
-              <!-- Feature 3 -->
-              <div class="flex items-start gap-5 py-4">
-                <span
-                  class="w-12 h-12 rounded-xl border border-white/25 text-white flex items-center justify-center shrink-0"
-                >
-                  <i data-lucide="alarm-clock" class="w-6 h-6"></i>
-                </span>
-                <div>
-                  <h3 class="text-white font-bold text-[17px]">
-                    {% trans "On-Time Delivery" %}
-                  </h3>
-                  <p class="mt-1.5 text-[13px] text-slate-400 leading-relaxed">
-                    {% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt." %}
-                  </p>
-                </div>
-              </div>
-              <!-- Feature 4 -->
-              <div class="flex items-start gap-5 py-4 last:pb-0">
-                <span
-                  class="w-12 h-12 rounded-xl border border-white/25 text-white flex items-center justify-center shrink-0"
-                >
-                  <i data-lucide="trophy" class="w-6 h-6"></i>
-                </span>
-                <div>
-                  <h3 class="text-white font-bold text-[17px]">
-                    {% trans "Award Winning" %}
-                  </h3>
-                  <p class="mt-1.5 text-[13px] text-slate-400 leading-relaxed">
-                    {% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt." %}
-                  </p>
-                </div>
-              </div>
               {% endfor %}
             </div>
           </div>
@@ -884,6 +689,7 @@
       </div>
     </section>
 
+      {% if timeline %}
       <section id="timeline" class="bg-[#f5f6f9] py-16 md:py-20 overflow-hidden relative">
       <span class="section-tag section-tag--dark" aria-hidden="true">Timeline</span>
       <div class="max-w-5xl mx-auto px-6">
@@ -901,161 +707,89 @@
             aria-hidden="true"
           ></span>
 
+          {% for ev in timeline %}
           <div
-            class="timeline-item relative grid md:grid-cols-2 md:gap-20 items-center pb-14 md:pb-20 pl-12 md:pl-0"
+            class="timeline-item relative grid md:grid-cols-2 md:gap-20 items-center {% if not forloop.last %}pb-14 md:pb-20 {% endif %}pl-12 md:pl-0"
           >
             <!-- Node sur la ligne -->
             <span
-              class="absolute left-4 md:left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[#c9a227] ring-4 ring-[#c9a227]/20"
+              class="absolute left-4 md:left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full {% if forloop.first %}bg-[#c9a227] ring-4 ring-[#c9a227]/20{% else %}bg-[#0b1f35]{% endif %}"
               aria-hidden="true"
             ></span>
 
-            <!-- Image (coins asymÃ©triques, bord gauche) -->
-            <div class="order-1 md:order-1 md:pr-2">
-              <div
-                class="timeline-img timeline-img--left h-[220px] md:h-[260px] rounded-tl-[36px] rounded-br-[36px] rounded-tr-xl rounded-bl-xl overflow-hidden shadow-lg shadow-slate-900/10"
-              >
-                <img
-                  src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1000&auto=format&fit=crop"
-                  alt="Deux ingÃ©nieurs en casque blanc discutant devant des plans"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-
-            <!-- Texte -->
-            <div class="order-2 md:order-2 mt-6 md:mt-0 md:pl-2">
-              <span
-                class="inline-block bg-[#0b1f35] text-white text-xs font-bold px-3.5 py-1.5 rounded-full mb-4"
-                >2000</span
-              >
-              <h3 class="text-xl md:text-2xl font-bold text-[#0b1f35] mb-2.5">
-                The Beginning
-              </h3>
-              <p class="text-sm text-gray-500 leading-relaxed max-w-sm">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore.
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="timeline-item relative grid md:grid-cols-2 md:gap-20 items-center pb-14 md:pb-20 pl-12 md:pl-0"
-          >
-            <span
-              class="absolute left-4 md:left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-[#0b1f35]"
-              aria-hidden="true"
-            ></span>
-
-            <!-- Texte (alignÃ© Ã  droite vers la ligne) -->
+            {% if forloop.counter|divisibleby:2 %}
+            <!-- Texte (aligne a droite vers la ligne) -->
             <div
-              class="order-2 md:order-1 mt-6 md:mt-0 md:pr-2 md:text-right flex flex-col md:items-end"
+              class="order-2 md:order-1 mt-6 md:mt-0 md:pr-2 md:text-right flex flex-col md:items-end{% if not ev.image %} md:col-span-2 md:text-center md:items-center{% endif %}"
             >
               <span
                 class="inline-block bg-slate-200 text-slate-800 text-xs font-bold px-3.5 py-1.5 rounded-full mb-4"
-                >2005</span
+                >{{ ev.year }}</span
               >
               <h3 class="text-xl md:text-2xl font-bold text-[#0b1f35] mb-2.5">
-                First Major Success
+                {{ ev.title }}
               </h3>
+              {% if ev.description %}
               <p class="text-sm text-gray-500 leading-relaxed max-w-sm">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore.
+                {{ ev.description }}
               </p>
+              {% endif %}
             </div>
 
-            <!-- Image (coins asymÃ©triques miroir, bord droit) -->
+            {% if ev.image %}
+            <!-- Image (coins asymetriques miroir, bord droit) -->
             <div class="order-1 md:order-2 md:pl-2">
               <div
                 class="timeline-img timeline-img--right h-[220px] md:h-[260px] rounded-tr-[36px] rounded-bl-[36px] rounded-tl-xl rounded-br-xl overflow-hidden shadow-lg shadow-slate-900/10"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1000&auto=format&fit=crop"
-                  alt="Ouvrier du bÃ¢timent avec casque orange et tablette devant un immeuble"
+                  src="{{ ev.image.url }}"
+                  alt="{{ ev.title }}"
                   class="w-full h-full object-cover"
+                  loading="lazy"
                 />
               </div>
             </div>
-          </div>
-
-          <div
-            class="timeline-item relative grid md:grid-cols-2 md:gap-20 items-center pb-14 md:pb-20 pl-12 md:pl-0"
-          >
-            <span
-              class="absolute left-4 md:left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-[#0b1f35]"
-              aria-hidden="true"
-            ></span>
-
-            <!-- Image -->
+            {% endif %}
+            {% else %}
+            {% if ev.image %}
+            <!-- Image (coins asymetriques, bord gauche) -->
             <div class="order-1 md:order-1 md:pr-2">
               <div
                 class="timeline-img timeline-img--left h-[220px] md:h-[260px] rounded-tl-[36px] rounded-br-[36px] rounded-tr-xl rounded-bl-xl overflow-hidden shadow-lg shadow-slate-900/10"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1000&auto=format&fit=crop"
-                  alt="Gratte-ciels en construction avec grues de chantier"
+                  src="{{ ev.image.url }}"
+                  alt="{{ ev.title }}"
                   class="w-full h-full object-cover"
+                  loading="lazy"
                 />
               </div>
             </div>
+            {% endif %}
 
             <!-- Texte -->
-            <div class="order-2 md:order-2 mt-6 md:mt-0 md:pl-2">
+            <div class="order-2 md:order-2 mt-6 md:mt-0 md:pl-2{% if not ev.image %} md:col-span-2{% endif %}">
               <span
-                class="inline-block bg-slate-200 text-slate-800 text-xs font-bold px-3.5 py-1.5 rounded-full mb-4"
-                >2015</span
+                class="inline-block {% if forloop.first %}bg-[#0b1f35] text-white{% else %}bg-slate-200 text-slate-800{% endif %} text-xs font-bold px-3.5 py-1.5 rounded-full mb-4"
+                >{{ ev.year }}</span
               >
               <h3 class="text-xl md:text-2xl font-bold text-[#0b1f35] mb-2.5">
-                Expanding Horizons
+                {{ ev.title }}
               </h3>
+              {% if ev.description %}
               <p class="text-sm text-gray-500 leading-relaxed max-w-sm">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore.
+                {{ ev.description }}
               </p>
+              {% endif %}
             </div>
+            {% endif %}
           </div>
-
-          <div
-            class="timeline-item relative grid md:grid-cols-2 md:gap-20 items-center pl-12 md:pl-0"
-          >
-            <span
-              class="absolute left-4 md:left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-[#0b1f35]"
-              aria-hidden="true"
-            ></span>
-
-            <!-- Texte -->
-            <div
-              class="order-2 md:order-1 mt-6 md:mt-0 md:pr-2 md:text-right flex flex-col md:items-end"
-            >
-              <span
-                class="inline-block bg-slate-200 text-slate-800 text-xs font-bold px-3.5 py-1.5 rounded-full mb-4"
-                >2020</span
-              >
-              <h3 class="text-xl md:text-2xl font-bold text-[#0b1f35] mb-2.5">
-                Industry Recognition
-              </h3>
-              <p class="text-sm text-gray-500 leading-relaxed max-w-sm">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore.
-              </p>
-            </div>
-
-            <!-- Image -->
-            <div class="order-1 md:order-2 md:pl-2">
-              <div
-                class="timeline-img timeline-img--right h-[220px] md:h-[260px] rounded-tr-[36px] rounded-bl-[36px] rounded-tl-xl rounded-br-xl overflow-hidden shadow-lg shadow-slate-900/10"
-              >
-                <img
-                  src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1000&auto=format&fit=crop"
-                  alt="Ã‰quipe de professionnels souriants devant un bÃ¢timent moderne"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-          </div>
+          {% endfor %}
         </div>
       </div>
     </section>
+      {% endif %}
 
       <section id="team" class="bg-white relative overflow-hidden">
       <span class="section-tag section-tag--dark" aria-hidden="true">Team</span>
@@ -1218,261 +952,14 @@
             ></span>
           </article>
           {% empty %}
-          <!-- Membre 1 (active par dÃ©faut) -->
-          <article
-            data-team-card
-            class="team-card active relative bg-white rounded-[20px] p-4 pb-5 shadow-sm hover:shadow-xl transition-shadow duration-300 cursor-pointer"
-          >
-            <div
-              class="relative h-[330px] rounded-[14px] bg-[#f5f6f9] overflow-hidden"
-            >
-              <span
-                class="absolute top-0 right-4 w-12 h-[62%] bg-[#0b1f35] rounded-b-[10px]"
-                aria-hidden="true"
-              ></span>
-              <span
-                class="team-stripes absolute bottom-0 left-0 w-24 h-16"
-                aria-hidden="true"
-              ></span>
-              <div
-                class="team-photo absolute left-3 bottom-0 w-[calc(100%-24px)] h-[88%]"
-              >
-                <img
-                  src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=600&auto=format&fit=crop"
-                  alt="Jenny Alexander — {% trans 'Chief Executive Officer' %}"
-                  class="w-full h-full object-cover object-top"
-                />
-              </div>
-            </div>
-            <div class="mt-5 px-1">
-              <h3 class="text-[16px] sm:text-[18px] font-extrabold text-[#0b1f35]">
-                Jenny Alexander
-              </h3>
-              <p class="mt-0.5 text-[11.5px] text-slate-500">
-                {% trans "Chief Executive Officer" %}
-              </p>
-              <div class="mt-3.5 flex items-center gap-2">
-                <a
-                  href="#"
-                  aria-label="Facebook"
-                  class="w-7 h-7 rounded-full bg-slate-100 text-[#0b1f35] flex items-center justify-center hover:bg-[#0b1f35] hover:text-white transition-colors"
-                  ><svg
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    class="w-3 h-3"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M24 12.073C24 5.446 18.627.073 12 .073S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
-                    /></svg
-                ></a>
-                <a
-                  href="#"
-                  aria-label="Twitter / X"
-                  class="w-7 h-7 rounded-full bg-slate-100 text-[#0b1f35] flex items-center justify-center hover:bg-[#0b1f35] hover:text-white transition-colors"
-                  ><svg
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    class="w-3 h-3"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644z"
-                    /></svg
-                ></a>
-                <a
-                  href="#"
-                  aria-label="Instagram"
-                  class="w-7 h-7 rounded-full bg-slate-100 text-[#0b1f35] flex items-center justify-center hover:bg-[#0b1f35] hover:text-white transition-colors"
-                  ><svg
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    class="w-3 h-3"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
-                    /></svg
-                ></a>
-              </div>
-            </div>
-            <span
-              class="team-bar absolute bottom-0 left-5 right-5 h-[4px] bg-[#0b1f35] rounded-t-full transition-all duration-300"
-              aria-hidden="true"
-            ></span>
-          </article>
-
-          <!-- Membre 2 -->
-          <article
-            data-team-card
-            class="team-card relative bg-white rounded-[20px] p-4 pb-5 shadow-sm hover:shadow-xl transition-shadow duration-300 cursor-pointer"
-          >
-            <div
-              class="relative h-[330px] rounded-[14px] bg-[#f5f6f9] overflow-hidden"
-            >
-              <span
-                class="absolute top-0 right-4 w-12 h-[62%] bg-[#0b1f35] rounded-b-[10px]"
-                aria-hidden="true"
-              ></span>
-              <span
-                class="team-stripes absolute bottom-0 left-0 w-24 h-16"
-                aria-hidden="true"
-              ></span>
-              <div
-                class="team-photo absolute left-3 bottom-0 w-[calc(100%-24px)] h-[88%]"
-              >
-                <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop"
-                  alt="Esther Howard — {% trans 'Civil Engineer' %}"
-                  class="w-full h-full object-cover object-top"
-                />
-              </div>
-            </div>
-            <div class="mt-5 px-1">
-              <h3 class="text-[16px] sm:text-[18px] font-extrabold text-[#0b1f35]">
-                Esther Howard
-              </h3>
-              <p class="mt-0.5 text-[11.5px] text-slate-500">{% trans "Civil Engineer" %}</p>
-              <div class="mt-3.5 flex items-center gap-2">
-                <a
-                  href="#"
-                  aria-label="Facebook"
-                  class="w-7 h-7 rounded-full bg-slate-100 text-[#0b1f35] flex items-center justify-center hover:bg-[#0b1f35] hover:text-white transition-colors"
-                  ><svg
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    class="w-3 h-3"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M24 12.073C24 5.446 18.627.073 12 .073S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
-                    /></svg
-                ></a>
-                <a
-                  href="#"
-                  aria-label="Twitter / X"
-                  class="w-7 h-7 rounded-full bg-slate-100 text-[#0b1f35] flex items-center justify-center hover:bg-[#0b1f35] hover:text-white transition-colors"
-                  ><svg
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    class="w-3 h-3"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644z"
-                    /></svg
-                ></a>
-                <a
-                  href="#"
-                  aria-label="Instagram"
-                  class="w-7 h-7 rounded-full bg-slate-100 text-[#0b1f35] flex items-center justify-center hover:bg-[#0b1f35] hover:text-white transition-colors"
-                  ><svg
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    class="w-3 h-3"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
-                    /></svg
-                ></a>
-              </div>
-            </div>
-            <span
-              class="team-bar absolute bottom-0 left-5 right-5 h-[4px] bg-[#0b1f35] rounded-t-full transition-all duration-300"
-              aria-hidden="true"
-            ></span>
-          </article>
-
-          <!-- Membre 3 -->
-          <article
-            data-team-card
-            class="team-card relative bg-white rounded-[20px] p-4 pb-5 shadow-sm hover:shadow-xl transition-shadow duration-300 cursor-pointer"
-          >
-            <div
-              class="relative h-[330px] rounded-[14px] bg-[#f5f6f9] overflow-hidden"
-            >
-              <span
-                class="absolute top-0 right-4 w-12 h-[62%] bg-[#0b1f35] rounded-b-[10px]"
-                aria-hidden="true"
-              ></span>
-              <span
-                class="team-stripes absolute bottom-0 left-0 w-24 h-16"
-                aria-hidden="true"
-              ></span>
-              <div
-                class="team-photo absolute left-3 bottom-0 w-[calc(100%-24px)] h-[88%]"
-              >
-                <img
-                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop"
-                  alt="Ronald Richards — {% trans 'Structural Engineer' %}"
-                  class="w-full h-full object-cover object-top"
-                />
-              </div>
-            </div>
-            <div class="mt-5 px-1">
-              <h3 class="text-[16px] sm:text-[18px] font-extrabold text-[#0b1f35]">
-                Ronald Richards
-              </h3>
-              <p class="mt-0.5 text-[11.5px] text-slate-500">
-                {% trans "Structural Engineer" %}
-              </p>
-              <div class="mt-3.5 flex items-center gap-2">
-                <a
-                  href="#"
-                  aria-label="Facebook"
-                  class="w-7 h-7 rounded-full bg-slate-100 text-[#0b1f35] flex items-center justify-center hover:bg-[#0b1f35] hover:text-white transition-colors"
-                  ><svg
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    class="w-3 h-3"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M24 12.073C24 5.446 18.627.073 12 .073S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
-                    /></svg
-                ></a>
-                <a
-                  href="#"
-                  aria-label="Twitter / X"
-                  class="w-7 h-7 rounded-full bg-slate-100 text-[#0b1f35] flex items-center justify-center hover:bg-[#0b1f35] hover:text-white transition-colors"
-                  ><svg
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    class="w-3 h-3"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644z"
-                    /></svg
-                ></a>
-                <a
-                  href="#"
-                  aria-label="Instagram"
-                  class="w-7 h-7 rounded-full bg-slate-100 text-[#0b1f35] flex items-center justify-center hover:bg-[#0b1f35] hover:text-white transition-colors"
-                  ><svg
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    class="w-3 h-3"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
-                    /></svg
-                ></a>
-              </div>
-            </div>
-            <span
-              class="team-bar absolute bottom-0 left-5 right-5 h-[4px] bg-[#0b1f35] rounded-t-full transition-all duration-300"
-              aria-hidden="true"
-            ></span>
-          </article>
                   {% endfor %}
         </div>
       </div>
     </section>
 
+      {% if testimonials %}
       <section id="testimonials" class="bg-[#0b1f35] relative overflow-hidden">
+      {{ testimonials_json|json_script:"testimonials-data" }}
       <span class="section-tag section-tag--light" aria-hidden="true">Clients</span>
       <!-- Bandes hachurÃ©es haut / bas -->
       <div class="hatch-edge w-full" aria-hidden="true"></div>
@@ -1507,6 +994,7 @@
 
       <div class="hatch-edge w-full" aria-hidden="true"></div>
     </section>
+      {% endif %}
 
       <section id="faq" class="bg-[#f5f6f9] py-16 relative overflow-hidden">
       <span class="section-tag section-tag--dark" aria-hidden="true">FAQ</span>
@@ -1559,212 +1047,6 @@
               </div>
             </div>
             {% empty %}
-            <div class="faq-item rounded-2xl bg-white overflow-hidden" data-faq>
-              <button
-                type="button"
-                class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5"
-              >
-                <span class="text-[15px] font-bold text-[#0b1f35]"
-                  >What services does your company provide?</span
-                >
-                <span
-                  class="faq-icon relative w-5 h-5 shrink-0 flex items-center justify-center text-[#0b1f35]"
-                >
-                  <i
-                    data-lucide="plus"
-                    class="faq-icon-plus w-4.5 h-4.5 absolute transition-opacity duration-300"
-                  ></i>
-                  <i
-                    data-lucide="minus"
-                    class="faq-icon-minus w-4.5 h-4.5 absolute transition-opacity duration-300"
-                  ></i>
-                </span>
-              </button>
-              <div class="faq-answer-wrapper">
-                <div class="faq-answer-inner">
-                  <p
-                    class="px-6 pb-5 text-[13px] text-slate-400 leading-relaxed"
-                  >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="faq-item open rounded-2xl bg-white overflow-hidden"
-              data-faq
-            >
-              <button
-                type="button"
-                class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5"
-              >
-                <span class="text-[15px] font-bold text-[#0b1f35]"
-                  >Are there any hidden costs?</span
-                >
-                <span
-                  class="faq-icon relative w-5 h-5 shrink-0 flex items-center justify-center text-[#0b1f35]"
-                >
-                  <i
-                    data-lucide="plus"
-                    class="faq-icon-plus w-4.5 h-4.5 absolute transition-opacity duration-300"
-                  ></i>
-                  <i
-                    data-lucide="minus"
-                    class="faq-icon-minus w-4.5 h-4.5 absolute transition-opacity duration-300"
-                  ></i>
-                </span>
-              </button>
-              <div class="faq-answer-wrapper">
-                <div class="faq-answer-inner">
-                  <p
-                    class="px-6 pb-5 text-[13px] text-slate-400 leading-relaxed"
-                  >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua eiusmod tempor incididunt.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="faq-item rounded-2xl bg-white overflow-hidden" data-faq>
-              <button
-                type="button"
-                class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5"
-              >
-                <span class="text-[15px] font-bold text-[#0b1f35]"
-                  >How is the project cost determined?</span
-                >
-                <span
-                  class="faq-icon relative w-5 h-5 shrink-0 flex items-center justify-center text-[#0b1f35]"
-                >
-                  <i
-                    data-lucide="plus"
-                    class="faq-icon-plus w-4.5 h-4.5 absolute transition-opacity duration-300"
-                  ></i>
-                  <i
-                    data-lucide="minus"
-                    class="faq-icon-minus w-4.5 h-4.5 absolute transition-opacity duration-300"
-                  ></i>
-                </span>
-              </button>
-              <div class="faq-answer-wrapper">
-                <div class="faq-answer-inner">
-                  <p
-                    class="px-6 pb-5 text-[13px] text-slate-400 leading-relaxed"
-                  >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="faq-item rounded-2xl bg-white overflow-hidden" data-faq>
-              <button
-                type="button"
-                class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5"
-              >
-                <span class="text-[15px] font-bold text-[#0b1f35]"
-                  >How can I track the progress of my project?</span
-                >
-                <span
-                  class="faq-icon relative w-5 h-5 shrink-0 flex items-center justify-center text-[#0b1f35]"
-                >
-                  <i
-                    data-lucide="plus"
-                    class="faq-icon-plus w-4.5 h-4.5 absolute transition-opacity duration-300"
-                  ></i>
-                  <i
-                    data-lucide="minus"
-                    class="faq-icon-minus w-4.5 h-4.5 absolute transition-opacity duration-300"
-                  ></i>
-                </span>
-              </button>
-              <div class="faq-answer-wrapper">
-                <div class="faq-answer-inner">
-                  <p
-                    class="px-6 pb-5 text-[13px] text-slate-400 leading-relaxed"
-                  >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="faq-item rounded-2xl bg-white overflow-hidden" data-faq>
-              <button
-                type="button"
-                class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5"
-              >
-                <span class="text-[15px] font-bold text-[#0b1f35]"
-                  >Do you provide free consultations or quotes?</span
-                >
-                <span
-                  class="faq-icon relative w-5 h-5 shrink-0 flex items-center justify-center text-[#0b1f35]"
-                >
-                  <i
-                    data-lucide="plus"
-                    class="faq-icon-plus w-4.5 h-4.5 absolute transition-opacity duration-300"
-                  ></i>
-                  <i
-                    data-lucide="minus"
-                    class="faq-icon-minus w-4.5 h-4.5 absolute transition-opacity duration-300"
-                  ></i>
-                </span>
-              </button>
-              <div class="faq-answer-wrapper">
-                <div class="faq-answer-inner">
-                  <p
-                    class="px-6 pb-5 text-[13px] text-slate-400 leading-relaxed"
-                  >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="faq-item rounded-2xl bg-white overflow-hidden" data-faq>
-              <button
-                type="button"
-                class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5"
-              >
-                <span class="text-[15px] font-bold text-[#0b1f35]"
-                  >What types of projects do you specialize in?</span
-                >
-                <span
-                  class="faq-icon relative w-5 h-5 shrink-0 flex items-center justify-center text-[#0b1f35]"
-                >
-                  <i
-                    data-lucide="plus"
-                    class="faq-icon-plus w-4.5 h-4.5 absolute transition-opacity duration-300"
-                  ></i>
-                  <i
-                    data-lucide="minus"
-                    class="faq-icon-minus w-4.5 h-4.5 absolute transition-opacity duration-300"
-                  ></i>
-                </span>
-              </button>
-              <div class="faq-answer-wrapper">
-                <div class="faq-answer-inner">
-                  <p
-                    class="px-6 pb-5 text-[13px] text-slate-400 leading-relaxed"
-                  >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                </div>
-              </div>
-            </div>
             {% endfor %}
           </div>
 
@@ -1831,9 +1113,9 @@
                   {% trans "24/7 Service" %}
                 </p>
                 <a
-                  href="tel:4065550120"
+                  href="tel:{{ site_settings.phone|urlencode|default:'' }}"
                   class="text-[12px] font-semibold text-[#c9a227] underline underline-offset-2 hover:text-[#d9bc6b] transition-colors"
-                  >(406) 555-0120</a
+                  >{{ site_settings.phone|default:_("24/7 Service") }}</a
                 >
               </div>
             </div>

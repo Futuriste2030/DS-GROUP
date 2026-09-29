@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.db import models
 from ckeditor.widgets import CKEditorWidget
 from modeltranslation.admin import TabbedTranslationAdmin, TranslationTabularInline
-from .models import SiteSettings, FAQ, Partner, SiteStat, SkillBar, ProcessStep, Feature, LegalPage, LegalArticle, CookieConsent, CookieConsentLog
+from .models import SiteSettings, FAQ, Partner, SiteStat, SkillBar, ProcessStep, Feature, TimelineEvent, LegalPage, LegalArticle, CookieConsent, CookieConsentLog
 
 
 @admin.register(FAQ)
@@ -25,7 +25,7 @@ class SiteSettingsAdmin(TabbedTranslationAdmin):
     fieldsets = (
         ('Company', {'fields': ('company_name', 'company_short_name', 'site_url', 'logo', 'footer_description')}),
         ('SEO', {'fields': ('meta_description', 'meta_keywords', 'meta_author')}),
-        ('Contact', {'fields': ('phone', 'email', 'careers_email', 'address', 'map_query', 'latitude', 'longitude')}),
+        ('Contact', {'fields': ('phone', 'email', 'careers_email', 'address', 'map_query', 'opening_hours_weekdays', 'opening_hours_weekend', 'latitude', 'longitude')}),
         ('Legal', {'classes': ('collapse',), 'fields': ('nif', 'rccm', 'director_name', 'hosting_provider', 'hosting_address', 'hosting_city_country')}),
         ('Social', {'fields': ('facebook_url', 'twitter_url', 'instagram_url', 'youtube_url', 'pinterest_url')}),
         ('About', {'fields': ('about_title', 'about_description', 'about_description_2', 'about_section_title', 'about_section_subtitle', 'about_image_1', 'about_image_2', 'vision_title', 'vision_description', 'mission_title', 'mission_description', 'process_title', 'process_description', 'why_subtitle', 'why_title', 'why_image_1', 'why_image_2')}),
@@ -65,6 +65,12 @@ class ProcessStepAdmin(TabbedTranslationAdmin):
 @admin.register(Feature)
 class FeatureAdmin(TabbedTranslationAdmin):
     list_display = ['title', 'order']
+    list_editable = ['order']
+
+
+@admin.register(TimelineEvent)
+class TimelineEventAdmin(TabbedTranslationAdmin):
+    list_display = ['year', 'title', 'order']
     list_editable = ['order']
 
 
