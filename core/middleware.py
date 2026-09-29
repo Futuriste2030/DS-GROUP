@@ -22,6 +22,7 @@ class ComingSoonMiddleware:
         '/api/',
         '/static/',
         '/media/',
+        '/ckeditor/',
         '/robots.txt',
         '/sitemap.xml',
     )
@@ -32,7 +33,11 @@ class ComingSoonMiddleware:
     def __call__(self, request):
         if self._is_active() and not self._is_exempt(request):
             from django.shortcuts import redirect
-            return redirect('main:coming')
+            response = redirect('main:coming')
+            # Anti-cache : navigateur/proxy ne doit pas garder l'ancienne
+            # page ou l'ancienne redirection apres bascule du flag.
+            response['Cache-Control'] = 'no-store, must-revalidate'
+            return response
         return self.get_response(request)
 
     def _is_active(self):
