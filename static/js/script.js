@@ -1339,10 +1339,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const headerTitleEl = document.getElementById("page-header-title");
     const headerCurrentEl = document.getElementById("page-header-current");
 
-    if (headerTitleEl) headerTitleEl.textContent = pageTitle;
-    if (headerCurrentEl) headerCurrentEl.textContent = pageTitle;
+    // Ne jamais écraser le contenu serveur par le repli "Page" :
+    // une traduction vide doit laisser le HTML intact.
+    if (pageTitle && pageTitle !== "Page") {
+      if (headerTitleEl) headerTitleEl.textContent = pageTitle;
+      if (headerCurrentEl) headerCurrentEl.textContent = pageTitle;
 
-    document.title = `${pageTitle} | BS GROUP`;
+      document.title = `${pageTitle} | BS GROUP`;
+    }
   }
 
   // 21. Video Showcase — bouton play (réutilise la modal partagée)

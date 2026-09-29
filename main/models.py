@@ -24,6 +24,8 @@ class SiteSettings(SEOMixin, WebPConversionMixin, models.Model):
     map_query = models.CharField(max_length=500, blank=True)
     opening_hours_weekdays = models.CharField(max_length=100, blank=True, default='Mon – Fri : 15:00 – 20:00')
     opening_hours_weekend = models.CharField(max_length=100, blank=True, default='Sat – Sun : 11:00 – 18:00')
+    quote_budget_options = models.TextField(blank=True, default='Under $50,000\n$50,000 – $150,000\n$150,000 – $500,000\n$500,000 – $1,000,000\n$1,000,000+', help_text='Une option par ligne (budgets du formulaire devis)')
+    quote_timeline_options = models.TextField(blank=True, default='As soon as possible\nWithin 1 – 3 months\nWithin 3 – 6 months\nI\'m flexible', help_text='Une option par ligne (délais du formulaire devis)')
     latitude = models.DecimalField(max_digits=9, decimal_places=6, blank=True, null=True)
     longitude = models.DecimalField(max_digits=9, decimal_places=6, blank=True, null=True)
 

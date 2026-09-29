@@ -9,6 +9,14 @@ from django.conf import settings
 register = template.Library()
 
 
+@register.filter
+def splitlines(value):
+    """Split a multi-line admin text into a list (one option per line)."""
+    if not value:
+        return []
+    return [line.strip() for line in str(value).splitlines() if line.strip()]
+
+
 def _swap_lang_prefix(path, lang_code):
     """Swap or add the language prefix, respecting prefix_default_language=False."""
     codes = [code for code, _ in settings.LANGUAGES]

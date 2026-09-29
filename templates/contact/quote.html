@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load static i18n %}
+{% load static i18n seo_tags %}
 
 {% block title %}{% trans "Get A Quote" %} | BS GROUP{% endblock %}
 {% block meta_description %}{% trans "BS GROUP — Get your free, no-obligation quote in 2 minutes. Guaranteed response within 24h, fixed price." %}{% endblock %}
@@ -389,11 +389,15 @@
                       <option value="" selected disabled>
                         {% trans "Select a range..." %}
                       </option>
+                      {% for opt in site_settings.quote_budget_options|splitlines %}
+                      <option>{{ opt }}</option>
+                      {% empty %}
                       <option>{% trans "Under $50,000" %}</option>
                       <option>{% trans "$50,000 – $150,000" %}</option>
                       <option>{% trans "$150,000 – $500,000" %}</option>
                       <option>{% trans "$500,000 – $1,000,000" %}</option>
                       <option>{% trans "$1,000,000+" %}</option>
+                      {% endfor %}
                     </select>
                     <p class="error-msg hidden"></p>
                   </div>
@@ -410,10 +414,14 @@
                       <option value="" selected disabled>
                         {% trans "Select a timeframe..." %}
                       </option>
+                      {% for opt in site_settings.quote_timeline_options|splitlines %}
+                      <option>{{ opt }}</option>
+                      {% empty %}
                       <option>{% trans "As soon as possible" %}</option>
                       <option>{% trans "Within 1 – 3 months" %}</option>
                       <option>{% trans "Within 3 – 6 months" %}</option>
                       <option>{% trans "I'm flexible" %}</option>
+                      {% endfor %}
                     </select>
                     <p class="error-msg hidden"></p>
                   </div>
