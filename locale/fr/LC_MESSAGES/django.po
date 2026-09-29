@@ -2178,3 +2178,31 @@ msgstr "— plans, planches d'ambiance, inspirations..."
 
 msgid "← Prev"
 msgstr "← Préc."
+
+msgid "Question? Look here."
+msgstr "Une question ? Regardez ici."
+
+msgid "Frequently Asked "
+msgstr "Questions "
+
+msgid "Questions"
+msgstr "fréquentes"
+
+msgid "Everything you need to know before starting your project with us."
+msgstr ""
+"Tout ce que vous devez savoir avant de démarrer votre projet avec nous."
+
+msgid "All Questions"
+msgstr "Toutes les questions"
+
+msgid "General"
+msgstr "Général"
+
+msgid "Services & Process"
+msgstr "Services & processus"
+
+msgid "Payments & Budget"
+msgstr "Paiements & budget"
+
+msgid "Warranty & Support"
+msgstr "Garantie & support"

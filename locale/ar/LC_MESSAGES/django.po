@@ -2064,3 +2064,30 @@ msgstr ""
 
 msgid "← Prev"
 msgstr ""
+
+msgid "Question? Look here."
+msgstr ""
+
+msgid "Frequently Asked "
+msgstr ""
+
+msgid "Questions"
+msgstr ""
+
+msgid "Everything you need to know before starting your project with us."
+msgstr ""
+
+msgid "All Questions"
+msgstr ""
+
+msgid "General"
+msgstr ""
+
+msgid "Services & Process"
+msgstr ""
+
+msgid "Payments & Budget"
+msgstr ""
+
+msgid "Warranty & Support"
+msgstr ""
