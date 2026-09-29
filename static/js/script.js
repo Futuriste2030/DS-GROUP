@@ -1236,7 +1236,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const respondTo = (userText) => {
       showTyping();
-      // Bulle bot créée tout de suite, remplie token par token.
+      // Bulle bot créée tout de suite, remplie au fil de l'eau.
       const msg = document.createElement("div");
       msg.className = "chat-msg bot";
       const bubble = document.createElement("div");
@@ -1248,26 +1248,77 @@ document.addEventListener("DOMContentLoaded", () => {
       chatMessages.appendChild(msg);
       scrollChat();
 
+      // Rendu progressif (effet machine à écrire) : même si un proxy
+      // bufférise le flux SSE et livre les tokens en un seul bloc,
+      // l'utilisateur voit la réponse s'écrire progressivement.
       let gotToken = false;
-      const finishStream = () => {
-        stopTyping();
-        if (!gotToken) msg.remove();
+      let pending = "";
+      let renderTimer = null;
+      const RENDER_STEP = 6; // caractères ajoutés par tick
+      const RENDER_EVERY = 25; // ms entre ticks
+      const pump = () => {
+        if (bubble.textContent.length < pending.length) {
+          bubble.textContent = pending.slice(
+            0,
+            bubble.textContent.length + RENDER_STEP,
+          );
+          scrollChat();
+          renderTimer = setTimeout(pump, RENDER_EVERY);
+        } else {
+          renderTimer = null;
+        }
       };
-      streamAskApi(userText, (tok) => {
+      const stopPump = () => {
+        if (renderTimer) {
+          clearTimeout(renderTimer);
+          renderTimer = null;
+        }
+      };
+      const onToken = (tok) => {
         if (!gotToken) {
           gotToken = true;
           stopTyping();
         }
-        bubble.textContent += tok;
+        pending += tok;
+        if (!renderTimer) pump();
+      };
+      const finishStream = (keep) => {
+        stopTyping();
+        stopPump();
+        if (!gotToken && !keep) {
+          msg.remove();
+          return;
+        }
+        bubble.textContent = pending;
         scrollChat();
-      })
-        .then(finishStream)
+      };
+      streamAskApi(userText, onToken)
+        .then(() => finishStream(false))
         .catch(() => {
-          // Repli synchrone classique
-          finishStream();
+          // Repli synchrone : rejoue la réponse complète via le même
+          // rendu progressif pour garder l'effet stream.
           askApi(userText)
-            .then((answer) => addMessage(answer, "bot"))
-            .catch(() => addMessage(getBotReply(userText), "bot"));
+            .then((answer) => {
+              if (!gotToken) {
+                gotToken = true;
+                stopTyping();
+              }
+              bubble.textContent = "";
+              pending = answer || "";
+              if (!renderTimer) pump();
+              const waitDone = () => {
+                if (bubble.textContent.length < pending.length) {
+                  setTimeout(waitDone, 60);
+                } else {
+                  finishStream(true);
+                }
+              };
+              waitDone();
+            })
+            .catch(() => {
+              finishStream(false);
+              addMessage(getBotReply(userText), "bot");
+            });
         });
     };
 
