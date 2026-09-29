@@ -14,7 +14,7 @@ services:
     restart: unless-stopped
     env_file: .env.prod
     environment:
-      DATABASE_URL: sqlite:///data/db.sqlite3
+      DATABASE_URL: sqlite:////data/db.sqlite3
       DJANGO_SETTINGS_MODULE: bsgroup.settings
     volumes:
       - staticfiles:/app/staticfiles
