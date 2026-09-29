@@ -3,6 +3,64 @@ import uuid
 from django.conf import settings
 
 
+class ComingSoonMiddleware:
+    """Mode "coming soon" global pilote par SiteSettings.coming_soon_enabled.
+
+    Quand le flag est actif, tout visiteur anonyme est redirige vers la page
+    coming soon, quelle que soit la page demandee. Restent accessibles :
+      - l'admin (/admin/) pour pouvoir desactiver le flag,
+      - le changement de langue (/i18n/), les APIs (/api/),
+      - les fichiers statiques/medias, robots.txt, sitemap.xml,
+      - la page coming elle-meme (toutes langues),
+      - tout le site pour le personnel connecte (apercu avant sortie).
+    En cas d'erreur (DB absente...) : fail-open, le site reste visible.
+    """
+
+    EXEMPT_PREFIXES = (
+        '/admin/',
+        '/i18n/',
+        '/api/',
+        '/static/',
+        '/media/',
+        '/robots.txt',
+        '/sitemap.xml',
+    )
+
+    def __init__(self, get_response):
+        self.get_response = get_response
+
+    def __call__(self, request):
+        if self._is_active() and not self._is_exempt(request):
+            from django.shortcuts import redirect
+            return redirect('main:coming')
+        return self.get_response(request)
+
+    def _is_active(self):
+        try:
+            from main.models import SiteSettings
+            return bool(SiteSettings.load().coming_soon_enabled)
+        except Exception:
+            return False
+
+    def _is_exempt(self, request):
+        path = request.path_info or '/'
+        for prefix in self.EXEMPT_PREFIXES:
+            if path == prefix or path.startswith(prefix):
+                return True
+        # La page coming elle-meme, dans toutes les langues (/coming/, /en/coming/...)
+        if path.rstrip('/').endswith('/coming') or path.rstrip('/') == '/coming':
+            return True
+        # Le personnel connecte garde l'acces complet (apercu + admin)
+        try:
+            user = getattr(request, 'user', None)
+            if user is not None and user.is_authenticated and user.is_staff:
+                return True
+        except Exception:
+            pass
+        return False
+
+
+
 class CookieConsentMiddleware:
     """
     Lit le consentement cookies SANS créer de session (pas de gonflement bots)

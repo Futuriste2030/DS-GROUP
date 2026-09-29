@@ -116,6 +116,8 @@ def coming(request):
         enabled = SiteSettings.load().coming_soon_enabled
     except Exception:
         enabled = False
+    if not enabled and request.method != 'POST':
+        return redirect('main:index')
     return render(request, 'main/coming.html', {
         **seo_for(request, title=_('Coming Soon')),
         'page_robots': 'noindex, nofollow',
