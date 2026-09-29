@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.db import models
 from ckeditor.widgets import CKEditorWidget
 from modeltranslation.admin import TabbedTranslationAdmin
-from .models import CareerPage, Perk, JobOpening, Application
+from .models import CareerPage, Perk, HiringStep, JobOpening, Application
 
 
 @admin.register(CareerPage)
@@ -21,6 +21,12 @@ class PerkAdmin(TabbedTranslationAdmin):
     formfield_overrides = {
         models.TextField: {'widget': CKEditorWidget},
     }
+
+
+@admin.register(HiringStep)
+class HiringStepAdmin(TabbedTranslationAdmin):
+    list_display = ['title', 'order']
+    list_editable = ['order']
 
 
 @admin.register(JobOpening)

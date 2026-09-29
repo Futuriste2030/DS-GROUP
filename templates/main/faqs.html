@@ -51,23 +51,23 @@
     </section>
 
       <section id="faqs" class="bg-[#f5f6f9] py-16 md:py-20 relative overflow-hidden">
-      <span class="section-tag section-tag--dark" aria-hidden="true">FAQs</span>
+      <span class="section-tag section-tag--dark" aria-hidden="true">{% trans "FAQs" %}</span>
       <div class="max-w-6xl mx-auto px-6">
         <div class="text-center mb-10">
           <div class="flex items-center justify-center gap-3 mb-4">
             <i data-lucide="sparkles" class="w-4 h-4 text-[#c9a227] shrink-0"></i>
             <span class="text-[15px] font-semibold text-[#0b1f35]"
-              >Question? Look here.</span
+              >{% trans "Question? Look here." %}</span
             >
           </div>
           <h2
             class="text-[32px] md:text-[42px] font-black tracking-tight leading-[1.15]"
           >
-            <span class="text-[#0b1f35]">Frequently Asked </span
-            ><span class="text-[#c9a227]">Questions</span>
+            <span class="text-[#0b1f35]">{% trans "Frequently Asked " %}</span
+            ><span class="text-[#c9a227]">{% trans "Questions" %}</span>
           </h2>
           <p class="mt-3 text-sm text-slate-500">
-            Everything you need to know before starting your project with us.
+            {% trans "Everything you need to know before starting your project with us." %}
           </p>
         </div>
 
@@ -77,35 +77,35 @@
             data-fq-filter="all"
             class="pp-filter pp-active px-6 py-2.5 rounded-full text-xs font-bold bg-white border border-gray-200 text-[#0b1f35] shadow-sm"
           >
-            All Questions
+            {% trans "All Questions" %}
           </button>
           <button
             type="button"
             data-fq-filter="general"
             class="pp-filter px-6 py-2.5 rounded-full text-xs font-bold bg-white border border-gray-200 text-[#0b1f35] shadow-sm"
           >
-            General
+            {% trans "General" %}
           </button>
           <button
             type="button"
             data-fq-filter="process"
             class="pp-filter px-6 py-2.5 rounded-full text-xs font-bold bg-white border border-gray-200 text-[#0b1f35] shadow-sm"
           >
-            Services &amp; Process
+            {% trans "Services & Process" %}
           </button>
           <button
             type="button"
             data-fq-filter="payments"
             class="pp-filter px-6 py-2.5 rounded-full text-xs font-bold bg-white border border-gray-200 text-[#0b1f35] shadow-sm"
           >
-            Payments &amp; Budget
+            {% trans "Payments & Budget" %}
           </button>
           <button
             type="button"
             data-fq-filter="warranty"
             class="pp-filter px-6 py-2.5 rounded-full text-xs font-bold bg-white border border-gray-200 text-[#0b1f35] shadow-sm"
           >
-            Warranty &amp; Support
+            {% trans "Warranty & Support" %}
           </button>
         </div>
 

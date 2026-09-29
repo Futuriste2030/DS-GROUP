@@ -12,6 +12,8 @@ class CareerPage(WebPConversionMixin, models.Model):
 
     hero_title = models.CharField(max_length=300, default='Join Our Team')
     hero_subtitle = models.CharField(max_length=200, default='Careers')
+    hero_description = models.TextField(blank=True, default="We're more than a construction company — we're a team of builders, thinkers and problem-solvers shaping skylines and communities. If you're passionate about craftsmanship and growth, there's a place for you here.")
+    hero_image = models.ImageField(upload_to='careers/hero/', blank=True)
     openings_title = models.CharField(max_length=300, default='Current Openings')
     openings_subtitle = models.CharField(max_length=200, default='Job Opening')
     video_url = models.URLField(blank=True)
@@ -38,6 +40,18 @@ class Perk(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField(blank=True)
     icon = models.CharField(max_length=50, default='star')
+    order = models.PositiveIntegerField(default=0)
+
+    class Meta:
+        ordering = ['order']
+
+    def __str__(self):
+        return self.title
+
+
+class HiringStep(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.TextField(blank=True)
     order = models.PositiveIntegerField(default=0)
 
     class Meta:

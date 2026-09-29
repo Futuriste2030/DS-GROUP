@@ -60,21 +60,21 @@
           <div class="flex items-center gap-3 mb-4">
             <i data-lucide="sparkles" class="w-4 h-4 text-[#c9a227] shrink-0"></i>
             <span class="text-[15px] font-semibold text-[#0b1f35]"
-              >{% trans "Join Our Team" %}</span
+              >{{ page.hero_subtitle|default:_("Join Our Team") }}</span
             >
           </div>
 
           <h2
-            class="text-[34px] sm:text-[42px] md:text-[46px] font-black tracking-tight leading-[1.12]"
+            class="text-[34px] sm:text-[42px] md:text-[46px] font-black tracking-tight leading-[1.12] text-[#0b1f35]"
           >
-            <span class="text-[#0b1f35]">{% trans "Build Your" %} </span
-            ><span class="text-[#c9a227]">{% trans "Career" %}</span>
-            <span class="block text-[#0b1f35]">{% trans "With BS GROUP" %}</span>
+            {{ page.hero_title|default:_("Build Your Career With BS GROUP") }}
           </h2>
 
+          {% if page.hero_description %}
           <p class="mt-5 max-w-lg text-[15px] text-slate-500 leading-relaxed">
-            {% trans "We're more than a construction company — we're a team of builders, thinkers and problem-solvers shaping skylines and communities. If you're passionate about craftsmanship and growth, there's a place for you here." %}
+            {{ page.hero_description }}
           </p>
+          {% endif %}
 
           <div class="mt-8 flex flex-wrap items-center gap-4">
             <a href="#open-roles" class="group flex items-center gap-1.5">
@@ -102,11 +102,19 @@
           <div
             class="h-[280px] md:h-[360px] rounded-[28px] rounded-tl-[60px] rounded-br-[60px] overflow-hidden shadow-xl shadow-slate-900/10"
           >
+            {% if page.hero_image %}
+            <img
+              src="{{ page.hero_image.url }}"
+              alt="{{ page.hero_title }}"
+              class="w-full h-full object-cover"
+            />
+            {% else %}
             <img
               src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop"
               alt="{% trans 'BS GROUP team celebrating a shared success' %}"
               class="w-full h-full object-cover"
             />
+            {% endif %}
           </div>
           <!-- Badge flottant -->
           <div
@@ -130,20 +138,20 @@
           <div>
             <div
               class="text-4xl md:text-[42px] font-black text-[#0b1f35] tracking-tight"
-              data-count="120"
+              data-count="{{ team_count|default:0 }}"
               data-suffix="+"
             >
-              120+
+              {{ team_count|default:0 }}+
             </div>
             <div class="mt-1.5 text-sm text-slate-500">{% trans "Team Members" %}</div>
           </div>
           <div>
             <div
               class="text-4xl md:text-[42px] font-black text-[#0b1f35] tracking-tight"
-              data-count="8"
+              data-count="{{ jobs|length }}"
               data-suffix=""
             >
-              8
+              {{ jobs|length }}
             </div>
             <div class="mt-1.5 text-sm text-slate-500">
               {% trans "Open Roles Right Now" %}
@@ -173,6 +181,7 @@
       </div>
     </section>
 
+      {% if perks %}
       <section id="perks" class="bg-[#f5f6f9] py-16 md:py-20 relative overflow-hidden">
       <span class="section-tag section-tag--dark" aria-hidden="true">Perks</span>
       <div class="max-w-7xl mx-auto px-6">
@@ -192,110 +201,28 @@
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Perk 1 -->
+          {% for p in perks %}
           <div
             class="group bg-white rounded-[20px] p-7 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
           >
             <span
               class="w-[52px] h-[52px] rounded-xl bg-[#0b1f35] text-[#c9a227] flex items-center justify-center group-hover:bg-[#c9a227] group-hover:text-white transition-colors"
             >
-              <i data-lucide="heart-pulse" class="w-6 h-6"></i>
+              <i data-lucide="{{ p.icon|default:'star' }}" class="w-6 h-6"></i>
             </span>
             <h3 class="mt-5 text-[17px] font-extrabold text-[#0b1f35]">
-              {% trans "Health & Wellness" %}
+              {{ p.title }}
             </h3>
+            {% if p.description %}
             <p class="mt-2 text-sm text-slate-500 leading-relaxed">
-              {% trans "Full medical, dental and vision coverage for you and your family from day one." %}
+              {{ p.description }}
             </p>
+            {% endif %}
           </div>
-
-          <!-- Perk 2 -->
-          <div
-            class="group bg-white rounded-[20px] p-7 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-          >
-            <span
-              class="w-[52px] h-[52px] rounded-xl bg-[#0b1f35] text-[#c9a227] flex items-center justify-center group-hover:bg-[#c9a227] group-hover:text-white transition-colors"
-            >
-              <i data-lucide="graduation-cap" class="w-6 h-6"></i>
-            </span>
-            <h3 class="mt-5 text-[17px] font-extrabold text-[#0b1f35]">
-              {% trans "Learning & Growth" %}
-            </h3>
-            <p class="mt-2 text-sm text-slate-500 leading-relaxed">
-              {% trans "Paid certifications, mentoring programs and a clear path to senior roles." %}
-            </p>
-          </div>
-
-          <!-- Perk 3 -->
-          <div
-            class="group bg-white rounded-[20px] p-7 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-          >
-            <span
-              class="w-[52px] h-[52px] rounded-xl bg-[#0b1f35] text-[#c9a227] flex items-center justify-center group-hover:bg-[#c9a227] group-hover:text-white transition-colors"
-            >
-              <i data-lucide="piggy-bank" class="w-6 h-6"></i>
-            </span>
-            <h3 class="mt-5 text-[17px] font-extrabold text-[#0b1f35]">
-              {% trans "Competitive Package" %}
-            </h3>
-            <p class="mt-2 text-sm text-slate-500 leading-relaxed">
-              {% trans "Market-leading salaries, annual bonuses and a retirement plan with match." %}
-            </p>
-          </div>
-
-          <!-- Perk 4 -->
-          <div
-            class="group bg-white rounded-[20px] p-7 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-          >
-            <span
-              class="w-[52px] h-[52px] rounded-xl bg-[#0b1f35] text-[#c9a227] flex items-center justify-center group-hover:bg-[#c9a227] group-hover:text-white transition-colors"
-            >
-              <i data-lucide="calendar-check" class="w-6 h-6"></i>
-            </span>
-            <h3 class="mt-5 text-[17px] font-extrabold text-[#0b1f35]">
-              {% trans "Paid Time Off" %}
-            </h3>
-            <p class="mt-2 text-sm text-slate-500 leading-relaxed">
-              {% trans "Generous vacation, flexible schedules and true disconnect after hours." %}
-            </p>
-          </div>
-
-          <!-- Perk 5 -->
-          <div
-            class="group bg-white rounded-[20px] p-7 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-          >
-            <span
-              class="w-[52px] h-[52px] rounded-xl bg-[#0b1f35] text-[#c9a227] flex items-center justify-center group-hover:bg-[#c9a227] group-hover:text-white transition-colors"
-            >
-              <i data-lucide="baby" class="w-6 h-6"></i>
-            </span>
-            <h3 class="mt-5 text-[17px] font-extrabold text-[#0b1f35]">
-              {% trans "Family Support" %}
-            </h3>
-            <p class="mt-2 text-sm text-slate-500 leading-relaxed">
-              {% trans "Paid parental leave and childcare assistance for working parents." %}
-            </p>
-          </div>
-
-          <!-- Perk 6 -->
-          <div
-            class="group bg-white rounded-[20px] p-7 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-          >
-            <span
-              class="w-[52px] h-[52px] rounded-xl bg-[#0b1f35] text-[#c9a227] flex items-center justify-center group-hover:bg-[#c9a227] group-hover:text-white transition-colors"
-            >
-              <i data-lucide="rocket" class="w-6 h-6"></i>
-            </span>
-            <h3 class="mt-5 text-[17px] font-extrabold text-[#0b1f35]">
-              {% trans "Real Impact" %}
-            </h3>
-            <p class="mt-2 text-sm text-slate-500 leading-relaxed">
-              {% trans "Work on landmark projects you'll be proud to show your kids one day." %}
-            </p>
-          </div>
-        </div>
+          {% endfor %}
       </div>
     </section>
+      {% endif %}
 
       <section id="open-roles" class="bg-white py-16 md:py-20 scroll-mt-24 relative overflow-hidden">
       <span class="section-tag section-tag--dark" aria-hidden="true">Jobs</span>
@@ -436,7 +363,8 @@
       </div>
     </section>
 
-        <section id="hiring-process" class="bg-[#f5f6f9] py-16 md:py-20 relative overflow-hidden">
+        {% if hiring_steps %}
+      <section id="hiring-process" class="bg-[#f5f6f9] py-16 md:py-20 relative overflow-hidden">
       <span class="section-tag section-tag--dark" aria-hidden="true">Steps</span>
       <div class="max-w-7xl mx-auto px-6">
         <div class="text-center mb-12">
@@ -458,65 +386,29 @@
         <div
           class="grid grid-cols-1 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-gray-300 bg-white rounded-[22px] shadow-sm overflow-hidden"
         >
+                    {% for st in hiring_steps %}
           <div class="py-8 px-7">
             <span
               class="w-9 h-9 rounded-full bg-[#c9a227] text-white text-sm font-black flex items-center justify-center shadow-md shadow-orange-500/25"
-              >01</span
+              >{{ forloop.counter|stringformat:"02d" }}</span
             >
             <h3
               class="mt-5 text-[16px] font-extrabold text-[#0b1f35] leading-snug"
             >
-              {% trans "Apply Online" %}
+              {{ st.title }}
             </h3>
+            {% if st.description %}
             <p class="mt-2.5 text-[13px] text-slate-500 leading-relaxed">
-              {% trans "Send your resume in 2 minutes — no cover letter required." %}
+              {{ st.description }}
             </p>
+            {% endif %}
           </div>
-          <div class="py-8 px-7">
-            <span
-              class="w-9 h-9 rounded-full bg-[#c9a227] text-white text-sm font-black flex items-center justify-center shadow-md shadow-orange-500/25"
-              >02</span
-            >
-            <h3
-              class="mt-5 text-[16px] font-extrabold text-[#0b1f35] leading-snug"
-            >
-              {% trans "Screening Call" %}
-            </h3>
-            <p class="mt-2.5 text-[13px] text-slate-500 leading-relaxed">
-              {% trans "A relaxed 30-minute chat with our HR team within 5 days." %}
-            </p>
-          </div>
-          <div class="py-8 px-7">
-            <span
-              class="w-9 h-9 rounded-full bg-[#c9a227] text-white text-sm font-black flex items-center justify-center shadow-md shadow-orange-500/25"
-              >03</span
-            >
-            <h3
-              class="mt-5 text-[16px] font-extrabold text-[#0b1f35] leading-snug"
-            >
-              {% trans "Team Interview" %}
-            </h3>
-            <p class="mt-2.5 text-[13px] text-slate-500 leading-relaxed">
-              {% trans "Meet your future teammates — on site or over video." %}
-            </p>
-          </div>
-          <div class="py-8 px-7">
-            <span
-              class="w-9 h-9 rounded-full bg-[#c9a227] text-white text-sm font-black flex items-center justify-center shadow-md shadow-orange-500/25"
-              >04</span
-            >
-            <h3
-              class="mt-5 text-[16px] font-extrabold text-[#0b1f35] leading-snug"
-            >
-              {% trans "Offer & Onboarding" %}
-            </h3>
-            <p class="mt-2.5 text-[13px] text-slate-500 leading-relaxed">
-              {% trans "Welcome aboard — your buddy program starts day one." %}
-            </p>
+          {% endfor %}
           </div>
         </div>
       </div>
     </section>
+      {% endif %}
 
     <section class="bg-[#f5f6f9] pb-16 md:pb-24">
       <div class="max-w-7xl mx-auto px-6">

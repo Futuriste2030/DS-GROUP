@@ -1,14 +1,19 @@
 from modeltranslation.translator import register, TranslationOptions
-from .models import CareerPage, Perk, JobOpening
+from .models import CareerPage, Perk, HiringStep, JobOpening
 
 
 @register(CareerPage)
 class CareerPageTranslationOptions(TranslationOptions):
-    fields = ('hero_title', 'hero_subtitle', 'openings_title', 'openings_subtitle')
+    fields = ('hero_title', 'hero_subtitle', 'hero_description', 'openings_title', 'openings_subtitle')
 
 
 @register(Perk)
 class PerkTranslationOptions(TranslationOptions):
+    fields = ('title', 'description')
+
+
+@register(HiringStep)
+class HiringStepTranslationOptions(TranslationOptions):
     fields = ('title', 'description')
 
 

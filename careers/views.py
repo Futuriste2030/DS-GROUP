@@ -7,16 +7,20 @@ from django.utils import timezone
 from django.utils.translation import gettext as _
 from core.seo import seo_for
 from core.utils import sender_address
-from .models import CareerPage, Perk, JobOpening, Application
+from .models import CareerPage, Perk, HiringStep, JobOpening, Application
 
 
 def careers(request):
+    from team.models import TeamMember
     page = CareerPage.load()
+    jobs = JobOpening.objects.filter(is_active=True)
     return render(request, 'careers/careers.html', {
         **seo_for(request, title=_('Careers')),
         'page': page,
         'perks': Perk.objects.all(),
-        'jobs': JobOpening.objects.filter(is_active=True),
+        'hiring_steps': HiringStep.objects.all(),
+        'jobs': jobs,
+        'team_count': TeamMember.objects.count(),
     })
 
 
