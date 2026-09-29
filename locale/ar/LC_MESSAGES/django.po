@@ -2349,3 +2349,9 @@ msgstr "من أول رسم تخطيطي إلى آخر طبقة دهان، غطت
 
 msgid "— %(name)s’s leadership motto"
 msgstr "— الشعار القيادي لـ%(name)s"
+
+msgid "Our team will answer all your questions. We'll ensure a quick response."
+msgstr "سيجيب فريقنا على جميع أسئلتك. نضمن لك ردًا سريعًا."
+
+msgid "— %(name)s's leadership motto"
+msgstr "— الشعار القيادي لـ%(name)s"

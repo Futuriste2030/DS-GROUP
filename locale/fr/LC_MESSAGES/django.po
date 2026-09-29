@@ -2404,3 +2404,9 @@ msgstr "Du premier croquis à la dernière couche de peinture, nos équipes ont 
 
 msgid "— %(name)s’s leadership motto"
 msgstr "— devise de leadership de %(name)s"
+
+msgid "Our team will answer all your questions. We'll ensure a quick response."
+msgstr "Notre équipe répondra à toutes vos questions. Nous garantissons une réponse rapide."
+
+msgid "— %(name)s's leadership motto"
+msgstr "— devise de leadership de %(name)s"

@@ -2374,3 +2374,9 @@ msgstr "From the first sketch to the final coat of paint, our teams covered ever
 
 msgid "— %(name)s’s leadership motto"
 msgstr "— %(name)s’s leadership motto"
+
+msgid "Our team will answer all your questions. We'll ensure a quick response."
+msgstr "Our team will answer all your questions. We'll ensure a quick response."
+
+msgid "— %(name)s's leadership motto"
+msgstr "— %(name)s's leadership motto"
