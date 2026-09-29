@@ -919,1175 +919,1235 @@ msgid "Subject"
 msgstr "الموضوع"
 
 msgid "$1,000,000+"
-msgstr ""
+msgstr "$1,000,000+"
 
 msgid "$150,000 – $500,000"
-msgstr ""
+msgstr "$150,000 – $500,000"
 
 msgid "$3k yearly learning budget"
-msgstr ""
+msgstr "$3k yearly learning budget"
 
 msgid "$50,000 – $150,000"
-msgstr ""
+msgstr "$50,000 – $150,000"
 
 msgid "$500,000 – $1,000,000"
-msgstr ""
+msgstr "$500,000 – $1,000,000"
 
 msgid "(PDF, DOC, DOCX — max 5 MB)"
-msgstr ""
+msgstr "(PDF, DOC, DOCX — max 5 MB)"
 
 msgid "(optional — PDF, JPG, PNG · max 10 MB)"
-msgstr ""
+msgstr "(optional — PDF, JPG, PNG · max 10 MB)"
 
 msgid "(optional)"
-msgstr ""
+msgstr "(optional)"
 
 msgid "-- View Projects"
-msgstr ""
+msgstr "-- View Projects"
 
 msgid "-- View Services"
-msgstr ""
+msgstr "-- View Services"
 
 msgid "100% Free & No Obligation"
-msgstr ""
+msgstr "100% Free & No Obligation"
 
 msgid "25 days PTO + flexible Fridays"
-msgstr ""
+msgstr "25 days PTO + flexible Fridays"
 
 msgid "404 — Page Not Found"
-msgstr ""
+msgstr "404 — Page Not Found"
 
 msgid "A confirmation copy has been sent to your email address."
-msgstr ""
+msgstr "A confirmation copy has been sent to your email address."
 
 msgid "A few details help us prepare an accurate estimate."
-msgstr ""
+msgstr "A few details help us prepare an accurate estimate."
 
 msgid ""
 "A proven four-phase framework refined over 25 years — designed to keep your "
 "build on schedule, on budget and stress-free from start to finish."
 msgstr ""
+"A proven four-phase framework refined over 25 years — designed to keep your "
+"build on schedule, on budget and stress-free from start to finish."
 
 msgid "A quick call to clarify details — never a sales pitch."
-msgstr ""
+msgstr "A quick call to clarify details — never a sales pitch."
 
 msgid "A relaxed 30-minute chat with our HR team within 5 days."
-msgstr ""
+msgstr "A relaxed 30-minute chat with our HR team within 5 days."
 
 msgid "About the Role"
-msgstr ""
+msgstr "About the Role"
 
 msgid "All Departments"
-msgstr ""
+msgstr "All Departments"
 
 msgid "All Posts"
-msgstr ""
+msgstr "All Posts"
 
 msgid "All Projects"
-msgstr ""
+msgstr "All Projects"
 
 msgid "All Reviews"
-msgstr ""
+msgstr "All Reviews"
 
 msgid "An estimator analyzes your project details within hours."
-msgstr ""
+msgstr "An estimator analyzes your project details within hours."
 
 msgid ""
 "Answer 4 quick steps and receive a detailed, fixed-price proposal — no site "
 "visit needed to start."
 msgstr ""
+"Answer 4 quick steps and receive a detailed, fixed-price proposal — no site "
+"visit needed to start."
 
 msgid "Apply Online"
-msgstr ""
+msgstr "Apply Online"
 
 msgid "Approx. Size"
-msgstr ""
+msgstr "Approx. Size"
 
 msgid "Approximate Size"
-msgstr ""
+msgstr "Approximate Size"
 
 msgid "As soon as possible"
-msgstr ""
+msgstr "As soon as possible"
 
 msgid "Ask a question first"
-msgstr ""
+msgstr "Ask a question first"
 
 msgid "Attach Plans or Photos"
-msgstr ""
+msgstr "Attach Plans or Photos"
 
 msgid "Average rating across 312 verified reviews"
-msgstr ""
+msgstr "Average rating across 312 verified reviews"
 
 msgid "BS GROUP Headquarters"
-msgstr ""
+msgstr "BS GROUP Headquarters"
 
 msgid "BS GROUP team celebrating a shared success"
-msgstr ""
+msgstr "BS GROUP team celebrating a shared success"
 
 msgid ""
 "BS GROUP — Construction services: residential, commercial, concrete, design,"
 " renovation and civil works."
 msgstr ""
+"BS GROUP — Construction services: residential, commercial, concrete, design,"
+" renovation and civil works."
 
 msgid ""
 "BS GROUP — Contact us: form, phone, email and address. Guaranteed response "
 "within 24h."
 msgstr ""
+"BS GROUP — Contact us: form, phone, email and address. Guaranteed response "
+"within 24h."
 
 msgid ""
 "BS GROUP — Discover our completed projects: residential, commercial and "
 "renovation builds."
 msgstr ""
+"BS GROUP — Discover our completed projects: residential, commercial and "
+"renovation builds."
 
 msgid ""
 "BS GROUP — Get your free, no-obligation quote in 2 minutes. Guaranteed "
 "response within 24h, fixed price."
 msgstr ""
+"BS GROUP — Get your free, no-obligation quote in 2 minutes. Guaranteed "
+"response within 24h, fixed price."
 
 msgid ""
 "BS GROUP — Join our team: explore our job openings in engineering, "
 "management, design and site operations."
 msgstr ""
+"BS GROUP — Join our team: explore our job openings in engineering, "
+"management, design and site operations."
 
 msgid ""
 "BS GROUP — Meet the team: leaders, engineers, architects and field experts "
 "building excellence."
 msgstr ""
+"BS GROUP — Meet the team: leaders, engineers, architects and field experts "
+"building excellence."
 
 msgid "BS GROUP — News, advice and trends from the construction industry."
-msgstr ""
+msgstr "BS GROUP — News, advice and trends from the construction industry."
 
 msgid ""
 "BS GROUP — Réponses à vos questions : services, processus, paiements, "
 "garanties et support."
 msgstr ""
+"BS GROUP — إجابات عن أسئلتكم: الخدمات، العملية، المدفوعات، الضمانات والدعم."
 
 msgid ""
 "BS GROUP — What our clients say about us: 450+ satisfied clients, 4.9/5 "
 "average rating."
 msgstr ""
+"BS GROUP — What our clients say about us: 450+ satisfied clients, 4.9/5 "
+"average rating."
 
 msgid "Back"
-msgstr ""
+msgstr "Back"
 
 msgid "Back to Home"
-msgstr ""
+msgstr "Back to Home"
 
 msgid "Base + annual performance bonus"
-msgstr ""
+msgstr "Base + annual performance bonus"
 
 msgid "Be the first — share your experience with us!"
-msgstr ""
+msgstr "Be the first — share your experience with us!"
 
 msgid ""
 "Behind every landmark we deliver stands a team of passionate engineers, "
 "architects, project managers and field experts. Get to know the people who "
 "turn bold visions into concrete reality — one project at a time."
 msgstr ""
+"Behind every landmark we deliver stands a team of passionate engineers, "
+"architects, project managers and field experts. Get to know the people who "
+"turn bold visions into concrete reality — one project at a time."
 
 msgid "Benefits That"
-msgstr ""
+msgstr "Benefits That"
 
 msgid "Blog Details"
-msgstr ""
+msgstr "Blog Details"
 
 msgid "Blog post pagination"
-msgstr ""
+msgstr "Blog post pagination"
 
 msgid "Breadcrumb"
-msgstr ""
+msgstr "Breadcrumb"
 
 msgid "Brief Description"
-msgstr ""
+msgstr "Brief Description"
 
 msgid "Bright living room of a contemporary house"
-msgstr ""
+msgstr "Bright living room of a contemporary house"
 
 msgid "Budget Range"
-msgstr ""
+msgstr "Budget Range"
 
 msgid "Build Your"
-msgstr ""
+msgstr "Build Your"
 
 msgid "Build Your Home"
-msgstr ""
+msgstr "Build Your Home"
 
 msgid "Building permits, site preparation, excavation and solid foundations."
-msgstr ""
+msgstr "Building permits, site preparation, excavation and solid foundations."
 
 msgid "Building the Future,"
-msgstr ""
+msgstr "Building the Future,"
 
 msgid "By email:"
-msgstr ""
+msgstr "By email:"
 
 msgid "By mail:"
-msgstr ""
+msgstr "By mail:"
 
 msgid "By phone:"
-msgstr ""
+msgstr "By phone:"
 
 msgid "Check back soon or send us a spontaneous application!"
-msgstr ""
+msgstr "Check back soon or send us a spontaneous application!"
 
 msgid "Check the FAQ first"
-msgstr ""
+msgstr "Check the FAQ first"
 
 msgid ""
 "Choosing BS GROUP means more than hiring a builder — it means partnering "
 "with a team invested in your peace of mind at every stage of the project."
 msgstr ""
+"Choosing BS GROUP means more than hiring a builder — it means partnering "
+"with a team invested in your peace of mind at every stage of the project."
 
 msgid "City, State"
-msgstr ""
+msgstr "City, State"
 
 msgid "Click to browse files"
-msgstr ""
+msgstr "Click to browse files"
 
 msgid "Client Satisfaction"
-msgstr ""
+msgstr "Client Satisfaction"
 
 msgid "Commercial"
-msgstr ""
+msgstr "Commercial"
 
 msgid "Competitive Package"
-msgstr ""
+msgstr "Competitive Package"
 
 msgid "Completed Projects"
-msgstr ""
+msgstr "Completed Projects"
 
 msgid ""
 "Conditions Générales d'Utilisation du site BS GROUP — droits, obligations et"
 " cadres légaux."
 msgstr ""
+"شروط الاستخدام العامة لموقع BS GROUP — الحقوق والالتزامات والإطار القانوني."
 
 msgid "Construction & Systems"
-msgstr ""
+msgstr "Construction & Systems"
 
 msgid "Construction Solution?"
-msgstr ""
+msgstr "Construction Solution?"
 
 msgid "Consult with Us Today!"
-msgstr ""
+msgstr "Consult with Us Today!"
 
 msgid "Consultation & Design"
-msgstr ""
+msgstr "Consultation & Design"
 
 msgid "Copy article link"
-msgstr ""
+msgstr "Copy article link"
 
 msgid "Copy job link"
-msgstr ""
+msgstr "Copy job link"
 
 msgid "Copy profile link"
-msgstr ""
+msgstr "Copy profile link"
 
 msgid "Cover Letter"
-msgstr ""
+msgstr "Cover Letter"
 
 msgid "Deadline"
-msgstr ""
+msgstr "Deadline"
 
 msgid "Delivered"
-msgstr ""
+msgstr "Delivered"
 
 msgid "Department"
-msgstr ""
+msgstr "Department"
 
 msgid "Describe your project in a few words..."
-msgstr ""
+msgstr "Describe your project in a few words..."
 
 msgid "Description"
-msgstr ""
+msgstr "Description"
 
 msgid "Design"
-msgstr ""
+msgstr "Design"
 
 msgid "Desired Start"
-msgstr ""
+msgstr "Desired Start"
 
 msgid "Detailed quote by email within 24 hours, no hidden fees."
-msgstr ""
+msgstr "Detailed quote by email within 24 hours, no hidden fees."
 
 msgid "Details"
-msgstr ""
+msgstr "Details"
 
 msgid "Directions"
-msgstr ""
+msgstr "Directions"
 
 msgid "Don't See Your Role?"
-msgstr ""
+msgstr "Don't See Your Role?"
 
 msgid "Drag & drop your CV here, or"
-msgstr ""
+msgstr "Drag & drop your CV here, or"
 
 msgid "Dream Home?"
-msgstr ""
+msgstr "Dream Home?"
 
 msgid "Dream Project?"
-msgstr ""
+msgstr "Dream Project?"
 
 msgid "Employee Retention"
-msgstr ""
+msgstr "Employee Retention"
 
 msgid "Engineer in orange helmet holding plans"
-msgstr ""
+msgstr "Engineer in orange helmet holding plans"
 
 msgid "Engineer in orange helmet with plans"
-msgstr ""
+msgstr "Engineer in orange helmet with plans"
 
 msgid "Engineering"
-msgstr ""
+msgstr "Engineering"
 
 msgid "Error 404"
-msgstr ""
+msgstr "Error 404"
 
 msgid "Error 404 · Page Not Found"
-msgstr ""
+msgstr "Error 404 · Page Not Found"
 
 msgid "Every Voice"
-msgstr ""
+msgstr "Every Voice"
 
 msgid "Everyone"
-msgstr ""
+msgstr "Everyone"
 
 msgid "Ex. John Carter"
-msgstr ""
+msgstr "Ex. John Carter"
 
 msgid "Expect a call or an email within 24 – 48 business hours."
-msgstr ""
+msgstr "Expect a call or an email within 24 – 48 business hours."
 
 msgid "Experience"
-msgstr ""
+msgstr "Experience"
 
 msgid "Expertise"
-msgstr ""
+msgstr "Expertise"
 
 msgid "Explore Open Roles"
-msgstr ""
+msgstr "Explore Open Roles"
 
 msgid "Explore Our"
-msgstr ""
+msgstr "Explore Our"
 
 msgid "FAQ"
-msgstr ""
+msgstr "FAQ"
 
 msgid "FAQ's"
-msgstr ""
+msgstr "FAQ's"
 
 msgid "Family Support"
-msgstr ""
+msgstr "Family Support"
 
 msgid "Featured"
-msgstr ""
+msgstr "Featured"
 
 msgid "Featured Reviews"
-msgstr ""
+msgstr "Featured Reviews"
 
 msgid "Field Operations"
-msgstr ""
+msgstr "Field Operations"
 
 msgid ""
 "Fill in the form below — we reply to every application within 5 business "
 "days."
 msgstr ""
+"Fill in the form below — we reply to every application within 5 business "
+"days."
 
 msgid "Filter by Categories"
-msgstr ""
+msgstr "Filter by Categories"
 
 msgid "Find Us"
-msgstr ""
+msgstr "Find Us"
 
 msgid "Find Your Next"
-msgstr ""
+msgstr "Find Your Next"
 
 msgid "Finishing & Handover"
-msgstr ""
+msgstr "Finishing & Handover"
 
 msgid "First Day"
-msgstr ""
+msgstr "First Day"
 
 msgid "Fixed-Price Guarantee"
-msgstr ""
+msgstr "Fixed-Price Guarantee"
 
 msgid "Framing, roofing, plumbing, electrical and smart-home pre-wiring."
-msgstr ""
+msgstr "Framing, roofing, plumbing, electrical and smart-home pre-wiring."
 
 msgid "Free Quote Request"
-msgstr ""
+msgstr "Free Quote Request"
 
 msgid "From Application to"
-msgstr ""
+msgstr "From Application to"
 
 msgid ""
 "From the first sketch to the final coat of paint, our teams covered every "
 "trade required to bring {{ title }} to life — fully integrated, fully "
 "accountable."
 msgstr ""
+"From the first sketch to the final coat of paint, our teams covered every "
+"trade required to bring {{ title }} to life — fully integrated, fully "
+"accountable."
 
 msgid "Full Name"
-msgstr ""
+msgstr "Full Name"
 
 msgid "Full health coverage for your family"
-msgstr ""
+msgstr "Full health coverage for your family"
 
 msgid ""
 "Full medical, dental and vision coverage for you and your family from day "
 "one."
 msgstr ""
+"Full medical, dental and vision coverage for you and your family from day "
+"one."
 
 msgid "Generous vacation, flexible schedules and true disconnect after hours."
 msgstr ""
+"Generous vacation, flexible schedules and true disconnect after hours."
 
 msgid "Get A Quote"
-msgstr ""
+msgstr "Get A Quote"
 
 msgid "Get Directions"
-msgstr ""
+msgstr "Get Directions"
 
 msgid "Get a Quote"
-msgstr ""
+msgstr "Get a Quote"
 
 msgid "HR Team"
-msgstr ""
+msgstr "HR Team"
 
 msgid "Have a Project in Mind?"
-msgstr ""
+msgstr "Have a Project in Mind?"
 
 msgid "Headquarters"
-msgstr ""
+msgstr "Headquarters"
 
 msgid "Health & Wellness"
-msgstr ""
+msgstr "Health & Wellness"
 
 msgid "Hiring Process"
-msgstr ""
+msgstr "Hiring Process"
 
 msgid "How can we reach you?"
-msgstr ""
+msgstr "How can we reach you?"
 
 msgid "Hundreds of Clients"
-msgstr ""
+msgstr "Hundreds of Clients"
 
 msgid ""
 "Hydrocarbons, finance, construction, trade and logistics: the six BS GROUP "
 "areas of expertise at the service of your projects."
 msgstr ""
+"Hydrocarbons, finance, construction, trade and logistics: the six BS GROUP "
+"areas of expertise at the service of your projects."
 
 msgid ""
 "I consent to BS GROUP processing my data to prepare this quote, in "
 "accordance with the"
 msgstr ""
+"I consent to BS GROUP processing my data to prepare this quote, in "
+"accordance with the"
 
 msgid ""
 "I consent to BS GROUP storing my personal data for the purpose of this "
 "application, in accordance with the"
 msgstr ""
+"I consent to BS GROUP storing my personal data for the purpose of this "
+"application, in accordance with the"
 
 msgid "I'm flexible"
-msgstr ""
+msgstr "I'm flexible"
 
 msgid "Industry Awards"
-msgstr ""
+msgstr "Industry Awards"
 
 msgid "Innovation"
-msgstr ""
+msgstr "Innovation"
 
 msgid "Insights From"
-msgstr ""
+msgstr "Insights From"
 
 msgid "Introduce Yourself!"
-msgstr ""
+msgstr "Introduce Yourself!"
 
 msgid "Itemized, transparent and valid for 30 days."
-msgstr ""
+msgstr "Itemized, transparent and valid for 30 days."
 
 msgid "Job Overview"
-msgstr ""
+msgstr "Job Overview"
 
 msgid ""
 "Join 450+ happy customers. Let's turn your vision into a landmark — on time,"
 " on budget, beyond expectations."
 msgstr ""
+"Join 450+ happy customers. Let's turn your vision into a landmark — on time,"
+" on budget, beyond expectations."
 
 msgid "Join The Team"
-msgstr ""
+msgstr "Join The Team"
 
 msgid "Join Us?"
-msgstr ""
+msgstr "Join Us?"
 
 msgid "Keep Exploring"
-msgstr ""
+msgstr "Keep Exploring"
 
 msgid "Key Responsibilities"
-msgstr ""
+msgstr "Key Responsibilities"
 
 msgid "Latest Articles"
-msgstr ""
+msgstr "Latest Articles"
 
 msgid "Latest Related"
-msgstr ""
+msgstr "Latest Related"
 
 msgid "Leadership"
-msgstr ""
+msgstr "Leadership"
 
 msgid "Leadership & Experts"
-msgstr ""
+msgstr "Leadership & Experts"
 
 msgid "Learning & Growth"
-msgstr ""
+msgstr "Learning & Growth"
 
 msgid "Let's Build It Together"
-msgstr ""
+msgstr "Let's Build It Together"
 
 msgid "Let's Make It Real!"
-msgstr ""
+msgstr "Let's Make It Real!"
 
 msgid "Like Who You See?"
-msgstr ""
+msgstr "Like Who You See?"
 
 msgid "Make It Happen"
-msgstr ""
+msgstr "Make It Happen"
 
 msgid "Management"
-msgstr ""
+msgstr "Management"
 
 msgid "Map"
-msgstr ""
+msgstr "Map"
 
 msgid ""
 "Market-leading salaries, annual bonuses and a retirement plan with match."
 msgstr ""
+"Market-leading salaries, annual bonuses and a retirement plan with match."
 
 msgid "Matters"
-msgstr ""
+msgstr "Matters"
 
 msgid ""
 "Meanwhile, our crew keeps building — let's get you back on solid ground."
 msgstr ""
+"Meanwhile, our crew keeps building — let's get you back on solid ground."
 
 msgid "Meet Everyone"
-msgstr ""
+msgstr "Meet Everyone"
 
 msgid "Meet More Experts"
-msgstr ""
+msgstr "Meet More Experts"
 
 msgid "Meet your future teammates — on site or over video."
-msgstr ""
+msgstr "Meet your future teammates — on site or over video."
 
 msgid ""
 "Mentions légales du site BS GROUP — éditeur, hébergement, propriété "
 "intellectuelle et informations légales."
 msgstr ""
+"الإشعارات القانونية لموقع BS GROUP — الناشر والاستضافة والملكية الفكرية "
+"والمعلومات القانونية."
 
 msgid "Modern villa with large bay windows"
-msgstr ""
+msgstr "Modern villa with large bay windows"
 
 msgid "Nationalities"
-msgstr ""
+msgstr "Nationalities"
 
 msgid "Need a Custom"
-msgstr ""
+msgstr "Need a Custom"
 
 msgid "Need to change something? Use the Back button below."
-msgstr ""
+msgstr "Need to change something? Use the Back button below."
 
 msgid "Next page"
-msgstr ""
+msgstr "Next page"
 
 msgid "Next steps, answers or a detailed proposal — from real humans."
-msgstr ""
+msgstr "Next steps, answers or a detailed proposal — from real humans."
 
 msgid "Next →"
-msgstr ""
+msgstr "Next →"
 
 msgid "Nice to Have"
-msgstr ""
+msgstr "Nice to Have"
 
 msgid "No categories."
-msgstr ""
+msgstr "No categories."
 
 msgid "No positions in this department right now."
-msgstr ""
+msgstr "No positions in this department right now."
 
 msgid "No reviews in this category yet."
-msgstr ""
+msgstr "No reviews in this category yet."
 
 msgid "No similar articles yet."
-msgstr ""
+msgstr "No similar articles yet."
 
 msgid "No tags."
-msgstr ""
+msgstr "No tags."
 
 msgid "Off-Site!"
-msgstr ""
+msgstr "Off-Site!"
 
 msgid "Offer & Onboarding"
-msgstr ""
+msgstr "Offer & Onboarding"
 
 msgid "Office"
-msgstr ""
+msgstr "Office"
 
 msgid "One last look before we put our estimators on it."
-msgstr ""
+msgstr "One last look before we put our estimators on it."
 
 msgid "Open Positions"
-msgstr ""
+msgstr "Open Positions"
 
 msgid "Open Roles Right Now"
-msgstr ""
+msgstr "Open Roles Right Now"
 
 msgid "Opportunity"
-msgstr ""
+msgstr "Opportunity"
 
 msgid "Other"
-msgstr ""
+msgstr "Other"
 
 msgid "Other / Not Sure Yet"
-msgstr ""
+msgstr "Other / Not Sure Yet"
 
 msgid "Other / Spontaneous"
-msgstr ""
+msgstr "Other / Spontaneous"
 
 msgid "Other Projects"
-msgstr ""
+msgstr "Other Projects"
 
 msgid "Other Services"
-msgstr ""
+msgstr "Other Services"
 
 msgid "Our Headquarters"
-msgstr ""
+msgstr "Our Headquarters"
 
 msgid "Our People"
-msgstr ""
+msgstr "Our People"
 
 msgid "Our Projects"
-msgstr ""
+msgstr "Our Projects"
 
 msgid "Our Services"
-msgstr ""
+msgstr "Our Services"
 
 msgid "Our estimation team answers the phone Monday to Saturday."
-msgstr ""
+msgstr "Our estimation team answers the phone Monday to Saturday."
 
 msgid "Our estimation team reviews every detail — usually the same day."
-msgstr ""
+msgstr "Our estimation team reviews every detail — usually the same day."
 
 msgid ""
 "Our recruitment team will review your profile and contact you within 5 "
 "business days."
 msgstr ""
+"Our recruitment team will review your profile and contact you within 5 "
+"business days."
 
 msgid "Page"
-msgstr ""
+msgstr "Page"
 
 msgid "Page not found — 404 error on BS GROUP website"
-msgstr ""
+msgstr "Page not found — 404 error on BS GROUP website"
 
 msgid "Paid Time Off"
-msgstr ""
+msgstr "Paid Time Off"
 
 msgid ""
 "Paid certifications, mentoring programs and a clear path to senior roles."
 msgstr ""
+"Paid certifications, mentoring programs and a clear path to senior roles."
 
 msgid "Paid parental leave and childcare assistance for working parents."
-msgstr ""
+msgstr "Paid parental leave and childcare assistance for working parents."
 
 msgid "People Led"
-msgstr ""
+msgstr "People Led"
 
 msgid "Perks & Benefits"
-msgstr ""
+msgstr "Perks & Benefits"
 
 msgid "Permits & Groundwork"
-msgstr ""
+msgstr "Permits & Groundwork"
 
 msgid "Pick the closest match — we'll tailor the rest to it."
-msgstr ""
+msgstr "Pick the closest match — we'll tailor the rest to it."
 
 msgid "Plan, Build, Succeed –"
-msgstr ""
+msgstr "Plan, Build, Succeed –"
 
 msgid ""
 "Politique de Confidentialité du site BS GROUP — données collectées, "
 "finalités, cookies et vos droits."
 msgstr ""
+"سياسة الخصوصية لموقع BS GROUP — البيانات المجموعة والأغراض وملفات تعريف "
+"الارتباط وحقوقكم."
 
 msgid "Popular Destinations"
-msgstr ""
+msgstr "Popular Destinations"
 
 msgid "Position"
-msgstr ""
+msgstr "Position"
 
 msgid "Posted 2 weeks ago"
-msgstr ""
+msgstr "Posted 2 weeks ago"
 
 msgid "Precisely Priced"
-msgstr ""
+msgstr "Precisely Priced"
 
 msgid "Prefer to talk now?"
-msgstr ""
+msgstr "Prefer to talk now?"
 
 msgid "Premium finishes, final inspection walkthrough and key handover."
-msgstr ""
+msgstr "Premium finishes, final inspection walkthrough and key handover."
 
 msgid "Previous page"
-msgstr ""
+msgstr "Previous page"
 
 msgid "Project"
-msgstr ""
+msgstr "Project"
 
 msgid "Project Category"
-msgstr ""
+msgstr "Project Category"
 
 msgid "Project Location"
-msgstr ""
+msgstr "Project Location"
 
 msgid "Project Type"
-msgstr ""
+msgstr "Project Type"
 
 msgid "Projects Oversaw"
-msgstr ""
+msgstr "Projects Oversaw"
 
 msgid "Quote"
-msgstr ""
+msgstr "Quote"
 
 msgid "Quote Received"
-msgstr ""
+msgstr "Quote Received"
 
 msgid "Quote Reference"
-msgstr ""
+msgstr "Quote Reference"
 
 msgid "Read Article"
-msgstr ""
+msgstr "Read Article"
 
 msgid "Read the FAQ While You Wait"
-msgstr ""
+msgstr "Read the FAQ While You Wait"
 
 msgid ""
 "Reading is great — building is better. Tell us about your idea and get a "
 "free, detailed quote within 24 hours."
 msgstr ""
+"Reading is great — building is better. Tell us about your idea and get a "
+"free, detailed quote within 24 hours."
 
 msgid "Ready to"
-msgstr ""
+msgstr "Ready to"
 
 msgid "Ready to Start Your"
-msgstr ""
+msgstr "Ready to Start Your"
 
 msgid "Real Impact"
-msgstr ""
+msgstr "Real Impact"
 
 msgid "Recent Projects"
-msgstr ""
+msgstr "Recent Projects"
 
 msgid "Recruitment"
-msgstr ""
+msgstr "Recruitment"
 
 msgid "Reference"
-msgstr ""
+msgstr "Reference"
 
 msgid "Related News & Blogs"
-msgstr ""
+msgstr "Related News & Blogs"
 
 msgid "Remove file"
-msgstr ""
+msgstr "Remove file"
 
 msgid "Renovation"
-msgstr ""
+msgstr "Renovation"
 
 msgid "Report a Broken Link"
-msgstr ""
+msgstr "Report a Broken Link"
 
 msgid "Request Received!"
-msgstr ""
+msgstr "Request Received!"
 
 msgid "Requirements & Qualifications"
-msgstr ""
+msgstr "Requirements & Qualifications"
 
 msgid "Residential"
-msgstr ""
+msgstr "Residential"
 
 msgid "Response Within 24 Hours"
-msgstr ""
+msgstr "Response Within 24 Hours"
 
 msgid "Resume / CV"
-msgstr ""
+msgstr "Resume / CV"
 
 msgid "Review"
-msgstr ""
+msgstr "Review"
 
 msgid "Review your request"
-msgstr ""
+msgstr "Review your request"
 
 msgid "Safety"
-msgstr ""
+msgstr "Safety"
 
 msgid "Salary"
-msgstr ""
+msgstr "Salary"
 
 msgid "Save this job"
-msgstr ""
+msgstr "Save this job"
 
 msgid "Screening Call"
-msgstr ""
+msgstr "Screening Call"
 
 msgid "Select a range..."
-msgstr ""
+msgstr "Select a range..."
 
 msgid "Select a timeframe..."
-msgstr ""
+msgstr "Select a timeframe..."
 
 msgid "Send Us Your Resume"
-msgstr ""
+msgstr "Send Us Your Resume"
 
 msgid "Send a Message"
-msgstr ""
+msgstr "Send a Message"
 
 msgid "Send your resume in 2 minutes — no cover letter required."
-msgstr ""
+msgstr "Send your resume in 2 minutes — no cover letter required."
 
 msgid "Service Benefits"
-msgstr ""
+msgstr "Service Benefits"
 
 msgid "Set Us Apart"
-msgstr ""
+msgstr "Set Us Apart"
 
 msgid "Share"
-msgstr ""
+msgstr "Share"
 
 msgid "Share This Job"
-msgstr ""
+msgstr "Share This Job"
 
 msgid "Share Your Experience"
-msgstr ""
+msgstr "Share Your Experience"
 
 msgid "Share on Facebook"
-msgstr ""
+msgstr "Share on Facebook"
 
 msgid "Share on LinkedIn"
-msgstr ""
+msgstr "Share on LinkedIn"
 
 msgid "Share on Twitter / X"
-msgstr ""
+msgstr "Share on Twitter / X"
 
 msgid "Showing"
-msgstr ""
+msgstr "Showing"
 
 msgid ""
 "Site analysis, architectural plans, 3D renders and a fixed-price proposal."
 msgstr ""
+"Site analysis, architectural plans, 3D renders and a fixed-price proposal."
 
 msgid "Six areas of expertise,"
-msgstr ""
+msgstr "Six areas of expertise,"
 
 msgid "Something different? Tell us and we'll adapt."
-msgstr ""
+msgstr "Something different? Tell us and we'll adapt."
 
 msgid "Spontaneous Application"
-msgstr ""
+msgstr "Spontaneous Application"
 
 msgid "Submit Another Request"
-msgstr ""
+msgstr "Submit Another Request"
 
 msgid "Submit Application"
-msgstr ""
+msgstr "Submit Application"
 
 msgid "Submit Your Review"
-msgstr ""
+msgstr "Submit Your Review"
 
 msgid "Tags"
-msgstr ""
+msgstr "Tags"
 
 msgid "Team Interview"
-msgstr ""
+msgstr "Team Interview"
 
 msgid "Team Members"
-msgstr ""
+msgstr "Team Members"
 
 msgid "Tell Your Story!"
-msgstr ""
+msgstr "Tell Your Story!"
 
 msgid "Tell us about your project"
-msgstr ""
+msgstr "Tell us about your project"
 
 msgid ""
 "Tell us about your project and our experts will craft a tailored plan, "
 "timeline and budget — free of charge."
 msgstr ""
+"Tell us about your project and our experts will craft a tailored plan, "
+"timeline and budget — free of charge."
 
 msgid "Tell us briefly why you're a great fit..."
-msgstr ""
+msgstr "Tell us briefly why you're a great fit..."
 
 msgid "Terms & Conditions"
-msgstr ""
+msgstr "Terms & Conditions"
 
 msgid "Thank "
-msgstr ""
+msgstr "Thank "
 
 msgid "Thank You"
-msgstr ""
+msgstr "Thank You"
 
 msgid "Thank you for applying"
-msgstr ""
+msgstr "Thank you for applying"
 
 msgid "Thank you for reaching out! Your message"
-msgstr ""
+msgstr "Thank you for reaching out! Your message"
 
 msgid "Thank you! Our estimation team is reviewing"
-msgstr ""
+msgstr "Thank you! Our estimation team is reviewing"
 
 msgid ""
 "Thank you! Our estimation team is reviewing your project and will contact "
 "you within 24 hours with your fixed-price proposal."
 msgstr ""
+"Thank you! Our estimation team is reviewing your project and will contact "
+"you within 24 hours with your fixed-price proposal."
 
 msgid "Thank you! Your quote request"
-msgstr ""
+msgstr "Thank you! Your quote request"
 
 msgid "Thank you! Your request has been sent to BS GROUP."
-msgstr ""
+msgstr "Thank you! Your request has been sent to BS GROUP."
 
 msgid "Thanks"
-msgstr ""
+msgstr "Thanks"
 
 msgid "The BS GROUP team in a work meeting"
-msgstr ""
+msgstr "The BS GROUP team in a work meeting"
 
 msgid "The Field"
-msgstr ""
+msgstr "The Field"
 
 msgid "The People Who"
-msgstr ""
+msgstr "The People Who"
 
 msgid "The Result"
-msgstr ""
+msgstr "The Result"
 
 msgid "The page you're looking for has been moved, renamed, or is still"
-msgstr ""
+msgstr "The page you're looking for has been moved, renamed, or is still"
 
 msgid "The right person on our team picks it up — usually the same day."
-msgstr ""
+msgstr "The right person on our team picks it up — usually the same day."
 
 msgid "This Page Went "
-msgstr ""
+msgstr "This Page Went "
 
 msgid "Today."
-msgstr ""
+msgstr "Today."
 
 msgid "Training Per Year"
-msgstr ""
+msgstr "Training Per Year"
 
 msgid "Trusted by"
-msgstr ""
+msgstr "Trusted by"
 
 msgid "Under $50,000"
-msgstr ""
+msgstr "Under $50,000"
 
 msgid "Verified Reviews"
-msgstr ""
+msgstr "Verified Reviews"
 
 msgid "View"
-msgstr ""
+msgstr "View"
 
 msgid "View Full Team"
-msgstr ""
+msgstr "View Full Team"
 
 msgid "View Open Roles"
-msgstr ""
+msgstr "View Open Roles"
 
 msgid "Visit Our "
-msgstr ""
+msgstr "Visit Our "
 
 msgid "Want to join us?"
-msgstr ""
+msgstr "Want to join us?"
 
 msgid "We Take Care of"
-msgstr ""
+msgstr "We Take Care of"
 
 msgid "We call you within 24h"
-msgstr ""
+msgstr "We call you within 24h"
 
 msgid "We cost your project"
-msgstr ""
+msgstr "We cost your project"
 
 msgid "We move things forward"
-msgstr ""
+msgstr "We move things forward"
 
 msgid "We only use these details to send your proposal — never for spam."
-msgstr ""
+msgstr "We only use these details to send your proposal — never for spam."
 
 msgid "We reach out to you"
-msgstr ""
+msgstr "We reach out to you"
 
 msgid "We review your request"
-msgstr ""
+msgstr "We review your request"
 
 msgid "We review your submission"
-msgstr ""
+msgstr "We review your submission"
 
 msgid "We schedule a call"
-msgstr ""
+msgstr "We schedule a call"
 
 msgid "We walk you through the proposal and lock the timeline together."
-msgstr ""
+msgstr "We walk you through the proposal and lock the timeline together."
 
 msgid ""
 "We're more than a construction company — we're a team of builders, thinkers "
 "and problem-solvers shaping skylines and communities. If you're passionate "
 "about craftsmanship and growth, there's a place for you here."
 msgstr ""
+"We're more than a construction company — we're a team of builders, thinkers "
+"and problem-solvers shaping skylines and communities. If you're passionate "
+"about craftsmanship and growth, there's a place for you here."
 
 msgid "Welcome aboard — your buddy program starts day one."
-msgstr ""
+msgstr "Welcome aboard — your buddy program starts day one."
 
 msgid "What Happens Next?"
-msgstr ""
+msgstr "What Happens Next?"
 
 msgid "What We"
-msgstr ""
+msgstr "What We"
 
 msgid "What We Offer"
-msgstr ""
+msgstr "What We Offer"
 
 msgid "What type of project do you have?"
-msgstr ""
+msgstr "What type of project do you have?"
 
 msgid "With BS GROUP"
-msgstr ""
+msgstr "With BS GROUP"
 
 msgid "Within 1 – 3 months"
-msgstr ""
+msgstr "Within 1 – 3 months"
 
 msgid "Within 3 – 6 months"
-msgstr ""
+msgstr "Within 3 – 6 months"
 
 msgid "Work With Us!"
-msgstr ""
+msgstr "Work With Us!"
 
 msgid "Work on landmark projects you'll be proud to show your kids one day."
-msgstr ""
+msgstr "Work on landmark projects you'll be proud to show your kids one day."
 
 msgid "Worked With Us?"
-msgstr ""
+msgstr "Worked With Us?"
 
 msgid "Working Process"
-msgstr ""
+msgstr "Working Process"
 
 msgid "Would Recommend Us"
-msgstr ""
+msgstr "Would Recommend Us"
 
 msgid "Written by"
-msgstr ""
+msgstr "Written by"
 
 msgid "Years of"
-msgstr ""
+msgstr "Years of"
 
 msgid "You get a fixed-price proposal"
-msgstr ""
+msgstr "You get a fixed-price proposal"
 
 msgid "You receive a fixed-price proposal"
-msgstr ""
+msgstr "You receive a fixed-price proposal"
 
 msgid "You!"
-msgstr ""
+msgstr "You!"
 
 msgid "Your Info"
-msgstr ""
+msgstr "Your Info"
 
 msgid "Your Project, "
-msgstr ""
+msgstr "Your Project, "
 
 msgid "about"
-msgstr ""
+msgstr "about"
 
 msgid "and will send you a detailed, fixed-price proposal within 24 hours."
-msgstr ""
+msgstr "and will send you a detailed, fixed-price proposal within 24 hours."
 
 msgid "at BS GROUP:"
-msgstr ""
+msgstr "at BS GROUP:"
 
 msgid "browse files"
-msgstr ""
+msgstr "browse files"
 
 msgid "delivered projects."
-msgstr ""
+msgstr "delivered projects."
 
 msgid "e.g. 240 sq meters"
-msgstr ""
+msgstr "e.g. 240 sq meters"
 
 msgid "for"
-msgstr ""
+msgstr "for"
 
 msgid "has been sent to BS GROUP."
-msgstr ""
+msgstr "has been sent to BS GROUP."
 
 msgid "is in our inbox — expect a reply within 24 – 48 business hours."
-msgstr ""
+msgstr "is in our inbox — expect a reply within 24 – 48 business hours."
 
 msgid "one partner"
-msgstr ""
+msgstr "one partner"
 
 msgid "open positions"
-msgstr ""
+msgstr "open positions"
 
 msgid "optional"
-msgstr ""
+msgstr "optional"
 
 msgid "or email"
-msgstr ""
+msgstr "or email"
 
 msgid "project"
-msgstr ""
+msgstr "project"
 
 msgid "reviews"
-msgstr ""
+msgstr "reviews"
 
 msgid "team members"
-msgstr ""
+msgstr "team members"
 
 msgid "under construction"
-msgstr ""
+msgstr "under construction"
 
 msgid "years of experience,"
-msgstr ""
+msgstr "years of experience,"
 
 msgid "your"
-msgstr ""
+msgstr "your"
 
 msgid "your project"
-msgstr ""
+msgstr "your project"
 
 msgid "— blueprints, mood boards, inspiration..."
-msgstr ""
+msgstr "— blueprints, mood boards, inspiration..."
 
 msgid "← Prev"
-msgstr ""
+msgstr "← Prev"
 
 msgid "Question? Look here."
-msgstr ""
+msgstr "عندك سؤال؟ انظر هنا."
 
 msgid "Frequently Asked "
-msgstr ""
+msgstr "الأسئلة "
 
 msgid "Questions"
-msgstr ""
+msgstr "الشائعة"
 
 msgid "Everything you need to know before starting your project with us."
-msgstr ""
+msgstr "كل ما تحتاج معرفته قبل بدء مشروعك معنا."
 
 msgid "All Questions"
-msgstr ""
+msgstr "كل الأسئلة"
 
 msgid "General"
-msgstr ""
+msgstr "عام"
 
 msgid "Services & Process"
-msgstr ""
+msgstr "الخدمات والإجراءات"
 
 msgid "Payments & Budget"
-msgstr ""
+msgstr "المدفوعات والميزانية"
 
 msgid "Warranty & Support"
-msgstr ""
+msgstr "الضمان والدعم"
