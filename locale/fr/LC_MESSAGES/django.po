@@ -2410,3 +2410,87 @@ msgstr "Notre équipe répondra à toutes vos questions. Nous garantissons une r
 
 msgid "— %(name)s's leadership motto"
 msgstr "— devise de leadership de %(name)s"
+
+msgid "Hello! I am the BS GROUP virtual assistant. Ask me about our services, quotes or timelines!"
+msgstr "Bonjour ! Je suis l'assistant virtuel BS GROUP. Posez-moi vos questions sur nos services, devis ou délais !"
+
+msgid "For a free detailed quote, fill in the contact form or call us. We reply within 24 hours!"
+msgstr "Pour un devis détaillé gratuit, remplissez le formulaire de contact ou appelez-nous. Nous répondons sous 24 heures !"
+
+msgid "We cover residential and commercial construction, concrete works, renovation and pre-construction. What kind of project do you have in mind?"
+msgstr "Nous couvrons la construction résidentielle et commerciale, les travaux de béton, la rénovation et la pré-construction. Quel type de projet avez-vous en tête ?"
+
+msgid "You can reach us by phone, email or via the contact form. We reply within 24 hours!"
+msgstr "Vous pouvez nous joindre par téléphone, par e-mail ou via le formulaire de contact. Nous répondons sous 24 heures !"
+
+msgid "You are most welcome! Feel free to ask if you have any other questions."
+msgstr "Avec grand plaisir ! N'hésitez pas si vous avez d'autres questions."
+
+msgid "Thanks for your message! A member of the BS GROUP team will get back to you very soon."
+msgstr "Merci pour votre message ! Un membre de l'équipe BS GROUP vous répondra très vite."
+
+msgid "Great question! For an accurate answer, our experts can call you back — leave your details in the contact form."
+msgstr "Excellente question ! Pour une réponse précise, nos experts peuvent vous rappeler — laissez vos coordonnées dans le formulaire de contact."
+
+msgid "Noted! Did you know BS GROUP has completed 640+ projects with 25 years of experience?"
+msgstr "Noté ! Saviez-vous que BS GROUP a réalisé plus de 640 projets avec 25 ans d'expérience ?"
+
+msgid "Noted! Our team is reviewing your message and will send you a full answer shortly."
+msgstr "Bien reçu ! Notre équipe examine votre message et vous enverra une réponse complète sous peu."
+
+msgid "Thank you! Our estimation team is reviewing your project and will send you a detailed, fixed-price proposal within 24 hours."
+msgstr "Merci ! Notre équipe d'estimation examine votre projet et vous enverra une proposition détaillée à prix fixe sous 24 heures."
+
+msgid "Thank you for reaching out! Your message is in our inbox — expect a reply from our team within 24 — 48 business hours."
+msgstr "Merci de nous avoir contactés ! Votre message est bien arrivé — attendez une réponse de notre équipe sous 24 — 48 heures ouvrées."
+
+msgid "Thank you for applying! Our recruitment team will review your profile and contact you within 5 business days — whatever the outcome."
+msgstr "Merci pour votre candidature ! Notre équipe de recrutement examinera votre profil et vous contactera sous 5 jours ouvrés — quelle que soit l'issue."
+
+msgid "You are on the list! Exclusive deals and construction insights are on their way to your inbox. Welcome aboard!"
+msgstr "Vous êtes des nôtres ! Offres exclusives et analyses construction arrivent dans votre boîte mail. Bienvenue à bord !"
+
+msgid "Your submission has been received. Our team will review it and get back to you shortly."
+msgstr "Votre demande a bien été reçue. Notre équipe va l'examiner et reviendra vers vous sous peu."
+
+msgid "Current choice (saved {date}): Preferences {p} — Analytics {a} — Marketing {m}."
+msgstr "Choix actuel (enregistré le {date}) : Préférences {p} — Analyse {a} — Marketing {m}."
+
+msgid "Coming Soon"
+msgstr "Bientôt disponible"
+
+msgid "BS GROUP — Our new website is under construction. Leave your email to be notified at launch."
+msgstr "BS GROUP — Notre nouveau site est en construction. Laissez votre e-mail pour être prévenu du lancement."
+
+msgid "Site Under Construction"
+msgstr "Site en construction"
+
+msgid "We're Building"
+msgstr "Nous construisons"
+
+msgid "Something Great"
+msgstr "Quelque chose d'exceptionnel"
+
+msgid "Our new website is on the drawing board. Leave your email and be the first to know when the doors open — plus an exclusive launch offer."
+msgstr "Notre nouveau site est sur la planche à dessin. Laissez votre e-mail et soyez le premier informé de l'ouverture — avec en prime une offre de lancement exclusive."
+
+msgid "Days"
+msgstr "Jours"
+
+msgid "Hours"
+msgstr "Heures"
+
+msgid "Minutes"
+msgstr "Minutes"
+
+msgid "Seconds"
+msgstr "Secondes"
+
+msgid "We're Live! Enter the Site"
+msgstr "C'est en ligne ! Visitez le site"
+
+msgid "Construction Progress"
+msgstr "Progression des travaux"
+
+msgid "Notify Me"
+msgstr "Me notifier"

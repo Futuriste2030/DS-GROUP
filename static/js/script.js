@@ -2357,14 +2357,30 @@ const initComingSoon = () => {
   const cdDays = document.getElementById("cd-days");
   if (!cdDays) return; // page non concernée
 
-  // ⚠️ CONFIGURATION — adapte ces 2 valeurs :
-  const LAUNCH_DATE = new Date("2026-12-31T09:00:00"); // date & heure de lancement
-  const SITE_PROGRESS = 72; // % d'avancement affiché
+  // Date de lancement : pilotée par SiteSettings.launch_date via
+  // data-launch="Y-m-d" sur #countdown (même logique que DIGI-AGENCY).
+  // Repli sur la valeur codée en dur si l'attribut est absent.
+  const cdWrap = document.getElementById("countdown");
+  const launchAttr = cdWrap ? (cdWrap.getAttribute("data-launch") || "").trim() : "";
+  const LAUNCH_DATE = launchAttr
+    ? new Date(launchAttr + "T00:00:00")
+    : new Date("2026-12-31T09:00:00"); // repli si pas de date admin
+
+  // Progression déduite de la date : fenêtre de 100 jours avant lancement
+  // (100 - jours restants, bornée 2..99 ; 100 si lancement atteint).
+  // Sans date admin : repli sur la valeur historique.
+  const PROGRESS_WINDOW_DAYS = 100;
+  const PROGRESS_FALLBACK = 72;
+  const computeDateProgress = () => {
+    if (!launchAttr) return PROGRESS_FALLBACK;
+    const daysLeft = Math.ceil((LAUNCH_DATE - new Date()) / 86400000);
+    if (daysLeft <= 0) return 100;
+    return Math.min(99, Math.max(2, PROGRESS_WINDOW_DAYS - daysLeft));
+  };
 
   const cdHours = document.getElementById("cd-hours");
   const cdMinutes = document.getElementById("cd-minutes");
   const cdSeconds = document.getElementById("cd-seconds");
-  const cdWrap = document.getElementById("countdown");
   const cdLive = document.getElementById("cd-live");
 
   const dtHours = document.getElementById("dt-hours");
@@ -2414,14 +2430,15 @@ const initComingSoon = () => {
     setInterval(tick, 1000);
   }
 
-  // Barre de progression animée 0 → SITE_PROGRESS
+  // Barre de progression animée 0 → cible déduite de la date de lancement
   if (csBar && csPercent) {
+    const target = computeDateProgress();
     let p = 0;
     const barTick = setInterval(() => {
-      p = Math.min(p + Math.random() * 6 + 2, SITE_PROGRESS);
+      p = Math.min(p + Math.random() * 6 + 2, target);
       csBar.style.width = p + "%";
       csPercent.textContent = Math.round(p) + "%";
-      if (p >= SITE_PROGRESS) clearInterval(barTick);
+      if (p >= target) clearInterval(barTick);
     }, 90);
   }
 };

@@ -2380,3 +2380,87 @@ msgstr "Our team will answer all your questions. We'll ensure a quick response."
 
 msgid "— %(name)s's leadership motto"
 msgstr "— %(name)s's leadership motto"
+
+msgid "Hello! I am the BS GROUP virtual assistant. Ask me about our services, quotes or timelines!"
+msgstr "Hello! I am the BS GROUP virtual assistant. Ask me about our services, quotes or timelines!"
+
+msgid "For a free detailed quote, fill in the contact form or call us. We reply within 24 hours!"
+msgstr "For a free detailed quote, fill in the contact form or call us. We reply within 24 hours!"
+
+msgid "We cover residential and commercial construction, concrete works, renovation and pre-construction. What kind of project do you have in mind?"
+msgstr "We cover residential and commercial construction, concrete works, renovation and pre-construction. What kind of project do you have in mind?"
+
+msgid "You can reach us by phone, email or via the contact form. We reply within 24 hours!"
+msgstr "You can reach us by phone, email or via the contact form. We reply within 24 hours!"
+
+msgid "You are most welcome! Feel free to ask if you have any other questions."
+msgstr "You are most welcome! Feel free to ask if you have any other questions."
+
+msgid "Thanks for your message! A member of the BS GROUP team will get back to you very soon."
+msgstr "Thanks for your message! A member of the BS GROUP team will get back to you very soon."
+
+msgid "Great question! For an accurate answer, our experts can call you back — leave your details in the contact form."
+msgstr "Great question! For an accurate answer, our experts can call you back — leave your details in the contact form."
+
+msgid "Noted! Did you know BS GROUP has completed 640+ projects with 25 years of experience?"
+msgstr "Noted! Did you know BS GROUP has completed 640+ projects with 25 years of experience?"
+
+msgid "Noted! Our team is reviewing your message and will send you a full answer shortly."
+msgstr "Noted! Our team is reviewing your message and will send you a full answer shortly."
+
+msgid "Thank you! Our estimation team is reviewing your project and will send you a detailed, fixed-price proposal within 24 hours."
+msgstr "Thank you! Our estimation team is reviewing your project and will send you a detailed, fixed-price proposal within 24 hours."
+
+msgid "Thank you for reaching out! Your message is in our inbox — expect a reply from our team within 24 — 48 business hours."
+msgstr "Thank you for reaching out! Your message is in our inbox — expect a reply from our team within 24 — 48 business hours."
+
+msgid "Thank you for applying! Our recruitment team will review your profile and contact you within 5 business days — whatever the outcome."
+msgstr "Thank you for applying! Our recruitment team will review your profile and contact you within 5 business days — whatever the outcome."
+
+msgid "You are on the list! Exclusive deals and construction insights are on their way to your inbox. Welcome aboard!"
+msgstr "You are on the list! Exclusive deals and construction insights are on their way to your inbox. Welcome aboard!"
+
+msgid "Your submission has been received. Our team will review it and get back to you shortly."
+msgstr "Your submission has been received. Our team will review it and get back to you shortly."
+
+msgid "Current choice (saved {date}): Preferences {p} — Analytics {a} — Marketing {m}."
+msgstr "Current choice (saved {date}): Preferences {p} — Analytics {a} — Marketing {m}."
+
+msgid "Coming Soon"
+msgstr "Coming Soon"
+
+msgid "BS GROUP — Our new website is under construction. Leave your email to be notified at launch."
+msgstr "BS GROUP — Our new website is under construction. Leave your email to be notified at launch."
+
+msgid "Site Under Construction"
+msgstr "Site Under Construction"
+
+msgid "We're Building"
+msgstr "We're Building"
+
+msgid "Something Great"
+msgstr "Something Great"
+
+msgid "Our new website is on the drawing board. Leave your email and be the first to know when the doors open — plus an exclusive launch offer."
+msgstr "Our new website is on the drawing board. Leave your email and be the first to know when the doors open — plus an exclusive launch offer."
+
+msgid "Days"
+msgstr "Days"
+
+msgid "Hours"
+msgstr "Hours"
+
+msgid "Minutes"
+msgstr "Minutes"
+
+msgid "Seconds"
+msgstr "Seconds"
+
+msgid "We're Live! Enter the Site"
+msgstr "We're Live! Enter the Site"
+
+msgid "Construction Progress"
+msgstr "Construction Progress"
+
+msgid "Notify Me"
+msgstr "Notify Me"
