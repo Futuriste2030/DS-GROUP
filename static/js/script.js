@@ -1248,21 +1248,21 @@ document.addEventListener("DOMContentLoaded", () => {
       chatMessages.appendChild(msg);
       scrollChat();
 
-      // Rendu progressif (effet machine à écrire) : même si un proxy
-      // bufférise le flux SSE et livre les tokens en un seul bloc,
-      // l'utilisateur voit la réponse s'écrire progressivement.
+      // Rendu progressif caractère par caractère (même logique que DIGI-AGENCY) :
+      // même si un proxy bufférise le flux SSE et livre les tokens en un seul
+      // bloc, l'utilisateur voit la réponse s'écrire une à une.
       let gotToken = false;
       let pending = "";
       let renderTimer = null;
-      const RENDER_STEP = 6; // caractères ajoutés par tick
-      const RENDER_EVERY = 25; // ms entre ticks
+      const RENDER_STEP = 1; // 1 caractère par tick (effet machine à écrire)
+      const RENDER_EVERY = 12; // ms entre ticks
       const pump = () => {
         if (bubble.textContent.length < pending.length) {
           bubble.textContent = pending.slice(
             0,
             bubble.textContent.length + RENDER_STEP,
           );
-          scrollChat();
+          if (bubble.textContent.length % 3 === 0) scrollChat();
           renderTimer = setTimeout(pump, RENDER_EVERY);
         } else {
           renderTimer = null;
