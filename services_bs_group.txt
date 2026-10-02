@@ -117,7 +117,7 @@ AR : مراقبة التسليم والتحقق من مطابقة المنتجا
 
 SERVICE 2 / 6 — INTERMÉDIATION FINANCIÈRE
 Champs non traduits
-Slug : intermediation-financiere | Icon : handshake | Order : 1 | Images : (à téléverser)
+Slug : intermediation-financiere | Icon : briefcase | Order : 1 | Images : (à téléverser)
 
 [FR]
 Excerpt : Mise en relation stratégique entre porteurs de projets et partenaires financiers : banques, investisseurs et bailleurs de fonds.
@@ -150,7 +150,7 @@ Features
 [Feature 4] Présentation et valorisation du dossier de projet : structure, chiffres et argumentaire | Presentation and enhancement of the project file: structure, figures and pitch | عرض ملف المشروع وإبراز قيمته: الهيكل والأرقام والحجة
 
 Benefits
-[Benefit 1] network — Réseau de partenaires / Partner network / شبكة شركاء
+[Benefit 1] share-2 — Réseau de partenaires / Partner network / شبكة شركاء
 FR : Un accès facilité à des banques, des investisseurs et des bailleurs de fonds actifs au Mali et dans la sous-région. Notre réseau est entretenu dans la durée, au fil des opérations réalisées.
 EN : Easier access to banks, investors and funding providers active in Mali and the sub-region. Our network is maintained over time, operation after operation.
 AR : وصول أسهل إلى البنوك والمستثمرين والجهات المانحة النشطة في مالي وفي المنطقة. شبكتنا تُصان مع مرور الوقت، عملية تلو الأخرى.
@@ -220,7 +220,7 @@ Features
 [Feature 4] Montage de schémas de financement sur mesure, documentés et présentables aux financeurs | Design of tailor-made financing schemes, documented and presentable to funders | إعداد صيغ تمويل مصممة حسب الحاجة، موثقة وقابلة للعرض على الممولين
 
 Benefits
-[Benefit 1] sliders-horizontal — Schémas sur mesure / Tailor-made schemes / صيغ مصممة حسب الحاجة
+[Benefit 1] settings-2 — Schémas sur mesure / Tailor-made schemes / صيغ مصممة حسب الحاجة
 FR : Un montage construit pour votre projet, et non un modèle standard. Chaque paramètre — maturité, coût, garanties — est ajusté à votre réalité économique.
 EN : A structure built for your project, not a standard template. Every parameter — maturity, cost, guarantees — is adjusted to your economic reality.
 AR : هيكل مبني لمشروعكم، وليس نموذجًا جاهزًا. كل معيار — الآجل والتكلفة والضمانات — يُعدّل وفق واقعكم الاقتصادي.
@@ -298,7 +298,7 @@ AR : خبرة ملائمة لمتطلبات الجهات العمومية وال
 FR : Un suivi de chantier structuré pour respecter qualité, délais et engagements. Les écarts éventuels sont identifiés tôt et corrigés sans attendre.
 EN : Structured site supervision to meet quality, deadlines and commitments. Potential deviations are identified early and corrected without delay.
 AR : متابعة منظمة للورشة لاحترام الجودة والآجال والالتزامات. تُحدَّد الانحرافات المحتملة مبكرًا وتُصحَّح دون تأخير.
-[Benefit 3] network — Chaîne de valeur intégrée / Integrated value chain / سلسلة قيمة متكاملة
+[Benefit 3] share-2 — Chaîne de valeur intégrée / Integrated value chain / سلسلة قيمة متكاملة
 FR : Financement, approvisionnement et transport mobilisables au sein du même groupe, pour réduire les ruptures d'approvisionnement et sécuriser le planning.
 EN : Financing, supply and transport can be mobilized within the same group, reducing supply disruptions and securing the schedule.
 AR : إمكانية تعبئة التمويل والتزويد والنقل داخل المجموعة نفسها، للحد من انقطاعات التوريد وتأمين الجدول الزمني.
@@ -368,7 +368,7 @@ AR : شركاء في غرب إفريقيا وعلى المستوى الدولي 
 FR : Une sélection rigoureuse des fournisseurs et des partenaires commerciaux, avec vérification de la fiabilité des contreparties avant engagement.
 EN : Rigorous selection of suppliers and trading partners, with verification of counterparties' reliability before commitment.
 AR : اختيار دقيق للموردين والشركاء التجاريين، مع التحقق من موثوقية الأطراف المقابلة قبل الالتزام.
-[Benefit 3] route — Continuité jusqu'à la livraison / Continuity through to delivery / استمرارية حتى التسليم
+[Benefit 3] navigation — Continuité jusqu'à la livraison / Continuity through to delivery / استمرارية حتى التسليم
 FR : Le négoce relié au transport et à la logistique du groupe, pour une chaîne d'approvisionnement continue, du point de départ jusqu'au point de livraison.
 EN : Trading connected to the group's transport and logistics, for a continuous supply chain from origin to delivery point.
 AR : تجارة مرتبطة بخدمات النقل واللوجستيك لدى المجموعة، لسلسلة توريد متواصلة من نقطة الانطلاق حتى نقطة التسليم.
@@ -430,7 +430,7 @@ Features
 [Feature 4] Maîtrise de la supply chain : planification, exécution et suivi des flux | Supply chain control: planning, execution and flow tracking | التحكم في سلسلة الإمداد: التخطيط والتنفيذ وتتبّع التدفقات
 
 Benefits
-[Benefit 1] route — Supply chain maîtrisée / Controlled supply chain / سلسلة إمداد محكمة
+[Benefit 1] navigation — Supply chain maîtrisée / Controlled supply chain / سلسلة إمداد محكمة
 FR : Une vision d'ensemble des flux, de l'enlèvement à la livraison, avec des points de contrôle définis à chaque étape.
 EN : A full view of flows, from pickup to delivery, with checkpoints defined at each stage.
 AR : رؤية شاملة للتدفقات، من الاستلام حتى التسليم، مع نقاط مراقبة محددة في كل مرحلة.
@@ -438,7 +438,7 @@ AR : رؤية شاملة للتدفقات، من الاستلام حتى الت�
 FR : Un réseau qui connecte le Mali aux marchés d'Afrique de l'Ouest et internationaux, appuyé sur des partenaires locaux éprouvés.
 EN : A network connecting Mali to West African and international markets, backed by proven local partners.
 AR : شبكة تربط مالي بأسواق غرب إفريقيا والأسواق الدولية، مدعومة بشركاء محليين مُختبَرين.
-[Benefit 3] network — Coordination intégrée / Integrated coordination / تنسيق متكامل
+[Benefit 3] share-2 — Coordination intégrée / Integrated coordination / تنسيق متكامل
 FR : Une logistique reliée au négoce, aux hydrocarbures et au BTP du groupe, pour traiter plusieurs volets d'un même projet avec un seul interlocuteur.
 EN : Logistics linked to the group's trading, hydrocarbons and construction activities, so several aspects of a single project can be handled by one contact.
 AR : لوجستيك مرتبط بأنشطة التجارة والمحروقات والبناء لدى المجموعة، لمعالجة عدة جوانب من مشروع واحد بمحاور واحد.
