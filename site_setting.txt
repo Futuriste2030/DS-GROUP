@@ -1,0 +1,249 @@
+BS-GROUP S.A — CONFIGURATION SITE WEB (COMPANY / SEO / CONTACT / ABOUT / HERO) (FR / EN / AR)
+Structure : formulaire « Company » du CMS
+Légende :
+
+Les champs NON TRADUITS se remplissent une seule fois.
+Les champs TRADUITS se remplissent dans chaque onglet de langue (fr / en / ar).
+Les valeurs préremplies par le client sont conservées ; seules les traductions et les champs vides sont ajoutés.
+Note dénomination : la présentation institutionnelle et le RCCM indiquent « BS-Group S.A », le formulaire indique « BS GROUP ». À harmoniser (conseillé : forme légale « BS-Group S.A », dénomination commerciale « BS GROUP »). Les textes ci-dessous utilisent « BS-GROUP S.A » pour rester cohérents avec les pages services.
+1. COMPANY
+Champs non traduits
+Company name : BS GROUP (prérempli — conserver)
+Company short name : BS GROUP (prérempli — conserver)
+Site url : https://bsgroup.ml (conserver)
+Logo : (à téléverser — fond clair et fond sombre recommandés)
+Champs traduits
+Footer description
+
+[FR] BS-GROUP S.A est un groupe malien intégré réunissant, autour de deux pôles — Énergie & Finance et Infrastructure & Commerce — six expertises complémentaires : hydrocarbures, intermédiation et structuration financière, BTP, négoce international, transport et logistique. De Bamako, nous accompagnons nos clients au Mali et en Afrique de l'Ouest, de bout en bout.
+
+[EN] BS-GROUP S.A is an integrated Malian group built around two divisions — Energy & Finance and Infrastructure & Commerce — and six complementary businesses: hydrocarbons, financial intermediation and structuring, construction and public works, international trade, transport and logistics. Based in Bamako, we support our clients across Mali and West Africa, end to end.
+
+[AR] BS-GROUP S.A مجموعة مالية متكاملة تجمع حول قطبين — الطاقة والتمويل، والبنية التحتية والتجارة — ست خبرات متكاملة: المحروقات، والوساطة المالية والهيكلة المالية، والبناء والأشغال العمومية، والتجارة الدولية، والنقل واللوجستيك. ومن باماكو نرافق عملاءنا في مالي وفي غرب إفريقيا، من البداية إلى النهاية.
+
+2. SEO
+Champs non traduits
+Meta author : BS GROUP (prérempli — conserver)
+Champs traduits
+Meta description (viser ≤ 160 caractères)
+
+[FR] BS-GROUP S.A, groupe malien intégré basé à Bamako : hydrocarbures, finance, BTP, négoce international, transport et logistique. Construire l'avenir avec précision.
+
+[EN] BS-GROUP S.A, an integrated Malian group based in Bamako: hydrocarbons, finance, construction, international trade and logistics. Building the future with precision.
+
+[AR] مجموعة BS-GROUP S.A المتكاملة، مقرها باماكو في مالي: المحروقات والتمويل والبناء والتجارة الدولية والنقل واللوجستيك. نبني المستقبل بدقة.
+
+Meta keywords
+
+[FR] BS GROUP, BS-GROUP S.A, groupe malien, Bamako, Mali, hydrocarbures Mali, produits pétroliers, intermédiation financière, structuration financière, financement de projets, BTP Mali, bâtiment, travaux publics, négoce international, import-export, transport de marchandises, logistique, énergie, Afrique de l'Ouest
+
+[EN] BS GROUP, BS-GROUP S.A, Malian group, Bamako, Mali, hydrocarbons Mali, petroleum products, financial intermediation, financial structuring, project financing, construction Mali, building, public works, international trade, import export, freight transport, logistics, energy, West Africa
+
+[AR] BS GROUP، BS-GROUP S.A، مجموعة مالية، باماكو، مالي، المحروقات في مالي، المنتجات البترولية، الوساطة المالية، الهيكلة المالية، تمويل المشاريع، البناء في مالي، البناء، الأشغال العمومية، التجارة الدولية، الاستيراد والتصدير، نقل البضائع، اللوجستيك، الطاقة، غرب إفريقيا
+
+3. CONTACT
+Champs non traduits
+Phone : +223 76 35 10 35 (suggestion : numéro du Directeur Général — à valider ; les autres numéros disponibles : +223 78 78 26 83, +33 6 24 63 59 28, +33 7 77 60 03 18)
+Email : contact@bsgroup.ml (à créer/valider)
+Careers email : recrutement@bsgroup.ml (à créer/valider)
+Map query : Immeuble Capitole, Hamdallaye ACI 2000, Bamako, Mali
+Latitude : 12.6356 (approximatif — à vérifier via Google Maps : clic droit sur l'emplacement → copier les coordonnées)
+Longitude : -8.0232 (approximatif — à vérifier)
+Champs traduits
+Address
+
+[FR] Immeuble CAPITOLE, Hamdallaye ACI 2000, Bamako — République du Mali
+
+[EN] CAPITOLE Building, Hamdallaye ACI 2000, Bamako — Republic of Mali
+
+[AR] مبنى كابيتول، حمدالله ACI 2000، باماكو — جمهورية مالي
+
+Opening hours weekdays
+
+[FR] Lun – Ven : 15h00 – 20h00
+
+[EN] Mon – Fri : 3:00 PM – 8:00 PM
+
+[AR] الاثنين – الجمعة : 15:00 – 20:00
+
+Opening hours weekend
+
+[FR] Sam – Dim : 11h00 – 18h00
+
+[EN] Sat – Sun : 11:00 AM – 6:00 PM
+
+[AR] السبت – الأحد : 11:00 – 18:00
+
+⚠️ Note : ces horaires (préremplis) sont atypiques pour un siège B2B (15h–20h en semaine). À confirmer avec le client : s'agit-il d'horaires de standard téléphonique, de bureau ou d'accueil ? Sinon, proposer : « Lun – Ven : 8h00 – 17h00 ».
+
+4. LEGAL
+Champs traduits
+[FR] BS-GROUP S.A — Société par actions simplifiée (SAS). RCCM : MA.BKO.2018.B.8807 (02 11 2018). NINA : 41809195100320J. Siège social : Immeuble CAPITOLE, Hamdallaye ACI 2000, Bamako — République du Mali. Directeur Général : Daouda DIAKITE.
+
+[EN] BS-GROUP S.A — Simplified joint-stock company (SAS). Trade register (RCCM): MA.BKO.2018.B.8807 (02/11/2018). NINA: 41809195100320J. Registered office: CAPITOLE Building, Hamdallaye ACI 2000, Bamako — Republic of Mali. General Manager: Daouda DIAKITE.
+
+[AR] BS-GROUP S.A — شركة مبسطة بالأسهم (SAS). السجل التجاري (RCCM): MA.BKO.2018.B.8807 بتاريخ 02/11/2018. رقم التعريف الضريبي الفريد (NINA): 41809195100320J. المقر الاجتماعي: مبنى كابيتول، حمدالله ACI 2000، باماكو — جمهورية مالي. المدير العام: داودا دياكيتي.
+
+5. SOCIAL
+Champs non traduits — à compléter auprès du client
+Facebook url : (à renseigner — ex. https://www.facebook.com/bsgroup.ml)
+Twitter url : (à renseigner)
+Instagram url : (à renseigner)
+Youtube url : (à renseigner — utile aussi pour les vidéos embed du site)
+Pinterest url : (à renseigner, ou laisser vide)
+Si le client n'a pas de réseaux actifs, laisser les champs vides pour masquer les icônes plutôt que d'afficher des liens morts.
+
+6. ABOUT
+Champs non traduits
+About title : BS GROUP (prérempli — conserver)
+About image 1 / About image 2 : (à téléverser — chantier, siège, équipe ou vues du groupe)
+Why image 1 / Why image 2 : (à téléverser)
+Champs traduits
+About description
+
+[FR] BS-GROUP S.A est une entreprise malienne diversifiée qui déploie une offre intégrée sur des secteurs stratégiques complémentaires, pour accompagner le développement économique du Mali et de l'Afrique de l'Ouest. Fondée sur un ancrage fort à Bamako et une connaissance fine du contexte réglementaire et opérationnel malien, notre groupe mobilise des équipes dédiées par métier et des capacités d'intervention étendues à travers la sous-région.
+
+[EN] BS-GROUP S.A is a diversified Malian company deploying an integrated offering across complementary strategic sectors, to support the economic development of Mali and West Africa. Built on strong roots in Bamako and a thorough command of the Malian regulatory and operational context, our group mobilizes dedicated teams for each business and intervention capabilities across the sub-region.
+
+[AR] BS-GROUP S.A شركة مالية متنوعة الأنشطة تقدّم عرضًا متكاملًا في قطاعات استراتيجية متكاملة، لمرافقة التنمية الاقتصادية في مالي وغرب إفريقيا. وباستنادها إلى حضور راسخ في باماكو وإتقان دقيق للسياق التنظيمي والتشغيلي المالي، تعبّئ مجموعتنا فرقًا مخصصة لكل مهنة وقدرات تدخل تمتد عبر المنطقة الإقليمية.
+
+About description 2
+
+[FR] Notre force : une chaîne de valeur intégrée. Nous structurons le financement, sécurisons les ressources, acheminons et bâtissons. Six secteurs, deux pôles — Énergie & Finance, Infrastructure & Commerce — et une seule équipe, pour mener vos projets de bout en bout.
+
+[EN] Our strength: an integrated value chain. We structure financing, secure resources, ship and build. Six sectors, two divisions — Energy & Finance, Infrastructure & Commerce — and one single team, to carry your projects from end to end.
+
+[AR] قوتنا: سلسلة قيمة متكاملة. نهيكل التمويل، ونؤمّن الموارد، وننقل، ونبني. ستة قطاعات، وقطبان — الطاقة والتمويل، والبنية التحتية والتجارة — وفريق واحد، لقيادة مشاريعكم من البداية إلى النهاية.
+
+About section title (prérempli FR — conserver)
+
+[FR] Construire l'avenir avec précision
+[EN] Building the Future with Precision
+[AR] نبني المستقبل بدقة
+
+About section subtitle (prérempli EN — conserver)
+
+[FR] À propos de nous
+[EN] About Us
+[AR] من نحن
+
+Vision title (prérempli EN — conserver)
+
+[FR] Notre vision
+[EN] Our Vision
+[AR] رؤيتنا
+
+Vision description
+
+[FR] Devenir le partenaire intégré de référence pour le financement, la construction et la logistique au Mali et en Afrique de l'Ouest, en bâtissant des infrastructures durables et des chaînes d'approvisionnement fiables.
+
+[EN] To become the reference integrated partner for financing, construction and logistics in Mali and West Africa, by building sustainable infrastructure and reliable supply chains.
+
+[AR] أن نصبح الشريك المتكامل المرجعي في التمويل والبناء واللوجستيك في مالي وغرب إفريقيا، عبر بناء بنى تحتية مستدامة وسلاسل إمداد موثوقة.
+
+Mission title (prérempli EN — conserver)
+
+[FR] Notre mission
+[EN] Our Mission
+[AR] مهمتنا
+
+Mission description
+
+[FR] Accompagner nos clients — administrations, institutions, entreprises et porteurs de projets — dans la réalisation de leurs projets les plus exigeants, avec rigueur, transparence et excellence d'exécution, en mobilisant l'ensemble des expertises du groupe.
+
+[EN] To support our clients — public authorities, institutions, companies and project owners — in delivering their most demanding projects, with rigor, transparency and excellence in execution, by mobilizing the group's full range of expertise.
+
+[AR] مرافقة عملائنا — الإدارات والمؤسسات والشركات وأصحاب المشاريع — في إنجاز أكثر مشاريعهم تطلّبًا، بالصرامة والشفافية والتميز في التنفيذ، عبر تعبئة جميع خبرات المجموعة.
+
+Process title (prérempli EN — conserver)
+
+[FR] Notre méthode
+[EN] How We Build
+[AR] كيف نبني
+
+Process description
+
+[FR] Notre méthode suit la chaîne de valeur du groupe : structurer le capital (intermédiation et structuration financière), sécuriser les ressources (hydrocarbures et négoce), acheminer (transport et logistique), puis bâtir (BTP). Un interlocuteur unique coordonne chaque étape, du cadrage à la livraison.
+
+[EN] Our method follows the group's value chain: structure the capital (financial intermediation and structuring), secure the resources (hydrocarbons and trading), ship (transport and logistics), then build (construction). A single point of contact coordinates every stage, from scoping to delivery.
+
+[AR] تتبع منهجيتنا سلسلة قيمة المجموعة: هيكلة رأس المال (الوساطة والهيكلة المالية)، وتأمين الموارد (المحروقات والتجارة)، والإيصال (النقل واللوجستيك)، ثم البناء (الأشغال العمومية). محاور واحد ينسّق كل مرحلة، من تحديد النطاق حتى التسليم.
+
+Why subtitle (prérempli EN — conserver)
+
+[FR] Pourquoi nous choisir
+[EN] Why Choose Us
+[AR] لماذا تختارنا
+
+Why title (prérempli EN — conserver)
+
+[FR] Pourquoi nos clients nous font confiance
+[EN] Why Our Clients Trust Us
+[AR] لماذا يثق بنا عملاؤنا
+
+7. VIDÉO DU SITE
+Champs non traduits — à compléter
+About video url : (URL embed YouTube « …/embed/… » ou MP4 direct — vide = vidéo de démo)
+About video cover : (à téléverser — image derrière le bouton play ; vide = About image 1)
+Hero video url : (URL embed YouTube ou MP4 direct pour le bouton play du hero ; vide = vidéo About)
+Hero video cover : (à téléverser — vide = Hero image 1)
+8. HERO
+Champs non traduits
+Hero image 1 / Hero image 2 / Hero image 3 : (à téléverser — skyline de Bamako, chantier, infrastructures)
+Champs traduits
+Hero badge (prérempli FR — conserver)
+
+[FR] BS GROUP — Bâtir avec excellence
+[EN] BS GROUP — Building with Excellence
+[AR] BS GROUP — نبني بامتياز
+
+Hero title (prérempli FR — conserver)
+
+[FR] Construire l'avenir avec précision
+[EN] Building the Future with Precision
+[AR] نبني المستقبل بدقة
+
+Hero description
+
+[FR] Groupe malien intégré — Énergie, Finance, Infrastructures, Négoce, Logistique. Un seul partenaire pour financer, sourcer, acheminer et bâtir vos projets au Mali et en Afrique de l'Ouest.
+
+[EN] An integrated Malian group — Energy, Finance, Infrastructure, Trade, Logistics. One single partner to finance, source, ship and build your projects across Mali and West Africa.
+
+[AR] مجموعة مالية متكاملة — الطاقة، التمويل، البنى التحتية، التجارة، اللوجستيك. شريك واحد لتمويل وتوريد ونقل وبناء مشاريعكم في مالي وغرب إفريقيا.
+
+9. SECTIONS
+Champs traduits
+Services section title (prérempli FR — conserver ; voir note)
+
+[FR] Nos expertises construction
+[EN] Our Construction Expertise
+[AR] خبراتنا في البناء
+
+Note : ce titre prérempli privilégie la dimension construction, alors que le site couvre 6 services (énergie, finance, commerce, logistique). Deux options :
+
+Option A (conserver le choix client) : FR « Nos expertises construction » — EN « Our Construction Expertise » — AR « خبراتنا في البناء ».
+Option B (plus englobante, recommandée) : FR « Nos domaines d'expertise » — EN « Our Areas of Expertise » — AR « مجالات خبرتنا ».
+Contact image : (à téléverser — façade du siège ou vue de Bamako)
+
+Quote budget options (une option par ligne — libellés FR ; traduire EN/AR si le CMS le permet)
+
+Moins de 10 000 000 FCFA
+10 000 000 – 50 000 000 FCFA
+50 000 000 – 100 000 000 FCFA
+100 000 000 – 500 000 000 FCFA
+Plus de 500 000 000 FCFA
+À définir
+
+Traductions EN (si nécessaire) : Less than XOF 10,000,000 / XOF 10–50 M / XOF 50–100 M / XOF 100–500 M / More than XOF 500 M / To be defined.
+Traductions AR : أقل من 10 000 000 فرنك / 10–50 مليون فرنك / 50–100 مليون فرنك / 100–500 مليون فرنك / أكثر من 500 000 000 فرنك / يُحدَّد لاحقًا.
+
+Quote timeline options (une option par ligne)
+
+Moins de 3 mois
+3 à 6 mois
+6 à 12 mois
+Plus de 12 mois
+Selon le projet
+
+Traductions EN : Less than 3 months / 3 to 6 months / 6 to 12 months / More than 12 months / Depending on the project.
+Traductions AR : أقل من 3 أشهر / 3 إلى 6 أشهر / 6 إلى 12 شهرًا / أكثر من 12 شهرًا / حسب المشروع.

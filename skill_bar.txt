@@ -1,0 +1,67 @@
+BS-GROUP S.A — SKILL BARS (FR / EN / AR)
+Structure : formulaire « Ajout de skill bar » du CMS
+Légende :
+
+Label : champ traduit → à saisir dans chaque onglet (fr / en / ar).
+Percentage / Order : champs non traduits → à saisir une seule fois.
+Conseil d'affichage : rester dans une fourchette crédible (85–98 %) et éviter le 100 %, qui affaiblit la crédibilité.
+PACK A — LES 6 EXPERTISES DU GROUPE (recommandé)
+SKILL 1 / 6
+--- CHAMPS NON TRADUITS ---
+Percentage : 95
+Order : 0
+
+--- CHAMPS TRADUITS ---
+[FR] Label : BTP — Bâtiment & Travaux Publics
+[EN] Label : Construction & Public Works
+[AR] Label : البناء والأشغال العمومية
+
+SKILL 2 / 6
+--- CHAMPS NON TRADUITS ---
+Percentage : 92
+Order : 1
+
+--- CHAMPS TRADUITS ---
+[FR] Label : Transport & Logistique
+[EN] Label : Transport & Logistics
+[AR] Label : النقل واللوجستيك
+
+SKILL 3 / 6
+--- CHAMPS NON TRADUITS ---
+Percentage : 90
+Order : 2
+
+--- CHAMPS TRADUITS ---
+[FR] Label : Hydrocarbures & Produits Pétroliers
+[EN] Label : Hydrocarbons & Petroleum Products
+[AR] Label : المحروقات والمنتجات البترولية
+
+SKILL 4 / 6
+--- CHAMPS NON TRADUITS ---
+Percentage : 88
+Order : 3
+
+--- CHAMPS TRADUITS ---
+[FR] Label : Négoce International
+[EN] Label : International Trade
+[AR] Label : التجارة الدولية
+
+SKILL 5 / 6
+--- CHAMPS NON TRADUITS ---
+Percentage : 86
+Order : 4
+
+--- CHAMPS TRADUITS ---
+[FR] Label : Structuration Financière
+[EN] Label : Financial Structuring
+[AR] Label : الهيكلة المالية
+
+SKILL 6 / 6
+--- CHAMPS NON TRADUITS ---
+Percentage : 85
+Order : 5
+
+--- CHAMPS TRADUITS ---
+[FR] Label : Intermédiation Financière
+[EN] Label : Financial Intermediation
+[AR] Label : الوساطة المالية

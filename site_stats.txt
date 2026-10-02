@@ -1,0 +1,55 @@
+BS-GROUP S.A — SITE STATS (FR / EN / AR)
+Structure : formulaire « Ajout de site stat » du CMS
+Légende :
+
+Value / Suffix / Order : champs non traduits → à saisir une seule fois.
+Label : champ traduit → à saisir dans chaque onglet (fr / en / ar).
+Les compteurs s'affichent généralement dans l'ordre croissant de Order.
+PACK A — REPÈRES INSTITUTIONNELS (factuels, recommandé)
+Ne repose que sur des données vérifiables dans les documents du client : RCCM du 02/11/2018, 6 expertises, 2 pôles (présentation d'entreprise, écosystème).
+
+STAT 1 / 4
+--- CHAMPS NON TRADUITS ---
+Value : 6
+Suffix : (vide)
+Order : 0
+
+--- CHAMPS TRADUITS ---
+[FR] Label : Domaines d'expertise
+[EN] Label : Areas of Expertise
+[AR] Label : مجالات الخبرة
+
+STAT 2 / 4
+--- CHAMPS NON TRADUITS ---
+Value : 2
+Suffix : (vide)
+Order : 1
+
+--- CHAMPS TRADUITS ---
+[FR] Label : Pôles stratégiques
+[EN] Label : Strategic Divisions
+[AR] Label : قطبان استراتيجيان
+
+STAT 3 / 4
+--- CHAMPS NON TRADUITS ---
+Value : 2018
+Suffix : (vide)
+Order : 2
+
+--- CHAMPS TRADUITS ---
+[FR] Label : Année de création
+[EN] Label : Year Founded
+[AR] Label : سنة التأسيس
+
+STAT 4 / 4
+--- CHAMPS NON TRADUITS ---
+Value : 100
+Suffix : %
+Order : 3
+
+--- CHAMPS TRADUITS ---
+[FR] Label : Engagement qualité & conformité
+[EN] Label : Commitment to Quality & Compliance
+[AR] Label : التزام بالجودة والامتثال
+
+Variante STAT 3 : si vous préférez afficher une ancienneté plutôt que l'année de création — Value : 7, Suffix : +, Order : 2 — [FR] « Années d'expérience » / [EN] « Years of Experience » / [AR] « سنوات من الخبرة ». Calcul : 7 années révolues depuis le 02/11/2018 (position en 2026). Passer à 8+ à partir de novembre 2026, puis mettre à jour chaque année.

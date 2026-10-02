@@ -1,0 +1,250 @@
+BS-GROUP S.A — FAQ (FR / EN / AR)
+Structure : formulaire « Ajout de faq » du CMS
+Légende :
+
+Category / Order : champs non traduits → à saisir une seule fois. Valeurs de catégorie acceptées : General, Services & Process, Payments & Budget, Warranty & Support (saisir exactement ces libellés).
+Question / Answer : champs traduits → à saisir dans chaque onglet (fr / en / ar).
+Les réponses ont été calibrées (2 à 3 phrases) pour une lisibilité type accordéon.
+CATÉGORIE : General
+FAQ 1 / 12
+--- CHAMPS NON TRADUITS ---
+Category : General
+Order : 0
+
+--- CHAMPS TRADUITS ---
+[FR] Question : Qu'est-ce que BS GROUP ?
+[FR] Answer : BS-GROUP S.A est un groupe malien intégré fondé en 2018, réunissant six expertises organisées en deux pôles stratégiques — Énergie & Finance et Infrastructure & Commerce. Depuis son siège de Bamako, il accompagne ses clients de bout en bout : financer, sourcer, acheminer et bâtir.
+
+[EN] Question : What is BS GROUP?
+[EN] Answer : BS-GROUP S.A is an integrated Malian group founded in 2018, bringing together six businesses organized into two strategic divisions — Energy & Finance and Infrastructure & Commerce. From its Bamako headquarters, it supports its clients end to end: financing, sourcing, shipping and building.
+
+[AR] Question : ما هي BS GROUP؟
+[AR] Answer : BS-GROUP S.A مجموعة مالية متكاملة تأسست عام 2018، تجمع ست خبرات موزعة على قطبين استراتيجيين — الطاقة والتمويل، والبنية التحتية والتجارة. ومن مقرها في باماكو، ترافق عملاءها من البداية إلى النهاية: تمويل، وتوريد، ونقل، وبناء.
+
+FAQ 2 / 12
+--- CHAMPS NON TRADUITS ---
+Category : General
+Order : 1
+
+--- CHAMPS TRADUITS ---
+[FR] Question : Dans quels pays intervenez-vous ?
+[FR] Answer : Notre siège est à Bamako (Mali), où nous intervenons sur l'ensemble du territoire national. Grâce à notre réseau de négoce et de logistique, nos capacités d'intervention s'étendent à travers l'Afrique de l'Ouest, appuyées sur des partenaires régionaux et internationaux.
+
+[EN] Question : Which countries do you operate in?
+[EN] Answer : Our headquarters are in Bamako (Mali), where we operate nationwide. Through our trading and logistics network, our intervention capabilities extend across West Africa, supported by regional and international partners.
+
+[AR] Question : في أي الدول تعملون؟
+[AR] Answer : مقرنا في باماكو (مالي)، حيث نتدخل في كامل التراب الوطني. وبفضل شبكتنا في التجارة واللوجستيك، تمتد قدرات تدخلنا عبر غرب إفريقيا، مدعومة بشركاء إقليميين ودوليين.
+
+FAQ 3 / 12
+--- CHAMPS NON TRADUITS ---
+Category : General
+Order : 2
+
+--- CHAMPS TRADUITS ---
+[FR] Question : Quels types de clients accompagnez-vous ?
+[FR] Answer : Nous accompagnons des clients publics et privés exigeants : administrations, institutions, entreprises industrielles et commerciales, distributeurs, ainsi que des porteurs de projets à la recherche de financement, de ressources ou d'exécution.
+
+[EN] Question : What types of clients do you support?
+[EN] Answer : We support demanding public and private clients: public authorities, institutions, industrial and commercial companies, distributors, as well as project owners seeking financing, resources or execution.
+
+[AR] Question : ما أنواع العملاء الذين ترافقونهم؟
+[AR] Answer : نرافق عملاء عموميين وخواص ذوي متطلبات عالية: الإدارات، والمؤسسات، والشركات الصناعية والتجارية، والموزعين، إضافة إلى أصحاب المشاريع الباحثين عن تمويل أو موارد أو تنفيذ.
+
+FAQ 4 / 12 (optionnelle)
+--- CHAMPS NON TRADUITS ---
+Category : General
+Order : 3
+
+--- CHAMPS TRADUITS ---
+[FR] Question : Qui dirige BS GROUP ?
+[FR] Answer : Le groupe est porté par une équipe dirigeante engagée : Eric Sékou CHELLE et Aboubacar Demba DEMBELE (CEO – Managers General), Daouda DIAKITE (Directeur Général) et Ibrahim DIAKITE (Directeur Général Adjoint).
+
+[EN] Question : Who leads BS GROUP?
+[EN] Answer : The group is led by a committed executive team: Eric Sékou CHELLE and Aboubacar Demba DEMBELE (CEO – General Managers), Daouda DIAKITE (General Manager) and Ibrahim DIAKITE (Deputy General Manager).
+
+[AR] Question : من يدير BS GROUP؟
+[AR] Answer : يقود المجموعة فريق تنفيذي ملتزم: إريك سيكو شيلي وأبوبكر ديمبا ديمبيلي (الرئيس التنفيذي – مديران عامان)، وداودا دياكيتي (المدير العام)، وإبراهيم دياكيتي (نائب المدير العام).
+
+CATÉGORIE : Services & Process
+FAQ 5 / 12
+--- CHAMPS NON TRADUITS ---
+Category : Services & Process
+Order : 4
+
+--- CHAMPS TRADUITS ---
+[FR] Question : Quels services propose BS GROUP ?
+[FR] Answer : Six expertises complémentaires : Hydrocarbures & Accessoires, Intermédiation Financière, Structuration Financière, BTP, Négoce International et Transport & Logistique. Chaque service peut être mobilisé seul ou en combinaison avec les autres.
+
+[EN] Question : What services does BS GROUP offer?
+[EN] Answer : Six complementary businesses: Hydrocarbons & Accessories, Financial Intermediation, Financial Structuring, Construction & Public Works, International Trade, and Transport & Logistics. Each service can be used on its own or combined with the others.
+
+[AR] Question : ما الخدمات التي تقدمها BS GROUP؟
+[AR] Answer : ست خبرات متكاملة: المحروقات والملحقات، والوساطة المالية، والهيكلة المالية، والبناء والأشغال العمومية، والتجارة الدولية، والنقل واللوجستيك. يمكن طلب كل خدمة على حدة أو الجمع بينها.
+
+FAQ 6 / 12
+--- CHAMPS NON TRADUITS ---
+Category : Services & Process
+Order : 5
+
+--- CHAMPS TRADUITS ---
+[FR] Question : Comment démarre une collaboration avec BS GROUP ?
+[FR] Answer : Tout commence par un échange : vous nous transmettez votre besoin via le formulaire de contact ou de devis. Nous étudions votre projet, revenons vers vous avec une proposition adaptée, puis contractualisons avant d'exécuter et de suivre l'opération.
+
+[EN] Question : How does a collaboration with BS GROUP begin?
+[EN] Answer : It all starts with a conversation: you submit your requirement through the contact or quote form. We study your project, come back to you with a tailored proposal, then formalize the agreement before executing and monitoring the operation.
+
+[AR] Question : كيف تبدأ التعاون مع BS GROUP؟
+[AR] Answer : يبدأ كل شيء بحوار: تقدمون حاجتكم عبر نموذج الاتصال أو نموذج عرض السعر. ندرس مشروعكم، ونعود إليكم بعرض ملائم، ثم نتعاقد قبل التنفيذ والمتابعة.
+
+FAQ 7 / 12
+--- CHAMPS NON TRADUITS ---
+Category : Services & Process
+Order : 6
+
+--- CHAMPS TRADUITS ---
+[FR] Question : Puis-je solliciter un seul service ou combiner plusieurs ?
+[FR] Answer : Les deux. Notre modèle intégré est conçu pour combiner les expertises : financer un projet, importer les ressources, les acheminer et réaliser les travaux — avec un interlocuteur unique qui coordonne l'ensemble.
+
+[EN] Question : Can I request a single service or combine several?
+[EN] Answer : Both. Our integrated model is designed to combine expertise: finance a project, import the resources, ship them and carry out the works — with a single point of contact coordinating everything.
+
+[AR] Question : هل يمكنني طلب خدمة واحدة أو الجمع بين عدة خدمات؟
+[AR] Answer : كلاهما ممكن. نموذجنا المتكامل مصمم للجمع بين الخبرات: تمويل المشروع، واستيراد الموارد، ونقلها، وتنفيذ الأشغال — بمحاور واحد ينسّق كل شيء.
+
+FAQ 8 / 12 (optionnelle)
+--- CHAMPS NON TRADUITS ---
+Category : Services & Process
+Order : 7
+
+--- CHAMPS TRADUITS ---
+[FR] Question : Comment suivez-vous l'exécution des projets ?
+[FR] Answer : Chaque opération fait l'objet d'un cadrage précis, d'une planification réaliste et d'un reporting périodique. Des points d'étape réguliers tiennent le client informé de l'avancement et permettent d'anticiper les décisions clés.
+
+[EN] Question : How do you monitor project execution?
+[EN] Answer : Every operation follows precise scoping, realistic planning and periodic reporting. Regular stage reviews keep the client informed of progress and help anticipate key decisions.
+
+[AR] Question : كيف تتابعون تنفيذ المشاريع؟
+[AR] Answer : تخضع كل عملية لتحديد دقيق للنطاق، وتخطيط واقعي، وتقارير دورية. لقاءات مرحلية منتظمة تُبقي العميل على اطلاع بتقدم الأشغال وتتيح توقّع القرارات الأساسية.
+
+CATÉGORIE : Payments & Budget
+FAQ 9 / 12
+--- CHAMPS NON TRADUITS ---
+Category : Payments & Budget
+Order : 8
+
+--- CHAMPS TRADUITS ---
+[FR] Question : Comment obtenir un devis ?
+[FR] Answer : Remplissez le formulaire de devis en précisant le service concerné, votre budget estimé et votre calendrier. Notre équipe revient vers vous avec une offre détaillée, adaptée en volume, en délai et en conditions.
+
+[EN] Question : How do I get a quote?
+[EN] Answer : Fill in the quote form specifying the relevant service, your estimated budget and your timeline. Our team will come back to you with a detailed offer, tailored in volume, lead time and terms.
+
+[AR] Question : كيف أحصل على عرض سعر؟
+[AR] Answer : املؤوا نموذج عرض السعر مع تحديد الخدمة المعنية، والميزانية التقديرية، والجدول الزمني. يعود فريقنا إليكم بعرض مفصل، ملائم من حيث الكميات والآجال والشروط.
+
+FAQ 10 / 12
+--- CHAMPS NON TRADUITS ---
+Category : Payments & Budget
+Order : 9
+
+--- CHAMPS TRADUITS ---
+[FR] Question : Quels sont les budgets types d'intervention ?
+[FR] Answer : Nos interventions couvrent une large gamme, de commandes ponctuelles de produits à des projets d'infrastructure majeurs. Les fourchettes proposées dans le formulaire de devis — de moins de 10 millions à plus de 500 millions FCFA — nous aident à calibrer notre réponse.
+
+[EN] Question : What are typical project budgets?
+[EN] Answer : Our interventions cover a wide range, from one-off product orders to major infrastructure projects. The ranges offered in the quote form — from less than 10 million to over 500 million FCFA — help us calibrate our response.
+
+[AR] Question : ما هي الميزانيات النموذجية للتدخل؟
+[AR] Answer : تغطي تدخلاتنا نطاقًا واسعًا، من طلبات منتجات فردية إلى مشاريع بنى تحتية كبرى. تساعدنا الفئات المقترحة في نموذج عرض السعر — من أقل من 10 ملايين إلى أكثر من 500 مليون فرنك — على معايرة ردنا.
+
+FAQ 11 / 12 ⚠️
+--- CHAMPS NON TRADUITS ---
+Category : Payments & Budget
+Order : 10
+
+--- CHAMPS TRADUITS ---
+[FR] Question : Quels sont les modes et conditions de paiement ?
+[FR] Answer : Les modalités de paiement sont définies contractuellement pour chaque projet, avec des échéanciers adaptés à la nature de l'opération. Contactez-nous pour convenir ensemble des conditions de votre dossier.
+
+[EN] Question : What are the payment methods and terms?
+[EN] Answer : Payment terms are defined contractually for each project, with schedules suited to the nature of the operation. Contact us to agree on the terms of your file.
+
+[AR] Question : ما هي طرق وشروط الدفع؟
+[AR] Answer : تُحدَّد شروط الدفع تعاقديًا لكل مشروع، بجداول زمنية ملائمة لطبيعة العملية. تواصلوا معنا للاتفاق على شروط ملفكم.
+
+FAQ 12 / 12 (optionnelle) ⚠️
+--- CHAMPS NON TRADUITS ---
+Category : Payments & Budget
+Order : 11
+
+--- CHAMPS TRADUITS ---
+[FR] Question : L'étude préliminaire est-elle payante ?
+[FR] Answer : L'échange initial et la qualification de votre besoin sont gratuits. Les études détaillées — faisabilité technique ou montages financiers complexes — peuvent donner lieu à une proposition spécifique, précisée avant tout engagement.
+
+[EN] Question : Is the preliminary study free of charge?
+[EN] Answer : The initial exchange and the assessment of your needs are free. Detailed studies — technical feasibility or complex financing structures — may be subject to a specific proposal, clarified before any commitment.
+
+[AR] Question : هل الدراسة الأولية مؤدى عنها؟
+[AR] Answer : الحوار الأولي وتقييم حاجتكم مجانيان. أما الدراسات المفصلة — الجدوى التقنية أو الهياكل المالية المعقدة — فقد تكون محل عرض خاص، يُوضح قبل أي التزام.
+
+CATÉGORIE : Warranty & Support
+FAQ 13 / 12
+--- CHAMPS NON TRADUITS ---
+Category : Warranty & Support
+Order : 12
+
+--- CHAMPS TRADUITS ---
+[FR] Question : Quelles garanties offrez-vous sur vos réalisations ?
+[FR] Answer : Nous nous engageons sur la qualité et la conformité de nos produits et de nos ouvrages, dans le respect des normes applicables et des stipulations contractuelles. Chaque livraison fait l'objet d'un contrôle avant remise au client.
+
+[EN] Question : What guarantees do you provide on your deliveries?
+[EN] Answer : We commit to the quality and compliance of our products and works, in accordance with applicable standards and contractual provisions. Every delivery is inspected before handover to the client.
+
+[AR] Question : ما الضمانات التي تقدمونها على منجزاتكم؟
+[AR] Answer : نلتزم بجودة ومطابقة منتجاتنا ومنشآتنا، وفقًا للمعايير السارية والشروط التعاقدية. تخضع كل عملية تسليم لمراقبة قبل التسليم للعميل.
+
+FAQ 14 / 12
+--- CHAMPS NON TRADUITS ---
+Category : Warranty & Support
+Order : 13
+
+--- CHAMPS TRADUITS ---
+[FR] Question : Assurez-vous un suivi après livraison ?
+[FR] Answer : Oui. Chaque opération inclut un suivi après livraison : contrôle de conformité, retour d'information au client et accompagnement pour anticiper les besoins suivants.
+
+[EN] Question : Do you provide post-delivery follow-up?
+[EN] Answer : Yes. Every operation includes post-delivery follow-up: compliance check, client feedback and support to anticipate subsequent needs.
+
+[AR] Question : هل تضمنون متابعة بعد التسليم؟
+[AR] Answer : نعم. تتضمن كل عملية متابعة بعد التسليم: التحقق من المطابقة، وإبلاغ العميل، والمرافقة لتوقّع الاحتياجات المقبلة.
+
+FAQ 15 / 12
+--- CHAMPS NON TRADUITS ---
+Category : Warranty & Support
+Order : 14
+
+--- CHAMPS TRADUITS ---
+[FR] Question : Que faire en cas de problème après une livraison ?
+[FR] Answer : Contactez votre interlocuteur dédié ou notre équipe via les coordonnées du site. Nous analysons votre signalement et mettons en œuvre les corrections nécessaires dans les meilleurs délais, conformément au contrat.
+
+[EN] Question : What should I do if an issue arises after delivery?
+[EN] Answer : Contact your dedicated representative or our team through the website details. We review your report and implement the necessary corrections as quickly as possible, in accordance with the contract.
+
+[AR] Question : ماذا أفعل في حال وجود مشكلة بعد التسليم؟
+[AR] Answer : تواصلوا مع محاوركم المخصص أو مع فريقنا عبر معلومات الاتصال في الموقع. ندرس إشعاركم وننفذ التصحيحات اللازمة في أقرب الآجال، وفقًا للعقد.
+
+FAQ 16 / 12 (optionnelle) ⚠️
+--- CHAMPS NON TRADUITS ---
+Category : Warranty & Support
+Order : 15
+
+--- CHAMPS TRADUITS ---
+[FR] Question : Vos produits pétroliers respectent-ils des normes de qualité ?
+[FR] Answer : Oui. La qualité et la conformité des produits guident notre sourcing : fournisseurs fiables et audités, contrôle des produits livrés et respect des normes en vigueur.
+
+[EN] Question : Do your petroleum products meet quality standards?
+[EN] Answer : Yes. Product quality and compliance guide our sourcing: reliable, audited suppliers, checks on delivered products and compliance with applicable standards.
+
+[AR] Question : هل تخضع منتجاتكم البترولية لمعايير الجودة؟
+[AR] Answer : نعم. توجه جودة المنتجات ومطابقتها عملية التوريد لدينا: موردون موثوقون ومُدقَّقون، ومراقبة للمنتجات المسلَّمة، واحترام للمعايير السارية.

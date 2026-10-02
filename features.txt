@@ -1,0 +1,68 @@
+BS-GROUP S.A — FEATURES (FR / EN / AR)
+Structure : formulaire « Ajout de feature » du CMS
+Légende :
+
+Icon / Order : champs non traduits → à saisir une seule fois.
+Title / Description : champs traduits → à saisir dans chaque onglet (fr / en / ar).
+PACK A — LES 4 PILIERS STRATÉGIQUES (recommandé, section Why Choose Us)
+Reprend exactement les 4 quadrants « Notre Approche Stratégique » de la présentation PowerPoint, avec des descriptions enrichies.
+
+FEATURE 1 / 4
+--- CHAMPS NON TRADUITS ---
+Icon : layers
+Order : 0
+
+--- CHAMPS TRADUITS ---
+[FR] Title : Diversification Maîtrisée
+[FR] Description : Une capacité d'intervention multi-sectorielle sur un même projet. Financement, approvisionnement, logistique et construction sont mobilisés ensemble, sous une coordination unique, pour réduire les délais et sécuriser chaque étape.
+
+[EN] Title : Mastered Diversification
+[EN] Description : Multi-sector intervention capability on a single project. Financing, supply, logistics and construction are mobilized together, under unified coordination, to reduce lead times and secure every stage.
+
+[AR] Title : تنويع مُحكم
+[AR] Description : قدرة تدخل متعددة القطاعات في مشروع واحد. يتم تعبئة التمويل والتزويد واللوجستيك والبناء معًا، تحت تنسيق موحد، لاختصار الآجال وتأمين كل مرحلة.
+
+FEATURE 2 / 4
+--- CHAMPS NON TRADUITS ---
+Icon : globe
+Order : 1
+
+--- CHAMPS TRADUITS ---
+[FR] Title : Réseau Régional
+[FR] Description : Des capacités de négoce et de logistique résolument tournées vers l'Afrique de l'Ouest et l'international. Un réseau de partenaires entretenus au fil des opérations connecte le Mali aux grands marchés de la sous-région et du monde.
+
+[EN] Title : Regional Network
+[EN] Description : Trading and logistics capabilities firmly oriented toward West Africa and international markets. A partner network built operation after operation connects Mali to the major markets of the sub-region and the world.
+
+[AR] Title : شبكة إقليمية
+[AR] Description : قدرات في التجارة واللوجستيك موجهة بثبات نحو غرب إفريقيا والأسواق الدولية. شبكة شركاء تُعتنى بها عملية تلو الأخرى تربط مالي بأسواق المنطقة والعالم الكبرى.
+
+FEATURE 3 / 4
+--- CHAMPS NON TRADUITS ---
+Icon : map-pin
+Order : 2
+
+--- CHAMPS TRADUITS ---
+[FR] Title : Ancrage Local
+[FR] Description : Une implantation forte à Bamako et une maîtrise du contexte réglementaire et opérationnel malien. Cette connaissance du terrain facilite les formalités, fiabilise les opérations et sécurise l'exécution des projets.
+
+[EN] Title : Local Roots
+[EN] Description : A strong presence in Bamako and a thorough command of the Malian regulatory and operational context. This field knowledge streamlines formalities, makes operations more reliable and secures project delivery.
+
+[AR] Title : حضور محلي راسخ
+[AR] Description : حضور قوي في باماكو وإتقان للسياق التنظيمي والتشغيلي في مالي. هذه المعرفة الميدانية تُسهّل الإجراءات، وتزيد موثوقية العمليات، وتؤمّن تنفيذ المشاريع.
+
+FEATURE 4 / 4
+--- CHAMPS NON TRADUITS ---
+Icon : users
+Order : 3
+
+--- CHAMPS TRADUITS ---
+[FR] Title : Approche Partenariale
+[FR] Description : Un engagement fondamental à bâtir des collaborations durables avec nos clients, fournisseurs et partenaires financiers. Nous mesurons notre réussite à la solidité des relations et à la satisfaction des parties prenantes.
+
+[EN] Title : Partnership Approach
+[EN] Description : A fundamental commitment to building lasting collaborations with our clients, suppliers and financial partners. We measure our success by the strength of relationships and stakeholder satisfaction.
+
+[AR] Title : نهج شراكة
+[AR] Description : التزام أساسي ببناء تعاونات دائمة مع عملائنا وموردينا وشركائنا الماليين. نقيس نجاحنا بمتانة العلاقات وبرضا أصحاب المصلحة.

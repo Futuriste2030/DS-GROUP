@@ -1,0 +1,73 @@
+BS-GROUP S.A — PROCESS STEPS (FR / EN / AR)
+Structure : formulaire « Ajout de process step » du CMS
+Légende :
+
+Number / Icon / Order : champs non traduits → à saisir une seule fois.
+Title / Description : champs traduits → à saisir dans chaque onglet (fr / en / ar).
+Le champ Number s'affiche généralement tel quel sur le site (01, 02, 03…) ; Order détermine la séquence.
+PACK A — CHAÎNE DE VALEUR INTÉGRÉE (recommandé, 4 étapes)
+Reprend exactement le schéma « Une Chaîne de Valeur Intégrée » de la présentation : Structurer → Sécuriser → Acheminer → Bâtir. À associer au titre de section « How We Build / Notre méthode ».
+
+STEP 1 / 4
+--- CHAMPS NON TRADUITS ---
+Number : 01
+Icon : landmark
+Order : 0
+
+--- CHAMPS TRADUITS ---
+[FR] Title : Structurer le Capital
+[FR] Description : Intermédiation et structuration financière : nous montons les financements adaptés à votre projet, en dette, en fonds propres ou en financements mixtes, et le présentons aux partenaires les plus pertinents.
+
+[EN] Title : Structure the Capital
+[EN] Description : Financial intermediation and structuring: we design the financing tailored to your project — debt, equity or blended schemes — and present it to the most relevant partners.
+
+[AR] Title : هيكلة رأس المال
+[AR] Description : الوساطة والهيكلة المالية: نُعدّ التمويل الملائم لمشروعكم — بالدين أو الأموال الخاصة أو التمويلات المختلطة — ونعرضه على الشركاء الأكثر ملاءمة.
+
+STEP 2 / 4
+--- CHAMPS NON TRADUITS ---
+Number : 02
+Icon : archive
+Order : 1
+
+--- CHAMPS TRADUITS ---
+[FR] Title : Sécuriser les Ressources
+[FR] Description : Hydrocarbures et négoce international : nous identifions les produits et marchandises nécessaires et les sourçons auprès de fournisseurs fiables, vérifiés et audités.
+
+[EN] Title : Secure the Resources
+[EN] Description : Hydrocarbons and international trade: we identify the required products and goods and source them from reliable, vetted and audited suppliers.
+
+[AR] Title : تأمين الموارد
+[AR] Description : المحروقات والتجارة الدولية: نحدد المنتجات والبضائع اللازمة ونسورسها من موردين موثوقين، تم التحقق منهم وتدقيتهم.
+
+STEP 3 / 4
+--- CHAMPS NON TRADUITS ---
+Number : 03
+Icon : truck
+Order : 2
+
+--- CHAMPS TRADUITS ---
+[FR] Title : Acheminer
+[FR] Description : Transport et logistique de bout en bout : nous planifions les itinéraires, organisons le transport des marchandises et suivons chaque étape jusqu'à la livraison finale.
+
+[EN] Title : Ship & Deliver
+[EN] Description : End-to-end transport and logistics: we plan routes, organize freight transport and track every stage through to final delivery.
+
+[AR] Title : الإيصال
+[AR] Description : نقل ولوجستيك من البداية إلى النهاية: نخطط المسارات، وننظم نقل البضائع، ونتتبع كل مرحلة حتى التسليم النهائي.
+
+STEP 4 / 4
+--- CHAMPS NON TRADUITS ---
+Number : 04
+Icon : hard-hat
+Order : 3
+
+--- CHAMPS TRADUITS ---
+[FR] Title : Bâtir
+[FR] Description : Réalisation BTP : nos équipes exécutent les travaux avec un suivi rigoureux de la qualité, des délais et des engagements, jusqu'à la réception de l'ouvrage.
+
+[EN] Title : Build
+[EN] Description : Construction delivery: our teams execute the works with rigorous monitoring of quality, deadlines and commitments, through to acceptance of the structure.
+
+[AR] Title : البناء
+[AR] Description : تنفيذ الأشغال: تنجز فرقنا الأعمال بمتابعة صارمة للجودة والآجال والالتزامات، حتى استلام المنشأة.
