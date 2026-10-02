@@ -1,27 +1,17 @@
-BS-GROUP S.A — SERVICES DU SITE WEB (FR / EN / AR)
-Structure : formulaire "Ajout de service" du CMS
+BS-GROUP S.A — SERVICES DU SITE WEB (FR / EN / AR) — VERSION ENRICHIE
+Structure : formulaire « Ajout de service » du CMS
 6 services — chacun avec 4 features, 4 benefits, 4 steps
 
 Légende :
-- Les champs "NON TRADUITS" se remplissent une seule fois.
-- Les champs "TRADUITS" se remplissent dans chaque onglet de langue (fr / en / ar).
-- Les valeurs de Timeline, Team size et Warranty sont des formulations génériques : à valider avec le client avant mise en ligne.
 
-##############################################################
+Les champs NON TRADUITS se remplissent une seule fois.
+Les champs TRADUITS se remplissent dans chaque onglet de langue (fr / en / ar).
+Les champs Excerpt, Title, Category, Timeline, Team size, Warranty et alt d'images restent inchangés.
+Textes enrichis dans cette version : Intro, Approach, Includes description, Benefits description, Process description, Features, Benefits (descriptions), Steps (descriptions).
+Les valeurs de Timeline, Team size et Warranty restent des formulations génériques : à valider avec le client avant mise en ligne.
 SERVICE 1 / 6 — HYDROCARBURES & ACCESSOIRES
-##############################################################
-
---- CHAMPS NON TRADUITS ---
-Slug : hydrocarbures-accessoires
-Image : (à téléverser)
-Icon : fuel
-Image 1 : (à téléverser)
-Image 2 : (à téléverser)
-Video cover : (à téléverser)
-Video url : (à renseigner si une vidéo existe)
-Order : 0
-
---- CHAMPS TRADUITS ---
+Champs non traduits
+Slug : hydrocarbures-accessoires | Icon : fuel | Order : 0 | Images 1, 2, cover, vidéo : (à téléverser)
 
 [FR]
 Title : Hydrocarbures & Accessoires
@@ -30,18 +20,18 @@ Category : Énergie & Finance
 Timeline : Selon la nature du projet
 Team size : Équipe dédiée
 Warranty : Qualité et conformité des produits
-Intro : BS-GROUP S.A accompagne ses clients dans l'approvisionnement et la distribution de produits pétroliers et dérivés, ainsi que dans la fourniture des équipements et accessoires associés, au Mali et dans la sous-région ouest-africaine.
+Intro : BS-GROUP S.A accompagne ses clients dans l'approvisionnement et la distribution de produits pétroliers et dérivés, ainsi que dans la fourniture des équipements et accessoires associés, au Mali et dans la sous-région ouest-africaine. Cette activité s'adresse aux industriels, aux distributeurs, aux institutions et aux porteurs de projets qui requièrent un approvisionnement énergétique fiable, continu et conforme aux normes. Adossée au négoce international et aux capacités de transport et de logistique du groupe, elle couvre l'ensemble de la chaîne, du sourcing jusqu'à la livraison sur site. Notre objectif est simple : garantir la continuité de votre exploitation dans un environnement exigeant.
 Approach title : Notre approche
-Approach : Nous sécurisons l'approvisionnement grâce à un réseau de fournisseurs et de partenaires logistiques, et à une maîtrise du contexte réglementaire et opérationnel malien. Chaque besoin est étudié afin de proposer une solution adaptée en volume, en délai et en conditions.
+Approach : Nous sécurisons l'approvisionnement grâce à un réseau de fournisseurs et de partenaires logistiques éprouvés, ainsi qu'à une maîtrise fine du contexte réglementaire et opérationnel malien. Chaque besoin est étudié individuellement afin de proposer une solution adaptée en volume, en délai et en conditions. Notre appartenance à un groupe intégré nous permet de combiner, sur une même opération, le financement, l'acheminement et la distribution, ce qui réduit les ruptures de chaîne et optimise les coûts. Enfin, la conformité des produits et le respect des procédures de sécurité guident chacune de nos interventions, de la sélection des sources jusqu'à la remise sur site.
 Includes title : Ce que comprend le service
-Includes description : Un accompagnement complet, de l'identification de votre besoin à la livraison des produits et des équipements.
+Includes description : Un accompagnement complet, de l'identification de votre besoin à la livraison des produits et des équipements : étude de vos consommations, sourcing auprès de fournisseurs qualifiés, négociation des conditions commerciales, organisation du transport et suivi jusqu'à réception. La fourniture d'équipements — cuves, pompes, installations de stockage — et d'accessoires, pièces et consommables complète l'offre, pour couvrir l'ensemble des besoins opérationnels liés aux hydrocarbures.
 Image 1 alt : Stockage et distribution de produits pétroliers
 Image 2 alt : Équipements et accessoires associés aux hydrocarbures
 Benefits title : Ce qui nous distingue
-Benefits description : Les raisons pour lesquelles nos clients nous confient leur approvisionnement.
+Benefits description : Les raisons pour lesquelles nos clients nous confient leur approvisionnement : la fiabilité de notre chaîne, la conformité de nos produits et la capacité à mobiliser l'ensemble des métiers du groupe autour d'un même besoin, du financement à la livraison finale.
 Video cover alt : Présentation de l'activité Hydrocarbures & Accessoires de BS-GROUP S.A
 Process title : Comment nous procédons
-Process description : Une méthode claire en quatre étapes, de votre demande jusqu'à la livraison.
+Process description : Une méthode claire en quatre étapes, de votre demande jusqu'à la livraison : nous cadrons précisément le besoin, sélectionnons les sources d'approvisionnement les mieux positionnées, organisons l'acheminement puis assurons un suivi rigoureux après livraison, afin d'anticiper vos prochains besoins.
 
 [EN]
 Title : Hydrocarbons & Accessories
@@ -50,18 +40,18 @@ Category : Energy & Finance
 Timeline : Depending on the project
 Team size : Dedicated team
 Warranty : Product quality and compliance
-Intro : BS-GROUP S.A supports its clients in the supply and distribution of petroleum products and derivatives, as well as in the provision of related equipment and accessories, in Mali and across the West African sub-region.
+Intro : BS-GROUP S.A supports its clients in the supply and distribution of petroleum products and derivatives, as well as in the provision of related equipment and accessories, in Mali and across the West African sub-region. This activity serves industrial companies, distributors, institutions and project owners that require a reliable, continuous and compliant energy supply. Backed by the group's international trading arm and its transport and logistics capabilities, it covers the entire chain, from sourcing to on-site delivery. Our goal is simple: to keep your operations running in a demanding environment.
 Approach title : Our Approach
-Approach : We secure supply through a network of suppliers and logistics partners, backed by a thorough command of the Malian regulatory and operational context. Each need is studied in order to offer a solution suited in volume, lead time and terms.
+Approach : We secure supply through a network of proven suppliers and logistics partners, backed by a thorough command of the Malian regulatory and operational context. Each requirement is studied individually so as to offer a solution suited in volume, lead time and terms. Our membership in an integrated group allows us to combine financing, shipping and distribution within a single operation, reducing chain disruptions and optimizing costs. Lastly, product compliance and adherence to safety procedures guide every intervention, from source selection to on-site delivery.
 Includes title : What's Included
-Includes description : Complete support, from identifying your needs to delivering the products and equipment.
+Includes description : Complete support, from identifying your needs to delivering the products and equipment: analysis of your consumption, sourcing from qualified suppliers, negotiation of commercial terms, transport organization and follow-up through to receipt. The supply of equipment — storage tanks, pumps, installations — and of accessories, parts and consumables rounds out the offer to cover all operational needs related to hydrocarbons.
 Image 1 alt : Storage and distribution of petroleum products
 Image 2 alt : Equipment and accessories related to hydrocarbons
 Benefits title : What Sets Us Apart
-Benefits description : The reasons why our clients entrust us with their supply.
+Benefits description : The reasons why our clients entrust us with their supply: the reliability of our chain, the compliance of our products and the ability to mobilize all of the group's businesses around a single need, from financing to final delivery.
 Video cover alt : Presentation of BS-GROUP S.A's Hydrocarbons & Accessories activity
 Process title : How We Work
-Process description : A clear four-step method, from your request to delivery.
+Process description : A clear four-step method, from your request to delivery: we precisely scope the requirement, select the best-positioned supply sources, organize shipping and then provide rigorous follow-up after delivery, in order to anticipate your future needs.
 
 [AR]
 Title : المحروقات والملحقات
@@ -70,863 +60,407 @@ Category : الطاقة والتمويل
 Timeline : حسب طبيعة المشروع
 Team size : فريق مخصص
 Warranty : جودة المنتجات ومطابقتها
-Intro : تُرافق BS-GROUP S.A عملاءها في تزويد وتوزيع المنتجات البترولية ومشتقاتها، وكذلك في توفير المعدات والملحقات المرتبطة بها، في مالي وفي منطقة غرب إفريقيا.
+Intro : تُرافق BS-GROUP S.A عملاءها في تزويد وتوزيع المنتجات البترولية ومشتقاتها، وكذلك في توفير المعدات والملحقات المرتبطة بها، في مالي وفي منطقة غرب إفريقيا. تستهدف هذه الأنشطة الشركات الصناعية والموزعين والمؤسسات وأصحاب المشاريع التي تحتاج إلى تزويد طاقي موثوق ومستمر ومطابق للمعايير. وباعتمادها على نشاط التجارة الدولية للمجموعة وقدراتها في النقل واللوجستيك، تغطي السلسلة بأكملها من البحث عن المصادر حتى التسليم في موقع العمل. هدفنا بسيط: ضمان استمرارية تشغيلكم في بيئة تتطلب الكثير.
 Approach title : نهجنا
-Approach : نؤمّن التزويد بفضل شبكة من الموردين والشركاء اللوجستيين، وبإتقان السياق التنظيمي والتشغيلي في مالي. تتم دراسة كل حاجة على حدة لتقديم حل ملائم من حيث الكميات والآجال والشروط.
+Approach : نؤمّن التزويد بفضل شبكة من الموردين والشركاء اللوجستيين المُختبَرين، وإتقان دقيق للسياق التنظيمي والتشغيلي في مالي. تُدرس كل حاجة على حدة لتقديم حل ملائم من حيث الكميات والآجال والشروط. ويسمح لنا انتماؤنا إلى مجموعة متكاملة بالجمع بين التمويل والنقل والتوزيع في عملية واحدة، مما يحدّ من انقطاع السلسلة ويحسّن التكاليف. كما توجه مطابقة المنتجات واحترام إجراءات السلامة كل تدخلاتنا، من اختيار المصادر حتى التسليم في الموقع.
 Includes title : ما تشمله الخدمة
-Includes description : مرافقة متكاملة، من تحديد حاجتكم إلى تسليم المنتجات والمعدات.
+Includes description : مرافقة متكاملة، من تحديد حاجتكم إلى تسليم المنتجات والمعدات: دراسة استهلاككم، والبحث عن الموردين المؤهلين، والتفاوض على الشروط التجارية، وتنظيم النقل، والمتابعة حتى الاستلام. ويكتمل العرض بتوفير المعدات — خزانات ومضخات ومرافق تخزين — والملحقات وقطع الغيار والمستهلكات، لتغطية جميع الاحتياجات التشغيلية المرتبطة بالمحروقات.
 Image 1 alt : تخزين وتوزيع المنتجات البترولية
 Image 2 alt : معدات وملحقات مرتبطة بالمحروقات
 Benefits title : ما يميّزنا
-Benefits description : الأسباب التي تجعل عملاءنا يوكلون إلينا تزويدهم.
+Benefits description : الأسباب التي تجعل عملاءنا يوكلون إلينا تزويدهم: موثوقية سلسلتنا، ومطابقة منتجاتنا، وقدرتنا على تعبئة جميع مهن المجموعة حول حاجة واحدة، من التمويل حتى التسليم النهائي.
 Video cover alt : تقديم نشاط المحروقات والملحقات لدى BS-GROUP S.A
 Process title : كيف نعمل
-Process description : منهجية واضحة من أربع مراحل، من طلبكم حتى التسليم.
+Process description : منهجية واضحة من أربع مراحل، من طلبكم حتى التسليم: نحدد الحاجة بدقة، ثم نختار مصادر التزويد الأنسب، ثم ننظم الإيصال، ثم نضمن متابعة صارمة بعد التسليم لتوقّع احتياجاتكم القادمة.
 
---- SERVICE FEATURES (4) ---
-[Feature 1] Order : 0
-  FR : Approvisionnement en produits pétroliers
-  EN : Supply of petroleum products
-  AR : التزويد بالمنتجات البترولية
-[Feature 2] Order : 1
-  FR : Distribution et négoce de produits dérivés
-  EN : Distribution and trading of derivative products
-  AR : توزيع المنتجات المشتقة والمتاجرة بها
-[Feature 3] Order : 2
-  FR : Fourniture d'équipements associés
-  EN : Supply of related equipment
-  AR : توفير المعدات المرتبطة
-[Feature 4] Order : 3
-  FR : Fourniture d'accessoires associés
-  EN : Supply of related accessories
-  AR : توفير الملحقات المرتبطة
+Features
+[Feature 1] Order : 0 — FR : Approvisionnement en produits pétroliers : carburants, lubrifiants et produits spéciaux, selon les normes de qualité en vigueur | EN : Supply of petroleum products: fuels, lubricants and specialty products, in line with applicable quality standards | AR : التزويد بالمنتجات البترولية: الوقود والزيوت والمنتجات الخاصة، وفق معايير الجودة السارية
+[Feature 2] Order : 1 — FR : Distribution et négoce de produits dérivés, au profit des industriels comme des distributeurs | EN : Distribution and trading of derivative products, for industrial clients and distributors alike | AR : توزيع المنتجات المشتقة والمتاجرة بها، لفائدة الصناعيين والموزعين على حد سواء
+[Feature 3] Order : 2 — FR : Fourniture d'équipements associés : cuves de stockage, pompes et installations | EN : Supply of related equipment: storage tanks, pumps and installations | AR : توفير المعدات المرتبطة: خزانات تخزين ومضخات ومرافق
+[Feature 4] Order : 3 — FR : Fourniture d'accessoires et de consommables nécessaires à l'exploitation | EN : Supply of accessories and consumables required for operations | AR : توفير الملحقات والمستهلكات اللازمة للتشغيل
 
---- SERVICE BENEFITS (4) ---
-[Benefit 1] Icon : shield-check | Order : 0
-  Title FR : Approvisionnement sécurisé
-  Title EN : Secure supply
-  Title AR : تزويد مؤمَّن
-  Description FR : Un réseau de fournisseurs fiables pour garantir la continuité de vos besoins.
-  Description EN : A network of reliable suppliers to ensure the continuity of your needs.
-  Description AR : شبكة من الموردين الموثوقين لضمان استمرارية احتياجاتكم.
-[Benefit 2] Icon : map-pin | Order : 1
-  Title FR : Ancrage local
-  Title EN : Local roots
-  Title AR : حضور محلي راسخ
-  Description FR : Une maîtrise du contexte réglementaire et opérationnel malien.
-  Description EN : A solid command of the Malian regulatory and operational context.
-  Description AR : إتقان للسياق التنظيمي والتشغيلي في مالي.
-[Benefit 3] Icon : network | Order : 2
-  Title FR : Chaîne intégrée
-  Title EN : Integrated chain
-  Title AR : سلسلة متكاملة
-  Description FR : Possibilité d'associer transport, logistique et financement grâce aux autres activités du groupe.
-  Description EN : Transport, logistics and financing can be combined through the group's other activities.
-  Description AR : إمكانية الجمع بين النقل واللوجستيك والتمويل عبر الأنشطة الأخرى للمجموعة.
-[Benefit 4] Icon : package | Order : 3
-  Title FR : Offre sur mesure
-  Title EN : Tailored offer
-  Title AR : عرض مخصص
-  Description FR : Des volumes, des délais et des conditions adaptés à chaque client.
-  Description EN : Volumes, lead times and terms adapted to each client.
-  Description AR : كميات وآجال وشروط ملائمة لكل عميل.
+Benefits
+[Benefit 1] Icon : shield-check — Approvisionnement sécurisé / Secure supply / تزويد مؤمَّن
+FR : Un réseau de fournisseurs fiables et audités pour garantir la continuité de vos besoins, même dans des contextes tendus. Nos processus de contrôle limitent les ruptures et sécurisent vos approvisionnements dans la durée.
+EN : A network of reliable, vetted suppliers to ensure the continuity of your needs, even in tight contexts. Our control processes limit disruptions and secure your supplies over the long term.
+AR : شبكة من الموردين الموثوقين والمُدقَّقين لضمان استمرارية احتياجاتكم، حتى في السياقات المضغوطة. تحدّ عمليات المراقبة لدينا من الانقطاعات وتؤمّن تزويدكم على المدى الطويل.
+[Benefit 2] Icon : map-pin — Ancrage local / Local roots / حضور محلي راسخ
+FR : Une maîtrise du contexte réglementaire et opérationnel malien, acquise auprès des administrations et des acteurs de la place. Cette connaissance du terrain facilite les formalités, réduit les délais et fiabilise les opérations.
+EN : A solid command of the Malian regulatory and operational context, built through work with local authorities and stakeholders. This field knowledge streamlines formalities, shortens lead times and makes operations more reliable.
+AR : إتقان للسياق التنظيمي والتشغيلي في مالي، اكتُسب عبر العمل مع الإدارات والفاعلين المحليين. هذه المعرفة الميدانية تُسهّل الإجراءات وتختصر الآجال وتزيد موثوقية العمليات.
+[Benefit 3] Icon : network — Chaîne intégrée / Integrated chain / سلسلة متكاملة
+FR : La possibilité d'associer transport, logistique et financement grâce aux autres activités du groupe. Un seul interlocuteur coordonne l'ensemble de votre opération, du sourcing jusqu'à la livraison finale.
+EN : Transport, logistics and financing can be combined through the group's other activities. A single point of contact coordinates your entire operation, from sourcing to final delivery.
+AR : إمكانية الجمع بين النقل واللوجستيك والتمويل عبر الأنشطة الأخرى للمجموعة. محاور واحد ينسّق كامل عمليتكم، من البحث عن المصادر حتى التسليم النهائي.
+[Benefit 4] Icon : package — Offre sur mesure / Tailored offer / عرض مخصص
+FR : Des volumes, des délais et des conditions adaptés à chaque client, qu'il s'agisse d'une commande ponctuelle ou d'un contrat d'approvisionnement pluriannuel. Notre proposition évolue avec vos besoins et vos cycles d'exploitation.
+EN : Volumes, lead times and terms adapted to each client, whether a one-off order or a multi-year supply contract. Our offer evolves with your needs and operating cycles.
+AR : كميات وآجال وشروط ملائمة لكل عميل، سواء تعلق الأمر بطلبية واحدة أو بعقد تزويد يمتد لسنوات. يتطور عرضنا مع احتياجاتكم ودورات تشغيلكم.
 
---- SERVICE STEPS (4) ---
-[Step 1] Number : 01 | Order : 0
-  Title FR : Analyse du besoin
-  Title EN : Needs analysis
-  Title AR : تحليل الحاجة
-  Description FR : Nature des produits, volumes, délais et lieux de livraison.
-  Description EN : Type of products, volumes, lead times and delivery locations.
-  Description AR : طبيعة المنتجات والكميات والآجال وأماكن التسليم.
-[Step 2] Number : 02 | Order : 1
-  Title FR : Sourcing et offre
-  Title EN : Sourcing and offer
-  Title AR : البحث عن الموردين والعرض
-  Description FR : Sélection des fournisseurs et remise d'une offre détaillée.
-  Description EN : Supplier selection and delivery of a detailed offer.
-  Description AR : اختيار الموردين وتقديم عرض مفصل.
-[Step 3] Number : 03 | Order : 2
-  Title FR : Acheminement
-  Title EN : Delivery logistics
-  Title AR : الإيصال
-  Description FR : Organisation du transport et de la livraison jusqu'au site du client.
-  Description EN : Organization of transport and delivery to the client's site.
-  Description AR : تنظيم النقل والتسليم حتى موقع العميل.
-[Step 4] Number : 04 | Order : 3
-  Title FR : Suivi
-  Title EN : Follow-up
-  Title AR : المتابعة
-  Description FR : Contrôle de la livraison et suivi après-vente.
-  Description EN : Delivery check and after-sales follow-up.
-  Description AR : مراقبة التسليم والمتابعة بعد البيع.
+Steps
+[Step 1] 01 — Analyse du besoin / Needs analysis / تحليل الحاجة
+FR : Étude de la nature des produits, des volumes, des délais et des lieux de livraison, sur la base de vos cahiers des charges et de vos cycles de consommation.
+EN : Study of product types, volumes, lead times and delivery locations, based on your specifications and consumption cycles.
+AR : دراسة طبيعة المنتجات والكميات والآجال وأماكن التسليم، استنادًا إلى دفاتر التحمل ودورات استهلاككم.
+[Step 2] 02 — Sourcing et offre / Sourcing and offer / البحث عن الموردين والعرض
+FR : Sélection des fournisseurs les mieux positionnés et remise d'une offre détaillée, précisant les produits, les conditions commerciales et les modalités de livraison.
+EN : Selection of the best-positioned suppliers and delivery of a detailed offer specifying products, commercial terms and delivery arrangements.
+AR : اختيار الموردين الأفضل موقعًا وتقديم عرض مفصل يحدد المنتجات والشروط التجارية وترتيبات التسليم.
+[Step 3] 03 — Acheminement / Delivery logistics / الإيصال
+FR : Organisation du transport et de la livraison jusqu'au site du client, en mobilisant les capacités logistiques du groupe et en respectant les contraintes de sécurité.
+EN : Organization of transport and delivery to the client's site, mobilizing the group's logistics capabilities while respecting safety constraints.
+AR : تنظيم النقل والتسليم حتى موقع العميل، مع تعبئة القدرات اللوجستية للمجموعة واحترام قيود السلامة.
+[Step 4] 04 — Suivi / Follow-up / المتابعة
+FR : Contrôle de la livraison, vérification de la conformité des produits et suivi après-vente pour anticiper vos prochains besoins.
+EN : Delivery check, product compliance verification and after-sales follow-up to anticipate your next requirements.
+AR : مراقبة التسليم والتحقق من مطابقة المنتجات والمتابعة بعد البيع لتوقّع احتياجاتكم المقبلة.
 
-##############################################################
 SERVICE 2 / 6 — INTERMÉDIATION FINANCIÈRE
-##############################################################
-
---- CHAMPS NON TRADUITS ---
-Slug : intermediation-financiere
-Image : (à téléverser)
-Icon : handshake
-Image 1 : (à téléverser)
-Image 2 : (à téléverser)
-Video cover : (à téléverser)
-Video url : (à renseigner si une vidéo existe)
-Order : 1
-
---- CHAMPS TRADUITS ---
+Champs non traduits
+Slug : intermediation-financiere | Icon : handshake | Order : 1 | Images : (à téléverser)
 
 [FR]
-Title : Intermédiation Financière
 Excerpt : Mise en relation stratégique entre porteurs de projets et partenaires financiers : banques, investisseurs et bailleurs de fonds.
-Category : Énergie & Finance
-Timeline : Selon la nature du projet
-Team size : Équipe dédiée
-Warranty : Engagement de transparence
-Intro : BS-GROUP S.A met en relation les porteurs de projets avec les partenaires financiers les plus adaptés : banques, investisseurs et bailleurs de fonds.
-Approach title : Notre approche
-Approach : Nous étudions votre projet, identifions les partenaires dont les attentes correspondent à votre besoin, puis facilitons les échanges jusqu'à la décision. Notre rôle est de rapprocher les bonnes parties, avec clarté et rigueur.
-Includes title : Ce que comprend le service
-Includes description : Un accompagnement de la présentation de votre projet jusqu'à la mise en relation avec les partenaires financiers.
-Image 1 alt : Rencontre entre un porteur de projet et des partenaires financiers
-Image 2 alt : Étude d'un dossier de financement
-Benefits title : Ce qui nous distingue
-Benefits description : Ce que vous gagnez en passant par BS-GROUP S.A pour trouver vos financements.
-Video cover alt : Présentation de l'activité Intermédiation Financière de BS-GROUP S.A
-Process title : Comment nous procédons
-Process description : Une démarche en quatre étapes, de l'étude du projet à la décision des partenaires.
+Intro : BS-GROUP S.A met en relation les porteurs de projets avec les partenaires financiers les plus adaptés : banques, investisseurs et bailleurs de fonds. Qu'il s'agisse de financer un projet d'infrastructure, de développer une activité industrielle ou de structurer le capital d'une entreprise, nous accompagnons nos clients dans la préparation, la valorisation et la défense de leur dossier. Notre connaissance des acteurs financiers actifs au Mali et dans la sous-région, ainsi que la crédibilité du groupe, facilitent l'ouverture des bonnes portes. Notre engagement : un traitement rigoureux, confidentiel et transparent de chaque dossier confié.
+Approach : Nous étudions votre projet, identifions les partenaires dont les attentes correspondent à votre besoin, puis facilitons les échanges jusqu'à la décision. Notre rôle est de rapprocher les bonnes parties, avec clarté et rigueur. En amont, nous vous aidons à consolider votre dossier : chiffres clés, structure du projet, argumentaire. En aval, nous restons à vos côtés pendant les échanges, les questions des partenaires et la phase de finalisation. Cette présence continue augmente les chances de succès et fait gagner un temps précieux aux porteurs de projets.
+Includes description : Un accompagnement de la présentation de votre projet jusqu'à la mise en relation avec les partenaires financiers : préparation et relecture du dossier, identification des bailleurs et investisseurs pertinents, organisation des premiers échanges et suivi des discussions. Nous veillons à ce que chaque document transmis soit clair, cohérent et conforme aux attentes des financiers.
+Benefits description : Ce que vous gagnez en passant par BS-GROUP S.A pour trouver vos financements : un accès direct à un réseau qualifié, un dossier mieux préparé et un interlocuteur unique qui coordonne l'ensemble des échanges.
+Process description : Une démarche en quatre étapes, de l'étude du projet à la décision des partenaires : nous comprenons vos objectifs, sélectionnons les acteurs pertinents, présentons votre dossier puis accompagnons les échanges jusqu'à leur aboutissement.
 
 [EN]
-Title : Financial Intermediation
 Excerpt : Strategic matchmaking between project owners and financial partners: banks, investors and funding providers.
-Category : Energy & Finance
-Timeline : Depending on the project
-Team size : Dedicated team
-Warranty : Commitment to transparency
-Intro : BS-GROUP S.A connects project owners with the most suitable financial partners: banks, investors and funding providers.
-Approach title : Our Approach
-Approach : We study your project, identify the partners whose expectations match your needs, then facilitate discussions through to the decision. Our role is to bring the right parties together, with clarity and rigor.
-Includes title : What's Included
-Includes description : Support from the presentation of your project to the introduction to financial partners.
-Image 1 alt : Meeting between a project owner and financial partners
-Image 2 alt : Review of a financing file
-Benefits title : What Sets Us Apart
-Benefits description : What you gain by going through BS-GROUP S.A to find your funding.
-Video cover alt : Presentation of BS-GROUP S.A's Financial Intermediation activity
-Process title : How We Work
-Process description : A four-step approach, from project review to the partners' decision.
+Intro : BS-GROUP S.A connects project owners with the most suitable financial partners: banks, investors and funding providers. Whether to finance an infrastructure project, develop an industrial activity or structure a company's capital, we support our clients in preparing, enhancing and defending their file. Our knowledge of the financial players active in Mali and the sub-region, along with the group's credibility, opens the right doors. Our commitment: rigorous, confidential and transparent handling of every file entrusted to us.
+Approach : We study your project, identify the partners whose expectations match your needs, then facilitate discussions through to the decision. Our role is to bring the right parties together, with clarity and rigor. Upstream, we help you consolidate your file: key figures, project structure, pitch. Downstream, we remain at your side during discussions, partner questions and the finalization phase. This continuous presence increases the chances of success and saves project owners valuable time.
+Includes description : Support from the presentation of your project to the introduction to financial partners: preparation and review of the file, identification of relevant funders and investors, arrangement of first discussions and follow-up of negotiations. We ensure that every document sent is clear, consistent and in line with financiers' expectations.
+Benefits description : What you gain by going through BS-GROUP S.A to find your funding: direct access to a qualified network, a better-prepared file and a single point of contact who coordinates all discussions.
+Process description : A four-step approach, from project review to the partners' decision: we understand your objectives, select the relevant players, present your file and then support the discussions through to completion.
 
 [AR]
-Title : الوساطة المالية
 Excerpt : ربط استراتيجي بين أصحاب المشاريع والشركاء الماليين: البنوك والمستثمرين والجهات المانحة.
-Category : الطاقة والتمويل
-Timeline : حسب طبيعة المشروع
-Team size : فريق مخصص
-Warranty : التزام بالشفافية
-Intro : تربط BS-GROUP S.A أصحاب المشاريع بالشركاء الماليين الأنسب: البنوك والمستثمرين والجهات المانحة.
-Approach title : نهجنا
-Approach : ندرس مشروعكم، ونحدد الشركاء الذين تتوافق توقعاتهم مع حاجتكم، ثم نسهّل التواصل حتى اتخاذ القرار. دورنا هو التقريب بين الأطراف المناسبة، بوضوح ودقة.
-Includes title : ما تشمله الخدمة
-Includes description : مرافقة من عرض مشروعكم حتى الربط مع الشركاء الماليين.
-Image 1 alt : لقاء بين صاحب مشروع وشركاء ماليين
-Image 2 alt : دراسة ملف تمويل
-Benefits title : ما يميّزنا
-Benefits description : ما تكسبونه عند اللجوء إلى BS-GROUP S.A للبحث عن التمويل.
-Video cover alt : تقديم نشاط الوساطة المالية لدى BS-GROUP S.A
-Process title : كيف نعمل
-Process description : منهجية من أربع مراحل، من دراسة المشروع حتى قرار الشركاء.
+Intro : تربط BS-GROUP S.A أصحاب المشاريع بالشركاء الماليين الأنسب: البنوك والمستثمرين والجهات المانحة. سواء تعلق الأمر بتمويل مشروع بنية تحتية، أو تطوير نشاط صناعي، أو هيكلة رأسمال شركة، نرافق عملاءنا في إعداد ملفاتهم وإبراز قيمتها والدفاع عنها. معرفتنا بالفاعلين الماليين النشطين في مالي وفي المنطقة، ومصداقية المجموعة، تفتحان الأبواب الصحيحة. التزامنا: معالجة صارمة وسرية وشفافة لكل ملف يُؤتمن علينا.
+Approach : ندرس مشروعكم، ونحدد الشركاء الذين تتوافق توقعاتهم مع حاجتكم، ثم نسهّل التواصل حتى اتخاذ القرار. دورنا هو التقريب بين الأطراف المناسبة، بوضوح ودقة. في البداية، نساعدكم على تعزيز ملفكم: الأرقام الأساسية، وهيكل المشروع، والحجة العرضية. وفي المرحلة اللاحقة، نبقى إلى جانبكم خلال المحادثات وأسئلة الشركاء ومرحلة الإتمام. هذا الحضور المستمر يزيد فرص النجاح ويوفّر وقتًا ثمينًا لأصحاب المشاريع.
+Includes description : مرافقة من عرض مشروعكم حتى الربط مع الشركاء الماليين: إعداد الملف ومراجعته، وتحديد الجهات المانحة والمستثمرين المناسبين، وتنظيم اللقاءات الأولى، ومتابعة المحادثات. نحرص على أن تكون كل وثيقة مُرسلة واضحة ومتسقة ومتوافقة مع توقعات الممولين.
+Benefits description : ما تكسبونه عند اللجوء إلى BS-GROUP S.A للبحث عن التمويل: وصول مباشر إلى شبكة مؤهلة، وملف أفضل إعدادًا، ومحاور واحد ينسّق جميع المحادثات.
+Process description : منهجية من أربع مراحل، من دراسة المشروع حتى قرار الشركاء: نفهم أهدافكم، ونختار الفاعلين المناسبين، ونعرض ملفكم، ثم نرافق المحادثات حتى نتيجتها.
 
---- SERVICE FEATURES (4) ---
-[Feature 1] Order : 0
-  FR : Mise en relation avec les banques
-  EN : Introductions to banks
-  AR : الربط مع البنوك
-[Feature 2] Order : 1
-  FR : Accès à des investisseurs
-  EN : Access to investors
-  AR : الوصول إلى المستثمرين
-[Feature 3] Order : 2
-  FR : Contact avec les bailleurs de fonds
-  EN : Contact with funding providers
-  AR : التواصل مع الجهات المانحة
-[Feature 4] Order : 3
-  FR : Présentation et valorisation du dossier de projet
-  EN : Presentation and enhancement of the project file
-  AR : عرض ملف المشروع وإبراز قيمته
+Features
+[Feature 1] Mise en relation avec des banques adaptées à la nature et à l'échelle de votre projet | Introductions to banks suited to the nature and scale of your project | الربط مع بنوك ملائمة لطبيعة مشروعكم وحجمه
+[Feature 2] Accès à des investisseurs et à des fonds intéressés par les secteurs d'activité du groupe | Access to investors and funds interested in the group's business sectors | الوصول إلى مستثمرين وصناديق مهتمة بقطاعات نشاط المجموعة
+[Feature 3] Contact avec les bailleurs de fonds, multilatéraux comme institutionnels | Contact with funding providers, both multilateral and institutional | التواصل مع الجهات المانحة، متعددة الأطراف والمؤسسية على حد سواء
+[Feature 4] Présentation et valorisation du dossier de projet : structure, chiffres et argumentaire | Presentation and enhancement of the project file: structure, figures and pitch | عرض ملف المشروع وإبراز قيمته: الهيكل والأرقام والحجة
 
---- SERVICE BENEFITS (4) ---
-[Benefit 1] Icon : network | Order : 0
-  Title FR : Réseau de partenaires
-  Title EN : Partner network
-  Title AR : شبكة شركاء
-  Description FR : Un accès facilité à des banques, des investisseurs et des bailleurs de fonds.
-  Description EN : Easier access to banks, investors and funding providers.
-  Description AR : وصول أسهل إلى البنوك والمستثمرين والجهات المانحة.
-[Benefit 2] Icon : clock | Order : 1
-  Title FR : Gain de temps
-  Title EN : Time saved
-  Title AR : توفير الوقت
-  Description FR : Nous allons directement vers les partenaires pertinents pour votre projet.
-  Description EN : We go straight to the partners relevant to your project.
-  Description AR : نتجه مباشرة إلى الشركاء المناسبين لمشروعكم.
-[Benefit 3] Icon : lock | Order : 2
-  Title FR : Confidentialité
-  Title EN : Confidentiality
-  Title AR : السرية
-  Description FR : Vos informations sont traitées avec discrétion et partagées uniquement avec votre accord.
-  Description EN : Your information is handled with discretion and shared only with your consent.
-  Description AR : تُعالج معلوماتكم بسرية ولا تُشارك إلا بموافقتكم.
-[Benefit 4] Icon : users | Order : 3
-  Title FR : Approche partenariale
-  Title EN : Partnership approach
-  Title AR : نهج شراكة
-  Description FR : Une collaboration durable fondée sur la confiance avec les porteurs de projets et les financeurs.
-  Description EN : A lasting, trust-based collaboration with project owners and financiers.
-  Description AR : تعاون دائم قائم على الثقة مع أصحاب المشاريع والممولين.
+Benefits
+[Benefit 1] network — Réseau de partenaires / Partner network / شبكة شركاء
+FR : Un accès facilité à des banques, des investisseurs et des bailleurs de fonds actifs au Mali et dans la sous-région. Notre réseau est entretenu dans la durée, au fil des opérations réalisées.
+EN : Easier access to banks, investors and funding providers active in Mali and the sub-region. Our network is maintained over time, operation after operation.
+AR : وصول أسهل إلى البنوك والمستثمرين والجهات المانحة النشطة في مالي وفي المنطقة. شبكتنا تُصان مع مرور الوقت، عملية تلو الأخرى.
+[Benefit 2] clock — Gain de temps / Time saved / توفير الوقت
+FR : Nous allons directement vers les partenaires pertinents pour votre projet, sans démarches inutiles. Vous concentrez votre énergie sur la préparation de votre projet, nous sur l'ouverture des bonnes portes.
+EN : We go straight to the partners relevant to your project, with no wasted approaches. You focus on preparing your project; we focus on opening the right doors.
+AR : نتجه مباشرة إلى الشركاء المناسبين لمشروعكم، دون مساعي عديمة الجدوى. تركزون أنتم على إعداد مشروعكم، ونحن على فتح الأبواب الصحيحة.
+[Benefit 3] lock — Confidentialité / Confidentiality / السرية
+FR : Vos informations sont traitées avec discrétion et partagées uniquement avec votre accord. Les documents sensibles circulent dans un cadre maîtrisé, entre interlocuteurs identifiés.
+EN : Your information is handled with discretion and shared only with your consent. Sensitive documents circulate within a controlled framework, between identified contacts.
+AR : تُعالج معلوماتكم بسرية ولا تُشارك إلا بموافقتكم. تتنقل الوثائق الحساسة في إطار مضبوط بين محاورين معروفين.
+[Benefit 4] users — Approche partenariale / Partnership approach / نهج شراكة
+FR : Une collaboration durable fondée sur la confiance avec les porteurs de projets et les financeurs. Nous mesurons notre réussite à la solidité des montages conclus et à la satisfaction des deux parties.
+EN : A lasting, trust-based collaboration with project owners and financiers. We measure our success by the solidity of the deals concluded and the satisfaction of both parties.
+AR : تعاون دائم قائم على الثقة مع أصحاب المشاريع والممولين. نقيس نجاحنا بمتانة الصفقات المبرمة وبرضا الطرفين.
 
---- SERVICE STEPS (4) ---
-[Step 1] Number : 01 | Order : 0
-  Title FR : Étude du projet
-  Title EN : Project review
-  Title AR : دراسة المشروع
-  Description FR : Compréhension de vos objectifs, du montant recherché et du calendrier.
-  Description EN : Understanding your objectives, the amount sought and the timeline.
-  Description AR : فهم أهدافكم والمبلغ المطلوب والجدول الزمني.
-[Step 2] Number : 02 | Order : 1
-  Title FR : Identification des partenaires
-  Title EN : Partner identification
-  Title AR : تحديد الشركاء
-  Description FR : Sélection des banques, investisseurs ou bailleurs adaptés à votre projet.
-  Description EN : Selection of the banks, investors or funders suited to your project.
-  Description AR : اختيار البنوك أو المستثمرين أو الجهات المانحة الملائمة لمشروعكم.
-[Step 3] Number : 03 | Order : 2
-  Title FR : Mise en relation
-  Title EN : Introduction
-  Title AR : الربط
-  Description FR : Présentation de votre dossier et organisation des premiers échanges.
-  Description EN : Presentation of your file and arrangement of the first discussions.
-  Description AR : عرض ملفكم وتنظيم اللقاءات الأولى.
-[Step 4] Number : 04 | Order : 3
-  Title FR : Suivi des échanges
-  Title EN : Follow-up of discussions
-  Title AR : متابعة المحادثات
-  Description FR : Accompagnement jusqu'à la décision des partenaires financiers.
-  Description EN : Support until the financial partners reach a decision.
-  Description AR : مرافقة حتى قرار الشركاء الماليين.
+Steps
+[Step 1] 01 — Étude du projet / Project review / دراسة المشروع
+FR : Compréhension de vos objectifs, du montant recherché, du calendrier et des garanties mobilisables, sur la base des documents que vous nous transmettez.
+EN : Understanding your objectives, the amount sought, the timeline and the guarantees available, based on the documents you provide.
+AR : فهم أهدافكم والمبلغ المطلوب والجدول الزمني والضمانات المتاحة، استنادًا إلى الوثائق التي تقدمونها.
+[Step 2] 02 — Identification des partenaires / Partner identification / تحديد الشركاء
+FR : Sélection des banques, investisseurs ou bailleurs adaptés à votre projet, en fonction de leurs critères, de leurs secteurs et de leurs tickets d'intervention.
+EN : Selection of the banks, investors or funders suited to your project, according to their criteria, sectors and ticket sizes.
+AR : اختيار البنوك أو المستثمرين أو الجهات المانحة الملائمة لمشروعكم، وفق معاييرها وقطاعاتها وأحجام تدخلاتها.
+[Step 3] 03 — Mise en relation / Introduction / الربط
+FR : Présentation de votre dossier et organisation des premiers échanges, avec un accompagnement dans la préparation de vos interventions.
+EN : Presentation of your file and arrangement of the first discussions, with support in preparing your pitches.
+AR : عرض ملفكم وتنظيم اللقاءات الأولى، مع مرافقتكم في إعداد تدخلاتكم.
+[Step 4] 04 — Suivi des échanges / Follow-up of discussions / متابعة المحادثات
+FR : Accompagnement jusqu'à la décision des partenaires financiers, avec relance, clarification des demandes complémentaires et suivi des engagements pris.
+EN : Support until the financial partners reach a decision, with reminders, clarification of additional requests and monitoring of commitments.
+AR : مرافقة حتى قرار الشركاء الماليين، مع المتابعة وتوضيح الطلبات الإضافية ورصد الالتزامات المتخذة.
 
-##############################################################
 SERVICE 3 / 6 — STRUCTURATION FINANCIÈRE
-##############################################################
-
---- CHAMPS NON TRADUITS ---
-Slug : structuration-financiere
-Image : (à téléverser)
-Icon : landmark
-Image 1 : (à téléverser)
-Image 2 : (à téléverser)
-Video cover : (à téléverser)
-Video url : (à renseigner si une vidéo existe)
-Order : 2
-
---- CHAMPS TRADUITS ---
+Champs non traduits
+Slug : structuration-financiere | Icon : landmark | Order : 2 | Images : (à téléverser)
 
 [FR]
-Title : Structuration Financière
 Excerpt : Montage de schémas de financement sur mesure : dette, fonds propres et financements mixtes.
-Category : Énergie & Finance
-Timeline : Selon la nature du projet
-Team size : Équipe dédiée
-Warranty : Confidentialité des informations
-Intro : BS-GROUP S.A conçoit des schémas de financement adaptés à la nature et aux ambitions de chaque projet : dette, fonds propres ou financements mixtes.
-Approach title : Notre approche
-Approach : Nous partons de votre projet pour construire un montage cohérent, équilibré et présentable aux partenaires financiers. Le schéma retenu tient compte de vos objectifs, de votre capacité et du calendrier du projet.
-Includes title : Ce que comprend le service
-Includes description : De l'analyse de votre situation à la mise en œuvre du schéma de financement retenu.
-Image 1 alt : Analyse d'un schéma de financement
-Image 2 alt : Réunion de travail sur le montage financier d'un projet
-Benefits title : Ce qui nous distingue
-Benefits description : Ce qui fait la solidité des montages financiers que nous proposons.
-Video cover alt : Présentation de l'activité Structuration Financière de BS-GROUP S.A
-Process title : Comment nous procédons
-Process description : Quatre étapes pour passer d'un besoin de financement à un schéma opérationnel.
+Intro : BS-GROUP S.A conçoit des schémas de financement adaptés à la nature et aux ambitions de chaque projet : dette, fonds propres ou financements mixtes. Nos interventions couvrent les projets d'infrastructure, les opérations industrielles et commerciales, ainsi que les besoins de développement des entreprises. En articulant l'intermédiation financière et la connaissance opérationnelle des métiers du groupe, nous construisons des montages réalistes, défendables devant les partenaires financiers et cohérents avec la capacité d'exécution du porteur du projet.
+Approach : Nous partons de votre projet pour construire un montage cohérent, équilibré et présentable aux partenaires financiers. Le schéma retenu tient compte de vos objectifs, de votre capacité et du calendrier du projet. Nous analysons les flux prévisionnels, les risques et les garanties mobilisables, puis nous faisons évoluer le montage jusqu'à ce qu'il réponde simultanément aux exigences des financeurs et aux contraintes opérationnelles. Cette approche itérative évite les schémas théoriques et privilégie des structures réellement finançables.
+Includes description : De l'analyse de votre situation à la mise en œuvre du schéma de financement retenu : diagnostic financier, modélisation des besoins, élaboration des scénarios (dette, fonds propres, instruments hybrides), préparation des documents de présentation et appui aux négociations. Nous restons mobilisés pendant la mise en place du financement, afin de garantir la cohérence entre le schéma adopté et sa réalisation concrète.
+Benefits description : Ce qui fait la solidité des montages financiers que nous proposons : une analyse rigoureuse, des structures équilibrées et une cohérence permanente entre le financement et l'exécution du projet.
+Process description : Quatre étapes pour passer d'un besoin de financement à un schéma opérationnel : diagnostic, conception des scénarios, validation du montage le plus pertinent, puis présentation aux partenaires et accompagnement de la mise en place.
 
 [EN]
-Title : Financial Structuring
 Excerpt : Design of tailor-made financing schemes: debt, equity and blended financing.
-Category : Energy & Finance
-Timeline : Depending on the project
-Team size : Dedicated team
-Warranty : Information confidentiality
-Intro : BS-GROUP S.A designs financing schemes suited to the nature and ambitions of each project: debt, equity or blended financing.
-Approach title : Our Approach
-Approach : We start from your project to build a coherent, balanced structure that can be presented to financial partners. The chosen scheme takes into account your objectives, your capacity and the project timeline.
-Includes title : What's Included
-Includes description : From the analysis of your situation to the implementation of the selected financing scheme.
-Image 1 alt : Analysis of a financing scheme
-Image 2 alt : Working session on a project's financial structure
-Benefits title : What Sets Us Apart
-Benefits description : What makes the financial structures we propose robust.
-Video cover alt : Presentation of BS-GROUP S.A's Financial Structuring activity
-Process title : How We Work
-Process description : Four steps to move from a funding need to an operational scheme.
+Intro : BS-GROUP S.A designs financing schemes suited to the nature and ambitions of each project: debt, equity or blended financing. Our interventions cover infrastructure projects, industrial and commercial operations, and business development needs. By combining financial intermediation with the group's operational knowledge of its businesses, we build realistic structures that can be defended before financial partners and are consistent with the project owner's delivery capacity.
+Approach : We start from your project to build a coherent, balanced structure that can be presented to financial partners. The chosen scheme takes into account your objectives, your capacity and the project timeline. We analyze projected cash flows, risks and available guarantees, then refine the structure until it simultaneously meets financiers' requirements and operational constraints. This iterative approach avoids theoretical schemes and favors genuinely bankable structures.
+Includes description : From the analysis of your situation to the implementation of the selected financing scheme: financial diagnosis, needs modeling, development of scenarios (debt, equity, hybrid instruments), preparation of presentation documents and negotiation support. We remain involved while the financing is being set up, to ensure consistency between the adopted scheme and its actual delivery.
+Benefits description : What makes the financial structures we propose robust: rigorous analysis, balanced structures and permanent consistency between financing and project execution.
+Process description : Four steps to move from a funding need to an operational scheme: diagnosis, scenario design, validation of the most relevant structure, then presentation to partners and support through set-up.
 
 [AR]
-Title : الهيكلة المالية
 Excerpt : إعداد صيغ تمويل مصممة حسب الحاجة: الدين والأموال الخاصة والتمويلات المختلطة.
-Category : الطاقة والتمويل
-Timeline : حسب طبيعة المشروع
-Team size : فريق مخصص
-Warranty : سرية المعلومات
-Intro : تصمّم BS-GROUP S.A صيغ تمويل ملائمة لطبيعة كل مشروع وطموحاته: الدين أو الأموال الخاصة أو التمويلات المختلطة.
-Approach title : نهجنا
-Approach : ننطلق من مشروعكم لبناء هيكل متماسك ومتوازن يمكن عرضه على الشركاء الماليين. تراعي الصيغة المعتمدة أهدافكم وقدرتكم والجدول الزمني للمشروع.
-Includes title : ما تشمله الخدمة
-Includes description : من تحليل وضعكم إلى تنفيذ صيغة التمويل المعتمدة.
-Image 1 alt : تحليل صيغة تمويل
-Image 2 alt : اجتماع عمل حول الهيكل المالي لمشروع
-Benefits title : ما يميّزنا
-Benefits description : ما يمنح الهياكل المالية التي نقترحها متانتها.
-Video cover alt : تقديم نشاط الهيكلة المالية لدى BS-GROUP S.A
-Process title : كيف نعمل
-Process description : أربع مراحل للانتقال من حاجة التمويل إلى صيغة قابلة للتنفيذ.
+Intro : تصمّم BS-GROUP S.A صيغ تمويل ملائمة لطبيعة كل مشروع وطموحاته: الدين أو الأموال الخاصة أو التمويلات المختلطة. تشمل تدخلاتنا مشاريع البنى التحتية والعمليات الصناعية والتجارية، بالإضافة إلى احتياجات تطوير الشركات. وبالجمع بين الوساطة المالية والمعرفة التشغيلية لمهن المجموعة، نبني هياكل واقعية يمكن الدفاع عنها أمام الشركاء الماليين وتنسجم مع قدرة صاحب المشروع على التنفيذ.
+Approach : ننطلق من مشروعكم لبناء هيكل متماسك ومتوازن يمكن عرضه على الشركاء الماليين. تراعي الصيغة المعتمدة أهدافكم وقدرتكم والجدول الزمني للمشروع. نحلل التدفقات المتوقعة والمخاطر والضمانات المتاحة، ثم نطوّر الهيكل حتى يستجيب في آن واحد لمتطلبات الممولين وللقيدود التشغيلية. هذا النهج التدريجي يتجنب الصيغ النظرية ويفضّل الهياكل القابلة للتمويل فعليًا.
+Includes description : من تحليل وضعكم إلى تنفيذ صيغة التمويل المعتمدة: تشخيص مالي، ونمذجة الاحتياجات، وإعداد السيناريوهات (الدين، الأموال الخاصة، الأدوات المختلطة)، وتحضير وثائق العرض، ودعم المفاوضات. نبقى متعبّلين أثناء تفعيل التمويل لضمان الانسجام بين الصيغة المعتمدة والتنفيذ الفعلي.
+Benefits description : ما يمنح الهياكل المالية التي نقترحها متانتها: تحليل دقيق، وهياكل متوازنة، وانسجام دائم بين التمويل وتنفيذ المشروع.
+Process description : أربع مراحل للانتقال من حاجة التمويل إلى صيغة قابلة للتنفيذ: التشخيص، وتصميم السيناريوهات، واعتماد الصيغة الأنسب، ثم العرض على الشركاء ومرافقة التفعيل.
 
---- SERVICE FEATURES (4) ---
-[Feature 1] Order : 0
-  FR : Financement par la dette
-  EN : Debt financing
-  AR : التمويل بالدين
-[Feature 2] Order : 1
-  FR : Financement par fonds propres
-  EN : Equity financing
-  AR : التمويل بالأموال الخاصة
-[Feature 3] Order : 2
-  FR : Financements mixtes
-  EN : Blended financing
-  AR : التمويلات المختلطة
-[Feature 4] Order : 3
-  FR : Montage de schémas de financement sur mesure
-  EN : Design of tailor-made financing schemes
-  AR : إعداد صيغ تمويل حسب الحاجة
+Features
+[Feature 1] Financement par la dette : prêts bancaires, crédits fournisseurs et instruments adaptés | Debt financing: bank loans, supplier credits and suitable debt instruments | التمويل بالدين: قروض بنكية وائتمانات موردين وأدوات دين ملائمة
+[Feature 2] Financement par fonds propres : apport des associés, investisseurs et partenaires stratégiques | Equity financing: shareholder contributions, investors and strategic partners | التمويل بالأموال الخاصة: مساهمات الشركاء والمستثمرين والشركاء الاستراتيجيين
+[Feature 3] Financements mixtes combinant dette, fonds propres et concours spécifiques | Blended financing combining debt, equity and specific facilities | تمويلات مختلطة تجمع بين الدين والأموال الخاصة والمساندة الخاصة
+[Feature 4] Montage de schémas de financement sur mesure, documentés et présentables aux financeurs | Design of tailor-made financing schemes, documented and presentable to funders | إعداد صيغ تمويل مصممة حسب الحاجة، موثقة وقابلة للعرض على الممولين
 
---- SERVICE BENEFITS (4) ---
-[Benefit 1] Icon : sliders-horizontal | Order : 0
-  Title FR : Schémas sur mesure
-  Title EN : Tailor-made schemes
-  Title AR : صيغ مصممة حسب الحاجة
-  Description FR : Un montage construit pour votre projet, et non un modèle standard.
-  Description EN : A structure built for your project, not a standard template.
-  Description AR : هيكل مبني لمشروعكم، وليس نموذجًا جاهزًا.
-[Benefit 2] Icon : calculator | Order : 1
-  Title FR : Rigueur d'analyse
-  Title EN : Analytical rigor
-  Title AR : دقة التحليل
-  Description FR : Une étude approfondie de vos besoins et de votre capacité de financement.
-  Description EN : An in-depth study of your needs and your financing capacity.
-  Description AR : دراسة معمقة لاحتياجاتكم وقدرتكم على التمويل.
-[Benefit 3] Icon : scale | Order : 2
-  Title FR : Équilibre du financement
-  Title EN : Balanced financing
-  Title AR : توازن التمويل
-  Description FR : Un juste équilibre entre dette, fonds propres et financements mixtes.
-  Description EN : The right balance between debt, equity and blended financing.
-  Description AR : توازن مناسب بين الدين والأموال الخاصة والتمويلات المختلطة.
-[Benefit 4] Icon : link | Order : 3
-  Title FR : Lien avec l'exécution
-  Title EN : Link with execution
-  Title AR : ارتباط بالتنفيذ
-  Description FR : Un financement pensé en cohérence avec la réalisation concrète du projet.
-  Description EN : Financing designed in line with the actual delivery of the project.
-  Description AR : تمويل مصمم بما ينسجم مع التنفيذ الفعلي للمشروع.
+Benefits
+[Benefit 1] sliders-horizontal — Schémas sur mesure / Tailor-made schemes / صيغ مصممة حسب الحاجة
+FR : Un montage construit pour votre projet, et non un modèle standard. Chaque paramètre — maturité, coût, garanties — est ajusté à votre réalité économique.
+EN : A structure built for your project, not a standard template. Every parameter — maturity, cost, guarantees — is adjusted to your economic reality.
+AR : هيكل مبني لمشروعكم، وليس نموذجًا جاهزًا. كل معيار — الآجل والتكلفة والضمانات — يُعدّل وفق واقعكم الاقتصادي.
+[Benefit 2] calculator — Rigueur d'analyse / Analytical rigor / دقة التحليل
+FR : Une étude approfondie de vos besoins et de votre capacité de financement, appuyée sur des hypothèses réalistes et documentées.
+EN : An in-depth study of your needs and financing capacity, based on realistic, documented assumptions.
+AR : دراسة معمقة لاحتياجاتكم وقدرتكم على التمويل، استنادًا إلى فرضيات واقعية وموثقة.
+[Benefit 3] scale — Équilibre du financement / Balanced financing / توازن التمويل
+FR : Un juste équilibre entre dette, fonds propres et financements mixtes, préservant la viabilité du projet et la capacité de remboursement.
+EN : The right balance between debt, equity and blended financing, preserving project viability and repayment capacity.
+AR : توازن مناسب بين الدين والأموال الخاصة والتمويلات المختلطة، يحافظ على جدوى المشروع وعلى القدرة على السداد.
+[Benefit 4] link — Lien avec l'exécution / Link with execution / ارتباط بالتنفيذ
+FR : Un financement pensé en cohérence avec la réalisation concrète du projet, grâce à la proximité avec les métiers opérationnels du groupe.
+EN : Financing designed in line with the actual delivery of the project, thanks to proximity with the group's operational businesses.
+AR : تمويل مصمم بما ينسجم مع التنفيذ الفعلي للمشروع، بفضل قربه من المهن التشغيلية للمجموعة.
 
---- SERVICE STEPS (4) ---
-[Step 1] Number : 01 | Order : 0
-  Title FR : Diagnostic financier
-  Title EN : Financial diagnosis
-  Title AR : التشخيص المالي
-  Description FR : Analyse de votre projet, de vos besoins et de votre situation.
-  Description EN : Analysis of your project, your needs and your situation.
-  Description AR : تحليل مشروعكم واحتياجاتكم ووضعكم.
-[Step 2] Number : 02 | Order : 1
-  Title FR : Conception des schémas
-  Title EN : Scheme design
-  Title AR : تصميم الصيغ
-  Description FR : Élaboration de scénarios de financement adaptés.
-  Description EN : Development of suitable financing scenarios.
-  Description AR : إعداد سيناريوهات تمويل ملائمة.
-[Step 3] Number : 03 | Order : 2
-  Title FR : Validation
-  Title EN : Validation
-  Title AR : الاعتماد
-  Description FR : Choix du schéma le plus pertinent, avec vous.
-  Description EN : Selection of the most relevant scheme, together with you.
-  Description AR : اختيار الصيغة الأنسب، بالتشاور معكم.
-[Step 4] Number : 04 | Order : 3
-  Title FR : Mise en œuvre
-  Title EN : Implementation
-  Title AR : التنفيذ
-  Description FR : Présentation aux partenaires financiers et accompagnement de la mise en place.
-  Description EN : Presentation to financial partners and support through set-up.
-  Description AR : العرض على الشركاء الماليين ومرافقة عملية التفعيل.
+Steps
+[Step 1] 01 — Diagnostic financier / Financial diagnosis / التشخيص المالي
+FR : Analyse de votre projet, de vos besoins et de votre situation : structure des coûts, flux prévisionnels, garanties et contraintes.
+EN : Analysis of your project, needs and situation: cost structure, projected flows, guarantees and constraints.
+AR : تحليل مشروعكم واحتياجاتكم ووضعكم: هيكل التكاليف والتدفقات المتوقعة والضمانات والقيود.
+[Step 2] 02 — Conception des schémas / Scheme design / تصميم الصيغ
+FR : Élaboration de scénarios de financement adaptés, chiffrés et documentés, avec leurs avantages et limites respectifs.
+EN : Development of suitable financing scenarios, costed and documented, with their respective advantages and limits.
+AR : إعداد سيناريوهات تمويل ملائمة، مُسعّرة وموثقة، مع مزايا وحدود كل منها.
+[Step 3] 03 — Validation / Validation / الاعتماد
+FR : Choix du schéma le plus pertinent, avec vous, sur la base de critères explicites : coût, risque, délais et souplesse.
+EN : Selection of the most relevant scheme, together with you, based on explicit criteria: cost, risk, timelines and flexibility.
+AR : اختيار الصيغة الأنسب، بالتشاور معكم، استنادًا إلى معايير صريحة: التكلفة والمخاطر والآجال والمرونة.
+[Step 4] 04 — Mise en œuvre / Implementation / التنفيذ
+FR : Présentation aux partenaires financiers et accompagnement de la mise en place, jusqu'à la signature et au déblocage des financements.
+EN : Presentation to financial partners and support through set-up, up to signature and fund release.
+AR : العرض على الشركاء الماليين ومرافقة عملية التفعيل، حتى التوقيع وإطلاق التمويلات.
 
-##############################################################
 SERVICE 4 / 6 — BTP
-##############################################################
-
---- CHAMPS NON TRADUITS ---
-Slug : btp
-Image : (à téléverser)
-Icon : hard-hat
-Image 1 : (à téléverser)
-Image 2 : (à téléverser)
-Video cover : (à téléverser)
-Video url : (à renseigner si une vidéo existe)
-Order : 3
-
---- CHAMPS TRADUITS ---
+Champs non traduits
+Slug : btp | Icon : hard-hat | Order : 3 | Images : (à téléverser)
 
 [FR]
-Title : BTP
 Excerpt : Bâtiment et travaux publics pour le compte de clients publics et privés exigeants : la réalisation d'infrastructures.
-Category : Infrastructure & Commerce
-Timeline : Selon la nature du projet
-Team size : Équipe dédiée
-Warranty : Conformité aux normes de construction
-Intro : BS-GROUP S.A réalise des ouvrages de bâtiment et de travaux publics pour des clients publics et privés exigeants, avec le souci de la qualité d'exécution et du respect des engagements.
-Approach title : Notre approche
-Approach : Nous abordons chaque chantier avec méthode : cadrage précis, planification réaliste et suivi rigoureux de l'exécution. Notre appartenance à un groupe intégré nous permet de mobiliser, autour d'un même projet, financement, approvisionnement et logistique.
-Includes title : Ce que comprend le service
-Includes description : De l'étude du projet à la livraison de l'ouvrage, avec un suivi de chantier assuré.
-Image 1 alt : Ouvrage en béton réalisé par BS-GROUP S.A
-Image 2 alt : Chantier de bâtiment et travaux publics
-Benefits title : Ce qui nous distingue
-Benefits description : Ce que vous apporte un constructeur adossé à un groupe multisectoriel.
-Video cover alt : Présentation de l'activité BTP de BS-GROUP S.A
-Process title : Comment nous construisons
-Process description : Quatre étapes pour mener votre projet de l'idée à la remise de l'ouvrage.
+Intro : BS-GROUP S.A réalise des ouvrages de bâtiment et de travaux publics pour des clients publics et privés exigeants, avec le souci de la qualité d'exécution et du respect des engagements. Notre activité couvre les bâtiments administratifs et industriels, les ouvrages d'infrastructure et les aménagements divers. Grâce à l'intégration du groupe, nous maîtrisons la chaîne complète du projet : financement, approvisionnement en matériaux, logistique et exécution. Cette maîtrise se traduit par des chantiers mieux planifiés, des délais mieux tenus et une qualité de finition soignée.
+Approach : Nous abordons chaque chantier avec méthode : cadrage précis, planification réaliste et suivi rigoureux de l'exécution. Notre appartenance à un groupe intégré nous permet de mobiliser, autour d'un même projet, financement, approvisionnement et logistique. Les équipes de chantier sont encadrées par des responsables expérimentés, attentifs à la sécurité, à la qualité et au respect des règles de l'art. Des points d'étape réguliers tiennent le client informé de l'avancement et permettent d'anticiper les décisions clés.
+Includes description : De l'étude du projet à la livraison de l'ouvrage, avec un suivi de chantier assuré : études techniques, planification, mobilisation des moyens, exécution des travaux, contrôle qualité et réception. Nous intervenons en bâtiment comme en travaux publics, pour des projets neufs comme pour des opérations de réhabilitation, en veillant à la conformité des ouvrages aux normes applicables.
+Benefits description : Ce que vous apporte un constructeur adossé à un groupe multisectoriel : des moyens mobilisés rapidement, une chaîne d'approvisionnement fiable et un interlocuteur unique du cadrage à la livraison.
+Process description : Quatre étapes pour mener votre projet de l'idée à la remise de l'ouvrage : étude et cadrage, planification et devis, exécution sous suivi régulier, puis réception et livraison au client.
 
 [EN]
-Title : Construction & Public Works
 Excerpt : Building and public works for demanding public and private clients: delivery of infrastructure.
-Category : Infrastructure & Commerce
-Timeline : Depending on the project
-Team size : Dedicated team
-Warranty : Compliance with construction standards
-Intro : BS-GROUP S.A delivers building and public works projects for demanding public and private clients, with a focus on execution quality and keeping its commitments.
-Approach title : Our Approach
-Approach : We approach every site with method: precise scoping, realistic planning and rigorous monitoring of execution. Being part of an integrated group allows us to bring financing, supply and logistics together around a single project.
-Includes title : What's Included
-Includes description : From project study to handover of the works, with site supervision provided.
-Image 1 alt : Concrete structure built by BS-GROUP S.A
-Image 2 alt : Building and public works site
-Benefits title : What Sets Us Apart
-Benefits description : What you get from a builder backed by a multi-sector group.
-Video cover alt : Presentation of BS-GROUP S.A's Construction & Public Works activity
-Process title : How We Build
-Process description : Four steps to take your project from idea to handover.
+Intro : BS-GROUP S.A delivers building and public works projects for demanding public and private clients, with a focus on execution quality and keeping its commitments. Our activity covers administrative and industrial buildings, infrastructure works and various developments. Through the group's integration, we control the full project chain: financing, materials supply, logistics and execution. This control translates into better-planned sites, better-kept deadlines and careful finishing quality.
+Approach : We approach every site with method: precise scoping, realistic planning and rigorous monitoring of execution. Being part of an integrated group allows us to bring financing, supply and logistics together around a single project. Site teams are supervised by experienced managers, attentive to safety, quality and compliance with professional standards. Regular stage reviews keep the client informed of progress and help anticipate key decisions.
+Includes description : From project study to handover of the works, with site supervision provided: technical studies, planning, mobilization of resources, execution, quality control and acceptance. We work in both building construction and public works, for new projects as well as rehabilitation operations, ensuring works comply with applicable standards.
+Benefits description : What you get from a builder backed by a multi-sector group: resources mobilized quickly, a reliable supply chain and a single point of contact from scoping to handover.
+Process description : Four steps to take your project from idea to handover: study and scoping, planning and quotation, execution under regular monitoring, then acceptance and delivery to the client.
 
 [AR]
-Title : البناء والأشغال العمومية
 Excerpt : البناء والأشغال العمومية لفائدة عملاء عموميين وخواص ذوي متطلبات عالية: إنجاز البنى التحتية.
-Category : البنية التحتية والتجارة
-Timeline : حسب طبيعة المشروع
-Team size : فريق مخصص
-Warranty : الامتثال لمعايير البناء
-Intro : تنجز BS-GROUP S.A أعمال البناء والأشغال العمومية لعملاء عموميين وخواص ذوي متطلبات عالية، مع الحرص على جودة التنفيذ والوفاء بالالتزامات.
-Approach title : نهجنا
-Approach : نتعامل مع كل ورشة بمنهجية: تحديد دقيق للنطاق، وتخطيط واقعي، ومتابعة صارمة للتنفيذ. وبفضل انتمائنا إلى مجموعة متكاملة، يمكننا الجمع بين التمويل والتزويد واللوجستيك حول مشروع واحد.
-Includes title : ما تشمله الخدمة
-Includes description : من دراسة المشروع حتى تسليم المنشأة، مع متابعة الورشة.
-Image 1 alt : منشأة خرسانية أنجزتها BS-GROUP S.A
-Image 2 alt : ورشة بناء وأشغال عمومية
-Benefits title : ما يميّزنا
-Benefits description : ما تحصلون عليه من مقاول تدعمه مجموعة متعددة القطاعات.
-Video cover alt : تقديم نشاط البناء والأشغال العمومية لدى BS-GROUP S.A
-Process title : كيف نبني
-Process description : أربع مراحل لقيادة مشروعكم من الفكرة حتى تسليم المنشأة.
+Intro : تنجز BS-GROUP S.A أعمال البناء والأشغال العمومية لعملاء عموميين وخواص ذوي متطلبات عالية، مع الحرص على جودة التنفيذ والوفاء بالالتزامات. تغطي أنشطتنا المباني الإدارية والصناعية، ومنشآت البنى التحتية، والتجهيزات المختلفة. وبفضل تكامل المجموعة، نتحكم في السلسلة الكاملة للمشروع: التمويل، وتزويد المواد، واللوجستيك، والتنفيذ. يترجم هذا التحكم إلى ورشات أفضل تخطيطًا، وآجال أفضل احترامًا، وجودة إنجاز دقيقة.
+Approach : نتعامل مع كل ورشة بمنهجية: تحديد دقيق للنطاق، وتخطيط واقعي، ومتابعة صارمة للتنفيذ. وبفضل انتمائنا إلى مجموعة متكاملة، يمكننا الجمع بين التمويل والتزويد واللوجستيك حول مشروع واحد. تشرف على فرق الورشة مسؤولون ذوو خبرة، يهتمون بالسلامة والجودة واحترام قواعد الصنعة. وتُنظّم لقاءات مرحلية منتظمة تُبقي العميل على اطلاع بتقدم الأشغال وتتيح توقّع القرارات الأساسية.
+Includes description : من دراسة المشروع حتى تسليم المنشأة، مع متابعة الورشة: الدراسات التقنية، والتخطيط، وتعبئة الوسائل، وتنفيذ الأشغال، ومراقبة الجودة، والاستلام. نتدخل في البناء كما في الأشغال العمومية، وللمشاريع الجديدة كما لعمليات التأهيل، مع ضمان مطابقة المنشآت للمعايير السارية.
+Benefits description : ما تحصلون عليه من مقاول تدعمه مجموعة متعددة القطاعات: وسائل تُعبّأ بسرعة، وسلسلة تزويد موثوقة، ومحاور واحد من التحديد حتى التسليم.
+Process description : أربع مراحل لقيادة مشروعكم من الفكرة حتى تسليم المنشأة: الدراسة وتحديد النطاق، والتخطيط وعرض الأسعار، والتنفيذ تحت متابعة منتظمة، ثم الاستلام والتسليم للعميل.
 
---- SERVICE FEATURES (4) ---
-[Feature 1] Order : 0
-  FR : Bâtiment
-  EN : Building construction
-  AR : البناء
-[Feature 2] Order : 1
-  FR : Travaux publics
-  EN : Public works
-  AR : الأشغال العمومية
-[Feature 3] Order : 2
-  FR : Réalisation d'infrastructures
-  EN : Infrastructure delivery
-  AR : إنجاز البنى التحتية
-[Feature 4] Order : 3
-  FR : Suivi et exécution de chantier
-  EN : Site supervision and execution
-  AR : متابعة الورشة وتنفيذ الأشغال
+Features
+[Feature 1] Bâtiment : constructions administratives, industrielles et commerciales | Building: administrative, industrial and commercial constructions | البناء: منشآت إدارية وصناعية وتجارية
+[Feature 2] Travaux publics : infrastructures routières, ouvrages d'assainissement et aménagements | Public works: road infrastructure, drainage works and developments | الأشغال العمومية: بنى تحتية طرقية، ومنشآت صرف، وتجهيزات
+[Feature 3] Réalisation d'infrastructures clés en main, de l'étude à la livraison | Turnkey infrastructure delivery, from study to handover | إنجاز البنى التحتية بمفتاح جاهز، من الدراسة حتى التسليم
+[Feature 4] Suivi et exécution de chantier, avec reporting régulier sur l'avancement | Site supervision and execution, with regular progress reporting | متابعة الورشة وتنفيذ الأشغال، مع تقارير منتظمة عن تقدم العمل
 
---- SERVICE BENEFITS (4) ---
-[Benefit 1] Icon : users | Order : 0
-  Title FR : Clients publics et privés
-  Title EN : Public and private clients
-  Title AR : عملاء عموميون وخواص
-  Description FR : Une expérience adaptée aux exigences des commanditaires publics comme privés.
-  Description EN : Experience tailored to the requirements of both public and private clients.
-  Description AR : خبرة ملائمة لمتطلبات الجهات العمومية والخاصة على حد سواء.
-[Benefit 2] Icon : hard-hat | Order : 1
-  Title FR : Exécution rigoureuse
-  Title EN : Rigorous execution
-  Title AR : تنفيذ صارم
-  Description FR : Un suivi de chantier structuré pour respecter qualité, délais et engagements.
-  Description EN : Structured site supervision to meet quality, deadlines and commitments.
-  Description AR : متابعة منظمة للورشة لاحترام الجودة والآجال والالتزامات.
-[Benefit 3] Icon : network | Order : 2
-  Title FR : Chaîne de valeur intégrée
-  Title EN : Integrated value chain
-  Title AR : سلسلة قيمة متكاملة
-  Description FR : Financement, approvisionnement et transport mobilisables au sein du même groupe.
-  Description EN : Financing, supply and transport can be mobilized within the same group.
-  Description AR : إمكانية تعبئة التمويل والتزويد والنقل داخل المجموعة نفسها.
-[Benefit 4] Icon : map-pin | Order : 3
-  Title FR : Maîtrise du contexte local
-  Title EN : Command of the local context
-  Title AR : إتقان السياق المحلي
-  Description FR : Une connaissance fine du cadre réglementaire et opérationnel malien.
-  Description EN : A detailed knowledge of the Malian regulatory and operational framework.
-  Description AR : معرفة دقيقة بالإطار التنظيمي والتشغيلي في مالي.
+Benefits
+[Benefit 1] users — Clients publics et privés / Public and private clients / عملاء عموميون وخواص
+FR : Une expérience adaptée aux exigences des commanditaires publics comme privés : procédures, contrôles et exigences de conformité spécifiques à chaque type de client.
+EN : Experience tailored to the requirements of both public and private clients: procedures, controls and compliance requirements specific to each client type.
+AR : خبرة ملائمة لمتطلبات الجهات العمومية والخاصة على حد سواء: إجراءات وضوابط ومتطلبات امتثال خاصة بكل نوع من العملاء.
+[Benefit 2] hard-hat — Exécution rigoureuse / Rigorous execution / تنفيذ صارم
+FR : Un suivi de chantier structuré pour respecter qualité, délais et engagements. Les écarts éventuels sont identifiés tôt et corrigés sans attendre.
+EN : Structured site supervision to meet quality, deadlines and commitments. Potential deviations are identified early and corrected without delay.
+AR : متابعة منظمة للورشة لاحترام الجودة والآجال والالتزامات. تُحدَّد الانحرافات المحتملة مبكرًا وتُصحَّح دون تأخير.
+[Benefit 3] network — Chaîne de valeur intégrée / Integrated value chain / سلسلة قيمة متكاملة
+FR : Financement, approvisionnement et transport mobilisables au sein du même groupe, pour réduire les ruptures d'approvisionnement et sécuriser le planning.
+EN : Financing, supply and transport can be mobilized within the same group, reducing supply disruptions and securing the schedule.
+AR : إمكانية تعبئة التمويل والتزويد والنقل داخل المجموعة نفسها، للحد من انقطاعات التوريد وتأمين الجدول الزمني.
+[Benefit 4] map-pin — Maîtrise du contexte local / Command of the local context / إتقان السياق المحلي
+FR : Une connaissance fine du cadre réglementaire et opérationnel malien, des contraintes logistiques et des pratiques de la place.
+EN : Detailed knowledge of the Malian regulatory and operational framework, logistical constraints and local practices.
+AR : معرفة دقيقة بالإطار التنظيمي والتشغيلي في مالي، وللقيدود اللوجستية، وللممارسات المحلية.
 
---- SERVICE STEPS (4) ---
-[Step 1] Number : 01 | Order : 0
-  Title FR : Étude et cadrage
-  Title EN : Study and scoping
-  Title AR : الدراسة وتحديد النطاق
-  Description FR : Analyse du projet, des contraintes du site et des objectifs du client.
-  Description EN : Analysis of the project, site constraints and client objectives.
-  Description AR : تحليل المشروع وقيود الموقع وأهداف العميل.
-[Step 2] Number : 02 | Order : 1
-  Title FR : Planification et devis
-  Title EN : Planning and quotation
-  Title AR : التخطيط وعرض الأسعار
-  Description FR : Définition du calendrier, des moyens à mobiliser et du budget.
-  Description EN : Definition of the schedule, resources to be mobilized and budget.
-  Description AR : تحديد الجدول الزمني والموارد الواجب تعبئتها والميزانية.
-[Step 3] Number : 03 | Order : 2
-  Title FR : Exécution des travaux
-  Title EN : Works execution
-  Title AR : تنفيذ الأشغال
-  Description FR : Réalisation du chantier avec un suivi régulier de l'avancement.
-  Description EN : Delivery of the site with regular progress monitoring.
-  Description AR : إنجاز الورشة مع متابعة منتظمة لسير الأشغال.
-[Step 4] Number : 04 | Order : 3
-  Title FR : Réception et livraison
-  Title EN : Acceptance and handover
-  Title AR : الاستلام والتسليم
-  Description FR : Contrôle de l'ouvrage et remise au client.
-  Description EN : Inspection of the works and handover to the client.
-  Description AR : مراقبة المنشأة وتسليمها للعميل.
+Steps
+[Step 1] 01 — Étude et cadrage / Study and scoping / الدراسة وتحديد النطاق
+FR : Analyse du projet, des contraintes du site et des objectifs du client, jusqu'à la définition d'un périmètre technique clair.
+EN : Analysis of the project, site constraints and client objectives, up to the definition of a clear technical scope.
+AR : تحليل المشروع وقيود الموقع وأهداف العميل، حتى تحديد نطاق تقني واضح.
+[Step 2] 02 — Planification et devis / Planning and quotation / التخطيط وعرض الأسعار
+FR : Définition du calendrier, des moyens à mobiliser et du budget, matérialisés par un devis détaillé et un planning de chantier.
+EN : Definition of the schedule, resources to be mobilized and budget, materialized by a detailed quotation and a site plan.
+AR : تحديد الجدول الزمني والموارد الواجب تعبئتها والميزانية، تتجسد في عرض أسعار مفصل وبرنامج ورشة.
+[Step 3] 03 — Exécution des travaux / Works execution / تنفيذ الأشغال
+FR : Réalisation du chantier avec un suivi régulier de l'avancement, des réunions de coordination et un reporting périodique au client.
+EN : Delivery of the site with regular progress monitoring, coordination meetings and periodic reporting to the client.
+AR : إنجاز الورشة مع متابعة منتظمة لسير الأشغال، ولقاءات تنسيق، وتقارير دورية للعميل.
+[Step 4] 04 — Réception et livraison / Acceptance and handover / الاستلام والتسليم
+FR : Contrôle de l'ouvrage, levée des réserves et remise au client, avec les documents techniques correspondants.
+EN : Inspection of the works, clearance of reservations and handover to the client, with the corresponding technical documents.
+AR : مراقبة المنشأة، ومعالجة الملاحظات، وتسليمها للعميل، مع الوثائق التقنية المقابلة.
 
-##############################################################
 SERVICE 5 / 6 — NÉGOCE INTERNATIONAL
-##############################################################
-
---- CHAMPS NON TRADUITS ---
-Slug : negoce-international
-Image : (à téléverser)
-Icon : globe
-Image 1 : (à téléverser)
-Image 2 : (à téléverser)
-Video cover : (à téléverser)
-Video url : (à renseigner si une vidéo existe)
-Order : 4
-
---- CHAMPS TRADUITS ---
+Champs non traduits
+Slug : negoce-international | Icon : globe | Order : 4 | Images : (à téléverser)
 
 [FR]
-Title : Négoce International
 Excerpt : Import-export stratégique : commerce de marchandises et de matières premières via un solide réseau de partenaires régionaux et internationaux.
-Category : Infrastructure & Commerce
-Timeline : Selon la nature du projet
-Team size : Équipe dédiée
-Warranty : Traçabilité des opérations
-Intro : BS-GROUP S.A intervient dans le commerce de marchandises et de matières premières, en s'appuyant sur un réseau de partenaires régionaux et internationaux.
-Approach title : Notre approche
-Approach : Nous faisons le lien entre l'offre et la demande en mobilisant nos partenaires en Afrique de l'Ouest et à l'international. Notre ancrage à Bamako et nos capacités logistiques nous permettent d'accompagner l'opération de la recherche du produit jusqu'à sa livraison.
-Includes title : Ce que comprend le service
-Includes description : Un accompagnement de bout en bout de vos opérations d'import et d'export.
-Image 1 alt : Conteneurs de marchandises prêts à l'expédition
-Image 2 alt : Échanges commerciaux entre partenaires internationaux
-Benefits title : Ce qui nous distingue
-Benefits description : Les atouts d'un négociant ancré au Mali et tourné vers l'international.
-Video cover alt : Présentation de l'activité Négoce International de BS-GROUP S.A
-Process title : Comment nous procédons
-Process description : Quatre étapes pour concrétiser vos opérations d'import-export.
+Intro : BS-GROUP S.A intervient dans le commerce de marchandises et de matières premières, en s'appuyant sur un réseau de partenaires régionaux et internationaux. Nos opérations couvrent l'import comme l'export : identification des produits, mise en relation des offreurs et des acheteurs, négociation des conditions et organisation de la logistique. Présent au cœur de Bamako, carrefour des échanges ouest-africains, nous connectons les marchés locaux aux sources d'approvisionnement internationales, et inversement.
+Approach : Nous faisons le lien entre l'offre et la demande en mobilisant nos partenaires en Afrique de l'Ouest et à l'international. Notre ancrage à Bamako et nos capacités logistiques nous permettent d'accompagner l'opération de la recherche du produit jusqu'à sa livraison. Chaque opération est documentée : origine des marchandises, conditions commerciales, tracé logistique. Cette rigueur garantit la traçabilité des échanges et la sécurité des transactions pour l'ensemble des parties.
+Includes description : Un accompagnement de bout en bout de vos opérations d'import et d'export : recherche de fournisseurs ou d'acheteurs, vérification de la fiabilité des contreparties, négociation et contractualisation, organisation du transport et suivi jusqu'à réception. Notre intégration au groupe permet d'articuler le négoce avec les prestations de transport et de logistique, pour une chaîne continue.
+Benefits description : Les atouts d'un négociant ancré au Mali et tourné vers l'international : un réseau entretenu, un sourcing vérifié et une continuité opérationnelle jusqu'à la livraison finale.
+Process description : Quatre étapes pour concrétiser vos opérations d'import-export : définition du besoin, recherche et vérification des partenaires, négociation et contractualisation, puis acheminement et suivi jusqu'à réception.
 
 [EN]
-Title : International Trade
 Excerpt : Strategic import-export: trade in goods and raw materials through a solid network of regional and international partners.
-Category : Infrastructure & Commerce
-Timeline : Depending on the project
-Team size : Dedicated team
-Warranty : Operations traceability
-Intro : BS-GROUP S.A operates in the trade of goods and raw materials, relying on a network of regional and international partners.
-Approach title : Our Approach
-Approach : We bridge supply and demand by mobilizing our partners in West Africa and internationally. Our base in Bamako and our logistics capabilities allow us to support the operation from sourcing the product to its delivery.
-Includes title : What's Included
-Includes description : End-to-end support for your import and export operations.
-Image 1 alt : Cargo containers ready for shipment
-Image 2 alt : Commercial exchanges between international partners
-Benefits title : What Sets Us Apart
-Benefits description : The strengths of a trader rooted in Mali and open to the world.
-Video cover alt : Presentation of BS-GROUP S.A's International Trade activity
-Process title : How We Work
-Process description : Four steps to bring your import-export operations to life.
+Intro : BS-GROUP S.A operates in the trade of goods and raw materials, relying on a network of regional and international partners. Our operations cover both import and export: product identification, connecting sellers and buyers, negotiating terms and organizing logistics. Based in the heart of Bamako, a crossroads of West African trade, we connect local markets to international supply sources, and vice versa.
+Approach : We bridge supply and demand by mobilizing our partners in West Africa and internationally. Our base in Bamako and our logistics capabilities allow us to support the operation from sourcing the product to its delivery. Every operation is documented: origin of goods, commercial terms, logistics route. This rigor guarantees the traceability of exchanges and the security of transactions for all parties.
+Includes description : End-to-end support for your import and export operations: search for suppliers or buyers, verification of counterparties' reliability, negotiation and contracting, transport organization and follow-up through to receipt. Our integration within the group makes it possible to combine trading with transport and logistics services, for a continuous chain.
+Benefits description : The strengths of a trader rooted in Mali and open to the world: a maintained network, verified sourcing and operational continuity through to final delivery.
+Process description : Four steps to bring your import-export operations to life: defining the need, searching for and vetting partners, negotiating and contracting, then shipping and follow-up through to receipt.
 
 [AR]
-Title : التجارة الدولية
 Excerpt : استيراد وتصدير استراتيجي: تجارة السلع والمواد الأولية عبر شبكة متينة من الشركاء الإقليميين والدوليين.
-Category : البنية التحتية والتجارة
-Timeline : حسب طبيعة المشروع
-Team size : فريق مخصص
-Warranty : تتبّع العمليات
-Intro : تعمل BS-GROUP S.A في تجارة السلع والمواد الأولية، اعتمادًا على شبكة من الشركاء الإقليميين والدوليين.
-Approach title : نهجنا
-Approach : نربط بين العرض والطلب عبر تعبئة شركائنا في غرب إفريقيا وعلى المستوى الدولي. ويتيح لنا حضورنا في باماكو وقدراتنا اللوجستية مرافقة العملية من البحث عن المنتج حتى تسليمه.
-Includes title : ما تشمله الخدمة
-Includes description : مرافقة متكاملة لعمليات الاستيراد والتصدير الخاصة بكم.
-Image 1 alt : حاويات بضائع جاهزة للشحن
-Image 2 alt : تبادلات تجارية بين شركاء دوليين
-Benefits title : ما يميّزنا
-Benefits description : مزايا تاجر راسخ في مالي ومنفتح على العالم.
-Video cover alt : تقديم نشاط التجارة الدولية لدى BS-GROUP S.A
-Process title : كيف نعمل
-Process description : أربع مراحل لتجسيد عمليات الاستيراد والتصدير الخاصة بكم.
+Intro : تعمل BS-GROUP S.A في تجارة السلع والمواد الأولية، اعتمادًا على شبكة من الشركاء الإقليميين والدوليين. تغطي عملياتنا الاستيراد والتصدير معًا: تحديد المنتجات، وربط البائعين بالمشترين، والتفاوض على الشروط، وتنظيم اللوجستيك. وبحضورنا في قلب باماكو، معبر التبادلات في غرب إفريقيا، نربط الأسواق المحلية بمصادر التوريد الدولية، والعكس صحيح.
+Approach : نربط بين العرض والطلب عبر تعبئة شركائنا في غرب إفريقيا وعلى المستوى الدولي. ويتيح لنا حضورنا في باماكو وقدراتنا اللوجستية مرافقة العملية من البحث عن المنتج حتى تسليمه. كل عملية موثقة: أصل البضائع، والشروط التجارية، والمسار اللوجستي. هذه الدقة تضمن تتبّع التبادلات وأمن المعاملات لجميع الأطراف.
+Includes description : مرافقة متكاملة لعمليات الاستيراد والتصدير الخاصة بكم: البحث عن موردين أو مشترين، والتحقق من موثوقية الأطراف المقابلة، والتفاوض والتعاقد، وتنظيم النقل، والمتابعة حتى الاستلام. ويتيح تكاملنا داخل المجموعة الربط بين التجارة وخدمات النقل واللوجستيك، من أجل سلسلة متواصلة.
+Benefits description : مزايا تاجر راسخ في مالي ومنفتح على العالم: شبكة مُعتنى بها، ومصادر توريد موثّقة، واستمرارية تشغيلية حتى التسليم النهائي.
+Process description : أربع مراحل لتجسيد عمليات الاستيراد والتصدير الخاصة بكم: تحديد الحاجة، والبحث عن الشركاء والتحقق منهم، والتفاوض والتعاقد، ثم الإيصال والمتابعة حتى الاستلام.
 
---- SERVICE FEATURES (4) ---
-[Feature 1] Order : 0
-  FR : Import de marchandises
-  EN : Import of goods
-  AR : استيراد السلع
-[Feature 2] Order : 1
-  FR : Export de marchandises
-  EN : Export of goods
-  AR : تصدير السلع
-[Feature 3] Order : 2
-  FR : Commerce de matières premières
-  EN : Trade in raw materials
-  AR : تجارة المواد الأولية
-[Feature 4] Order : 3
-  FR : Réseau de partenaires régionaux et internationaux
-  EN : Network of regional and international partners
-  AR : شبكة من الشركاء الإقليميين والدوليين
+Features
+[Feature 1] Import de marchandises et de matières premières vers le Mali | Import of goods and raw materials into Mali | استيراد السلع والمواد الأولية إلى مالي
+[Feature 2] Export de marchandises depuis le Mali vers les marchés régionaux et internationaux | Export of goods from Mali to regional and international markets | تصدير السلع من مالي نحو الأسواق الإقليمية والدولية
+[Feature 3] Commerce de matières premières, avec vérification des contreparties | Trade in raw materials, with counterparty verification | تجارة المواد الأولية، مع التحقق من الأطراف المقابلة
+[Feature 4] Réseau de partenaires régionaux et internationaux, activé selon vos besoins | Network of regional and international partners, activated as needed | شبكة من الشركاء الإقليميين والدوليين، تُفعّل حسب حاجاتكم
 
---- SERVICE BENEFITS (4) ---
-[Benefit 1] Icon : globe | Order : 0
-  Title FR : Réseau régional et international
-  Title EN : Regional and international network
-  Title AR : شبكة إقليمية ودولية
-  Description FR : Des partenaires en Afrique de l'Ouest et à l'international pour vos opérations.
-  Description EN : Partners in West Africa and internationally for your operations.
-  Description AR : شركاء في غرب إفريقيا وعلى المستوى الدولي لعملياتكم.
-[Benefit 2] Icon : shield-check | Order : 1
-  Title FR : Sourcing fiable
-  Title EN : Reliable sourcing
-  Title AR : مصادر توريد موثوقة
-  Description FR : Une sélection rigoureuse des fournisseurs et des partenaires commerciaux.
-  Description EN : Rigorous selection of suppliers and trading partners.
-  Description AR : اختيار دقيق للموردين والشركاء التجاريين.
-[Benefit 3] Icon : route | Order : 2
-  Title FR : Continuité jusqu'à la livraison
-  Title EN : Continuity through to delivery
-  Title AR : استمرارية حتى التسليم
-  Description FR : Le négoce relié au transport et à la logistique du groupe.
-  Description EN : Trading connected to the group's transport and logistics.
-  Description AR : تجارة مرتبطة بخدمات النقل واللوجستيك لدى المجموعة.
-[Benefit 4] Icon : map-pin | Order : 3
-  Title FR : Ancrage à Bamako
-  Title EN : Based in Bamako
-  Title AR : حضور في باماكو
-  Description FR : Un interlocuteur local qui connaît le contexte réglementaire malien.
-  Description EN : A local contact who knows the Malian regulatory context.
-  Description AR : محاور محلي يعرف السياق التنظيمي في مالي.
+Benefits
+[Benefit 1] globe — Réseau régional et international / Regional and international network / شبكة إقليمية ودولية
+FR : Des partenaires en Afrique de l'Ouest et à l'international pour vos opérations, identifiés et entretenus au fil des transactions réalisées.
+EN : Partners in West Africa and internationally for your operations, identified and maintained through the transactions carried out.
+AR : شركاء في غرب إفريقيا وعلى المستوى الدولي لعملياتكم، تُحدَّد وتُرعى عبر المعاملات المنجزة.
+[Benefit 2] shield-check — Sourcing fiable / Reliable sourcing / مصادر توريد موثوقة
+FR : Une sélection rigoureuse des fournisseurs et des partenaires commerciaux, avec vérification de la fiabilité des contreparties avant engagement.
+EN : Rigorous selection of suppliers and trading partners, with verification of counterparties' reliability before commitment.
+AR : اختيار دقيق للموردين والشركاء التجاريين، مع التحقق من موثوقية الأطراف المقابلة قبل الالتزام.
+[Benefit 3] route — Continuité jusqu'à la livraison / Continuity through to delivery / استمرارية حتى التسليم
+FR : Le négoce relié au transport et à la logistique du groupe, pour une chaîne d'approvisionnement continue, du point de départ jusqu'au point de livraison.
+EN : Trading connected to the group's transport and logistics, for a continuous supply chain from origin to delivery point.
+AR : تجارة مرتبطة بخدمات النقل واللوجستيك لدى المجموعة، لسلسلة توريد متواصلة من نقطة الانطلاق حتى نقطة التسليم.
+[Benefit 4] map-pin — Ancrage à Bamako / Based in Bamako / حضور في باماكو
+FR : Un interlocuteur local qui connaît le contexte réglementaire malien et facilite les formalités liées aux échanges commerciaux.
+EN : A local contact who knows the Malian regulatory context and facilitates trade-related formalities.
+AR : محاور محلي يعرف السياق التنظيمي في مالي ويُسهّل الإجراءات المرتبطة بالتبادلات التجارية.
 
---- SERVICE STEPS (4) ---
-[Step 1] Number : 01 | Order : 0
-  Title FR : Expression du besoin
-  Title EN : Defining the need
-  Title AR : تحديد الحاجة
-  Description FR : Nature des marchandises, volumes, origine et destination.
-  Description EN : Type of goods, volumes, origin and destination.
-  Description AR : طبيعة السلع والكميات ومكان المنشأ والوجهة.
-[Step 2] Number : 02 | Order : 1
-  Title FR : Recherche de partenaires
-  Title EN : Partner search
-  Title AR : البحث عن الشركاء
-  Description FR : Identification des fournisseurs ou des acheteurs les plus adaptés.
-  Description EN : Identification of the most suitable suppliers or buyers.
-  Description AR : تحديد الموردين أو المشترين الأنسب.
-[Step 3] Number : 03 | Order : 2
-  Title FR : Négociation et contractualisation
-  Title EN : Negotiation and contracting
-  Title AR : التفاوض والتعاقد
-  Description FR : Discussion des conditions commerciales et formalisation de l'accord.
-  Description EN : Discussion of commercial terms and formalization of the agreement.
-  Description AR : مناقشة الشروط التجارية وإبرام الاتفاق.
-[Step 4] Number : 04 | Order : 3
-  Title FR : Livraison et suivi
-  Title EN : Delivery and follow-up
-  Title AR : التسليم والمتابعة
-  Description FR : Acheminement des marchandises et suivi jusqu'à la réception.
-  Description EN : Shipment of the goods and follow-up through to receipt.
-  Description AR : إيصال البضائع ومتابعتها حتى الاستلام.
+Steps
+[Step 1] 01 — Expression du besoin / Defining the need / تحديد الحاجة
+FR : Précision de la nature des marchandises, des volumes, de l'origine et de la destination, ainsi que des contraintes de délais et de budget.
+EN : Specifying the type of goods, volumes, origin and destination, as well as timeline and budget constraints.
+AR : تحديد طبيعة السلع والكميات ومكان المنشأ والوجهة، إضافة إلى قيود الآجال والميزانية.
+[Step 2] 02 — Recherche de partenaires / Partner search / البحث عن الشركاء
+FR : Identification des fournisseurs ou des acheteurs les plus adaptés, avec vérification de leur fiabilité et de leurs références.
+EN : Identification of the most suitable suppliers or buyers, with verification of their reliability and track record.
+AR : تحديد الموردين أو المشترين الأنسب، مع التحقق من موثوقيتهم ومراجعهم.
+[Step 3] 03 — Négociation et contractualisation / Negotiation and contracting / التفاوض والتعاقد
+FR : Discussion des conditions commerciales et formalisation de l'accord dans un cadre contractuel clair et équilibré.
+EN : Discussion of commercial terms and formalization of the agreement within a clear, balanced contractual framework.
+AR : مناقشة الشروط التجارية وإبرام الاتفاق في إطار تعاقدي واضح ومتوازن.
+[Step 4] 04 — Livraison et suivi / Delivery and follow-up / التسليم والمتابعة
+FR : Acheminement des marchandises et suivi jusqu'à la réception, avec information régulière sur l'état de l'opération.
+EN : Shipment of the goods and follow-up through to receipt, with regular updates on the status of the operation.
+AR : إيصال البضائع ومتابعتها حتى الاستلام، مع إعلام منتظم بحالة العملية.
 
-##############################################################
 SERVICE 6 / 6 — TRANSPORT & LOGISTIQUE
-##############################################################
-
---- CHAMPS NON TRADUITS ---
-Slug : transport-logistique
-Image : (à téléverser)
-Icon : truck
-Image 1 : (à téléverser)
-Image 2 : (à téléverser)
-Video cover : (à téléverser)
-Video url : (à renseigner si une vidéo existe)
-Order : 5
-
---- CHAMPS TRADUITS ---
+Champs non traduits
+Slug : transport-logistique | Icon : truck | Order : 5 | Images : (à téléverser)
 
 [FR]
-Title : Transport & Logistique
 Excerpt : Transport de marchandises et gestion intégrée des chaînes logistiques et d'approvisionnement de bout en bout.
-Category : Infrastructure & Commerce
-Timeline : Selon la nature du projet
-Team size : Équipe dédiée
-Warranty : Suivi des marchandises
-Intro : BS-GROUP S.A assure le transport de marchandises et la gestion intégrée de vos chaînes logistiques et d'approvisionnement, de bout en bout, au Mali et dans la sous-région.
-Approach title : Notre approche
-Approach : Nous maîtrisons la supply chain dans son ensemble : analyse des flux, planification, acheminement et suivi. Notre infrastructure logistique et notre réseau régional connectent le Mali aux marchés d'Afrique de l'Ouest et internationaux.
-Includes title : Ce que comprend le service
-Includes description : Le transport et la coordination de la chaîne logistique, de l'enlèvement à la livraison.
-Image 1 alt : Transport routier de marchandises
-Image 2 alt : Coordination logistique de bout en bout
-Benefits title : Ce qui nous distingue
-Benefits description : Ce que vous apporte une logistique pensée de bout en bout.
-Video cover alt : Présentation de l'activité Transport & Logistique de BS-GROUP S.A
-Process title : Comment nous procédons
-Process description : Quatre étapes pour acheminer vos marchandises avec maîtrise.
+Intro : BS-GROUP S.A assure le transport de marchandises et la gestion intégrée de vos chaînes logistiques et d'approvisionnement, de bout en bout, au Mali et dans la sous-région. Nos prestations couvrent le transport routier, la coordination des flux, la gestion des opérations transfrontalières et le suivi des expéditions. En reliant les métiers du négoce, des hydrocarbures et du BTP du groupe, nous offrons à nos clients une continuité logistique rare sur le marché malien.
+Approach : Nous maîtrisons la supply chain dans son ensemble : analyse des flux, planification, acheminement et suivi. Notre infrastructure logistique et notre réseau régional connectent le Mali aux marchés d'Afrique de l'Ouest et internationaux. Chaque plan de transport est construit sur mesure, en tenant compte de la nature des marchandises, des contraintes de sécurité, des délais et du rapport coût-efficacité. Les expéditions sont suivies en continu et le client est informé à chaque étape clé.
+Includes description : Le transport et la coordination de la chaîne logistique, de l'enlèvement à la livraison : analyse des flux, choix des itinéraires et des moyens, exécution du transport, gestion documentaire et suivi des expéditions. Nous prenons en charge les opérations nationales comme les corridors régionaux, avec la même exigence de fiabilité et de traçabilité.
+Benefits description : Ce que vous apporte une logistique pensée de bout en bout : une vision claire de vos flux, des délais maîtrisés et un interlocuteur unique capable d'articuler transport, négoce et approvisionnement.
+Process description : Quatre étapes pour acheminer vos marchandises avec maîtrise : analyse des flux, planification des itinéraires et des moyens, acheminement sous coordination continue, puis suivi jusqu'à livraison avec retour d'information.
 
 [EN]
-Title : Transport & Logistics
 Excerpt : Freight transport and integrated management of end-to-end logistics and supply chains.
-Category : Infrastructure & Commerce
-Timeline : Depending on the project
-Team size : Dedicated team
-Warranty : Goods tracking
-Intro : BS-GROUP S.A provides freight transport and integrated management of your logistics and supply chains, end to end, in Mali and across the sub-region.
-Approach title : Our Approach
-Approach : We master the supply chain as a whole: flow analysis, planning, delivery and tracking. Our logistics infrastructure and regional network connect Mali to West African and international markets.
-Includes title : What's Included
-Includes description : Transport and coordination of the logistics chain, from pickup to delivery.
-Image 1 alt : Road freight transport
-Image 2 alt : End-to-end logistics coordination
-Benefits title : What Sets Us Apart
-Benefits description : What you get from logistics designed end to end.
-Video cover alt : Presentation of BS-GROUP S.A's Transport & Logistics activity
-Process title : How We Work
-Process description : Four steps to move your goods with control.
+Intro : BS-GROUP S.A provides freight transport and integrated management of your logistics and supply chains, end to end, in Mali and across the sub-region. Our services cover road transport, flow coordination, cross-border operations management and shipment tracking. By connecting the group's trading, hydrocarbons and construction businesses, we offer our clients a level of logistics continuity that is rare on the Malian market.
+Approach : We master the supply chain as a whole: flow analysis, planning, delivery and tracking. Our logistics infrastructure and regional network connect Mali to West African and international markets. Every transport plan is custom-built, taking into account the nature of the goods, safety constraints, deadlines and cost-effectiveness. Shipments are tracked continuously and the client is informed at each key stage.
+Includes description : Transport and coordination of the logistics chain, from pickup to delivery: flow analysis, route and resource selection, transport execution, document management and shipment tracking. We handle domestic operations as well as regional corridors, with the same standards of reliability and traceability.
+Benefits description : What you get from logistics designed end to end: a clear view of your flows, controlled lead times and a single point of contact able to combine transport, trading and supply.
+Process description : Four steps to move your goods with control: flow analysis, planning of routes and resources, delivery under continuous coordination, then follow-up through to handover with feedback.
 
 [AR]
-Title : النقل واللوجستيك
 Excerpt : نقل البضائع والإدارة المتكاملة لسلاسل الإمداد واللوجستيك من البداية إلى النهاية.
-Category : البنية التحتية والتجارة
-Timeline : حسب طبيعة المشروع
-Team size : فريق مخصص
-Warranty : متابعة البضائع
-Intro : تضمن BS-GROUP S.A نقل البضائع والإدارة المتكاملة لسلاسل اللوجستيك والإمداد الخاصة بكم، من البداية إلى النهاية، في مالي وفي المنطقة الإقليمية.
-Approach title : نهجنا
-Approach : نتحكم في سلسلة الإمداد بأكملها: تحليل التدفقات، والتخطيط، والإيصال، والمتابعة. وتربط بنيتنا اللوجستية وشبكتنا الإقليمية مالي بأسواق غرب إفريقيا والأسواق الدولية.
-Includes title : ما تشمله الخدمة
-Includes description : نقل وتنسيق سلسلة اللوجستيك، من الاستلام حتى التسليم.
-Image 1 alt : نقل البضائع عبر الطرق
-Image 2 alt : تنسيق لوجستي من البداية إلى النهاية
-Benefits title : ما يميّزنا
-Benefits description : ما تحصلون عليه من لوجستيك مصمم من البداية إلى النهاية.
-Video cover alt : تقديم نشاط النقل واللوجستيك لدى BS-GROUP S.A
-Process title : كيف نعمل
-Process description : أربع مراحل لإيصال بضائعكم بإحكام.
+Intro : تضمن BS-GROUP S.A نقل البضائع والإدارة المتكاملة لسلاسل اللوجستيك والإمداد الخاصة بكم، من البداية إلى النهاية، في مالي وفي المنطقة الإقليمية. تشمل خدماتنا النقل البري، وتنسيق التدفقات، وإدارة العمليات عبر الحدود، وتتبّع الشحنات. وبربطنا مهن التجارة والمحروقات والبناء لدى المجموعة، نوفر لعملائنا استمرارية لوجستية نادرة في السوق المالي.
+Approach : نتحكم في سلسلة الإمداد بأكملها: تحليل التدفقات، والتخطيط، والإيصال، والمتابعة. وتربط بنيتنا اللوجستية وشبكتنا الإقليمية مالي بأسواق غرب إفريقيا والأسواق الدولية. كل خطة نقل تُبنى حسب الطلب، مع مراعاة طبيعة البضائع وقيود السلامة والآجال والعلاقة بين التكلفة والفعالية. تُتابع الشحنات باستمرار ويُطلع العميل على كل مرحلة أساسية.
+Includes description : نقل وتنسيق سلسلة اللوجستيك، من الاستلام حتى التسليم: تحليل التدفقات، واختيار المسارات والوسائل، وتنفيذ النقل، والإدارة الوثائقية، وتتبّع الشحنات. نتولى العمليات الوطنية كما الممرات الإقليمية، بمعايير الموثوقية والتتبّع نفسها.
+Benefits description : ما تحصلون عليه من لوجستيك مصمم من البداية إلى النهاية: رؤية واضحة لتدفقاتكم، وآجال مضبوطة، ومحاور واحد قادر على التنسيق بين النقل والتجارة والتزويد.
+Process description : أربع مراحل لإيصال بضائعكم بإحكام: تحليل التدفقات، وتخطيط المسارات والوسائل، والإيصال تحت تنسيق مستمر، ثم المتابعة حتى التسليم مع إعادة المعلومة.
 
---- SERVICE FEATURES (4) ---
-[Feature 1] Order : 0
-  FR : Transport de marchandises
-  EN : Freight transport
-  AR : نقل البضائع
-[Feature 2] Order : 1
-  FR : Gestion intégrée des chaînes logistiques
-  EN : Integrated logistics chain management
-  AR : الإدارة المتكاملة لسلاسل اللوجستيك
-[Feature 3] Order : 2
-  FR : Approvisionnement de bout en bout
-  EN : End-to-end supply
-  AR : التزويد من البداية إلى النهاية
-[Feature 4] Order : 3
-  FR : Maîtrise de la supply chain
-  EN : Supply chain control
-  AR : التحكم في سلسلة الإمداد
+Features
+[Feature 1] Transport de marchandises au Mali et sur les corridors sous-régionaux | Freight transport in Mali and on sub-regional corridors | نقل البضائع في مالي وعلى الممرات الإقليمية
+[Feature 2] Gestion intégrée des chaînes logistiques, de l'amont à l'aval | Integrated logistics chain management, upstream to downstream | الإدارة المتكاملة لسلاسل اللوجستيك، من المنبع إلى المصب
+[Feature 3] Approvisionnement de bout en bout, relié aux activités de négoce du groupe | End-to-end supply, connected to the group's trading activities | التزويد من البداية إلى النهاية، مرتبط بأنشطة التجارة لدى المجموعة
+[Feature 4] Maîtrise de la supply chain : planification, exécution et suivi des flux | Supply chain control: planning, execution and flow tracking | التحكم في سلسلة الإمداد: التخطيط والتنفيذ وتتبّع التدفقات
 
---- SERVICE BENEFITS (4) ---
-[Benefit 1] Icon : route | Order : 0
-  Title FR : Supply chain maîtrisée
-  Title EN : Controlled supply chain
-  Title AR : سلسلة إمداد محكمة
-  Description FR : Une vision d'ensemble des flux, de l'enlèvement à la livraison.
-  Description EN : A full view of flows, from pickup to delivery.
-  Description AR : رؤية شاملة للتدفقات، من الاستلام حتى التسليم.
-[Benefit 2] Icon : globe | Order : 1
-  Title FR : Portée sous-régionale
-  Title EN : Sub-regional reach
-  Title AR : نطاق إقليمي
-  Description FR : Un réseau qui connecte le Mali aux marchés d'Afrique de l'Ouest et internationaux.
-  Description EN : A network connecting Mali to West African and international markets.
-  Description AR : شبكة تربط مالي بأسواق غرب إفريقيا والأسواق الدولية.
-[Benefit 3] Icon : network | Order : 2
-  Title FR : Coordination intégrée
-  Title EN : Integrated coordination
-  Title AR : تنسيق متكامل
-  Description FR : Une logistique reliée au négoce, aux hydrocarbures et au BTP du groupe.
-  Description EN : Logistics linked to the group's trading, hydrocarbons and construction activities.
-  Description AR : لوجستيك مرتبط بأنشطة التجارة والمحروقات والبناء لدى المجموعة.
-[Benefit 4] Icon : clock | Order : 3
-  Title FR : Respect des délais
-  Title EN : Respect for deadlines
-  Title AR : احترام الآجال
-  Description FR : Une planification rigoureuse pour acheminer vos marchandises dans les temps.
-  Description EN : Rigorous planning to deliver your goods on time.
-  Description AR : تخطيط دقيق لإيصال بضائعكم في وقتها.
+Benefits
+[Benefit 1] route — Supply chain maîtrisée / Controlled supply chain / سلسلة إمداد محكمة
+FR : Une vision d'ensemble des flux, de l'enlèvement à la livraison, avec des points de contrôle définis à chaque étape.
+EN : A full view of flows, from pickup to delivery, with checkpoints defined at each stage.
+AR : رؤية شاملة للتدفقات، من الاستلام حتى التسليم، مع نقاط مراقبة محددة في كل مرحلة.
+[Benefit 2] globe — Portée sous-régionale / Sub-regional reach / نطاق إقليمي
+FR : Un réseau qui connecte le Mali aux marchés d'Afrique de l'Ouest et internationaux, appuyé sur des partenaires locaux éprouvés.
+EN : A network connecting Mali to West African and international markets, backed by proven local partners.
+AR : شبكة تربط مالي بأسواق غرب إفريقيا والأسواق الدولية، مدعومة بشركاء محليين مُختبَرين.
+[Benefit 3] network — Coordination intégrée / Integrated coordination / تنسيق متكامل
+FR : Une logistique reliée au négoce, aux hydrocarbures et au BTP du groupe, pour traiter plusieurs volets d'un même projet avec un seul interlocuteur.
+EN : Logistics linked to the group's trading, hydrocarbons and construction activities, so several aspects of a single project can be handled by one contact.
+AR : لوجستيك مرتبط بأنشطة التجارة والمحروقات والبناء لدى المجموعة، لمعالجة عدة جوانب من مشروع واحد بمحاور واحد.
+[Benefit 4] clock — Respect des délais / Respect for deadlines / احترام الآجال
+FR : Une planification rigoureuse pour acheminer vos marchandises dans les temps, avec des plans de secours en cas d'imprévu.
+EN : Rigorous planning to deliver your goods on time, with contingency plans in case of the unexpected.
+AR : تخطيط دقيق لإيصال بضائعكم في وقتها، مع خطط احتياطية عند الطوارئ.
 
---- SERVICE STEPS (4) ---
-[Step 1] Number : 01 | Order : 0
-  Title FR : Analyse des flux
-  Title EN : Flow analysis
-  Title AR : تحليل التدفقات
-  Description FR : Nature des marchandises, volumes, origines et destinations.
-  Description EN : Type of goods, volumes, origins and destinations.
-  Description AR : طبيعة البضائع والكميات ومكان المنشأ والوجهات.
-[Step 2] Number : 02 | Order : 1
-  Title FR : Planification
-  Title EN : Planning
-  Title AR : التخطيط
-  Description FR : Choix des itinéraires, des moyens de transport et du calendrier.
-  Description EN : Choice of routes, means of transport and schedule.
-  Description AR : اختيار المسارات ووسائل النقل والجدول الزمني.
-[Step 3] Number : 03 | Order : 2
-  Title FR : Acheminement
-  Title EN : Delivery
-  Title AR : الإيصال
-  Description FR : Transport des marchandises avec coordination de chaque étape.
-  Description EN : Transport of the goods with coordination of each stage.
-  Description AR : نقل البضائع مع تنسيق كل مرحلة.
-[Step 4] Number : 04 | Order : 3
-  Title FR : Suivi et livraison
-  Title EN : Tracking and handover
-  Title AR : المتابعة والتسليم
-  Description FR : Suivi jusqu'à la réception et retour d'information au client.
-  Description EN : Tracking through to receipt and feedback to the client.
-  Description AR : المتابعة حتى الاستلام وإبلاغ العميل.
+Steps
+[Step 1] 01 — Analyse des flux / Flow analysis / تحليل التدفقات
+FR : Étude de la nature des marchandises, des volumes, des origines et des destinations, ainsi que des contraintes de sécurité et de délais.
+EN : Study of the type of goods, volumes, origins and destinations, as well as safety and deadline constraints.
+AR : دراسة طبيعة البضائع والكميات ومواضع المنشأ والوجهات، إضافة إلى قيود السلامة والآجال.
+[Step 2] 02 — Planification / Planning / التخطيط
+FR : Choix des itinéraires, des moyens de transport et du calendrier, optimisés au regard des coûts et des délais.
+EN : Selection of routes, means of transport and schedule, optimized for cost and lead time.
+AR : اختيار المسارات ووسائل النقل والجدول الزمني، مع تحسينها وفق التكاليف والآجال.
+[Step 3] 03 — Acheminement / Delivery / الإيصال
+FR : Transport des marchandises avec coordination de chaque étape, gestion documentaire et anticipation des points de friction.
+EN : Transport of the goods with coordination of each stage, document management and anticipation of friction points.
+AR : نقل البضائع مع تنسيق كل مرحلة، والإدارة الوثائقية، وتوقّع نقاط الاحتكاك.
+[Step 4] 04 — Suivi et livraison / Tracking and handover / المتابعة والتسليم
+FR : Suivi jusqu'à la réception et retour d'information au client, avec bilan de l'opération et recommandations pour les flux suivants.
+EN : Tracking through to receipt and feedback to the client, with an operation review and recommendations for subsequent flows.
+AR : المتابعة حتى الاستلام وإبلاغ العميل، مع حصيلة العملية وتوصيات للتدفقات المقبلة.
