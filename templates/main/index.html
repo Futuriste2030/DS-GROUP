@@ -154,7 +154,7 @@
               class="relative h-[340px] md:h-[420px] rounded-[36px] overflow-hidden shadow-xl shadow-slate-900/10"
             >
               <img
-                {% if site_settings.hero_video_cover %}src="{{ site_settings.hero_video_cover.url }}"{% elif site_settings.hero_image_1 %}src="{{ site_settings.hero_image_1.url }}"{% else %}src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1600&auto=format&fit=crop"{% endif %}
+                {% if site_settings.hero_video_cover %}src="{{ site_settings.hero_video_cover.url }}"{% elif site_settings.hero_image %}src="{{ site_settings.hero_image.url }}"{% else %}src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1600&auto=format&fit=crop"{% endif %}
                 alt="{% trans 'Engineers with site helmets reviewing plans on site' %}"
                 class="w-full h-full object-cover"
               />

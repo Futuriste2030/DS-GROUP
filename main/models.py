@@ -6,8 +6,8 @@ from core.mixins import WebPConversionMixin
 
 class SiteSettings(SEOMixin, WebPConversionMixin, models.Model):
     webp_fields = ['logo', 'about_video_cover', 'about_image_1', 'about_image_2',
-                   'why_image_1', 'why_image_2', 'hero_image_1', 'hero_image_2',
-                   'hero_image_3', 'hero_video_cover', 'contact_image']
+                   'why_image_1', 'why_image_2', 'hero_image',
+                   'hero_video_cover', 'contact_image']
     webp_max_width = 1920
     webp_quality = 82
 
@@ -70,11 +70,9 @@ class SiteSettings(SEOMixin, WebPConversionMixin, models.Model):
     hero_badge = models.CharField(max_length=200, blank=True, default='BS GROUP — Bâtir avec excellence')
     hero_title = models.CharField(max_length=400, blank=True, default='Construire l’avenir avec précision')
     hero_description = models.TextField(blank=True)
-    hero_image_1 = models.ImageField(upload_to='hero/', blank=True)
-    hero_image_2 = models.ImageField(upload_to='hero/', blank=True)
-    hero_image_3 = models.ImageField(upload_to='hero/', blank=True)
+    hero_image = models.ImageField(upload_to='hero/', blank=True)
     hero_video_url = models.URLField(blank=True, help_text='URL embed YouTube (…/embed/…) ou fichier MP4 direct pour le bouton play du hero. Vide = vidéo About.')
-    hero_video_cover = models.ImageField(upload_to='hero/video/', blank=True, help_text='Image du cadre hero derrière le bouton play. Vide = Hero image 1.')
+    hero_video_cover = models.ImageField(upload_to='hero/video/', blank=True, help_text='Image du cadre hero derrière le bouton play. Vide = Hero image.')
 
     contact_image = models.ImageField(upload_to='contact/', blank=True)
     services_section_title = models.CharField(max_length=300, blank=True, default='Nos expertises construction')
