@@ -144,10 +144,10 @@
           <h3
             class="mt-10 text-[22px] md:text-[26px] font-extrabold text-[#0b1f35] tracking-tight"
           >
-            {% trans "What’s Included" %}
+            {{ service.includes_title|default:_("What’s Included") }}
           </h3>
           <p class="mt-3.5 text-[15px] text-slate-500 leading-relaxed">
-            {% trans "Every package is fully comprehensive — covering structure, systems and finishes under one accountable contract." %}
+            {{ service.includes_description }}
           </p>
 
           <!-- Grille de fonctionnalités (2 x 4) -->
@@ -349,12 +349,11 @@
           <h2
             class="text-[30px] md:text-[38px] font-black tracking-tight leading-[1.15]"
           >
-            <span class="text-[#0b1f35]">{% trans "Benefits That" %}</span>
-            <span class="block text-[#c9a227]">{% trans "Set Us Apart" %}</span>
+            {{ service.benefits_title|default:_("Benefits That Set Us Apart") }}
           </h2>
 
           <p class="mt-4 text-[15px] text-slate-500 leading-relaxed">
-            {% trans "Choosing BS GROUP means more than hiring a builder — it means partnering with a team invested in your peace of mind at every stage of the project." %}
+            {{ service.benefits_description }}
           </p>
 
           <button
@@ -511,10 +510,10 @@
         <h2
           class="text-[30px] md:text-[38px] font-black text-[#0b1f35] tracking-tight leading-tight"
         >
-          {% trans "How We" %} <span class="text-[#c9a227]">{% trans "Build Your Home" %}</span>
+          {{ service.process_title|default:_("How We Build Your Home") }}
         </h2>
         <p class="mt-4 max-w-2xl text-[15px] text-slate-500 leading-relaxed">
-          {% trans "A proven four-phase framework refined over 25 years — designed to keep your build on schedule, on budget and stress-free from start to finish." %}
+          {{ service.process_description }}
         </p>
 
         <!-- Grille 4 étapes avec séparateurs verticaux -->
