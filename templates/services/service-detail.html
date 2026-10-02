@@ -121,9 +121,9 @@
             <span
               class="float-left w-10 h-10 rounded-xl bg-[#c9a227] text-white font-black flex items-center justify-center text-lg mr-3.5 mb-1 shadow-md shadow-orange-500/25"
               aria-hidden="true"
-              >{{ service.title|slice:":1" }}</span
+              >{{ service.intro|slice:":1"|default:"B" }}</span
             >
-            {{ service.intro }}
+            {{ service.intro|slice:"1:" }}
           </p>
 
           <!-- The Approach -->
