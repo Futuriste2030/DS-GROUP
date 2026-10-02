@@ -1293,7 +1293,26 @@ document.addEventListener("DOMContentLoaded", () => {
         scrollChat();
       };
       streamAskApi(userText, onToken)
-        .then(() => finishStream(false))
+        .then(() => {
+          // Même si le proxy/Nginx a bufférisé le SSE (tokens reçus en un
+          // seul bloc), on attend la fin du rendu progressif au lieu
+          // d'afficher la réponse d'un coup (finishStream le ferait).
+          if (!gotToken) {
+            finishStream(false);
+            return;
+          }
+          const waitStreamDone = () => {
+            if (
+              renderTimer ||
+              bubble.textContent.length < pending.length
+            ) {
+              setTimeout(waitStreamDone, 60);
+            } else {
+              finishStream(true);
+            }
+          };
+          waitStreamDone();
+        })
         .catch(() => {
           // Repli synchrone : rejoue la réponse complète via le même
           // rendu progressif pour garder l'effet stream.

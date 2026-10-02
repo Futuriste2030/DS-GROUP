@@ -4,7 +4,6 @@ import unicodedata
 from django.apps import apps
 from django.conf import settings
 from django.urls import reverse
-from django.db.models import Q
 from django.utils.html import strip_tags
 from django.utils.text import Truncator
 from chatbot.models import ChatbotKnowledge
@@ -54,6 +53,27 @@ TEXT_FIELDS = [
 ]
 
 VALID_LANGS = {'fr', 'en', 'ar'}
+
+# Plafond de lignes scannées par modèle (matching Python insensible aux accents).
+_MAX_ROWS_PER_MODEL = 500
+
+# Intentions détectées sur tokens normalisés (minuscules, sans accents).
+_SERVICE_INTENT = frozenset("""
+service services prestation prestations activite activites domaine domaines
+offre offres solution solutions aide aider aidez proposer proposez faites
+faire catalogue realisation realisations metier metiers
+offer offers offering offerings activity activities solution solutions
+provide provides help catalog business
+خدمة خدمات نشاط انشطة عرض عروض مجال مجالات
+""".split())
+
+_CONTACT_INTENT = frozenset("""
+contact contacter contactez contacte joindre appel appeler appelez
+email mail courriel telephone tel adresse address localisation siege
+bureau bureaux whatsapp numero coordonnees horaires ouverture
+phone email address location contact call reach headquarters office
+اتصل اتصلوا هاتف الهاتف بريد ايميل عنوان مقر موقع رقم الهاتف
+""".split())
 
 # Mots vides par langue (FR/EN/AR).
 _STOPWORDS = frozenset("""
@@ -121,6 +141,63 @@ def _tokenize(query):
     if not meaningful:
         meaningful = [t for t in tokens if len(t) >= 2]
     return meaningful
+
+
+def _score_fields(obj, fields, tokens, lang):
+    """
+    Score insensible aux accents calculé en Python (pas de icontains SQL,
+    qui rate 'negoce' vs 'Négoce'). Retourne (score_total, [(score, texte)]).
+    Le premier champ (souvent le titre) compte double.
+    """
+    total = 0
+    per_field = []
+    for i, f in enumerate(fields):
+        val = _get_field_value(obj, f, lang)
+        s = _score(val, tokens)
+        if i == 0:
+            s *= 2
+        total += s
+        if (val or '').strip():
+            per_field.append((s, val))
+    return total, per_field
+
+
+def _rich_excerpt(title, per_field, max_words=120):
+    """
+    Extrait substantiel : titre + meilleurs champs correspondants, avec
+    toujours au moins les 2 premiers champs non vides (souvent l'accroche
+    et l'intro) même sans match direct — sinon Gemini reçoit juste un
+    titre ('BTP') et répond 'pas d'info'.
+    """
+    ranked = sorted(
+        enumerate(per_field),
+        key=lambda t: (t[1][0] <= 0, -t[1][0], t[0]),
+    )
+    chunks = [title] if (title or '').strip() else []
+    seen = {title.strip().lower()} if chunks else set()
+    for _, (s, val) in ranked:
+        v = (val or '').strip()
+        if not v or v.lower() in seen:
+            continue
+        chunks.append(v)
+        seen.add(v.lower())
+        if len(chunks) >= 4:
+            break
+    return truncate_html(' — '.join(chunks), max_words=max_words)
+
+
+def _obj_title(obj, lang):
+    title = (
+        getattr(obj, f'title_{lang}', None)
+        or getattr(obj, 'title', None)
+        or getattr(obj, f'question_{lang}', None)
+        or getattr(obj, 'question', None)
+        or getattr(obj, f'name_{lang}', None)
+        or getattr(obj, 'name', None)
+        or getattr(obj, 'client_name', None)
+        or str(obj)
+    )
+    return str(title)
 
 
 def _obj_url(obj):
@@ -193,6 +270,69 @@ def _site_settings_hits(tokens, lang):
     }]
 
 
+def _contact_hit(lang):
+    """
+    Intention contact explicite : renvoie directement les coordonnées
+    de la BD (téléphone, email, adresse), même si les mots 'email' ou
+    'téléphone' ne figurent dans aucun texte du site.
+    """
+    try:
+        SiteSettings = apps.get_model('main', 'SiteSettings')
+        ss = SiteSettings.objects.first()
+    except LookupError:
+        return None
+    if not ss:
+        return None
+    parts = []
+    company = _get_field_value(ss, 'company_name', lang) or 'BS GROUP'
+    for label, val in (
+        ('Téléphone', (getattr(ss, 'phone', '') or '').strip()),
+        ('Email', (getattr(ss, 'email', '') or '').strip()),
+        ('Email carrières', (getattr(ss, 'careers_email', '') or '').strip()),
+        ('Adresse', _get_field_value(ss, 'address', lang).strip()),
+    ):
+        if val:
+            parts.append(f'{label} : {val}')
+    if not parts:
+        return None
+    return {
+        'title': f'{company} — Contact',
+        'excerpt': truncate_html(' — '.join(parts), max_words=100),
+        'source_url': None,
+        'score': 60,  # prioritaire quand l'intention contact est explicite
+    }
+
+
+def _service_catalog_hits(lang, exclude_titles, count=6):
+    """
+    Repli catalogue : la question porte sur les services en général
+    ('quels sont vos services ?') mais aucun mot ne matche les contenus.
+    Retourne les premiers services avec un extrait substantiel.
+    """
+    try:
+        Service = apps.get_model('services', 'Service')
+    except LookupError:
+        return []
+    hits = []
+    for obj in Service.objects.order_by('order', 'id')[:count]:
+        title = _obj_title(obj, lang)
+        if title in exclude_titles:
+            continue
+        excerpt = _rich_excerpt(title, [
+            (1, _get_field_value(obj, 'excerpt', lang)),
+            (1, _get_field_value(obj, 'intro', lang)),
+            (0, _get_field_value(obj, 'category', lang)),
+        ])
+        hits.append({
+            'title': title,
+            'excerpt': excerpt,
+            'source_url': _obj_url(obj),
+            'score': 5,
+        })
+        exclude_titles.add(title)
+    return hits
+
+
 def search_hits(query, lang, limit=6):
     """
     Search site models + ChatbotKnowledge for relevant content.
@@ -219,68 +359,41 @@ def search_hits(query, lang, limit=6):
                 'score': score,
             })
 
-    # Search site content models
+    # Search site content models — matching 100 % Python, insensible
+    # aux accents (le préfiltre SQL icontains ratait 'negoce' vs 'Négoce').
+    existing_titles = {h['title'] for h in hits}
     for app_label, model_name, fields in TEXT_FIELDS:
         try:
             Model = apps.get_model(app_label, model_name)
         except LookupError:
             continue
 
-        search_fields = _search_fields(Model, fields, lang)
-        q = Q()
-        for f in search_fields:
-            for tok in tokens:
-                q |= Q(**{f + '__icontains': tok})
-
-        if not q:
-            continue
-
-        existing_titles = {h['title'] for h in hits}
-
         try:
-            queryset = Model.objects.filter(q)[:15]
+            rows = list(Model.objects.all()[:_MAX_ROWS_PER_MODEL])
         except Exception:
             continue
-        for obj in queryset:
-            title = (
-                getattr(obj, f'title_{lang}', None)
-                or getattr(obj, 'title', None)
-                or getattr(obj, f'question_{lang}', None)
-                or getattr(obj, 'question', None)
-                or getattr(obj, f'name_{lang}', None)
-                or getattr(obj, 'name', None)
-                or getattr(obj, 'client_name', None)
-                or str(obj)
-            )
-            title = str(title)
+        for obj in rows:
+            title = _obj_title(obj, lang)
             if title in existing_titles:
                 continue
-
-            obj_score = 0
-            best_field_text = ''
-            best_field_score = 0
-            first_field = fields[0] if fields else None
-            for i, f in enumerate(fields):
-                val = _get_field_value(obj, f, lang)
-                s = _score(val, tokens)
-                # Le premier champ (souvent le titre) compte double
-                if i == 0:
-                    s *= 2
-                obj_score += s
-                if s > best_field_score:
-                    best_field_score = s
-                    best_field_text = val
-
+            obj_score, per_field = _score_fields(obj, fields, tokens, lang)
             if obj_score > 0:
-                # Affiche le champ le plus pertinent (pas juste le 1er non-vide)
-                display = best_field_text or _get_field_value(obj, first_field, lang)
                 hits.append({
                     'title': title,
-                    'excerpt': truncate_html(display),
+                    'excerpt': _rich_excerpt(title, per_field),
                     'source_url': _obj_url(obj),
                     'score': obj_score,
                 })
                 existing_titles.add(title)
+
+    # Replis d'intention (seulement si le matching direct est pauvre)
+    if any(t in _CONTACT_INTENT for t in tokens):
+        contact = _contact_hit(lang)
+        if contact and contact['title'] not in existing_titles:
+            hits.append(contact)
+            existing_titles.add(contact['title'])
+    if len(hits) < 2 and any(t in _SERVICE_INTENT for t in tokens):
+        hits.extend(_service_catalog_hits(lang, existing_titles))
 
     # Sort by score descending, return top N
     hits.sort(key=lambda h: h['score'], reverse=True)
