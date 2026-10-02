@@ -1,3 +1,5 @@
+import re
+
 from django.contrib import admin
 from django.db import models
 from ckeditor.widgets import CKEditorWidget
@@ -5,13 +7,11 @@ from modeltranslation.admin import TabbedTranslationAdmin, TranslationTabularInl
 from .models import SiteSettings, FAQ, Partner, SiteStat, SkillBar, ProcessStep, Feature, TimelineEvent, LegalPage, LegalArticle, CookieConsent, CookieConsentLog
 
 
+# NOTE : réponse affichée SANS |safe : pas de CKEditor (sinon <p> visibles).
 @admin.register(FAQ)
 class FAQAdmin(TabbedTranslationAdmin):
     list_display = ['question', 'order']
     list_editable = ['order']
-    formfield_overrides = {
-        models.TextField: {'widget': CKEditorWidget},
-    }
 
 
 @admin.register(Partner)
@@ -33,9 +33,16 @@ class SiteSettingsAdmin(TabbedTranslationAdmin):
         ('Hero', {'fields': ('hero_badge', 'hero_title', 'hero_description', 'hero_image', 'hero_video_url', 'hero_video_cover')}),
         ('Sections', {'fields': ('services_section_title', 'contact_image', 'quote_budget_options', 'quote_timeline_options', 'coming_soon_enabled', 'launch_date')}),
     )
-    formfield_overrides = {
-        models.TextField: {'widget': CKEditorWidget},
-    }
+
+    # Seule 'address' est affichée avec |safe (index + contact) : CKEditor.
+    # Tout le reste s'affiche en brut : textarea simple (pas de <p> stockés).
+    rich_text_fields = {'address'}
+
+    def formfield_for_dbfield(self, db_field, **kwargs):
+        base = re.sub(r'_(fr|en|ar)$', '', db_field.name)
+        if base in self.rich_text_fields:
+            kwargs['widget'] = CKEditorWidget
+        return super().formfield_for_dbfield(db_field, **kwargs)
 
     def has_add_permission(self, request):
         return not SiteSettings.objects.exists()
