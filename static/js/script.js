@@ -1254,14 +1254,18 @@ document.addEventListener("DOMContentLoaded", () => {
       let gotToken = false;
       let pending = "";
       let renderTimer = null;
-      const RENDER_STEP = 1; // 1 caractère par tick (effet machine à écrire)
       const RENDER_EVERY = 12; // ms entre ticks
+      // Rattrapage dynamique : caractère par caractère quand le flux coule,
+      // par gros blocs quand un backlog s'est accumulé (proxy qui bufférise
+      // ou modèle qui envoie peu de gros chunks) — sinon 1200 caractères
+      // prendraient ~15 s à s'afficher.
       const pump = () => {
-        if (bubble.textContent.length < pending.length) {
-          bubble.textContent = pending.slice(
-            0,
-            bubble.textContent.length + RENDER_STEP,
-          );
+        const shown = bubble.textContent.length;
+        if (shown < pending.length) {
+          const backlog = pending.length - shown;
+          const step =
+            backlog > 400 ? 14 : backlog > 150 ? 6 : backlog > 40 ? 3 : 1;
+          bubble.textContent = pending.slice(0, shown + step);
           if (bubble.textContent.length % 3 === 0) scrollChat();
           renderTimer = setTimeout(pump, RENDER_EVERY);
         } else {

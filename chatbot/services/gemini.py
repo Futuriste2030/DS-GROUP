@@ -32,13 +32,24 @@ class GeminiError(Exception):
     pass
 
 
+# Client réutilisé d'un appel à l'autre (l'init coûte ~1 s, cf. mesures) —
+# recréé uniquement si la clé API change (tests, rotation de clé).
+_client_cache = {}
+
+
 def _client():
-    if not settings.GEMINI_API_KEY:
+    key = settings.GEMINI_API_KEY
+    if not key:
         raise GeminiError('no_key')
-    return genai.Client(
-        api_key=settings.GEMINI_API_KEY,
-        http_options={'timeout': _TIMEOUT_MS},
-    )
+    client = _client_cache.get(key)
+    if client is None:
+        client = genai.Client(
+            api_key=key,
+            http_options={'timeout': _TIMEOUT_MS},
+        )
+        _client_cache.clear()
+        _client_cache[key] = client
+    return client
 
 
 def _config(lang):
@@ -95,7 +106,7 @@ def chat(user_msg, lang, conversation):
                     'Gemini transient error, retry %d/%d: %s',
                     attempt, _MAX_ATTEMPTS, exc,
                 )
-                time.sleep(attempt)  # 1s, 2s, ...
+                time.sleep(0.5 * attempt)  # 0.5s, 1s... (le modèle répond déjà lentement)
                 continue
             logger.exception('Gemini generate_content failed')
             raise GeminiError('api_error') from last_exc
@@ -128,7 +139,7 @@ def chat_stream(user_msg, lang, conversation):
                     'Gemini transient stream error, retry %d/%d: %s',
                     attempt, _MAX_ATTEMPTS, exc,
                 )
-                time.sleep(attempt)
+                time.sleep(0.5 * attempt)
     except GeminiError:
         raise
     except Exception:
