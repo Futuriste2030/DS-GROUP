@@ -88,11 +88,11 @@ AR : شبكة من الموردين الموثوقين والمُدقَّقين 
 FR : Une maîtrise du contexte réglementaire et opérationnel malien, acquise auprès des administrations et des acteurs de la place. Cette connaissance du terrain facilite les formalités, réduit les délais et fiabilise les opérations.
 EN : A solid command of the Malian regulatory and operational context, built through work with local authorities and stakeholders. This field knowledge streamlines formalities, shortens lead times and makes operations more reliable.
 AR : إتقان للسياق التنظيمي والتشغيلي في مالي، اكتُسب عبر العمل مع الإدارات والفاعلين المحليين. هذه المعرفة الميدانية تُسهّل الإجراءات وتختصر الآجال وتزيد موثوقية العمليات.
-[Benefit 3] Icon : network — Chaîne intégrée / Integrated chain / سلسلة متكاملة
+[Benefit 3] Icon : share-2 — Chaîne intégrée / Integrated chain / سلسلة متكاملة
 FR : La possibilité d'associer transport, logistique et financement grâce aux autres activités du groupe. Un seul interlocuteur coordonne l'ensemble de votre opération, du sourcing jusqu'à la livraison finale.
 EN : Transport, logistics and financing can be combined through the group's other activities. A single point of contact coordinates your entire operation, from sourcing to final delivery.
 AR : إمكانية الجمع بين النقل واللوجستيك والتمويل عبر الأنشطة الأخرى للمجموعة. محاور واحد ينسّق كامل عمليتكم، من البحث عن المصادر حتى التسليم النهائي.
-[Benefit 4] Icon : package — Offre sur mesure / Tailored offer / عرض مخصص
+[Benefit 4] Icon : tag — Offre sur mesure / Tailored offer / عرض مخصص
 FR : Des volumes, des délais et des conditions adaptés à chaque client, qu'il s'agisse d'une commande ponctuelle ou d'un contrat d'approvisionnement pluriannuel. Notre proposition évolue avec vos besoins et vos cycles d'exploitation.
 EN : Volumes, lead times and terms adapted to each client, whether a one-off order or a multi-year supply contract. Our offer evolves with your needs and operating cycles.
 AR : كميات وآجال وشروط ملائمة لكل عميل، سواء تعلق الأمر بطلبية واحدة أو بعقد تزويد يمتد لسنوات. يتطور عرضنا مع احتياجاتكم ودورات تشغيلكم.

@@ -216,8 +216,10 @@ def parse_services_file(path):
                     current['benefits'].append(current_benefit)
                     continue
                 # Nouveau format compact : 'icon — TitreFR / TitleEN / TitleAR'
+                # (le service 1 préfixe l'icône de 'Icon : ...' — on le retire)
                 parts = re.split(r'\s*[—–|]\s*', rest, maxsplit=1)
                 icon, titles = (parts[0], parts[1]) if len(parts) == 2 else ('', rest)
+                icon = re.sub(r'^Icon\s*:\s*', '', icon.strip(), flags=re.IGNORECASE)
                 t_fr, t_en, t_ar = _split_trilang(titles, sep_pattern=r'\s*/\s*')
                 current_benefit = {
                     'icon': icon.strip(), 'order': idx - 1,
@@ -258,6 +260,7 @@ def parse_services_file(path):
                 # Nouveau format compact : '01 — TitreFR / TitleEN / TitleAR'
                 parts = re.split(r'\s*[—–|]\s*', rest, maxsplit=1)
                 number, titles = (parts[0], parts[1]) if len(parts) == 2 else ('%02d' % idx, rest)
+                number = re.sub(r'^(Number|Order)\s*:\s*', '', number.strip(), flags=re.IGNORECASE)
                 t_fr, t_en, t_ar = _split_trilang(titles, sep_pattern=r'\s*/\s*')
                 current_step = {
                     'number': number.strip(), 'order': idx - 1,
@@ -313,6 +316,25 @@ class Command(BaseCommand):
                 f"champs={len(provided)} "
                 f"feat={len(s['features'])} ben={len(s['benefits'])} steps={len(s['steps'])}"
             )
+
+        # Validation : les icônes doivent exister dans static/icons/lucide,
+        # sinon le loader JS les ignore silencieusement (icône invisible).
+        icons_dir = Path(settings.BASE_DIR) / 'static' / 'icons' / 'lucide'
+        if icons_dir.is_dir():
+            available = {f.stem for f in icons_dir.glob('*.svg')}
+            used = set()
+            for s in services:
+                if s.get('icon'):
+                    used.add(s['icon'])
+                for b in s['benefits']:
+                    if b.get('icon'):
+                        used.add(b['icon'])
+            missing = sorted(used - available)
+            if missing:
+                self.stdout.write(self.style.WARNING(
+                    f"Icônes absentes de static/icons/lucide (invisibles sur le site) : {', '.join(missing)}"))
+            else:
+                self.stdout.write('Icônes : toutes présentes dans static/icons/lucide.')
 
         if options['dry_run']:
             self.stdout.write(self.style.WARNING('Dry-run : rien écrit en BD.'))
