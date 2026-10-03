@@ -1,0 +1,65 @@
+BS-GROUP S.A — HIRING STEPS (FR / EN / AR)
+Structure : formulaire « Ajout de hiring step » du CMS
+Légende :
+
+Order : champ non traduit → à saisir une seule fois.
+Title / Description : champs traduits → à saisir dans chaque onglet (fr / en / ar).
+PACK A — PROCESSUS EN 4 ÉTAPES (recommandé)
+Le standard clair et rassurant : candidature → étude du dossier → entretien → intégration.
+
+STEP 1 / 4
+--- CHAMPS NON TRADUITS ---
+Order : 0
+
+--- CHAMPS TRADUITS ---
+[FR] Title : Candidatez
+[FR] Description : Envoyez votre CV et une lettre de motivation via le formulaire de la page Carrières ou par email. Précisez le poste visé — ou votre domaine d'expertise pour une candidature spontanée.
+
+[EN] Title : Apply
+[EN] Description : Send your CV and cover letter through the Careers page form or by email. Specify the position you are targeting — or your area of expertise for a spontaneous application.
+
+[AR] Title : قدّم ترشحك
+[AR] Description : أرسل سيرتك الذاتية ورسالة تحفيزية عبر نموذج صفحة الوظائف أو بالبريد الإلكتروني. حدد الوظيفة المستهدفة — أو مجال خبرتك في حالة طلب ترشيح تلقائي.
+
+STEP 2 / 4
+--- CHAMPS NON TRADUITS ---
+Order : 1
+
+--- CHAMPS TRADUITS ---
+[FR] Title : Étude de votre dossier
+[FR] Description : Notre équipe examine chaque candidature avec attention. Si votre profil correspond à nos besoins, nous vous recontactons pour convenir d'un premier échange.
+
+[EN] Title : Application Review
+[EN] Description : Our team reviews every application with care. If your profile matches our needs, we get back to you to arrange a first conversation.
+
+[AR] Title : دراسة ملفك
+[AR] Description : يدرس فريقنا كل طلب ترشيح بعناية. إذا كان ملفك الشخصي يوافق احتياجاتنا، نتصل بك لتحديد موعد حوار أول.
+
+STEP 3 / 4
+--- CHAMPS NON TRADUITS ---
+Order : 2
+
+--- CHAMPS TRADUITS ---
+[FR] Title : Entretien
+[FR] Description : Un échange avec nos équipes — sur site à Bamako ou à distance — pour découvrir votre parcours, vos compétences et vos aspirations, et vous présenter nos métiers et notre culture.
+
+[EN] Title : Interview
+[EN] Description : A conversation with our teams — on site in Bamako or remotely — to explore your background, skills and aspirations, and to present our businesses and culture.
+
+[AR] Title : المقابلة
+[AR] Description : حوار مع فرقنا — في الموقع في باماكو أو عن بُعد — للتعرّف على مسارك ومهاراتك وطموحاتك، ولعرض مهننا وثقافتنا.
+
+STEP 4 / 4
+--- CHAMPS NON TRADUITS ---
+Order : 3
+
+--- CHAMPS TRADUITS ---
+[FR] Title : Bienvenue dans l'équipe
+[FR] Description : À l'issue du processus, nous formalisons ensemble votre arrivée : contrat, intégration et accompagnement par vos pairs pour une prise de poste réussie.
+
+[EN] Title : Welcome to the Team
+[EN] Description : At the end of the process, we formalize your arrival together: contract, onboarding and support from your peers for a successful start.
+
+[AR] Title : أهلًا بك في الفريق
+[AR] Description : في نهاية العملية، نرتّب معًا انضمامك: العقد، والدمج، ومرافقة زملائك لبدء عملك بنجاح.
+

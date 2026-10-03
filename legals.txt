@@ -1,0 +1,399 @@
+BS-GROUP S.A — PAGES LÉGALES (FR / EN / AR)
+Structure : formulaire « Modification de page type » du CMS — à décliner 4 fois
+Légende :
+
+Page type / Last updated / Version number / Number / Order des articles : champs non traduits → saisis une seule fois.
+Title / Subtitle / Description / Intro / Title & Content des articles : champs traduits → saisis dans chaque onglet (fr / en / ar).
+Données récurrentes utilisées (issues du dossier) :
+
+Dénomination : BS-GROUP S.A — Forme : SAS — RCCM : MA.BKO.2018.B.8807 — NINA : 41809195100320J
+Siège : Immeuble CAPITOLE, Hamdallaye ACI 2000, Bamako — République du Mali
+Site : https://bsgroup.ml — Email : contact@bsgroup.ml (à valider) — Tél. : +223 76 35 10 35 (à valider)
+Hébergeur : OVH — Directeur de la publication : Diakaridia Diakité
+PAGE 1 / 4 — MENTIONS LÉGALES
+Champs non traduits
+Page type : mentions legales (valeur exacte du select)
+Last updated : date du jour de publication (le bouton « Aujourd'hui » du CMS)
+Version number : 1.0
+Champs traduits
+Title
+
+[FR] Mentions Légales
+[EN] Legal Notice
+[AR] الإشعارات القانونية
+
+Subtitle
+
+[FR] Informations légales
+[EN] Legal Information
+[AR] معلومات قانونية
+
+Description
+
+[FR] Informations éditoriales et légales relatives au site bsgroup.ml, édité par BS-GROUP S.A.
+[EN] Editorial and legal information relating to bsgroup.ml, published by BS-GROUP S.A.
+[AR] المعلومات التحريرية والقانونية المتعلقة بموقع bsgroup.ml، الذي تصدره BS-GROUP S.A.
+
+Intro
+
+[FR] Conformément aux dispositions légales et réglementaires en vigueur en République du Mali, vous trouverez ci-dessous l'ensemble des informations relatives à l'édition, à l'hébergement et à l'exploitation du site https://bsgroup.ml.
+[EN] In accordance with the legal and regulatory provisions in force in the Republic of Mali, you will find below all information relating to the publication, hosting and operation of the website https://bsgroup.ml.
+[AR] وفقًا للأحكام القانونية والتنظيمية السارية في جمهورية مالي، تجدون أدناه جميع المعلومات المتعلقة بنشر موقع https://bsgroup.ml واستضافته وتشغيله.
+
+Legal articles
+ARTICLE 1 — Éditeur du site | Number : 1 | Order : 0
+
+[FR] Title : Éditeur du site
+[FR] Content : Le site https://bsgroup.ml est édité par BS-GROUP S.A, société par actions simplifiée (SAS) au capital social de [à compléter], immatriculée au Registre du Commerce et du Crédit Mobilier sous le numéro MA.BKO.2018.B.8807, NINA : 41809195100320J. Siège social : Immeuble CAPITOLE, Hamdallaye ACI 2000, Bamako — République du Mali. Téléphone : +223 76 35 10 35. Email : contact@bsgroup.ml.
+
+[EN] Title : Website Publisher
+[EN] Content : The website https://bsgroup.ml is published by BS-GROUP S.A, a simplified joint-stock company (SAS) with share capital of [to be completed], registered with the Trade and Companies Register under number MA.BKO.2018.B.8807, NINA: 41809195100320J. Registered office: CAPITOLE Building, Hamdallaye ACI 2000, Bamako — Republic of Mali. Phone: +223 76 35 10 35. Email: contact@bsgroup.ml.
+
+[AR] Title : ناشر الموقع
+[AR] Content : يُنشر موقع https://bsgroup.ml من طرف BS-GROUP S.A، شركة مبسطة بالأسهم (SAS) برأسمال [يُستكمل لاحقًا]، مسجلة في السجل التجاري تحت رقم MA.BKO.2018.B.8807، رقم التعريف الضريبي الفريد (NINA): 41809195100320J. المقر الاجتماعي: مبنى كابيتول، حمدالله ACI 2000، باماكو — جمهورية مالي. الهاتف: 223 76 35 10 35+. البريد الإلكتروني: contact@bsgroup.ml.
+
+ARTICLE 2 — Directeur de la publication | Number : 2 | Order : 1
+
+[FR] Title : Directeur de la publication
+[FR] Content : Le directeur de la publication du site https://bsgroup.ml est Monsieur Diakaridia Diakité.
+
+[EN] Title : Publishing Director
+[EN] Content : The publishing director of the website https://bsgroup.ml is Mr. Diakaridia Diakité.
+
+[AR] Title : مدير النشر
+[AR] Content : مدير نشر موقع https://bsgroup.ml هو السيد دياراريديا دياكيتي.
+
+ARTICLE 3 — Hébergement | Number : 3 | Order : 2
+
+[FR] Title : Hébergement
+[FR] Content : Le site https://bsgroup.ml est hébergé par OVH SAS, 2 rue Kellermann — 59100 Roubaix, France. Site web : www.ovhcloud.com. Téléphone : +33 9 72 10 10 07.
+
+[EN] Title : Hosting
+[EN] Content : The website https://bsgroup.ml is hosted by OVH SAS, 2 rue Kellermann — 59100 Roubaix, France. Website: www.ovhcloud.com. Phone: +33 9 72 10 10 07.
+
+[AR] Title : الاستضافة
+[AR] Content : يُستضاف موقع https://bsgroup.ml لدى OVH SAS، 2 rue Kellermann — 59100 Roubaix, France. الموقع الإلكتروني: www.ovhcloud.com. الهاتف: 33 9 72 10 10 07+.
+
+ARTICLE 4 — Propriété intellectuelle | Number : 4 | Order : 3
+
+[FR] Title : Propriété intellectuelle
+[FR] Content : L'ensemble des éléments du site (textes, images, logos, marque « BS GROUP », graphismes, structure) est la propriété exclusive de BS-GROUP S.A et est protégé par le droit malien et les conventions internationales relatives à la propriété intellectuelle. Toute reproduction, représentation ou exploitation, totale ou partielle, sans autorisation écrite préalable est interdite.
+
+[EN] Title : Intellectual Property
+[EN] Content : All elements of the website (texts, images, logos, the “BS GROUP” trademark, graphics, structure) are the exclusive property of BS-GROUP S.A and are protected by Malian law and international intellectual property conventions. Any total or partial reproduction, representation or use without prior written authorization is prohibited.
+
+[AR] Title : الملكية الفكرية
+[AR] Content : جميع عناصر الموقع (النصوص، الصور، الشعارات، علامة “BS GROUP”، التصاميم، البنية) هي ملكية حصرية لـ BS-GROUP S.A، وتحميها القوانين المالية والاتفاقيات الدولية المتعلقة بالملكية الفكرية. يُحظر أي استنساخ أو تمثيل أو استغلال كلي أو جزئي دون إذن كتابي مسبق.
+
+ARTICLE 5 — Responsabilité | Number : 5 | Order : 4
+
+[FR] Title : Responsabilité
+[FR] Content : BS-GROUP S.A s'efforce d'assurer l'exactitude des informations diffusées sur le site, sans pouvoir garantir leur exhaustivité ni leur mise à jour permanente. La société ne saurait être tenue responsable des dommages directs ou indirects résultant de l'utilisation du site, ni des interruptions de service.
+
+[EN] Title : Liability
+[EN] Content : BS-GROUP S.A strives to ensure the accuracy of the information published on the website, but cannot guarantee its completeness or permanent updating. The company shall not be held liable for direct or indirect damages resulting from use of the website, nor for service interruptions.
+
+[AR] Title : المسؤولية
+[AR] Content : تسعى BS-GROUP S.A إلى ضمان دقة المعلومات المنشورة على الموقع، لكنها لا تضمن اكتمالها أو تحديثها الدائم. لا تتحمل الشركة أي مسؤولية عن الأضرار المباشرة أو غير المباشرة الناتجة عن استخدام الموقع، أو عن انقطاع الخدمة.
+
+ARTICLE 6 — Droit applicable et juridiction | Number : 6 | Order : 5
+
+[FR] Title : Droit applicable et juridiction compétente
+[FR] Content : Les présentes mentions légales sont soumises au droit malien. En cas de litige relatif à l'utilisation du site, et à défaut de résolution amiable, compétence est attribuée aux tribunaux de Bamako, République du Mali.
+
+[EN] Title : Governing Law and Jurisdiction
+[EN] Content : This legal notice is governed by Malian law. In the event of a dispute relating to the use of the website, and failing an amicable settlement, jurisdiction is assigned to the courts of Bamako, Republic of Mali.
+
+[AR] Title : القانون الواجب التطبيق والاختصاص القضائي
+[AR] Content : تخضع هذه الإشعارات القانونية للقانون المالي. وفي حال نشوء نزاع يتعلق باستخدام الموقع، وعدم التسوية الودية، تُناط الاختصاصية بمحاكم باماكو، جمهورية مالي.
+
+ARTICLE 7 — Contact | Number : 7 | Order : 6
+
+[FR] Title : Contact
+[FR] Content : Pour toute question relative aux présentes mentions légales : contact@bsgroup.ml ou BS-GROUP S.A, Immeuble CAPITOLE, Hamdallaye ACI 2000, Bamako — République du Mali.
+
+[EN] Title : Contact
+[EN] Content : For any question regarding this legal notice: contact@bsgroup.ml or BS-GROUP S.A, CAPITOLE Building, Hamdallaye ACI 2000, Bamako — Republic of Mali.
+
+[AR] Title : الاتصال
+[AR] Content : لأي سؤال يتعلق بهذه الإشعارات القانونية: contact@bsgroup.ml أو BS-GROUP S.A، مبنى كابيتول، حمدالله ACI 2000، باماكو — جمهورية مالي.
+
+PAGE 2 / 4 — POLITIQUE DE CONFIDENTIALITÉ
+Champs non traduits
+Page type : Politique de Confidentialité (valeur exacte du select)
+Last updated : date du jour de publication
+Version number : 1.0
+Champs traduits
+Title
+
+[FR] Politique de Confidentialité
+[EN] Privacy Policy
+[AR] سياسة الخصوصية
+
+Subtitle
+
+[FR] Protection de vos données personnelles
+[EN] Protection of Your Personal Data
+[AR] حماية بياناتكم الشخصية
+
+Description
+
+[FR] Comment BS-GROUP S.A collecte, utilise et protège les données personnelles transmises via le site bsgroup.ml.
+[EN] How BS-GROUP S.A collects, uses and protects the personal data submitted through the bsgroup.ml website.
+[AR] كيف تجمع BS-GROUP S.A بياناتكم الشخصية الواردة عبر موقع bsgroup.ml وتستخدمها وتحميها.
+
+Intro
+
+[FR] BS-GROUP S.A accorde une grande importance à la protection de vos données personnelles. La présente politique décrit la manière dont nous collectons, traitons et protégeons les informations transmises via notre site, conformément à la loi malienne n° 2013-015 du 21 mai 2013 sur la protection des données personnelles.
+[EN] BS-GROUP S.A attaches great importance to the protection of your personal data. This policy describes how we collect, process and protect the information submitted through our website, in accordance with Malian Law No. 2013-015 of 21 May 2013 on the protection of personal data.
+[AR] تولي BS-GROUP S.A أهمية كبيرة لحماية بياناتكم الشخصية. تصف هذه السياسة كيفية جمعنا للبيانات المُرسلة عبر موقعنا ومعالجتها وحمايتها، وفقًا للقانون المالي رقم 2013-015 المؤرخ في 21 مايو 2013 المتعلق بحماية المعطيات الشخصية.
+
+Legal articles
+ARTICLE 1 — Responsable du traitement | Number : 1 | Order : 0
+
+[FR] Title : Responsable du traitement
+[FR] Content : Le responsable du traitement des données personnelles collectées sur le site est BS-GROUP S.A, Immeuble CAPITOLE, Hamdallaye ACI 2000, Bamako — République du Mali. Email : contact@bsgroup.ml.
+
+[EN] Title : Data Controller
+[EN] Content : The controller of personal data collected on the website is BS-GROUP S.A, CAPITOLE Building, Hamdallaye ACI 2000, Bamako — Republic of Mali. Email: contact@bsgroup.ml.
+
+[AR] Title : المسؤول عن المعالجة
+[AR] Content : المسؤول عن معالجة البيانات الشخصية المجموعة من الموقع هو BS-GROUP S.A، مبنى كابيتول، حمدالله ACI 2000، باماكو — جمهورية مالي. البريد الإلكتروني: contact@bsgroup.ml.
+
+ARTICLE 2 — Données collectées | Number : 2 | Order : 1
+
+[FR] Title : Données collectées
+[FR] Content : Nous collectons uniquement les données que vous nous transmettez volontairement via les formulaires du site : nom, prénom, adresse email, numéro de téléphone, société, ainsi que le contenu de votre message (demande de contact, demande de devis ou candidature).
+
+[EN] Title : Data Collected
+[EN] Content : We only collect the data you voluntarily provide through the website forms: first name, last name, email address, phone number, company, as well as the content of your message (contact request, quote request or application).
+
+[AR] Title : البيانات المجموعة
+[AR] Content : نجمع فقط البيانات التي تقدمونها طوعًا عبر نماذج الموقع: الاسم واللقب، والبريد الإلكتروني، ورقم الهاتف، والشركة، إضافة إلى محتوى رسالتكم (طلب اتصال، أو طلب عرض سعر، أو طلب ترشيح).
+
+ARTICLE 3 — Finalités du traitement | Number : 3 | Order : 2
+
+[FR] Title : Finalités du traitement
+[FR] Content : Vos données sont utilisées exclusivement pour : répondre à vos demandes de contact et de devis ; traiter vos candidatures ; gérer la relation commerciale avec vous. Elles ne font l'objet d'aucune prospection commerciale sans votre consentement préalable.
+
+[EN] Title : Purposes of Processing
+[EN] Content : Your data is used exclusively to: respond to your contact and quote requests; process your applications; manage our commercial relationship with you. It is not used for commercial prospecting without your prior consent.
+
+[AR] Title : أغراض المعالجة
+[AR] Content : تُستخدم بياناتكم حصريًا من أجل: الرد على طلبات الاتصال وعروض الأسعار؛ ومعالجة طلبات الترشيح؛ وإدارة العلاقة التجارية معكم. ولا تُستخدم لأي تسويق تجاري دون موافقتكم المسبقة.
+
+ARTICLE 4 — Destinataires et conservation | Number : 4 | Order : 3
+
+[FR] Title : Destinataires et durée de conservation
+[FR] Content : Vos données sont destinées uniquement aux équipes internes compétentes de BS-GROUP S.A. Elles ne sont ni vendues, ni cédées à des tiers. Elles sont conservées pour la durée nécessaire au traitement de votre demande, puis archivées conformément aux obligations légales applicables.
+
+[EN] Title : Recipients and Retention
+[EN] Content : Your data is intended solely for the competent internal teams of BS-GROUP S.A. It is neither sold nor transferred to third parties. It is kept for the period necessary to process your request, then archived in accordance with applicable legal obligations.
+
+[AR] Title : المتلقون ومدة الحفظ
+[AR] Content : تُخصص بياناتكم حصريًا للفرق الداخلية المختصة لدى BS-GROUP S.A. ولا تُباع ولا تُتنازل لأي طرف ثالث. تُحفظ للمدة اللازمة لمعالجة طلبكم، ثم تُؤرشف وفقًا للالتزامات القانونية السارية.
+
+ARTICLE 5 — Sécurité | Number : 5 | Order : 4
+
+[FR] Title : Sécurité des données
+[FR] Content : Nous mettons en œuvre des mesures techniques et organisationnelles raisonnables pour protéger vos données contre l'accès non autorisé, la perte ou la divulgation, notamment via un hébergement sécurisé.
+
+[EN] Title : Data Security
+[EN] Content : We implement reasonable technical and organizational measures to protect your data against unauthorized access, loss or disclosure, including through secure hosting.
+
+[AR] Title : أمن البيانات
+[AR] Content : نضع إجراءات تقنية وتنظيمية معقولة لحماية بياناتكم من الوصول غير المصرح به أو الفقدان أو الإفصاح، ولا سيما عبر استضافة آمنة.
+
+ARTICLE 6 — Vos droits | Number : 6 | Order : 5
+
+[FR] Title : Vos droits
+[FR] Content : Conformément à la loi malienne sur la protection des données personnelles, vous disposez d'un droit d'accès, de rectification et d'opposition concernant vos données. Pour exercer ces droits, écrivez à contact@bsgroup.ml ou adressez-vous à notre siège. Vous pouvez également saisir l'autorité malienne compétente en matière de protection des données.
+
+[EN] Title : Your Rights
+[EN] Content : In accordance with Malian law on the protection of personal data, you have the right to access, rectify and object to the processing of your data. To exercise these rights, write to contact@bsgroup.ml or contact our headquarters. You may also refer the matter to the competent Malian data protection authority.
+
+[AR] Title : حقوقكم
+[AR] Content : وفقًا للقانون المالي المتعلق بحماية البيانات الشخصية، تملكون حقوق الوصول إلى بياناتكم وتصحيحها والاعتراض على معالجتها. لممارسة هذه الحقوق، راسلونا على contact@bsgroup.ml أو توجهوا إلى مقرنا. يمكنكم أيضًا اللجوء إلى الجهة المالية المختصة بحماية البيانات.
+
+PAGE 3 / 4 — CGU (Conditions Générales d'Utilisation)
+Champs non traduits
+Page type : CGU (valeur exacte du select)
+Last updated : date du jour de publication
+Version number : 1.0
+Champs traduits
+Title
+
+[FR] Conditions Générales d'Utilisation
+[EN] Terms and Conditions of Use
+[AR] الشروط العامة للاستخدام
+
+Subtitle
+
+[FR] CGU du site bsgroup.ml
+[EN] Website Terms of Use
+[AR] شروط استخدام موقع bsgroup.ml
+
+Description
+
+[FR] Règles d'utilisation du site https://bsgroup.ml, propriété de BS-GROUP S.A.
+[EN] Rules governing the use of the website https://bsgroup.ml, owned by BS-GROUP S.A.
+[AR] قواعد استخدام موقع https://bsgroup.ml، المملوك لـ BS-GROUP S.A.
+
+Intro
+
+[FR] L'accès au site https://bsgroup.ml et son utilisation impliquent l'acceptation pleine et entière des présentes Conditions Générales d'Utilisation. Si vous n'acceptez pas ces conditions, veuillez renoncer à toute utilisation du site.
+[EN] Access to and use of the website https://bsgroup.ml imply full acceptance of these Terms and Conditions of Use. If you do not accept these terms, please refrain from using the website.
+[AR] الوصول إلى موقع https://bsgroup.ml واستخدامه يعني القبول الكامل والقاطع بهذه الشروط العامة للاستخدام. إذا لم توافقوا على هذه الشروط، فيرجى الامتناع عن استخدام الموقع.
+
+Legal articles
+ARTICLE 1 — Objet | Number : 1 | Order : 0
+
+[FR] Title : Objet
+[FR] Content : Les présentes CGU définissent les conditions d'accès et d'utilisation du site https://bsgroup.ml, dont l'objet est de présenter le groupe BS-GROUP S.A, ses expertises et de permettre la prise de contact (demandes d'information, de devis et candidatures).
+
+[EN] Title : Purpose
+[EN] Content : These Terms define the conditions of access to and use of the website https://bsgroup.ml, whose purpose is to present the BS-GROUP S.A group, its businesses, and to enable contact (information requests, quote requests and applications).
+
+[AR] Title : الموضوع
+[AR] Content : تحدد هذه الشروط شروط الوصول إلى موقع https://bsgroup.ml واستخدامه، ويهدف الموقع إلى تقديم مجموعة BS-GROUP S.A وخبراتها، وإتاحة التواصل (طلبات المعلومات، وعروض الأسعار، وطلبات الترشيح).
+
+ARTICLE 2 — Utilisation du site | Number : 2 | Order : 1
+
+[FR] Title : Utilisation du site
+[FR] Content : Vous vous engagez à utiliser le site de manière loyale, à ne pas tenter d'en perturber le fonctionnement, à ne pas extraire ou réutiliser massivement son contenu, et à ne transmettre via les formulaires que des informations exactes et licites.
+
+[EN] Title : Use of the Website
+[EN] Content : You agree to use the website fairly, not to attempt to disrupt its operation, not to extract or massively reuse its content, and to submit through the forms only accurate and lawful information.
+
+[AR] Title : استخدام الموقع
+[AR] Content : تلتزمون باستخدام الموقع بحسن نية، وعدم محاولة تعطيل عمله، وعدم استخراج محتواه أو إعادة استخدامه على نحو واسع، وإرسال معلومات صحيحة ومشروعة فقط عبر النماذج.
+
+ARTICLE 3 — Propriété intellectuelle | Number : 3 | Order : 2
+
+[FR] Title : Propriété intellectuelle
+[FR] Content : Tous les éléments du site (marque « BS GROUP », textes, images, logos, structure) sont protégés. Toute reproduction, adaptation ou diffusion, totale ou partielle, sans autorisation écrite préalable de BS-GROUP S.A est interdite.
+
+[EN] Title : Intellectual Property
+[EN] Content : All elements of the website (“BS GROUP” trademark, texts, images, logos, structure) are protected. Any total or partial reproduction, adaptation or distribution without the prior written authorization of BS-GROUP S.A is prohibited.
+
+[AR] Title : الملكية الفكرية
+[AR] Content : جميع عناصر الموقع (علامة “BS GROUP”، النصوص، الصور، الشعارات، البنية) محمية. يُحظر أي استنساخ أو تكييف أو نشر كلي أو جزئي دون إذن كتابي مسبق من BS-GROUP S.A.
+
+ARTICLE 4 — Liens hypertextes | Number : 4 | Order : 3
+
+[FR] Title : Liens hypertextes
+[FR] Content : Les liens vers des sites tiers présents sur le site sont fournis à titre informatif. BS-GROUP S.A n'exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu.
+
+[EN] Title : Hyperlinks
+[EN] Content : Links to third-party websites are provided for information purposes. BS-GROUP S.A exercises no control over these websites and disclaims all liability for their content.
+
+[AR] Title : الروابط التشعبية
+[AR] Content : الروابط إلى مواقع الطرف الثالث الواردة في الموقع هي لأغراض إعلامية. لا تمارس BS-GROUP S.A أي سيطرة على هذه المواقع وتُبرئ ذمتها من محتواها.
+
+ARTICLE 5 — Responsabilité | Number : 5 | Order : 4
+
+[FR] Title : Responsabilité
+[FR] Content : Les informations publiées sur le site sont fournies à titre indicatif et n'ont pas de valeur contractuelle. BS-GROUP S.A se réserve le droit de modifier, suspendre ou interrompre l'accès au site, à tout moment et sans préavis.
+
+[EN] Title : Liability
+[EN] Content : The information published on the website is provided for guidance only and has no contractual value. BS-GROUP S.A reserves the right to modify, suspend or discontinue access to the website at any time, without prior notice.
+
+[AR] Title : المسؤولية
+[AR] Content : المعلومات المنشورة على الموقع هي لأغراض الإرشاد فقط ولا قيمة تعاقدية لها. تحتفظ BS-GROUP S.A بحق تعديل الوصول إلى الموقع أو تعليقه أو وقفه في أي وقت ودون إشعار مسبق.
+
+ARTICLE 6 — Droit applicable | Number : 6 | Order : 5
+
+[FR] Title : Droit applicable
+[FR] Content : Les présentes CGU sont régies par le droit malien. Tout litige relatif à leur interprétation ou exécution relève de la compétence des tribunaux de Bamako, République du Mali.
+
+[EN] Title : Governing Law
+[EN] Content : These Terms are governed by Malian law. Any dispute relating to their interpretation or performance falls under the jurisdiction of the courts of Bamako, Republic of Mali.
+
+[AR] Title : القانون الواجب التطبيق
+[AR] Content : تخضع هذه الشروط للقانون المالي. أي نزاع يتعلق بتفسيرها أو تنفيذها يخضع لاختصاص محاكم باماكو، جمهورية مالي.
+
+PAGE 4 / 4 — POLITIQUE COOKIES
+Champs non traduits
+Page type : Politique Cookies (valeur exacte du select)
+Last updated : date du jour de publication
+Version number : 1.0
+Champs traduits
+Title
+
+[FR] Politique Cookies
+[EN] Cookies Policy
+[AR] سياسة ملفات تعريف الارتباط
+
+Subtitle
+
+[FR] Utilisation des cookies sur bsgroup.ml
+[EN] Use of cookies on bsgroup.ml
+[AR] استخدام ملفات تعريف الارتباط على bsgroup.ml
+
+Description
+
+[FR] Quels cookies sont utilisés sur le site bsgroup.ml et comment les gérer.
+[EN] Which cookies are used on the bsgroup.ml website and how to manage them.
+[AR] ما ملفات تعريف الارتباط المستخدمة على موقع bsgroup.ml وكيفية إدارتها.
+
+Intro
+
+[FR] Le site https://bsgroup.ml utilise un nombre limité de cookies afin d'assurer son bon fonctionnement et d'améliorer votre expérience de navigation. La présente politique vous informe sur leur utilisation et sur les moyens de les maîtriser.
+[EN] The website https://bsgroup.ml uses a limited number of cookies to ensure its proper functioning and improve your browsing experience. This policy informs you about their use and how to control them.
+[AR] يستخدم موقع https://bsgroup.ml عددًا محدودًا من ملفات تعريف الارتباط لضمان حسن عمله وتحسين تجربة تصفحكم. تُطلعكم هذه السياسة على استخدامها ووسائل التحكم فيها.
+
+Legal articles
+ARTICLE 1 — Définition | Number : 1 | Order : 0
+
+[FR] Title : Qu'est-ce qu'un cookie ?
+[FR] Content : Un cookie est un petit fichier déposé sur votre terminal lors de la consultation d'un site web. Il permet notamment de mémoriser vos préférences et d'assurer le bon fonctionnement du site.
+
+[EN] Title : What is a cookie?
+[EN] Content : A cookie is a small file stored on your device when you visit a website. It helps remember your preferences and ensure the website works properly.
+
+[AR] Title : ما هو ملف تعريف الارتباط؟
+[AR] Content : ملف تعريف الارتباط هو ملف صغير يُخزن على جهازكم عند زيارة موقع إلكتروني. يتيح حفظ تفضيلاتكم وضمان حسن عمل الموقع.
+
+ARTICLE 2 — Cookies utilisés | Number : 2 | Order : 1
+
+[FR] Title : Cookies utilisés
+[FR] Content : Le site utilise des cookies techniques strictement nécessaires (session, sécurité, mémorisation du choix de langue). Ces cookies ne collectent aucune donnée à des fins publicitaires.
+
+[EN] Title : Cookies Used
+[EN] Content : The website uses strictly necessary technical cookies (session, security, language preference). These cookies do not collect any data for advertising purposes.
+
+[AR] Title : الملفات المستخدمة
+[AR] Content : يستخدم الموقع ملفات تعريف ارتباط تقنية ضرورية حصريًا (الجلسة، والأمان، وتذكر اختيار اللغة). لا تجمع هذه الملفات أي بيانات لأغراض إعلانية.
+
+ARTICLE 3 — Mesure d'audience | Number : 3 | Order : 2
+
+[FR] Title : Mesure d'audience
+[FR] Content : Le cas échéant, des cookies de mesure d'audience anonymisée peuvent être utilisés pour comprendre l'usage du site et améliorer son contenu. Aucune donnée nominative n'est collectée à cette fin.
+
+[EN] Title : Audience Measurement
+[EN] Content: Where applicable, anonymized analytics cookies may be used to understand website usage and improve its content. No personal identifying data is collected for this purpose.
+
+[AR] Title : قياس الزيارات
+[AR] Content : عند الاقتضاء، يمكن استخدام ملفات قياس زيارات مجهولة الهوية لفهم استخدام الموقع وتحسين محتواه. لا تُجمع أي بيانات معرِّفة شخصيًا لهذا الغرض.
+
+ARTICLE 4 — Gestion des cookies | Number : 4 | Order : 3
+
+[FR] Title : Gestion des cookies
+[FR] Content : Vous pouvez à tout moment configurer votre navigateur pour refuser ou supprimer les cookies. Le refus des cookies techniques peut toutefois affecter certaines fonctionnalités du site (notamment la sélection de langue).
+
+[EN] Title : Managing Cookies
+[EN] Content : You may configure your browser at any time to refuse or delete cookies. However, refusing technical cookies may affect some website features (including language selection).
+
+[AR] Title : إدارة الملفات
+[AR] Content : يمكنكم في أي وقت ضبط متصفحكم لرفض ملفات تعريف الارتباط أو حذفها. غير أن رفض الملفات التقنية قد يؤثر على بعض وظائف الموقع (لا سيما اختيار اللغة).
+
+ARTICLE 5 — Contact | Number : 5 | Order : 4
+
+[FR] Title : Contact
+[FR] Content : Pour toute question relative à la présente politique cookies : contact@bsgroup.ml.
+
+[EN] Title : Contact
+[EN] Content : For any question about this cookies policy: contact@bsgroup.ml.
+
+[AR] Title : الاتصال
+[AR] Content : لأي سؤال يتعلق بهذه السياسة الخاصة بملفات تعريف الارتباط: contact@bsgroup.ml.

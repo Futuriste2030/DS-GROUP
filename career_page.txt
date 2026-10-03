@@ -1,0 +1,50 @@
+BS-GROUP S.A — CAREERS PAGE (FR / EN / AR)
+Structure : formulaire « Modification de Career Page » du CMS
+Légende :
+
+Hero image : champ non traduit → à saisir une seule fois.
+Hero title / Hero subtitle / Hero description / Openings title / Openings subtitle : champs traduits → à saisir dans chaque onglet (fr / en / ar).
+1. HERO
+Champs non traduits
+Hero image : (à téléverser — équipe en chantier, travailleurs en équipement de sécurité sans visages reconnaissables, ou vue du siège ; même charte visuelle que le Hero de l'accueil : vert sombre / marine / cuivre-or)
+Champs traduits
+Hero title (prérempli EN — conserver)
+
+[FR] Rejoignez notre équipe
+[EN] Join Our Team
+[AR] انضم إلى فريقنا
+
+Hero subtitle (prérempli EN — conserver)
+
+[FR] Carrières
+[EN] Careers
+[AR] الوظائف
+
+Hero description — VERSION RECOMMANDÉE (adaptée BS GROUP)
+
+[FR] Nous sommes plus qu'un groupe d'entreprises — nous sommes une équipe de bâtisseurs, de penseurs et de résolveurs de problèmes, qui façonnent les infrastructures et les communautés au Mali et en Afrique de l'Ouest. Si vous êtes passionné par l'excellence et la croissance, une place vous attend ici.
+
+[EN] We're more than a group of companies — we're a team of builders, thinkers and problem-solvers shaping infrastructure and communities across Mali and West Africa. If you're passionate about excellence and growth, there's a place for you here.
+
+[AR] نحن أكثر من مجرد مجموعة شركات — نحن فريق من البنّاء والمفكرين وحلّي المشكلات، يشكّل البنى التحتية والمجتمعات في مالي وغرب إفريقيا. إذا كنت شغوفًا بالتميز والنمو، فهناك مكان ينتظرك هنا.
+
+Hero description — VARIANTE B (fidèle au template, « expertise » plutôt que « construction »)
+
+[FR] Nous sommes bien plus qu'une entreprise — nous sommes une équipe de bâtisseurs, de penseurs et de résolveurs de problèmes. Si vous êtes passionné par le savoir-faire et la croissance, il y a une place pour vous ici.
+
+[EN] We're more than a company — we're a team of builders, thinkers and problem-solvers. If you're passionate about craftsmanship and growth, there's a place for you here.
+
+[AR] نحن أكثر من مجرد شركة — نحن فريق من البنّاء والمفكرين وحلّي المشكلات. إذا كنت شغوفًا بجودة الصنعة والنمو، فهناك مكان لك هنا.
+
+2. OPENINGS
+Openings title (prérempli EN — conserver)
+
+[FR] Offres d'emploi actuelles
+[EN] Current Openings
+[AR] الوظائف المتاحة
+
+Openings subtitle (prérempli EN — conserver)
+
+[FR] Offre d'emploi
+[EN] Job Opening
+[AR] إعلان وظيفي

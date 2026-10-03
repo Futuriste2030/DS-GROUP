@@ -1,0 +1,69 @@
+BS-GROUP S.A — PERKS (FR / EN / AR)
+Structure : formulaire « Ajout de perk » du CMS
+Légende :
+
+Icon / Order : champs non traduits → à saisir une seule fois.
+Title / Description : champs traduits → à saisir dans chaque onglet (fr / en / ar).
+PACK A — 4 AVANTAGES (recommandé)
+Les quatre atouts les plus solides et les plus défendables du groupe employeur.
+
+PERK 1 / 4
+--- CHAMPS NON TRADUITS ---
+Icon : briefcase
+Order : 0
+
+--- CHAMPS TRADUITS ---
+[FR] Title : Des parcours diversifiés
+[FR] Description : Six métiers sous un même toit — hydrocarbures, finance, BTP, négoce, logistique. Développez votre carrière au sein d'un même groupe, avec des possibilités réelles de mobilité entre les expertises.
+
+[EN] Title : Diverse Career Paths
+[EN] Description : Six businesses under one roof — hydrocarbons, finance, construction, trading, logistics. Grow your career within a single group, with real possibilities of mobility between expertise areas.
+
+[AR] Title : مسارات مهنية متنوعة
+[AR] Description : ست مهن تحت سقف واحد — المحروقات، والتمويل، والبناء، والتجارة، واللوجستيك. طوّر مسارك المهني داخل مجموعة واحدة، مع إمكانيات حقيقية للتنقل بين الخبرات.
+
+PERK 2 / 4
+--- CHAMPS NON TRADUITS ---
+Icon : graduation-cap
+Order : 1
+
+--- CHAMPS TRADUITS ---
+[FR] Title : Développement des compétences
+[FR] Description : Apprenez auprès d'experts confirmés et montez en compétences au fil de projets exigeants. Nous investissons dans le potentiel de nos collaborateurs, du terrain au management.
+
+[EN] Title : Skills Development
+[EN] Description : Learn from experienced experts and build your skills on demanding projects. We invest in our people's potential, from the field to management.
+
+[AR] Title : تطوير المهارات
+[AR] Description : تعلّم من خبراء متمرسين وارتقِ بمهاراتك عبر مشاريع تتطلب الكثير. نستثمر في إمكانات موظفينا، من الميدان إلى الإدارة.
+
+PERK 3 / 4
+--- CHAMPS NON TRADUITS ---
+Icon : building-2
+Order : 2
+
+--- CHAMPS TRADUITS ---
+[FR] Title : Des projets à fort impact
+[FR] Description : Participez à des projets concrets qui transforment les infrastructures et les communautés au Mali et en Afrique de l'Ouest — des réalisations visibles, durables et porteuses de sens.
+
+[EN] Title : High-Impact Projects
+[EN] Description : Take part in concrete projects that transform infrastructure and communities across Mali and West Africa — visible, lasting and meaningful achievements.
+
+[AR] Title : مشاريع عالية الأثر
+[AR] Description : شارك في مشاريع ملموسة تحوّل البنى التحتية والمجتمعات في مالي وغرب إفريقيا — منجزات مرئية ومستدامة وذات معنى.
+
+PERK 4 / 4
+--- CHAMPS NON TRADUITS ---
+Icon : users
+Order : 3
+
+--- CHAMPS TRADUITS ---
+[FR] Title : Une équipe soudée
+[FR] Description : Rejoignez une équipe de bâtisseurs où la confiance, l'entraide et l'esprit d'initiative comptent. Ici, chaque contribution est visible et chaque talent compte.
+
+[EN] Title : A Close-Knit Team
+[EN] Description : Join a team of builders where trust, mutual support and initiative matter. Here, every contribution is visible and every talent counts.
+
+[AR] Title : فريق متماسك
+[AR] Description : انضم إلى فريق من البنّاء تُقدَّر فيه الثقة والتعاون وروح المبادرة. هنا، كل مساهمة مرئية وكل موهبة لها قيمة.
+

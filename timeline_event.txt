@@ -1,0 +1,105 @@
+BS-GROUP S.A — TIMELINE EVENTS (FR / EN / AR)
+Structure : formulaire « Ajout de timeline event » du CMS
+Légende :
+
+Year / Image / Order : champs non traduits → à saisir une seule fois.
+Title / Description : champs traduits → à saisir dans chaque onglet (fr / en / ar).
+Image : champ facultatif — suggestions de visuel indiquées pour chaque event ; à défaut, laisser vide si le template gère les events sans image.
+PACK A — PARCOURS COMPLET (6 événements, recommandé)
+Retrace la construction du groupe : fondation, montée en puissance des deux pôles, rayonnement régional, situation actuelle.
+
+EVENT 1 / 6 — ✅ factuel
+--- CHAMPS NON TRADUITS ---
+Year : 2018
+Image : (à téléverser — vue du siège Immeuble CAPITOLE ou Bamako panoramique)
+Order : 0
+
+--- CHAMPS TRADUITS ---
+[FR] Title : Naissance de BS GROUP
+[FR] Description : Création de BS-Group S.A à Bamako, avec l'immatriculation au registre du commerce (RCCM MA.BKO.2018.B.8807). Le groupe pose ses fondations dans la capitale malienne, avec l'ambition de devenir un acteur intégré du développement économique.
+
+[EN] Title : The Birth of BS GROUP
+[EN] Description : BS-Group S.A is founded in Bamako and registered with the trade register (RCCM MA.BKO.2018.B.8807). The group lays its foundations in the Malian capital, with the ambition of becoming an integrated player in economic development.
+
+[AR] Title : ميلاد BS GROUP
+[AR] Description : تأسيس BS-Group S.A في باماكو وتسجيلها في السجل التجاري (RCCM MA.BKO.2018.B.8807). تضع المجموعة أسسها في العاصمة المالية، بطموح أن تصبح فاعلًا متكاملًا في التنمية الاقتصادية.
+
+EVENT 2 / 6 — ⚠️ à valider
+--- CHAMPS NON TRADUITS ---
+Year : 2019
+Image : (à téléverser — cuves de stockage / camion-citerne / import de marchandises)
+Order : 1
+
+--- CHAMPS TRADUITS ---
+[FR] Title : Premières activités commerciales
+[FR] Description : Lancement des activités d'approvisionnement en hydrocarbures et de négoce international. BS GROUP construit son premier réseau de fournisseurs et de partenaires, au Mali et en Afrique de l'Ouest.
+
+[EN] Title : First Commercial Activities
+[EN] Description : Launch of the hydrocarbons supply and international trading activities. BS GROUP builds its first network of suppliers and partners, in Mali and across West Africa.
+
+[AR] Title : أول الأنشطة التجارية
+[AR] Description : إطلاق أنشطة تزويد المحروقات والتجارة الدولية. تبني BS GROUP شبكتها الأولى من الموردين والشركاء، في مالي وغرب إفريقيا.
+
+EVENT 3 / 6 — ⚠️ à valider
+--- CHAMPS NON TRADUITS ---
+Year : 2021
+Image : (à téléverser — réunion d'affaires / documents financiers / poignée de main)
+Order : 2
+
+--- CHAMPS TRADUITS ---
+[FR] Title : Structuration du pôle Finance
+[FR] Description : Formalisation des expertises d'intermédiation et de structuration financière. BS GROUP accompagne désormais ses clients dans le montage de leurs financements : dette, fonds propres et financements mixtes.
+
+[EN] Title : Structuring the Finance Division
+[EN] Description : Formalization of the financial intermediation and structuring expertise. BS GROUP now supports its clients in designing their financing: debt, equity and blended schemes.
+
+[AR] Title : هيكلة قطب التمويل
+[AR] Description : إضفاء الطابع الرسمي على خبراتي الوساطة والهيكلة المالية. ترافق BS GROUP عملاءها الآن في إعداد تمويلاتهم: الدين، والأموال الخاصة، والتمويلات المختلطة.
+
+EVENT 4 / 6 — ⚠️ à valider
+--- CHAMPS NON TRADUITS ---
+Year : 2022
+Image : (à téléverser — chantier / grue / ouvrage en béton)
+Order : 3
+
+--- CHAMPS TRADUITS ---
+[FR] Title : Montée en puissance du BTP
+[FR] Description : Développement de l'activité bâtiment et travaux publics pour des clients publics et privés. Le groupe complète ainsi sa chaîne de valeur : financer, sourcer, acheminer — et désormais bâtir.
+
+[EN] Title : Construction Comes into Its Own
+[EN] Description : Development of the building and public works activity for public and private clients. The group completes its value chain: finance, source, ship — and now build.
+
+[AR] Title : تصعيد نشاط البناء
+[AR] Description : تطوير نشاط البناء والأشغال العمومية لعملاء عموميين وخواص. وبذلك تكتمل سلسلة القيمة لدى المجموعة: تمويل، وتوريد، ونقل — ثم بناء.
+
+EVENT 5 / 6 — ⚠️ à valider
+--- CHAMPS NON TRADUITS ---
+Year : 2024
+Image : (à téléverser — carte d'Afrique de l'Ouest / convoi logistique / port ou corridor)
+Order : 4
+
+--- CHAMPS TRADUITS ---
+[FR] Title : Rayonnement sous-régional
+[FR] Description : Renforcement des capacités de transport et de logistique, avec une infrastructure connectant le Mali aux marchés d'Afrique de l'Ouest et internationaux. Les six expertises du groupe deviennent pleinement complémentaires.
+
+[EN] Title : Sub-Regional Reach
+[EN] Description : Strengthening of transport and logistics capabilities, with an infrastructure connecting Mali to West African and international markets. The group's six businesses become fully complementary.
+
+[AR] Title : امتداد إقليمي
+[AR] Description : تعزيز قدرات النقل واللوجستيك، ببنية تحتية تربط مالي بأسواق غرب إفريقيا والأسواق الدولية. وتصبح الخبرات الست للمجموعة متكاملة تمامًا.
+
+EVENT 6 / 6 — ✅ factuel (présent)
+--- CHAMPS NON TRADUITS ---
+Year : 2026
+Image : (à téléverser — vue d'ensemble : équipe dirigeante ou composition urbaine Bamako)
+Order : 5
+
+--- CHAMPS TRADUITS ---
+[FR] Title : BS GROUP aujourd'hui
+[FR] Description : Un groupe intégré de six expertises organisées en deux pôles stratégiques — Énergie & Finance, Infrastructure & Commerce. Un siège à Bamako (Immeuble CAPITOLE, Hamdallaye ACI 2000), des équipes dédiées et un seul objectif : bâtir l'avenir avec précision.
+
+[EN] Title : BS GROUP Today
+[EN] Description : An integrated group of six businesses organized into two strategic divisions — Energy & Finance, Infrastructure & Commerce. A headquarters in Bamako (CAPITOLE Building, Hamdallaye ACI 2000), dedicated teams and one single goal: building the future with precision.
+
+[AR] Title : BS GROUP اليوم
+[AR] Description : مجموعة متكاملة من ست خبرات موزعة على قطبين استراتيجيين — الطاقة والتمويل، والبنية التحتية والتجارة. مقر في باماكو (مبنى كابيتول، حمدالله ACI 2000)، وفرق مخصصة، وهدف واحد: نبني المستقبل بدقة.
