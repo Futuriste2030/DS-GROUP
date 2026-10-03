@@ -27,8 +27,8 @@ class ProjectAdmin(TabbedTranslationAdmin):
     # Champs affichés avec |safe : CKEditor. Le reste (excerpt, intro...) : brut.
     rich_text_fields = {'description', 'challenge', 'solution', 'scope_description', 'result'}
 
-    def formfield_for_dbfield(self, db_field, **kwargs):
+    def formfield_for_dbfield(self, db_field, request, **kwargs):
         base = re.sub(r'_(fr|en|ar)$', '', db_field.name)
         if base in self.rich_text_fields:
             kwargs['widget'] = CKEditorWidget
-        return super().formfield_for_dbfield(db_field, **kwargs)
+        return super().formfield_for_dbfield(db_field, request, **kwargs)

@@ -38,11 +38,11 @@ class SiteSettingsAdmin(TabbedTranslationAdmin):
     # Tout le reste s'affiche en brut : textarea simple (pas de <p> stockés).
     rich_text_fields = {'address'}
 
-    def formfield_for_dbfield(self, db_field, **kwargs):
+    def formfield_for_dbfield(self, db_field, request, **kwargs):
         base = re.sub(r'_(fr|en|ar)$', '', db_field.name)
         if base in self.rich_text_fields:
             kwargs['widget'] = CKEditorWidget
-        return super().formfield_for_dbfield(db_field, **kwargs)
+        return super().formfield_for_dbfield(db_field, request, **kwargs)
 
     def has_add_permission(self, request):
         return not SiteSettings.objects.exists()
