@@ -34,9 +34,11 @@ class SiteSettingsAdmin(TabbedTranslationAdmin):
         ('Sections', {'fields': ('services_section_title', 'contact_image', 'quote_budget_options', 'quote_timeline_options', 'coming_soon_enabled', 'launch_date')}),
     )
 
-    # Seule 'address' est affichée avec |safe (index + contact) : CKEditor.
-    # Tout le reste s'affiche en brut : textarea simple (pas de <p> stockés).
-    rich_text_fields = {'address'}
+    # 'address' est affichée avec |safe mais en textarea simple : CKEditor
+    # y enveloppait la valeur dans <p>...</p> => paragraphe imbriqué qui
+    # récupérait le gris de la charte au lieu de la couleur de la carte.
+    # Saisir du texte simple (<br> autorisé pour les retours à la ligne).
+    rich_text_fields = set()
 
     def formfield_for_dbfield(self, db_field, request, **kwargs):
         base = re.sub(r'_(fr|en|ar)$', '', db_field.name)

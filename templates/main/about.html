@@ -21,11 +21,6 @@
         >
           {{ site_settings.about_title|default:_("About Us") }}
         </h1>
-        {% if site_settings.about_description %}
-        <p class="mt-4 max-w-2xl mx-auto text-[15px] text-slate-500 leading-relaxed">
-          {{ site_settings.about_description }}
-        </p>
-        {% endif %}
 
         <!-- Fil d'Ariane -->
         <nav aria-label="{% trans 'Breadcrumb' %}" class="mt-3.5">
