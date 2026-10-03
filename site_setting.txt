@@ -96,6 +96,8 @@ Si le client n'a pas de réseaux actifs, laisser les champs vides pour masquer l
 6. ABOUT
 Champs non traduits
 About title : BS GROUP (prérempli — conserver)
+About badge value : 7 (badge années d'expérience — 7 années révolues depuis le 02/11/2018 ; passer à 8 à partir de novembre 2026)
+About badge suffix : +
 About image 1 / About image 2 : (à téléverser — chantier, siège, équipe ou vues du groupe)
 Why image 1 / Why image 2 : (à téléverser)
 Champs traduits

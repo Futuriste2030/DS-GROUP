@@ -128,14 +128,14 @@
             <!-- Paragraphes -->
             {% if site_settings.about_description %}
             <p
-              class="mt-6 max-w-[520px] text-[15px] text-slate-500 leading-relaxed"
+              class="mt-6 max-w-[520px] text-[15px] text-slate-500 leading-relaxed text-justify"
             >
               {{ site_settings.about_description }}
             </p>
             {% endif %}
             {% if site_settings.about_description_2 %}
             <p
-              class="mt-4 max-w-[520px] text-[15px] text-slate-500 leading-relaxed"
+              class="mt-4 max-w-[520px] text-[15px] text-slate-500 leading-relaxed text-justify"
             >
               {{ site_settings.about_description_2 }}
             </p>
@@ -176,7 +176,7 @@
               class="absolute bottom-3 right-3 sm:bottom-4 sm:right-6 z-10 flex items-center gap-2.5 bg-[#c9a227] text-white rounded-2xl px-4 py-3 sm:px-6 sm:py-4 shadow-lg shadow-orange-500/30"
             >
               <span class="text-[30px] sm:text-[38px] font-black leading-none tracking-tight"
-                >25+</span
+                >{{ site_settings.about_badge_value|default:"7" }}{{ site_settings.about_badge_suffix|default:"+" }}</span
               >
               <span class="leading-tight">
                 <span class="block text-[15px] font-bold">{% trans "Years" %}</span>
@@ -208,7 +208,7 @@
             >
               <p
                 id="about-slide-text"
-                class="text-white/95 text-[15px] sm:text-[17px] md:text-lg leading-relaxed max-w-[560px]"
+                class="text-white/95 text-[15px] sm:text-[17px] md:text-lg leading-relaxed max-w-[560px] text-justify"
               >
                 {{ site_settings.mission_description|default:'' }}
               </p>
@@ -429,7 +429,7 @@
               {{ pr.title }}
             </h3>
             <p
-              class="mt-4 text-[15px] text-slate-500 leading-relaxed line-clamp-3 max-w-[300px]"
+              class="mt-4 text-[15px] text-slate-500 leading-relaxed line-clamp-3 max-w-[300px] text-justify"
             >
               {{ pr.description }}
             </p>
@@ -676,7 +676,7 @@
                   <h3 class="text-white font-bold text-[17px]">
                     {{ f.title }}
                   </h3>
-                  <p class="mt-1.5 text-[13px] text-slate-400 leading-relaxed">
+                  <p class="mt-1.5 text-[13px] text-slate-400 leading-relaxed text-justify">
                     {{ f.description }}
                   </p>
                 </div>
@@ -1076,20 +1076,19 @@
                 </span>
 
                 <h3 class="text-white text-[16px] sm:text-[19px] font-extrabold leading-snug">
-                  You have different<br />questions?
+                  {% trans "You have different" %}<br />{% trans "questions?" %}
                 </h3>
                 <p
                   class="mt-2.5 text-[12.5px] text-slate-400 leading-relaxed max-w-[240px]"
                 >
-                  Our team will answer all your questions. We'll ensure a quick
-                  response.
+                  {% trans "Our team will answer all your questions. We'll ensure a quick response." %}
                 </p>
 
                 <a
                   href="{% url 'contact:contact' %}"
                   class="mt-6 self-end inline-flex px-6 py-3 rounded-full bg-[#c9a227] text-white text-[13px] font-bold shadow-md shadow-orange-500/25 hover:bg-[#d9bc6b] transition-colors"
                 >
-                  Contact Us
+                  {% trans "Contact Us" %}
                 </a>
               </div>
             </div>

@@ -135,7 +135,7 @@
           ></span>
 
           <!-- Extrait descriptif -->
-          <p class="max-w-[360px] text-[15px] text-slate-500 leading-relaxed">
+          <p class="max-w-[360px] text-[15px] text-slate-500 leading-relaxed text-justify">
             {{ site_settings.hero_description|default:_("BS GROUP connects two complementary poles — Exchange & Finance, Infrastructures & Trade — to secure your flows, funding and operations.") }}
           </p>
         </div>
@@ -307,14 +307,14 @@
             <!-- Paragraphe -->
             {% if site_settings.about_description %}
             <p
-              class="mt-6 max-w-[520px] text-[15px] text-slate-500 leading-relaxed"
+              class="mt-6 max-w-[520px] text-[15px] text-slate-500 leading-relaxed text-justify"
             >
               {{ site_settings.about_description }}
             </p>
             {% endif %}
             {% if site_settings.about_description_2 %}
             <p
-              class="mt-4 max-w-[520px] text-[15px] text-slate-500 leading-relaxed"
+              class="mt-4 max-w-[520px] text-[15px] text-slate-500 leading-relaxed text-justify"
             >
               {{ site_settings.about_description_2 }}
             </p>
@@ -355,12 +355,12 @@
               class="absolute bottom-4 right-6 z-10 flex items-center gap-2.5 bg-[#c9a227] text-white rounded-2xl px-6 py-4 shadow-lg shadow-orange-500/30"
             >
               <span class="text-[38px] font-black leading-none tracking-tight"
-                >25+</span
+                >{{ site_settings.about_badge_value|default:"7" }}{{ site_settings.about_badge_suffix|default:"+" }}</span
               >
               <span class="leading-tight">
-                <span class="block text-[15px] font-bold">Years</span>
+                <span class="block text-[15px] font-bold">{% trans "Years" %}</span>
                 <span class="block text-[11px] font-medium text-orange-100"
-                  >of Experience</span
+                  >{% trans "of Experience" %}</span
                 >
               </span>
             </div>
@@ -387,7 +387,7 @@
             >
               <p
                 id="about-slide-text"
-                class="text-white/95 text-[17px] md:text-lg leading-relaxed max-w-[560px]"
+                class="text-white/95 text-[17px] md:text-lg leading-relaxed max-w-[560px] text-justify"
               >
                 {{ site_settings.mission_description|default:'' }}
               </p>
@@ -473,7 +473,7 @@
                 {{ s.title }}
               </a></h3>
               <p
-                class="mt-3 text-[15px] text-slate-500 leading-relaxed line-clamp-3"
+                class="mt-3 text-[15px] text-slate-500 leading-relaxed line-clamp-3 text-justify"
               >
                 {{ s.excerpt }}
               </p>
@@ -582,7 +582,7 @@
               {{ pr.title }}
             </h3>
             <p
-              class="mt-4 text-[15px] text-slate-500 leading-relaxed line-clamp-3 max-w-[300px]"
+              class="mt-4 text-[15px] text-slate-500 leading-relaxed line-clamp-3 max-w-[300px] text-justify"
             >
               {{ pr.description }}
             </p>
@@ -761,14 +761,14 @@
         <div class="flex items-center justify-center gap-3 mb-4">
           <i data-lucide="sparkles" class="w-4 h-4 text-[#c9a227] shrink-0"></i>
           <span class="text-[15px] font-semibold text-white"
-            >Recent Projects</span
+            >{% trans "Recent Projects" %}</span
           >
         </div>
 
         <h2
           class="text-center text-[32px] sm:text-[40px] md:text-[44px] font-black tracking-tight leading-[1.15] text-white"
         >
-          Our <span class="text-[#c9a227]">Completed Projects</span>
+          {% trans "Our" %} <span class="text-[#c9a227]">{% trans "Completed Projects" %}</span>
         </h2>
 
         <div class="mt-12 space-y-8">
@@ -806,7 +806,7 @@
                 {{ p.title }}
               </a></h3>
               <p
-                class="mt-3 text-[13px] text-slate-400 leading-relaxed line-clamp-2 max-w-[420px]"
+                class="mt-3 text-[13px] text-slate-400 leading-relaxed line-clamp-2 max-w-[420px] text-justify"
               >
                 {{ p.excerpt }}
               </p>
@@ -985,7 +985,7 @@
                   <h3 class="text-white font-bold text-[17px]">
                     {{ f.title }}
                   </h3>
-                  <p class="mt-1.5 text-[13px] text-slate-400 leading-relaxed">
+                  <p class="mt-1.5 text-[13px] text-slate-400 leading-relaxed text-justify">
                     {{ f.description }}
                   </p>
                 </div>
@@ -1283,7 +1283,7 @@
                 </span>
 
                 <h3 class="text-white text-[19px] font-extrabold leading-snug">
-                  You have different<br />questions?
+                  {% trans "You have different" %}<br />{% trans "questions?" %}
                 </h3>
                 <p
                   class="mt-2.5 text-[12.5px] text-slate-400 leading-relaxed max-w-[240px]"
@@ -1443,7 +1443,7 @@
                 {{ p.title }}
               </a></h3>
               <p
-                class="mt-2 text-[12.5px] text-slate-500 leading-relaxed line-clamp-2"
+                class="mt-2 text-[12.5px] text-slate-500 leading-relaxed line-clamp-2 text-justify"
               >
                 {{ p.excerpt }}
               </p>
@@ -1693,7 +1693,7 @@
             <div class="relative z-10 space-y-7">
               {% if site_settings.address %}
               <div>
-                <h3 class="text-[19px] font-extrabold">{% trans "Address" %}</h3>
+                <h3 class="text-[19px] font-extrabold text-white">{% trans "Address" %}</h3>
                 <p class="mt-2.5 text-[13.5px] text-slate-300 leading-relaxed">
                   {{ site_settings.address|safe }}
                 </p>
@@ -1701,25 +1701,25 @@
               {% endif %}
 
               <div>
-                <h3 class="text-[19px] font-extrabold">{% trans "Contact" %}</h3>
+                <h3 class="text-[19px] font-extrabold text-white">{% trans "Contact" %}</h3>
                 <p class="mt-2.5 text-[13.5px] text-slate-300 leading-relaxed">
                   {% if site_settings.phone %}{% trans "Phone" %}&nbsp;&nbsp;:
                   <a
                     href="tel:{{ site_settings.phone|urlencode }}"
-                    class="hover:text-[#c9a227] transition-colors"
+                    class="whitespace-nowrap hover:text-[#c9a227] transition-colors"
                     >{{ site_settings.phone }}</a
                   ><br />{% endif %}
                   {% if site_settings.email %}{% trans "Email" %}&nbsp;&nbsp;:
                   <a
                     href="mailto:{{ site_settings.email }}"
-                    class="hover:text-[#c9a227] transition-colors"
+                    class="whitespace-nowrap hover:text-[#c9a227] transition-colors"
                     >{{ site_settings.email }}</a
                   >{% endif %}
                 </p>
               </div>
 
               <div>
-                <h3 class="text-[19px] font-extrabold">{% trans "Open Time" %}</h3>
+                <h3 class="text-[19px] font-extrabold text-white">{% trans "Open Time" %}</h3>
                 <p class="mt-2.5 text-[13.5px] text-slate-300 leading-relaxed">
                   {{ site_settings.opening_hours_weekdays|default:_("Mon – Fri : 15:00 – 20:00") }}<br />
                   {{ site_settings.opening_hours_weekend|default:_("Sat – Sun : 11:00 – 18:00") }}
@@ -1727,7 +1727,7 @@
               </div>
 
               <div>
-                <h3 class="text-[19px] font-extrabold">{% trans "Stay Connected" %}</h3>
+                <h3 class="text-[19px] font-extrabold text-white">{% trans "Stay Connected" %}</h3>
                 <div class="flex flex-wrap gap-2.5 mt-3.5">
                   <a
                     href="#"

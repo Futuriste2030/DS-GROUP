@@ -185,7 +185,7 @@
                   <i data-lucide="map-pin" class="w-4.5 h-4.5"></i>
                 </span>
                 <div class="flex-1 min-w-0">
-                  <h3 class="text-[19px] font-extrabold">{% trans "Address" %}</h3>
+                  <h3 class="text-[19px] font-extrabold text-white">{% trans "Address" %}</h3>
                   <p class="mt-2.5 text-[13.5px] text-slate-300 leading-relaxed">
                     {{ site_settings.address|safe }}
                   </p>
@@ -197,18 +197,18 @@
                   <i data-lucide="phone" class="w-4.5 h-4.5"></i>
                 </span>
                 <div class="flex-1 min-w-0">
-                  <h3 class="text-[19px] font-extrabold">{% trans "Contact" %}</h3>
+                  <h3 class="text-[19px] font-extrabold text-white">{% trans "Contact" %}</h3>
                   <p class="mt-2.5 text-[13.5px] text-slate-300 leading-relaxed">
                     {% trans "Phone" %}&nbsp;&nbsp;:
                     <a
                       href="tel:{{ site_settings.phone|urlencode }}"
-                      class="hover:text-[#c9a227] transition-colors"
+                      class="whitespace-nowrap hover:text-[#c9a227] transition-colors"
                       >{{ site_settings.phone }}</a
                     ><br />
                     {% trans "Email" %}&nbsp;&nbsp;:
                     <a
                       href="mailto:{{ site_settings.email }}"
-                      class="hover:text-[#c9a227] transition-colors"
+                      class="whitespace-nowrap hover:text-[#c9a227] transition-colors"
                       >{{ site_settings.email }}</a
                     >
                   </p>
@@ -220,7 +220,7 @@
                   <i data-lucide="clock" class="w-4.5 h-4.5"></i>
                 </span>
                 <div class="flex-1 min-w-0">
-                  <h3 class="text-[19px] font-extrabold">{% trans "Open Time" %}</h3>
+                  <h3 class="text-[19px] font-extrabold text-white">{% trans "Open Time" %}</h3>
                   <p class="mt-2.5 text-[13.5px] text-slate-300 leading-relaxed">
                     {{ site_settings.opening_hours_weekdays|default:_("Mon – Fri : 15:00 – 20:00") }}<br />
                     {{ site_settings.opening_hours_weekend|default:_("Sat – Sun : 11:00 – 18:00") }}
@@ -233,7 +233,7 @@
                   <i data-lucide="share-2" class="w-4.5 h-4.5"></i>
                 </span>
                 <div class="flex-1 min-w-0">
-                  <h3 class="text-[19px] font-extrabold">{% trans "Stay Connected" %}</h3>
+                  <h3 class="text-[19px] font-extrabold text-white">{% trans "Stay Connected" %}</h3>
                 <div class="flex flex-wrap gap-2.5 mt-3.5">
                   {% if site_settings.facebook_url %}
                   <a
@@ -405,7 +405,7 @@
                 >
                   <i data-lucide="map-pin" class="w-6 h-6"></i>
                 </span>
-                <h3 class="mt-5 text-[20px] font-extrabold">
+                <h3 class="mt-5 text-[20px] font-extrabold text-white">
                   {% trans "Our Headquarters" %}
                 </h3>
                 <p class="mt-2.5 text-[13.5px] text-slate-300 leading-relaxed">
@@ -413,7 +413,7 @@
                 </p>
 
                 <div class="mt-5 space-y-2.5 text-[13px]">
-                  <p class="flex items-center gap-2.5 text-slate-300">
+                  <p class="flex items-center gap-2.5 whitespace-nowrap text-slate-300">
                     <i
                       data-lucide="phone"
                       class="w-4 h-4 text-[#c9a227] shrink-0"
@@ -460,7 +460,7 @@
               <i data-lucide="map-pin" class="w-6 h-6"></i>
             </span>
             <div class="flex-1">
-              <h3 class="text-[18px] font-extrabold">{% trans "Our Headquarters" %}</h3>
+              <h3 class="text-[18px] font-extrabold text-white">{% trans "Our Headquarters" %}</h3>
               <p class="mt-1.5 text-[13px] text-slate-300">
                 {{ site_settings.address|safe }}
               </p>

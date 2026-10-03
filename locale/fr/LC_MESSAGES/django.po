@@ -1642,6 +1642,9 @@ msgstr "Autres projets"
 msgid "Other Services"
 msgstr "Autres services"
 
+msgid "Our"
+msgstr "Nos"
+
 msgid "Our Headquarters"
 msgstr "Notre siège"
 

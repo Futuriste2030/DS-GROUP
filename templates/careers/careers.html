@@ -121,7 +121,7 @@
             class="absolute -bottom-6 left-8 flex items-center gap-3 bg-[#c9a227] text-white rounded-2xl px-6 py-4 shadow-lg shadow-orange-500/30"
           >
             <span class="text-[34px] font-black leading-none tracking-tight"
-              >25+</span
+              >{{ site_settings.about_badge_value|default:"7" }}{{ site_settings.about_badge_suffix|default:"+" }}</span
             >
             <span class="leading-tight text-[13px] font-semibold"
               >{% trans "Years of" %}<br />{% trans "Expertise" %}</span

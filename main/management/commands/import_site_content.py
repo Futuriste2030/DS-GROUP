@@ -320,6 +320,8 @@ SETTINGS_FIELDS = {
     'About description 2': 'about_description_2',
     'About section title': 'about_section_title',
     'About section subtitle': 'about_section_subtitle',
+    'About badge value': 'about_badge_value',
+    'About badge suffix': 'about_badge_suffix',
     'Vision title': 'vision_title',
     'Vision description': 'vision_description',
     'Mission title': 'mission_title',

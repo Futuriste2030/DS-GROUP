@@ -1178,7 +1178,7 @@ msgid "Competitive Package"
 msgstr "Competitive Package"
 
 msgid "Completed Projects"
-msgstr "Completed Projects"
+msgstr "المنجزة"
 
 msgid ""
 "Conditions Générales d'Utilisation du site BS GROUP — droits, obligations et"
@@ -1292,7 +1292,7 @@ msgid "Explore Open Roles"
 msgstr "Explore Open Roles"
 
 msgid "Explore Our"
-msgstr "Explore Our"
+msgstr "اكتشف"
 
 msgid "FAQ"
 msgstr "FAQ"
@@ -1600,6 +1600,9 @@ msgstr "Other Projects"
 msgid "Other Services"
 msgstr "Other Services"
 
+msgid "Our"
+msgstr "مشاريعنا"
+
 msgid "Our Headquarters"
 msgstr "Our Headquarters"
 
@@ -1732,7 +1735,7 @@ msgid "Real Impact"
 msgstr "Real Impact"
 
 msgid "Recent Projects"
-msgstr "Recent Projects"
+msgstr "المشاريع الأخيرة"
 
 msgid "Recruitment"
 msgstr "Recruitment"

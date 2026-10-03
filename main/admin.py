@@ -28,7 +28,7 @@ class SiteSettingsAdmin(TabbedTranslationAdmin):
         ('Contact', {'fields': ('phone', 'email', 'careers_email', 'address', 'map_query', 'opening_hours_weekdays', 'opening_hours_weekend', 'latitude', 'longitude')}),
         ('Legal', {'classes': ('collapse',), 'fields': ('nif', 'rccm', 'director_name', 'hosting_provider', 'hosting_address', 'hosting_city_country')}),
         ('Social', {'fields': ('facebook_url', 'twitter_url', 'instagram_url', 'youtube_url', 'pinterest_url')}),
-        ('About', {'fields': ('about_title', 'about_description', 'about_description_2', 'about_section_title', 'about_section_subtitle', 'about_image_1', 'about_image_2', 'vision_title', 'vision_description', 'mission_title', 'mission_description', 'process_title', 'process_description', 'why_subtitle', 'why_title', 'why_image_1', 'why_image_2')}),
+        ('About', {'fields': ('about_title', 'about_description', 'about_description_2', 'about_section_title', 'about_section_subtitle', 'about_badge_value', 'about_badge_suffix', 'about_image_1', 'about_image_2', 'vision_title', 'vision_description', 'mission_title', 'mission_description', 'process_title', 'process_description', 'why_subtitle', 'why_title', 'why_image_1', 'why_image_2')}),
         ('Vidéo du site', {'description': 'Liens + covers des vidéos (hero, showcase About, section Why, modales). Vide = vidéo et image de démo.', 'fields': ('about_video_url', 'about_video_cover')}),
         ('Hero', {'fields': ('hero_badge', 'hero_title', 'hero_description', 'hero_image', 'hero_video_url', 'hero_video_cover')}),
         ('Sections', {'fields': ('services_section_title', 'contact_image', 'quote_budget_options', 'quote_timeline_options', 'coming_soon_enabled', 'launch_date')}),

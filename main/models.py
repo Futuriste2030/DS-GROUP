@@ -52,6 +52,8 @@ class SiteSettings(SEOMixin, WebPConversionMixin, models.Model):
     about_description_2 = models.TextField(blank=True)
     about_section_title = models.CharField(max_length=300, blank=True, default='Construire l’avenir avec précision')
     about_section_subtitle = models.CharField(max_length=100, blank=True, default='About Us')
+    about_badge_value = models.CharField(max_length=10, blank=True, default='7', help_text="Badge années d'expérience (ex : 7). 7 années révolues depuis le 02/11/2018 ; passer à 8+ à partir de novembre 2026.")
+    about_badge_suffix = models.CharField(max_length=10, blank=True, default='+', help_text="Suffixe du badge (ex : +). Vide = aucun suffixe.")
     about_image_1 = models.ImageField(upload_to='about/', blank=True)
     about_image_2 = models.ImageField(upload_to='about/', blank=True)
     vision_title = models.CharField(max_length=200, blank=True, default='Our Vision')

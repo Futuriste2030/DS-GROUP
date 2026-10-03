@@ -759,15 +759,15 @@
               aria-hidden="true"
             ></span>
             <div class="relative z-10">
-              <h3 class="text-[17px] font-extrabold">{% trans "Prefer to talk now?" %}</h3>
+              <h3 class="text-[17px] font-extrabold text-white">{% trans "Prefer to talk now?" %}</h3>
               <p class="mt-2 text-[13px] text-slate-300 leading-relaxed">
                 {% trans "Our estimation team answers the phone Monday to Saturday." %}
               </p>
               <a
                 href="tel:{{ site_settings.phone|urlencode }}"
-                class="mt-5 inline-flex items-center gap-2.5 text-lg font-black text-[#c9a227] hover:text-white transition-colors"
+                class="mt-5 inline-flex items-center gap-2.5 whitespace-nowrap text-lg font-black text-[#c9a227] hover:text-white transition-colors"
               >
-                <i data-lucide="phone" class="w-5 h-5"></i>{{ site_settings.phone }}
+                <i data-lucide="phone" class="w-5 h-5 shrink-0"></i>{{ site_settings.phone }}
               </a>
               <p class="mt-3 text-[12px] text-slate-400">
                 {% trans "or email" %}
