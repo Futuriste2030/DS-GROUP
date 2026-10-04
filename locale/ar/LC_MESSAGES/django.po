@@ -53,6 +53,9 @@ msgstr "سياسة ملفات الارتباط"
 msgid "Legal Notice"
 msgstr "إشعار قانوني"
 
+msgid "Last updated"
+msgstr "آخر تحديث"
+
 msgid "Pages"
 msgstr "الصفحات"
 

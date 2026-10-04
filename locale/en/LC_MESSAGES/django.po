@@ -53,6 +53,9 @@ msgstr "Cookie Policy"
 msgid "Legal Notice"
 msgstr "Legal Notice"
 
+msgid "Last updated"
+msgstr "Last updated"
+
 msgid "Pages"
 msgstr "Pages"
 

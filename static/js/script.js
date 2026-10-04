@@ -2279,9 +2279,10 @@ if (document.readyState === "loading") {
 // 33. Page CGU — scroll-spy du sommaire (version autonome)
 const initCguToc = () => {
   const cguLinks = document.querySelectorAll("[data-cgu-link]");
-  const cguSections = document.querySelectorAll(
-    "#s1, #s2, #s3, #s4, #s5, #s6, #s7, #s8, #s9",
-  );
+  // Cibles déduites des liens (statique #s1.. ou dynamique #article-N).
+  const cguSections = [...cguLinks]
+    .map((a) => document.querySelector(a.getAttribute("href")))
+    .filter(Boolean);
 
   if (
     cguLinks.length &&
@@ -2329,9 +2330,10 @@ if (document.readyState === "loading") {
 // 34. Page Privacy — scroll-spy du sommaire (version autonome)
 const initPvcToc = () => {
   const pvcLinks = document.querySelectorAll("[data-pvc-link]");
-  const pvcSections = document.querySelectorAll(
-    "#p1, #p2, #p3, #p4, #p5, #p6, #p7, #p8, #p9, #p10",
-  );
+  // Cibles déduites des liens (statique #p1.. ou dynamique #article-N).
+  const pvcSections = [...pvcLinks]
+    .map((a) => document.querySelector(a.getAttribute("href")))
+    .filter(Boolean);
 
   if (
     pvcLinks.length &&
@@ -2379,9 +2381,10 @@ if (document.readyState === "loading") {
 // 35. Page Legal Notice — scroll-spy du sommaire (autonome)
 const initLglToc = () => {
   const lglLinks = document.querySelectorAll("[data-lgl-link]");
-  const lglSections = document.querySelectorAll(
-    "#l1, #l2, #l3, #l4, #l5, #l6, #l7",
-  );
+  // Cibles déduites des liens (statique #l1.. ou dynamique #article-N).
+  const lglSections = [...lglLinks]
+    .map((a) => document.querySelector(a.getAttribute("href")))
+    .filter(Boolean);
 
   if (
     lglLinks.length &&
